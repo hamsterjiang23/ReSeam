@@ -6,6 +6,8 @@
 
 用户另外提供了游戏资产成品贴图作为视觉目标。该 PNG 为 256×256，SHA-256 为 `0230cebaa47099f9b7be8276bc8d3f7195397d04c3d571ee86a2aa24682a0340`，存于本地 `artifacts/feedback/game_atlas_reference_20260918/texture_reference.png`。图片没有对应网格和 UV 轮廓，不能据此量化其真实 UV 利用率或判断是否存在叠 UV。
 
+第二张龙纹样贴图由用户明确说明为“另一个真实的 artist 的真值”，记录为 artist 成品贴图真值参考，SHA-256 为 `8621c3dd1c2a5d28502e0d598170f7b34fa9501156ef5c24c60fbc09d1f7fbb0`，存于 `artifacts/feedback/artist_dragon_reference_20260918/texture_reference.png`。可用于观察重要纹样的整体呈现和视觉目标；尚无对应带 UV 网格，因此不将图中色块或描边转换为固定低模上的硬接缝、部件标签或定量 UV 真值。
+
 质量目标明确为：**在不牺牲 UV 拉伸、合理的 Texel Density 和安全 Padding 的前提下，提高 UV 岛的有效面积占用率；岛间距只需满足安全要求，不是越小越好。** 烘焙 Margin／Dilation 与岛边界之间的距离分别记录，不混用两个像素值。
 
 交付对比需并列展示 UV 岛轮廓、烘焙颜色贴图、同视角模型与接缝局部，并报告统一排布后的覆盖率。几何目标改善而排布更松散时，记录该代价，不能据岛少或接缝短宣称 artist 质量提升。当前配置保持 1024²、至少 16 像素岛间距及 8 像素烘焙扩边；不根据示例经验表在实验中途缩减。
