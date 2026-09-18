@@ -1,6 +1,6 @@
 # ReSeam 项目约束
 
-适用范围：本目录及其子目录。当前定位和验收以 [README.md](README.md) 与 [V1 目标](goal/v1.md) 为准；[研究报告](UV_展开方案_研究报告_v0.1.md) 提供原始数学定义与实验草案。
+适用范围：本目录及其子目录。当前定位和验收以 [README.md](README.md) 与 [V1 目标](goal/v1.md) 为准；[研究报告](goal/UV_展开方案_研究报告_v0.1.md) 提供原始数学定义与实验草案。
 
 ## 应用与目的
 
@@ -45,3 +45,4 @@
 - 保留已有无关修改；只修改任务涉及的文件，不自动覆盖研究报告或批量暂存其他工作。
 - Python 使用 uv，所有函数参数与返回值必须有类型注解；检查工具优先 ruff 与 basedpyright。
 - 根据改动运行相应检查，交付时注明实际检查及结果；未执行的实验明确标为待完成。
+- 运行入口与环境见 [docs/running-v1.md](docs/running-v1.md)；采用 uv run pytest、ruff check、basedpyright。正式运行期间冻结代码，修复后另建 round，不覆盖原始证据。

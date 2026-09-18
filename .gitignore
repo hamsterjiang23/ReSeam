@@ -7,3 +7,8 @@ __pycache__/
 .env
 .env.*
 !.env.example
+configs/*.local.json
+.pytest_cache/
+.ruff_cache/
+.codegraph/
+.lh/

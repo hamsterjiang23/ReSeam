@@ -1,0 +1,14 @@
+{
+  "round_id": "v1_round01",
+  "models": ["energy_blade", "dragon"],
+  "seeds": [17, 29, 43],
+  "methods": ["optcuts", "xatlas", "blender_smart", "partuv", "optcuts_restart", "reseam_fixed", "reseam_small", "reseam_large", "reseam_adaptive", "reseam_low_fragments", "reseam_artist"],
+  "run_seconds": 180,
+  "max_candidates": 120,
+  "total_seconds": 28800,
+  "geometry_seconds": 14400,
+  "downstream_seconds": 7200,
+  "downstream_seeds": [17],
+  "differentiable": true,
+  "notes": "Geometry: both assets, all methods, 3 seeds. Expensive downstream: all methods on first seed only, specified before running. Artist confirmation and blind review remain human tasks."
+}

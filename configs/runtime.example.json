@@ -1,0 +1,11 @@
+{
+  "wsl_distro": "Ubuntu-22.04",
+  "blender": "C:/path/to/blender.exe",
+  "optcuts_binary": "C:/path/to/prepared-build/OptCuts_bin",
+  "continuous_binary": "E:/ReSem/artifacts/runtime/reseam-continuous",
+  "partuv_python": "C:/path/to/partuv/bin/python",
+  "partfield_checkpoint": "C:/path/to/model_objaverse.ckpt",
+  "partfield_sha256": "463efc8a3afd3913142aa025e0125c00f16ef452b8de6a132ebe32bbe7877ee4",
+  "differentiable_python": "C:/path/to/differentiable/python.exe",
+  "differentiable_renderer_root": "C:/path/to/diffRender2"
+}

@@ -5,7 +5,7 @@
 
 ReSeam 面向 AI 生成高模经过重拓扑后的低模，研究如何切缝和展开，使 UV 便于艺术家编辑、支持可靠烘焙，并适合后续可微贴图优化。在映射合法、畸变受控的前提下，改善接缝位置、区域连续性与碎片结构，减少人工修整成本；接缝短、岛少是评价的一部分，不代表已经达到 artist 目标。
 
-状态：研究设计与文档初始化阶段，尚无算法实现或 A/B 实验结果。ReSeam 是工作名称，由 Re- 与 Seam 组成，不要求逐字母展开；正式投稿前需核验论文和软件项目重名。
+状态：V1 原型已实现，核心与真实后端冒烟通过；正式矩阵结果以各轮 ledger 为准，artist 人工验收尚未完成。ReSeam 是工作名称，由 Re- 与 Seam 组成，不要求逐字母展开；正式投稿前需核验论文和软件项目重名。
 
 固定开发与回归模型已迁入 [assets/v1](assets/v1/README.md)：能量刀 `energy_blade`（500 面低模）与幻想龙 `dragon`（2000 面低模），各包含真实材质参考高模、无 UV 低模 GLB 和 OBJ。资产来源、哈希及检查范围见 [manifest.json](assets/v1/manifest.json)；旧实验源文件保留。
 
@@ -16,6 +16,19 @@ git clone --recurse-submodules git@github.com:hamsterjiang23/ReSeam.git
 ```
 
 已有克隆可执行 `git submodule update --init --recursive` 补齐参考源码。模型资产直接随主仓库跟踪，实验输出放在已忽略的 `artifacts/` 中。
+
+## 运行原型
+
+使用 Python 3.11 和 uv：执行 `uv sync`，按 [运行说明](docs/running-v1.md) 配置本地后端路径并构建固定拓扑适配器。
+
+```powershell
+uv run reseam doctor
+uv run reseam unwrap --model energy_blade --method reseam_adaptive --output artifacts/manual/energy --seconds 180
+uv run reseam benchmark --config configs/v1_round01.json
+uv run reseam report --round artifacts/v1/v1_round01
+```
+
+已有输出不会覆盖。每轮记录源码与外部程序哈希、配置、全部失败及未完成项。正式配置包含 66 个几何运行；种子 17 的 22 个方法／模型组合承担下游验收，另两个种子不宣称已验证烘焙。
 
 ## 我们要做什么，为什么做
 
@@ -98,12 +111,14 @@ V1 阶段只保留 UV、岛 ID 和原始网格对应关系等输出接口，不�
 
 ## 文档与实施入口
 
-- [研究报告 v0.1](UV_展开方案_研究报告_v0.1.md)：数学定义、算法草案、实验设计与参考资料。保留原文件及历史标题；当前名称与版本范围以本 README 为准。
+- [研究报告 v0.1](goal/UV_展开方案_研究报告_v0.1.md)：数学定义、算法草案、实验设计与参考资料。保留原文件及历史标题；当前名称与版本范围以本 README 为准。
 - [AGENTS.md](AGENTS.md)：项目协作与实现约束。
 - [V1 目标](goal/v1.md)：应用目标、交付清单与验收要求。
 - [固定测试资产与多轮协议](assets/v1/README.md)：两套模型、输入完整性与运行目录规范。
-- [上游参考源码](references/README.md)：OptCuts 与 PartUV 官方源码、固定提交及阅读入口；尚未在本仓库编译或运行。
+- [上游参考源码](references/README.md)：OptCuts 与 PartUV 官方源码、固定提交及阅读入口；实际执行环境另行记录。
+- [运行说明](docs/running-v1.md)：环境、命令、标注和结果解释。
+- [实现记录](implementation-notes.md)：偏差、审查修复和已知边界。
 
-下一步实施顺序：固定资产的 artist 编辑任务 → 统一评价器与 OptCuts 基线 → 可撤销区域重构与支持域对照 → artist 约束实验 → 烘焙及贴图优化验收 → 正式报告。两套模型已固定；后端依赖、运行命令、阈值与预算数值尚未锁定，实现后补充可复现说明。
+下一步实施顺序：固定资产的 artist 编辑任务 → 统一评价器与 OptCuts 基线 → 可撤销区域重构与支持域对照 → artist 约束实验 → 烘焙及贴图优化验收 → 正式报告。两套模型及首轮协议已固定，运行命令和环境要求见运行说明；是否完成以实际矩阵和人工验收记录为准。
 
 本项目不预设全局最优、同预算必胜或艺术家级布局结论；效果与适用范围由实验决定。
