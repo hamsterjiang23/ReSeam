@@ -68,6 +68,7 @@ def summarize(source: Path, output: Path) -> None:
                 )
             }
             rejection_counts: Counter[str] = Counter()
+            recorded_statuses: Counter[str] = Counter()
             support_counts: Counter[str] = Counter()
             proposal_counts: Counter[str] = Counter()
             accepted_proposals: Counter[str] = Counter()
@@ -85,7 +86,11 @@ def summarize(source: Path, output: Path) -> None:
                     if item["accepted"]:
                         accepted_proposals[item["proposal_type"]] += 1
                         accepted_composite += int(bool(item["removed"] and item["added"]))
-                    rejection_counts[item["status"]] += 1
+                    recorded_statuses[item["status"]] += 1
+                    category = item["status"]
+                    if category == "STRUCTURE_INVALID" and item.get("failure_stage") == "BOUNDARY_BRIDGE":
+                        category = "INIT_FAILED"
+                    rejection_counts[category] += 1
                     for stage in item.get("supports", []):
                         support_counts[stage["status"]] += 1
             data = {
@@ -97,6 +102,8 @@ def summarize(source: Path, output: Path) -> None:
                 "attempted_candidates": attempted,
                 "accepted_candidates": accepted,
                 "candidate_statuses": dict(rejection_counts),
+                "candidate_recorded_statuses": dict(recorded_statuses),
+                "classification_note": "Boundary-bridge construction failure is initialization failure, not proof of invalid topology; original logs remain unchanged",
                 "support_statuses": dict(support_counts),
                 "proposal_types": dict(proposal_counts),
                 "accepted_proposal_types": dict(accepted_proposals),

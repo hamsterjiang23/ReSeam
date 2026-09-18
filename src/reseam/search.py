@@ -82,9 +82,7 @@ def search(
                 score_trial = best.copy()
                 score_trial.seams = seams
                 if proposal.error is not None:
-                    record["status"] = (
-                        "BUDGET_EXHAUSTED" if "BUDGET" in proposal.error else "STRUCTURE_INVALID"
-                    )
+                    record["status"] = "BUDGET_EXHAUSTED" if "BUDGET" in proposal.error else "INIT_FAILED"
                     record["failure_stage"] = "BOUNDARY_BRIDGE"
                     record["reason"] = proposal.error
                 elif (

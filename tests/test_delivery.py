@@ -84,6 +84,7 @@ def test_bridge_failure_is_logged(tmp_path: Path, monkeypatch: pytest.MonkeyPatc
     assert result["candidates"] == 1
     event = json.loads((tmp_path / "search/candidates.jsonl").read_text(encoding="utf-8"))
     assert event["failure_stage"] == "BOUNDARY_BRIDGE"
+    assert event["status"] == "INIT_FAILED"
     assert event["reason"] == "forced_bridge_failure"
 
 
