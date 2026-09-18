@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "role": "User-provided artist references, separate from immutable assets/v1 benchmark inputs",
+  "references": [
+    {
+      "id": "energy_blade_artist",
+      "file": "Temp_FX_Mesh_115_skin06_YY_1005.FBX",
+      "sha256": "a3540f90547c6b28b9cc5c2b7e37c802710e7084edaf01f7aab2719e836ebbf7",
+      "object": "115-skin06-mesh-jiancizidan01",
+      "uv_channel_for_overlay": "UVChannel_1",
+      "texture_reference": "energy_blade.reference.png",
+      "texture_sha256": "0230cebaa47099f9b7be8276bc8d3f7195397d04c3d571ee86a2aa24682a0340"
+    },
+    {
+      "id": "dragon_artist",
+      "file": "Temp_FX_Mesh_25_skin11_CLW_182.FBX",
+      "sha256": "e8894c184a743f8aff350e1c313712de17981393662f1e5d119faf34caee06bb",
+      "object": "tripo_node_",
+      "uv_channel_for_overlay": "UVChannel_1",
+      "texture_reference": "dragon.reference.png",
+      "texture_sha256": "8621c3dd1c2a5d28502e0d598170f7b34fa9501156ef5c24c60fbc09d1f7fbb0"
+    }
+  ],
+  "association_basis": "User supplied two texture references and corresponding FBX files; model families verified by geometry previews. Texture overlays use the first UV set for inspection, not a verified reconstruction of original engine shaders.",
+  "limitations": [
+    "Geometry and topology differ from fixed 500/2000-face benchmark meshes",
+    "Energy blade FBX has no material binding; dragon main material references missing long.png",
+    "Dragon contains two additional plane meshes; inspect them separately",
+    "UV reuse and mirrored orientation are reported rather than automatically classified as artist errors"
+  ]
+}

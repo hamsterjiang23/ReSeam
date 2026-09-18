@@ -32,6 +32,9 @@ def packing_diagnostics(native: MeshState, packed: MeshState, resolution: int = 
     chart_density = resolution * np.sqrt(np.bincount(labels, weights=uv_areas) / source_areas)
     weights = source_areas / source_areas.sum()
     mean = float(np.dot(weights, chart_density))
+    face_density = resolution * np.sqrt(uv_areas / packed.mesh.areas)
+    face_weights = packed.mesh.areas / packed.mesh.areas.sum()
+    face_mean = float(np.dot(face_weights, face_density))
     native_singular = np.linalg.svd(jacobians(native), compute_uv=False)
     packed_singular = np.linalg.svd(jacobians(packed), compute_uv=False)
     before = native_singular[:, 0] / native_singular[:, 1]
@@ -43,6 +46,9 @@ def packing_diagnostics(native: MeshState, packed: MeshState, resolution: int = 
         "chart_density_max": float(chart_density.max()),
         "chart_density_area_weighted_mean": mean,
         "chart_density_area_weighted_cv": float(np.sqrt(np.dot(weights, (chart_density - mean) ** 2)) / mean),
+        "face_density_area_weighted_cv": float(
+            np.sqrt(np.dot(face_weights, (face_density - face_mean) ** 2)) / face_mean
+        ),
         "uv_triangle_area_fraction": float(uv_areas.sum()),
         "face_anisotropy_max_relative_change_after_packing": float(np.max(np.abs(after / before - 1))),
         "stretch_definition": "Per-face singular-value ratio; invariant to uniform scale and rotation, distinct from native SD",

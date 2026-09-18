@@ -9,6 +9,8 @@ ReSeam 面向 AI 生成高模经过重拓扑后的低模，研究如何切缝和
 
 固定开发与回归模型已迁入 [assets/v1](assets/v1/README.md)：能量刀 `energy_blade`（500 面低模）与幻想龙 `dragon`（2000 面低模），各包含真实材质参考高模、无 UV 低模 GLB 和 OBJ。资产来源、哈希及检查范围见 [manifest.json](assets/v1/manifest.json)；旧实验源文件保留。
 
+用户提供的 [artist 真值参考](assets/gt/README.md) 单独保存。它们保留原始 UV、不同拓扑及复用关系，用于生产目标对照，不替换固定低模实验输入。
+
 获取项目与固定版本的参考源码：
 
 ```sh
