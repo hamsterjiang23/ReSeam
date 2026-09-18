@@ -23,15 +23,17 @@ uv run reseam doctor
 uv run reseam unwrap --model energy_blade --method optcuts --output artifacts/manual/baseline --seconds 180
 uv run reseam unwrap --model energy_blade --method reseam_adaptive --output artifacts/manual/reseam --seconds 180
 uv run python scripts/evaluate_run.py artifacts/manual/reseam --seconds 600
-uv run reseam benchmark --config configs/v1_round02.json
-uv run reseam report --round artifacts/v1/v1_round02
+uv run reseam benchmark --config configs/v1_round03.json
+uv run reseam report --round artifacts/v1/v1_round03
 ```
 
 `unwrap` 生成原生 OBJ／GLB、完整 state.json、UV 图、配置、逐候选日志和 result.json；输出已存在时拒绝覆盖。`--annotations` 接受标注文件，确认后的标注必须匹配输入网格身份。`--island-weight 0.01` 开启低碎片轨道；正常几何轨道为 0。
 
 单次上限默认 180 秒，包含重新运行初始化。多起点 OptCuts 在同一总预算内使用三个明确不同的输入面起点；普通 OptCuts、xatlas 和 Smart UV 的重复不声称由种子驱动。PartUV 显式传递 PartField 采样种子。
 
-所有方法统一预留 8 秒用于超时清理、全量复核与导出；实测总耗时仍超过上限的记录标为 BUDGET_EXCEEDED，不计入成功排名。round01 因首次发现该总耗时问题保留为中止诊断轮，正式使用 round02；其总预算已扣除 round01 的 480 秒，并预留整小时环境／冒烟预算。
+所有方法统一预留 8 秒用于超时清理、全量复核与导出；实测总耗时仍超过上限的记录标为 BUDGET_EXCEEDED，不计入成功排名。检查点读取及验证受候选剩余时间限制，超时保留已验证起点。
+
+round01 为总耗时修复前的中止诊断轮，记账 480 秒。round02 的 66 个几何记录保留，但进程在首个下游测试中断；失去精确结束时间，保守计入 8000 秒。预留环境／冒烟 3600 秒后，round03 总上限为 16720 秒，其中报告预留 600 秒；没有重置 8 小时预算。
 
 `benchmark` 固定两模型 × 11 个方法配置 × 3 个种子，共 66 个几何运行。昂贵下游预先选择种子 17 的 22 个组合；仅超过畸变阈值但映射合法的输出也可烘焙作诊断，不能计作合格展开。运行期间冻结源码；不同版本新建 round_id。
 
@@ -45,6 +47,8 @@ uv run reseam report --round artifacts/v1/v1_round02
 
 完整搜索的 small／large／adaptive 轨迹会分叉。独立的 support_audit 才用于共同候选、共同起点的范围消融；报告救回数量和分母，不将整场搜索的差异直接归因于支持域。
 
+候选池诊断包含从共同起点独立求解的 small／middle（3 环）／large，以及内部逐级松弛的 adaptive，四个配置具有相同时间上限。边界连接失败也记录候选及失败阶段。首次可行时间及 anytime 数据在运行时记录；旧轮缺失的时间不补估。
+
 ## Artist 标注与盲评
 
 实验目录的 `annotations/<model>/annotation.blend` 包含稳定边／面 ID 和自动建议。打开后在 Text Editor 运行内嵌的 `reseam_annotation_addon.py`，3D 视图侧栏出现 ReSeam 面板。
@@ -52,6 +56,8 @@ uv run reseam report --round artifacts/v1/v1_round02
 编辑模式选择边后标记必须切、禁止切、偏好切或清除；选择面后标记保护区域。填写实际确认者，导出到新的 JSON 文件。只有该显式确认会产生硬约束；测试目录中 `AUTOMATED_TEST_NOT_HUMAN` 的模拟导出不属于真实标注。
 
 报告的 `blind/index.html` 使用匿名样例，不含方法名称或方法路径。可下载匿名贴图低模，记录限时修整和评分，导出评审 JSON；样例映射仅存于评审包之外的 blind_key.private.json。未实际完成评审时，artist_assessment 保持 PENDING_HUMAN，V1 不标完成。
+
+使用 [人工编辑任务](artist-review-task.md) 的 15 分钟规则；场景面板支持清除保护面、导出逐角 UV，随后运行 `scripts/validate_artist_edit.py`。匿名编号跨报告重生成保持稳定，编辑场景按源状态／贴图和场景内容哈希复核。已评审包不应混入另一轮数据。
 
 ## 下游质量与结果解释
 
@@ -62,3 +68,5 @@ Cycles Selected to Active 烘焙真实 Base Color 与切线空间 Normal；法�
 独立 Blender 视角分别评价全前景、接缝带及探针通过区域。可微优化固定 128 步，训练六视角、验证两视角、测试六视角互不重用；按验证集选择检查点，加入初始贴图锚定与岛内 TV。重新扩边并量化后再次验证，退化时保留初始化。初始与优化后贴图都检查 mip。
 
 报告同时保留失败、代价、全局与局部指标，不自动给出综合冠军。两个模型为反复使用的开发集，所有结果仅限这些资产和设置，不能推断独立模型泛化或已达到艺术家交付标准。
+
+优化后 `downstream/differentiable/asset.glb` 只替换 Base Color，并核验几何、逐角 UV、顶点法线和法线贴图像素。细长岛、紧致度与边界转折只是编辑性代理；没有确认区域时不计算虚构语义碎片指标。历史 FRACTION=0.02 配置在 `configs/packing_historical.json`，通过 `scripts/pack_profile.py` 写入独立目录，不混入主比较。

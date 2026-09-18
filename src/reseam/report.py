@@ -9,6 +9,7 @@ from typing import Any
 import numpy as np
 
 from .pipeline import write_json
+from .report_details import anytime_svg, detail_crops, editing_scene, enrich
 
 CSS = """
 :root{--paper:#eeeae0;--ink:#172d2a;--accent:#af542e;--line:#b5b9ab}
@@ -21,7 +22,7 @@ button{cursor:pointer}.grid{display:grid;grid-template-columns:repeat(auto-fit,m
 article{border-top:3px solid var(--ink);padding-top:12px;min-width:0}h2{font-size:20px;margin:8px 0}.status{color:var(--accent)}
 .views{display:grid;grid-template-columns:1fr 1fr;gap:7px}.views img{width:100%;background:#182021;aspect-ratio:1;object-fit:contain}
 figure{margin:0}figcaption{font-size:12px;padding:6px 0}.numbers{display:flex;gap:20px;flex-wrap:wrap;margin:12px 0;font-size:13px}
-.numbers b{display:block;font:24px Georgia,serif}.note{font-size:13px;color:#56625c}.hidden{display:none}
+.numbers b{display:block;font:24px Georgia,serif}.note{font-size:13px;color:#56625c;overflow-wrap:anywhere}.hidden{display:none}
 a{color:var(--ink)}details{margin:16px 0}summary{cursor:pointer}.review{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0}
 textarea{width:100%;min-height:70px}@media(max-width:600px){h1{font-size:36px}header{padding:28px 6vw}.grid{grid-template-columns:1fr}}
 """
@@ -36,6 +37,14 @@ def figure(root: Path, path: Path, label: str) -> str:
 
 def generate_report(root: Path) -> None:
     ledger = json.loads((root / "ledger.json").read_text(encoding="utf-8"))
+    offline = {}
+    for record in ledger["runs"]:
+        try:
+            offline[record["path"]] = enrich(root / record["path"])
+        except (ValueError, TypeError, RuntimeError, OSError) as error:
+            offline[record["path"]] = {"status": "DIAGNOSTIC_FAILED", "reason": str(error)}
+    write_json(root / "offline_diagnostics.json", offline)
+    detail_crops(root, ledger["runs"])
     cards = []
     summaries = []
     for record in ledger["runs"]:
@@ -53,6 +62,9 @@ def generate_report(root: Path) -> None:
         if (images / "blender/BaseColor.png").exists():
             panels += figure(root, images / "blender/BaseColor.png", "烘焙 Base Color")
             panels += figure(root, images / "blender/Normal.png", "烘焙切线空间法线")
+        if (path / "details/blender.png").exists():
+            panels += figure(root, path / "details/high.png", "共同选区：高模局部")
+            panels += figure(root, path / "details/blender.png", "共同选区：烘焙局部")
         metrics = "".join(
             f"<span>{label}<b>{value}</b></span>"
             for label, value in (
@@ -64,6 +76,7 @@ def generate_report(root: Path) -> None:
                     else "—",
                 ),
                 ("平均畸变", f"{quality['sd_mean']:.5f}" if quality.get("sd_mean") is not None else "—"),
+                ("最大畸变", f"{quality['sd_max']:.3f}" if quality.get("sd_max") is not None else "—"),
             )
         )
         evidence = (
@@ -71,13 +84,38 @@ def generate_report(root: Path) -> None:
             if (path / "result.json").exists()
             else '<span class="note">未运行项见完整矩阵</span>'
         )
+        extra = offline.get(record["path"], {})
+        diagnostics = extra.get("diagnostics", {})
+        diagnostic_text = ""
+        if diagnostics.get("status") == "COMPUTED":
+            diagnostic_text = (
+                f"细长岛面积占比 {diagnostics['thin_chart_area_fraction']:.2%}；"
+                f"边界转折代理 {diagnostics['turn_ratio_area_weighted']:.3f}。几何代理不等于艺术家评分。"
+            )
+        elif diagnostics.get("flagged_face_area_fraction") is not None:
+            diagnostic_text = f"被标记面占原表面积 {diagnostics['flagged_face_area_fraction']:.8%}；严格失败不等于整张图都不可用。"
+        downloads = ""
+        if (images / "blender/asset.glb").exists():
+            downloads += (
+                f'<a href="{html.escape(record["path"])}/downstream/blender/asset.glb">烘焙模型</a> · '
+            )
+        if extra.get("optimized_asset", {}).get("status") == "VERIFIED":
+            downloads += f'<a href="{html.escape(record["path"])}/downstream/differentiable/asset.glb">优化后模型</a> · '
+        downstream_status = "未安排或上游未通过"
+        if (images / "result.json").exists():
+            downstream_data = json.loads((images / "result.json").read_text(encoding="utf-8"))
+            downstream_status = str(downstream_data["status"])
+            if downstream_data.get("reason"):
+                downstream_status += ": " + str(downstream_data["reason"])
         cards.append(
             f'<article data-model="{record["model"]}" data-seed="{record["seed"]}" data-status="{record["status"]}">'
             f'<div class="eyebrow">{record["model"]} / seed {record["seed"]}</div>'
             f'<h2>{html.escape(record["method"])}</h2><span class="status">{record["status"]}</span>'
             f'<div class="numbers">{metrics}</div><div class="views">{panels}</div>'
+            f'{anytime_svg(path)}<p class="note">{html.escape(diagnostic_text)}</p>'
+            f'<p class="note">下游：{html.escape(downstream_status)}</p>'
             f'<p class="note">{html.escape(str(quality.get("errors", record.get("reason", ""))))}</p>'
-            f"{evidence}</article>"
+            f"{downloads}{evidence}</article>"
         )
     for model in sorted({r["model"] for r in ledger["runs"]}):
         for method in sorted({r["method"] for r in ledger["runs"]}):
@@ -147,17 +185,38 @@ def generate_report(root: Path) -> None:
 def blind_report(root: Path, ledger: dict[str, Any]) -> None:
     folder = root / "blind"
     folder.mkdir(exist_ok=True)
-    items = [r for r in ledger["runs"] if r["seed"] == 17 and r["status"] == "SUCCESS"]
+    repository = Path(__file__).resolve().parents[2]
+    shutil.copy2(repository / "docs/artist-review-task.md", folder / "task.md")
+    items = []
+    for record in ledger["runs"]:
+        downstream = root / record["path"] / "downstream/result.json"
+        if record["seed"] == 17 and record["status"] == "SUCCESS" and downstream.exists():
+            data = json.loads(downstream.read_text(encoding="utf-8"))
+            if (
+                data.get("input_uv_unchanged")
+                and (downstream.parent / "renders_blender/view_00.png").exists()
+            ):
+                items.append(record)
     np.random.default_rng(2026).shuffle(items)
-    keys, cards = {}, []
-    for index, record in enumerate(items):
-        code = f"sample_{index + 1:02d}"
-        keys[code] = record["path"]
+    key_path = root / "blind_key.private.json"
+    keys = json.loads(key_path.read_text(encoding="utf-8")) if key_path.exists() else {}
+    path_codes = {path: code for code, path in keys.items()}
+    cards = []
+    for record in items:
+        code = path_codes.get(record["path"])
+        if code is None:
+            index = max((int(key.removeprefix("sample_")) for key in keys), default=0) + 1
+            code = f"sample_{index:02d}"
+            keys[code] = record["path"]
+            path_codes[record["path"]] = code
         source = root / record["path"]
         paths = [
             (source / "downstream/pack/uv_layout.png", "uv.png"),
             (source / "downstream/renders_blender/view_00.png", "view.png"),
             (source / "downstream/blender/asset.glb", "asset.glb"),
+            (source / "downstream/renders_high/view_00.png", "reference.png"),
+            (source / "details/blender.png", "detail.png"),
+            (source / "details/high.png", "detail_reference.png"),
         ]
         if not paths[0][0].exists():
             paths[0] = (source / "uv_layout.png", "uv.png")
@@ -169,24 +228,34 @@ def blind_report(root: Path, ledger: dict[str, Any]) -> None:
         figures = figure(folder, destination / "uv.png", "UV") + figure(
             folder, destination / "view.png", "贴图低模"
         )
+        figures += figure(folder, destination / "reference.png", "高模参考")
+        if (destination / "detail.png").exists():
+            figures += figure(folder, destination / "detail.png", "共同选区局部")
+            figures += figure(folder, destination / "detail_reference.png", "高模局部参考")
         if (destination / "asset.glb").exists():
             figures += f'<a href="{code}/asset.glb" download>下载匿名模型进行编辑</a>'
+        try:
+            scene = editing_scene(repository, source, destination)
+            if scene is not None:
+                figures += f' · <a href="{code}/edit_scene/editable.blend" download>可编辑 Blender 场景</a>'
+        except (ValueError, RuntimeError, OSError) as error:
+            write_json(destination / "editing_scene_error.json", {"reason": str(error)})
         cards.append(
             f'<article data-code="{code}"><h2>{code} / {record["model"]}</h2><div class="views">{figures}</div>'
             f'<div class="review"><button onclick="start(this)">开始修整计时</button><button onclick="stop(this)">停止</button><span class="elapsed">0 秒</span></div>'
             '<label>偏好评分（1–5） <input class="score" type="number" min="1" max="5"></label>'
-            '<label><input class="done" type="checkbox">达到约定交付标准</label><textarea placeholder="修改操作、接缝位置与未完成原因"></textarea></article>'
+            '<label><input class="done" type="checkbox">达到约定交付标准</label><input class="technical" placeholder="技术检查结果文件名（勾选完成时必填）"><textarea placeholder="修改操作、接缝位置与未完成原因"></textarea></article>'
         )
     write_json(root / "blind_key.private.json", keys)
-    page = f'<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>ReSeam 匿名评审</title><style>{CSS}</style>'
+    page = f'<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ReSeam 匿名评审</title><style>{CSS}</style>'
     page += '<header><div class="eyebrow">RESEAM / HUMAN REVIEW</div><h1>人工可用性评审</h1><p>方法名称已隐藏。每样例最多 15 分钟；记录真实修整时间和操作。几何合法性与确认约束需由验证器复核，勾选不自动证明通过。</p>'
     page += (
-        '<label>评审者 <input id="artist"></label> <button onclick="save()">导出评审记录</button></header><main><div class="grid">'
+        '<a href="task.md">统一编辑任务与验收规则</a><br><label>评审者 <input id="artist"></label> <button onclick="save()">导出评审记录</button><p id="form_error" role="alert" class="status"></p></header><main><div class="grid">'
         + "".join(cards)
     )
     page += """</div></main><script>
 const times={};function start(b){const a=b.closest('article');times[a.dataset.code]={start:Date.now(),seconds:0};}
 function stop(b){const a=b.closest('article'),t=times[a.dataset.code];if(t){t.seconds=(Date.now()-t.start)/1000;t.stopped=true;a.querySelector('.elapsed').textContent=t.seconds.toFixed(1)+' 秒';}}
-function save(){if(!artist.value.trim()){alert('请填写评审者');return;}const records=[...document.querySelectorAll('article')].map(a=>({sample:a.dataset.code,seconds:times[a.dataset.code]?.seconds??null,timer_stopped:times[a.dataset.code]?.stopped??false,score:a.querySelector('.score').value,claimed_complete:a.querySelector('.done').checked,notes:a.querySelector('textarea').value}));const blob=new Blob([JSON.stringify({artist:artist.value,records},null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='artist_review.json';a.click();}
+function error(message){document.getElementById('form_error').textContent=message;}function save(){error('');if(!artist.value.trim()){error('请填写评审者');return;}const records=[];for(const a of document.querySelectorAll('article')){const raw=a.querySelector('.score').value,score=raw===''?null:Number(raw),t=times[a.dataset.code],done=a.querySelector('.done').checked,notes=a.querySelector('textarea').value,technical=a.querySelector('.technical').value;if(score!==null&&(!Number.isInteger(score)||score<1||score>5)){error('评分必须是1–5的整数');return;}if(done&&(!t?.stopped||t.seconds>900||!technical.trim()||!notes.trim()||score===null)){error('完成声明需要限时停止计时、评分、操作记录和技术检查结果文件名');return;}records.push({sample:a.dataset.code,seconds:t?.seconds??null,timer_stopped:t?.stopped??false,score,claimed_complete:done,technical_report_reference:technical,notes});}const blob=new Blob([JSON.stringify({artist:artist.value,task_version:'artist-review-v1',records},null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='artist_review.json';a.click();}
 </script></html>"""
     (folder / "index.html").write_text(page, encoding="utf-8")

@@ -1,6 +1,7 @@
 """Bounded regional proposals on original mesh adjacency, never UV proximity."""
 
 import heapq
+import time
 from collections import defaultdict
 from collections.abc import Iterator
 
@@ -9,7 +10,7 @@ import numpy as np
 from .constraints import Constraints
 from .initialization import initialize
 from .mesh import DisjointSet, chart_labels, corner_map
-from .types import Candidate, MeshState
+from .types import Candidate, MeshState, Proposal
 
 
 def regions(state: MeshState, seed: int, limit: int = 40) -> list[tuple[int, ...]]:
@@ -135,11 +136,18 @@ def seam_chains(state: MeshState, edge_ids: set[int]) -> list[set[int]]:
 
 
 def proposals(
-    state: MeshState, constraints: Constraints, seed: int, region_limit: int = 40
-) -> Iterator[tuple[str, tuple[int, ...], frozenset[int]]]:
+    state: MeshState,
+    constraints: Constraints,
+    seed: int,
+    region_limit: int = 40,
+    deadline: float | None = None,
+) -> Iterator[Proposal]:
     seen: set[frozenset[int]] = {state.seams}
     rng = np.random.default_rng(seed)
     for region in regions(state, seed, region_limit):
+        if deadline is not None and time.monotonic() >= deadline:
+            yield Proposal("region_generation", region, state.seams, "PROPOSAL_BUDGET_EXHAUSTED")
+            return
         face_set = set(region)
         interior = {
             ei
@@ -173,20 +181,30 @@ def proposals(
                 joined.add(ei)
         variants.append(("dual_tree_rebuild", (set(state.seams) - interior) | (interior - joined)))
         for kind, seams in variants:
+            if deadline is not None and time.monotonic() >= deadline:
+                yield Proposal(kind, region, frozenset(seams), "PROPOSAL_BUDGET_EXHAUSTED")
+                return
             if kind.startswith("merge_recut"):
                 try:
-                    seams = set(bridge_holes(state, frozenset(seams), region, constraints))
-                except ValueError:
+                    seams = set(bridge_holes(state, frozenset(seams), region, constraints, deadline))
+                except (ValueError, TimeoutError) as error:
+                    yield Proposal(kind, region, frozenset(seams), str(error))
+                    if isinstance(error, TimeoutError):
+                        return
                     continue
             frozen = frozenset(seams)
             if frozen in seen or not constraints.must_cut <= frozen or constraints.must_join & frozen:
                 continue
             seen.add(frozen)
-            yield kind, region, frozen
+            yield Proposal(kind, region, frozen)
 
 
 def bridge_holes(
-    state: MeshState, seams: frozenset[int], region: tuple[int, ...], constraints: Constraints
+    state: MeshState,
+    seams: frozenset[int],
+    region: tuple[int, ...],
+    constraints: Constraints,
+    deadline: float | None = None,
 ) -> frozenset[int]:
     """Join boundary loops by shortest admissible interior edge paths before disk initialization."""
     mesh = state.mesh
@@ -194,6 +212,8 @@ def bridge_holes(
     current = seams
     region_set = set(region)
     for _ in range(16):
+        if deadline is not None and time.monotonic() >= deadline:
+            raise TimeoutError("PROPOSAL_BUDGET_EXHAUSTED")
         mapping = corner_map(mesh, current)
         trial = MeshState(mesh, current, np.zeros((int(mapping.max()) + 1, 2)), mapping)
         labels = chart_labels(trial)

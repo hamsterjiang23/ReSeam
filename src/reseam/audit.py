@@ -14,17 +14,28 @@ from .validation import distortion, seam_metrics
 
 
 def support_audit(
-    initial: MeshState, runtime: dict[str, Any], output: Path, seconds: float = 240, pool_size: int = 8
+    initial: MeshState, runtime: dict[str, Any], output: Path, seconds: float = 360, pool_size: int = 8
 ) -> dict[str, Any]:
     output.mkdir(parents=True, exist_ok=False)
     start = time.monotonic()
     records: list[dict[str, Any]] = []
     rejected: list[dict[str, str]] = []
     stopped_for_budget = False
-    for index, (kind, region, seams) in enumerate(proposals(initial, Constraints(), seed=17)):
+    for index, proposal in enumerate(proposals(initial, Constraints(), seed=17, deadline=start + seconds)):
+        kind, region, seams = proposal.kind, proposal.region_faces, proposal.seams
+        if proposal.error is not None:
+            rejected.append(
+                {
+                    "candidate_id": f"pool_{index:04d}",
+                    "kind": kind,
+                    "stage": "BOUNDARY_BRIDGE",
+                    "reason": proposal.error,
+                }
+            )
+            continue
         if len(records) >= pool_size:
             break
-        if time.monotonic() - start > seconds - 30:
+        if time.monotonic() - start > seconds - 40:
             stopped_for_budget = True
             break
         objective_trial = initial.copy()
@@ -43,7 +54,7 @@ def support_audit(
         if remaining < 6:
             stopped_for_budget = True
             break
-        per_mode_seconds = min(10.0, (remaining - 3) / 3)
+        per_mode_seconds = min(10.0, (remaining - 4) / 4)
         folder = output / candidate.candidate_id
         folder.mkdir()
         save_state(folder / "common_start.json", candidate.state)
@@ -55,7 +66,7 @@ def support_audit(
             "objective": seam_metrics(candidate.state)["objective"],
             "initial_objective": seam_metrics(initial)["objective"],
         }
-        for mode in ("small", "large", "adaptive"):
+        for mode in ("small", "middle", "large", "adaptive"):
             state, stages = relax(
                 candidate, mode, runtime, folder / mode, seconds=per_mode_seconds, tau=0.025
             )

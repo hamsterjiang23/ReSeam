@@ -1,0 +1,9 @@
+{
+  "profile": "historical_fraction_0_02",
+  "atlas_resolution": 1024,
+  "margin_method": "FRACTION",
+  "margin": 0.02,
+  "dilation_pixels": 8,
+  "primary_comparison": false,
+  "purpose": "Older wide-margin reproduction only; do not pool with the primary profile."
+}

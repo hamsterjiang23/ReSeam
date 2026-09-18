@@ -24,8 +24,8 @@ git clone --recurse-submodules git@github.com:hamsterjiang23/ReSeam.git
 ```powershell
 uv run reseam doctor
 uv run reseam unwrap --model energy_blade --method reseam_adaptive --output artifacts/manual/energy --seconds 180
-uv run reseam benchmark --config configs/v1_round02.json
-uv run reseam report --round artifacts/v1/v1_round02
+uv run reseam benchmark --config configs/v1_round03.json
+uv run reseam report --round artifacts/v1/v1_round03
 ```
 
 已有输出不会覆盖。每轮记录源码与外部程序哈希、配置、全部失败及未完成项。正式配置包含 66 个几何运行；种子 17 的 22 个方法／模型组合承担下游验收，另两个种子不宣称已验证烘焙。
@@ -119,6 +119,6 @@ V1 阶段只保留 UV、岛 ID 和原始网格对应关系等输出接口，不�
 - [运行说明](docs/running-v1.md)：环境、命令、标注和结果解释。
 - [实现记录](implementation-notes.md)：偏差、审查修复和已知边界。
 
-下一步实施顺序：固定资产的 artist 编辑任务 → 统一评价器与 OptCuts 基线 → 可撤销区域重构与支持域对照 → artist 约束实验 → 烘焙及贴图优化验收 → 正式报告。两套模型及首轮协议已固定，运行命令和环境要求见运行说明；是否完成以实际矩阵和人工验收记录为准。
+人工步骤使用 [统一编辑任务](docs/artist-review-task.md)：匿名 Blender 场景、15 分钟修整、逐角 UV 导出、固定几何与约束复核、重新烘焙及真实偏好记录。自动验证不会将人工验收标为完成。两套模型及协议已固定，是否完成以实际矩阵和人工验收记录为准。
 
 本项目不预设全局最优、同预算必胜或艺术家级布局结论；效果与适用范围由实验决定。

@@ -34,6 +34,14 @@ class MeshState:
 
 
 @dataclass
+class Proposal:
+    kind: str
+    region_faces: tuple[int, ...]
+    seams: frozenset[int]
+    error: str | None = None
+
+
+@dataclass
 class Candidate:
     candidate_id: str
     proposal_type: str

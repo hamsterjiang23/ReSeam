@@ -71,6 +71,17 @@ def run_benchmark(root: Path, config_path: Path) -> None:
                         "phase": "artist" if method == "reseam_artist" else "geometry",
                     }
                 )
+    ledger["downstream"] = [
+        {
+            "model": record["model"],
+            "method": record["method"],
+            "seed": record["seed"],
+            "path": record["path"] + "/downstream",
+            "status": "PENDING",
+        }
+        for record in ledger["runs"]
+        if record["seed"] in config.get("downstream_seeds", [17])
+    ]
     write_json(output / "ledger.json", ledger)
     for model in config["models"]:
         if total_deadline - time.monotonic() < 60:
@@ -87,7 +98,9 @@ def run_benchmark(root: Path, config_path: Path) -> None:
         ("geometry", config.get("geometry_seconds", 14400)),
         ("artist", config.get("downstream_seconds", 7200)),
     ):
-        phase_deadline = min(total_deadline, time.monotonic() + cap)
+        phase_deadline = min(
+            total_deadline - config.get("report_reserve_seconds", 600), time.monotonic() + cap
+        )
         for record in ledger["runs"]:
             if record["phase"] != phase:
                 continue
@@ -126,7 +139,7 @@ def run_benchmark(root: Path, config_path: Path) -> None:
             for model in config["models"]:
                 state_path = output / model / "original/optcuts" / f"seed_{config['seeds'][0]}" / "state.json"
                 remaining = phase_deadline - time.monotonic()
-                if remaining < 240 or not state_path.exists():
+                if remaining < 360 or not state_path.exists():
                     ledger["audits"].append({"model": model, "status": "NOT_RUN_BUDGET_OR_INITIALIZATION"})
                     continue
                 try:
@@ -149,21 +162,25 @@ def run_benchmark(root: Path, config_path: Path) -> None:
             for record in ledger["runs"]:
                 if record["seed"] not in config.get("downstream_seeds", [17]):
                     continue
-                target = {
-                    "model": record["model"],
-                    "method": record["method"],
-                    "seed": record["seed"],
-                    "path": record["path"] + "/downstream",
-                }
+                target = next(
+                    item for item in ledger["downstream"] if item["path"] == record["path"] + "/downstream"
+                )
                 errors = (record.get("quality") or {}).get("errors", [])
                 diagnostic = record["status"] == "UV_INVALID" and errors == ["DISTORTION_LIMIT"]
                 target["diagnostic_only"] = diagnostic
                 if record["status"] != "SUCCESS" and not diagnostic:
-                    target["status"] = "NOT_RUN_INVALID_UV"
+                    target["upstream_status"] = record["status"]
+                    target["status"] = (
+                        "NOT_RUN_INVALID_UV"
+                        if record["status"] == "UV_INVALID"
+                        else "NOT_RUN_UPSTREAM_FAILURE"
+                    )
                 elif phase_deadline - time.monotonic() < 60:
                     target["status"] = "NOT_RUN_PHASE_BUDGET"
                 else:
                     print(f"DOWNSTREAM {record['model']} {record['method']}", flush=True)
+                    target["status"] = "RUNNING"
+                    write_json(output / "ledger.json", ledger)
                     try:
                         result = evaluate(
                             root,
@@ -179,7 +196,6 @@ def run_benchmark(root: Path, config_path: Path) -> None:
                         )
                     except (ValueError, TypeError, RuntimeError, OSError) as error:
                         target.update(status="FAILED", reason=f"{type(error).__name__}: {error}")
-                ledger["downstream"].append(target)
                 write_json(output / "ledger.json", ledger)
     ledger["seconds"] = time.monotonic() - started
     terminal = {
@@ -189,6 +205,7 @@ def run_benchmark(root: Path, config_path: Path) -> None:
         "TIMEOUT",
         "BUDGET_EXCEEDED",
         "NOT_RUN_INVALID_UV",
+        "NOT_RUN_UPSTREAM_FAILURE",
         "COMPLETED",
         "PREPARED",
     }
@@ -201,7 +218,20 @@ def run_benchmark(root: Path, config_path: Path) -> None:
     write_json(output / "ledger.json", ledger)
     from .report import generate_report
 
+    report_started = time.monotonic()
     generate_report(output)
+    ledger["report_seconds"] = time.monotonic() - report_started
+    ledger["seconds"] = time.monotonic() - started
+    ledger["total_budget_exceeded"] = time.monotonic() > total_deadline
+    if ledger["total_budget_exceeded"]:
+        ledger["execution_complete"] = False
+    ledger["finished_utc"] = datetime.now(UTC).isoformat()
+    write_json(output / "ledger.json", ledger)
+    summary_path = output / "summary.json"
+    summary = json.loads(summary_path.read_text(encoding="utf-8"))
+    summary["execution_complete"] = ledger["execution_complete"]
+    summary["total_budget_exceeded"] = ledger["total_budget_exceeded"]
+    write_json(summary_path, summary)
     print(
         json.dumps(
             {

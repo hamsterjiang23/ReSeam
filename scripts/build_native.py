@@ -28,14 +28,14 @@ def main() -> None:
     if commit != other_commit:
         raise ValueError("Prepared build source commit differs from pinned reference")
     link_file = build / "CMakeFiles/OptCuts_bin.dir/link.txt"
-    link = shlex.split(link_file.read_text())
+    link = shlex.split(link_file.read_text(encoding="utf-8"))
     objects = [s for s in link if s.endswith(".cpp.o") and not s.endswith("/main.cpp.o")]
     for obj in objects:
         relative = obj.split(".dir/", 1)[1][:-2]
         if (source / relative).read_bytes() != (official / relative).read_bytes():
             raise ValueError(f"Changed upstream source: {relative}")
     flags_file = build / "CMakeFiles/OptCuts_bin.dir/flags.make"
-    flags = flags_file.read_text().splitlines()
+    flags = flags_file.read_text(encoding="utf-8").splitlines()
     includes = shlex.split(next(s.partition("=")[2] for s in flags if s.startswith("CXX_INCLUDES =")))
     libraries = link[link.index("-o") + 2 :]
     output = root / "artifacts/runtime/reseam-continuous"

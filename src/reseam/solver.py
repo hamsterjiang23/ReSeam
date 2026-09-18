@@ -21,9 +21,21 @@ def solve(
     iterations: int = 160,
 ) -> SolveResult:
     start = time.monotonic()
+    deadline = start + seconds
     if folder.exists():
         raise FileExistsError(folder)
     folder.mkdir(parents=True)
+    initial_quality = validate(state, tau=None)
+    if not initial_quality["valid"]:
+        return SolveResult(
+            "INVALID_INITIAL_MAPPING", None, time.monotonic() - start, reason=str(initial_quality["errors"])
+        )
+    fallback = state.copy()
+    fallback_energy = 4 * (float(initial_quality["sd_mean"]) + 1)
+    remaining = deadline - time.monotonic()
+    if remaining <= 1:
+        return SolveResult("BUDGET_EXHAUSTED", fallback, time.monotonic() - start)
+    native_seconds = max(0.1, min(remaining * 0.65, remaining - 1))
     rest = np.zeros((len(state.uv), 3))
     rest[state.uv_faces.reshape(-1)] = state.mesh.vertices[state.mesh.faces.reshape(-1)] / state.mesh.scale
     fixed = sorted(set(range(len(state.uv))) - free)
@@ -32,7 +44,7 @@ def solve(
         "faces": state.uv_faces.tolist(),
         "uv": state.uv.tolist(),
         "fixed": fixed,
-        "seconds": max(0.1, seconds - 1),
+        "seconds": max(0.1, native_seconds - 0.5),
         "max_iterations": iterations,
     }
     request_path, result_path = folder / "request.json", folder / "result.json"
@@ -40,12 +52,12 @@ def solve(
     argv = wsl_command(
         runtime,
         [linux_path(Path(runtime["continuous_binary"])), linux_path(request_path), linux_path(result_path)],
-        seconds,
+        native_seconds,
     )
     status = "SOLVED"
     failure_reason = None
     try:
-        run_process(argv, folder, seconds)
+        run_process(argv, folder, native_seconds)
     except TimeoutError:
         status = "TIMEOUT_WITH_CHECKPOINT"
     except RuntimeError as error:
@@ -54,20 +66,27 @@ def solve(
     if not result_path.exists():
         return SolveResult(
             "NUMERICAL_FAILURE" if failure_reason else "BUDGET_EXHAUSTED",
-            None,
+            fallback,
             time.monotonic() - start,
             reason=failure_reason,
         )
     checkpoints = list(folder.glob("result.json.checkpoint_*.json")) or [result_path]
     ranked = []
+    truncated = False
     for path in checkpoints:
+        if time.monotonic() >= deadline - 0.1:
+            truncated = True
+            break
         try:
-            data = json.loads(path.read_text())
+            data = json.loads(path.read_text(encoding="utf-8"))
             ranked.append((float(data["energy_native"]), path))
         except (ValueError, KeyError):
             continue  # A killed process may leave one incomplete checkpoint.
     for _, path in sorted(ranked):
-        data = json.loads(path.read_text())
+        if time.monotonic() >= deadline - 0.1:
+            truncated = True
+            break
+        data = json.loads(path.read_text(encoding="utf-8"))
         result = state.copy()
         result.uv = np.asarray(data["uv"], dtype=float)
         if result.uv.shape != state.uv.shape or data["topology_updates"] != 0:
@@ -75,7 +94,9 @@ def solve(
         if fixed and not np.allclose(result.uv[fixed], state.uv[fixed], atol=1e-12, rtol=0):
             continue
         quality = validate(result, tau=None)
-        if quality["valid"]:
+        if quality["valid"] and time.monotonic() <= deadline:
+            if float(quality["sd_mean"]) > float(initial_quality["sd_mean"]) + 1e-12:
+                continue
             return SolveResult(
                 status,
                 result,
@@ -87,9 +108,28 @@ def solve(
                     "energy_native": data["energy_native"],
                     "quality": quality,
                     "selected_checkpoint": path.name,
+                    "checkpoint_scan_truncated": truncated,
                 },
             )
-    return SolveResult("NO_LEGAL_CHECKPOINT", None, time.monotonic() - start, reason=failure_reason)
+    fallback_status = (
+        "CHECKPOINT_SCAN_BUDGET"
+        if truncated
+        else "NO_VALIDATED_IMPROVEMENT"
+        if status == "SOLVED"
+        else status
+    )
+    return SolveResult(
+        fallback_status,
+        fallback,
+        time.monotonic() - start,
+        reason=failure_reason,
+        metadata={
+            "energy_native": fallback_energy,
+            "quality": initial_quality,
+            "selected_checkpoint": "prevalidated_input",
+            "checkpoint_scan_truncated": truncated,
+        },
+    )
 
 
 def supports(candidate: Candidate) -> list[frozenset[int]]:
@@ -119,13 +159,18 @@ def supports(candidate: Candidate) -> list[frozenset[int]]:
 def relax(
     candidate: Candidate, mode: str, runtime: dict[str, Any], folder: Path, seconds: float, tau: float
 ) -> tuple[MeshState | None, list[dict[str, Any]]]:
-    domain = supports(candidate)
-    schedule = (
-        [(0, 160)] if mode == "small" else [(2, 160)] if mode == "large" else [(0, 20), (1, 40), (2, 100)]
-    )
     start = time.monotonic()
+    domain = supports(candidate)
+    schedule = {"small": [(0, 160)], "middle": [(1, 160)], "large": [(2, 160)]}.get(mode) or [
+        (0, 20),
+        (1, 40),
+        (2, 100),
+    ]
     best = candidate.state.copy()
-    best_distortion = distortion(best)["sd_mean"]
+    initial_quality = validate(best, tau=None)
+    if not initial_quality["valid"]:
+        return None, [{"status": "INVALID_INITIAL_MAPPING", "reason": str(initial_quality["errors"])}]
+    best_distortion = float(initial_quality["sd_mean"])
     history: list[dict[str, Any]] = []
     for level, iterations in schedule:
         remaining = seconds - (time.monotonic() - start)
@@ -145,6 +190,7 @@ def relax(
             "seconds": result.seconds,
             "iterations": result.iterations,
             "reason": result.reason,
+            "checkpoint_scan_truncated": result.metadata.get("checkpoint_scan_truncated", False),
         }
         if result.state is not None:
             value = distortion(result.state)["sd_mean"]
@@ -154,4 +200,5 @@ def relax(
         history.append(item)
         if best_distortion <= tau:
             break
-    return best if validate(best, tau)["valid"] else None, history
+    # Every stored best state has already passed full mapping validation.
+    return best if best_distortion <= tau + 1e-9 else None, history

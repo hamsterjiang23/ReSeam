@@ -106,7 +106,7 @@ def baseline(
             folder,
             seconds,
         )
-        result = json.loads((folder / "uv.json").read_text())
+        result = json.loads((folder / "uv.json").read_text(encoding="utf-8"))
         edge_lookup = {edge: index for index, edge in enumerate(mesh.edges)}
         seams = frozenset(
             edge_lookup[tuple(edge)]

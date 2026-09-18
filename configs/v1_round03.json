@@ -1,0 +1,44 @@
+{
+  "round_id": "v1_round03",
+  "models": [
+    "energy_blade",
+    "dragon"
+  ],
+  "seeds": [
+    17,
+    29,
+    43
+  ],
+  "methods": [
+    "optcuts",
+    "xatlas",
+    "blender_smart",
+    "partuv",
+    "optcuts_restart",
+    "reseam_fixed",
+    "reseam_small",
+    "reseam_large",
+    "reseam_adaptive",
+    "reseam_low_fragments",
+    "reseam_artist"
+  ],
+  "run_seconds": 180,
+  "max_candidates": 512,
+  "total_seconds": 16720,
+  "geometry_seconds": 14400,
+  "downstream_seconds": 7200,
+  "downstream_seeds": [
+    17
+  ],
+  "differentiable": true,
+  "notes": "Geometry: both assets, all methods, 3 seeds. Expensive downstream: all methods on first seed only, specified before running. Artist confirmation and blind review remain human tasks.",
+  "budget_accounting": {
+    "original_total_seconds": 28800,
+    "environment_smoke_reserved_seconds": 3600,
+    "prior_diagnostic_round_seconds": 480,
+    "prior_round": "v1_round01",
+    "interrupted_round02_charged_seconds": 8000,
+    "round02_charge_basis": "Conservative upper bound through daemon recovery, rounded upward; exact process exit unknown"
+  },
+  "report_reserve_seconds": 600
+}

@@ -283,12 +283,34 @@ def main() -> None:
         attribute = obj.data.attributes.new("reseam_edge_id", "INT", "EDGE")
         for edge in obj.data.edges:
             attribute.data[edge.index].value = edges[tuple(sorted(edge.vertices))]
+        hints = {
+            int(item["edge_id"])
+            for item in request["annotation"].get("preferences", [])
+            if item["kind"] == "prefer_cut"
+        }
+        actual_seams = {tuple(edge) for edge in request.get("seam_edges", [])}
+        for edge in obj.data.edges:
+            edge.use_seam = (
+                tuple(sorted(edge.vertices)) in actual_seams
+                if request.get("editing_template")
+                else attribute.data[edge.index].value in hints
+            )
         attribute = obj.data.attributes.new("reseam_face_id", "INT", "FACE")
         for face in obj.data.polygons:
             attribute.data[face.index].value = face.index
         obj["reseam_annotation"] = json.dumps(request["annotation"])
+        neutral = bpy.data.materials.new("ReSeam neutral")
+        neutral.diffuse_color = (0.45, 0.48, 0.5, 1)
+        protected = bpy.data.materials.new("ReSeam protected region")
+        protected.diffuse_color = (0.08, 0.5, 0.65, 1)
+        obj.data.materials.append(neutral)
+        obj.data.materials.append(protected)
+        if request.get("base_texture"):
+            low_material(obj, request["base_texture"], request.get("normal_texture"))
+            obj.data.materials.append(protected)
         text = bpy.data.texts.load(request["addon"])
         text.use_module = False
+        bpy.ops.file.pack_all()
         bpy.ops.wm.save_as_mainfile(filepath=request["output"])
         return
     if mode not in ("smart", "pack"):

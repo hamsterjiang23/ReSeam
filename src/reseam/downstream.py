@@ -66,18 +66,25 @@ def packing_metrics(state: MeshState, resolution: int = 1024) -> dict[str, Any]:
 
 
 def pack(
-    root: Path, state: MeshState, runtime: dict[str, Any], folder: Path, seconds: float
+    root: Path,
+    state: MeshState,
+    runtime: dict[str, Any],
+    folder: Path,
+    seconds: float,
+    profile: str = "primary",
 ) -> tuple[MeshState, dict[str, Any]]:
+    if profile not in ("primary", "historical_fraction_0_02"):
+        raise ValueError("Unknown packing profile")
     request = {
         "mode": "pack",
         "vertices": state.mesh.vertices.tolist(),
         "faces": state.mesh.faces.tolist(),
         "corner_uv": state.uv[state.uv_faces].tolist(),
-        "margin": 9 / 1024,
+        "margin": 0.02 if profile == "historical_fraction_0_02" else 9 / 1024,
         "output": str(folder / "uv.json"),
     }
     blender(root, runtime, request, folder, seconds)
-    result = json.loads((folder / "uv.json").read_text())
+    result = json.loads((folder / "uv.json").read_text(encoding="utf-8"))
     packed = state.copy()
     corners = np.asarray(result["corner_uv"], dtype=float)
     for fi, face in enumerate(packed.uv_faces):
@@ -85,6 +92,8 @@ def pack(
     if not np.allclose(packed.uv[packed.uv_faces], corners, atol=1e-6, rtol=0):
         raise ValueError("Packing broke UV connectivity")
     quality = packing_metrics(packed)
+    quality["profile"] = profile
+    quality["requested_margin"] = request["margin"]
     save_state(folder / "state.json", packed)
     draw_uv(packed, folder / "uv_layout.png")
     export_glb(packed, folder / "packed.glb")
@@ -160,7 +169,7 @@ def evaluate(
 ) -> dict[str, Any]:
     start = time.monotonic()
     runtime = read_runtime(root)
-    run = json.loads((run_folder / "result.json").read_text())
+    run = json.loads((run_folder / "result.json").read_text(encoding="utf-8"))
     state = load_state(run_folder / "state.json")
     folder = run_folder / "downstream"
     folder.mkdir(exist_ok=False)
@@ -194,7 +203,7 @@ def evaluate(
         )
         base = bake_folder / "BaseColor.png"
         normal = bake_folder / "Normal.png"
-        bake_result = json.loads((bake_folder / "bake.json").read_text())
+        bake_result = json.loads((bake_folder / "bake.json").read_text(encoding="utf-8"))
         result["projection_probe"] = bake_result["projection_probe"]
         # Exporting from Blender may split vertices; reimport and restore original triangle identity.
         exported = trimesh.load(bake_folder / "asset.glb", force="mesh", process=False)
@@ -386,7 +395,7 @@ def evaluate(
                 str(padding_path),
             ]
             run_process(command, diff_folder, remaining())
-            result["differentiable"] = json.loads((diff_folder / "metrics.json").read_text())
+            result["differentiable"] = json.loads((diff_folder / "metrics.json").read_text(encoding="utf-8"))
             destination = folder / "renders_differentiable"
             blender(
                 root,

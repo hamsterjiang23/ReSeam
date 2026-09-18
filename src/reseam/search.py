@@ -62,8 +62,11 @@ def search(
     with (folder / "candidates.jsonl").open("x", encoding="utf-8") as log:
         while count < max_candidates and time.monotonic() - start < seconds:
             changed = False
-            for kind, region, seams in proposals(best, constraints, seed + iteration):
-                if count >= max_candidates or seconds - (time.monotonic() - start) < 2:
+            for proposal in proposals(best, constraints, seed + iteration, deadline=start + seconds):
+                kind, region, seams = proposal.kind, proposal.region_faces, proposal.seams
+                if count >= max_candidates or (
+                    proposal.error is None and seconds - (time.monotonic() - start) < 2
+                ):
                     break
                 count += 1
                 record: dict[str, Any] = {
@@ -78,21 +81,29 @@ def search(
                 candidate_start = time.monotonic()
                 score_trial = best.copy()
                 score_trial.seams = seams
-                if (
+                if proposal.error is not None:
+                    record["status"] = (
+                        "BUDGET_EXHAUSTED" if "BUDGET" in proposal.error else "STRUCTURE_INVALID"
+                    )
+                    record["failure_stage"] = "BOUNDARY_BRIDGE"
+                    record["reason"] = proposal.error
+                elif (
                     float(seam_metrics(score_trial, constraints.weights, island_weight)["objective"])
                     >= float(seam_metrics(best, constraints.weights, island_weight)["objective"]) - 1e-8
                 ):
                     record["status"] = "NO_POTENTIAL_IMPROVEMENT"
                 else:
+                    failure_stage = "INITIALIZATION"
                     try:
                         candidate = build_candidate(best, kind, region, seams, record["candidate_id"])
+                        failure_stage = "CONTINUOUS_SOLVE"
                         budget = min(20.0, seconds - (time.monotonic() - start))
                         result, stages = relax(
                             candidate, mode, runtime, folder / record["candidate_id"], budget, tau
                         )
                         record["supports"] = stages
                         record["status"] = "QUALITY_OR_BUDGET_REJECTED"
-                        if result is not None:
+                        if result is not None and time.monotonic() - start < seconds - 1:
                             best, record["status"] = accept(
                                 best, result, candidate.base_version, constraints, tau, island_weight
                             )
@@ -102,7 +113,14 @@ def search(
                                 record["accepted"] = True
                                 save_state(folder / "best.json", best)
                     except (ValueError, RuntimeError, TimeoutError) as error:
-                        record["status"] = "INITIALIZATION_OR_SOLVER_FAILED"
+                        record["failure_stage"] = failure_stage
+                        record["status"] = (
+                            "BUDGET_EXHAUSTED"
+                            if isinstance(error, TimeoutError)
+                            else "INIT_FAILED"
+                            if failure_stage == "INITIALIZATION"
+                            else "NUMERICAL_FAILURE"
+                        )
                         record["reason"] = str(error)
                 record["seconds"] = time.monotonic() - candidate_start
                 record["cumulative_seconds"] = time.monotonic() - start

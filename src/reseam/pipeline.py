@@ -2,6 +2,7 @@
 
 import json
 import platform
+import shutil
 import time
 from pathlib import Path
 from typing import Any
@@ -15,7 +16,7 @@ from trimesh.visual.texture import TextureVisuals
 from .backends import baseline
 from .constraints import load_constraints, suggestions
 from .initialization import initialize
-from .mesh import load_mesh, save_state, sha256, write_obj
+from .mesh import chart_labels, load_mesh, save_state, sha256, write_obj
 from .runtime import read_runtime
 from .search import search
 from .solver import solve
@@ -48,9 +49,17 @@ def draw_uv(state: MeshState, path: Path, size: int = 1024) -> None:
     extent = max(float(np.ptp(uv, axis=0).max()), 1e-12)
     uv = (uv - minimum) / extent * (size - 32) + 16
     uv[:, 1] = size - uv[:, 1]
-    for face in state.uv_faces:
+    labels = chart_labels(state)
+    palette = ("#233c39", "#29384a", "#413a2a", "#393244")
+    for index, face in enumerate(state.uv_faces):
         points = [tuple(map(float, x)) for x in uv[face]]
-        draw.line(points + points[:1], fill="#93ddcd", width=1)
+        draw.polygon(points, fill=palette[int(labels[index]) % len(palette)])
+        draw.line(points + points[:1], fill="#56766d", width=1)
+    for edge, entries in enumerate(state.mesh.edge_faces):
+        if edge in state.seams or len(entries) == 1:
+            for face, corner in entries:
+                points = [tuple(map(float, uv[state.uv_faces[face, c]])) for c in (corner, (corner + 1) % 3)]
+                draw.line(points, fill="#b7e4d8", width=2)
     image.save(path)
 
 
@@ -107,6 +116,11 @@ def run_unwrap(
         path = root / "assets/v1" / file["path"]
         if sha256(path) != file["sha256"]:
             raise ValueError(f"Asset digest mismatch: {path}")
+    original_annotations = annotations
+    if annotations is not None:
+        snapshot = output / "constraints.json"
+        shutil.copy2(annotations, snapshot)
+        annotations = snapshot
     config: dict[str, Any] = {
         "model": model_id,
         "method": method,
@@ -117,14 +131,22 @@ def run_unwrap(
         "input_sha256": sha256(input_path),
         "initialization": "independent",
         "platform": platform.platform(),
-        "constraints_source": str(annotations) if annotations else None,
+        "constraints_source": str(original_annotations) if original_annotations else None,
         "constraints_sha256": sha256(annotations) if annotations else None,
         "max_candidates": max_candidates,
         "cleanup_export_reserve_seconds": 8,
         "runtime": runtime,
     }
     write_json(output / "config.json", config)
-    result: dict[str, Any] = {**config, "status": "RUNNING", "quality": None, "artist_assessed": False}
+    result: dict[str, Any] = {
+        **config,
+        "status": "RUNNING",
+        "quality": None,
+        "artist_assessed": False,
+        "first_feasible_seconds": None,
+        "search_started_at_seconds": None,
+        "anytime_history": [],
+    }
     write_json(output / "result.json", result)
     try:
         mesh = load_mesh(input_path)
@@ -132,6 +154,7 @@ def run_unwrap(
         write_json(suggestion_path, suggestions(mesh))
         constraints = load_constraints(annotations, mesh)
         if method == "reseam_artist" and annotations is None:
+            shutil.copy2(suggestion_path, output / "constraints.json")
             constraints = load_constraints(suggestion_path, mesh)
             result["constraints_source"] = "automatic_unconfirmed_soft_preferences"
         if method == "optcuts_restart":
@@ -156,11 +179,23 @@ def run_unwrap(
                     trials.append({"restart": restart, "status": "FAILED", "reason": str(error)})
                     continue
                 quality = validate(trial, tau)
+                qualified = quality["valid"] and not constraints.errors(trial)
+                if qualified and result["first_feasible_seconds"] is None:
+                    result["first_feasible_seconds"] = time.monotonic() - started
                 trials.append({**metadata, "quality": quality})
-                if quality["valid"] and (
-                    best is None or seam_metrics(trial)["objective"] < seam_metrics(best)["objective"]
+                if qualified and (
+                    best is None
+                    or seam_metrics(trial, constraints.weights, island_weight)["objective"]
+                    < seam_metrics(best, constraints.weights, island_weight)["objective"]
                 ):
                     best = trial
+                if best is not None:
+                    result["anytime_history"].append(
+                        {
+                            "seconds": time.monotonic() - started,
+                            "objective": seam_metrics(best, constraints.weights, island_weight)["objective"],
+                        }
+                    )
             if best is None:
                 raise ValueError("NO_FEASIBLE_RESTART")
             state = best
@@ -178,6 +213,18 @@ def run_unwrap(
             )
         save_state(output / "initial_state.json", state)
         result["initial_quality"] = validate(state, tau)
+        if (
+            result["initial_quality"]["valid"]
+            and not constraints.errors(state)
+            and result["first_feasible_seconds"] is None
+        ):
+            result["first_feasible_seconds"] = time.monotonic() - started
+            result["anytime_history"].append(
+                {
+                    "seconds": result["first_feasible_seconds"],
+                    "objective": seam_metrics(state, constraints.weights, island_weight)["objective"],
+                }
+            )
         if method.startswith("reseam_"):
             if constraints.errors(state):
                 initial_seams = (state.seams | constraints.must_cut) - constraints.must_join
@@ -192,6 +239,14 @@ def run_unwrap(
                 if restored.state is None or not validate(restored.state, tau)["valid"]:
                     raise ValueError("CONSTRAINT_INITIALIZATION_FAILED")
                 state = restored.state
+                if not constraints.errors(state) and result["first_feasible_seconds"] is None:
+                    result["first_feasible_seconds"] = time.monotonic() - started
+                    result["anytime_history"].append(
+                        {
+                            "seconds": result["first_feasible_seconds"],
+                            "objective": seam_metrics(state, constraints.weights, island_weight)["objective"],
+                        }
+                    )
             if method == "reseam_fixed":
                 from .partition import frozen_partition
 
@@ -212,6 +267,7 @@ def run_unwrap(
                     if method == "reseam_large"
                     else "adaptive"
                 )
+                result["search_started_at_seconds"] = time.monotonic() - started
                 state, search_result = search(
                     state,
                     constraints,

@@ -31,9 +31,13 @@ def main() -> None:
     bpy.context.scene.reseam_output = str(output)
     bpy.ops.reseam.export()
     assert output.exists()
-    result = json.loads(output.read_text())
+    result = json.loads(output.read_text(encoding="utf-8"))
     assert result["confirmed_by"] == "AUTOMATED_TEST_NOT_HUMAN"
-    print("PASS addon mark, clear, explicit confirmation and mesh identity export (mock only)")
+    uv_output = root / "artifacts/smoke/annotation_addon_mock_uv.json"
+    bpy.context.scene.reseam_uv_output = str(uv_output)
+    bpy.ops.reseam.export_uv()
+    assert json.loads(uv_output.read_text(encoding="utf-8"))["kind"] == "reseam_edited_uv_v1"
+    print("PASS addon mark, clear, confirmation and edited-UV export (mock only)")
 
 
 if __name__ == "__main__":
