@@ -11,7 +11,7 @@ from PIL import Image
 from scipy.ndimage import uniform_filter
 
 from .constraints import load_constraints, suggestions
-from .diagnostics import artist_metrics, package_optimized
+from .diagnostics import artist_metrics, package_optimized, packing_diagnostics
 from .mesh import load_state, sha256
 from .pipeline import write_json
 from .runtime import read_runtime
@@ -32,7 +32,12 @@ def enrich(run: Path) -> dict[str, Any]:
     data["state_sha256"] = sha256(path)
     write_json(run / "artist_diagnostics.json", data)
     packaging = package_optimized(run)
-    return {"diagnostics": data, "optimized_asset": packaging}
+    packing = None
+    packed_path = run / "downstream/pack/state.json"
+    if packed_path.exists():
+        packing = packing_diagnostics(state, load_state(packed_path))
+        write_json(run / "packing_diagnostics.json", packing)
+    return {"diagnostics": data, "optimized_asset": packaging, "packing_diagnostics": packing}
 
 
 def detail_crops(root: Path, records: list[dict[str, Any]]) -> None:

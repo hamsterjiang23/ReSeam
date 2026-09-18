@@ -19,6 +19,37 @@ from .types import MeshState
 from .validation import jacobians, validate
 
 
+def packing_diagnostics(native: MeshState, packed: MeshState, resolution: int = 1024) -> dict[str, Any]:
+    if not np.array_equal(native.mesh.faces, packed.mesh.faces) or not np.array_equal(
+        native.mesh.vertices, packed.mesh.vertices
+    ):
+        raise ValueError("Packing diagnostics require identical source geometry")
+    corners = packed.uv[packed.uv_faces]
+    a, b = corners[:, 1] - corners[:, 0], corners[:, 2] - corners[:, 0]
+    uv_areas = np.abs(a[:, 0] * b[:, 1] - a[:, 1] * b[:, 0]) / 2
+    labels = chart_labels(packed)
+    source_areas = np.bincount(labels, weights=packed.mesh.areas)
+    chart_density = resolution * np.sqrt(np.bincount(labels, weights=uv_areas) / source_areas)
+    weights = source_areas / source_areas.sum()
+    mean = float(np.dot(weights, chart_density))
+    native_singular = np.linalg.svd(jacobians(native), compute_uv=False)
+    packed_singular = np.linalg.svd(jacobians(packed), compute_uv=False)
+    before = native_singular[:, 0] / native_singular[:, 1]
+    after = packed_singular[:, 0] / packed_singular[:, 1]
+    return {
+        "density_unit": "pixels per source mesh length unit; source unit is not certified as metres",
+        "resolution": resolution,
+        "chart_density_min": float(chart_density.min()),
+        "chart_density_max": float(chart_density.max()),
+        "chart_density_area_weighted_mean": mean,
+        "chart_density_area_weighted_cv": float(np.sqrt(np.dot(weights, (chart_density - mean) ** 2)) / mean),
+        "uv_triangle_area_fraction": float(uv_areas.sum()),
+        "face_anisotropy_max_relative_change_after_packing": float(np.max(np.abs(after / before - 1))),
+        "stretch_definition": "Per-face singular-value ratio; invariant to uniform scale and rotation, distinct from native SD",
+        "scope": "Offline diagnostics only; does not replace packed-gap validation or human acceptance",
+    }
+
+
 def artist_metrics(state: MeshState, confirmed_regions: list[dict[str, Any]] | None = None) -> dict[str, Any]:
     checked = validate(state, tau=None)
     labels = chart_labels(state)

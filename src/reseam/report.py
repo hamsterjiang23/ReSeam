@@ -3,12 +3,15 @@
 import html
 import json
 import shutil
+import subprocess
+from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
 
 import numpy as np
 
 from .pipeline import write_json
+from .mesh import sha256
 from .report_details import anytime_svg, atlas_overlay, detail_crops, editing_scene, enrich
 
 CSS = """
@@ -38,6 +41,25 @@ def figure(root: Path, path: Path, label: str) -> str:
 
 def generate_report(root: Path) -> None:
     ledger = json.loads((root / "ledger.json").read_text(encoding="utf-8"))
+    repository = Path(__file__).resolve().parents[2]
+    report_files = [
+        "src/reseam/report.py",
+        "src/reseam/report_details.py",
+        "src/reseam/diagnostics.py",
+        "docs/artist-review-task.md",
+        "scripts/reseam_annotation_addon.py",
+    ]
+    write_json(
+        root / "report_source.json",
+        {
+            "generated_utc": datetime.now(UTC).isoformat(),
+            "git_head": subprocess.check_output(
+                ["git", "rev-parse", "HEAD"], cwd=repository, text=True
+            ).strip(),
+            "source_sha256": {path: sha256(repository / path) for path in report_files},
+            "scope": "Report generation and offline diagnostics; geometric experiment source remains source.json",
+        },
+    )
     offline = {}
     for record in ledger["runs"]:
         try:
@@ -102,6 +124,12 @@ def generate_report(root: Path) -> None:
             )
         elif diagnostics.get("flagged_face_area_fraction") is not None:
             diagnostic_text = f"被标记面占原表面积 {diagnostics['flagged_face_area_fraction']:.8%}；严格失败不等于整张图都不可用。"
+        density = extra.get("packing_diagnostics")
+        if density:
+            diagnostic_text += (
+                f" 岛间 Texel Density 变异系数 {density['chart_density_area_weighted_cv']:.3%}；"
+                f"排布前后面内各向异性最大相对变化 {density['face_anisotropy_max_relative_change_after_packing']:.3%}。"
+            )
         downloads = ""
         if (images / "blender/asset.glb").exists():
             downloads += (

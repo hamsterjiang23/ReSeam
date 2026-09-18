@@ -8,7 +8,7 @@ import pytest
 
 from reseam.artist_review import validate_edit
 from reseam.constraints import Constraints, mesh_identity
-from reseam.diagnostics import artist_metrics
+from reseam.diagnostics import artist_metrics, packing_diagnostics
 from reseam.mesh import make_mesh, state_from_corner_uv
 from reseam.types import Candidate, MeshState, SolveResult
 
@@ -28,6 +28,20 @@ def test_artist_proxy_definitions_and_no_invented_semantics() -> None:
     assert data["thin_chart_area_fraction"] == 0
     assert data["semantic_fragmentation"] is None
     assert artist_metrics(square(100))["thin_chart_area_fraction"] == pytest.approx(1)
+
+
+def test_packing_density_and_scale_invariant_stretch() -> None:
+    original = square()
+    packed = original.copy()
+    packed.uv *= 2
+    before = packing_diagnostics(original, original)
+    after = packing_diagnostics(original, packed)
+    assert after["chart_density_area_weighted_mean"] == pytest.approx(
+        2 * before["chart_density_area_weighted_mean"]
+    )
+    assert after["uv_triangle_area_fraction"] == pytest.approx(4 * before["uv_triangle_area_fraction"])
+    assert after["chart_density_area_weighted_cv"] == pytest.approx(0)
+    assert after["face_anisotropy_max_relative_change_after_packing"] == pytest.approx(0)
 
 
 def test_human_edit_technical_check_does_not_certify_artist_acceptance() -> None:

@@ -70,3 +70,5 @@ Cycles Selected to Active 烘焙真实 Base Color 与切线空间 Normal；法�
 报告同时保留失败、代价、全局与局部指标，不自动给出综合冠军。两个模型为反复使用的开发集，所有结果仅限这些资产和设置，不能推断独立模型泛化或已达到艺术家交付标准。
 
 优化后 `downstream/differentiable/asset.glb` 只替换 Base Color，并核验几何、逐角 UV、顶点法线和法线贴图像素。细长岛、紧致度与边界转折只是编辑性代理；没有确认区域时不计算虚构语义碎片指标。历史 FRACTION=0.02 配置在 `configs/packing_historical.json`，通过 `scripts/pack_profile.py` 写入独立目录，不混入主比较。
+
+报告额外展示覆盖率、岛间 Texel Density 变异系数及排布前后面内各向异性变化，并提供与颜色图集直接对齐的 0–1 UV 轮廓开关。绝对密度单位是像素／原模型长度单位，不假定原模型使用米。报告再生成版本单独记录于 report_source.json；几何实验 source.json 和原始运行结果不改写。
