@@ -10,8 +10,8 @@ from typing import Any
 
 import numpy as np
 
-from .pipeline import write_json
 from .mesh import sha256
+from .pipeline import write_json
 from .report_details import anytime_svg, atlas_overlay, detail_crops, editing_scene, enrich
 
 CSS = """
