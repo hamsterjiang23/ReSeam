@@ -117,6 +117,8 @@ V1 阶段只保留 UV、岛 ID 和原始网格对应关系等输出接口，不�
 - [固定测试资产与多轮协议](assets/v1/README.md)：两套模型、输入完整性与运行目录规范。
 - [上游参考源码](references/README.md)：OptCuts 与 PartUV 官方源码、固定提交及阅读入口；实际执行环境另行记录。
 - [运行说明](docs/running-v1.md)：环境、命令、标注和结果解释。
+- [Artist 参考与质量目标](docs/artist-quality-reference.md)：用户提供的成品贴图参考、初步反馈及覆盖率／密度／安全间距的边界。
+- [人工编辑任务](docs/artist-review-task.md)：匿名场景、限时修整、UV 导出、技术复核与重烘焙。
 - [实现记录](implementation-notes.md)：偏差、审查修复和已知边界。
 
 人工步骤使用 [统一编辑任务](docs/artist-review-task.md)：匿名 Blender 场景、15 分钟修整、逐角 UV 导出、固定几何与约束复核、重新烘焙及真实偏好记录。自动验证不会将人工验收标为完成。两套模型及协议已固定，是否完成以实际矩阵和人工验收记录为准。
