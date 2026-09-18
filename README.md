@@ -24,8 +24,8 @@ git clone --recurse-submodules git@github.com:hamsterjiang23/ReSeam.git
 ```powershell
 uv run reseam doctor
 uv run reseam unwrap --model energy_blade --method reseam_adaptive --output artifacts/manual/energy --seconds 180
-uv run reseam benchmark --config configs/v1_round01.json
-uv run reseam report --round artifacts/v1/v1_round01
+uv run reseam benchmark --config configs/v1_round02.json
+uv run reseam report --round artifacts/v1/v1_round02
 ```
 
 已有输出不会覆盖。每轮记录源码与外部程序哈希、配置、全部失败及未完成项。正式配置包含 66 个几何运行；种子 17 的 22 个方法／模型组合承担下游验收，另两个种子不宣称已验证烘焙。

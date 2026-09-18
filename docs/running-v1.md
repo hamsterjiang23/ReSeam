@@ -23,13 +23,15 @@ uv run reseam doctor
 uv run reseam unwrap --model energy_blade --method optcuts --output artifacts/manual/baseline --seconds 180
 uv run reseam unwrap --model energy_blade --method reseam_adaptive --output artifacts/manual/reseam --seconds 180
 uv run python scripts/evaluate_run.py artifacts/manual/reseam --seconds 600
-uv run reseam benchmark --config configs/v1_round01.json
-uv run reseam report --round artifacts/v1/v1_round01
+uv run reseam benchmark --config configs/v1_round02.json
+uv run reseam report --round artifacts/v1/v1_round02
 ```
 
 `unwrap` 生成原生 OBJ／GLB、完整 state.json、UV 图、配置、逐候选日志和 result.json；输出已存在时拒绝覆盖。`--annotations` 接受标注文件，确认后的标注必须匹配输入网格身份。`--island-weight 0.01` 开启低碎片轨道；正常几何轨道为 0。
 
 单次上限默认 180 秒，包含重新运行初始化。多起点 OptCuts 在同一总预算内使用三个明确不同的输入面起点；普通 OptCuts、xatlas 和 Smart UV 的重复不声称由种子驱动。PartUV 显式传递 PartField 采样种子。
+
+所有方法统一预留 8 秒用于超时清理、全量复核与导出；实测总耗时仍超过上限的记录标为 BUDGET_EXCEEDED，不计入成功排名。round01 因首次发现该总耗时问题保留为中止诊断轮，正式使用 round02；其总预算已扣除 round01 的 480 秒，并预留整小时环境／冒烟预算。
 
 `benchmark` 固定两模型 × 11 个方法配置 × 3 个种子，共 66 个几何运行。昂贵下游预先选择种子 17 的 22 个组合；仅超过畸变阈值但映射合法的输出也可烘焙作诊断，不能计作合格展开。运行期间冻结源码；不同版本新建 round_id。
 

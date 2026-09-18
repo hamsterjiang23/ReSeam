@@ -92,8 +92,11 @@ def run_unwrap(
 ) -> dict[str, Any]:
     if output.exists():
         raise FileExistsError(f"Refusing to overwrite {output}")
+    if seconds < 10:
+        raise ValueError("A run budget must be at least 10 seconds, including cleanup/export reserve")
     output.mkdir(parents=True)
     started = time.monotonic()
+    work_seconds = seconds - 8
     runtime = read_runtime(root)
     manifest = json.loads((root / "assets/v1/manifest.json").read_text(encoding="utf-8-sig"))
     model = next((item for item in manifest["models"] if item["id"] == model_id), None)
@@ -117,6 +120,7 @@ def run_unwrap(
         "constraints_source": str(annotations) if annotations else None,
         "constraints_sha256": sha256(annotations) if annotations else None,
         "max_candidates": max_candidates,
+        "cleanup_export_reserve_seconds": 8,
         "runtime": runtime,
     }
     write_json(output / "config.json", config)
@@ -134,7 +138,7 @@ def run_unwrap(
             best = None
             trials = []
             for restart in range(3):
-                remaining = seconds - (time.monotonic() - started)
+                remaining = work_seconds - (time.monotonic() - started)
                 if remaining <= 1:
                     break
                 try:
@@ -169,7 +173,7 @@ def run_unwrap(
                 backend,
                 runtime,
                 output / "initialization",
-                max(0.1, seconds - (time.monotonic() - started)),
+                max(0.1, work_seconds - (time.monotonic() - started)),
                 seed,
             )
         save_state(output / "initial_state.json", state)
@@ -183,7 +187,7 @@ def run_unwrap(
                     frozenset(range(len(repaired.uv))),
                     runtime,
                     output / "constraint_init",
-                    max(0.1, seconds - (time.monotonic() - started)),
+                    max(0.1, work_seconds - (time.monotonic() - started)),
                 )
                 if restored.state is None or not validate(restored.state, tau)["valid"]:
                     raise ValueError("CONSTRAINT_INITIALIZATION_FAILED")
@@ -196,7 +200,7 @@ def run_unwrap(
                     state,
                     runtime,
                     output / "partition",
-                    max(0, seconds - (time.monotonic() - started)),
+                    max(0, work_seconds - (time.monotonic() - started)),
                     seed,
                     tau,
                 )
@@ -213,7 +217,7 @@ def run_unwrap(
                     constraints,
                     runtime,
                     output / "search",
-                    max(0, seconds - (time.monotonic() - started)),
+                    max(0, work_seconds - (time.monotonic() - started)),
                     seed,
                     mode,
                     tau,
@@ -234,7 +238,14 @@ def run_unwrap(
         result.update(status="TIMEOUT", reason=str(error))
     except (ValueError, RuntimeError, FileNotFoundError) as error:
         result.update(status="FAILED", reason=str(error))
-    result["wall_seconds"] = time.monotonic() - started
-    result["budget_exceeded"] = result["wall_seconds"] > seconds + 5
+    finalize_budget(result, time.monotonic() - started, seconds)
     write_json(output / "result.json", result)
     return result
+
+
+def finalize_budget(result: dict[str, Any], elapsed: float, budget: float) -> None:
+    result["wall_seconds"] = elapsed
+    result["budget_exceeded"] = elapsed > budget
+    if result["budget_exceeded"]:
+        result["status_before_budget_check"] = result["status"]
+        result["status"] = "BUDGET_EXCEEDED"

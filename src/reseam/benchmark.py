@@ -182,7 +182,16 @@ def run_benchmark(root: Path, config_path: Path) -> None:
                 ledger["downstream"].append(target)
                 write_json(output / "ledger.json", ledger)
     ledger["seconds"] = time.monotonic() - started
-    terminal = {"SUCCESS", "FAILED", "UV_INVALID", "TIMEOUT", "NOT_RUN_INVALID_UV", "COMPLETED", "PREPARED"}
+    terminal = {
+        "SUCCESS",
+        "FAILED",
+        "UV_INVALID",
+        "TIMEOUT",
+        "BUDGET_EXCEEDED",
+        "NOT_RUN_INVALID_UV",
+        "COMPLETED",
+        "PREPARED",
+    }
     ledger["execution_complete"] = all(
         record["status"] in terminal
         for group in ("runs", "downstream", "audits", "annotations")

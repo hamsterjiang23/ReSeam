@@ -110,6 +110,8 @@ def generate_report(root: Path) -> None:
     )
     completed = sum(r["status"] not in ("PENDING", "RUNNING", "NOT_RUN_PHASE_BUDGET") for r in ledger["runs"])
     intro = f"已记录 {completed}/{len(ledger['runs'])} 个几何配置。失败与超时保留在矩阵中。Artist 人工验收：待完成。"
+    if ledger.get("stop_reason"):
+        intro += f" 本轮已停止：{html.escape(ledger['stop_reason'])}；产物仅作诊断，不用于最终同预算排名。"
     page = '<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
     page += f'<title>ReSeam · {ledger["round_id"]}</title><style>{CSS}</style><header><div class="eyebrow">RESEAM / RESEARCH LOG</div>'
     page += f'<h1>接缝，重新组织。</h1><p>{intro}</p><p class="note">只比较固定低模与预定设置。岛数、畸变与烘焙质量分别报告；多轮和多种子不增加独立模型数。</p>'

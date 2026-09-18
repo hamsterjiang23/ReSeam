@@ -163,3 +163,13 @@ def test_hole_bridge_builds_real_disk_cut() -> None:
     cut = initialize(mesh, seams)
     assert validate(cut, None)["valid"]
     assert len(np.unique(chart_labels(cut))) == 1
+
+
+def test_over_budget_result_is_not_a_success() -> None:
+    from reseam.pipeline import finalize_budget
+
+    record = {"status": "SUCCESS", "quality": {"valid": True}}
+    finalize_budget(record, 185.67, 180)
+    assert record["status"] == "BUDGET_EXCEEDED"
+    assert record["status_before_budget_check"] == "SUCCESS"
+    assert record["quality"]["valid"] is True
