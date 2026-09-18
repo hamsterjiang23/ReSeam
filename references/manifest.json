@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "purpose": "ReSeam source reference; not an installed or validated backend",
+  "repositories": [
+    {
+      "name": "OptCuts",
+      "path": "references/OptCuts",
+      "origin": "https://github.com/liminchen/OptCuts.git",
+      "commit": "cd2302671af7954f263b0ea93d8419aa943d54be",
+      "shallow": true,
+      "tracked_files": 9484,
+      "clean": true,
+      "build_test_status": "not_run",
+      "weights_downloaded": false,
+      "dependency_installation_status": "not_run",
+      "acquisition": "official_partial_clone_completed_from_same_commit_local_git_objects"
+    },
+    {
+      "name": "PartUV",
+      "path": "references/PartUV",
+      "origin": "https://github.com/EricWang12/PartUV.git",
+      "commit": "46bad07092a9396f00d7e04ea90369ded7de3d18",
+      "shallow": true,
+      "tracked_files": 172,
+      "clean": true,
+      "build_test_status": "not_run",
+      "weights_downloaded": false,
+      "dependency_installation_status": "not_run",
+      "acquisition": "official_partial_clone"
+    }
+  ]
+}

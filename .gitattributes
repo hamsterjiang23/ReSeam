@@ -1,0 +1,5 @@
+* text=auto eol=lf
+*.md whitespace=-blank-at-eol
+# Preserve the exact bytes recorded in the asset manifest, including provenance.
+assets/v1/** -text whitespace=cr-at-eol,-blank-at-eof
+*.glb binary

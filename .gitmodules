@@ -1,0 +1,6 @@
+[submodule "references/OptCuts"]
+	path = references/OptCuts
+	url = https://github.com/liminchen/OptCuts.git
+[submodule "references/PartUV"]
+	path = references/PartUV
+	url = https://github.com/EricWang12/PartUV.git

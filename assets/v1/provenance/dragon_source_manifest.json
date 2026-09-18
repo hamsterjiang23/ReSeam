@@ -1,0 +1,28 @@
+{
+  "baseline": "F:\\Aseet_Production_WorkFlow\\Conclusion\\00_baseline_low_models\\Dragon_RobustLPM_2000faces\\model.glb",
+  "baseline_sha256": "4e0165ffc6c5bfd7002f4581b456ada52ed087a5ca0936a4ff395ee278ca298d",
+  "topology_source": "F:\\Aseet_Production_WorkFlow\\artifacts\\bake_test_multiview_experiment\\inputs\\dragon\\low_source.glb",
+  "topology_source_sha256": "630ce6d9d5d4e56eb888a782a237c477523e6b6025225360b08784f86a9f09e8",
+  "alignment": {
+    "scale": [
+      1.2360833586643698,
+      1.2360833706796046,
+      1.2360833585311946
+    ],
+    "translation": [
+      -0.0015474972048631908,
+      0.2984162667204014,
+      0.0008857734309399845
+    ],
+    "max_residual": 3.441054445580493e-08,
+    "tolerance": 2.481929539988492e-06
+  },
+  "faces": 2000,
+  "vertices": 996,
+  "components": 1,
+  "high_source": "F:\\Aseet_Production_WorkFlow\\artifacts\\bake_test_multiview_experiment\\inputs\\dragon\\high.glb",
+  "high_source_sha256": "a5e0edbf7d13753d16d06f6aee1b2718d1199e6593a69eae9999fbe315334ace",
+  "texture_kind": "real_source_basecolor",
+  "input_sha256": "a22c2485db1bdc006ec46ef052bdaf020421c8ffc4af4a6e7afd8fd213b7553f",
+  "high_sha256": "ee7d502cd5042293cf2ff63047d20882cbd2dcdb0cc68eb818bb46c601e08fff"
+}

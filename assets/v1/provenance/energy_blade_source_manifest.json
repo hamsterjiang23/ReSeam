@@ -1,0 +1,28 @@
+{
+  "baseline": "F:\\Aseet_Production_WorkFlow\\Conclusion\\00_baseline_low_models\\QEM4VR_500faces\\model.glb",
+  "baseline_sha256": "7338751c174760bc3e78732ccf20e631834d27cf5b45aea1a965d954b55d8c72",
+  "topology_source": "F:\\Aseet_Production_WorkFlow\\artifacts\\bake_test_multiview_experiment\\inputs\\energy_blade\\low_source.glb",
+  "topology_source_sha256": "71bfd9298e92b07ad16bb12ce8702cd14f63f1ec19ff4ac4f839eedca9855a68",
+  "alignment": {
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "translation": [
+      0.0,
+      0.0,
+      0.0009613037109375
+    ],
+    "max_residual": 5.820766091346741e-11,
+    "tolerance": 2.4033736380357935e-06
+  },
+  "faces": 500,
+  "vertices": 252,
+  "components": 1,
+  "high_source": "F:\\Aseet_Production_WorkFlow\\artifacts\\bake_test_multiview_experiment\\inputs\\energy_blade\\high.glb",
+  "high_source_sha256": "c60df75a9e3293caca0927507bfbf1619feebd96a184969e306ef0888ae41b9d",
+  "texture_kind": "procedural_diagnostic",
+  "input_sha256": "1e8573077005999d4678f3683afbb3d49ae2183ff7ced9d919fe45d01993f828",
+  "high_sha256": "8bafca910e7b55e7b71627977e5fc10841c574db2bbca4d2922bcb51d7024a90"
+}

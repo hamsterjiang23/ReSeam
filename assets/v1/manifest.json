@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "dataset_id": "resem_v1_fixed_assets_v1",
+  "created_at_utc": "2026-09-18T02:30:32.263444+00:00",
+  "source_thread": "codex://threads/01a0ae39-4fe3-7b12-9430-d75932487914",
+  "migration_mode": "copy_verified_sources_retained",
+  "path_base": "assets/v1",
+  "scope": "two fixed development and regression assets, not an unseen test set",
+  "formal_experiments_status": "not_started",
+  "models": [
+    {
+      "id": "energy_blade",
+      "name_zh": "能量刀",
+      "historical_low_variant": "QEM4VR_500faces",
+      "low_triangles": 500,
+      "low_vertices": 252,
+      "high_inspection": {
+        "triangles": 1630,
+        "primitive_vertex_count_sum": 2371,
+        "has_uv": true,
+        "embedded_image_count": 3,
+        "base_color_textured_material_count": 1,
+        "external_dependencies": false
+      },
+      "low_inspection": {
+        "triangles": 500,
+        "primitive_vertex_count_sum": 252,
+        "has_uv": false,
+        "embedded_image_count": 0,
+        "base_color_textured_material_count": 0,
+        "external_dependencies": false
+      },
+      "coordinate_policy": "prepared low already aligned to historical high; do not reapply provenance alignment",
+      "files": [
+        {
+          "path": "energy_blade/high.glb",
+          "role": "textured_high_reference",
+          "source_path": "F:\\Aseet_Production_WorkFlow\\artifacts\\bake_test_multiview_experiment\\inputs\\energy_blade\\high.glb",
+          "bytes": 19217212,
+          "sha256": "c60df75a9e3293caca0927507bfbf1619feebd96a184969e306ef0888ae41b9d"
+        },
+        {
+          "path": "energy_blade/low.glb",
+          "role": "fixed_low_without_uv",
+          "source_path": "F:\\Aseet_Production_WorkFlow\\artifacts\\uv_methods_comparison\\inputs\\energy_blade\\input.glb",
+          "bytes": 9788,
+          "sha256": "1e8573077005999d4678f3683afbb3d49ae2183ff7ced9d919fe45d01993f828"
+        },
+        {
+          "path": "energy_blade/low.obj",
+          "role": "fixed_low_without_uv_obj",
+          "source_path": "F:\\Aseet_Production_WorkFlow\\artifacts\\uv_methods_comparison\\inputs\\energy_blade\\input.obj",
+          "bytes": 15356,
+          "sha256": "77014ff31afde09f75b2fa8659f76ed347ed51533eae064c11d623598eab772c"
+        },
+        {
+          "path": "provenance/energy_blade_source_manifest.json",
+          "role": "historical_provenance_only",
+          "source_path": "F:\\Aseet_Production_WorkFlow\\artifacts\\uv_methods_comparison\\inputs\\energy_blade\\manifest.json",
+          "bytes": 1179,
+          "sha256": "2fb12399b6018ce55279e438573c32c67e90a05b940f8b48d8e0222d83636720"
+        }
+      ]
+    },
+    {
+      "id": "dragon",
+      "name_zh": "幻想龙",
+      "historical_low_variant": "Dragon_RobustLPM_2000faces",
+      "low_triangles": 2000,
+      "low_vertices": 996,
+      "high_inspection": {
+        "triangles": 22730,
+        "primitive_vertex_count_sum": 29015,
+        "has_uv": true,
+        "embedded_image_count": 3,
+        "base_color_textured_material_count": 1,
+        "external_dependencies": false
+      },
+      "low_inspection": {
+        "triangles": 2000,
+        "primitive_vertex_count_sum": 996,
+        "has_uv": false,
+        "embedded_image_count": 0,
+        "base_color_textured_material_count": 0,
+        "external_dependencies": false
+      },
+      "coordinate_policy": "prepared low already aligned to historical high; do not reapply provenance alignment",
+      "files": [
+        {
+          "path": "dragon/high.glb",
+          "role": "textured_high_reference",
+          "source_path": "F:\\Aseet_Production_WorkFlow\\artifacts\\bake_test_multiview_experiment\\inputs\\dragon\\high.glb",
+          "bytes": 34100712,
+          "sha256": "a5e0edbf7d13753d16d06f6aee1b2718d1199e6593a69eae9999fbe315334ace"
+        },
+        {
+          "path": "dragon/low.glb",
+          "role": "fixed_low_without_uv",
+          "source_path": "F:\\Aseet_Production_WorkFlow\\artifacts\\uv_methods_comparison\\inputs\\dragon\\input.glb",
+          "bytes": 36740,
+          "sha256": "a22c2485db1bdc006ec46ef052bdaf020421c8ffc4af4a6e7afd8fd213b7553f"
+        },
+        {
+          "path": "dragon/low.obj",
+          "role": "fixed_low_without_uv_obj",
+          "source_path": "F:\\Aseet_Production_WorkFlow\\artifacts\\uv_methods_comparison\\inputs\\dragon\\input.obj",
+          "bytes": 63120,
+          "sha256": "d43a3a181211d3b003f2df54b73212ec0ef0e266e1a628e54b8c74a20ff9b570"
+        },
+        {
+          "path": "provenance/dragon_source_manifest.json",
+          "role": "historical_provenance_only",
+          "source_path": "F:\\Aseet_Production_WorkFlow\\artifacts\\uv_methods_comparison\\inputs\\dragon\\manifest.json",
+          "bytes": 1260,
+          "sha256": "b548afb9a196aaf8798bea6aa96355a1b629d4f9145e933d9ea084f5a89a9d20"
+        }
+      ]
+    }
+  ],
+  "validation_scope": "SHA-256 equality; GLB v2 header/chunks and buffer-view bounds; embedded assets; triangle and vertex counts; low UV absence; OBJ face/index checks. Not a manifold, intersection, visual bake or full glTF validation."
+}
