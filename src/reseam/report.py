@@ -9,7 +9,7 @@ from typing import Any
 import numpy as np
 
 from .pipeline import write_json
-from .report_details import anytime_svg, detail_crops, editing_scene, enrich
+from .report_details import anytime_svg, atlas_overlay, detail_crops, editing_scene, enrich
 
 CSS = """
 :root{--paper:#eeeae0;--ink:#172d2a;--accent:#af542e;--line:#b5b9ab}
@@ -25,6 +25,7 @@ figure{margin:0}figcaption{font-size:12px;padding:6px 0}.numbers{display:flex;ga
 .numbers b{display:block;font:24px Georgia,serif}.note{font-size:13px;color:#56625c;overflow-wrap:anywhere}.hidden{display:none}
 a{color:var(--ink)}details{margin:16px 0}summary{cursor:pointer}.review{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0}
 textarea{width:100%;min-height:70px}@media(max-width:600px){h1{font-size:36px}header{padding:28px 6vw}.grid{grid-template-columns:1fr}}
+.atlas-images{position:relative;background:#101820}.atlas-images img{display:block;width:100%}.atlas-outline{position:absolute;inset:0;pointer-events:none}.atlas input:not(:checked)~.atlas-images .atlas-outline{display:none}
 """
 
 
@@ -118,7 +119,7 @@ def generate_report(root: Path) -> None:
             f'<div class="eyebrow">{record["model"]} / seed {record["seed"]}</div>'
             f'<h2>{html.escape(record["method"])}</h2><span class="status">{record["status"]}</span>'
             f'<div class="numbers">{metrics}</div><div class="views">{panels}</div>'
-            f'{anytime_svg(path)}<p class="note">{html.escape(diagnostic_text)}</p>'
+            f'{atlas_overlay(root, path, str(len(cards)))}{anytime_svg(path)}<p class="note">{html.escape(diagnostic_text)}</p>'
             f'<p class="note">下游：{html.escape(downstream_status)}</p>'
             f'<p class="note">{html.escape(str(quality.get("errors", record.get("reason", ""))))}</p>'
             f"{downloads}{evidence}</article>"
@@ -159,7 +160,7 @@ def generate_report(root: Path) -> None:
     page = '<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
     page += f'<title>ReSeam · {ledger["round_id"]}</title><style>{CSS}</style><header><div class="eyebrow">RESEAM / RESEARCH LOG</div>'
     page += f'<h1>接缝，重新组织。</h1><p>{intro}</p><p class="note">只比较固定低模与预定设置。岛数、畸变与烘焙质量分别报告；多轮和多种子不增加独立模型数。</p>'
-    page += '<p class="note">UV 覆盖率为统一打包后的三角形面积占图集比例，不含扩边。黑色空白同时包含岛间距、外边距和形状排布空隙；该诊断不替代 V1 的展开质量或 artist 验收。</p>'
+    page += '<p class="note">在不牺牲拉伸、合理 Texel Density 与安全 Padding 的前提下提高覆盖率；岛间距不是越小越好。UV 覆盖率按三角形面积统计，不含扩边填色。当前统一为 1024²、岛间距至少 16 px、烘焙扩边 8 px；该诊断不替代 V1 展开质量或 artist 验收。</p>'
     page += '<a href="summary.json">汇总数据</a> · <a href="ledger.json">完整矩阵</a> · <a href="blind/index.html">匿名评审</a></header>'
     page += '<main><div class="toolbar"><label>模型 <select id="model"><option value="">全部</option><option>energy_blade</option><option>dragon</option></select></label>'
     page += '<label>种子 <select id="seed"><option>17</option><option>29</option><option>43</option><option value="">全部</option></select></label>'

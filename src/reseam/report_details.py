@@ -128,6 +128,44 @@ def anytime_svg(run: Path) -> str:
     )
 
 
+def atlas_overlay(root: Path, run: Path, code: str) -> str:
+    packed = run / "downstream/pack/state.json"
+    texture = run / "downstream/blender/BaseColor.png"
+    if not packed.exists() or not texture.exists():
+        return ""
+    state = load_state(packed)
+    paths = []
+    for face in state.uv_faces:
+        points = " ".join(f"{state.uv[v, 0] * 1024:.4f},{(1 - state.uv[v, 1]) * 1024:.4f}" for v in face)
+        paths.append(
+            f'<polygon points="{points}" fill="none" stroke="#b9ded4" stroke-opacity=".5" stroke-width=".6"/>'
+        )
+    for edge, entries in enumerate(state.mesh.edge_faces):
+        if edge not in state.seams and len(entries) != 1:
+            continue
+        for face, corner in entries:
+            a, b = state.uv[state.uv_faces[face, [corner, (corner + 1) % 3]]]
+            paths.append(
+                f'<path d="M{a[0] * 1024:.4f},{(1 - a[1]) * 1024:.4f}L{b[0] * 1024:.4f},{(1 - b[1]) * 1024:.4f}" '
+                'fill="none" stroke="#e5ff52" stroke-width="1.4"/>'
+            )
+    output = run / "details/atlas_uv.svg"
+    output.parent.mkdir(exist_ok=True)
+    output.write_text(
+        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">' + "".join(paths) + "</svg>",
+        encoding="utf-8",
+    )
+    texture_url = html.escape(texture.relative_to(root).as_posix(), quote=True)
+    outline_url = html.escape(output.relative_to(root).as_posix(), quote=True)
+    return (
+        "<details><summary>实际图集：颜色贴图与 UV 轮廓</summary>"
+        f'<div class="atlas"><input id="atlas_{code}" type="checkbox" checked><label for="atlas_{code}">显示 UV 轮廓</label>'
+        f'<div class="atlas-images"><img loading="lazy" src="{texture_url}" alt="烘焙颜色图集">'
+        f'<img class="atlas-outline" loading="lazy" src="{outline_url}" alt="同坐标 UV 轮廓"></div></div>'
+        '<p class="note">直接使用 0–1 UV 坐标对齐图集，未重新缩放岛形。彩色扩边不计入覆盖率。</p></details>'
+    )
+
+
 def editing_scene(repository: Path, run: Path, output: Path) -> Path | None:
     """Anonymous editable mesh with original identities and packed texture files."""
     from .downstream import blender
