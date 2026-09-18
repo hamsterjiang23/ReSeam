@@ -51,6 +51,12 @@ def generate_report(root: Path) -> None:
         path = root / record["path"]
         quality = record.get("quality") or {}
         images = path / "downstream"
+        downstream_data = (
+            json.loads((images / "result.json").read_text(encoding="utf-8"))
+            if (images / "result.json").exists()
+            else {}
+        )
+        coverage = downstream_data.get("packing", {}).get("coverage")
         uv = images / "pack/uv_layout.png"
         if not uv.exists():
             uv = path / "uv_layout.png"
@@ -77,6 +83,7 @@ def generate_report(root: Path) -> None:
                 ),
                 ("平均畸变", f"{quality['sd_mean']:.5f}" if quality.get("sd_mean") is not None else "—"),
                 ("最大畸变", f"{quality['sd_max']:.3f}" if quality.get("sd_max") is not None else "—"),
+                ("UV 覆盖率", f"{coverage:.2%}" if coverage is not None else "—"),
             )
         )
         evidence = (
@@ -102,8 +109,7 @@ def generate_report(root: Path) -> None:
         if extra.get("optimized_asset", {}).get("status") == "VERIFIED":
             downloads += f'<a href="{html.escape(record["path"])}/downstream/differentiable/asset.glb">优化后模型</a> · '
         downstream_status = "未安排或上游未通过"
-        if (images / "result.json").exists():
-            downstream_data = json.loads((images / "result.json").read_text(encoding="utf-8"))
+        if downstream_data:
             downstream_status = str(downstream_data["status"])
             if downstream_data.get("reason"):
                 downstream_status += ": " + str(downstream_data["reason"])
@@ -153,6 +159,7 @@ def generate_report(root: Path) -> None:
     page = '<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
     page += f'<title>ReSeam · {ledger["round_id"]}</title><style>{CSS}</style><header><div class="eyebrow">RESEAM / RESEARCH LOG</div>'
     page += f'<h1>接缝，重新组织。</h1><p>{intro}</p><p class="note">只比较固定低模与预定设置。岛数、畸变与烘焙质量分别报告；多轮和多种子不增加独立模型数。</p>'
+    page += '<p class="note">UV 覆盖率为统一打包后的三角形面积占图集比例，不含扩边。黑色空白同时包含岛间距、外边距和形状排布空隙；该诊断不替代 V1 的展开质量或 artist 验收。</p>'
     page += '<a href="summary.json">汇总数据</a> · <a href="ledger.json">完整矩阵</a> · <a href="blind/index.html">匿名评审</a></header>'
     page += '<main><div class="toolbar"><label>模型 <select id="model"><option value="">全部</option><option>energy_blade</option><option>dragon</option></select></label>'
     page += '<label>种子 <select id="seed"><option>17</option><option>29</option><option>43</option><option value="">全部</option></select></label>'

@@ -1,6 +1,7 @@
 """Read frozen evidence and create a separate, non-overwriting delivery summary."""
 
 import argparse
+import hashlib
 import json
 from collections import Counter
 from pathlib import Path
@@ -26,6 +27,7 @@ def summarize(source: Path, output: Path) -> None:
         "source_directory": str(source),
         "source_commit": version["git_head"],
         "source_dirty": version["dirty"],
+        "summary_script_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
         "geometry_status_counts": dict(Counter(r["status"] for r in ledger["runs"])),
         "downstream_status_counts": dict(Counter(r["status"] for r in ledger["downstream"])),
         "execution_complete": ledger["execution_complete"],
@@ -103,8 +105,8 @@ def summarize(source: Path, output: Path) -> None:
             "",
             "## 预定下游组合",
             "",
-            "| 方法 | 状态 | Blender MAE | 优化后 MAE | 原因 |",
-            "|---|---|---|---|---|",
+            "| 方法 | 状态 | UV覆盖率 | Blender MAE | 优化后 MAE | 原因 |",
+            "|---|---|---|---|---|---|",
         ]
         downstream = []
         for row in ledger["downstream"]:
@@ -114,8 +116,10 @@ def summarize(source: Path, output: Path) -> None:
             data = read(evidence) if evidence.exists() else {}
             downstream.append({**row, "metrics": data})
             reason = str(row.get("reason") or row.get("upstream_status") or "").replace("|", "\\|")
+            coverage = data.get("packing", {}).get("coverage")
+            coverage_text = "—" if coverage is None else f"{coverage:.2%}"
             lines.append(
-                f"| {row['method']} | {row['status']} | {number(data.get('blender_mae'))} "
+                f"| {row['method']} | {row['status']} | {coverage_text} | {number(data.get('blender_mae'))} "
                 f"| {number(data.get('differentiable_mae'))} | {reason} |"
             )
         lines += [
