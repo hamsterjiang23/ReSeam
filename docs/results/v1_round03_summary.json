@@ -1,0 +1,650 @@
+{
+  "round": "v1_round03",
+  "geometry_source_commit": "4714e78e23b50b73883182e622681d0cbfcd0434",
+  "config_sha256": "0004917bb40c1bb4e3a4a3c0ca6e9bacd21894295cc9b4a394c49306ae46b4a0",
+  "input_manifest_sha256": "78d761b0c7fea10a4852756a9124a22d17ced5fed0f1c024dc812966ce5f9d54",
+  "execution_complete": true,
+  "artist_assessment": "PENDING_HUMAN",
+  "geometry_statuses": {
+    "SUCCESS": 49,
+    "UV_INVALID": 17
+  },
+  "downstream_statuses": {
+    "SUCCESS": 17,
+    "NOT_RUN_INVALID_UV": 5
+  },
+  "seconds": 8413.375,
+  "budget": {
+    "limit_seconds": 28800,
+    "environment_smoke_allowance_seconds": 3600,
+    "round01_charge_seconds": 481,
+    "round02_conservative_charge_seconds": 8000,
+    "round03_charge_seconds": 8415,
+    "round03_ledger_measured_seconds": 8413.375,
+    "post_report_measured_seconds": 28.170999999998457,
+    "artist_reference_inspection_measured_seconds": 9.092999999997119,
+    "summary_queue_seconds": 1.250154,
+    "timing_note": "Includes full reserved environment/smoke hour and interrupted-round upper bound; conservative charge, not all directly measured runtime.",
+    "total_charged_seconds": 20534.514153999997,
+    "remaining_seconds": 8265.485846000003,
+    "within_budget": true
+  },
+  "methods": [
+    {
+      "model": "dragon",
+      "method": "blender_smart",
+      "planned": 3,
+      "success": 0,
+      "seam_median": null,
+      "seam_min": null,
+      "seam_max": null
+    },
+    {
+      "model": "dragon",
+      "method": "optcuts",
+      "planned": 3,
+      "success": 3,
+      "seam_median": 12.827604328416163,
+      "seam_min": 12.827604328416163,
+      "seam_max": 12.827604328416163
+    },
+    {
+      "model": "dragon",
+      "method": "optcuts_restart",
+      "planned": 3,
+      "success": 3,
+      "seam_median": 11.133125374244596,
+      "seam_min": 10.388369156305467,
+      "seam_max": 13.449783310172412
+    },
+    {
+      "model": "dragon",
+      "method": "partuv",
+      "planned": 3,
+      "success": 0,
+      "seam_median": null,
+      "seam_min": null,
+      "seam_max": null
+    },
+    {
+      "model": "dragon",
+      "method": "reseam_adaptive",
+      "planned": 3,
+      "success": 3,
+      "seam_median": 12.827604328416163,
+      "seam_min": 12.827604328416163,
+      "seam_max": 12.827604328416163
+    },
+    {
+      "model": "dragon",
+      "method": "reseam_artist",
+      "planned": 3,
+      "success": 3,
+      "seam_median": 12.827604328416163,
+      "seam_min": 12.827604328416163,
+      "seam_max": 12.827604328416163
+    },
+    {
+      "model": "dragon",
+      "method": "reseam_fixed",
+      "planned": 3,
+      "success": 3,
+      "seam_median": 12.827604328416163,
+      "seam_min": 12.827604328416163,
+      "seam_max": 12.827604328416163
+    },
+    {
+      "model": "dragon",
+      "method": "reseam_large",
+      "planned": 3,
+      "success": 3,
+      "seam_median": 12.827604328416163,
+      "seam_min": 12.827604328416163,
+      "seam_max": 12.827604328416163
+    },
+    {
+      "model": "dragon",
+      "method": "reseam_low_fragments",
+      "planned": 3,
+      "success": 3,
+      "seam_median": 12.827604328416163,
+      "seam_min": 12.827604328416163,
+      "seam_max": 12.827604328416163
+    },
+    {
+      "model": "dragon",
+      "method": "reseam_small",
+      "planned": 3,
+      "success": 3,
+      "seam_median": 12.827604328416163,
+      "seam_min": 12.827604328416163,
+      "seam_max": 12.827604328416163
+    },
+    {
+      "model": "dragon",
+      "method": "xatlas",
+      "planned": 3,
+      "success": 0,
+      "seam_median": null,
+      "seam_min": null,
+      "seam_max": null
+    },
+    {
+      "model": "energy_blade",
+      "method": "blender_smart",
+      "planned": 3,
+      "success": 0,
+      "seam_median": null,
+      "seam_min": null,
+      "seam_max": null
+    },
+    {
+      "model": "energy_blade",
+      "method": "optcuts",
+      "planned": 3,
+      "success": 3,
+      "seam_median": 10.85960124980493,
+      "seam_min": 10.85960124980493,
+      "seam_max": 10.85960124980493
+    },
+    {
+      "model": "energy_blade",
+      "method": "optcuts_restart",
+      "planned": 3,
+      "success": 3,
+      "seam_median": 11.826104346017104,
+      "seam_min": 10.515355340354464,
+      "seam_max": 12.537850644939784
+    },
+    {
+      "model": "energy_blade",
+      "method": "partuv",
+      "planned": 3,
+      "success": 1,
+      "seam_median": 15.790570101504999,
+      "seam_min": 15.790570101504999,
+      "seam_max": 15.790570101504999
+    },
+    {
+      "model": "energy_blade",
+      "method": "reseam_adaptive",
+      "planned": 3,
+      "success": 3,
+      "seam_median": 10.47342152965669,
+      "seam_min": 10.47342152965669,
+      "seam_max": 10.47342152965669
+    },
+    {
+      "model": "energy_blade",
+      "method": "reseam_artist",
+      "planned": 3,
+      "success": 3,
+      "seam_median": 10.47342152965669,
+      "seam_min": 10.47342152965669,
+      "seam_max": 10.47342152965669
+    },
+    {
+      "model": "energy_blade",
+      "method": "reseam_fixed",
+      "planned": 3,
+      "success": 3,
+      "seam_median": 10.85960124980493,
+      "seam_min": 10.85960124980493,
+      "seam_max": 10.85960124980493
+    },
+    {
+      "model": "energy_blade",
+      "method": "reseam_large",
+      "planned": 3,
+      "success": 3,
+      "seam_median": 10.172966889289523,
+      "seam_min": 10.172966889289523,
+      "seam_max": 10.172966889289523
+    },
+    {
+      "model": "energy_blade",
+      "method": "reseam_low_fragments",
+      "planned": 3,
+      "success": 3,
+      "seam_median": 10.47342152965669,
+      "seam_min": 10.47342152965669,
+      "seam_max": 10.47342152965669
+    },
+    {
+      "model": "energy_blade",
+      "method": "reseam_small",
+      "planned": 3,
+      "success": 3,
+      "seam_median": 10.85960124980493,
+      "seam_min": 10.85960124980493,
+      "seam_max": 10.85960124980493
+    },
+    {
+      "model": "energy_blade",
+      "method": "xatlas",
+      "planned": 3,
+      "success": 0,
+      "seam_median": null,
+      "seam_min": null,
+      "seam_max": null
+    }
+  ],
+  "seed17_downstream": [
+    {
+      "model": "energy_blade",
+      "method": "optcuts",
+      "seed": 17,
+      "path": "energy_blade/original/optcuts/seed_17/downstream",
+      "status": "SUCCESS",
+      "diagnostic_only": false,
+      "blender_mae": 0.02855222017510726,
+      "differentiable_mae": 0.028495134079738447,
+      "reason": null,
+      "packing": {
+        "min_gap_pixels": 18.399258833356328,
+        "overlap_area": 0.0,
+        "in_bounds": true,
+        "coverage": 0.4877210801352566,
+        "valid": true,
+        "profile": "primary",
+        "requested_margin": 0.0087890625
+      }
+    },
+    {
+      "model": "energy_blade",
+      "method": "xatlas",
+      "seed": 17,
+      "path": "energy_blade/original/xatlas/seed_17/downstream",
+      "status": "NOT_RUN_INVALID_UV",
+      "diagnostic_only": false,
+      "upstream_status": "UV_INVALID",
+      "packing": null
+    },
+    {
+      "model": "energy_blade",
+      "method": "blender_smart",
+      "seed": 17,
+      "path": "energy_blade/original/blender_smart/seed_17/downstream",
+      "status": "NOT_RUN_INVALID_UV",
+      "diagnostic_only": false,
+      "upstream_status": "UV_INVALID",
+      "packing": null
+    },
+    {
+      "model": "energy_blade",
+      "method": "partuv",
+      "seed": 17,
+      "path": "energy_blade/original/partuv/seed_17/downstream",
+      "status": "SUCCESS",
+      "diagnostic_only": true,
+      "blender_mae": 0.02857451609293832,
+      "differentiable_mae": 0.028537139190624658,
+      "reason": null,
+      "packing": {
+        "min_gap_pixels": 17.87557960790361,
+        "overlap_area": 0.0,
+        "in_bounds": true,
+        "coverage": 0.45878219129128284,
+        "valid": true,
+        "profile": "primary",
+        "requested_margin": 0.0087890625
+      }
+    },
+    {
+      "model": "energy_blade",
+      "method": "optcuts_restart",
+      "seed": 17,
+      "path": "energy_blade/original/optcuts_restart/seed_17/downstream",
+      "status": "SUCCESS",
+      "diagnostic_only": false,
+      "blender_mae": 0.028574283242383158,
+      "differentiable_mae": 0.02851949259223884,
+      "reason": null,
+      "packing": {
+        "min_gap_pixels": 18.169383933800173,
+        "overlap_area": 0.0,
+        "in_bounds": true,
+        "coverage": 0.4849094482252424,
+        "valid": true,
+        "profile": "primary",
+        "requested_margin": 0.0087890625
+      }
+    },
+    {
+      "model": "energy_blade",
+      "method": "reseam_fixed",
+      "seed": 17,
+      "path": "energy_blade/original/reseam_fixed/seed_17/downstream",
+      "status": "SUCCESS",
+      "diagnostic_only": false,
+      "blender_mae": 0.02855222017510726,
+      "differentiable_mae": 0.028495134079738447,
+      "reason": null,
+      "packing": {
+        "min_gap_pixels": 18.399258833356328,
+        "overlap_area": 0.0,
+        "in_bounds": true,
+        "coverage": 0.4877210801352566,
+        "valid": true,
+        "profile": "primary",
+        "requested_margin": 0.0087890625
+      }
+    },
+    {
+      "model": "energy_blade",
+      "method": "reseam_small",
+      "seed": 17,
+      "path": "energy_blade/original/reseam_small/seed_17/downstream",
+      "status": "SUCCESS",
+      "diagnostic_only": false,
+      "blender_mae": 0.02855222017510726,
+      "differentiable_mae": 0.028495134079738447,
+      "reason": null,
+      "packing": {
+        "min_gap_pixels": 18.399258833356328,
+        "overlap_area": 0.0,
+        "in_bounds": true,
+        "coverage": 0.4877210801352566,
+        "valid": true,
+        "profile": "primary",
+        "requested_margin": 0.0087890625
+      }
+    },
+    {
+      "model": "energy_blade",
+      "method": "reseam_large",
+      "seed": 17,
+      "path": "energy_blade/original/reseam_large/seed_17/downstream",
+      "status": "SUCCESS",
+      "diagnostic_only": false,
+      "blender_mae": 0.028573582089166546,
+      "differentiable_mae": 0.028513774386502946,
+      "reason": null,
+      "packing": {
+        "min_gap_pixels": 17.969585511277383,
+        "overlap_area": 0.0,
+        "in_bounds": true,
+        "coverage": 0.44936393509088934,
+        "valid": true,
+        "profile": "primary",
+        "requested_margin": 0.0087890625
+      }
+    },
+    {
+      "model": "energy_blade",
+      "method": "reseam_adaptive",
+      "seed": 17,
+      "path": "energy_blade/original/reseam_adaptive/seed_17/downstream",
+      "status": "SUCCESS",
+      "diagnostic_only": false,
+      "blender_mae": 0.028541980443557918,
+      "differentiable_mae": 0.02849193796028632,
+      "reason": null,
+      "packing": {
+        "min_gap_pixels": 18.244207177722576,
+        "overlap_area": 0.0,
+        "in_bounds": true,
+        "coverage": 0.4736410566077025,
+        "valid": true,
+        "profile": "primary",
+        "requested_margin": 0.0087890625
+      }
+    },
+    {
+      "model": "energy_blade",
+      "method": "reseam_low_fragments",
+      "seed": 17,
+      "path": "energy_blade/original/reseam_low_fragments/seed_17/downstream",
+      "status": "SUCCESS",
+      "diagnostic_only": false,
+      "blender_mae": 0.028541980443557918,
+      "differentiable_mae": 0.02849193796028632,
+      "reason": null,
+      "packing": {
+        "min_gap_pixels": 18.244207177722576,
+        "overlap_area": 0.0,
+        "in_bounds": true,
+        "coverage": 0.4736410566077025,
+        "valid": true,
+        "profile": "primary",
+        "requested_margin": 0.0087890625
+      }
+    },
+    {
+      "model": "energy_blade",
+      "method": "reseam_artist",
+      "seed": 17,
+      "path": "energy_blade/original/reseam_artist/seed_17/downstream",
+      "status": "SUCCESS",
+      "diagnostic_only": false,
+      "blender_mae": 0.028541980443557918,
+      "differentiable_mae": 0.02849193796028632,
+      "reason": null,
+      "packing": {
+        "min_gap_pixels": 18.244207177722576,
+        "overlap_area": 0.0,
+        "in_bounds": true,
+        "coverage": 0.4736410566077025,
+        "valid": true,
+        "profile": "primary",
+        "requested_margin": 0.0087890625
+      }
+    },
+    {
+      "model": "dragon",
+      "method": "optcuts",
+      "seed": 17,
+      "path": "dragon/original/optcuts/seed_17/downstream",
+      "status": "SUCCESS",
+      "diagnostic_only": false,
+      "blender_mae": 0.03593294667543375,
+      "differentiable_mae": 0.03581223215401096,
+      "reason": null,
+      "packing": {
+        "min_gap_pixels": 19.095149090822503,
+        "overlap_area": 0.0,
+        "in_bounds": true,
+        "coverage": 0.2809258013300553,
+        "valid": true,
+        "profile": "primary",
+        "requested_margin": 0.0087890625
+      }
+    },
+    {
+      "model": "dragon",
+      "method": "xatlas",
+      "seed": 17,
+      "path": "dragon/original/xatlas/seed_17/downstream",
+      "status": "NOT_RUN_INVALID_UV",
+      "diagnostic_only": false,
+      "upstream_status": "UV_INVALID",
+      "packing": null
+    },
+    {
+      "model": "dragon",
+      "method": "blender_smart",
+      "seed": 17,
+      "path": "dragon/original/blender_smart/seed_17/downstream",
+      "status": "NOT_RUN_INVALID_UV",
+      "diagnostic_only": false,
+      "upstream_status": "UV_INVALID",
+      "packing": null
+    },
+    {
+      "model": "dragon",
+      "method": "partuv",
+      "seed": 17,
+      "path": "dragon/original/partuv/seed_17/downstream",
+      "status": "NOT_RUN_INVALID_UV",
+      "diagnostic_only": false,
+      "upstream_status": "UV_INVALID",
+      "packing": null
+    },
+    {
+      "model": "dragon",
+      "method": "optcuts_restart",
+      "seed": 17,
+      "path": "dragon/original/optcuts_restart/seed_17/downstream",
+      "status": "SUCCESS",
+      "diagnostic_only": false,
+      "blender_mae": 0.035881783123633736,
+      "differentiable_mae": 0.03576314419570359,
+      "reason": null,
+      "packing": {
+        "min_gap_pixels": 22.235277121255006,
+        "overlap_area": 0.0,
+        "in_bounds": true,
+        "coverage": 0.3439259301430825,
+        "valid": true,
+        "profile": "primary",
+        "requested_margin": 0.0087890625
+      }
+    },
+    {
+      "model": "dragon",
+      "method": "reseam_fixed",
+      "seed": 17,
+      "path": "dragon/original/reseam_fixed/seed_17/downstream",
+      "status": "SUCCESS",
+      "diagnostic_only": false,
+      "blender_mae": 0.03593294667543375,
+      "differentiable_mae": 0.03581223215401096,
+      "reason": null,
+      "packing": {
+        "min_gap_pixels": 19.095149090822503,
+        "overlap_area": 0.0,
+        "in_bounds": true,
+        "coverage": 0.2809258013300553,
+        "valid": true,
+        "profile": "primary",
+        "requested_margin": 0.0087890625
+      }
+    },
+    {
+      "model": "dragon",
+      "method": "reseam_small",
+      "seed": 17,
+      "path": "dragon/original/reseam_small/seed_17/downstream",
+      "status": "SUCCESS",
+      "diagnostic_only": false,
+      "blender_mae": 0.03593294667543375,
+      "differentiable_mae": 0.03581223215401096,
+      "reason": null,
+      "packing": {
+        "min_gap_pixels": 19.095149090822503,
+        "overlap_area": 0.0,
+        "in_bounds": true,
+        "coverage": 0.2809258013300553,
+        "valid": true,
+        "profile": "primary",
+        "requested_margin": 0.0087890625
+      }
+    },
+    {
+      "model": "dragon",
+      "method": "reseam_large",
+      "seed": 17,
+      "path": "dragon/original/reseam_large/seed_17/downstream",
+      "status": "SUCCESS",
+      "diagnostic_only": false,
+      "blender_mae": 0.03593294667543375,
+      "differentiable_mae": 0.03581223215401096,
+      "reason": null,
+      "packing": {
+        "min_gap_pixels": 19.095149090822503,
+        "overlap_area": 0.0,
+        "in_bounds": true,
+        "coverage": 0.2809258013300553,
+        "valid": true,
+        "profile": "primary",
+        "requested_margin": 0.0087890625
+      }
+    },
+    {
+      "model": "dragon",
+      "method": "reseam_adaptive",
+      "seed": 17,
+      "path": "dragon/original/reseam_adaptive/seed_17/downstream",
+      "status": "SUCCESS",
+      "diagnostic_only": false,
+      "blender_mae": 0.03593294667543375,
+      "differentiable_mae": 0.03581223215401096,
+      "reason": null,
+      "packing": {
+        "min_gap_pixels": 19.095149090822503,
+        "overlap_area": 0.0,
+        "in_bounds": true,
+        "coverage": 0.2809258013300553,
+        "valid": true,
+        "profile": "primary",
+        "requested_margin": 0.0087890625
+      }
+    },
+    {
+      "model": "dragon",
+      "method": "reseam_low_fragments",
+      "seed": 17,
+      "path": "dragon/original/reseam_low_fragments/seed_17/downstream",
+      "status": "SUCCESS",
+      "diagnostic_only": false,
+      "blender_mae": 0.03593294667543375,
+      "differentiable_mae": 0.03581223215401096,
+      "reason": null,
+      "packing": {
+        "min_gap_pixels": 19.095149090822503,
+        "overlap_area": 0.0,
+        "in_bounds": true,
+        "coverage": 0.2809258013300553,
+        "valid": true,
+        "profile": "primary",
+        "requested_margin": 0.0087890625
+      }
+    },
+    {
+      "model": "dragon",
+      "method": "reseam_artist",
+      "seed": 17,
+      "path": "dragon/original/reseam_artist/seed_17/downstream",
+      "status": "SUCCESS",
+      "diagnostic_only": false,
+      "blender_mae": 0.03593294667543375,
+      "differentiable_mae": 0.03581223215401096,
+      "reason": null,
+      "packing": {
+        "min_gap_pixels": 19.095149090822503,
+        "overlap_area": 0.0,
+        "in_bounds": true,
+        "coverage": 0.2809258013300553,
+        "valid": true,
+        "profile": "primary",
+        "requested_margin": 0.0087890625
+      }
+    }
+  ],
+  "support_audits": [
+    {
+      "model": "energy_blade",
+      "count": 8,
+      "feasible_by_mode": {
+        "small": 0,
+        "middle": 0,
+        "large": 2,
+        "adaptive": 2
+      },
+      "large_rescued_and_improving": 2,
+      "small_failure_denominator": 8
+    },
+    {
+      "model": "dragon",
+      "count": 8,
+      "feasible_by_mode": {
+        "small": 0,
+        "middle": 0,
+        "large": 0,
+        "adaptive": 0
+      },
+      "large_rescued_and_improving": 0,
+      "small_failure_denominator": 8
+    }
+  ]
+}
