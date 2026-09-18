@@ -69,6 +69,9 @@ def summarize(source: Path, output: Path) -> None:
             }
             rejection_counts: Counter[str] = Counter()
             support_counts: Counter[str] = Counter()
+            proposal_counts: Counter[str] = Counter()
+            accepted_proposals: Counter[str] = Counter()
+            accepted_composite = 0
             accepted, attempted = 0, 0
             for row in rows:
                 log = source / row["path"] / "search/candidates.jsonl"
@@ -78,6 +81,10 @@ def summarize(source: Path, output: Path) -> None:
                     item = json.loads(text)
                     attempted += 1
                     accepted += int(item["accepted"])
+                    proposal_counts[item["proposal_type"]] += 1
+                    if item["accepted"]:
+                        accepted_proposals[item["proposal_type"]] += 1
+                        accepted_composite += int(bool(item["removed"] and item["added"]))
                     rejection_counts[item["status"]] += 1
                     for stage in item.get("supports", []):
                         support_counts[stage["status"]] += 1
@@ -91,6 +98,9 @@ def summarize(source: Path, output: Path) -> None:
                 "accepted_candidates": accepted,
                 "candidate_statuses": dict(rejection_counts),
                 "support_statuses": dict(support_counts),
+                "proposal_types": dict(proposal_counts),
+                "accepted_proposal_types": dict(accepted_proposals),
+                "accepted_joint_cut_removal_and_addition": accepted_composite,
             }
             by_method[method] = data
             lines.append(
