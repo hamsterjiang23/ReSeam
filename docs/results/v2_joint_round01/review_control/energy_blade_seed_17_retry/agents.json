@@ -1,0 +1,47 @@
+{
+  "packet": "E:/ReSem/artifacts/v2_joint/v2_joint_round01/blind/energy_blade_seed_17/manifest.json",
+  "review_deadline_unix": 1789890480.3588066,
+  "template_sha256": "8b4f8fc7226b83ac165b7b0beb00c814a2edb1c60b64b3db911692153dc069ec",
+  "guard": {
+    "status": "RUNNING",
+    "started_utc": "2026-09-20T15:41:00.358806+08:00",
+    "deadline_unix": 1789890510.3588066,
+    "guard_sha256": "ce80593edce45b84841c5ff5bf48f1770d74f577bcee1c6372a98ae0b2ce4f66"
+  },
+  "agents": [
+    {
+      "reviewer_id": "energy_blade_seed_17_judge1_attempt1",
+      "index": 1,
+      "attempt": 1,
+      "task_name": "energy_blade_seed_17_judge1_attempt1",
+      "packet": "E:/ReSem/artifacts/v2_joint/v2_joint_round01/blind/energy_blade_seed_17/manifest.json",
+      "output": "E:/ReSem/artifacts/v2_joint/v2_joint_round01/raw_reviews/energy_blade_seed_17/energy_blade_seed_17_judge1_attempt1.json",
+      "prompt_file": "E:/ReSem/artifacts/v2_joint/v2_joint_round01/review_control/energy_blade_seed_17_retry/prompt_1.txt",
+      "prompt_sha256": "782f4b434b718cc8f7c43390cc7a705757d3ce37bf4584ce7c2dbe0887dcf4dc",
+      "dispatch_message": "请执行 E:/ReSem/artifacts/v2_joint/v2_joint_round01/review_control/energy_blade_seed_17_retry/prompt_1.txt 中的独立盲评任务。只读该任务文件及其明确指定的匿名证据，按要求保存自己的JSON；不要读取仓库、历史或其他评审，不创建子评审。",
+      "agent_id": "/root/blind_review_coordinator/energy_blade_seed_17_judge1_attempt1",
+      "model": "unavailable",
+      "runner": "collaboration.spawn_agent",
+      "fork_turns": "none",
+      "dispatch_recorded_utc": "2026-09-20T07:41:21.9863741Z",
+      "dispatch_timestamp_precision": "recorded after dispatch"
+    },
+    {
+      "reviewer_id": "energy_blade_seed_17_judge2_attempt1",
+      "index": 2,
+      "attempt": 1,
+      "task_name": "energy_blade_seed_17_judge2_attempt1",
+      "packet": "E:/ReSem/artifacts/v2_joint/v2_joint_round01/blind/energy_blade_seed_17/manifest.json",
+      "output": "E:/ReSem/artifacts/v2_joint/v2_joint_round01/raw_reviews/energy_blade_seed_17/energy_blade_seed_17_judge2_attempt1.json",
+      "prompt_file": "E:/ReSem/artifacts/v2_joint/v2_joint_round01/review_control/energy_blade_seed_17_retry/prompt_2.txt",
+      "prompt_sha256": "fb2719efc44c5c2c34149ab22c65632c230e28bcd1e207dcc88e5865465052c6",
+      "dispatch_message": "请执行 E:/ReSem/artifacts/v2_joint/v2_joint_round01/review_control/energy_blade_seed_17_retry/prompt_2.txt 中的独立盲评任务。只读该任务文件及其明确指定的匿名证据，按要求保存自己的JSON；不要读取仓库、历史或其他评审，不创建子评审。",
+      "agent_id": "/root/blind_review_coordinator/energy_blade_seed_17_judge2_attempt1",
+      "model": "unavailable",
+      "runner": "collaboration.spawn_agent",
+      "fork_turns": "none",
+      "dispatch_recorded_utc": "2026-09-20T07:41:21.9926558Z",
+      "dispatch_timestamp_precision": "recorded after dispatch"
+    }
+  ]
+}

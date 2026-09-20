@@ -1,0 +1,10 @@
+{
+  "limit_seconds": 28800,
+  "previous_charge_seconds": 21457.54415399998,
+  "run_seconds": 0.6559999999954016,
+  "probe_conservative_allowance_seconds": 20,
+  "delivery_qa_reserved_seconds": 30,
+  "total_charged_seconds": 21508.200153999976,
+  "remaining_seconds": 7291.7998460000235,
+  "within_budget": true
+}

@@ -1,0 +1,74 @@
+{
+  "model": "dragon",
+  "mesh": "assets\\v1\\dragon\\low.obj",
+  "input_sha256": "d43a3a181211d3b003f2df54b73212ec0ef0e266e1a628e54b8c74a20ff9b570",
+  "plane": {
+    "normal": [
+      1.0,
+      0.0,
+      0.0
+    ],
+    "offset": -0.001733720320652197,
+    "before_fit_objective": 2.095476035396938e-06,
+    "after_fit_objective": 3.137208336831518e-07
+  },
+  "diagonal": 1.2409647717802665,
+  "normal_angle_limit": 45,
+  "sweep": [
+    {
+      "tolerance_fraction": 0.0025,
+      "all_accepted": 787,
+      "outer_accepted": 405,
+      "outer_total": 478,
+      "left_outer_accepted": 209,
+      "right_outer_accepted": 196,
+      "surface_interior_or_edge_matches": 399
+    },
+    {
+      "tolerance_fraction": 0.005,
+      "all_accepted": 846,
+      "outer_accepted": 427,
+      "outer_total": 478,
+      "left_outer_accepted": 217,
+      "right_outer_accepted": 210,
+      "surface_interior_or_edge_matches": 418
+    },
+    {
+      "tolerance_fraction": 0.01,
+      "all_accepted": 853,
+      "outer_accepted": 429,
+      "outer_total": 478,
+      "left_outer_accepted": 217,
+      "right_outer_accepted": 212,
+      "surface_interior_or_edge_matches": 420
+    },
+    {
+      "tolerance_fraction": 0.02,
+      "all_accepted": 854,
+      "outer_accepted": 430,
+      "outer_total": 478,
+      "left_outer_accepted": 217,
+      "right_outer_accepted": 213,
+      "surface_interior_or_edge_matches": 421
+    }
+  ],
+  "all_source_vertices": 996,
+  "queried_source_vertices": 932,
+  "outer_surface_error_median": 0.0006651997312941294,
+  "outer_surface_error_p95": 0.0038998456690941554,
+  "outer_vertex_error_median": 0.0040369386484771915,
+  "outer_cycle_error_median": 0.00026124228810537773,
+  "scope": "Geometry candidates only; directed matches, not a bijection, UV, material, or semantic approval",
+  "roi": "abs(x-plane_offset) >= 0.20 * mesh_x_span; geometric outer-wing proxy, not confirmed semantic labels",
+  "packages": {
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "trimesh": "4.12.2"
+  },
+  "code_sha256": {
+    "src/reseam/surface_match.py": "30bb039c56db4432f8d5082ee673205838664eaf9e0a32d0d6fc96ae6a1df69d",
+    "scripts/inspect_surface_symmetry.py": "9329c6689585adeeb57616512b4d326dbc97fbf671e08c16db4290af4b80b731"
+  },
+  "input_unchanged": true,
+  "wall_seconds": 0.6559999999954016
+}

@@ -1,0 +1,191 @@
+{
+  "version": 1,
+  "samples": [
+    {
+      "id": "sample_A",
+      "technical_status": "PASS"
+    },
+    {
+      "id": "sample_B",
+      "technical_status": "PASS"
+    },
+    {
+      "id": "sample_C",
+      "technical_status": "PASS"
+    },
+    {
+      "id": "sample_D",
+      "technical_status": "PASS"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "evidence_000",
+      "kind": "uv",
+      "sample_id": "sample_A",
+      "path": "evidence_000.png",
+      "sha256": "740e63c6458469ead9fa710f5d7eafd0b4893250b9f995770d0549dab4672c16"
+    },
+    {
+      "id": "evidence_001",
+      "kind": "base",
+      "sample_id": "sample_A",
+      "path": "evidence_001.png",
+      "sha256": "40cf842fbfefc97443fc5320688733b9a9a9dabc78210d5c36fef9e6778d1528"
+    },
+    {
+      "id": "evidence_002",
+      "kind": "seam_crop",
+      "sample_id": "sample_A",
+      "path": "evidence_002.png",
+      "sha256": "30d244d589c4a2c12d4cafeb37d796a826c4c7c90844efd03b9d830837eb0b06"
+    },
+    {
+      "id": "evidence_003",
+      "kind": "normal",
+      "sample_id": "sample_A",
+      "path": "evidence_003.png",
+      "sha256": "4d39fdcbc2fcf76cf9439fff0c03764d1b4232fa2a6ef2d141df69d068d473d1"
+    },
+    {
+      "id": "evidence_004",
+      "kind": "mip",
+      "sample_id": "sample_A",
+      "path": "evidence_004.png",
+      "sha256": "648a9c975795db24598afc3abc619de5033860e9470c6ab54544a79740192572"
+    },
+    {
+      "id": "evidence_005",
+      "kind": "uv",
+      "sample_id": "sample_B",
+      "path": "evidence_005.png",
+      "sha256": "740e63c6458469ead9fa710f5d7eafd0b4893250b9f995770d0549dab4672c16"
+    },
+    {
+      "id": "evidence_006",
+      "kind": "base",
+      "sample_id": "sample_B",
+      "path": "evidence_006.png",
+      "sha256": "40cf842fbfefc97443fc5320688733b9a9a9dabc78210d5c36fef9e6778d1528"
+    },
+    {
+      "id": "evidence_007",
+      "kind": "seam_crop",
+      "sample_id": "sample_B",
+      "path": "evidence_007.png",
+      "sha256": "30d244d589c4a2c12d4cafeb37d796a826c4c7c90844efd03b9d830837eb0b06"
+    },
+    {
+      "id": "evidence_008",
+      "kind": "normal",
+      "sample_id": "sample_B",
+      "path": "evidence_008.png",
+      "sha256": "4d39fdcbc2fcf76cf9439fff0c03764d1b4232fa2a6ef2d141df69d068d473d1"
+    },
+    {
+      "id": "evidence_009",
+      "kind": "mip",
+      "sample_id": "sample_B",
+      "path": "evidence_009.png",
+      "sha256": "648a9c975795db24598afc3abc619de5033860e9470c6ab54544a79740192572"
+    },
+    {
+      "id": "evidence_010",
+      "kind": "uv",
+      "sample_id": "sample_C",
+      "path": "evidence_010.png",
+      "sha256": "4e1c7cbfd7b13739e643bfbff9ed5e9b6b6c181a25e6fa1cb3c19fb9f3f61633"
+    },
+    {
+      "id": "evidence_011",
+      "kind": "base",
+      "sample_id": "sample_C",
+      "path": "evidence_011.png",
+      "sha256": "b603fe47cbde74c942a8dfdbac6b4e06c13dc8085607c5b042105e7c9dbb8f0c"
+    },
+    {
+      "id": "evidence_012",
+      "kind": "seam_crop",
+      "sample_id": "sample_C",
+      "path": "evidence_012.png",
+      "sha256": "a31703dc9e9ed953faaa550b7c3c33b13202c6727cffa542edd7d0ae3be139fc"
+    },
+    {
+      "id": "evidence_013",
+      "kind": "normal",
+      "sample_id": "sample_C",
+      "path": "evidence_013.png",
+      "sha256": "1dce0b216bce564f5c3dcd20d83b42b36982fd683bccfe6229298a73c9010d93"
+    },
+    {
+      "id": "evidence_014",
+      "kind": "mip",
+      "sample_id": "sample_C",
+      "path": "evidence_014.png",
+      "sha256": "98bc1db374427e9c2d3532089c578da591d0998193e575d9a009b320274aeaaf"
+    },
+    {
+      "id": "evidence_015",
+      "kind": "uv",
+      "sample_id": "sample_D",
+      "path": "evidence_015.png",
+      "sha256": "4cf9cf0bf5245fe0b2fb5b11e4c25c4421fc331f1db4c0883c83264d9f0922fa"
+    },
+    {
+      "id": "evidence_016",
+      "kind": "base",
+      "sample_id": "sample_D",
+      "path": "evidence_016.png",
+      "sha256": "405a6d2b89873e10b1967ee8a6d0aa5d1738686d79c2d77b7839ed2e8fbdfd9e"
+    },
+    {
+      "id": "evidence_017",
+      "kind": "seam_crop",
+      "sample_id": "sample_D",
+      "path": "evidence_017.png",
+      "sha256": "d2b298e69891b09180c45993dd8b808cfcc9cc74dfd758d34709cfe65be3dc67"
+    },
+    {
+      "id": "evidence_018",
+      "kind": "normal",
+      "sample_id": "sample_D",
+      "path": "evidence_018.png",
+      "sha256": "3175d0389eb414ecdb9e0df0b3bf2ef1cbed311b1036634fadf95953a37f52be"
+    },
+    {
+      "id": "evidence_019",
+      "kind": "mip",
+      "sample_id": "sample_D",
+      "path": "evidence_019.png",
+      "sha256": "a4a7b36d5e098d92496ac58af3cbedd29845dd71a066bbe1119cdbfc320f1cb2"
+    },
+    {
+      "id": "evidence_020",
+      "kind": "base",
+      "sample_id": "reference",
+      "path": "evidence_020.png",
+      "sha256": "3921be928ed6fb5794ba86024ace69f63597a3b8067ca1bf45f65e31767c4582"
+    },
+    {
+      "id": "evidence_021",
+      "kind": "seam_crop",
+      "sample_id": "reference",
+      "path": "evidence_021.png",
+      "sha256": "2393b4f6bfdcb29f024b7b16245e5afb5a077f3d018d247d49fc52ec8cfa983e"
+    },
+    {
+      "id": "evidence_022",
+      "kind": "normal",
+      "sample_id": "reference",
+      "path": "evidence_022.png",
+      "sha256": "d67002548f5acbc8228c08ed8b69be2d00d07fa113041dd0ec5a94c132c04832"
+    }
+  ],
+  "dimensions": [
+    "appearance",
+    "seams",
+    "normal_mip",
+    "uv_editability"
+  ],
+  "rubric_sha256": "56737b763dbfeec0293c8bbd59226344048fed50184427c566d1daff1e661d0c"
+}

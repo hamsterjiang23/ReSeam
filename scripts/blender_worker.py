@@ -313,7 +313,7 @@ def main() -> None:
         bpy.ops.file.pack_all()
         bpy.ops.wm.save_as_mainfile(filepath=request["output"])
         return
-    if mode not in ("smart", "pack"):
+    if mode not in ("smart", "pack", "pack_fixed"):
         raise ValueError(f"Unsupported Blender mode: {mode}")
     bpy.ops.object.mode_set(mode="EDIT")
     bpy.ops.mesh.select_all(action="SELECT")
@@ -321,7 +321,8 @@ def main() -> None:
         bpy.ops.uv.smart_project(angle_limit=math.radians(66), island_margin=0)
     else:
         bpy.ops.uv.select_all(action="SELECT")
-        bpy.ops.uv.average_islands_scale()
+        if mode == "pack":
+            bpy.ops.uv.average_islands_scale()
         bpy.ops.uv.pack_islands(
             rotate=True, margin_method="FRACTION", margin=float(request.get("margin", 8 / 1024))
         )
@@ -334,7 +335,8 @@ def main() -> None:
     ]
     seam_edges = [sorted(edge.vertices) for edge in obj.data.edges if edge.use_seam]
     Path(request["output"]).write_text(
-        json.dumps({"corner_uv": corners, "seam_edges": seam_edges}), encoding="utf-8"
+        json.dumps({"corner_uv": corners, "seam_edges": seam_edges, "version": bpy.app.version_string}),
+        encoding="utf-8",
     )
 
 

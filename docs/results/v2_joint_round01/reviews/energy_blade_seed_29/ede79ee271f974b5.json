@@ -1,0 +1,244 @@
+{
+  "packet_sha256": "81c73ee647ab324d5c0ce09a8a7986ab2c18b9dc7d076f49b9af38f6a4959998",
+  "reviewer_id": "energy_blade_seed_29_judge3_attempt0",
+  "samples": [
+    {
+      "id": "sample_A",
+      "scores": {
+        "appearance": {
+          "score": 5,
+          "evidence": [
+            "evidence_001",
+            "evidence_020"
+          ],
+          "reason": "view_00至view_05保留参考的红色刃缘、棕灰主体和金色尖刺，view_04与view_05长刃色带未见明显破坏；仅为给定图像的代理观察。[opinion]"
+        },
+        "seams": {
+          "score": 5,
+          "evidence": [
+            "evidence_002",
+            "evidence_021"
+          ],
+          "reason": "view_02中心及长刃根部、view_04与view_05的红棕边界与参考相符，未见独立黑缝或明显新增颜色断裂；不据此推断真实编辑验收。[opinion]"
+        },
+        "normal_mip": {
+          "score": 4,
+          "evidence": [
+            "evidence_003",
+            "evidence_004",
+            "evidence_022"
+          ],
+          "reason": "normal的view_04长刃和view_02中心颜色方向与参考接近，未见孤立异常条带；mip的view_00及view_04中心金色细节变软，轮廓与主色带仍保留，接近可用。[opinion]"
+        },
+        "uv_editability": {
+          "score": 3,
+          "evidence": [
+            "evidence_000"
+          ],
+          "reason": "UV左侧长刃大岛可辨认，但中央及右下岛轮廓折转复杂，左缘和下方有小型独立三角碎片，手工组织仍需修整；只评价可见结构。[opinion]"
+        }
+      },
+      "major_defect": false
+    },
+    {
+      "id": "sample_B",
+      "scores": {
+        "appearance": {
+          "score": 5,
+          "evidence": [
+            "evidence_006",
+            "evidence_020"
+          ],
+          "reason": "view_00至view_05保留参考的红色刃缘、棕灰主体和金色尖刺，view_04与view_05长刃色带未见明显破坏；仅为给定图像的代理观察。[opinion]"
+        },
+        "seams": {
+          "score": 5,
+          "evidence": [
+            "evidence_007",
+            "evidence_021"
+          ],
+          "reason": "view_02中心及长刃根部、view_04与view_05的红棕边界与参考相符，未见独立黑缝或明显新增颜色断裂；不据此推断真实编辑验收。[opinion]"
+        },
+        "normal_mip": {
+          "score": 4,
+          "evidence": [
+            "evidence_008",
+            "evidence_009",
+            "evidence_022"
+          ],
+          "reason": "normal的view_04长刃和view_02中心颜色方向与参考接近，未见孤立异常条带；mip的view_00及view_04中心金色细节变软，轮廓与主色带仍保留，接近可用。[opinion]"
+        },
+        "uv_editability": {
+          "score": 3,
+          "evidence": [
+            "evidence_005"
+          ],
+          "reason": "UV中央偏右长刃大岛连续可辨，左中及下方多分叉岛轮廓复杂，中央与底部仍有独立三角碎片，手工组织仍需修整；只评价可见结构。[opinion]"
+        }
+      },
+      "major_defect": false
+    },
+    {
+      "id": "sample_C",
+      "scores": {
+        "appearance": {
+          "score": 5,
+          "evidence": [
+            "evidence_011",
+            "evidence_020"
+          ],
+          "reason": "view_00至view_05保留参考的红色刃缘、棕灰主体和金色尖刺，view_04与view_05长刃色带未见明显破坏；仅为给定图像的代理观察。[opinion]"
+        },
+        "seams": {
+          "score": 5,
+          "evidence": [
+            "evidence_012",
+            "evidence_021"
+          ],
+          "reason": "view_02中心及长刃根部、view_04与view_05的红棕边界与参考相符，未见独立黑缝或明显新增颜色断裂；不据此推断真实编辑验收。[opinion]"
+        },
+        "normal_mip": {
+          "score": 4,
+          "evidence": [
+            "evidence_013",
+            "evidence_014",
+            "evidence_022"
+          ],
+          "reason": "normal的view_04长刃和view_02中心颜色方向与参考接近，未见孤立异常条带；mip的view_00及view_04中心金色细节变软，轮廓与主色带仍保留，接近可用。[opinion]"
+        },
+        "uv_editability": {
+          "score": 3,
+          "evidence": [
+            "evidence_010"
+          ],
+          "reason": "UV中央偏右长刃大岛连续可辨，左中及下方多分叉岛轮廓复杂，中央与底部仍有独立三角碎片，手工组织仍需修整；只评价可见结构。[opinion]"
+        }
+      },
+      "major_defect": false
+    },
+    {
+      "id": "sample_D",
+      "scores": {
+        "appearance": {
+          "score": 5,
+          "evidence": [
+            "evidence_016",
+            "evidence_020"
+          ],
+          "reason": "view_00至view_05保留参考的红色刃缘、棕灰主体和金色尖刺，view_04与view_05长刃色带未见明显破坏；仅为给定图像的代理观察。[opinion]"
+        },
+        "seams": {
+          "score": 5,
+          "evidence": [
+            "evidence_017",
+            "evidence_021"
+          ],
+          "reason": "view_02中心及长刃根部、view_04与view_05的红棕边界与参考相符，未见独立黑缝或明显新增颜色断裂；不据此推断真实编辑验收。[opinion]"
+        },
+        "normal_mip": {
+          "score": 4,
+          "evidence": [
+            "evidence_018",
+            "evidence_019",
+            "evidence_022"
+          ],
+          "reason": "normal的view_04长刃和view_02中心颜色方向与参考接近，未见孤立异常条带；mip的view_00及view_04中心金色细节变软，轮廓与主色带仍保留，接近可用。[opinion]"
+        },
+        "uv_editability": {
+          "score": 3,
+          "evidence": [
+            "evidence_015"
+          ],
+          "reason": "UV下方长刃大岛可辨认，但中央多分叉轮廓及左右分散尖形岛方向不统一，中央偏左及底部存在小三角碎片，手工组织仍需修整。[opinion]"
+        }
+      },
+      "major_defect": false
+    }
+  ],
+  "preferences": [
+    {
+      "first": "sample_A",
+      "second": "sample_B",
+      "preference": "tie",
+      "evidence": [
+        "evidence_000",
+        "evidence_005",
+        "evidence_002",
+        "evidence_007",
+        "evidence_004",
+        "evidence_009"
+      ],
+      "reason": "双方view_04与view_05接缝局部及mip的主色带表现相近；UV虽排布方向不同，都有大岛与小碎片，未见足以建立整体偏好的差异。[opinion]"
+    },
+    {
+      "first": "sample_A",
+      "second": "sample_C",
+      "preference": "tie",
+      "evidence": [
+        "evidence_000",
+        "evidence_010",
+        "evidence_002",
+        "evidence_012",
+        "evidence_004",
+        "evidence_014"
+      ],
+      "reason": "双方view_04与view_05接缝局部及mip的主色带表现相近；UV虽排布方向不同，都有大岛与小碎片，未见足以建立整体偏好的差异。[opinion]"
+    },
+    {
+      "first": "sample_A",
+      "second": "sample_D",
+      "preference": "tie",
+      "evidence": [
+        "evidence_000",
+        "evidence_015",
+        "evidence_002",
+        "evidence_017",
+        "evidence_004",
+        "evidence_019"
+      ],
+      "reason": "双方view_04与view_05接缝局部及mip的主色带表现相近；UV虽排布方向不同，都有大岛与小碎片，未见足以建立整体偏好的差异。[opinion]"
+    },
+    {
+      "first": "sample_B",
+      "second": "sample_C",
+      "preference": "tie",
+      "evidence": [
+        "evidence_005",
+        "evidence_010",
+        "evidence_007",
+        "evidence_012",
+        "evidence_009",
+        "evidence_014"
+      ],
+      "reason": "manifest所列同类图像哈希相同，按允许的去重查看；UV结构、view_04接缝局部及mip表现相同，没有偏好依据。[opinion]"
+    },
+    {
+      "first": "sample_B",
+      "second": "sample_D",
+      "preference": "tie",
+      "evidence": [
+        "evidence_005",
+        "evidence_015",
+        "evidence_007",
+        "evidence_017",
+        "evidence_009",
+        "evidence_019"
+      ],
+      "reason": "双方view_04与view_05接缝局部及mip的主色带表现相近；UV虽排布方向不同，都有大岛与小碎片，未见足以建立整体偏好的差异。[opinion]"
+    },
+    {
+      "first": "sample_C",
+      "second": "sample_D",
+      "preference": "tie",
+      "evidence": [
+        "evidence_010",
+        "evidence_015",
+        "evidence_012",
+        "evidence_017",
+        "evidence_014",
+        "evidence_019"
+      ],
+      "reason": "双方view_04与view_05接缝局部及mip的主色带表现相近；UV虽排布方向不同，都有大岛与小碎片，未见足以建立整体偏好的差异。[opinion]"
+    }
+  ]
+}

@@ -1,0 +1,276 @@
+{
+  "packet_sha256": "e18c46e917f058edfad7992676ec989fd862e6e4d3e5497c9a685e7a20d8f38f",
+  "reviewer_id": "dragon_seed_43_judge2_attempt0",
+  "samples": [
+    {
+      "id": "sample_A",
+      "scores": {
+        "appearance": {
+          "score": 4,
+          "evidence": [
+            "evidence_001",
+            "evidence_020",
+            "evidence_002",
+            "evidence_021"
+          ],
+          "reason": "六视图保留粉紫翼膜、亮色翼尖与中央金色纹样；view_00、view_02翼根和翼缘相对参考更粗糙、细节略糊，整体外观接近参考。`[opinion]`"
+        },
+        "seams": {
+          "score": 4,
+          "evidence": [
+            "evidence_002",
+            "evidence_021"
+          ],
+          "reason": "view_00中央躯干至右翼的颜色过渡基本连续，view_03翼根未见显著横断色带；view_02左下翼膜边缘可见小黑点，局部需检查，但图中不能确定是接缝还是投射或几何因素。`[opinion]`"
+        },
+        "normal_mip": {
+          "score": 4,
+          "evidence": [
+            "evidence_003",
+            "evidence_004",
+            "evidence_022"
+          ],
+          "reason": "normal的view_00、view_02翼面方向色整体连贯，翼缘和翼根较参考呈更粗的局部变化；mip的view_00、view_03金色纹理和翼膜细节明显平滑，但未见醒目的跨岛异色污染。`[opinion]`"
+        },
+        "uv_editability": {
+          "score": 3,
+          "evidence": [
+            "evidence_000"
+          ],
+          "reason": "UV图中左下、右侧和上方保留可辨的大块结构，但岛轮廓多尖刺、狭长三角带，左下角有零碎小岛，右侧细长尖端接近图框；可见结构需人工整理，不能据静态图确认实际编辑成本。`[opinion]`"
+        }
+      },
+      "major_defect": false
+    },
+    {
+      "id": "sample_B",
+      "scores": {
+        "appearance": {
+          "score": 4,
+          "evidence": [
+            "evidence_006",
+            "evidence_020",
+            "evidence_007",
+            "evidence_021"
+          ],
+          "reason": "六视图保留粉紫翼膜、亮色翼尖与中央金色纹样；view_00、view_02翼根和翼缘相对参考更粗糙、细节略糊，整体外观接近参考。`[opinion]`"
+        },
+        "seams": {
+          "score": 4,
+          "evidence": [
+            "evidence_007",
+            "evidence_021"
+          ],
+          "reason": "view_00中央躯干至右翼的颜色过渡基本连续，view_03翼根未见显著横断色带；view_02左下翼膜边缘可见小黑点，局部需检查，但图中不能确定是接缝还是投射或几何因素。`[opinion]`"
+        },
+        "normal_mip": {
+          "score": 4,
+          "evidence": [
+            "evidence_008",
+            "evidence_009",
+            "evidence_022"
+          ],
+          "reason": "normal的view_00、view_02翼面方向色整体连贯，翼缘和翼根较参考呈更粗的局部变化；mip的view_00、view_03金色纹理和翼膜细节明显平滑，但未见醒目的跨岛异色污染。`[opinion]`"
+        },
+        "uv_editability": {
+          "score": 3,
+          "evidence": [
+            "evidence_005"
+          ],
+          "reason": "UV图中左下、右侧和上方保留可辨的大块结构，但岛轮廓多尖刺、狭长三角带，左下角有零碎小岛，右侧细长尖端接近图框；可见结构需人工整理，不能据静态图确认实际编辑成本。`[opinion]`"
+        }
+      },
+      "major_defect": false
+    },
+    {
+      "id": "sample_C",
+      "scores": {
+        "appearance": {
+          "score": 4,
+          "evidence": [
+            "evidence_011",
+            "evidence_020",
+            "evidence_012",
+            "evidence_021"
+          ],
+          "reason": "六视图保留粉紫翼膜、亮色翼尖与中央金色纹样；view_00、view_02翼根和翼缘相对参考更粗糙、细节略糊，整体外观接近参考。`[opinion]`"
+        },
+        "seams": {
+          "score": 4,
+          "evidence": [
+            "evidence_012",
+            "evidence_021"
+          ],
+          "reason": "view_00中央躯干至右翼的颜色过渡基本连续，view_03翼根未见显著横断色带；view_02左下翼膜边缘可见小黑点，局部需检查，但图中不能确定是接缝还是投射或几何因素。`[opinion]`"
+        },
+        "normal_mip": {
+          "score": 4,
+          "evidence": [
+            "evidence_013",
+            "evidence_014",
+            "evidence_022"
+          ],
+          "reason": "normal的view_00、view_02翼面方向色整体连贯，翼缘和翼根较参考呈更粗的局部变化；mip的view_00、view_03金色纹理和翼膜细节明显平滑，但未见醒目的跨岛异色污染。`[opinion]`"
+        },
+        "uv_editability": {
+          "score": 3,
+          "evidence": [
+            "evidence_010"
+          ],
+          "reason": "UV图中左下、右侧和上方保留可辨的大块结构，但岛轮廓多尖刺、狭长三角带，左下角有零碎小岛，右侧细长尖端接近图框；可见结构需人工整理，不能据静态图确认实际编辑成本。`[opinion]`"
+        }
+      },
+      "major_defect": false
+    },
+    {
+      "id": "sample_D",
+      "scores": {
+        "appearance": {
+          "score": 4,
+          "evidence": [
+            "evidence_016",
+            "evidence_020",
+            "evidence_017",
+            "evidence_021"
+          ],
+          "reason": "六视图保留粉紫翼膜、亮色翼尖与中央金色纹样；view_00、view_02翼根和翼缘相对参考更粗糙、细节略糊，整体外观接近参考。`[opinion]`"
+        },
+        "seams": {
+          "score": 4,
+          "evidence": [
+            "evidence_017",
+            "evidence_021"
+          ],
+          "reason": "view_00中央躯干至右翼的颜色过渡基本连续，view_03翼根未见显著横断色带；view_02左下翼膜边缘可见小黑点，局部需检查，但图中不能确定是接缝还是投射或几何因素。`[opinion]`"
+        },
+        "normal_mip": {
+          "score": 4,
+          "evidence": [
+            "evidence_018",
+            "evidence_019",
+            "evidence_022"
+          ],
+          "reason": "normal的view_00、view_02翼面方向色整体连贯，翼缘和翼根较参考呈更粗的局部变化；mip的view_00、view_03金色纹理和翼膜细节明显平滑，但未见醒目的跨岛异色污染。`[opinion]`"
+        },
+        "uv_editability": {
+          "score": 3,
+          "evidence": [
+            "evidence_015"
+          ],
+          "reason": "UV图中左下、右侧和上方保留可辨的大块结构，但岛轮廓多尖刺、狭长三角带，左下角有零碎小岛，右侧细长尖端接近图框；可见结构需人工整理，不能据静态图确认实际编辑成本。`[opinion]`"
+        }
+      },
+      "major_defect": false
+    }
+  ],
+  "preferences": [
+    {
+      "first": "sample_A",
+      "second": "sample_B",
+      "preference": "tie",
+      "evidence": [
+        "evidence_000",
+        "evidence_005",
+        "evidence_001",
+        "evidence_006",
+        "evidence_002",
+        "evidence_007",
+        "evidence_003",
+        "evidence_008",
+        "evidence_004",
+        "evidence_009"
+      ],
+      "reason": "双方同类证据在manifest中逐项具有相同SHA256，按允许的哈希去重查看；六视图翼膜、中央纹样、接缝局部、法线与mip以及UV结构无可区分依据，判为平局。`[verified: manifest.json evidence 中双方五类 sha256]`"
+    },
+    {
+      "first": "sample_A",
+      "second": "sample_C",
+      "preference": "tie",
+      "evidence": [
+        "evidence_000",
+        "evidence_010",
+        "evidence_001",
+        "evidence_011",
+        "evidence_002",
+        "evidence_012",
+        "evidence_003",
+        "evidence_013",
+        "evidence_004",
+        "evidence_014"
+      ],
+      "reason": "双方同类证据在manifest中逐项具有相同SHA256，按允许的哈希去重查看；六视图翼膜、中央纹样、接缝局部、法线与mip以及UV结构无可区分依据，判为平局。`[verified: manifest.json evidence 中双方五类 sha256]`"
+    },
+    {
+      "first": "sample_A",
+      "second": "sample_D",
+      "preference": "tie",
+      "evidence": [
+        "evidence_000",
+        "evidence_015",
+        "evidence_001",
+        "evidence_016",
+        "evidence_002",
+        "evidence_017",
+        "evidence_003",
+        "evidence_018",
+        "evidence_004",
+        "evidence_019"
+      ],
+      "reason": "双方同类证据在manifest中逐项具有相同SHA256，按允许的哈希去重查看；六视图翼膜、中央纹样、接缝局部、法线与mip以及UV结构无可区分依据，判为平局。`[verified: manifest.json evidence 中双方五类 sha256]`"
+    },
+    {
+      "first": "sample_B",
+      "second": "sample_C",
+      "preference": "tie",
+      "evidence": [
+        "evidence_005",
+        "evidence_010",
+        "evidence_006",
+        "evidence_011",
+        "evidence_007",
+        "evidence_012",
+        "evidence_008",
+        "evidence_013",
+        "evidence_009",
+        "evidence_014"
+      ],
+      "reason": "双方同类证据在manifest中逐项具有相同SHA256，按允许的哈希去重查看；六视图翼膜、中央纹样、接缝局部、法线与mip以及UV结构无可区分依据，判为平局。`[verified: manifest.json evidence 中双方五类 sha256]`"
+    },
+    {
+      "first": "sample_B",
+      "second": "sample_D",
+      "preference": "tie",
+      "evidence": [
+        "evidence_005",
+        "evidence_015",
+        "evidence_006",
+        "evidence_016",
+        "evidence_007",
+        "evidence_017",
+        "evidence_008",
+        "evidence_018",
+        "evidence_009",
+        "evidence_019"
+      ],
+      "reason": "双方同类证据在manifest中逐项具有相同SHA256，按允许的哈希去重查看；六视图翼膜、中央纹样、接缝局部、法线与mip以及UV结构无可区分依据，判为平局。`[verified: manifest.json evidence 中双方五类 sha256]`"
+    },
+    {
+      "first": "sample_C",
+      "second": "sample_D",
+      "preference": "tie",
+      "evidence": [
+        "evidence_010",
+        "evidence_015",
+        "evidence_011",
+        "evidence_016",
+        "evidence_012",
+        "evidence_017",
+        "evidence_013",
+        "evidence_018",
+        "evidence_014",
+        "evidence_019"
+      ],
+      "reason": "双方同类证据在manifest中逐项具有相同SHA256，按允许的哈希去重查看；六视图翼膜、中央纹样、接缝局部、法线与mip以及UV结构无可区分依据，判为平局。`[verified: manifest.json evidence 中双方五类 sha256]`"
+    }
+  ]
+}

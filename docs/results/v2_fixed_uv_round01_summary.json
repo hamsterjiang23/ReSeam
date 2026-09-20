@@ -1,0 +1,281 @@
+{
+  "status_counts": {
+    "FALLBACK": 15,
+    "SUCCESS": 21
+  },
+  "groups": [
+    {
+      "model": "energy_blade",
+      "uv_source": "optcuts",
+      "backend": "blender",
+      "scheduled": 3,
+      "valid_within_budget": 3,
+      "initial": 0.48772108013525656,
+      "scale_only_median": 0.4928404120989172,
+      "occupancy_median": 0.4928404120989172,
+      "occupancy_range": [
+        0.4928404120989172,
+        0.4928404120989172
+      ],
+      "density_gain_median": 1.0052345167486776,
+      "seconds_median": 63.11000000000058
+    },
+    {
+      "model": "energy_blade",
+      "uv_source": "optcuts",
+      "backend": "xatlas",
+      "scheduled": 3,
+      "valid_within_budget": 3,
+      "initial": 0.48772108013525656,
+      "scale_only_median": 0.4928404120989172,
+      "occupancy_median": 0.4928404120989172,
+      "occupancy_range": [
+        0.4928404120989172,
+        0.4928404120989172
+      ],
+      "density_gain_median": 1.0052345167486776,
+      "seconds_median": 1.7030000000013388
+    },
+    {
+      "model": "energy_blade",
+      "uv_source": "reseam_adaptive",
+      "backend": "blender",
+      "scheduled": 3,
+      "valid_within_budget": 3,
+      "initial": 0.47364105660770245,
+      "scale_only_median": 0.4768897517123105,
+      "occupancy_median": 0.485245208112077,
+      "occupancy_range": [
+        0.48141892402143216,
+        0.514605611686392
+      ],
+      "density_gain_median": 1.0121758173272122,
+      "seconds_median": 33.73400000000038
+    },
+    {
+      "model": "energy_blade",
+      "uv_source": "reseam_adaptive",
+      "backend": "xatlas",
+      "scheduled": 3,
+      "valid_within_budget": 3,
+      "initial": 0.47364105660770245,
+      "scale_only_median": 0.4768897517123105,
+      "occupancy_median": 0.4768897517123105,
+      "occupancy_range": [
+        0.4768897517123105,
+        0.4768897517123105
+      ],
+      "density_gain_median": 1.0034236299807646,
+      "seconds_median": 1.7029999999977008
+    },
+    {
+      "model": "energy_blade",
+      "uv_source": "reseam_large",
+      "backend": "blender",
+      "scheduled": 3,
+      "valid_within_budget": 3,
+      "initial": 0.44936393509088934,
+      "scale_only_median": 0.4515674397678989,
+      "occupancy_median": 0.46893337991487516,
+      "occupancy_range": [
+        0.4689331594914738,
+        0.46893341531191124
+      ],
+      "density_gain_median": 1.0215425644571066,
+      "seconds_median": 31.014999999999418
+    },
+    {
+      "model": "energy_blade",
+      "uv_source": "reseam_large",
+      "backend": "xatlas",
+      "scheduled": 3,
+      "valid_within_budget": 3,
+      "initial": 0.44936393509088934,
+      "scale_only_median": 0.4515674397678989,
+      "occupancy_median": 0.4515674397678989,
+      "occupancy_range": [
+        0.4515674397678989,
+        0.4515674397678989
+      ],
+      "density_gain_median": 1.0024488057752639,
+      "seconds_median": 1.7029999999977008
+    },
+    {
+      "model": "dragon",
+      "uv_source": "optcuts",
+      "backend": "blender",
+      "scheduled": 3,
+      "valid_within_budget": 3,
+      "initial": 0.2809258013300553,
+      "scale_only_median": 0.28203611804784645,
+      "occupancy_median": 0.28203617158477834,
+      "occupancy_range": [
+        0.28203611804784645,
+        0.28203620172056026
+      ],
+      "density_gain_median": 1.001974320651541,
+      "seconds_median": 10.875
+    },
+    {
+      "model": "dragon",
+      "uv_source": "optcuts",
+      "backend": "xatlas",
+      "scheduled": 3,
+      "valid_within_budget": 3,
+      "initial": 0.2809258013300553,
+      "scale_only_median": 0.28203611804784645,
+      "occupancy_median": 0.2820435218491235,
+      "occupancy_range": [
+        0.2820435218491235,
+        0.2820435218491235
+      ],
+      "density_gain_median": 1.001987377005446,
+      "seconds_median": 5.061999999998079
+    },
+    {
+      "model": "dragon",
+      "uv_source": "reseam_adaptive",
+      "backend": "blender",
+      "scheduled": 3,
+      "valid_within_budget": 3,
+      "initial": 0.2809258013300553,
+      "scale_only_median": 0.28203611804784645,
+      "occupancy_median": 0.28203617158477834,
+      "occupancy_range": [
+        0.28203611804784645,
+        0.28203620172056026
+      ],
+      "density_gain_median": 1.001974320651541,
+      "seconds_median": 10.89100000000326
+    },
+    {
+      "model": "dragon",
+      "uv_source": "reseam_adaptive",
+      "backend": "xatlas",
+      "scheduled": 3,
+      "valid_within_budget": 3,
+      "initial": 0.2809258013300553,
+      "scale_only_median": 0.28203611804784645,
+      "occupancy_median": 0.2820435218491235,
+      "occupancy_range": [
+        0.2820435218491235,
+        0.2820435218491235
+      ],
+      "density_gain_median": 1.001987377005446,
+      "seconds_median": 5.125
+    },
+    {
+      "model": "dragon",
+      "uv_source": "reseam_large",
+      "backend": "blender",
+      "scheduled": 3,
+      "valid_within_budget": 3,
+      "initial": 0.2809258013300553,
+      "scale_only_median": 0.28203611804784645,
+      "occupancy_median": 0.28203617158477834,
+      "occupancy_range": [
+        0.28203611804784645,
+        0.28203620172056026
+      ],
+      "density_gain_median": 1.001974320651541,
+      "seconds_median": 10.953000000001339
+    },
+    {
+      "model": "dragon",
+      "uv_source": "reseam_large",
+      "backend": "xatlas",
+      "scheduled": 3,
+      "valid_within_budget": 3,
+      "initial": 0.2809258013300553,
+      "scale_only_median": 0.28203611804784645,
+      "occupancy_median": 0.2820435218491235,
+      "occupancy_range": [
+        0.2820435218491235,
+        0.2820435218491235
+      ],
+      "density_gain_median": 1.001987377005446,
+      "seconds_median": 5.063000000001921
+    }
+  ],
+  "trials": {
+    "REJECTED": 10,
+    "NO_FEASIBLE_SCALE_FOUND": 108,
+    "ACCEPTED": 26
+  },
+  "overruns": [],
+  "formal_seconds": 542.0779999999977,
+  "source_code_unchanged": true,
+  "inputs_unchanged": true,
+  "backends_unchanged": true,
+  "matrix_complete": true,
+  "artist_acceptance": "PENDING_HUMAN",
+  "bake_and_render_acceptance": "NOT_RUN",
+  "audit_seconds": 17.639999999999418,
+  "round": "v2_fixed_uv_round01",
+  "duplicate_inputs": [
+    [
+      "artifacts/v1/v1_round03/dragon/original/optcuts/seed_17/downstream/pack/state.json",
+      "artifacts/v1/v1_round03/dragon/original/reseam_adaptive/seed_17/downstream/pack/state.json"
+    ],
+    [
+      "artifacts/v1/v1_round03/dragon/original/optcuts/seed_17/downstream/pack/state.json",
+      "artifacts/v1/v1_round03/dragon/original/reseam_large/seed_17/downstream/pack/state.json"
+    ],
+    [
+      "artifacts/v1/v1_round03/dragon/original/reseam_adaptive/seed_17/downstream/pack/state.json",
+      "artifacts/v1/v1_round03/dragon/original/reseam_large/seed_17/downstream/pack/state.json"
+    ]
+  ],
+  "input_sha256": {
+    "artifacts/v1/v1_round03/energy_blade/original/optcuts/seed_17/downstream/pack/state.json": "9ef204e4a9ee86cfeab66c4943fe90fbda7a64e85cbf1d3175da08d49c0eeb26",
+    "artifacts/v1/v1_round03/energy_blade/original/reseam_adaptive/seed_17/downstream/pack/state.json": "377ad9fda76c9bf2a8c064bf31bd9af182444425db350790ff52cf115a69ad9f",
+    "artifacts/v1/v1_round03/energy_blade/original/reseam_large/seed_17/downstream/pack/state.json": "c521dd7c963a191d50446d5cace4958ffbb362b5a2f3ad439c4b7e8d98b3b306",
+    "artifacts/v1/v1_round03/dragon/original/optcuts/seed_17/downstream/pack/state.json": "ed0e20154aa6bf8ca4bb8d6364bea50c2d19831b98c322b6aeaed42c9ed6e7dc",
+    "artifacts/v1/v1_round03/dragon/original/reseam_adaptive/seed_17/downstream/pack/state.json": "ed0e20154aa6bf8ca4bb8d6364bea50c2d19831b98c322b6aeaed42c9ed6e7dc",
+    "artifacts/v1/v1_round03/dragon/original/reseam_large/seed_17/downstream/pack/state.json": "ed0e20154aa6bf8ca4bb8d6364bea50c2d19831b98c322b6aeaed42c9ed6e7dc"
+  },
+  "config_sha256": "fb295c63fdd7fac43c462ab9a476d17d64adcce3df7bb38fd28d93784c7c8c7d",
+  "code_sha256": {
+    "src\\reseam\\__init__.py": "6cc0bb7fe22d1154be9e408d5def0ab9e79c775b92611bf9e7ec037b582a514b",
+    "src\\reseam\\artist_review.py": "d8be6b7a05b3da1a5ce2a838c4489cd0ecea92e00f87e112d2de1812b24d4ffe",
+    "src\\reseam\\audit.py": "f0240da8da77d10e5c217c265dde3d338f36250e4fa5c3e531d66dd285c3695a",
+    "src\\reseam\\backends.py": "fc4dedfc26ce6e973f9671383d983eb093e578890f32020a1d086a899e8546fd",
+    "src\\reseam\\benchmark.py": "ba281df7ce70fa7d969b60cf54ccc9ab97469954eac54fad1d019827e9bc8a1e",
+    "src\\reseam\\candidates.py": "f16b2bdf26532d871d0db0f30bd0eb2d8f002c14fb420f57bde89a246913012c",
+    "src\\reseam\\cli.py": "0cfe4229bdd59777c9cebc7439dc3c693b25caa4e30f1616cb6dab2bb65f77fc",
+    "src\\reseam\\constraints.py": "0d76283d3c3726036fb82196d9d6507529e5851082661490a435d967329f4a9d",
+    "src\\reseam\\diagnostics.py": "df85bfa1fb7a6f399ebb1342972be2d394a6af40b40e3fef034810b5ba695921",
+    "src\\reseam\\downstream.py": "e4c09b6e8cb5105a2c8d4d903afcb5bd400c555f7a6fef96f74d9629c936a23d",
+    "src\\reseam\\fixed_uv.py": "5b0d5e2d1b231e5816f4b3d9dabbe8188293ecebe84c51f69839d675a4cfb7c0",
+    "src\\reseam\\ground_truth.py": "dc7f37ba0c6b4839135f2ea4a2e130f8511b52e2a9865efbcfabf1812a4c3eea",
+    "src\\reseam\\initialization.py": "2feabd69bcccc278df292a2024f4950e0c7a561ae045988a77224589e705a3a9",
+    "src\\reseam\\mesh.py": "2bf29733f74678c6f9ccffd0ee125df5705b0e7baa8e596db11878e7a16937d8",
+    "src\\reseam\\packing_benchmark.py": "538f0a183c8ecdc2c31f0f60d8833f947bdfb5105265528676fe1b13a2608825",
+    "src\\reseam\\partition.py": "88bf9768b1efafe2d507d8ab4012ae40fc1ac687ad35ad76858f88b4e97ea62e",
+    "src\\reseam\\pipeline.py": "6f7007c4d78aa1b3b5dfb2eb9602a329aba5a078034769ef75ff99552d922b46",
+    "src\\reseam\\report.py": "34d41f9d91c190f662859127ea0acd7915770dfdc6d4b9e2df6d359840e70a21",
+    "src\\reseam\\report_details.py": "7b456c45d4915bf4d4b28a4fc7f1ae033c10aec1f6256e5c0aa57f4cd31bfc2f",
+    "src\\reseam\\runtime.py": "ea10c609eeea4940bd4ae0529a8367cabd1de795be58406363fc20ace767ac5f",
+    "src\\reseam\\search.py": "58fc45a6434a43e0130cb4c7d8529f96256cbaf41fd22d1185750ee5429e2e77",
+    "src\\reseam\\solver.py": "cd1138562320bd65d7d9d1b77ba347bf6263c593c233ffb4cbb2f36a08a38849",
+    "src\\reseam\\types.py": "f0e82492cbd4a67c61f0d92234d15119a1e615c21698c15d30860182391eeed5",
+    "src\\reseam\\validation.py": "90d91815cf77705b1442104cffdb2a82e0021de82b11f460f8ce42f160c559a8",
+    "scripts\\fixed_pack_worker.py": "f222b04533cca4c5b9a54c07ba37d417064a69d20cf00332463d38cdb80d5053",
+    "scripts\\blender_worker.py": "275d1ce4e4f3cb365c818913c06799d0383c67a4c2bc5b096159f672933e5816",
+    "uv.lock": "66d83b2406fcad21dd4bb61f4a62ba697a58e53dea3c85096a98904180b6fbb0"
+  },
+  "backend_files": {
+    "blender": {
+      "path": "E:\\Blender 4.5.11\\blender.exe",
+      "sha256": "0949e462f677c3e341913a838c6e2f54cc1c811ccb6f281ae9b3ff5926a2b255"
+    },
+    "xatlas": {
+      "path": "E:\\ReSem\\.venv\\Lib\\site-packages\\xatlas.cp311-win_amd64.pyd",
+      "sha256": "09be7dc0ff9b0cf073d2cf42731daf8a6fc3203a8542be3b7ab67d21b91e26c0"
+    }
+  },
+  "minimum_gap_pixels": 16.711033187440762,
+  "minimum_border_pixels": 7.999999999999943,
+  "maximum_rigid_error": 8.881784197001252e-16,
+  "maximum_relative_density_error": 2.4566570999695614e-11
+}

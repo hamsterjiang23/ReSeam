@@ -1,0 +1,256 @@
+{
+  "packet_sha256": "e18c46e917f058edfad7992676ec989fd862e6e4d3e5497c9a685e7a20d8f38f",
+  "reviewer_id": "dragon_seed_43_judge1_attempt0",
+  "samples": [
+    {
+      "id": "sample_A",
+      "scores": {
+        "appearance": {
+          "score": 4,
+          "evidence": [
+            "evidence_001",
+            "evidence_020"
+          ],
+          "reason": "view_00、view_02中央金色纹饰及粉白翼膜配色接近参考；翼缘缺口和细刺轮廓比参考粗钝，影响精细外观。这里只评价图像，不归因于UV方法。"
+        },
+        "seams": {
+          "score": 4,
+          "evidence": [
+            "evidence_002",
+            "evidence_021"
+          ],
+          "reason": "view_00中央金纹与两侧翼根没有明显成片断色，view_04、view_05横向翼面也未见贯穿色带；翼根局部纹理较破碎，现有图无法分离几何误差与接缝影响。"
+        },
+        "normal_mip": {
+          "score": 4,
+          "evidence": [
+            "evidence_003",
+            "evidence_004",
+            "evidence_022"
+          ],
+          "reason": "normal的view_00和view_02翼面主色过渡保持，未见大块方向翻转；mip的view_00胸部金纹与view_03翼面细纹明显变软，但未见显著异色渗漏。静态图不能验证全部mip级别。"
+        },
+        "uv_editability": {
+          "score": 3,
+          "evidence": [
+            "evidence_000"
+          ],
+          "reason": "UV上方长翼形块和右侧主块可辨，但右侧主块轮廓凹凸复杂，左下边缘有极细长碎块，底部也有狭长尖角；局部选择与整理预计需要修整，只评可见结构。"
+        }
+      },
+      "major_defect": false
+    },
+    {
+      "id": "sample_B",
+      "scores": {
+        "appearance": {
+          "score": 4,
+          "evidence": [
+            "evidence_006",
+            "evidence_020"
+          ],
+          "reason": "view_00、view_02中央金色纹饰及粉白翼膜配色接近参考；翼缘缺口和细刺轮廓比参考粗钝，影响精细外观。这里只评价图像，不归因于UV方法。"
+        },
+        "seams": {
+          "score": 4,
+          "evidence": [
+            "evidence_007",
+            "evidence_021"
+          ],
+          "reason": "view_00中央金纹与两侧翼根没有明显成片断色，view_04、view_05横向翼面也未见贯穿色带；翼根局部纹理较破碎，现有图无法分离几何误差与接缝影响。"
+        },
+        "normal_mip": {
+          "score": 4,
+          "evidence": [
+            "evidence_008",
+            "evidence_009",
+            "evidence_022"
+          ],
+          "reason": "normal的view_00和view_02翼面主色过渡保持，未见大块方向翻转；mip的view_00胸部金纹与view_03翼面细纹明显变软，但未见显著异色渗漏。静态图不能验证全部mip级别。"
+        },
+        "uv_editability": {
+          "score": 3,
+          "evidence": [
+            "evidence_005"
+          ],
+          "reason": "UV上方长翼形块和右侧主块可辨，但右侧主块轮廓凹凸复杂，左下边缘有极细长碎块，底部也有狭长尖角；局部选择与整理预计需要修整，只评可见结构。"
+        }
+      },
+      "major_defect": false
+    },
+    {
+      "id": "sample_C",
+      "scores": {
+        "appearance": {
+          "score": 4,
+          "evidence": [
+            "evidence_011",
+            "evidence_020"
+          ],
+          "reason": "view_00、view_02中央金色纹饰及粉白翼膜配色接近参考；翼缘缺口和细刺轮廓比参考粗钝，影响精细外观。这里只评价图像，不归因于UV方法。"
+        },
+        "seams": {
+          "score": 4,
+          "evidence": [
+            "evidence_012",
+            "evidence_021"
+          ],
+          "reason": "view_00中央金纹与两侧翼根没有明显成片断色，view_04、view_05横向翼面也未见贯穿色带；翼根局部纹理较破碎，现有图无法分离几何误差与接缝影响。"
+        },
+        "normal_mip": {
+          "score": 4,
+          "evidence": [
+            "evidence_013",
+            "evidence_014",
+            "evidence_022"
+          ],
+          "reason": "normal的view_00和view_02翼面主色过渡保持，未见大块方向翻转；mip的view_00胸部金纹与view_03翼面细纹明显变软，但未见显著异色渗漏。静态图不能验证全部mip级别。"
+        },
+        "uv_editability": {
+          "score": 3,
+          "evidence": [
+            "evidence_010"
+          ],
+          "reason": "UV上方长翼形块和右侧主块可辨，但右侧主块轮廓凹凸复杂，左下边缘有极细长碎块，底部也有狭长尖角；局部选择与整理预计需要修整，只评可见结构。"
+        }
+      },
+      "major_defect": false
+    },
+    {
+      "id": "sample_D",
+      "scores": {
+        "appearance": {
+          "score": 4,
+          "evidence": [
+            "evidence_016",
+            "evidence_020"
+          ],
+          "reason": "view_00、view_02中央金色纹饰及粉白翼膜配色接近参考；翼缘缺口和细刺轮廓比参考粗钝，影响精细外观。这里只评价图像，不归因于UV方法。"
+        },
+        "seams": {
+          "score": 4,
+          "evidence": [
+            "evidence_017",
+            "evidence_021"
+          ],
+          "reason": "view_00中央金纹与两侧翼根没有明显成片断色，view_04、view_05横向翼面也未见贯穿色带；翼根局部纹理较破碎，现有图无法分离几何误差与接缝影响。"
+        },
+        "normal_mip": {
+          "score": 4,
+          "evidence": [
+            "evidence_018",
+            "evidence_019",
+            "evidence_022"
+          ],
+          "reason": "normal的view_00和view_02翼面主色过渡保持，未见大块方向翻转；mip的view_00胸部金纹与view_03翼面细纹明显变软，但未见显著异色渗漏。静态图不能验证全部mip级别。"
+        },
+        "uv_editability": {
+          "score": 3,
+          "evidence": [
+            "evidence_015"
+          ],
+          "reason": "UV上方长翼形块和右侧主块可辨，但右侧主块轮廓凹凸复杂，左下边缘有极细长碎块，底部也有狭长尖角；局部选择与整理预计需要修整，只评可见结构。"
+        }
+      },
+      "major_defect": false
+    }
+  ],
+  "preferences": [
+    {
+      "first": "sample_A",
+      "second": "sample_B",
+      "preference": "tie",
+      "evidence": [
+        "evidence_000",
+        "evidence_005",
+        "evidence_002",
+        "evidence_007",
+        "evidence_003",
+        "evidence_008",
+        "evidence_004",
+        "evidence_009"
+      ],
+      "reason": "manifest中双方各类图像哈希逐项相同，已按许可去重查看。UV右侧复杂主块、接缝局部view_00翼根、normal的view_02与mip的view_00均为相同图像证据，无法支持优于另一方的偏好。"
+    },
+    {
+      "first": "sample_A",
+      "second": "sample_C",
+      "preference": "tie",
+      "evidence": [
+        "evidence_000",
+        "evidence_010",
+        "evidence_002",
+        "evidence_012",
+        "evidence_003",
+        "evidence_013",
+        "evidence_004",
+        "evidence_014"
+      ],
+      "reason": "manifest中双方各类图像哈希逐项相同，已按许可去重查看。UV右侧复杂主块、接缝局部view_00翼根、normal的view_02与mip的view_00均为相同图像证据，无法支持优于另一方的偏好。"
+    },
+    {
+      "first": "sample_A",
+      "second": "sample_D",
+      "preference": "tie",
+      "evidence": [
+        "evidence_000",
+        "evidence_015",
+        "evidence_002",
+        "evidence_017",
+        "evidence_003",
+        "evidence_018",
+        "evidence_004",
+        "evidence_019"
+      ],
+      "reason": "manifest中双方各类图像哈希逐项相同，已按许可去重查看。UV右侧复杂主块、接缝局部view_00翼根、normal的view_02与mip的view_00均为相同图像证据，无法支持优于另一方的偏好。"
+    },
+    {
+      "first": "sample_B",
+      "second": "sample_C",
+      "preference": "tie",
+      "evidence": [
+        "evidence_005",
+        "evidence_010",
+        "evidence_007",
+        "evidence_012",
+        "evidence_008",
+        "evidence_013",
+        "evidence_009",
+        "evidence_014"
+      ],
+      "reason": "manifest中双方各类图像哈希逐项相同，已按许可去重查看。UV右侧复杂主块、接缝局部view_00翼根、normal的view_02与mip的view_00均为相同图像证据，无法支持优于另一方的偏好。"
+    },
+    {
+      "first": "sample_B",
+      "second": "sample_D",
+      "preference": "tie",
+      "evidence": [
+        "evidence_005",
+        "evidence_015",
+        "evidence_007",
+        "evidence_017",
+        "evidence_008",
+        "evidence_018",
+        "evidence_009",
+        "evidence_019"
+      ],
+      "reason": "manifest中双方各类图像哈希逐项相同，已按许可去重查看。UV右侧复杂主块、接缝局部view_00翼根、normal的view_02与mip的view_00均为相同图像证据，无法支持优于另一方的偏好。"
+    },
+    {
+      "first": "sample_C",
+      "second": "sample_D",
+      "preference": "tie",
+      "evidence": [
+        "evidence_010",
+        "evidence_015",
+        "evidence_012",
+        "evidence_017",
+        "evidence_013",
+        "evidence_018",
+        "evidence_014",
+        "evidence_019"
+      ],
+      "reason": "manifest中双方各类图像哈希逐项相同，已按许可去重查看。UV右侧复杂主块、接缝局部view_00翼根、normal的view_02与mip的view_00均为相同图像证据，无法支持优于另一方的偏好。"
+    }
+  ]
+}

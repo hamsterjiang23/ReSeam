@@ -1,0 +1,12 @@
+{
+  "limit_seconds": 28800,
+  "previous_total_charged_seconds": 21319.12215399999,
+  "preview_seconds": 47.01499999999942,
+  "geometry_probe_conservative_allowance_seconds": 30,
+  "audit_v1_seconds": 0.6409999999959837,
+  "audit_v2_seconds": 0.7659999999959837,
+  "delivery_qa_reserved_seconds": 60,
+  "total_charged_seconds": 21457.54415399998,
+  "remaining_seconds": 7342.455846000019,
+  "within_budget": true
+}

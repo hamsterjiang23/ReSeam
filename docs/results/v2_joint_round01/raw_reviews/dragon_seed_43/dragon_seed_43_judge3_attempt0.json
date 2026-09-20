@@ -1,0 +1,268 @@
+{
+  "packet_sha256": "e18c46e917f058edfad7992676ec989fd862e6e4d3e5497c9a685e7a20d8f38f",
+  "reviewer_id": "dragon_seed_43_judge3_attempt0",
+  "samples": [
+    {
+      "id": "sample_A",
+      "scores": {
+        "appearance": {
+          "score": 3,
+          "evidence": [
+            "evidence_001",
+            "evidence_020"
+          ],
+          "reason": "view_00、view_02 的金色胸部纹样与粉红翼膜仍可辨认；相较参考，两侧翼膜内缘更厚，细长尖齿和镂空轮廓变钝，需修整。只评价图像表现，不判断缺陷来自何种环节。"
+        },
+        "seams": {
+          "score": 4,
+          "evidence": [
+            "evidence_002",
+            "evidence_021"
+          ],
+          "reason": "view_00、view_02 胸部到翼根的金色/粉红交界没有明显割裂色带；view_04、view_05 细长翼根处纹样较混杂，当前局部图不足以确认每条接缝。"
+        },
+        "normal_mip": {
+          "score": 4,
+          "evidence": [
+            "evidence_003",
+            "evidence_004",
+            "evidence_022"
+          ],
+          "reason": "normal 的 view_00、view_02 两翼及胸部方向颜色整体连贯，未见贯穿的大块异常；mip 的 view_00 胸部细纹明显模糊，但翼尖未见明显异色渗出。相较参考 normal，翼缘细节变钝，需进一步检查。"
+        },
+        "uv_editability": {
+          "score": 3,
+          "evidence": [
+            "evidence_000"
+          ],
+          "reason": "UV图上方偏左与中央右侧大岛呈狭长分叉形，边界尖锐且凹凸复杂；底部左侧有极小孤立碎片，局部细长三角形密集。大区域可追踪，但小碎片和复杂边界会增加选择整理难度，仅评价可见结构。"
+        }
+      },
+      "major_defect": false
+    },
+    {
+      "id": "sample_B",
+      "scores": {
+        "appearance": {
+          "score": 3,
+          "evidence": [
+            "evidence_006",
+            "evidence_020"
+          ],
+          "reason": "view_00、view_02 的金色胸部纹样与粉红翼膜仍可辨认；相较参考，两侧翼膜内缘更厚，细长尖齿和镂空轮廓变钝，需修整。只评价图像表现，不判断缺陷来自何种环节。"
+        },
+        "seams": {
+          "score": 4,
+          "evidence": [
+            "evidence_007",
+            "evidence_021"
+          ],
+          "reason": "view_00、view_02 胸部到翼根的金色/粉红交界没有明显割裂色带；view_04、view_05 细长翼根处纹样较混杂，当前局部图不足以确认每条接缝。"
+        },
+        "normal_mip": {
+          "score": 4,
+          "evidence": [
+            "evidence_008",
+            "evidence_009",
+            "evidence_022"
+          ],
+          "reason": "normal 的 view_00、view_02 两翼及胸部方向颜色整体连贯，未见贯穿的大块异常；mip 的 view_00 胸部细纹明显模糊，但翼尖未见明显异色渗出。相较参考 normal，翼缘细节变钝，需进一步检查。"
+        },
+        "uv_editability": {
+          "score": 3,
+          "evidence": [
+            "evidence_005"
+          ],
+          "reason": "UV图上方偏左与中央右侧大岛呈狭长分叉形，边界尖锐且凹凸复杂；底部左侧有极小孤立碎片，局部细长三角形密集。大区域可追踪，但小碎片和复杂边界会增加选择整理难度，仅评价可见结构。"
+        }
+      },
+      "major_defect": false
+    },
+    {
+      "id": "sample_C",
+      "scores": {
+        "appearance": {
+          "score": 3,
+          "evidence": [
+            "evidence_011",
+            "evidence_020"
+          ],
+          "reason": "view_00、view_02 的金色胸部纹样与粉红翼膜仍可辨认；相较参考，两侧翼膜内缘更厚，细长尖齿和镂空轮廓变钝，需修整。只评价图像表现，不判断缺陷来自何种环节。"
+        },
+        "seams": {
+          "score": 4,
+          "evidence": [
+            "evidence_012",
+            "evidence_021"
+          ],
+          "reason": "view_00、view_02 胸部到翼根的金色/粉红交界没有明显割裂色带；view_04、view_05 细长翼根处纹样较混杂，当前局部图不足以确认每条接缝。"
+        },
+        "normal_mip": {
+          "score": 4,
+          "evidence": [
+            "evidence_013",
+            "evidence_014",
+            "evidence_022"
+          ],
+          "reason": "normal 的 view_00、view_02 两翼及胸部方向颜色整体连贯，未见贯穿的大块异常；mip 的 view_00 胸部细纹明显模糊，但翼尖未见明显异色渗出。相较参考 normal，翼缘细节变钝，需进一步检查。"
+        },
+        "uv_editability": {
+          "score": 3,
+          "evidence": [
+            "evidence_010"
+          ],
+          "reason": "UV图上方偏左与中央右侧大岛呈狭长分叉形，边界尖锐且凹凸复杂；底部左侧有极小孤立碎片，局部细长三角形密集。大区域可追踪，但小碎片和复杂边界会增加选择整理难度，仅评价可见结构。"
+        }
+      },
+      "major_defect": false
+    },
+    {
+      "id": "sample_D",
+      "scores": {
+        "appearance": {
+          "score": 3,
+          "evidence": [
+            "evidence_016",
+            "evidence_020"
+          ],
+          "reason": "view_00、view_02 的金色胸部纹样与粉红翼膜仍可辨认；相较参考，两侧翼膜内缘更厚，细长尖齿和镂空轮廓变钝，需修整。只评价图像表现，不判断缺陷来自何种环节。"
+        },
+        "seams": {
+          "score": 4,
+          "evidence": [
+            "evidence_017",
+            "evidence_021"
+          ],
+          "reason": "view_00、view_02 胸部到翼根的金色/粉红交界没有明显割裂色带；view_04、view_05 细长翼根处纹样较混杂，当前局部图不足以确认每条接缝。"
+        },
+        "normal_mip": {
+          "score": 4,
+          "evidence": [
+            "evidence_018",
+            "evidence_019",
+            "evidence_022"
+          ],
+          "reason": "normal 的 view_00、view_02 两翼及胸部方向颜色整体连贯，未见贯穿的大块异常；mip 的 view_00 胸部细纹明显模糊，但翼尖未见明显异色渗出。相较参考 normal，翼缘细节变钝，需进一步检查。"
+        },
+        "uv_editability": {
+          "score": 3,
+          "evidence": [
+            "evidence_015"
+          ],
+          "reason": "UV图上方偏左与中央右侧大岛呈狭长分叉形，边界尖锐且凹凸复杂；底部左侧有极小孤立碎片，局部细长三角形密集。大区域可追踪，但小碎片和复杂边界会增加选择整理难度，仅评价可见结构。"
+        }
+      },
+      "major_defect": false
+    }
+  ],
+  "preferences": [
+    {
+      "first": "sample_A",
+      "second": "sample_B",
+      "preference": "tie",
+      "evidence": [
+        "evidence_000",
+        "evidence_005",
+        "evidence_001",
+        "evidence_006",
+        "evidence_002",
+        "evidence_007",
+        "evidence_003",
+        "evidence_008",
+        "evidence_004",
+        "evidence_009"
+      ],
+      "reason": "manifest 中双方五类图像对应哈希相同，按许可去重实际查看；view_00/02 的胸部翼膜、view_04/05 翼根、normal/mip 以及UV结构均无可见差别，代理观察判为平局。"
+    },
+    {
+      "first": "sample_A",
+      "second": "sample_C",
+      "preference": "tie",
+      "evidence": [
+        "evidence_000",
+        "evidence_010",
+        "evidence_001",
+        "evidence_011",
+        "evidence_002",
+        "evidence_012",
+        "evidence_003",
+        "evidence_013",
+        "evidence_004",
+        "evidence_014"
+      ],
+      "reason": "manifest 中双方五类图像对应哈希相同，按许可去重实际查看；view_00/02 的胸部翼膜、view_04/05 翼根、normal/mip 以及UV结构均无可见差别，代理观察判为平局。"
+    },
+    {
+      "first": "sample_A",
+      "second": "sample_D",
+      "preference": "tie",
+      "evidence": [
+        "evidence_000",
+        "evidence_015",
+        "evidence_001",
+        "evidence_016",
+        "evidence_002",
+        "evidence_017",
+        "evidence_003",
+        "evidence_018",
+        "evidence_004",
+        "evidence_019"
+      ],
+      "reason": "manifest 中双方五类图像对应哈希相同，按许可去重实际查看；view_00/02 的胸部翼膜、view_04/05 翼根、normal/mip 以及UV结构均无可见差别，代理观察判为平局。"
+    },
+    {
+      "first": "sample_B",
+      "second": "sample_C",
+      "preference": "tie",
+      "evidence": [
+        "evidence_005",
+        "evidence_010",
+        "evidence_006",
+        "evidence_011",
+        "evidence_007",
+        "evidence_012",
+        "evidence_008",
+        "evidence_013",
+        "evidence_009",
+        "evidence_014"
+      ],
+      "reason": "manifest 中双方五类图像对应哈希相同，按许可去重实际查看；view_00/02 的胸部翼膜、view_04/05 翼根、normal/mip 以及UV结构均无可见差别，代理观察判为平局。"
+    },
+    {
+      "first": "sample_B",
+      "second": "sample_D",
+      "preference": "tie",
+      "evidence": [
+        "evidence_005",
+        "evidence_015",
+        "evidence_006",
+        "evidence_016",
+        "evidence_007",
+        "evidence_017",
+        "evidence_008",
+        "evidence_018",
+        "evidence_009",
+        "evidence_019"
+      ],
+      "reason": "manifest 中双方五类图像对应哈希相同，按许可去重实际查看；view_00/02 的胸部翼膜、view_04/05 翼根、normal/mip 以及UV结构均无可见差别，代理观察判为平局。"
+    },
+    {
+      "first": "sample_C",
+      "second": "sample_D",
+      "preference": "tie",
+      "evidence": [
+        "evidence_010",
+        "evidence_015",
+        "evidence_011",
+        "evidence_016",
+        "evidence_012",
+        "evidence_017",
+        "evidence_013",
+        "evidence_018",
+        "evidence_014",
+        "evidence_019"
+      ],
+      "reason": "manifest 中双方五类图像对应哈希相同，按许可去重实际查看；view_00/02 的胸部翼膜、view_04/05 翼根、normal/mip 以及UV结构均无可见差别，代理观察判为平局。"
+    }
+  ]
+}

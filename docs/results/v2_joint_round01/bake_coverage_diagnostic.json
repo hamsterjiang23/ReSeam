@@ -1,0 +1,174 @@
+{
+  "kind": "posthoc_diagnostic_not_new_AB",
+  "case": "dragon/seed_17/joint",
+  "surface_area_fraction": 0.014699239066379046,
+  "faces": [
+    {
+      "face": 205,
+      "samples": 207,
+      "base_alpha_min": 0.0,
+      "normal_alpha_min": 1.0,
+      "frame_valid": true
+    },
+    {
+      "face": 237,
+      "samples": 222,
+      "base_alpha_min": 0.0,
+      "normal_alpha_min": 1.0,
+      "frame_valid": true
+    },
+    {
+      "face": 254,
+      "samples": 39,
+      "base_alpha_min": 0.0,
+      "normal_alpha_min": 1.0,
+      "frame_valid": true
+    },
+    {
+      "face": 263,
+      "samples": 353,
+      "base_alpha_min": 0.0,
+      "normal_alpha_min": 1.0,
+      "frame_valid": true
+    },
+    {
+      "face": 265,
+      "samples": 16,
+      "base_alpha_min": 0.0,
+      "normal_alpha_min": 1.0,
+      "frame_valid": true
+    },
+    {
+      "face": 321,
+      "samples": 402,
+      "base_alpha_min": 0.0,
+      "normal_alpha_min": 1.0,
+      "frame_valid": true
+    },
+    {
+      "face": 426,
+      "samples": 291,
+      "base_alpha_min": 0.0,
+      "normal_alpha_min": 1.0,
+      "frame_valid": true
+    },
+    {
+      "face": 644,
+      "samples": 130,
+      "base_alpha_min": 0.0,
+      "normal_alpha_min": 1.0,
+      "frame_valid": true
+    },
+    {
+      "face": 1090,
+      "samples": 189,
+      "base_alpha_min": 0.0,
+      "normal_alpha_min": 1.0,
+      "frame_valid": true
+    },
+    {
+      "face": 1402,
+      "samples": 414,
+      "base_alpha_min": 0.0,
+      "normal_alpha_min": 1.0,
+      "frame_valid": true
+    },
+    {
+      "face": 1452,
+      "samples": 219,
+      "base_alpha_min": 0.0,
+      "normal_alpha_min": 1.0,
+      "frame_valid": true
+    },
+    {
+      "face": 1456,
+      "samples": 57,
+      "base_alpha_min": 0.0,
+      "normal_alpha_min": 1.0,
+      "frame_valid": true
+    },
+    {
+      "face": 1458,
+      "samples": 255,
+      "base_alpha_min": 0.0,
+      "normal_alpha_min": 1.0,
+      "frame_valid": true
+    },
+    {
+      "face": 1461,
+      "samples": 57,
+      "base_alpha_min": 0.0,
+      "normal_alpha_min": 1.0,
+      "frame_valid": true
+    },
+    {
+      "face": 1509,
+      "samples": 172,
+      "base_alpha_min": 0.0,
+      "normal_alpha_min": 1.0,
+      "frame_valid": true
+    },
+    {
+      "face": 1518,
+      "samples": 222,
+      "base_alpha_min": 0.0,
+      "normal_alpha_min": 1.0,
+      "frame_valid": true
+    },
+    {
+      "face": 1562,
+      "samples": 156,
+      "base_alpha_min": 0.0,
+      "normal_alpha_min": 1.0,
+      "frame_valid": true
+    },
+    {
+      "face": 1563,
+      "samples": 410,
+      "base_alpha_min": 0.0,
+      "normal_alpha_min": 1.0,
+      "frame_valid": true
+    },
+    {
+      "face": 1597,
+      "samples": 32,
+      "base_alpha_min": 0.0,
+      "normal_alpha_min": 1.0,
+      "frame_valid": true
+    },
+    {
+      "face": 1616,
+      "samples": 208,
+      "base_alpha_min": 0.0,
+      "normal_alpha_min": 1.0,
+      "frame_valid": true
+    },
+    {
+      "face": 1661,
+      "samples": 201,
+      "base_alpha_min": 0.0,
+      "normal_alpha_min": 1.0,
+      "frame_valid": true
+    },
+    {
+      "face": 1669,
+      "samples": 192,
+      "base_alpha_min": 0.0,
+      "normal_alpha_min": 1.0,
+      "frame_valid": true
+    },
+    {
+      "face": 1670,
+      "samples": 137,
+      "base_alpha_min": 0.0,
+      "normal_alpha_min": 1.0,
+      "frame_valid": true
+    }
+  ],
+  "source_sha256": {
+    "BaseColor_000.png": "4c09553cb49cd7a9d0142797590fe3b4cd28fd56d5b1963d9a32a142f4ed5f4b",
+    "Normal_000.png": "8df82df9683e37ce4f320bc1251c5aabf16766ef2b30e6a059fe2782e2afb501",
+    "result.json": "db1716ded82aa81d0eb5b9a133006fc767d3b82a9cb784ef850236856519f045"
+  },
+  "interpretation": "Base Color alpha below 0.99; normal alpha and tangent frames pass. Does not identify projection miss versus source transparency or raster coverage."
+}

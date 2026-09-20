@@ -1,0 +1,54 @@
+{
+  "kind": "postfreeze_additional_camera_check_same_outputs_not_new_search",
+  "views": [
+    [
+      15,
+      35
+    ],
+    [
+      105,
+      35
+    ],
+    [
+      195,
+      35
+    ],
+    [
+      285,
+      35
+    ]
+  ],
+  "channels": [
+    "base",
+    "normal",
+    "mip_128"
+  ],
+  "source_script_sha256": "95e5ae9e0a16d7e511af1e5152c49aa74e8a365792000b90c744d0272e43405f",
+  "state_sha256": {
+    "energy_blade/seed_17/packing_only": "1d32c6a60a91a1c5b5d83e46d5fd2fc4ede174caac22a6e8d01902b9b7b507f7",
+    "energy_blade/seed_17/seam_pack": "fb114d4e3a7ad62670cd05f409a7eac47855df51096facc824701176c2788bae",
+    "energy_blade/seed_17/reuse_pack": "1d32c6a60a91a1c5b5d83e46d5fd2fc4ede174caac22a6e8d01902b9b7b507f7",
+    "energy_blade/seed_17/joint": "cbb2eba3d58e8918e08d01d7e75d6efc7df02c47bfca9c8aed47383676a52cde",
+    "energy_blade/seed_29/packing_only": "7789e4720ff49a74d3d63cd465775bb3bb0d9ed633d9e0415f8069f59edc43af",
+    "energy_blade/seed_29/seam_pack": "bd732d09bcfc02cb2acbf8fc830818d5e6b03e7b968cdbb8689a8f864f1b64b5",
+    "energy_blade/seed_29/reuse_pack": "7789e4720ff49a74d3d63cd465775bb3bb0d9ed633d9e0415f8069f59edc43af",
+    "energy_blade/seed_29/joint": "8e9d20fc2ba74e4494b02a23f342e6b223b93a1f0e8e9d89661586c17a0ec9af",
+    "energy_blade/seed_43/packing_only": "49f74c6ea6a58578faac151d4051a36d3543ac68d3cd24623858e4bfc59baaf3",
+    "energy_blade/seed_43/seam_pack": "0e00eee3b3f5b0e3df6c9f4561a9788412e3e1a61f62e38fecdda549d03d8d37",
+    "energy_blade/seed_43/reuse_pack": "49f74c6ea6a58578faac151d4051a36d3543ac68d3cd24623858e4bfc59baaf3",
+    "energy_blade/seed_43/joint": "98b7866d185ff21e00dea0d23ca390b5678661f3bbe59d21e199c1d08bbfcffe",
+    "dragon/seed_17/packing_only": "6763ec7fa98b2e0feb870436c177441cbc0ceec5a92112881aa6cae3e84d81ae",
+    "dragon/seed_17/seam_pack": "6763ec7fa98b2e0feb870436c177441cbc0ceec5a92112881aa6cae3e84d81ae",
+    "dragon/seed_17/reuse_pack": "6763ec7fa98b2e0feb870436c177441cbc0ceec5a92112881aa6cae3e84d81ae",
+    "dragon/seed_17/joint": "6763ec7fa98b2e0feb870436c177441cbc0ceec5a92112881aa6cae3e84d81ae",
+    "dragon/seed_29/packing_only": "6763ec7fa98b2e0feb870436c177441cbc0ceec5a92112881aa6cae3e84d81ae",
+    "dragon/seed_29/seam_pack": "6763ec7fa98b2e0feb870436c177441cbc0ceec5a92112881aa6cae3e84d81ae",
+    "dragon/seed_29/reuse_pack": "6763ec7fa98b2e0feb870436c177441cbc0ceec5a92112881aa6cae3e84d81ae",
+    "dragon/seed_29/joint": "6763ec7fa98b2e0feb870436c177441cbc0ceec5a92112881aa6cae3e84d81ae",
+    "dragon/seed_43/packing_only": "6763ec7fa98b2e0feb870436c177441cbc0ceec5a92112881aa6cae3e84d81ae",
+    "dragon/seed_43/seam_pack": "6763ec7fa98b2e0feb870436c177441cbc0ceec5a92112881aa6cae3e84d81ae",
+    "dragon/seed_43/reuse_pack": "6763ec7fa98b2e0feb870436c177441cbc0ceec5a92112881aa6cae3e84d81ae",
+    "dragon/seed_43/joint": "6763ec7fa98b2e0feb870436c177441cbc0ceec5a92112881aa6cae3e84d81ae"
+  },
+  "purpose": "Additional fixed cameras excluded from this round's smoke views and tuning; original blind packets remain unchanged."
+}

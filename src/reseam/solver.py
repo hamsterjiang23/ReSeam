@@ -2,6 +2,7 @@
 
 import json
 import time
+from collections.abc import Callable
 from pathlib import Path
 from typing import Any
 
@@ -19,13 +20,14 @@ def solve(
     folder: Path,
     seconds: float,
     iterations: int = 160,
+    quality_check: Callable[[MeshState], dict[str, Any]] | None = None,
 ) -> SolveResult:
     start = time.monotonic()
     deadline = start + seconds
     if folder.exists():
         raise FileExistsError(folder)
     folder.mkdir(parents=True)
-    initial_quality = validate(state, tau=None)
+    initial_quality = quality_check(state) if quality_check else validate(state, tau=None)
     if not initial_quality["valid"]:
         return SolveResult(
             "INVALID_INITIAL_MAPPING", None, time.monotonic() - start, reason=str(initial_quality["errors"])
@@ -93,7 +95,7 @@ def solve(
             continue
         if fixed and not np.allclose(result.uv[fixed], state.uv[fixed], atol=1e-12, rtol=0):
             continue
-        quality = validate(result, tau=None)
+        quality = quality_check(result) if quality_check else validate(result, tau=None)
         if quality["valid"] and time.monotonic() <= deadline:
             if float(quality["sd_mean"]) > float(initial_quality["sd_mean"]) + 1e-12:
                 continue

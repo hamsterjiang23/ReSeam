@@ -1,0 +1,232 @@
+{
+  "packet_sha256": "81c73ee647ab324d5c0ce09a8a7986ab2c18b9dc7d076f49b9af38f6a4959998",
+  "reviewer_id": "energy_blade_seed_29_judge1_attempt0",
+  "samples": [
+    {
+      "id": "sample_A",
+      "scores": {
+        "appearance": {
+          "score": 5,
+          "evidence": [
+            "evidence_001",
+            "evidence_020"
+          ],
+          "reason": "view_00至view_05的长刃红色条带、中心灰褐块及金色尖刺与参考总体一致，在给定图像尺度未见明显新增色块错误。"
+        },
+        "seams": {
+          "score": 5,
+          "evidence": [
+            "evidence_002",
+            "evidence_021"
+          ],
+          "reason": "view_00、view_02中心接合及view_04、view_05长刃根部可见纹理转折与参考相近，未见明显新增黑线、缺口或跨面错色。"
+        },
+        "normal_mip": {
+          "score": 5,
+          "evidence": [
+            "evidence_003",
+            "evidence_004",
+            "evidence_022"
+          ],
+          "reason": "normal的view_04、view_05长刃色带及中心尖刺方向与参考相近；mip的view_00至view_05虽有细节软化，未见明显异色渗出或断裂，仅代表本包所示尺度。"
+        },
+        "uv_editability": {
+          "score": 3,
+          "evidence": [
+            "evidence_000"
+          ],
+          "reason": "图集左侧长刃岛可辨识，但左下和底边散落独立小三角、窄条，右下及中央岛边界有较多凹折，整体仍需整理才能便于选择和绘制。"
+        }
+      },
+      "major_defect": false
+    },
+    {
+      "id": "sample_B",
+      "scores": {
+        "appearance": {
+          "score": 5,
+          "evidence": [
+            "evidence_006",
+            "evidence_020"
+          ],
+          "reason": "view_00至view_05的长刃红色条带、中心灰褐块及金色尖刺与参考总体一致，在给定图像尺度未见明显新增色块错误。"
+        },
+        "seams": {
+          "score": 5,
+          "evidence": [
+            "evidence_007",
+            "evidence_021"
+          ],
+          "reason": "view_00、view_02中心接合及view_04、view_05长刃根部可见纹理转折与参考相近，未见明显新增黑线、缺口或跨面错色。"
+        },
+        "normal_mip": {
+          "score": 5,
+          "evidence": [
+            "evidence_008",
+            "evidence_009",
+            "evidence_022"
+          ],
+          "reason": "normal的view_04、view_05长刃色带及中心尖刺方向与参考相近；mip的view_00至view_05虽有细节软化，未见明显异色渗出或断裂，仅代表本包所示尺度。"
+        },
+        "uv_editability": {
+          "score": 3,
+          "evidence": [
+            "evidence_005"
+          ],
+          "reason": "图集中央长刃岛可辨识，但中下部独立三角、底边窄条和左下多个尖长岛分散，岛朝向不统一，仍需整理才能便于选择和绘制。"
+        }
+      },
+      "major_defect": false
+    },
+    {
+      "id": "sample_C",
+      "scores": {
+        "appearance": {
+          "score": 5,
+          "evidence": [
+            "evidence_011",
+            "evidence_020"
+          ],
+          "reason": "view_00至view_05的长刃红色条带、中心灰褐块及金色尖刺与参考总体一致，在给定图像尺度未见明显新增色块错误。"
+        },
+        "seams": {
+          "score": 5,
+          "evidence": [
+            "evidence_012",
+            "evidence_021"
+          ],
+          "reason": "view_00、view_02中心接合及view_04、view_05长刃根部可见纹理转折与参考相近，未见明显新增黑线、缺口或跨面错色。"
+        },
+        "normal_mip": {
+          "score": 5,
+          "evidence": [
+            "evidence_013",
+            "evidence_014",
+            "evidence_022"
+          ],
+          "reason": "normal的view_04、view_05长刃色带及中心尖刺方向与参考相近；mip的view_00至view_05虽有细节软化，未见明显异色渗出或断裂，仅代表本包所示尺度。"
+        },
+        "uv_editability": {
+          "score": 3,
+          "evidence": [
+            "evidence_010"
+          ],
+          "reason": "图集中央长刃岛可辨识，但中下部独立三角、底边窄条和左下多个尖长岛分散，岛朝向不统一，仍需整理才能便于选择和绘制。"
+        }
+      },
+      "major_defect": false
+    },
+    {
+      "id": "sample_D",
+      "scores": {
+        "appearance": {
+          "score": 5,
+          "evidence": [
+            "evidence_016",
+            "evidence_020"
+          ],
+          "reason": "view_00至view_05的长刃红色条带、中心灰褐块及金色尖刺与参考总体一致，在给定图像尺度未见明显新增色块错误。"
+        },
+        "seams": {
+          "score": 5,
+          "evidence": [
+            "evidence_017",
+            "evidence_021"
+          ],
+          "reason": "view_00、view_02中心接合及view_04、view_05长刃根部可见纹理转折与参考相近，未见明显新增黑线、缺口或跨面错色。"
+        },
+        "normal_mip": {
+          "score": 5,
+          "evidence": [
+            "evidence_018",
+            "evidence_019",
+            "evidence_022"
+          ],
+          "reason": "normal的view_04、view_05长刃色带及中心尖刺方向与参考相近；mip的view_00至view_05虽有细节软化，未见明显异色渗出或断裂，仅代表本包所示尺度。"
+        },
+        "uv_editability": {
+          "score": 3,
+          "evidence": [
+            "evidence_015"
+          ],
+          "reason": "图集下方斜置长刃岛可辨识，但中央及底边孤立小三角、上方尖长岛和凹折边界较多，仍需整理才能便于选择和绘制。"
+        }
+      },
+      "major_defect": false
+    }
+  ],
+  "preferences": [
+    {
+      "first": "sample_A",
+      "second": "sample_B",
+      "preference": "tie",
+      "evidence": [
+        "evidence_000",
+        "evidence_005",
+        "evidence_002",
+        "evidence_007"
+      ],
+      "reason": "双方接缝图view_04和view_05长刃根部未见足以区分的缺陷；UV均有可辨长刃岛及分散小岛，排布方向差异不足以建立编辑性优劣，代理观察持平。"
+    },
+    {
+      "first": "sample_A",
+      "second": "sample_C",
+      "preference": "tie",
+      "evidence": [
+        "evidence_000",
+        "evidence_010",
+        "evidence_002",
+        "evidence_012"
+      ],
+      "reason": "双方接缝图view_04和view_05长刃根部未见足以区分的缺陷；UV均有可辨长刃岛及分散小岛，排布方向差异不足以建立编辑性优劣，代理观察持平。"
+    },
+    {
+      "first": "sample_A",
+      "second": "sample_D",
+      "preference": "tie",
+      "evidence": [
+        "evidence_000",
+        "evidence_015",
+        "evidence_002",
+        "evidence_017"
+      ],
+      "reason": "双方接缝图view_04和view_05长刃根部未见足以区分的缺陷；UV均有可辨长刃岛及分散小岛，排布方向差异不足以建立编辑性优劣，代理观察持平。"
+    },
+    {
+      "first": "sample_B",
+      "second": "sample_C",
+      "preference": "tie",
+      "evidence": [
+        "evidence_005",
+        "evidence_010",
+        "evidence_007",
+        "evidence_012"
+      ],
+      "reason": "双方UV与接缝图在manifest中分别同哈希，按许可去重查看；view_04和view_05长刃根部表现及可见岛结构一致，代理观察无偏好。"
+    },
+    {
+      "first": "sample_B",
+      "second": "sample_D",
+      "preference": "tie",
+      "evidence": [
+        "evidence_005",
+        "evidence_015",
+        "evidence_007",
+        "evidence_017"
+      ],
+      "reason": "双方接缝图view_04和view_05长刃根部未见足以区分的缺陷；UV均有可辨长刃岛及分散小岛，排布方向差异不足以建立编辑性优劣，代理观察持平。"
+    },
+    {
+      "first": "sample_C",
+      "second": "sample_D",
+      "preference": "tie",
+      "evidence": [
+        "evidence_010",
+        "evidence_015",
+        "evidence_012",
+        "evidence_017"
+      ],
+      "reason": "双方接缝图view_04和view_05长刃根部未见足以区分的缺陷；UV均有可辨长刃岛及分散小岛，排布方向差异不足以建立编辑性优劣，代理观察持平。"
+    }
+  ]
+}

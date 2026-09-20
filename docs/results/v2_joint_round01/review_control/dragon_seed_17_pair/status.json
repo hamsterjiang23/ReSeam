@@ -1,0 +1,7 @@
+{
+  "status": "COMPLETE",
+  "started_utc": "2026-09-20T07:49:09.761857+00:00",
+  "deadline_unix": 1789890999.7618577,
+  "guard_sha256": "ce80593edce45b84841c5ff5bf48f1770d74f577bcee1c6372a98ae0b2ce4f66",
+  "finished_utc": "2026-09-20T07:50:37.787839+00:00"
+}

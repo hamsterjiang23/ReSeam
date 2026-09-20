@@ -1,0 +1,1478 @@
+{
+  "dragon_seed_17": {
+    "packet_sha256": "e18c46e917f058edfad7992676ec989fd862e6e4d3e5497c9a685e7a20d8f38f",
+    "reviewers": [
+      "dragon_seed_17_judge1_attempt0",
+      "dragon_seed_17_judge2_attempt0",
+      "dragon_seed_17_judge3_attempt0"
+    ],
+    "samples": [
+      {
+        "id": "sample_A",
+        "status": "AGENT_EVALUATED",
+        "scores": {
+          "appearance": {
+            "median": 4,
+            "values": [
+              4,
+              4,
+              3
+            ],
+            "disagreement": false
+          },
+          "seams": {
+            "median": 4,
+            "values": [
+              4,
+              4,
+              4
+            ],
+            "disagreement": false
+          },
+          "normal_mip": {
+            "median": 4,
+            "values": [
+              4,
+              4,
+              4
+            ],
+            "disagreement": false
+          },
+          "uv_editability": {
+            "median": 3,
+            "values": [
+              3,
+              3,
+              3
+            ],
+            "disagreement": false
+          }
+        },
+        "recommendation": "NEEDS_WORK"
+      },
+      {
+        "id": "sample_B",
+        "status": "AGENT_EVALUATED",
+        "scores": {
+          "appearance": {
+            "median": 4,
+            "values": [
+              4,
+              4,
+              3
+            ],
+            "disagreement": false
+          },
+          "seams": {
+            "median": 4,
+            "values": [
+              4,
+              4,
+              4
+            ],
+            "disagreement": false
+          },
+          "normal_mip": {
+            "median": 4,
+            "values": [
+              4,
+              4,
+              4
+            ],
+            "disagreement": false
+          },
+          "uv_editability": {
+            "median": 3,
+            "values": [
+              3,
+              3,
+              3
+            ],
+            "disagreement": false
+          }
+        },
+        "recommendation": "NEEDS_WORK"
+      },
+      {
+        "id": "sample_C",
+        "status": "AGENT_EVALUATED",
+        "scores": {
+          "appearance": {
+            "median": 4,
+            "values": [
+              4,
+              4,
+              3
+            ],
+            "disagreement": false
+          },
+          "seams": {
+            "median": 4,
+            "values": [
+              4,
+              4,
+              4
+            ],
+            "disagreement": false
+          },
+          "normal_mip": {
+            "median": 4,
+            "values": [
+              4,
+              4,
+              4
+            ],
+            "disagreement": false
+          },
+          "uv_editability": {
+            "median": 3,
+            "values": [
+              3,
+              3,
+              3
+            ],
+            "disagreement": false
+          }
+        },
+        "recommendation": "NEEDS_WORK"
+      },
+      {
+        "id": "sample_D",
+        "status": "AGENT_EVALUATED",
+        "scores": {
+          "appearance": {
+            "median": 4,
+            "values": [
+              4,
+              4,
+              3
+            ],
+            "disagreement": false
+          },
+          "seams": {
+            "median": 4,
+            "values": [
+              4,
+              4,
+              4
+            ],
+            "disagreement": false
+          },
+          "normal_mip": {
+            "median": 4,
+            "values": [
+              4,
+              4,
+              4
+            ],
+            "disagreement": false
+          },
+          "uv_editability": {
+            "median": 3,
+            "values": [
+              3,
+              3,
+              3
+            ],
+            "disagreement": false
+          }
+        },
+        "recommendation": "NEEDS_WORK"
+      }
+    ],
+    "preferences": [
+      {
+        "first": "sample_A",
+        "second": "sample_B",
+        "votes": [
+          "tie",
+          "tie",
+          "tie"
+        ],
+        "majority": "tie"
+      },
+      {
+        "first": "sample_A",
+        "second": "sample_C",
+        "votes": [
+          "tie",
+          "tie",
+          "tie"
+        ],
+        "majority": "tie"
+      },
+      {
+        "first": "sample_A",
+        "second": "sample_D",
+        "votes": [
+          "tie",
+          "tie",
+          "tie"
+        ],
+        "majority": "tie"
+      },
+      {
+        "first": "sample_B",
+        "second": "sample_C",
+        "votes": [
+          "tie",
+          "tie",
+          "tie"
+        ],
+        "majority": "tie"
+      },
+      {
+        "first": "sample_B",
+        "second": "sample_D",
+        "votes": [
+          "tie",
+          "tie",
+          "tie"
+        ],
+        "majority": "tie"
+      },
+      {
+        "first": "sample_C",
+        "second": "sample_D",
+        "votes": [
+          "tie",
+          "tie",
+          "tie"
+        ],
+        "majority": "tie"
+      }
+    ],
+    "human_acceptance": "NOT_REVIEWED",
+    "statistical_note": "Same-model fresh contexts are not independent human experts."
+  },
+  "dragon_seed_29": {
+    "packet_sha256": "e18c46e917f058edfad7992676ec989fd862e6e4d3e5497c9a685e7a20d8f38f",
+    "reviewers": [
+      "dragon_seed_29_judge1_attempt0",
+      "dragon_seed_29_judge2_attempt0",
+      "dragon_seed_29_judge3_attempt0"
+    ],
+    "samples": [
+      {
+        "id": "sample_A",
+        "status": "AGENT_EVALUATED",
+        "scores": {
+          "appearance": {
+            "median": 3,
+            "values": [
+              3,
+              3,
+              4
+            ],
+            "disagreement": false
+          },
+          "seams": {
+            "median": 4,
+            "values": [
+              4,
+              4,
+              4
+            ],
+            "disagreement": false
+          },
+          "normal_mip": {
+            "median": 4,
+            "values": [
+              4,
+              3,
+              4
+            ],
+            "disagreement": false
+          },
+          "uv_editability": {
+            "median": 3,
+            "values": [
+              3,
+              3,
+              3
+            ],
+            "disagreement": false
+          }
+        },
+        "recommendation": "NEEDS_WORK"
+      },
+      {
+        "id": "sample_B",
+        "status": "AGENT_EVALUATED",
+        "scores": {
+          "appearance": {
+            "median": 3,
+            "values": [
+              3,
+              3,
+              4
+            ],
+            "disagreement": false
+          },
+          "seams": {
+            "median": 4,
+            "values": [
+              4,
+              4,
+              4
+            ],
+            "disagreement": false
+          },
+          "normal_mip": {
+            "median": 4,
+            "values": [
+              4,
+              3,
+              4
+            ],
+            "disagreement": false
+          },
+          "uv_editability": {
+            "median": 3,
+            "values": [
+              3,
+              3,
+              3
+            ],
+            "disagreement": false
+          }
+        },
+        "recommendation": "NEEDS_WORK"
+      },
+      {
+        "id": "sample_C",
+        "status": "AGENT_EVALUATED",
+        "scores": {
+          "appearance": {
+            "median": 3,
+            "values": [
+              3,
+              3,
+              4
+            ],
+            "disagreement": false
+          },
+          "seams": {
+            "median": 4,
+            "values": [
+              4,
+              4,
+              4
+            ],
+            "disagreement": false
+          },
+          "normal_mip": {
+            "median": 4,
+            "values": [
+              4,
+              3,
+              4
+            ],
+            "disagreement": false
+          },
+          "uv_editability": {
+            "median": 3,
+            "values": [
+              3,
+              3,
+              3
+            ],
+            "disagreement": false
+          }
+        },
+        "recommendation": "NEEDS_WORK"
+      },
+      {
+        "id": "sample_D",
+        "status": "AGENT_EVALUATED",
+        "scores": {
+          "appearance": {
+            "median": 3,
+            "values": [
+              3,
+              3,
+              4
+            ],
+            "disagreement": false
+          },
+          "seams": {
+            "median": 4,
+            "values": [
+              4,
+              4,
+              4
+            ],
+            "disagreement": false
+          },
+          "normal_mip": {
+            "median": 4,
+            "values": [
+              4,
+              3,
+              4
+            ],
+            "disagreement": false
+          },
+          "uv_editability": {
+            "median": 3,
+            "values": [
+              3,
+              3,
+              3
+            ],
+            "disagreement": false
+          }
+        },
+        "recommendation": "NEEDS_WORK"
+      }
+    ],
+    "preferences": [
+      {
+        "first": "sample_A",
+        "second": "sample_B",
+        "votes": [
+          "tie",
+          "tie",
+          "tie"
+        ],
+        "majority": "tie"
+      },
+      {
+        "first": "sample_A",
+        "second": "sample_C",
+        "votes": [
+          "tie",
+          "tie",
+          "tie"
+        ],
+        "majority": "tie"
+      },
+      {
+        "first": "sample_A",
+        "second": "sample_D",
+        "votes": [
+          "tie",
+          "tie",
+          "tie"
+        ],
+        "majority": "tie"
+      },
+      {
+        "first": "sample_B",
+        "second": "sample_C",
+        "votes": [
+          "tie",
+          "tie",
+          "tie"
+        ],
+        "majority": "tie"
+      },
+      {
+        "first": "sample_B",
+        "second": "sample_D",
+        "votes": [
+          "tie",
+          "tie",
+          "tie"
+        ],
+        "majority": "tie"
+      },
+      {
+        "first": "sample_C",
+        "second": "sample_D",
+        "votes": [
+          "tie",
+          "tie",
+          "tie"
+        ],
+        "majority": "tie"
+      }
+    ],
+    "human_acceptance": "NOT_REVIEWED",
+    "statistical_note": "Same-model fresh contexts are not independent human experts."
+  },
+  "dragon_seed_43": {
+    "packet_sha256": "e18c46e917f058edfad7992676ec989fd862e6e4d3e5497c9a685e7a20d8f38f",
+    "reviewers": [
+      "dragon_seed_43_judge1_attempt0",
+      "dragon_seed_43_judge2_attempt0",
+      "dragon_seed_43_judge3_attempt0"
+    ],
+    "samples": [
+      {
+        "id": "sample_A",
+        "status": "AGENT_EVALUATED",
+        "scores": {
+          "appearance": {
+            "median": 4,
+            "values": [
+              4,
+              3,
+              4
+            ],
+            "disagreement": false
+          },
+          "seams": {
+            "median": 4,
+            "values": [
+              4,
+              4,
+              4
+            ],
+            "disagreement": false
+          },
+          "normal_mip": {
+            "median": 4,
+            "values": [
+              4,
+              4,
+              4
+            ],
+            "disagreement": false
+          },
+          "uv_editability": {
+            "median": 3,
+            "values": [
+              3,
+              3,
+              3
+            ],
+            "disagreement": false
+          }
+        },
+        "recommendation": "NEEDS_WORK"
+      },
+      {
+        "id": "sample_B",
+        "status": "AGENT_EVALUATED",
+        "scores": {
+          "appearance": {
+            "median": 4,
+            "values": [
+              4,
+              3,
+              4
+            ],
+            "disagreement": false
+          },
+          "seams": {
+            "median": 4,
+            "values": [
+              4,
+              4,
+              4
+            ],
+            "disagreement": false
+          },
+          "normal_mip": {
+            "median": 4,
+            "values": [
+              4,
+              4,
+              4
+            ],
+            "disagreement": false
+          },
+          "uv_editability": {
+            "median": 3,
+            "values": [
+              3,
+              3,
+              3
+            ],
+            "disagreement": false
+          }
+        },
+        "recommendation": "NEEDS_WORK"
+      },
+      {
+        "id": "sample_C",
+        "status": "AGENT_EVALUATED",
+        "scores": {
+          "appearance": {
+            "median": 4,
+            "values": [
+              4,
+              3,
+              4
+            ],
+            "disagreement": false
+          },
+          "seams": {
+            "median": 4,
+            "values": [
+              4,
+              4,
+              4
+            ],
+            "disagreement": false
+          },
+          "normal_mip": {
+            "median": 4,
+            "values": [
+              4,
+              4,
+              4
+            ],
+            "disagreement": false
+          },
+          "uv_editability": {
+            "median": 3,
+            "values": [
+              3,
+              3,
+              3
+            ],
+            "disagreement": false
+          }
+        },
+        "recommendation": "NEEDS_WORK"
+      },
+      {
+        "id": "sample_D",
+        "status": "AGENT_EVALUATED",
+        "scores": {
+          "appearance": {
+            "median": 4,
+            "values": [
+              4,
+              3,
+              4
+            ],
+            "disagreement": false
+          },
+          "seams": {
+            "median": 4,
+            "values": [
+              4,
+              4,
+              4
+            ],
+            "disagreement": false
+          },
+          "normal_mip": {
+            "median": 4,
+            "values": [
+              4,
+              4,
+              4
+            ],
+            "disagreement": false
+          },
+          "uv_editability": {
+            "median": 3,
+            "values": [
+              3,
+              3,
+              3
+            ],
+            "disagreement": false
+          }
+        },
+        "recommendation": "NEEDS_WORK"
+      }
+    ],
+    "preferences": [
+      {
+        "first": "sample_A",
+        "second": "sample_B",
+        "votes": [
+          "tie",
+          "tie",
+          "tie"
+        ],
+        "majority": "tie"
+      },
+      {
+        "first": "sample_A",
+        "second": "sample_C",
+        "votes": [
+          "tie",
+          "tie",
+          "tie"
+        ],
+        "majority": "tie"
+      },
+      {
+        "first": "sample_A",
+        "second": "sample_D",
+        "votes": [
+          "tie",
+          "tie",
+          "tie"
+        ],
+        "majority": "tie"
+      },
+      {
+        "first": "sample_B",
+        "second": "sample_C",
+        "votes": [
+          "tie",
+          "tie",
+          "tie"
+        ],
+        "majority": "tie"
+      },
+      {
+        "first": "sample_B",
+        "second": "sample_D",
+        "votes": [
+          "tie",
+          "tie",
+          "tie"
+        ],
+        "majority": "tie"
+      },
+      {
+        "first": "sample_C",
+        "second": "sample_D",
+        "votes": [
+          "tie",
+          "tie",
+          "tie"
+        ],
+        "majority": "tie"
+      }
+    ],
+    "human_acceptance": "NOT_REVIEWED",
+    "statistical_note": "Same-model fresh contexts are not independent human experts."
+  },
+  "energy_blade_seed_17": {
+    "packet_sha256": "de7dce0ec4ad34e8fac7908a7645e8f54a1fc5cfdc075f3cd960a9ab83820ee8",
+    "reviewers": [
+      "energy_blade_seed_17_judge1_attempt1",
+      "energy_blade_seed_17_judge2_attempt1",
+      "energy_blade_seed_17_judge3_attempt0"
+    ],
+    "samples": [
+      {
+        "id": "sample_A",
+        "status": "AGENT_EVALUATED",
+        "scores": {
+          "appearance": {
+            "median": 5,
+            "values": [
+              5,
+              5,
+              5
+            ],
+            "disagreement": false
+          },
+          "seams": {
+            "median": 5,
+            "values": [
+              5,
+              5,
+              5
+            ],
+            "disagreement": false
+          },
+          "normal_mip": {
+            "median": 5,
+            "values": [
+              5,
+              5,
+              4
+            ],
+            "disagreement": false
+          },
+          "uv_editability": {
+            "median": 3,
+            "values": [
+              3,
+              3,
+              3
+            ],
+            "disagreement": false
+          }
+        },
+        "recommendation": "NEEDS_WORK"
+      },
+      {
+        "id": "sample_B",
+        "status": "AGENT_EVALUATED",
+        "scores": {
+          "appearance": {
+            "median": 5,
+            "values": [
+              5,
+              5,
+              5
+            ],
+            "disagreement": false
+          },
+          "seams": {
+            "median": 5,
+            "values": [
+              5,
+              5,
+              5
+            ],
+            "disagreement": false
+          },
+          "normal_mip": {
+            "median": 5,
+            "values": [
+              5,
+              5,
+              4
+            ],
+            "disagreement": false
+          },
+          "uv_editability": {
+            "median": 3,
+            "values": [
+              3,
+              3,
+              3
+            ],
+            "disagreement": false
+          }
+        },
+        "recommendation": "NEEDS_WORK"
+      },
+      {
+        "id": "sample_C",
+        "status": "AGENT_EVALUATED",
+        "scores": {
+          "appearance": {
+            "median": 5,
+            "values": [
+              5,
+              5,
+              5
+            ],
+            "disagreement": false
+          },
+          "seams": {
+            "median": 5,
+            "values": [
+              5,
+              5,
+              5
+            ],
+            "disagreement": false
+          },
+          "normal_mip": {
+            "median": 5,
+            "values": [
+              5,
+              5,
+              4
+            ],
+            "disagreement": false
+          },
+          "uv_editability": {
+            "median": 3,
+            "values": [
+              3,
+              3,
+              3
+            ],
+            "disagreement": false
+          }
+        },
+        "recommendation": "NEEDS_WORK"
+      },
+      {
+        "id": "sample_D",
+        "status": "AGENT_EVALUATED",
+        "scores": {
+          "appearance": {
+            "median": 5,
+            "values": [
+              5,
+              5,
+              5
+            ],
+            "disagreement": false
+          },
+          "seams": {
+            "median": 5,
+            "values": [
+              5,
+              5,
+              5
+            ],
+            "disagreement": false
+          },
+          "normal_mip": {
+            "median": 5,
+            "values": [
+              5,
+              5,
+              4
+            ],
+            "disagreement": false
+          },
+          "uv_editability": {
+            "median": 3,
+            "values": [
+              3,
+              3,
+              3
+            ],
+            "disagreement": false
+          }
+        },
+        "recommendation": "NEEDS_WORK"
+      }
+    ],
+    "preferences": [
+      {
+        "first": "sample_A",
+        "second": "sample_B",
+        "votes": [
+          "tie",
+          "tie",
+          "tie"
+        ],
+        "majority": "tie"
+      },
+      {
+        "first": "sample_A",
+        "second": "sample_C",
+        "votes": [
+          "tie",
+          "tie",
+          "tie"
+        ],
+        "majority": "tie"
+      },
+      {
+        "first": "sample_A",
+        "second": "sample_D",
+        "votes": [
+          "tie",
+          "tie",
+          "tie"
+        ],
+        "majority": "tie"
+      },
+      {
+        "first": "sample_B",
+        "second": "sample_C",
+        "votes": [
+          "tie",
+          "tie",
+          "tie"
+        ],
+        "majority": "tie"
+      },
+      {
+        "first": "sample_B",
+        "second": "sample_D",
+        "votes": [
+          "tie",
+          "tie",
+          "tie"
+        ],
+        "majority": "tie"
+      },
+      {
+        "first": "sample_C",
+        "second": "sample_D",
+        "votes": [
+          "tie",
+          "tie",
+          "tie"
+        ],
+        "majority": "tie"
+      }
+    ],
+    "human_acceptance": "NOT_REVIEWED",
+    "statistical_note": "Same-model fresh contexts are not independent human experts."
+  },
+  "energy_blade_seed_29": {
+    "packet_sha256": "81c73ee647ab324d5c0ce09a8a7986ab2c18b9dc7d076f49b9af38f6a4959998",
+    "reviewers": [
+      "energy_blade_seed_29_judge1_attempt0",
+      "energy_blade_seed_29_judge2_attempt0",
+      "energy_blade_seed_29_judge3_attempt0"
+    ],
+    "samples": [
+      {
+        "id": "sample_A",
+        "status": "AGENT_EVALUATED",
+        "scores": {
+          "appearance": {
+            "median": 5,
+            "values": [
+              5,
+              5,
+              5
+            ],
+            "disagreement": false
+          },
+          "seams": {
+            "median": 5,
+            "values": [
+              5,
+              5,
+              5
+            ],
+            "disagreement": false
+          },
+          "normal_mip": {
+            "median": 5,
+            "values": [
+              5,
+              4,
+              5
+            ],
+            "disagreement": false
+          },
+          "uv_editability": {
+            "median": 3,
+            "values": [
+              3,
+              3,
+              3
+            ],
+            "disagreement": false
+          }
+        },
+        "recommendation": "NEEDS_WORK"
+      },
+      {
+        "id": "sample_B",
+        "status": "AGENT_EVALUATED",
+        "scores": {
+          "appearance": {
+            "median": 5,
+            "values": [
+              5,
+              5,
+              5
+            ],
+            "disagreement": false
+          },
+          "seams": {
+            "median": 5,
+            "values": [
+              5,
+              5,
+              5
+            ],
+            "disagreement": false
+          },
+          "normal_mip": {
+            "median": 5,
+            "values": [
+              5,
+              4,
+              5
+            ],
+            "disagreement": false
+          },
+          "uv_editability": {
+            "median": 3,
+            "values": [
+              3,
+              3,
+              3
+            ],
+            "disagreement": false
+          }
+        },
+        "recommendation": "NEEDS_WORK"
+      },
+      {
+        "id": "sample_C",
+        "status": "AGENT_EVALUATED",
+        "scores": {
+          "appearance": {
+            "median": 5,
+            "values": [
+              5,
+              5,
+              5
+            ],
+            "disagreement": false
+          },
+          "seams": {
+            "median": 5,
+            "values": [
+              5,
+              5,
+              5
+            ],
+            "disagreement": false
+          },
+          "normal_mip": {
+            "median": 5,
+            "values": [
+              5,
+              4,
+              5
+            ],
+            "disagreement": false
+          },
+          "uv_editability": {
+            "median": 3,
+            "values": [
+              3,
+              3,
+              3
+            ],
+            "disagreement": false
+          }
+        },
+        "recommendation": "NEEDS_WORK"
+      },
+      {
+        "id": "sample_D",
+        "status": "AGENT_EVALUATED",
+        "scores": {
+          "appearance": {
+            "median": 5,
+            "values": [
+              5,
+              5,
+              5
+            ],
+            "disagreement": false
+          },
+          "seams": {
+            "median": 5,
+            "values": [
+              5,
+              5,
+              5
+            ],
+            "disagreement": false
+          },
+          "normal_mip": {
+            "median": 5,
+            "values": [
+              5,
+              4,
+              5
+            ],
+            "disagreement": false
+          },
+          "uv_editability": {
+            "median": 3,
+            "values": [
+              3,
+              3,
+              3
+            ],
+            "disagreement": false
+          }
+        },
+        "recommendation": "NEEDS_WORK"
+      }
+    ],
+    "preferences": [
+      {
+        "first": "sample_A",
+        "second": "sample_B",
+        "votes": [
+          "tie",
+          "tie",
+          "tie"
+        ],
+        "majority": "tie"
+      },
+      {
+        "first": "sample_A",
+        "second": "sample_C",
+        "votes": [
+          "tie",
+          "tie",
+          "tie"
+        ],
+        "majority": "tie"
+      },
+      {
+        "first": "sample_A",
+        "second": "sample_D",
+        "votes": [
+          "tie",
+          "tie",
+          "tie"
+        ],
+        "majority": "tie"
+      },
+      {
+        "first": "sample_B",
+        "second": "sample_C",
+        "votes": [
+          "tie",
+          "tie",
+          "tie"
+        ],
+        "majority": "tie"
+      },
+      {
+        "first": "sample_B",
+        "second": "sample_D",
+        "votes": [
+          "tie",
+          "tie",
+          "tie"
+        ],
+        "majority": "tie"
+      },
+      {
+        "first": "sample_C",
+        "second": "sample_D",
+        "votes": [
+          "tie",
+          "tie",
+          "tie"
+        ],
+        "majority": "tie"
+      }
+    ],
+    "human_acceptance": "NOT_REVIEWED",
+    "statistical_note": "Same-model fresh contexts are not independent human experts."
+  },
+  "energy_blade_seed_43": {
+    "packet_sha256": "b1742f22fe999858f97d4394082513a379a07d0b42a51282286c99e9193a3097",
+    "reviewers": [
+      "energy_blade_seed_43_judge1_attempt0",
+      "energy_blade_seed_43_judge2_attempt0",
+      "energy_blade_seed_43_judge3_attempt0"
+    ],
+    "samples": [
+      {
+        "id": "sample_A",
+        "status": "AGENT_EVALUATED",
+        "scores": {
+          "appearance": {
+            "median": 5,
+            "values": [
+              5,
+              5,
+              5
+            ],
+            "disagreement": false
+          },
+          "seams": {
+            "median": 5,
+            "values": [
+              4,
+              5,
+              5
+            ],
+            "disagreement": false
+          },
+          "normal_mip": {
+            "median": 4,
+            "values": [
+              4,
+              5,
+              4
+            ],
+            "disagreement": false
+          },
+          "uv_editability": {
+            "median": 3,
+            "values": [
+              3,
+              3,
+              3
+            ],
+            "disagreement": false
+          }
+        },
+        "recommendation": "NEEDS_WORK"
+      },
+      {
+        "id": "sample_B",
+        "status": "AGENT_EVALUATED",
+        "scores": {
+          "appearance": {
+            "median": 5,
+            "values": [
+              5,
+              5,
+              5
+            ],
+            "disagreement": false
+          },
+          "seams": {
+            "median": 5,
+            "values": [
+              4,
+              5,
+              5
+            ],
+            "disagreement": false
+          },
+          "normal_mip": {
+            "median": 4,
+            "values": [
+              4,
+              5,
+              4
+            ],
+            "disagreement": false
+          },
+          "uv_editability": {
+            "median": 3,
+            "values": [
+              3,
+              3,
+              3
+            ],
+            "disagreement": false
+          }
+        },
+        "recommendation": "NEEDS_WORK"
+      },
+      {
+        "id": "sample_C",
+        "status": "AGENT_EVALUATED",
+        "scores": {
+          "appearance": {
+            "median": 5,
+            "values": [
+              5,
+              5,
+              5
+            ],
+            "disagreement": false
+          },
+          "seams": {
+            "median": 5,
+            "values": [
+              4,
+              5,
+              5
+            ],
+            "disagreement": false
+          },
+          "normal_mip": {
+            "median": 4,
+            "values": [
+              4,
+              5,
+              4
+            ],
+            "disagreement": false
+          },
+          "uv_editability": {
+            "median": 3,
+            "values": [
+              3,
+              3,
+              3
+            ],
+            "disagreement": false
+          }
+        },
+        "recommendation": "NEEDS_WORK"
+      },
+      {
+        "id": "sample_D",
+        "status": "AGENT_EVALUATED",
+        "scores": {
+          "appearance": {
+            "median": 5,
+            "values": [
+              5,
+              5,
+              5
+            ],
+            "disagreement": false
+          },
+          "seams": {
+            "median": 5,
+            "values": [
+              4,
+              5,
+              5
+            ],
+            "disagreement": false
+          },
+          "normal_mip": {
+            "median": 4,
+            "values": [
+              4,
+              5,
+              4
+            ],
+            "disagreement": false
+          },
+          "uv_editability": {
+            "median": 3,
+            "values": [
+              3,
+              3,
+              3
+            ],
+            "disagreement": false
+          }
+        },
+        "recommendation": "NEEDS_WORK"
+      }
+    ],
+    "preferences": [
+      {
+        "first": "sample_A",
+        "second": "sample_B",
+        "votes": [
+          "tie",
+          "tie",
+          "tie"
+        ],
+        "majority": "tie"
+      },
+      {
+        "first": "sample_A",
+        "second": "sample_C",
+        "votes": [
+          "tie",
+          "tie",
+          "tie"
+        ],
+        "majority": "tie"
+      },
+      {
+        "first": "sample_A",
+        "second": "sample_D",
+        "votes": [
+          "tie",
+          "tie",
+          "tie"
+        ],
+        "majority": "tie"
+      },
+      {
+        "first": "sample_B",
+        "second": "sample_C",
+        "votes": [
+          "tie",
+          "tie",
+          "tie"
+        ],
+        "majority": "tie"
+      },
+      {
+        "first": "sample_B",
+        "second": "sample_D",
+        "votes": [
+          "tie",
+          "tie",
+          "tie"
+        ],
+        "majority": "tie"
+      },
+      {
+        "first": "sample_C",
+        "second": "sample_D",
+        "votes": [
+          "tie",
+          "tie",
+          "tie"
+        ],
+        "majority": "tie"
+      }
+    ],
+    "human_acceptance": "NOT_REVIEWED",
+    "statistical_note": "Same-model fresh contexts are not independent human experts."
+  }
+}

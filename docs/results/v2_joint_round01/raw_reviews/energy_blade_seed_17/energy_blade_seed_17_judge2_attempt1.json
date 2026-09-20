@@ -1,0 +1,256 @@
+{
+  "packet_sha256": "de7dce0ec4ad34e8fac7908a7645e8f54a1fc5cfdc075f3cd960a9ab83820ee8",
+  "reviewer_id": "energy_blade_seed_17_judge2_attempt1",
+  "samples": [
+    {
+      "id": "sample_A",
+      "scores": {
+        "appearance": {
+          "score": 5,
+          "evidence": [
+            "evidence_001",
+            "evidence_020"
+          ],
+          "reason": "view_00—05 中红色长刃、棕灰色中心和金色尖刺均保留；对照参考的 view_04、view_05，未见明显的大块错色或轮廓内缺失。仅评价给定视图的代理观察。[opinion]"
+        },
+        "seams": {
+          "score": 5,
+          "evidence": [
+            "evidence_002",
+            "evidence_021"
+          ],
+          "reason": "view_00、view_02 中心连接处以及 view_04、view_05 长刃根部，未见参考之外明显的黑裂缝或纹样跳断；已有的硬色块边界也出现在参考图中。[opinion]"
+        },
+        "normal_mip": {
+          "score": 5,
+          "evidence": [
+            "evidence_003",
+            "evidence_004",
+            "evidence_022"
+          ],
+          "reason": "normal 的 view_02 长刃与 view_04 根部保持连续的分面色带，与参考的硬表面分区相近；mip 的 view_04、view_05 有细节平滑，但未见突出的跨岛漏色或接缝黑边。结论限于提供的静态视图。[opinion]"
+        },
+        "uv_editability": {
+          "score": 3,
+          "evidence": [
+            "evidence_000"
+          ],
+          "reason": "UV 中央斜向长岛连贯，但右侧凹折岛、下部放射状岛方向不统一，底部还有孤立小三角片；若手工绘制与整理，仍需识别细碎区域。只判断可见结构，不推断实际编辑耗时。[opinion]"
+        }
+      },
+      "major_defect": false
+    },
+    {
+      "id": "sample_B",
+      "scores": {
+        "appearance": {
+          "score": 5,
+          "evidence": [
+            "evidence_006",
+            "evidence_020"
+          ],
+          "reason": "view_00—05 中红色长刃、棕灰色中心和金色尖刺均保留；对照参考的 view_04、view_05，未见明显的大块错色或轮廓内缺失。仅评价给定视图的代理观察。[opinion]"
+        },
+        "seams": {
+          "score": 5,
+          "evidence": [
+            "evidence_007",
+            "evidence_021"
+          ],
+          "reason": "view_00、view_02 中心连接处以及 view_04、view_05 长刃根部，未见参考之外明显的黑裂缝或纹样跳断；已有的硬色块边界也出现在参考图中。[opinion]"
+        },
+        "normal_mip": {
+          "score": 5,
+          "evidence": [
+            "evidence_008",
+            "evidence_009",
+            "evidence_022"
+          ],
+          "reason": "normal 的 view_02 长刃与 view_04 根部保持连续的分面色带，与参考的硬表面分区相近；mip 的 view_04、view_05 有细节平滑，但未见突出的跨岛漏色或接缝黑边。结论限于提供的静态视图。[opinion]"
+        },
+        "uv_editability": {
+          "score": 3,
+          "evidence": [
+            "evidence_005"
+          ],
+          "reason": "UV 中央斜向长岛连贯，但右侧凹折岛、下部放射状岛方向不统一，底部还有孤立小三角片；若手工绘制与整理，仍需识别细碎区域。只判断可见结构，不推断实际编辑耗时。[opinion]"
+        }
+      },
+      "major_defect": false
+    },
+    {
+      "id": "sample_C",
+      "scores": {
+        "appearance": {
+          "score": 5,
+          "evidence": [
+            "evidence_011",
+            "evidence_020"
+          ],
+          "reason": "view_00—05 中红色长刃、棕灰色中心和金色尖刺均保留；对照参考的 view_04、view_05，未见明显的大块错色或轮廓内缺失。仅评价给定视图的代理观察。[opinion]"
+        },
+        "seams": {
+          "score": 5,
+          "evidence": [
+            "evidence_012",
+            "evidence_021"
+          ],
+          "reason": "view_00、view_02 中心连接处以及 view_04、view_05 长刃根部，未见参考之外明显的黑裂缝或纹样跳断；已有的硬色块边界也出现在参考图中。[opinion]"
+        },
+        "normal_mip": {
+          "score": 5,
+          "evidence": [
+            "evidence_013",
+            "evidence_014",
+            "evidence_022"
+          ],
+          "reason": "normal 的 view_02 长刃与 view_04 根部保持连续的分面色带，与参考的硬表面分区相近；mip 的 view_04、view_05 有细节平滑，但未见突出的跨岛漏色或接缝黑边。结论限于提供的静态视图。[opinion]"
+        },
+        "uv_editability": {
+          "score": 3,
+          "evidence": [
+            "evidence_010"
+          ],
+          "reason": "UV 左侧长岛连贯，但中心、右侧分支岛和底部细小三角片散落，岛方向不一致；手工绘制与整理仍需识别小片及对应区域。只判断可见结构，不推断实际编辑耗时。[opinion]"
+        }
+      },
+      "major_defect": false
+    },
+    {
+      "id": "sample_D",
+      "scores": {
+        "appearance": {
+          "score": 5,
+          "evidence": [
+            "evidence_016",
+            "evidence_020"
+          ],
+          "reason": "view_00—05 中红色长刃、棕灰色中心和金色尖刺均保留；对照参考的 view_04、view_05，未见明显的大块错色或轮廓内缺失。仅评价给定视图的代理观察。[opinion]"
+        },
+        "seams": {
+          "score": 5,
+          "evidence": [
+            "evidence_017",
+            "evidence_021"
+          ],
+          "reason": "view_00、view_02 中心连接处以及 view_04、view_05 长刃根部，未见参考之外明显的黑裂缝或纹样跳断；已有的硬色块边界也出现在参考图中。[opinion]"
+        },
+        "normal_mip": {
+          "score": 5,
+          "evidence": [
+            "evidence_018",
+            "evidence_019",
+            "evidence_022"
+          ],
+          "reason": "normal 的 view_02 长刃与 view_04 根部保持连续的分面色带，与参考的硬表面分区相近；mip 的 view_04、view_05 有细节平滑，但未见突出的跨岛漏色或接缝黑边。结论限于提供的静态视图。[opinion]"
+        },
+        "uv_editability": {
+          "score": 3,
+          "evidence": [
+            "evidence_015"
+          ],
+          "reason": "UV 左侧长岛连贯，但中心、右侧分支岛和底部细小三角片散落，岛方向不一致；手工绘制与整理仍需识别小片及对应区域。只判断可见结构，不推断实际编辑耗时。[opinion]"
+        }
+      },
+      "major_defect": false
+    }
+  ],
+  "preferences": [
+    {
+      "first": "sample_A",
+      "second": "sample_B",
+      "preference": "tie",
+      "evidence": [
+        "evidence_000",
+        "evidence_005",
+        "evidence_002",
+        "evidence_007",
+        "evidence_003",
+        "evidence_008",
+        "evidence_004",
+        "evidence_009"
+      ],
+      "reason": "双方五类证据在 manifest 中分别具有相同哈希；按许可去重查看。中心接缝、长刃、normal/mip 和 UV 结构相同，没有可见偏好依据。[verified: manifest.json evidence_000—009 sha256]"
+    },
+    {
+      "first": "sample_A",
+      "second": "sample_C",
+      "preference": "tie",
+      "evidence": [
+        "evidence_000",
+        "evidence_010",
+        "evidence_002",
+        "evidence_012",
+        "evidence_003",
+        "evidence_013",
+        "evidence_004",
+        "evidence_014"
+      ],
+      "reason": "双方 view_04、view_05 的长刃根部与中心接缝观感接近，normal 色带和 mip 平滑程度没有明确可见优劣；UV 排列有所差异，但均保留长岛及不规则小岛，仅凭布局不足以选择一方。[opinion]"
+    },
+    {
+      "first": "sample_A",
+      "second": "sample_D",
+      "preference": "tie",
+      "evidence": [
+        "evidence_000",
+        "evidence_015",
+        "evidence_002",
+        "evidence_017",
+        "evidence_003",
+        "evidence_018",
+        "evidence_004",
+        "evidence_019"
+      ],
+      "reason": "双方 view_04、view_05 的长刃根部与中心接缝观感接近，normal 色带和 mip 平滑程度没有明确可见优劣；UV 排列有所差异，但均保留长岛及不规则小岛，仅凭布局不足以选择一方。[opinion]"
+    },
+    {
+      "first": "sample_B",
+      "second": "sample_C",
+      "preference": "tie",
+      "evidence": [
+        "evidence_005",
+        "evidence_010",
+        "evidence_007",
+        "evidence_012",
+        "evidence_008",
+        "evidence_013",
+        "evidence_009",
+        "evidence_014"
+      ],
+      "reason": "双方 view_04、view_05 的长刃根部与中心接缝观感接近，normal 色带和 mip 平滑程度没有明确可见优劣；UV 排列有所差异，但均保留长岛及不规则小岛，仅凭布局不足以选择一方。[opinion]"
+    },
+    {
+      "first": "sample_B",
+      "second": "sample_D",
+      "preference": "tie",
+      "evidence": [
+        "evidence_005",
+        "evidence_015",
+        "evidence_007",
+        "evidence_017",
+        "evidence_008",
+        "evidence_018",
+        "evidence_009",
+        "evidence_019"
+      ],
+      "reason": "双方 view_04、view_05 的长刃根部与中心接缝观感接近，normal 色带和 mip 平滑程度没有明确可见优劣；UV 排列有所差异，但均保留长岛及不规则小岛，仅凭布局不足以选择一方。[opinion]"
+    },
+    {
+      "first": "sample_C",
+      "second": "sample_D",
+      "preference": "tie",
+      "evidence": [
+        "evidence_010",
+        "evidence_015",
+        "evidence_012",
+        "evidence_017",
+        "evidence_013",
+        "evidence_018",
+        "evidence_014",
+        "evidence_019"
+      ],
+      "reason": "双方 view_04、view_05 的长刃根部与中心接缝观感接近，normal 色带和 mip 平滑程度没有明确可见优劣；UV 排列有所差异，但均保留长岛及不规则小岛，仅凭布局不足以选择一方。[opinion]"
+    }
+  ]
+}

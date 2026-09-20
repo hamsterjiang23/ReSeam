@@ -1,0 +1,213 @@
+{
+  "round_id": "v2_reuse_preview_round01",
+  "profile": {
+    "geometry_tolerance": 0.005,
+    "normal_angle_degrees": 15.0,
+    "color_mean_limit": 0.025,
+    "color_p95_limit": 0.08,
+    "anisotropy_ratio_limit": 1.1,
+    "density_ratio_tolerance": 0.1,
+    "minimum_patch_faces": 3
+  },
+  "models": [
+    {
+      "model": "energy_blade",
+      "selected": "mirror_003",
+      "donor_area_fraction": 0.004479567259523691,
+      "rejection_reasons": [
+        "BASE_COLOR_MEAN",
+        "BASE_COLOR_P95"
+      ],
+      "geometry": {
+        "valid": true,
+        "errors": [],
+        "unique_occupancy": 0.4854266365272224,
+        "summed_uv_area": 0.48763854588053757,
+        "reuse_factor": 1.0045566295437336,
+        "freed_unique_area": 0.0022944436080342134,
+        "source_unique_occupancy": 0.4877210801352566,
+        "flipped_faces": 3,
+        "added_seams": 6,
+        "removed_seams": 0,
+        "note": "Negative Jacobians are whitelisted mirror counterparts only, not general flip permission."
+      },
+      "maximum_face_color_mean": 0.09900000449691083,
+      "maximum_face_color_p95": 0.24346985666161183,
+      "maximum_anisotropy_ratio": 1.0365307163301616,
+      "view_mae": [
+        0.0002724894449193151,
+        0.000592570959335787,
+        6.972607240878317e-07,
+        0.0,
+        0.0011462419009049905,
+        0.0
+      ],
+      "artist_approval": "PENDING_HUMAN",
+      "donor_region_views": [
+        {
+          "view": 0,
+          "pixels": 87,
+          "mae": 0.025978514010968373
+        },
+        {
+          "view": 1,
+          "pixels": 174,
+          "mae": 0.029667192547517093
+        },
+        {
+          "view": 2,
+          "pixels": 0,
+          "mae": null
+        },
+        {
+          "view": 3,
+          "pixels": 0,
+          "mae": null
+        },
+        {
+          "view": 4,
+          "pixels": 257,
+          "mae": 0.03910378678060069
+        },
+        {
+          "view": 5,
+          "pixels": 0,
+          "mae": null
+        }
+      ],
+      "visible_region_views": 5
+    },
+    {
+      "model": "dragon",
+      "selected": "mirror_002",
+      "donor_area_fraction": 0.0016029890166253677,
+      "rejection_reasons": [
+        "BASE_COLOR_MEAN",
+        "BASE_COLOR_P95",
+        "STRETCH_INCREASE"
+      ],
+      "geometry": {
+        "valid": true,
+        "errors": [],
+        "unique_occupancy": 0.280456983722394,
+        "summed_uv_area": 0.2809281481599768,
+        "reuse_factor": 1.001679988251065,
+        "freed_unique_area": 0.0004688176076612649,
+        "source_unique_occupancy": 0.2809258013300553,
+        "flipped_faces": 3,
+        "added_seams": 5,
+        "removed_seams": 0,
+        "note": "Negative Jacobians are whitelisted mirror counterparts only, not general flip permission."
+      },
+      "maximum_face_color_mean": 0.12042014647872669,
+      "maximum_face_color_p95": 0.3142997045429465,
+      "maximum_anisotropy_ratio": 1.3251298935953029,
+      "view_mae": [
+        0.0,
+        0.0,
+        0.0005734148420447844,
+        0.0,
+        0.0,
+        0.0008844722683881534
+      ],
+      "artist_approval": "PENDING_HUMAN",
+      "donor_region_views": [
+        {
+          "view": 0,
+          "pixels": 0,
+          "mae": null
+        },
+        {
+          "view": 1,
+          "pixels": 0,
+          "mae": null
+        },
+        {
+          "view": 2,
+          "pixels": 112,
+          "mae": 0.0784547152194211
+        },
+        {
+          "view": 3,
+          "pixels": 0,
+          "mae": null
+        },
+        {
+          "view": 4,
+          "pixels": 0,
+          "mae": null
+        },
+        {
+          "view": 5,
+          "pixels": 78,
+          "mae": 0.06557734204793028
+        }
+      ],
+      "visible_region_views": 3
+    }
+  ],
+  "candidate_counts": {
+    "energy_blade": 4,
+    "dragon": 4
+  },
+  "passed_preview_gate_counts": {
+    "energy_blade": 0,
+    "dragon": 0
+  },
+  "wall_seconds": 47.01499999999942,
+  "code_unchanged": true,
+  "blender_unchanged": true,
+  "inputs_unchanged": true,
+  "overruns": [],
+  "config": {
+    "round_id": "v2_reuse_preview_round01",
+    "models": [
+      "energy_blade",
+      "dragon"
+    ],
+    "seconds_per_model": 300,
+    "inputs": {
+      "energy_blade": {
+        "pack/state.json": "9ef204e4a9ee86cfeab66c4943fe90fbda7a64e85cbf1d3175da08d49c0eeb26",
+        "blender/BaseColor.png": "29cbcc83973b216f43a3965989f0c6000fc36133a9a01aa1ea32b4bff38dba54",
+        "blender/bake.json": "28216ca898c58dbbf2a998780721f394fdc1a5933408af29b05cba1f011017d3"
+      },
+      "dragon": {
+        "pack/state.json": "ed0e20154aa6bf8ca4bb8d6364bea50c2d19831b98c322b6aeaed42c9ed6e7dc",
+        "blender/BaseColor.png": "fc0de9680986a426d52a7dab0908de9e2e250f10af7652791a376b2c354e325c",
+        "blender/bake.json": "1c1ef4491554175889827822900bd36306d0cc7cf5f86754aa0788d7131eaae9"
+      }
+    }
+  },
+  "code_sha256": {
+    "src\\reseam\\__init__.py": "6cc0bb7fe22d1154be9e408d5def0ab9e79c775b92611bf9e7ec037b582a514b",
+    "src\\reseam\\artist_review.py": "d8be6b7a05b3da1a5ce2a838c4489cd0ecea92e00f87e112d2de1812b24d4ffe",
+    "src\\reseam\\audit.py": "f0240da8da77d10e5c217c265dde3d338f36250e4fa5c3e531d66dd285c3695a",
+    "src\\reseam\\backends.py": "fc4dedfc26ce6e973f9671383d983eb093e578890f32020a1d086a899e8546fd",
+    "src\\reseam\\benchmark.py": "ba281df7ce70fa7d969b60cf54ccc9ab97469954eac54fad1d019827e9bc8a1e",
+    "src\\reseam\\candidates.py": "f16b2bdf26532d871d0db0f30bd0eb2d8f002c14fb420f57bde89a246913012c",
+    "src\\reseam\\cli.py": "b3dddb7e13fd8b82489d297b176f226430df14b8cbe19c774cbba8104813b7cb",
+    "src\\reseam\\constraints.py": "0d76283d3c3726036fb82196d9d6507529e5851082661490a435d967329f4a9d",
+    "src\\reseam\\diagnostics.py": "df85bfa1fb7a6f399ebb1342972be2d394a6af40b40e3fef034810b5ba695921",
+    "src\\reseam\\downstream.py": "e4c09b6e8cb5105a2c8d4d903afcb5bd400c555f7a6fef96f74d9629c936a23d",
+    "src\\reseam\\fixed_uv.py": "5b0d5e2d1b231e5816f4b3d9dabbe8188293ecebe84c51f69839d675a4cfb7c0",
+    "src\\reseam\\ground_truth.py": "dc7f37ba0c6b4839135f2ea4a2e130f8511b52e2a9865efbcfabf1812a4c3eea",
+    "src\\reseam\\initialization.py": "2feabd69bcccc278df292a2024f4950e0c7a561ae045988a77224589e705a3a9",
+    "src\\reseam\\mesh.py": "2bf29733f74678c6f9ccffd0ee125df5705b0e7baa8e596db11878e7a16937d8",
+    "src\\reseam\\packing_benchmark.py": "538f0a183c8ecdc2c31f0f60d8833f947bdfb5105265528676fe1b13a2608825",
+    "src\\reseam\\partition.py": "88bf9768b1efafe2d507d8ab4012ae40fc1ac687ad35ad76858f88b4e97ea62e",
+    "src\\reseam\\pipeline.py": "6f7007c4d78aa1b3b5dfb2eb9602a329aba5a078034769ef75ff99552d922b46",
+    "src\\reseam\\report.py": "34d41f9d91c190f662859127ea0acd7915770dfdc6d4b9e2df6d359840e70a21",
+    "src\\reseam\\report_details.py": "7b456c45d4915bf4d4b28a4fc7f1ae033c10aec1f6256e5c0aa57f4cd31bfc2f",
+    "src\\reseam\\reuse_preview.py": "f7dd980831770212be25ac67e4f8f53853eb245c496ddfba89a2b103f00fd9bd",
+    "src\\reseam\\runtime.py": "ea10c609eeea4940bd4ae0529a8367cabd1de795be58406363fc20ace767ac5f",
+    "src\\reseam\\search.py": "58fc45a6434a43e0130cb4c7d8529f96256cbaf41fd22d1185750ee5429e2e77",
+    "src\\reseam\\solver.py": "cd1138562320bd65d7d9d1b77ba347bf6263c593c233ffb4cbb2f36a08a38849",
+    "src\\reseam\\symmetry.py": "4402f5f3c416f40883f642b792ef8cbe22d19a9e1af78e088b3c0c8246922a77",
+    "src\\reseam\\types.py": "f0e82492cbd4a67c61f0d92234d15119a1e615c21698c15d30860182391eeed5",
+    "src\\reseam\\validation.py": "90d91815cf77705b1442104cffdb2a82e0021de82b11f460f8ce42f160c559a8",
+    "scripts\\blender_worker.py": "275d1ce4e4f3cb365c818913c06799d0383c67a4c2bc5b096159f672933e5816",
+    "uv.lock": "66d83b2406fcad21dd4bb61f4a62ba697a58e53dea3c85096a98904180b6fbb0"
+  },
+  "scope": "diagnostic previews, no production reuse approval, no pack/texture carving, no normal validation"
+}

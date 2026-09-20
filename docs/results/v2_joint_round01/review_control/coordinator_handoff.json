@@ -1,0 +1,30 @@
+{
+  "status": "STOPPED_BY_COORDINATOR_INSTRUCTION",
+  "reason": "Root agent requested stopping new dispatch for execution-window reassessment",
+  "active_agents": [],
+  "review_used_seconds": 521.5630000000019,
+  "review_remaining_seconds": 3078.436999999998,
+  "packets": {
+    "dragon_seed_17": "NOT_DISPATCHED",
+    "dragon_seed_29": "NOT_DISPATCHED",
+    "energy_blade_seed_17": {
+      "retries": 0,
+      "valid": 1,
+      "judge3_attempt0": "VALID_IMPORTED",
+      "judge1_attempt0": "MISSING_REVIEW; interrupted after deadline",
+      "judge2_attempt0": "MISSING_REVIEW; interrupted after deadline"
+    },
+    "energy_blade_seed_29": "NOT_DISPATCHED",
+    "energy_blade_seed_43": "NOT_DISPATCHED",
+    "dragon_seed_43": "NOT_DISPATCHED"
+  },
+  "controls": [
+    "energy_blade_seed_17_pair",
+    "energy_blade_seed_17_third"
+  ],
+  "notes": [
+    "energy_blade_seed_17_first expired before any dispatch; does not count as reviewer attempt",
+    "dispatch_recorded_utc records timestamp after dispatch; exact dispatch timestamp unavailable",
+    "No changes to rubric, anonymous images, algorithm code, or imported valid review"
+  ]
+}

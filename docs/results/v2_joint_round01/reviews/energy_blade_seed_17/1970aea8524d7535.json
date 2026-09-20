@@ -1,0 +1,244 @@
+{
+  "packet_sha256": "de7dce0ec4ad34e8fac7908a7645e8f54a1fc5cfdc075f3cd960a9ab83820ee8",
+  "reviewer_id": "energy_blade_seed_17_judge3_attempt0",
+  "samples": [
+    {
+      "id": "sample_A",
+      "scores": {
+        "appearance": {
+          "score": 5,
+          "evidence": [
+            "evidence_001",
+            "evidence_020"
+          ],
+          "reason": "view_00、view_02 的长刃红线及 view_04、view_05 的金色根部与参考一致，给定尺度未见明显新增色块缺失或外观破坏。[verified: 所引 Base Color 图 view_00、view_02、view_04、view_05]"
+        },
+        "seams": {
+          "score": 5,
+          "evidence": [
+            "evidence_002",
+            "evidence_021"
+          ],
+          "reason": "center crop 的 view_00、view_02 长刃与中心连接处以及 view_04、view_05 红金交界延续参考外观，未见明显新增裂缝或黑线；仅评价可见局部。[verified: 所引 seam_crop 图对应 view]"
+        },
+        "normal_mip": {
+          "score": 5,
+          "evidence": [
+            "evidence_003",
+            "evidence_004",
+            "evidence_022"
+          ],
+          "reason": "normal 的 view_04、view_05 主刃色带及中心放射面与参考一致；mip 的 view_00、view_02 长刃红线和 view_05 金色中心仍可辨，未见明显异色渗入或大面积黑斑。[verified: 所引 normal 与 mip 图对应 view]"
+        },
+        "uv_editability": {
+          "score": 3,
+          "evidence": [
+            "evidence_000"
+          ],
+          "reason": "UV 图中央长条主岛连续，但右中和下方的枝状岛有深凹口，底边还有分离的小三角片，手工识别与整理仍需修整。[opinion]"
+        }
+      },
+      "major_defect": false
+    },
+    {
+      "id": "sample_B",
+      "scores": {
+        "appearance": {
+          "score": 5,
+          "evidence": [
+            "evidence_006",
+            "evidence_020"
+          ],
+          "reason": "view_00、view_02 的长刃红线及 view_04、view_05 的金色根部与参考一致，给定尺度未见明显新增色块缺失或外观破坏。[verified: 所引 Base Color 图 view_00、view_02、view_04、view_05]"
+        },
+        "seams": {
+          "score": 5,
+          "evidence": [
+            "evidence_007",
+            "evidence_021"
+          ],
+          "reason": "center crop 的 view_00、view_02 长刃与中心连接处以及 view_04、view_05 红金交界延续参考外观，未见明显新增裂缝或黑线；仅评价可见局部。[verified: 所引 seam_crop 图对应 view]"
+        },
+        "normal_mip": {
+          "score": 5,
+          "evidence": [
+            "evidence_008",
+            "evidence_009",
+            "evidence_022"
+          ],
+          "reason": "normal 的 view_04、view_05 主刃色带及中心放射面与参考一致；mip 的 view_00、view_02 长刃红线和 view_05 金色中心仍可辨，未见明显异色渗入或大面积黑斑。[verified: 所引 normal 与 mip 图对应 view]"
+        },
+        "uv_editability": {
+          "score": 3,
+          "evidence": [
+            "evidence_005"
+          ],
+          "reason": "UV 图中央长条主岛连续，但右中和下方的枝状岛有深凹口，底边还有分离的小三角片，手工识别与整理仍需修整；依 manifest 同哈希使用 sample_A 图像观察。[opinion]"
+        }
+      },
+      "major_defect": false
+    },
+    {
+      "id": "sample_C",
+      "scores": {
+        "appearance": {
+          "score": 5,
+          "evidence": [
+            "evidence_011",
+            "evidence_020"
+          ],
+          "reason": "view_00、view_02 的长刃红线及 view_04、view_05 的金色根部与参考一致，给定尺度未见明显新增色块缺失或外观破坏。[verified: 所引 Base Color 图 view_00、view_02、view_04、view_05]"
+        },
+        "seams": {
+          "score": 5,
+          "evidence": [
+            "evidence_012",
+            "evidence_021"
+          ],
+          "reason": "center crop 的 view_00、view_02 长刃与中心连接处以及 view_04、view_05 红金交界延续参考外观，未见明显新增裂缝或黑线；仅评价可见局部。[verified: 所引 seam_crop 图对应 view]"
+        },
+        "normal_mip": {
+          "score": 5,
+          "evidence": [
+            "evidence_013",
+            "evidence_014",
+            "evidence_022"
+          ],
+          "reason": "normal 的 view_04、view_05 主刃色带及中心放射面与参考一致；mip 的 view_00、view_02 长刃红线和 view_05 金色中心仍可辨，未见明显异色渗入或大面积黑斑。[verified: 所引 normal 与 mip 图对应 view]"
+        },
+        "uv_editability": {
+          "score": 3,
+          "evidence": [
+            "evidence_010"
+          ],
+          "reason": "UV 图左侧长条主岛连续，中央和右侧岛分界可辨；左侧及底部仍有孤立小三角片，多处狭长尖角和凹口需要整理。[opinion]"
+        }
+      },
+      "major_defect": false
+    },
+    {
+      "id": "sample_D",
+      "scores": {
+        "appearance": {
+          "score": 5,
+          "evidence": [
+            "evidence_016",
+            "evidence_020"
+          ],
+          "reason": "view_00、view_02 的长刃红线及 view_04、view_05 的金色根部与参考一致，给定尺度未见明显新增色块缺失或外观破坏。[verified: 所引 Base Color 图 view_00、view_02、view_04、view_05]"
+        },
+        "seams": {
+          "score": 5,
+          "evidence": [
+            "evidence_017",
+            "evidence_021"
+          ],
+          "reason": "center crop 的 view_00、view_02 长刃与中心连接处以及 view_04、view_05 红金交界延续参考外观，未见明显新增裂缝或黑线；仅评价可见局部。[verified: 所引 seam_crop 图对应 view]"
+        },
+        "normal_mip": {
+          "score": 5,
+          "evidence": [
+            "evidence_018",
+            "evidence_019",
+            "evidence_022"
+          ],
+          "reason": "normal 的 view_04、view_05 主刃色带及中心放射面与参考一致；mip 的 view_00、view_02 长刃红线和 view_05 金色中心仍可辨，未见明显异色渗入或大面积黑斑。[verified: 所引 normal 与 mip 图对应 view]"
+        },
+        "uv_editability": {
+          "score": 3,
+          "evidence": [
+            "evidence_015"
+          ],
+          "reason": "UV 图左侧长条主岛连续，右中和右下的多分支岛结构可辨；左侧及底部存在孤立小三角片和细长尖角，仍需整理。[opinion]"
+        }
+      },
+      "major_defect": false
+    }
+  ],
+  "preferences": [
+    {
+      "first": "sample_A",
+      "second": "sample_B",
+      "preference": "tie",
+      "evidence": [
+        "evidence_000",
+        "evidence_005",
+        "evidence_002",
+        "evidence_007",
+        "evidence_004",
+        "evidence_009"
+      ],
+      "reason": "双方同类证据在 manifest 中哈希一致；UV 结构、center crop 各 view 与 mip 可见内容相同，代理观察判平。[verified: manifest evidence_000 至 evidence_009 的 sha256]"
+    },
+    {
+      "first": "sample_A",
+      "second": "sample_C",
+      "preference": "tie",
+      "evidence": [
+        "evidence_000",
+        "evidence_010",
+        "evidence_002",
+        "evidence_012",
+        "evidence_004",
+        "evidence_014"
+      ],
+      "reason": "双方 center crop 的 view_00、view_02 长刃及 view_04、view_05 中心区域均接近参考，mip 未见足以区分的缺陷；UV 排列不同但均有尖角、凹口和小片，仅凭这些图无法建立可靠整体优势，代理偏好判平。[opinion]"
+    },
+    {
+      "first": "sample_A",
+      "second": "sample_D",
+      "preference": "tie",
+      "evidence": [
+        "evidence_000",
+        "evidence_015",
+        "evidence_002",
+        "evidence_017",
+        "evidence_004",
+        "evidence_019"
+      ],
+      "reason": "双方 center crop 的 view_00、view_02 长刃及 view_04、view_05 中心区域均接近参考，mip 未见足以区分的缺陷；UV 排列不同但均有尖角、凹口和小片，仅凭这些图无法建立可靠整体优势，代理偏好判平。[opinion]"
+    },
+    {
+      "first": "sample_B",
+      "second": "sample_C",
+      "preference": "tie",
+      "evidence": [
+        "evidence_005",
+        "evidence_010",
+        "evidence_007",
+        "evidence_012",
+        "evidence_009",
+        "evidence_014"
+      ],
+      "reason": "双方 center crop 的 view_00、view_02 长刃及 view_04、view_05 中心区域均接近参考，mip 未见足以区分的缺陷；UV 排列不同但均有尖角、凹口和小片，仅凭这些图无法建立可靠整体优势，代理偏好判平。[opinion]"
+    },
+    {
+      "first": "sample_B",
+      "second": "sample_D",
+      "preference": "tie",
+      "evidence": [
+        "evidence_005",
+        "evidence_015",
+        "evidence_007",
+        "evidence_017",
+        "evidence_009",
+        "evidence_019"
+      ],
+      "reason": "双方 center crop 的 view_00、view_02 长刃及 view_04、view_05 中心区域均接近参考，mip 未见足以区分的缺陷；UV 排列不同但均有尖角、凹口和小片，仅凭这些图无法建立可靠整体优势，代理偏好判平。[opinion]"
+    },
+    {
+      "first": "sample_C",
+      "second": "sample_D",
+      "preference": "tie",
+      "evidence": [
+        "evidence_010",
+        "evidence_015",
+        "evidence_012",
+        "evidence_017",
+        "evidence_014",
+        "evidence_019"
+      ],
+      "reason": "双方 center crop 的 view_00、view_02 长刃及 view_04、view_05 中心区域均接近参考，mip 未见足以区分的缺陷；UV 排列不同但均有尖角、凹口和小片，仅凭这些图无法建立可靠整体优势，代理偏好判平。[opinion]"
+    }
+  ]
+}

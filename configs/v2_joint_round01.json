@@ -1,0 +1,17 @@
+{
+  "round_id": "v2_joint_round01",
+  "models": ["energy_blade", "dragon"],
+  "seeds": [17, 29, 43],
+  "tracks": ["packing_only", "seam_pack", "reuse_pack", "joint"],
+  "run_seconds": 300,
+  "candidate_seconds": 30,
+  "downstream_seconds": 270,
+  "initialization": "fresh_original_optcuts_deterministic_repeat",
+  "candidate_policy": "round_robin_enabled_types_then_packing",
+  "pair_initialization": "planar_continuous_patches_max64_source_faces_normal_cone25_target30",
+  "density_penalty": 10,
+  "pair_solve_seconds": 8,
+  "pair_coupling_weights": [1, 10, 100],
+  "review": {"fresh_contexts_per_packet": 3, "minimum_valid": 2, "retry_limit": 1, "seconds_per_reviewer": 180},
+  "human_acceptance": "NOT_REVIEWED"
+}

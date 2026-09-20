@@ -1,0 +1,276 @@
+{
+  "packet_sha256": "e18c46e917f058edfad7992676ec989fd862e6e4d3e5497c9a685e7a20d8f38f",
+  "reviewer_id": "dragon_seed_17_judge1_attempt0",
+  "samples": [
+    {
+      "id": "sample_A",
+      "scores": {
+        "appearance": {
+          "score": 3,
+          "evidence": [
+            "evidence_001",
+            "evidence_020",
+            "evidence_002",
+            "evidence_021"
+          ],
+          "reason": "view_00及view_02中央金色纹样和粉蓝翼膜整体保留；view_00右翼下缘与view_03左翼末端相比参考图更圆钝，缺口和细齿减少，需修整。图像不足以把轮廓差异归因于UV。`[opinion]`"
+        },
+        "seams": {
+          "score": 4,
+          "evidence": [
+            "evidence_002",
+            "evidence_021"
+          ],
+          "reason": "接缝局部view_00胸甲至翼根、view_02横向翼膜的主要颜色纹理可连续追踪，未见明显贯穿色带；view_04与view_05狭窄侧面细节拥挤，细缝仍难判断。`[opinion]`"
+        },
+        "normal_mip": {
+          "score": 4,
+          "evidence": [
+            "evidence_003",
+            "evidence_004",
+            "evidence_022"
+          ],
+          "reason": "normal图view_00及view_02翼面大范围颜色过渡与参考相近，未见明显反向色块；mip图view_00胸甲纹样明显软化，view_04薄翼边缘仍保留，未见大块串色；当前分辨率不能排除细微缺陷。`[opinion]`"
+        },
+        "uv_editability": {
+          "score": 3,
+          "evidence": [
+            "evidence_000"
+          ],
+          "reason": "UV图左上、右侧和左下有较大的连续结构，但边界尖细、支叉多；底边和左下角仍有极小孤立片，长尖条与不规则凹口增加选择和局部绘制整理负担。仅评价可见结构。`[opinion]`"
+        }
+      },
+      "major_defect": false
+    },
+    {
+      "id": "sample_B",
+      "scores": {
+        "appearance": {
+          "score": 3,
+          "evidence": [
+            "evidence_006",
+            "evidence_020",
+            "evidence_007",
+            "evidence_021"
+          ],
+          "reason": "view_00及view_02中央金色纹样和粉蓝翼膜整体保留；view_00右翼下缘与view_03左翼末端相比参考图更圆钝，缺口和细齿减少，需修整。图像不足以把轮廓差异归因于UV。`[opinion]`"
+        },
+        "seams": {
+          "score": 4,
+          "evidence": [
+            "evidence_007",
+            "evidence_021"
+          ],
+          "reason": "接缝局部view_00胸甲至翼根、view_02横向翼膜的主要颜色纹理可连续追踪，未见明显贯穿色带；view_04与view_05狭窄侧面细节拥挤，细缝仍难判断。`[opinion]`"
+        },
+        "normal_mip": {
+          "score": 4,
+          "evidence": [
+            "evidence_008",
+            "evidence_009",
+            "evidence_022"
+          ],
+          "reason": "normal图view_00及view_02翼面大范围颜色过渡与参考相近，未见明显反向色块；mip图view_00胸甲纹样明显软化，view_04薄翼边缘仍保留，未见大块串色；当前分辨率不能排除细微缺陷。`[opinion]`"
+        },
+        "uv_editability": {
+          "score": 3,
+          "evidence": [
+            "evidence_005"
+          ],
+          "reason": "UV图左上、右侧和左下有较大的连续结构，但边界尖细、支叉多；底边和左下角仍有极小孤立片，长尖条与不规则凹口增加选择和局部绘制整理负担。仅评价可见结构。`[opinion]`"
+        }
+      },
+      "major_defect": false
+    },
+    {
+      "id": "sample_C",
+      "scores": {
+        "appearance": {
+          "score": 3,
+          "evidence": [
+            "evidence_011",
+            "evidence_020",
+            "evidence_012",
+            "evidence_021"
+          ],
+          "reason": "view_00及view_02中央金色纹样和粉蓝翼膜整体保留；view_00右翼下缘与view_03左翼末端相比参考图更圆钝，缺口和细齿减少，需修整。图像不足以把轮廓差异归因于UV。`[opinion]`"
+        },
+        "seams": {
+          "score": 4,
+          "evidence": [
+            "evidence_012",
+            "evidence_021"
+          ],
+          "reason": "接缝局部view_00胸甲至翼根、view_02横向翼膜的主要颜色纹理可连续追踪，未见明显贯穿色带；view_04与view_05狭窄侧面细节拥挤，细缝仍难判断。`[opinion]`"
+        },
+        "normal_mip": {
+          "score": 4,
+          "evidence": [
+            "evidence_013",
+            "evidence_014",
+            "evidence_022"
+          ],
+          "reason": "normal图view_00及view_02翼面大范围颜色过渡与参考相近，未见明显反向色块；mip图view_00胸甲纹样明显软化，view_04薄翼边缘仍保留，未见大块串色；当前分辨率不能排除细微缺陷。`[opinion]`"
+        },
+        "uv_editability": {
+          "score": 3,
+          "evidence": [
+            "evidence_010"
+          ],
+          "reason": "UV图左上、右侧和左下有较大的连续结构，但边界尖细、支叉多；底边和左下角仍有极小孤立片，长尖条与不规则凹口增加选择和局部绘制整理负担。仅评价可见结构。`[opinion]`"
+        }
+      },
+      "major_defect": false
+    },
+    {
+      "id": "sample_D",
+      "scores": {
+        "appearance": {
+          "score": 3,
+          "evidence": [
+            "evidence_016",
+            "evidence_020",
+            "evidence_017",
+            "evidence_021"
+          ],
+          "reason": "view_00及view_02中央金色纹样和粉蓝翼膜整体保留；view_00右翼下缘与view_03左翼末端相比参考图更圆钝，缺口和细齿减少，需修整。图像不足以把轮廓差异归因于UV。`[opinion]`"
+        },
+        "seams": {
+          "score": 4,
+          "evidence": [
+            "evidence_017",
+            "evidence_021"
+          ],
+          "reason": "接缝局部view_00胸甲至翼根、view_02横向翼膜的主要颜色纹理可连续追踪，未见明显贯穿色带；view_04与view_05狭窄侧面细节拥挤，细缝仍难判断。`[opinion]`"
+        },
+        "normal_mip": {
+          "score": 4,
+          "evidence": [
+            "evidence_018",
+            "evidence_019",
+            "evidence_022"
+          ],
+          "reason": "normal图view_00及view_02翼面大范围颜色过渡与参考相近，未见明显反向色块；mip图view_00胸甲纹样明显软化，view_04薄翼边缘仍保留，未见大块串色；当前分辨率不能排除细微缺陷。`[opinion]`"
+        },
+        "uv_editability": {
+          "score": 3,
+          "evidence": [
+            "evidence_015"
+          ],
+          "reason": "UV图左上、右侧和左下有较大的连续结构，但边界尖细、支叉多；底边和左下角仍有极小孤立片，长尖条与不规则凹口增加选择和局部绘制整理负担。仅评价可见结构。`[opinion]`"
+        }
+      },
+      "major_defect": false
+    }
+  ],
+  "preferences": [
+    {
+      "first": "sample_A",
+      "second": "sample_B",
+      "preference": "tie",
+      "evidence": [
+        "evidence_000",
+        "evidence_005",
+        "evidence_001",
+        "evidence_006",
+        "evidence_002",
+        "evidence_007",
+        "evidence_003",
+        "evidence_008",
+        "evidence_004",
+        "evidence_009"
+      ],
+      "reason": "双方同类图像在manifest中哈希全部相同，按许可去重查看；view_00至view_05外观、接缝局部、normal、mip及UV可见结构没有可用于区分偏好的证据。`[verified: manifest.json evidence条目sha256]`"
+    },
+    {
+      "first": "sample_A",
+      "second": "sample_C",
+      "preference": "tie",
+      "evidence": [
+        "evidence_000",
+        "evidence_010",
+        "evidence_001",
+        "evidence_011",
+        "evidence_002",
+        "evidence_012",
+        "evidence_003",
+        "evidence_013",
+        "evidence_004",
+        "evidence_014"
+      ],
+      "reason": "双方同类图像在manifest中哈希全部相同，按许可去重查看；view_00至view_05外观、接缝局部、normal、mip及UV可见结构没有可用于区分偏好的证据。`[verified: manifest.json evidence条目sha256]`"
+    },
+    {
+      "first": "sample_A",
+      "second": "sample_D",
+      "preference": "tie",
+      "evidence": [
+        "evidence_000",
+        "evidence_015",
+        "evidence_001",
+        "evidence_016",
+        "evidence_002",
+        "evidence_017",
+        "evidence_003",
+        "evidence_018",
+        "evidence_004",
+        "evidence_019"
+      ],
+      "reason": "双方同类图像在manifest中哈希全部相同，按许可去重查看；view_00至view_05外观、接缝局部、normal、mip及UV可见结构没有可用于区分偏好的证据。`[verified: manifest.json evidence条目sha256]`"
+    },
+    {
+      "first": "sample_B",
+      "second": "sample_C",
+      "preference": "tie",
+      "evidence": [
+        "evidence_005",
+        "evidence_010",
+        "evidence_006",
+        "evidence_011",
+        "evidence_007",
+        "evidence_012",
+        "evidence_008",
+        "evidence_013",
+        "evidence_009",
+        "evidence_014"
+      ],
+      "reason": "双方同类图像在manifest中哈希全部相同，按许可去重查看；view_00至view_05外观、接缝局部、normal、mip及UV可见结构没有可用于区分偏好的证据。`[verified: manifest.json evidence条目sha256]`"
+    },
+    {
+      "first": "sample_B",
+      "second": "sample_D",
+      "preference": "tie",
+      "evidence": [
+        "evidence_005",
+        "evidence_015",
+        "evidence_006",
+        "evidence_016",
+        "evidence_007",
+        "evidence_017",
+        "evidence_008",
+        "evidence_018",
+        "evidence_009",
+        "evidence_019"
+      ],
+      "reason": "双方同类图像在manifest中哈希全部相同，按许可去重查看；view_00至view_05外观、接缝局部、normal、mip及UV可见结构没有可用于区分偏好的证据。`[verified: manifest.json evidence条目sha256]`"
+    },
+    {
+      "first": "sample_C",
+      "second": "sample_D",
+      "preference": "tie",
+      "evidence": [
+        "evidence_010",
+        "evidence_015",
+        "evidence_011",
+        "evidence_016",
+        "evidence_012",
+        "evidence_017",
+        "evidence_013",
+        "evidence_018",
+        "evidence_014",
+        "evidence_019"
+      ],
+      "reason": "双方同类图像在manifest中哈希全部相同，按许可去重查看；view_00至view_05外观、接缝局部、normal、mip及UV可见结构没有可用于区分偏好的证据。`[verified: manifest.json evidence条目sha256]`"
+    }
+  ]
+}

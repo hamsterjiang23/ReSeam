@@ -1,0 +1,38 @@
+{
+  "energy_blade_seed_17": {
+    "sample_A": "packing_only",
+    "sample_B": "reuse_pack",
+    "sample_C": "seam_pack",
+    "sample_D": "joint"
+  },
+  "energy_blade_seed_29": {
+    "sample_A": "joint",
+    "sample_B": "reuse_pack",
+    "sample_C": "packing_only",
+    "sample_D": "seam_pack"
+  },
+  "energy_blade_seed_43": {
+    "sample_A": "seam_pack",
+    "sample_B": "reuse_pack",
+    "sample_C": "packing_only",
+    "sample_D": "joint"
+  },
+  "dragon_seed_17": {
+    "sample_A": "packing_only",
+    "sample_B": "reuse_pack",
+    "sample_C": "seam_pack",
+    "sample_D": "joint"
+  },
+  "dragon_seed_29": {
+    "sample_A": "joint",
+    "sample_B": "reuse_pack",
+    "sample_C": "packing_only",
+    "sample_D": "seam_pack"
+  },
+  "dragon_seed_43": {
+    "sample_A": "seam_pack",
+    "sample_B": "reuse_pack",
+    "sample_C": "packing_only",
+    "sample_D": "joint"
+  }
+}

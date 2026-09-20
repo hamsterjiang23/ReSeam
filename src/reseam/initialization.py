@@ -1,5 +1,8 @@
 """Convex-boundary positive-weight initialization for disk charts."""
 
+from collections.abc import Callable
+from typing import Any
+
 import numpy as np
 from scipy.sparse import lil_matrix
 from scipy.sparse.linalg import spsolve
@@ -14,6 +17,7 @@ def initialize(
     seams: frozenset[int],
     inherited: MeshState | None = None,
     affected_faces: frozenset[int] | None = None,
+    quality_check: Callable[[MeshState], dict[str, Any]] | None = None,
 ) -> MeshState:
     mapping = corner_map(mesh, seams)
     state = MeshState(mesh, seams, np.zeros((int(mapping.max()) + 1, 2)), mapping)
@@ -96,7 +100,8 @@ def initialize(
         ) ** 0.25
         center = state.uv[vertices].mean(axis=0)
         state.uv[vertices] = (state.uv[vertices] - center) * scale + center
-    if not validate(state, tau=None)["valid"]:
+    quality = quality_check(state) if quality_check else validate(state, tau=None)
+    if not quality["valid"]:
         raise ValueError("Initialization failed injectivity checks")
     return state
 

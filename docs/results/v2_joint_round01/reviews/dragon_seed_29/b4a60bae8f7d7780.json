@@ -1,0 +1,276 @@
+{
+  "packet_sha256": "e18c46e917f058edfad7992676ec989fd862e6e4d3e5497c9a685e7a20d8f38f",
+  "reviewer_id": "dragon_seed_29_judge1_attempt0",
+  "samples": [
+    {
+      "id": "sample_A",
+      "scores": {
+        "appearance": {
+          "score": 3,
+          "evidence": [
+            "evidence_001",
+            "evidence_020",
+            "evidence_002",
+            "evidence_021"
+          ],
+          "reason": "view_00/02 翼膜下缘比参考更钝厚，view_01 翼根孔洞及膜边有轮廓差异；胸前金纹与主体红紫配色仍清楚。[verified: 对应 base 与 seam_crop 图的 view_00/01/02] 可见外观需修整，图像不能归因到具体工序。[opinion]"
+        },
+        "seams": {
+          "score": 4,
+          "evidence": [
+            "evidence_002",
+            "evidence_021"
+          ],
+          "reason": "view_00/02 胸前金纹与翼根未见贯穿色彩的明显直线断缝；view_04/05 狭窄翼膜边缘有斑驳与锯齿，难与参考轮廓差异分离。[verified: 对应 seam_crop 图的 view_00/02/04/05] 接近可用，但局部边缘仍需检查。[opinion]"
+        },
+        "normal_mip": {
+          "score": 4,
+          "evidence": [
+            "evidence_003",
+            "evidence_004",
+            "evidence_022"
+          ],
+          "reason": "normal 的 view_00/02 翼面和胸部颜色走势与参考接近，未见大块反向色斑；mip 的 view_00/02 金纹显著变模糊，view_04/05 翼尖仍保留主要颜色，未见明显异色渗出。[verified: 对应 normal、mip 及 evidence_022 的列明 view] 给定视图接近可用，不能据此判定所有 mip 层级安全。[opinion]"
+        },
+        "uv_editability": {
+          "score": 3,
+          "evidence": [
+            "evidence_000"
+          ],
+          "reason": "图集中央至右上的大岛轮廓曲折，含细长尖端；左下及底边存在小碎片与长细条，上方另有较大分离岛。[verified: 对应 uv 图的中央、左下与底边区域] 可见结构不利于按区域直接选择和调整，需整理；未实施编辑，不评价实际用时。[opinion]"
+        }
+      },
+      "major_defect": false
+    },
+    {
+      "id": "sample_B",
+      "scores": {
+        "appearance": {
+          "score": 3,
+          "evidence": [
+            "evidence_006",
+            "evidence_020",
+            "evidence_007",
+            "evidence_021"
+          ],
+          "reason": "view_00/02 翼膜下缘比参考更钝厚，view_01 翼根孔洞及膜边有轮廓差异；胸前金纹与主体红紫配色仍清楚。[verified: 对应 base 与 seam_crop 图的 view_00/01/02] 可见外观需修整，图像不能归因到具体工序。[opinion]"
+        },
+        "seams": {
+          "score": 4,
+          "evidence": [
+            "evidence_007",
+            "evidence_021"
+          ],
+          "reason": "view_00/02 胸前金纹与翼根未见贯穿色彩的明显直线断缝；view_04/05 狭窄翼膜边缘有斑驳与锯齿，难与参考轮廓差异分离。[verified: 对应 seam_crop 图的 view_00/02/04/05] 接近可用，但局部边缘仍需检查。[opinion]"
+        },
+        "normal_mip": {
+          "score": 4,
+          "evidence": [
+            "evidence_008",
+            "evidence_009",
+            "evidence_022"
+          ],
+          "reason": "normal 的 view_00/02 翼面和胸部颜色走势与参考接近，未见大块反向色斑；mip 的 view_00/02 金纹显著变模糊，view_04/05 翼尖仍保留主要颜色，未见明显异色渗出。[verified: 对应 normal、mip 及 evidence_022 的列明 view] 给定视图接近可用，不能据此判定所有 mip 层级安全。[opinion]"
+        },
+        "uv_editability": {
+          "score": 3,
+          "evidence": [
+            "evidence_005"
+          ],
+          "reason": "图集中央至右上的大岛轮廓曲折，含细长尖端；左下及底边存在小碎片与长细条，上方另有较大分离岛。[verified: 对应 uv 图的中央、左下与底边区域] 可见结构不利于按区域直接选择和调整，需整理；未实施编辑，不评价实际用时。[opinion]"
+        }
+      },
+      "major_defect": false
+    },
+    {
+      "id": "sample_C",
+      "scores": {
+        "appearance": {
+          "score": 3,
+          "evidence": [
+            "evidence_011",
+            "evidence_020",
+            "evidence_012",
+            "evidence_021"
+          ],
+          "reason": "view_00/02 翼膜下缘比参考更钝厚，view_01 翼根孔洞及膜边有轮廓差异；胸前金纹与主体红紫配色仍清楚。[verified: 对应 base 与 seam_crop 图的 view_00/01/02] 可见外观需修整，图像不能归因到具体工序。[opinion]"
+        },
+        "seams": {
+          "score": 4,
+          "evidence": [
+            "evidence_012",
+            "evidence_021"
+          ],
+          "reason": "view_00/02 胸前金纹与翼根未见贯穿色彩的明显直线断缝；view_04/05 狭窄翼膜边缘有斑驳与锯齿，难与参考轮廓差异分离。[verified: 对应 seam_crop 图的 view_00/02/04/05] 接近可用，但局部边缘仍需检查。[opinion]"
+        },
+        "normal_mip": {
+          "score": 4,
+          "evidence": [
+            "evidence_013",
+            "evidence_014",
+            "evidence_022"
+          ],
+          "reason": "normal 的 view_00/02 翼面和胸部颜色走势与参考接近，未见大块反向色斑；mip 的 view_00/02 金纹显著变模糊，view_04/05 翼尖仍保留主要颜色，未见明显异色渗出。[verified: 对应 normal、mip 及 evidence_022 的列明 view] 给定视图接近可用，不能据此判定所有 mip 层级安全。[opinion]"
+        },
+        "uv_editability": {
+          "score": 3,
+          "evidence": [
+            "evidence_010"
+          ],
+          "reason": "图集中央至右上的大岛轮廓曲折，含细长尖端；左下及底边存在小碎片与长细条，上方另有较大分离岛。[verified: 对应 uv 图的中央、左下与底边区域] 可见结构不利于按区域直接选择和调整，需整理；未实施编辑，不评价实际用时。[opinion]"
+        }
+      },
+      "major_defect": false
+    },
+    {
+      "id": "sample_D",
+      "scores": {
+        "appearance": {
+          "score": 3,
+          "evidence": [
+            "evidence_016",
+            "evidence_020",
+            "evidence_017",
+            "evidence_021"
+          ],
+          "reason": "view_00/02 翼膜下缘比参考更钝厚，view_01 翼根孔洞及膜边有轮廓差异；胸前金纹与主体红紫配色仍清楚。[verified: 对应 base 与 seam_crop 图的 view_00/01/02] 可见外观需修整，图像不能归因到具体工序。[opinion]"
+        },
+        "seams": {
+          "score": 4,
+          "evidence": [
+            "evidence_017",
+            "evidence_021"
+          ],
+          "reason": "view_00/02 胸前金纹与翼根未见贯穿色彩的明显直线断缝；view_04/05 狭窄翼膜边缘有斑驳与锯齿，难与参考轮廓差异分离。[verified: 对应 seam_crop 图的 view_00/02/04/05] 接近可用，但局部边缘仍需检查。[opinion]"
+        },
+        "normal_mip": {
+          "score": 4,
+          "evidence": [
+            "evidence_018",
+            "evidence_019",
+            "evidence_022"
+          ],
+          "reason": "normal 的 view_00/02 翼面和胸部颜色走势与参考接近，未见大块反向色斑；mip 的 view_00/02 金纹显著变模糊，view_04/05 翼尖仍保留主要颜色，未见明显异色渗出。[verified: 对应 normal、mip 及 evidence_022 的列明 view] 给定视图接近可用，不能据此判定所有 mip 层级安全。[opinion]"
+        },
+        "uv_editability": {
+          "score": 3,
+          "evidence": [
+            "evidence_015"
+          ],
+          "reason": "图集中央至右上的大岛轮廓曲折，含细长尖端；左下及底边存在小碎片与长细条，上方另有较大分离岛。[verified: 对应 uv 图的中央、左下与底边区域] 可见结构不利于按区域直接选择和调整，需整理；未实施编辑，不评价实际用时。[opinion]"
+        }
+      },
+      "major_defect": false
+    }
+  ],
+  "preferences": [
+    {
+      "first": "sample_A",
+      "second": "sample_B",
+      "preference": "tie",
+      "evidence": [
+        "evidence_000",
+        "evidence_005",
+        "evidence_001",
+        "evidence_006",
+        "evidence_002",
+        "evidence_007",
+        "evidence_003",
+        "evidence_008",
+        "evidence_004",
+        "evidence_009"
+      ],
+      "reason": "双方 UV、Base Color、接缝局部、normal、mip 的对应图像在 manifest 中分别具有相同哈希，按规则去重查看；因此所有视图及可见局部依据相同。[verified: manifest.json 双方 evidence 项 sha256] 给定匿名图像无法支持视觉优先级，判为平局。[opinion]"
+    },
+    {
+      "first": "sample_A",
+      "second": "sample_C",
+      "preference": "tie",
+      "evidence": [
+        "evidence_000",
+        "evidence_010",
+        "evidence_001",
+        "evidence_011",
+        "evidence_002",
+        "evidence_012",
+        "evidence_003",
+        "evidence_013",
+        "evidence_004",
+        "evidence_014"
+      ],
+      "reason": "双方 UV、Base Color、接缝局部、normal、mip 的对应图像在 manifest 中分别具有相同哈希，按规则去重查看；因此所有视图及可见局部依据相同。[verified: manifest.json 双方 evidence 项 sha256] 给定匿名图像无法支持视觉优先级，判为平局。[opinion]"
+    },
+    {
+      "first": "sample_A",
+      "second": "sample_D",
+      "preference": "tie",
+      "evidence": [
+        "evidence_000",
+        "evidence_015",
+        "evidence_001",
+        "evidence_016",
+        "evidence_002",
+        "evidence_017",
+        "evidence_003",
+        "evidence_018",
+        "evidence_004",
+        "evidence_019"
+      ],
+      "reason": "双方 UV、Base Color、接缝局部、normal、mip 的对应图像在 manifest 中分别具有相同哈希，按规则去重查看；因此所有视图及可见局部依据相同。[verified: manifest.json 双方 evidence 项 sha256] 给定匿名图像无法支持视觉优先级，判为平局。[opinion]"
+    },
+    {
+      "first": "sample_B",
+      "second": "sample_C",
+      "preference": "tie",
+      "evidence": [
+        "evidence_005",
+        "evidence_010",
+        "evidence_006",
+        "evidence_011",
+        "evidence_007",
+        "evidence_012",
+        "evidence_008",
+        "evidence_013",
+        "evidence_009",
+        "evidence_014"
+      ],
+      "reason": "双方 UV、Base Color、接缝局部、normal、mip 的对应图像在 manifest 中分别具有相同哈希，按规则去重查看；因此所有视图及可见局部依据相同。[verified: manifest.json 双方 evidence 项 sha256] 给定匿名图像无法支持视觉优先级，判为平局。[opinion]"
+    },
+    {
+      "first": "sample_B",
+      "second": "sample_D",
+      "preference": "tie",
+      "evidence": [
+        "evidence_005",
+        "evidence_015",
+        "evidence_006",
+        "evidence_016",
+        "evidence_007",
+        "evidence_017",
+        "evidence_008",
+        "evidence_018",
+        "evidence_009",
+        "evidence_019"
+      ],
+      "reason": "双方 UV、Base Color、接缝局部、normal、mip 的对应图像在 manifest 中分别具有相同哈希，按规则去重查看；因此所有视图及可见局部依据相同。[verified: manifest.json 双方 evidence 项 sha256] 给定匿名图像无法支持视觉优先级，判为平局。[opinion]"
+    },
+    {
+      "first": "sample_C",
+      "second": "sample_D",
+      "preference": "tie",
+      "evidence": [
+        "evidence_010",
+        "evidence_015",
+        "evidence_011",
+        "evidence_016",
+        "evidence_012",
+        "evidence_017",
+        "evidence_013",
+        "evidence_018",
+        "evidence_014",
+        "evidence_019"
+      ],
+      "reason": "双方 UV、Base Color、接缝局部、normal、mip 的对应图像在 manifest 中分别具有相同哈希，按规则去重查看；因此所有视图及可见局部依据相同。[verified: manifest.json 双方 evidence 项 sha256] 给定匿名图像无法支持视觉优先级，判为平局。[opinion]"
+    }
+  ]
+}

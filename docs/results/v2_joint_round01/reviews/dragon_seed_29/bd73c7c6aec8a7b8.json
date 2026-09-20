@@ -1,0 +1,232 @@
+{
+  "packet_sha256": "e18c46e917f058edfad7992676ec989fd862e6e4d3e5497c9a685e7a20d8f38f",
+  "reviewer_id": "dragon_seed_29_judge2_attempt0",
+  "samples": [
+    {
+      "id": "sample_A",
+      "scores": {
+        "appearance": {
+          "reason": "view_00、view_02 翼膜粉红与冰蓝配色及中央金色胸甲保持可辨；相对参考，翼膜下缘缺口和尖刺形状变粗，view_01 翼根局部呈块状，仍需修整。仅为代理图像判断。[opinion]",
+          "score": 3,
+          "evidence": [
+            "evidence_001",
+            "evidence_020"
+          ]
+        },
+        "seams": {
+          "reason": "center crop 的 view_00、view_02 胸甲至翼根颜色总体连续，view_04 横向翼膜未见贯穿的大色缝；翼根及膜边缘存在局部粗糙，但图片不足以把这些差异都归因于接缝。[opinion]",
+          "score": 4,
+          "evidence": [
+            "evidence_002",
+            "evidence_021"
+          ]
+        },
+        "normal_mip": {
+          "reason": "normal 的 view_00、view_02 翼膜与胸甲有较参考更碎的三角面方向变化；mip 的 view_00、view_02 金色胸甲纹样明显变糊，翼膜细纹也减少，未见显著整片异色污染。该组合仍需修整。[opinion]",
+          "score": 3,
+          "evidence": [
+            "evidence_003",
+            "evidence_004",
+            "evidence_022"
+          ]
+        },
+        "uv_editability": {
+          "reason": "UV 全图主要结构为少数较大的不规则岛，但中央到右上长岛边界深凹且尖细，左下有细条和微小孤立三角，底部紫色岛也有很长尖端；可见结构对局部选择和绘制有修整需求，不据此推断合法性。[opinion]",
+          "score": 3,
+          "evidence": [
+            "evidence_000"
+          ]
+        }
+      },
+      "major_defect": false
+    },
+    {
+      "id": "sample_B",
+      "scores": {
+        "appearance": {
+          "reason": "view_00、view_02 翼膜粉红与冰蓝配色及中央金色胸甲保持可辨；相对参考，翼膜下缘缺口和尖刺形状变粗，view_01 翼根局部呈块状，仍需修整。仅为代理图像判断。[opinion]",
+          "score": 3,
+          "evidence": [
+            "evidence_006",
+            "evidence_020"
+          ]
+        },
+        "seams": {
+          "reason": "center crop 的 view_00、view_02 胸甲至翼根颜色总体连续，view_04 横向翼膜未见贯穿的大色缝；翼根及膜边缘存在局部粗糙，但图片不足以把这些差异都归因于接缝。[opinion]",
+          "score": 4,
+          "evidence": [
+            "evidence_007",
+            "evidence_021"
+          ]
+        },
+        "normal_mip": {
+          "reason": "normal 的 view_00、view_02 翼膜与胸甲有较参考更碎的三角面方向变化；mip 的 view_00、view_02 金色胸甲纹样明显变糊，翼膜细纹也减少，未见显著整片异色污染。该组合仍需修整。[opinion]",
+          "score": 3,
+          "evidence": [
+            "evidence_008",
+            "evidence_009",
+            "evidence_022"
+          ]
+        },
+        "uv_editability": {
+          "reason": "UV 全图主要结构为少数较大的不规则岛，但中央到右上长岛边界深凹且尖细，左下有细条和微小孤立三角，底部紫色岛也有很长尖端；可见结构对局部选择和绘制有修整需求，不据此推断合法性。[opinion]",
+          "score": 3,
+          "evidence": [
+            "evidence_005"
+          ]
+        }
+      },
+      "major_defect": false
+    },
+    {
+      "id": "sample_C",
+      "scores": {
+        "appearance": {
+          "reason": "view_00、view_02 翼膜粉红与冰蓝配色及中央金色胸甲保持可辨；相对参考，翼膜下缘缺口和尖刺形状变粗，view_01 翼根局部呈块状，仍需修整。仅为代理图像判断。[opinion]",
+          "score": 3,
+          "evidence": [
+            "evidence_011",
+            "evidence_020"
+          ]
+        },
+        "seams": {
+          "reason": "center crop 的 view_00、view_02 胸甲至翼根颜色总体连续，view_04 横向翼膜未见贯穿的大色缝；翼根及膜边缘存在局部粗糙，但图片不足以把这些差异都归因于接缝。[opinion]",
+          "score": 4,
+          "evidence": [
+            "evidence_012",
+            "evidence_021"
+          ]
+        },
+        "normal_mip": {
+          "reason": "normal 的 view_00、view_02 翼膜与胸甲有较参考更碎的三角面方向变化；mip 的 view_00、view_02 金色胸甲纹样明显变糊，翼膜细纹也减少，未见显著整片异色污染。该组合仍需修整。[opinion]",
+          "score": 3,
+          "evidence": [
+            "evidence_013",
+            "evidence_014",
+            "evidence_022"
+          ]
+        },
+        "uv_editability": {
+          "reason": "UV 全图主要结构为少数较大的不规则岛，但中央到右上长岛边界深凹且尖细，左下有细条和微小孤立三角，底部紫色岛也有很长尖端；可见结构对局部选择和绘制有修整需求，不据此推断合法性。[opinion]",
+          "score": 3,
+          "evidence": [
+            "evidence_010"
+          ]
+        }
+      },
+      "major_defect": false
+    },
+    {
+      "id": "sample_D",
+      "scores": {
+        "appearance": {
+          "reason": "view_00、view_02 翼膜粉红与冰蓝配色及中央金色胸甲保持可辨；相对参考，翼膜下缘缺口和尖刺形状变粗，view_01 翼根局部呈块状，仍需修整。仅为代理图像判断。[opinion]",
+          "score": 3,
+          "evidence": [
+            "evidence_016",
+            "evidence_020"
+          ]
+        },
+        "seams": {
+          "reason": "center crop 的 view_00、view_02 胸甲至翼根颜色总体连续，view_04 横向翼膜未见贯穿的大色缝；翼根及膜边缘存在局部粗糙，但图片不足以把这些差异都归因于接缝。[opinion]",
+          "score": 4,
+          "evidence": [
+            "evidence_017",
+            "evidence_021"
+          ]
+        },
+        "normal_mip": {
+          "reason": "normal 的 view_00、view_02 翼膜与胸甲有较参考更碎的三角面方向变化；mip 的 view_00、view_02 金色胸甲纹样明显变糊，翼膜细纹也减少，未见显著整片异色污染。该组合仍需修整。[opinion]",
+          "score": 3,
+          "evidence": [
+            "evidence_018",
+            "evidence_019",
+            "evidence_022"
+          ]
+        },
+        "uv_editability": {
+          "reason": "UV 全图主要结构为少数较大的不规则岛，但中央到右上长岛边界深凹且尖细，左下有细条和微小孤立三角，底部紫色岛也有很长尖端；可见结构对局部选择和绘制有修整需求，不据此推断合法性。[opinion]",
+          "score": 3,
+          "evidence": [
+            "evidence_015"
+          ]
+        }
+      },
+      "major_defect": false
+    }
+  ],
+  "preferences": [
+    {
+      "reason": "双方 UV 和 center crop 对应证据在 manifest 中的同类哈希相同，按允许的哈希去重查看；view_00 胸甲、view_02 翼膜和 UV 的尖细岛结构一致，没有可支持偏好的图像差异。[verified: manifest.json evidence 对应 sha256]",
+      "second": "sample_B",
+      "first": "sample_A",
+      "evidence": [
+        "evidence_000",
+        "evidence_005",
+        "evidence_002",
+        "evidence_007"
+      ],
+      "preference": "tie"
+    },
+    {
+      "reason": "双方 UV 和 center crop 对应证据在 manifest 中的同类哈希相同，按允许的哈希去重查看；view_00 胸甲、view_02 翼膜和 UV 的尖细岛结构一致，没有可支持偏好的图像差异。[verified: manifest.json evidence 对应 sha256]",
+      "second": "sample_C",
+      "first": "sample_A",
+      "evidence": [
+        "evidence_000",
+        "evidence_010",
+        "evidence_002",
+        "evidence_012"
+      ],
+      "preference": "tie"
+    },
+    {
+      "reason": "双方 UV 和 center crop 对应证据在 manifest 中的同类哈希相同，按允许的哈希去重查看；view_00 胸甲、view_02 翼膜和 UV 的尖细岛结构一致，没有可支持偏好的图像差异。[verified: manifest.json evidence 对应 sha256]",
+      "second": "sample_D",
+      "first": "sample_A",
+      "evidence": [
+        "evidence_000",
+        "evidence_015",
+        "evidence_002",
+        "evidence_017"
+      ],
+      "preference": "tie"
+    },
+    {
+      "reason": "双方 UV 和 center crop 对应证据在 manifest 中的同类哈希相同，按允许的哈希去重查看；view_00 胸甲、view_02 翼膜和 UV 的尖细岛结构一致，没有可支持偏好的图像差异。[verified: manifest.json evidence 对应 sha256]",
+      "second": "sample_C",
+      "first": "sample_B",
+      "evidence": [
+        "evidence_005",
+        "evidence_010",
+        "evidence_007",
+        "evidence_012"
+      ],
+      "preference": "tie"
+    },
+    {
+      "reason": "双方 UV 和 center crop 对应证据在 manifest 中的同类哈希相同，按允许的哈希去重查看；view_00 胸甲、view_02 翼膜和 UV 的尖细岛结构一致，没有可支持偏好的图像差异。[verified: manifest.json evidence 对应 sha256]",
+      "second": "sample_D",
+      "first": "sample_B",
+      "evidence": [
+        "evidence_005",
+        "evidence_015",
+        "evidence_007",
+        "evidence_017"
+      ],
+      "preference": "tie"
+    },
+    {
+      "reason": "双方 UV 和 center crop 对应证据在 manifest 中的同类哈希相同，按允许的哈希去重查看；view_00 胸甲、view_02 翼膜和 UV 的尖细岛结构一致，没有可支持偏好的图像差异。[verified: manifest.json evidence 对应 sha256]",
+      "second": "sample_D",
+      "first": "sample_C",
+      "evidence": [
+        "evidence_010",
+        "evidence_015",
+        "evidence_012",
+        "evidence_017"
+      ],
+      "preference": "tie"
+    }
+  ]
+}

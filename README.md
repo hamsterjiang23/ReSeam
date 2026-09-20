@@ -3,6 +3,8 @@
 **Reversible Seam Restructuring with Adaptive Relaxation for UV Unwrapping**  
 **基于可撤销接缝重构与自适应松弛的 UV 展开**
 
+**下一阶段：[重新设计求解器](goal/solver-redesign.md)。** 借鉴OptCuts高层思路，自研ReSeam求解器；OptCuts保留为参考、对照和历史复现，不再作为新方案的求解后端或默认初始化。下面的V1/V2结果是已归档的旧实现，不代表新求解器已经完成。`[verified: 用户本轮方向更新]`
+
 ReSeam 面向 AI 生成高模经过重拓扑后的低模，研究如何切缝和展开，使 UV 便于艺术家编辑、支持可靠烘焙，并适合后续可微贴图优化。在映射合法、畸变受控的前提下，改善接缝位置、区域连续性与碎片结构，减少人工修整成本；接缝短、岛少是评价的一部分，不代表已经达到 artist 目标。
 
 状态：V1 原型与自动 A/B 已交付：66 个 UV 配置完成记录，49 个通过、17 个拒绝；17 个下游流程完成。能量刀接缝改善但覆盖率下降，幻想龙未取得 ReSeam 改进，artist 人工验收尚未完成。详见 [实际结果与边界](docs/v1-results.md)。ReSeam 是工作名称，由 Re- 与 Seam 组成，不要求逐字母展开；正式投稿前需核验论文和软件项目重名。
@@ -10,6 +12,16 @@ ReSeam 面向 AI 生成高模经过重拓扑后的低模，研究如何切缝和
 固定开发与回归模型已迁入 [assets/v1](assets/v1/README.md)：能量刀 `energy_blade`（500 面低模）与幻想龙 `dragon`（2000 面低模），各包含真实材质参考高模、无 UV 低模 GLB 和 OBJ。资产来源、哈希及检查范围见 [manifest.json](assets/v1/manifest.json)；旧实验源文件保留。
 
 用户提供的 [artist 真值参考](assets/gt/README.md) 单独保存。它们保留原始 UV、不同拓扑及复用关系，用于生产目标对照，不替换固定低模实验输入。
+
+当前阶段：[V2 联合原型](goal/v2.md) 已完成24项正式搜索、24项下游验证与18份有效代理盲评。能量刀唯一覆盖率中位数从固定岛47.04%到联合49.14%，成对纹素密度增益中位数为2.497%；龙仍为28.21%，真实复用组为0。全部代理评价为NEEDS_WORK，尚未达到artist交付目标。见 [实际结论](docs/v2-joint-results.md)、[运行说明](docs/running-v2.md) 与 [联合计划](docs/v2-joint-plan.md)。`[verified: docs/results/v2_joint_round01_summary.json groups/paired_comparisons/proxy]`
+
+V2 前期固定岛原型完成36项对照：能量刀adaptive的Blender排布中位覆盖率从47.36%到48.52%，幻想龙仍约28.20%。这是联合轮之前、不同配置的历史阶段，详见 [前期报告](docs/v2-results.md)，不与新轮次混合计算收益。`[verified: docs/results/v2_fixed_uv_round01_summary.json“groups”]`
+
+既有 [对称 UV 复用诊断](docs/v2-reuse-plan.md) 检查可配对区域、颜色与拉伸差异并输出对拍。新联合流程允许代理盲评推进自动实验，标记 AGENT_EVALUATED，人工复核独立记录；技术门禁不因代理高分放宽。`[verified: goal/v2.md“Subagent 代理盲评”]`
+
+[复用诊断结果](docs/v2-reuse-results.md)：两模型各 4 个几何候选、0 个通过全部暂定门限，已输出拒绝候选的六视角及局部对拍。当前不是生产可用复用结果。`[verified: docs/results/v2_reuse_preview_round01_summary.json“passed_preview_gate_counts”]`
+
+[龙翼近似曲面对应](docs/dragon-approximate-symmetry.md)：放开严格三角形配对后，外侧翼区候选中 427/478 个顶点通过 0.5% 对角线位置/往返误差及 45° 法线门限，其中 418 个目标位于对侧三角形内部或边上，而非现成顶点。它是下一步区域配准的几何候选，尚未改 UV 或批准纹理复用。`[verified: docs/results/dragon_surface_match_round01_summary.json“sweep”，tolerance_fraction=0.005]`
 
 获取项目与固定版本的参考源码：
 
@@ -28,6 +40,7 @@ uv run reseam doctor
 uv run reseam unwrap --model energy_blade --method reseam_adaptive --output artifacts/manual/energy --seconds 180
 uv run reseam benchmark --config configs/v1_round03.json
 uv run reseam report --round artifacts/v1/v1_round03
+uv run reseam pack-benchmark --config configs/v2_fixed_uv_round01.json
 ```
 
 已有输出不会覆盖。每轮记录源码与外部程序哈希、配置、全部失败及未完成项。正式配置包含 66 个几何运行；种子 17 的 22 个方法／模型组合承担下游验收，另两个种子不宣称已验证烘焙。
@@ -103,13 +116,21 @@ V1 A/B 完成标准：预定样本全部完成或有明确失败记录，产物�
 
 两套资产属于反复使用的开发与回归集，不能用多轮、多种子或未见相机视角宣称独立模型泛化。
 
-## V2：排布与装箱
+## V2：近似复用与接缝—排布联合优化
 
-在 V1 A/B 测试完成并形成结论之后，再扩展 V2。
+V2已接通区域对应、成对参数化、组级排布和接缝反馈，构造例可合法共享并提交；真实模型本轮的有效改动仅来自排布和切分。找到近似对应与得到可用共享UV是两个验收层次，详见 [实际结论](docs/v2-joint-results.md)。`[verified: tests/test_joint_material.py 正向提交测试；v2_joint_round01/audit.json accepted_candidate_kinds]`
 
-V2 将研究展开后的 UV 岛如何排入贴图：在不牺牲 UV 拉伸、合理的 Texel Density 和安全 Padding 的前提下，提高 UV 岛的有效面积占用率；岛间距只需满足安全要求，不是越小越好。有效面积按 UV 三角形覆盖面积计算，不把扩边填色算作利用率。切法与 packing 是否联合优化、允许的旋转与缩放、画布规格及评价公式，留待 V2 设计时确定。
+V2 在1024²纹理预算、畸变和采样安全约束下提高表面有效纹素密度；复用组间距至少16px、图集边界至少8px。唯一覆盖率、复用比例、密度与外观误差分别记录，不把重复重叠面积冒充唯一覆盖率。固定岛配置仅是对照轨道，不限制完整方法的切缝或共享操作。`[opinion]`
 
-V1 阶段只保留 UV、岛 ID 和原始网格对应关系等输出接口，不提前实现 V2 装箱优化。
+每轮预先锁定假设与A/B协议，保留逐候选日志、完整矩阵、代理评分与图像依据，以及正负结果。技术完成、实验完成、代理评价与人工复核分别记录；预算不足只交付有缺口的报告，不标完整验收。`[opinion]`
+
+### 近似对称复用的实践经验
+
+AI 生成模型与重拓扑低模应以**近似对称区域**为研究入口，不要求左右严格镜像、顶点数相同或三角形划分一致。严格顶点／完整三角形配对只保留为基线；该基线没有找到候选，不能据此判断模型不对称或无法复用。`[opinion]`
+
+龙翼实验采用“源顶点 → 镜像位置 → 对侧曲面最近点”，用**目标面 ID＋重心坐标**表示对应，并检查位置误差、往返误差和法线一致性。曲面对应可以消除要求目标必须是现成顶点所引入的离散限制，整个过程不改变原始几何或 UV。实现与复现命令见 [近似对应报告](docs/dragon-approximate-symmetry.md)。`[verified: src/reseam/surface_match.py“match_surfaces”；docs/dragon-approximate-symmetry.md“这次如何匹配”]`
+
+本次门限属于探索配置，不是通用 artist 标准；外侧翼掩码是几何启发式，双向顶点查询数也不是独立的一一配对数。后续应检查区域连续性、对应折叠与边界，再做成对参数化，分别验收拉伸、密度、颜色、法线和采样安全。允许小幅外观差异不等于允许牺牲几何质量；代理盲评可推进实验，但真实人工复核仍独立记录。`[opinion]`
 
 ## 文档与实施入口
 
@@ -120,10 +141,14 @@ V1 阶段只保留 UV、岛 ID 和原始网格对应关系等输出接口，不�
 - [上游参考源码](references/README.md)：OptCuts 与 PartUV 官方源码、固定提交及阅读入口；实际执行环境另行记录。
 - [运行说明](docs/running-v1.md)：环境、命令、标注和结果解释。
 - [V1 实际结果](docs/v1-results.md)：正式矩阵、负结果、空间利用率与尚未完成的 artist 验收。
+- [V2 运行说明](docs/running-v2.md)：联合搜索、独立预算、匿名评审与UTF-8后处理命令。
+- [V2 联合结果](docs/v2-joint-results.md)：24项对照、代理评分、未成功的真实复用与证据边界。
+- [V2 紧凑证据归档](docs/results/v2_joint_round01/README.md)：随Git同步的矩阵、原始评分、执行记录和预览；完整大体积产物保留在本地artifacts。
+- [求解器重新设计](goal/solver-redesign.md)：当前方向与新方案边界，OptCuts只保留参考/对照用途。
 - [Artist 参考与质量目标](docs/artist-quality-reference.md)：用户提供的成品贴图参考、初步反馈及覆盖率／密度／安全间距的边界。
 - [人工编辑任务](docs/artist-review-task.md)：匿名场景、限时修整、UV 导出、技术复核与重烘焙。
 - [实现记录](implementation-notes.md)：偏差、审查修复和已知边界。
 
-人工步骤使用 [统一编辑任务](docs/artist-review-task.md)：匿名 Blender 场景、15 分钟修整、逐角 UV 导出、固定几何与约束复核、重新烘焙及真实偏好记录。自动验证不会将人工验收标为完成。两套模型及协议已固定，是否完成以实际矩阵和人工验收记录为准。
+人工步骤使用 [统一编辑任务](docs/artist-review-task.md)：匿名 Blender 场景、15 分钟修整、逐角 UV 导出、固定几何与约束复核、重新烘焙及真实偏好记录。自动验证不会将人工验收标为完成。V1 保留原人工验收口径；V2 的技术/实验完成及代理评价按 [新目标](goal/v2.md) 分开记录，人工缺席不阻塞自动阶段。
 
 本项目不预设全局最优、同预算必胜或艺术家级布局结论；效果与适用范围由实验决定。

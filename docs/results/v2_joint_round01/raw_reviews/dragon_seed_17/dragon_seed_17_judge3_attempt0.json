@@ -1,0 +1,264 @@
+{
+  "packet_sha256": "e18c46e917f058edfad7992676ec989fd862e6e4d3e5497c9a685e7a20d8f38f",
+  "reviewer_id": "dragon_seed_17_judge3_attempt0",
+  "samples": [
+    {
+      "id": "sample_A",
+      "scores": {
+        "appearance": {
+          "score": 4,
+          "evidence": [
+            "evidence_001",
+            "evidence_020",
+            "evidence_002",
+            "evidence_021"
+          ],
+          "reason": "view_00与view_02的金色胸部、红紫翼膜及浅蓝尖端保留参考整体外观；局部图翼缘更折线化、细小刺状细节减少。整体接近可用，仅代表代理图像观察。"
+        },
+        "seams": {
+          "score": 4,
+          "evidence": [
+            "evidence_002",
+            "evidence_021"
+          ],
+          "reason": "view_00胸部与翼根、view_03翼膜主纹理未见大范围断色；view_04和view_05的狭长翼面有零星黑色小缺口及细节不连续，需要局部核查，图像不能判定是否由UV接缝引起。"
+        },
+        "normal_mip": {
+          "score": 4,
+          "evidence": [
+            "evidence_003",
+            "evidence_004",
+            "evidence_022"
+          ],
+          "reason": "normal的view_00与view_02主翼面方向色和参考相近，未见整片反转；mip的view_00胸部金纹与view_03翼脉明显模糊，但未见明显跨区颜色污染。细尖端的采样安全无法由当前分辨率完全确认。"
+        },
+        "uv_editability": {
+          "score": 3,
+          "evidence": [
+            "evidence_000"
+          ],
+          "reason": "UV图中央及左下保留较大连续岛，但轮廓分叉尖锐，中央至右侧存在细长尖片；左下边缘还有数个极小孤立片，定位和选取仍需整理。只评价可见结构，不推断重叠或实际编辑耗时。"
+        }
+      },
+      "major_defect": false
+    },
+    {
+      "id": "sample_B",
+      "scores": {
+        "appearance": {
+          "score": 4,
+          "evidence": [
+            "evidence_006",
+            "evidence_020",
+            "evidence_007",
+            "evidence_021"
+          ],
+          "reason": "view_00与view_02的金色胸部、红紫翼膜及浅蓝尖端保留参考整体外观；局部图翼缘更折线化、细小刺状细节减少。整体接近可用，仅代表代理图像观察。"
+        },
+        "seams": {
+          "score": 4,
+          "evidence": [
+            "evidence_007",
+            "evidence_021"
+          ],
+          "reason": "view_00胸部与翼根、view_03翼膜主纹理未见大范围断色；view_04和view_05的狭长翼面有零星黑色小缺口及细节不连续，需要局部核查，图像不能判定是否由UV接缝引起。"
+        },
+        "normal_mip": {
+          "score": 4,
+          "evidence": [
+            "evidence_008",
+            "evidence_009",
+            "evidence_022"
+          ],
+          "reason": "normal的view_00与view_02主翼面方向色和参考相近，未见整片反转；mip的view_00胸部金纹与view_03翼脉明显模糊，但未见明显跨区颜色污染。细尖端的采样安全无法由当前分辨率完全确认。"
+        },
+        "uv_editability": {
+          "score": 3,
+          "evidence": [
+            "evidence_005"
+          ],
+          "reason": "UV图中央及左下保留较大连续岛，但轮廓分叉尖锐，中央至右侧存在细长尖片；左下边缘还有数个极小孤立片，定位和选取仍需整理。只评价可见结构，不推断重叠或实际编辑耗时。"
+        }
+      },
+      "major_defect": false
+    },
+    {
+      "id": "sample_C",
+      "scores": {
+        "appearance": {
+          "score": 4,
+          "evidence": [
+            "evidence_011",
+            "evidence_020",
+            "evidence_012",
+            "evidence_021"
+          ],
+          "reason": "view_00与view_02的金色胸部、红紫翼膜及浅蓝尖端保留参考整体外观；局部图翼缘更折线化、细小刺状细节减少。整体接近可用，仅代表代理图像观察。"
+        },
+        "seams": {
+          "score": 4,
+          "evidence": [
+            "evidence_012",
+            "evidence_021"
+          ],
+          "reason": "view_00胸部与翼根、view_03翼膜主纹理未见大范围断色；view_04和view_05的狭长翼面有零星黑色小缺口及细节不连续，需要局部核查，图像不能判定是否由UV接缝引起。"
+        },
+        "normal_mip": {
+          "score": 4,
+          "evidence": [
+            "evidence_013",
+            "evidence_014",
+            "evidence_022"
+          ],
+          "reason": "normal的view_00与view_02主翼面方向色和参考相近，未见整片反转；mip的view_00胸部金纹与view_03翼脉明显模糊，但未见明显跨区颜色污染。细尖端的采样安全无法由当前分辨率完全确认。"
+        },
+        "uv_editability": {
+          "score": 3,
+          "evidence": [
+            "evidence_010"
+          ],
+          "reason": "UV图中央及左下保留较大连续岛，但轮廓分叉尖锐，中央至右侧存在细长尖片；左下边缘还有数个极小孤立片，定位和选取仍需整理。只评价可见结构，不推断重叠或实际编辑耗时。"
+        }
+      },
+      "major_defect": false
+    },
+    {
+      "id": "sample_D",
+      "scores": {
+        "appearance": {
+          "score": 4,
+          "evidence": [
+            "evidence_016",
+            "evidence_020",
+            "evidence_017",
+            "evidence_021"
+          ],
+          "reason": "view_00与view_02的金色胸部、红紫翼膜及浅蓝尖端保留参考整体外观；局部图翼缘更折线化、细小刺状细节减少。整体接近可用，仅代表代理图像观察。"
+        },
+        "seams": {
+          "score": 4,
+          "evidence": [
+            "evidence_017",
+            "evidence_021"
+          ],
+          "reason": "view_00胸部与翼根、view_03翼膜主纹理未见大范围断色；view_04和view_05的狭长翼面有零星黑色小缺口及细节不连续，需要局部核查，图像不能判定是否由UV接缝引起。"
+        },
+        "normal_mip": {
+          "score": 4,
+          "evidence": [
+            "evidence_018",
+            "evidence_019",
+            "evidence_022"
+          ],
+          "reason": "normal的view_00与view_02主翼面方向色和参考相近，未见整片反转；mip的view_00胸部金纹与view_03翼脉明显模糊，但未见明显跨区颜色污染。细尖端的采样安全无法由当前分辨率完全确认。"
+        },
+        "uv_editability": {
+          "score": 3,
+          "evidence": [
+            "evidence_015"
+          ],
+          "reason": "UV图中央及左下保留较大连续岛，但轮廓分叉尖锐，中央至右侧存在细长尖片；左下边缘还有数个极小孤立片，定位和选取仍需整理。只评价可见结构，不推断重叠或实际编辑耗时。"
+        }
+      },
+      "major_defect": false
+    }
+  ],
+  "preferences": [
+    {
+      "first": "sample_A",
+      "second": "sample_B",
+      "preference": "tie",
+      "evidence": [
+        "evidence_000",
+        "evidence_005",
+        "evidence_002",
+        "evidence_007",
+        "evidence_003",
+        "evidence_008",
+        "evidence_004",
+        "evidence_009"
+      ],
+      "reason": "manifest中双方各同类图像哈希一致，按允许的去重查看：UV中央细长岛及左下小片、接缝局部view_00翼根、normal的view_02翼面和mip的view_03模糊程度均无可区分证据，因此代理偏好为平局。"
+    },
+    {
+      "first": "sample_A",
+      "second": "sample_C",
+      "preference": "tie",
+      "evidence": [
+        "evidence_000",
+        "evidence_010",
+        "evidence_002",
+        "evidence_012",
+        "evidence_003",
+        "evidence_013",
+        "evidence_004",
+        "evidence_014"
+      ],
+      "reason": "manifest中双方各同类图像哈希一致，按允许的去重查看：UV中央细长岛及左下小片、接缝局部view_00翼根、normal的view_02翼面和mip的view_03模糊程度均无可区分证据，因此代理偏好为平局。"
+    },
+    {
+      "first": "sample_A",
+      "second": "sample_D",
+      "preference": "tie",
+      "evidence": [
+        "evidence_000",
+        "evidence_015",
+        "evidence_002",
+        "evidence_017",
+        "evidence_003",
+        "evidence_018",
+        "evidence_004",
+        "evidence_019"
+      ],
+      "reason": "manifest中双方各同类图像哈希一致，按允许的去重查看：UV中央细长岛及左下小片、接缝局部view_00翼根、normal的view_02翼面和mip的view_03模糊程度均无可区分证据，因此代理偏好为平局。"
+    },
+    {
+      "first": "sample_B",
+      "second": "sample_C",
+      "preference": "tie",
+      "evidence": [
+        "evidence_005",
+        "evidence_010",
+        "evidence_007",
+        "evidence_012",
+        "evidence_008",
+        "evidence_013",
+        "evidence_009",
+        "evidence_014"
+      ],
+      "reason": "manifest中双方各同类图像哈希一致，按允许的去重查看：UV中央细长岛及左下小片、接缝局部view_00翼根、normal的view_02翼面和mip的view_03模糊程度均无可区分证据，因此代理偏好为平局。"
+    },
+    {
+      "first": "sample_B",
+      "second": "sample_D",
+      "preference": "tie",
+      "evidence": [
+        "evidence_005",
+        "evidence_015",
+        "evidence_007",
+        "evidence_017",
+        "evidence_008",
+        "evidence_018",
+        "evidence_009",
+        "evidence_019"
+      ],
+      "reason": "manifest中双方各同类图像哈希一致，按允许的去重查看：UV中央细长岛及左下小片、接缝局部view_00翼根、normal的view_02翼面和mip的view_03模糊程度均无可区分证据，因此代理偏好为平局。"
+    },
+    {
+      "first": "sample_C",
+      "second": "sample_D",
+      "preference": "tie",
+      "evidence": [
+        "evidence_010",
+        "evidence_015",
+        "evidence_012",
+        "evidence_017",
+        "evidence_013",
+        "evidence_018",
+        "evidence_014",
+        "evidence_019"
+      ],
+      "reason": "manifest中双方各同类图像哈希一致，按允许的去重查看：UV中央细长岛及左下小片、接缝局部view_00翼根、normal的view_02翼面和mip的view_03模糊程度均无可区分证据，因此代理偏好为平局。"
+    }
+  ]
+}

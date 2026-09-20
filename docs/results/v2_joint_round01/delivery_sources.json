@@ -1,0 +1,23 @@
+{
+  "scripts": {
+    "audit_round.py": "cca4f29f4bdab371759547c7d2064a8f2674e8303a902b3bc3ef2bcffcf55fc7",
+    "build_delivery_page.py": "82b8237acec8bed589d2657dfb9e5dfa321015269df7ca5536941db2a7d68b7b",
+    "check_additional_views.py": "95e5ae9e0a16d7e511af1e5152c49aa74e8a365792000b90c744d0272e43405f"
+  },
+  "algorithm_freeze_recheck": "PASS",
+  "tests": {
+    "pytest": 68,
+    "ruff": "PASS",
+    "basedpyright": "PASS"
+  },
+  "review_rubric_unchanged": true,
+  "ui_checks": {
+    "readable_png_resources": 584,
+    "glb_files": 24,
+    "javascript_syntax": "PASS",
+    "document_links": 64,
+    "browser_visual_QA": "BLOCKED_BY_POLICY",
+    "http_service": "blocked by policy",
+    "local_file_preview": "Browser use URL policy"
+  }
+}

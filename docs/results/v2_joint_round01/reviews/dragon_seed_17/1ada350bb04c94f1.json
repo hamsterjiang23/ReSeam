@@ -1,0 +1,268 @@
+{
+  "packet_sha256": "e18c46e917f058edfad7992676ec989fd862e6e4d3e5497c9a685e7a20d8f38f",
+  "reviewer_id": "dragon_seed_17_judge2_attempt0",
+  "samples": [
+    {
+      "id": "sample_A",
+      "scores": {
+        "appearance": {
+          "score": 4,
+          "evidence": [
+            "evidence_001",
+            "evidence_020"
+          ],
+          "reason": "view_00、view_02的金色胸甲和粉红翼膜主体接近参考；view_03翼缘及view_04平展翼部的轮廓与细节较粗，只据现有图像评价为接近可用。[opinion]"
+        },
+        "seams": {
+          "score": 4,
+          "evidence": [
+            "evidence_002",
+            "evidence_021"
+          ],
+          "reason": "view_00胸甲至翼根、view_02翼膜区域未见明显贯穿的颜色接缝；view_04与view_05薄翼有局部黑色缺口及细节破碎，图像不能确定其是否来自UV接缝。[opinion]"
+        },
+        "normal_mip": {
+          "score": 4,
+          "evidence": [
+            "evidence_003",
+            "evidence_004",
+            "evidence_022"
+          ],
+          "reason": "normal的view_00翼面及view_02胸部保留总体方向变化，局部三角面痕迹可见；mip的view_00、view_02胸甲细纹明显模糊，但未见大块异色渗漏。只评价该组静态normal与mip图。[opinion]"
+        },
+        "uv_editability": {
+          "score": 3,
+          "evidence": [
+            "evidence_000"
+          ],
+          "reason": "UV图可见数个较大的连续岛，但右上大岛边界复杂、下部与左侧存在狭长尖角，左下还有微小独立碎片；对可见结构而言仍需整理，未进行实际编辑。[opinion]"
+        }
+      },
+      "major_defect": false
+    },
+    {
+      "id": "sample_B",
+      "scores": {
+        "appearance": {
+          "score": 4,
+          "evidence": [
+            "evidence_006",
+            "evidence_020"
+          ],
+          "reason": "view_00、view_02的金色胸甲和粉红翼膜主体接近参考；view_03翼缘及view_04平展翼部的轮廓与细节较粗，只据现有图像评价为接近可用。[opinion]"
+        },
+        "seams": {
+          "score": 4,
+          "evidence": [
+            "evidence_007",
+            "evidence_021"
+          ],
+          "reason": "view_00胸甲至翼根、view_02翼膜区域未见明显贯穿的颜色接缝；view_04与view_05薄翼有局部黑色缺口及细节破碎，图像不能确定其是否来自UV接缝。[opinion]"
+        },
+        "normal_mip": {
+          "score": 4,
+          "evidence": [
+            "evidence_008",
+            "evidence_009",
+            "evidence_022"
+          ],
+          "reason": "normal的view_00翼面及view_02胸部保留总体方向变化，局部三角面痕迹可见；mip的view_00、view_02胸甲细纹明显模糊，但未见大块异色渗漏。只评价该组静态normal与mip图。[opinion]"
+        },
+        "uv_editability": {
+          "score": 3,
+          "evidence": [
+            "evidence_005"
+          ],
+          "reason": "UV图可见数个较大的连续岛，但右上大岛边界复杂、下部与左侧存在狭长尖角，左下还有微小独立碎片；对可见结构而言仍需整理，未进行实际编辑。[opinion]"
+        }
+      },
+      "major_defect": false
+    },
+    {
+      "id": "sample_C",
+      "scores": {
+        "appearance": {
+          "score": 4,
+          "evidence": [
+            "evidence_011",
+            "evidence_020"
+          ],
+          "reason": "view_00、view_02的金色胸甲和粉红翼膜主体接近参考；view_03翼缘及view_04平展翼部的轮廓与细节较粗，只据现有图像评价为接近可用。[opinion]"
+        },
+        "seams": {
+          "score": 4,
+          "evidence": [
+            "evidence_012",
+            "evidence_021"
+          ],
+          "reason": "view_00胸甲至翼根、view_02翼膜区域未见明显贯穿的颜色接缝；view_04与view_05薄翼有局部黑色缺口及细节破碎，图像不能确定其是否来自UV接缝。[opinion]"
+        },
+        "normal_mip": {
+          "score": 4,
+          "evidence": [
+            "evidence_013",
+            "evidence_014",
+            "evidence_022"
+          ],
+          "reason": "normal的view_00翼面及view_02胸部保留总体方向变化，局部三角面痕迹可见；mip的view_00、view_02胸甲细纹明显模糊，但未见大块异色渗漏。只评价该组静态normal与mip图。[opinion]"
+        },
+        "uv_editability": {
+          "score": 3,
+          "evidence": [
+            "evidence_010"
+          ],
+          "reason": "UV图可见数个较大的连续岛，但右上大岛边界复杂、下部与左侧存在狭长尖角，左下还有微小独立碎片；对可见结构而言仍需整理，未进行实际编辑。[opinion]"
+        }
+      },
+      "major_defect": false
+    },
+    {
+      "id": "sample_D",
+      "scores": {
+        "appearance": {
+          "score": 4,
+          "evidence": [
+            "evidence_016",
+            "evidence_020"
+          ],
+          "reason": "view_00、view_02的金色胸甲和粉红翼膜主体接近参考；view_03翼缘及view_04平展翼部的轮廓与细节较粗，只据现有图像评价为接近可用。[opinion]"
+        },
+        "seams": {
+          "score": 4,
+          "evidence": [
+            "evidence_017",
+            "evidence_021"
+          ],
+          "reason": "view_00胸甲至翼根、view_02翼膜区域未见明显贯穿的颜色接缝；view_04与view_05薄翼有局部黑色缺口及细节破碎，图像不能确定其是否来自UV接缝。[opinion]"
+        },
+        "normal_mip": {
+          "score": 4,
+          "evidence": [
+            "evidence_018",
+            "evidence_019",
+            "evidence_022"
+          ],
+          "reason": "normal的view_00翼面及view_02胸部保留总体方向变化，局部三角面痕迹可见；mip的view_00、view_02胸甲细纹明显模糊，但未见大块异色渗漏。只评价该组静态normal与mip图。[opinion]"
+        },
+        "uv_editability": {
+          "score": 3,
+          "evidence": [
+            "evidence_015"
+          ],
+          "reason": "UV图可见数个较大的连续岛，但右上大岛边界复杂、下部与左侧存在狭长尖角，左下还有微小独立碎片；对可见结构而言仍需整理，未进行实际编辑。[opinion]"
+        }
+      },
+      "major_defect": false
+    }
+  ],
+  "preferences": [
+    {
+      "first": "sample_A",
+      "second": "sample_B",
+      "preference": "tie",
+      "evidence": [
+        "evidence_000",
+        "evidence_005",
+        "evidence_001",
+        "evidence_006",
+        "evidence_002",
+        "evidence_007",
+        "evidence_003",
+        "evidence_008",
+        "evidence_004",
+        "evidence_009"
+      ],
+      "reason": "manifest中双方对应类别的图像哈希逐项相同；按该哈希去重观察，两者view_00胸甲、view_02翼膜、view_04薄翼与UV岛结构均由同一视觉证据支持，因此同分。[verified: manifest.json evidence条目的sha256]"
+    },
+    {
+      "first": "sample_A",
+      "second": "sample_C",
+      "preference": "tie",
+      "evidence": [
+        "evidence_000",
+        "evidence_010",
+        "evidence_001",
+        "evidence_011",
+        "evidence_002",
+        "evidence_012",
+        "evidence_003",
+        "evidence_013",
+        "evidence_004",
+        "evidence_014"
+      ],
+      "reason": "manifest中双方对应类别的图像哈希逐项相同；按该哈希去重观察，两者view_00胸甲、view_02翼膜、view_04薄翼与UV岛结构均由同一视觉证据支持，因此同分。[verified: manifest.json evidence条目的sha256]"
+    },
+    {
+      "first": "sample_A",
+      "second": "sample_D",
+      "preference": "tie",
+      "evidence": [
+        "evidence_000",
+        "evidence_015",
+        "evidence_001",
+        "evidence_016",
+        "evidence_002",
+        "evidence_017",
+        "evidence_003",
+        "evidence_018",
+        "evidence_004",
+        "evidence_019"
+      ],
+      "reason": "manifest中双方对应类别的图像哈希逐项相同；按该哈希去重观察，两者view_00胸甲、view_02翼膜、view_04薄翼与UV岛结构均由同一视觉证据支持，因此同分。[verified: manifest.json evidence条目的sha256]"
+    },
+    {
+      "first": "sample_B",
+      "second": "sample_C",
+      "preference": "tie",
+      "evidence": [
+        "evidence_005",
+        "evidence_010",
+        "evidence_006",
+        "evidence_011",
+        "evidence_007",
+        "evidence_012",
+        "evidence_008",
+        "evidence_013",
+        "evidence_009",
+        "evidence_014"
+      ],
+      "reason": "manifest中双方对应类别的图像哈希逐项相同；按该哈希去重观察，两者view_00胸甲、view_02翼膜、view_04薄翼与UV岛结构均由同一视觉证据支持，因此同分。[verified: manifest.json evidence条目的sha256]"
+    },
+    {
+      "first": "sample_B",
+      "second": "sample_D",
+      "preference": "tie",
+      "evidence": [
+        "evidence_005",
+        "evidence_015",
+        "evidence_006",
+        "evidence_016",
+        "evidence_007",
+        "evidence_017",
+        "evidence_008",
+        "evidence_018",
+        "evidence_009",
+        "evidence_019"
+      ],
+      "reason": "manifest中双方对应类别的图像哈希逐项相同；按该哈希去重观察，两者view_00胸甲、view_02翼膜、view_04薄翼与UV岛结构均由同一视觉证据支持，因此同分。[verified: manifest.json evidence条目的sha256]"
+    },
+    {
+      "first": "sample_C",
+      "second": "sample_D",
+      "preference": "tie",
+      "evidence": [
+        "evidence_010",
+        "evidence_015",
+        "evidence_011",
+        "evidence_016",
+        "evidence_012",
+        "evidence_017",
+        "evidence_013",
+        "evidence_018",
+        "evidence_014",
+        "evidence_019"
+      ],
+      "reason": "manifest中双方对应类别的图像哈希逐项相同；按该哈希去重观察，两者view_00胸甲、view_02翼膜、view_04薄翼与UV岛结构均由同一视觉证据支持，因此同分。[verified: manifest.json evidence条目的sha256]"
+    }
+  ]
+}

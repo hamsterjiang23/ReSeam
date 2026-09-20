@@ -1,0 +1,136 @@
+{
+  "manifest_sha256": "e18c46e917f058edfad7992676ec989fd862e6e4d3e5497c9a685e7a20d8f38f",
+  "mapping": [
+    {
+      "sample_id": "sample_A",
+      "identity": "seam_pack"
+    },
+    {
+      "evidence_id": "evidence_000",
+      "source_path": "E:\\ReSem\\artifacts\\v2_joint\\v2_joint_round01\\dragon\\seed_43\\seam_pack\\uv.png",
+      "source_sha256": "96f1bf8e381501f94a687f29665402497d8c135279970a20028cdd702bdd919c"
+    },
+    {
+      "evidence_id": "evidence_001",
+      "source_path": "E:\\ReSem\\artifacts\\v2_joint\\v2_joint_round01\\review_prepared\\dragon_seed_43\\seam_pack_base.png",
+      "source_sha256": "608d75b59b4d49fae0aa28fc0f7943dc684d2d4599c3ec273c24e2df7ecfa25d"
+    },
+    {
+      "evidence_id": "evidence_002",
+      "source_path": "E:\\ReSem\\artifacts\\v2_joint\\v2_joint_round01\\review_prepared\\dragon_seed_43\\seam_pack_seam_crop.png",
+      "source_sha256": "1b55ed8cd2422aaeeaecd5c952992b60dc553c9565863f8c0e788eb6888178be"
+    },
+    {
+      "evidence_id": "evidence_003",
+      "source_path": "E:\\ReSem\\artifacts\\v2_joint\\v2_joint_round01\\review_prepared\\dragon_seed_43\\seam_pack_normal.png",
+      "source_sha256": "510566215fb21bf1ed4bd5d44334575673290f3cbb20960d757eb639a46fbf35"
+    },
+    {
+      "evidence_id": "evidence_004",
+      "source_path": "E:\\ReSem\\artifacts\\v2_joint\\v2_joint_round01\\review_prepared\\dragon_seed_43\\seam_pack_mip.png",
+      "source_sha256": "b3602a8e48963e30bc9b6877a8db07b5f49b02b3699bc52fc5ba938ba133d8f6"
+    },
+    {
+      "sample_id": "sample_B",
+      "identity": "reuse_pack"
+    },
+    {
+      "evidence_id": "evidence_005",
+      "source_path": "E:\\ReSem\\artifacts\\v2_joint\\v2_joint_round01\\dragon\\seed_43\\reuse_pack\\uv.png",
+      "source_sha256": "96f1bf8e381501f94a687f29665402497d8c135279970a20028cdd702bdd919c"
+    },
+    {
+      "evidence_id": "evidence_006",
+      "source_path": "E:\\ReSem\\artifacts\\v2_joint\\v2_joint_round01\\review_prepared\\dragon_seed_43\\reuse_pack_base.png",
+      "source_sha256": "608d75b59b4d49fae0aa28fc0f7943dc684d2d4599c3ec273c24e2df7ecfa25d"
+    },
+    {
+      "evidence_id": "evidence_007",
+      "source_path": "E:\\ReSem\\artifacts\\v2_joint\\v2_joint_round01\\review_prepared\\dragon_seed_43\\reuse_pack_seam_crop.png",
+      "source_sha256": "1b55ed8cd2422aaeeaecd5c952992b60dc553c9565863f8c0e788eb6888178be"
+    },
+    {
+      "evidence_id": "evidence_008",
+      "source_path": "E:\\ReSem\\artifacts\\v2_joint\\v2_joint_round01\\review_prepared\\dragon_seed_43\\reuse_pack_normal.png",
+      "source_sha256": "510566215fb21bf1ed4bd5d44334575673290f3cbb20960d757eb639a46fbf35"
+    },
+    {
+      "evidence_id": "evidence_009",
+      "source_path": "E:\\ReSem\\artifacts\\v2_joint\\v2_joint_round01\\review_prepared\\dragon_seed_43\\reuse_pack_mip.png",
+      "source_sha256": "b3602a8e48963e30bc9b6877a8db07b5f49b02b3699bc52fc5ba938ba133d8f6"
+    },
+    {
+      "sample_id": "sample_C",
+      "identity": "packing_only"
+    },
+    {
+      "evidence_id": "evidence_010",
+      "source_path": "E:\\ReSem\\artifacts\\v2_joint\\v2_joint_round01\\dragon\\seed_43\\packing_only\\uv.png",
+      "source_sha256": "96f1bf8e381501f94a687f29665402497d8c135279970a20028cdd702bdd919c"
+    },
+    {
+      "evidence_id": "evidence_011",
+      "source_path": "E:\\ReSem\\artifacts\\v2_joint\\v2_joint_round01\\review_prepared\\dragon_seed_43\\packing_only_base.png",
+      "source_sha256": "608d75b59b4d49fae0aa28fc0f7943dc684d2d4599c3ec273c24e2df7ecfa25d"
+    },
+    {
+      "evidence_id": "evidence_012",
+      "source_path": "E:\\ReSem\\artifacts\\v2_joint\\v2_joint_round01\\review_prepared\\dragon_seed_43\\packing_only_seam_crop.png",
+      "source_sha256": "1b55ed8cd2422aaeeaecd5c952992b60dc553c9565863f8c0e788eb6888178be"
+    },
+    {
+      "evidence_id": "evidence_013",
+      "source_path": "E:\\ReSem\\artifacts\\v2_joint\\v2_joint_round01\\review_prepared\\dragon_seed_43\\packing_only_normal.png",
+      "source_sha256": "510566215fb21bf1ed4bd5d44334575673290f3cbb20960d757eb639a46fbf35"
+    },
+    {
+      "evidence_id": "evidence_014",
+      "source_path": "E:\\ReSem\\artifacts\\v2_joint\\v2_joint_round01\\review_prepared\\dragon_seed_43\\packing_only_mip.png",
+      "source_sha256": "b3602a8e48963e30bc9b6877a8db07b5f49b02b3699bc52fc5ba938ba133d8f6"
+    },
+    {
+      "sample_id": "sample_D",
+      "identity": "joint"
+    },
+    {
+      "evidence_id": "evidence_015",
+      "source_path": "E:\\ReSem\\artifacts\\v2_joint\\v2_joint_round01\\dragon\\seed_43\\joint\\uv.png",
+      "source_sha256": "96f1bf8e381501f94a687f29665402497d8c135279970a20028cdd702bdd919c"
+    },
+    {
+      "evidence_id": "evidence_016",
+      "source_path": "E:\\ReSem\\artifacts\\v2_joint\\v2_joint_round01\\review_prepared\\dragon_seed_43\\joint_base.png",
+      "source_sha256": "608d75b59b4d49fae0aa28fc0f7943dc684d2d4599c3ec273c24e2df7ecfa25d"
+    },
+    {
+      "evidence_id": "evidence_017",
+      "source_path": "E:\\ReSem\\artifacts\\v2_joint\\v2_joint_round01\\review_prepared\\dragon_seed_43\\joint_seam_crop.png",
+      "source_sha256": "1b55ed8cd2422aaeeaecd5c952992b60dc553c9565863f8c0e788eb6888178be"
+    },
+    {
+      "evidence_id": "evidence_018",
+      "source_path": "E:\\ReSem\\artifacts\\v2_joint\\v2_joint_round01\\review_prepared\\dragon_seed_43\\joint_normal.png",
+      "source_sha256": "510566215fb21bf1ed4bd5d44334575673290f3cbb20960d757eb639a46fbf35"
+    },
+    {
+      "evidence_id": "evidence_019",
+      "source_path": "E:\\ReSem\\artifacts\\v2_joint\\v2_joint_round01\\review_prepared\\dragon_seed_43\\joint_mip.png",
+      "source_sha256": "b3602a8e48963e30bc9b6877a8db07b5f49b02b3699bc52fc5ba938ba133d8f6"
+    },
+    {
+      "evidence_id": "evidence_020",
+      "source_path": "E:\\ReSem\\artifacts\\v2_joint\\v2_joint_round01\\review_prepared\\dragon_seed_43\\reference_base.png",
+      "source_sha256": "676cb0ae5105c645813b1ef34c95504797a27541097989492522df4a87291569"
+    },
+    {
+      "evidence_id": "evidence_021",
+      "source_path": "E:\\ReSem\\artifacts\\v2_joint\\v2_joint_round01\\review_prepared\\dragon_seed_43\\reference_seam_crop.png",
+      "source_sha256": "24f432c3bd645b7a29c0be376f62e19d1553b19e98217e23bb7f754bb14f67ed"
+    },
+    {
+      "evidence_id": "evidence_022",
+      "source_path": "E:\\ReSem\\artifacts\\v2_joint\\v2_joint_round01\\review_prepared\\dragon_seed_43\\reference_normal.png",
+      "source_sha256": "a3a6e9444111b2ab2af96319d4c38e27d6d81bce5927725b9a56d021eab0b0bd"
+    }
+  ]
+}

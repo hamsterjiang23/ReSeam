@@ -1,0 +1,32 @@
+{
+  "template_sha256": "8b4f8fc7226b83ac165b7b0beb00c814a2edb1c60b64b3db911692153dc069ec",
+  "guard_sha256": "ce80593edce45b84841c5ff5bf48f1770d74f577bcee1c6372a98ae0b2ce4f66",
+  "batch_runner_sha256": "cbc8b84c027f78bb5dc9df96a98a4fdcfe83e24c10d69c81a0601d5f6059209a",
+  "grading_rubric_sha256": "56737b763dbfeec0293c8bbd59226344048fed50184427c566d1daff1e661d0c",
+  "batch_reservation_seconds": 210,
+  "review_deadline_reserve_seconds": 30,
+  "review_call_limit_seconds": 180,
+  "encoding": "UTF-8, python -X utf8",
+  "context": "fresh fork_turns=none; no method identities or prior results",
+  "execution_revisions": [
+    {
+      "version": 2,
+      "reason": "Two dispatched reviews missed the original wall-clock window; one timely review is retained. Adjustment based only on execution status, without reading ratings.",
+      "previous_call_limit_seconds": 180,
+      "call_limit_seconds": 420,
+      "batch_reservation_seconds": 450,
+      "review_deadline_reserve_seconds": 30,
+      "concurrency": "two fresh reviewers then one; four available slots include parent and coordinator",
+      "unchanged": [
+        "rubric",
+        "images",
+        "anonymous mapping",
+        "algorithm",
+        "technical gates",
+        "one retry maximum",
+        "28800 total seconds",
+        "3600 review-stage seconds"
+      ]
+    }
+  ]
+}

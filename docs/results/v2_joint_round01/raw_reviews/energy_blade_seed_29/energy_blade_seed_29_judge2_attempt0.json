@@ -1,0 +1,244 @@
+{
+  "packet_sha256": "81c73ee647ab324d5c0ce09a8a7986ab2c18b9dc7d076f49b9af38f6a4959998",
+  "reviewer_id": "energy_blade_seed_29_judge2_attempt0",
+  "samples": [
+    {
+      "id": "sample_A",
+      "scores": {
+        "appearance": {
+          "score": 5,
+          "evidence": [
+            "evidence_001",
+            "evidence_020"
+          ],
+          "reason": "view_00至view_05中红色长刃、金色尖刺与灰褐核心的位置和轮廓与参考接近，view_04和view_05的长刃纹理未见明显缺失；仅据给定图像评为未见明显问题。[opinion]"
+        },
+        "seams": {
+          "score": 5,
+          "evidence": [
+            "evidence_002",
+            "evidence_021"
+          ],
+          "reason": "center crop的view_00及view_02核心与刃根连接、view_04及view_05红色长刃均未见明显新增裂缝或跨面错色；灰色核心的斑驳在参考中亦存在。[opinion]"
+        },
+        "normal_mip": {
+          "score": 5,
+          "evidence": [
+            "evidence_003",
+            "evidence_004",
+            "evidence_022"
+          ],
+          "reason": "normal的view_02青绿核心及view_04紫色长刃与参考方向分区接近，未见突兀法线色块；mip的view_04及view_05长刃略软化，但未见明显串色或新增黑缝。仅评价提供的静态尺度。[opinion]"
+        },
+        "uv_editability": {
+          "score": 3,
+          "evidence": [
+            "evidence_000"
+          ],
+          "reason": "UV图左侧主长刃保持大块连接，但底部及左侧有孤立细三角，右侧若干弯折岛与狭长尖端，整理和局部选择仍需修整。仅评价可见结构，不推断重叠合法性或实际编辑耗时。[opinion]"
+        }
+      },
+      "major_defect": false
+    },
+    {
+      "id": "sample_B",
+      "scores": {
+        "appearance": {
+          "score": 5,
+          "evidence": [
+            "evidence_006",
+            "evidence_020"
+          ],
+          "reason": "view_00至view_05中红色长刃、金色尖刺与灰褐核心的位置和轮廓与参考接近，view_04和view_05的长刃纹理未见明显缺失；仅据给定图像评为未见明显问题。[opinion]"
+        },
+        "seams": {
+          "score": 5,
+          "evidence": [
+            "evidence_007",
+            "evidence_021"
+          ],
+          "reason": "center crop的view_00及view_02核心与刃根连接、view_04及view_05红色长刃均未见明显新增裂缝或跨面错色；灰色核心的斑驳在参考中亦存在。[opinion]"
+        },
+        "normal_mip": {
+          "score": 5,
+          "evidence": [
+            "evidence_008",
+            "evidence_009",
+            "evidence_022"
+          ],
+          "reason": "normal的view_02青绿核心及view_04紫色长刃与参考方向分区接近，未见突兀法线色块；mip的view_04及view_05长刃略软化，但未见明显串色或新增黑缝。仅评价提供的静态尺度。[opinion]"
+        },
+        "uv_editability": {
+          "score": 3,
+          "evidence": [
+            "evidence_005"
+          ],
+          "reason": "UV图中央长刃有连续大岛，但下侧小三角、左下细长岛和右上尖细岛仍零散，整体方向不统一，编辑结构需修整。仅评价可见结构，不推断重叠合法性或实际编辑耗时。[opinion]"
+        }
+      },
+      "major_defect": false
+    },
+    {
+      "id": "sample_C",
+      "scores": {
+        "appearance": {
+          "score": 5,
+          "evidence": [
+            "evidence_011",
+            "evidence_020"
+          ],
+          "reason": "view_00至view_05中红色长刃、金色尖刺与灰褐核心的位置和轮廓与参考接近，view_04和view_05的长刃纹理未见明显缺失；仅据给定图像评为未见明显问题。[opinion]"
+        },
+        "seams": {
+          "score": 5,
+          "evidence": [
+            "evidence_012",
+            "evidence_021"
+          ],
+          "reason": "center crop的view_00及view_02核心与刃根连接、view_04及view_05红色长刃均未见明显新增裂缝或跨面错色；灰色核心的斑驳在参考中亦存在。[opinion]"
+        },
+        "normal_mip": {
+          "score": 5,
+          "evidence": [
+            "evidence_013",
+            "evidence_014",
+            "evidence_022"
+          ],
+          "reason": "normal的view_02青绿核心及view_04紫色长刃与参考方向分区接近，未见突兀法线色块；mip的view_04及view_05长刃略软化，但未见明显串色或新增黑缝。仅评价提供的静态尺度。[opinion]"
+        },
+        "uv_editability": {
+          "score": 3,
+          "evidence": [
+            "evidence_010"
+          ],
+          "reason": "UV图中央长刃有连续大岛，但下侧小三角、左下细长岛和右上尖细岛仍零散，整体方向不统一，编辑结构需修整。按manifest相同哈希复用已查看的sample_B图像观察。仅评价可见结构，不推断重叠合法性或实际编辑耗时。[opinion]"
+        }
+      },
+      "major_defect": false
+    },
+    {
+      "id": "sample_D",
+      "scores": {
+        "appearance": {
+          "score": 5,
+          "evidence": [
+            "evidence_016",
+            "evidence_020"
+          ],
+          "reason": "view_00至view_05中红色长刃、金色尖刺与灰褐核心的位置和轮廓与参考接近，view_04和view_05的长刃纹理未见明显缺失；仅据给定图像评为未见明显问题。[opinion]"
+        },
+        "seams": {
+          "score": 5,
+          "evidence": [
+            "evidence_017",
+            "evidence_021"
+          ],
+          "reason": "center crop的view_00及view_02核心与刃根连接、view_04及view_05红色长刃均未见明显新增裂缝或跨面错色；灰色核心的斑驳在参考中亦存在。[opinion]"
+        },
+        "normal_mip": {
+          "score": 5,
+          "evidence": [
+            "evidence_018",
+            "evidence_019",
+            "evidence_022"
+          ],
+          "reason": "normal的view_02青绿核心及view_04紫色长刃与参考方向分区接近，未见突兀法线色块；mip的view_04及view_05长刃略软化，但未见明显串色或新增黑缝。仅评价提供的静态尺度。[opinion]"
+        },
+        "uv_editability": {
+          "score": 3,
+          "evidence": [
+            "evidence_015"
+          ],
+          "reason": "UV图下方斜向长刃保留连续大岛，但中央孤立三角、底边碎片与右上弯折狭长岛仍分散，局部选择和方向整理需修整。仅评价可见结构，不推断重叠合法性或实际编辑耗时。[opinion]"
+        }
+      },
+      "major_defect": false
+    }
+  ],
+  "preferences": [
+    {
+      "first": "sample_A",
+      "second": "sample_B",
+      "preference": "tie",
+      "evidence": [
+        "evidence_000",
+        "evidence_005",
+        "evidence_002",
+        "evidence_007",
+        "evidence_004",
+        "evidence_009"
+      ],
+      "reason": "双方center crop的view_04、view_05长刃及核心均未见足以建立偏好的接缝差异，mip外观接近；UV排布虽异，均保留大长刃岛及孤立细碎岛，未见稳定编辑性优势，判为持平。[opinion]"
+    },
+    {
+      "first": "sample_A",
+      "second": "sample_C",
+      "preference": "tie",
+      "evidence": [
+        "evidence_000",
+        "evidence_010",
+        "evidence_002",
+        "evidence_012",
+        "evidence_004",
+        "evidence_014"
+      ],
+      "reason": "双方center crop的view_04、view_05长刃及核心均未见足以建立偏好的接缝差异，mip外观接近；UV排布虽异，均保留大长刃岛及孤立细碎岛，未见稳定编辑性优势，判为持平。[opinion]"
+    },
+    {
+      "first": "sample_A",
+      "second": "sample_D",
+      "preference": "tie",
+      "evidence": [
+        "evidence_000",
+        "evidence_015",
+        "evidence_002",
+        "evidence_017",
+        "evidence_004",
+        "evidence_019"
+      ],
+      "reason": "双方center crop的view_04、view_05长刃及核心均未见足以建立偏好的接缝差异，mip外观接近；UV排布虽异，均保留大长刃岛及孤立细碎岛，未见稳定编辑性优势，判为持平。[opinion]"
+    },
+    {
+      "first": "sample_B",
+      "second": "sample_C",
+      "preference": "tie",
+      "evidence": [
+        "evidence_005",
+        "evidence_010",
+        "evidence_007",
+        "evidence_012",
+        "evidence_009",
+        "evidence_014"
+      ],
+      "reason": "双方UV、接缝局部与mip图在manifest中分别具有相同哈希；保留双方证据ID。可见结构与显示质量一致，判为持平。[opinion]"
+    },
+    {
+      "first": "sample_B",
+      "second": "sample_D",
+      "preference": "tie",
+      "evidence": [
+        "evidence_005",
+        "evidence_015",
+        "evidence_007",
+        "evidence_017",
+        "evidence_009",
+        "evidence_019"
+      ],
+      "reason": "双方center crop的view_04、view_05长刃及核心均未见足以建立偏好的接缝差异，mip外观接近；UV排布虽异，均保留大长刃岛及孤立细碎岛，未见稳定编辑性优势，判为持平。[opinion]"
+    },
+    {
+      "first": "sample_C",
+      "second": "sample_D",
+      "preference": "tie",
+      "evidence": [
+        "evidence_010",
+        "evidence_015",
+        "evidence_012",
+        "evidence_017",
+        "evidence_014",
+        "evidence_019"
+      ],
+      "reason": "双方center crop的view_04、view_05长刃及核心均未见足以建立偏好的接缝差异，mip外观接近；UV排布虽异，均保留大长刃岛及孤立细碎岛，未见稳定编辑性优势，判为持平。[opinion]"
+    }
+  ]
+}

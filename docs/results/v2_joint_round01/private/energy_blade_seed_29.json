@@ -1,0 +1,136 @@
+{
+  "manifest_sha256": "81c73ee647ab324d5c0ce09a8a7986ab2c18b9dc7d076f49b9af38f6a4959998",
+  "mapping": [
+    {
+      "sample_id": "sample_A",
+      "identity": "joint"
+    },
+    {
+      "evidence_id": "evidence_000",
+      "source_path": "E:\\ReSem\\artifacts\\v2_joint\\v2_joint_round01\\energy_blade\\seed_29\\joint\\uv.png",
+      "source_sha256": "7b6c7e8ddc2db9bf8e286e8d43ecceeb998cbc68e6d71be6097247b149b85aec"
+    },
+    {
+      "evidence_id": "evidence_001",
+      "source_path": "E:\\ReSem\\artifacts\\v2_joint\\v2_joint_round01\\review_prepared\\energy_blade_seed_29\\joint_base.png",
+      "source_sha256": "119e1f8972ae068b48eff349617ae8e5a20832804f884fa71a3e219e1db0ab85"
+    },
+    {
+      "evidence_id": "evidence_002",
+      "source_path": "E:\\ReSem\\artifacts\\v2_joint\\v2_joint_round01\\review_prepared\\energy_blade_seed_29\\joint_seam_crop.png",
+      "source_sha256": "821ebe8e892fe5383f640bd841498fdd3ad7eae4e0b49ad37675787f2d2d1a78"
+    },
+    {
+      "evidence_id": "evidence_003",
+      "source_path": "E:\\ReSem\\artifacts\\v2_joint\\v2_joint_round01\\review_prepared\\energy_blade_seed_29\\joint_normal.png",
+      "source_sha256": "2a941b327aa297ab68a67dd88c759846630c4ee4069a10cbefa52bc478628f54"
+    },
+    {
+      "evidence_id": "evidence_004",
+      "source_path": "E:\\ReSem\\artifacts\\v2_joint\\v2_joint_round01\\review_prepared\\energy_blade_seed_29\\joint_mip.png",
+      "source_sha256": "273ecd4f4c0178cfbf7861cd8484ed091c23781bf5c52591ef1e4ccf5a2ecdca"
+    },
+    {
+      "sample_id": "sample_B",
+      "identity": "reuse_pack"
+    },
+    {
+      "evidence_id": "evidence_005",
+      "source_path": "E:\\ReSem\\artifacts\\v2_joint\\v2_joint_round01\\energy_blade\\seed_29\\reuse_pack\\uv.png",
+      "source_sha256": "f68db29f9c051e44bd69731a145228d0c8bc05f536f3dc9f260253416e2a0271"
+    },
+    {
+      "evidence_id": "evidence_006",
+      "source_path": "E:\\ReSem\\artifacts\\v2_joint\\v2_joint_round01\\review_prepared\\energy_blade_seed_29\\reuse_pack_base.png",
+      "source_sha256": "7fb85cf83b7e143d7efe061070505a1a9aff11e612ddbbb6b630095907b91acf"
+    },
+    {
+      "evidence_id": "evidence_007",
+      "source_path": "E:\\ReSem\\artifacts\\v2_joint\\v2_joint_round01\\review_prepared\\energy_blade_seed_29\\reuse_pack_seam_crop.png",
+      "source_sha256": "7a2f05c4a6c8438637ca079d150416ef247c09cc971fbfb843072d5c5db73473"
+    },
+    {
+      "evidence_id": "evidence_008",
+      "source_path": "E:\\ReSem\\artifacts\\v2_joint\\v2_joint_round01\\review_prepared\\energy_blade_seed_29\\reuse_pack_normal.png",
+      "source_sha256": "c5f3b0eb1f21a65cee2ad152e3e21df1e9a8e13396d7b67c33d39ba0ab7ba008"
+    },
+    {
+      "evidence_id": "evidence_009",
+      "source_path": "E:\\ReSem\\artifacts\\v2_joint\\v2_joint_round01\\review_prepared\\energy_blade_seed_29\\reuse_pack_mip.png",
+      "source_sha256": "32d8beded627c69bc2ebe9b582ab7818f24d7d9d73249d98d312814edb236018"
+    },
+    {
+      "sample_id": "sample_C",
+      "identity": "packing_only"
+    },
+    {
+      "evidence_id": "evidence_010",
+      "source_path": "E:\\ReSem\\artifacts\\v2_joint\\v2_joint_round01\\energy_blade\\seed_29\\packing_only\\uv.png",
+      "source_sha256": "f68db29f9c051e44bd69731a145228d0c8bc05f536f3dc9f260253416e2a0271"
+    },
+    {
+      "evidence_id": "evidence_011",
+      "source_path": "E:\\ReSem\\artifacts\\v2_joint\\v2_joint_round01\\review_prepared\\energy_blade_seed_29\\packing_only_base.png",
+      "source_sha256": "7fb85cf83b7e143d7efe061070505a1a9aff11e612ddbbb6b630095907b91acf"
+    },
+    {
+      "evidence_id": "evidence_012",
+      "source_path": "E:\\ReSem\\artifacts\\v2_joint\\v2_joint_round01\\review_prepared\\energy_blade_seed_29\\packing_only_seam_crop.png",
+      "source_sha256": "7a2f05c4a6c8438637ca079d150416ef247c09cc971fbfb843072d5c5db73473"
+    },
+    {
+      "evidence_id": "evidence_013",
+      "source_path": "E:\\ReSem\\artifacts\\v2_joint\\v2_joint_round01\\review_prepared\\energy_blade_seed_29\\packing_only_normal.png",
+      "source_sha256": "c5f3b0eb1f21a65cee2ad152e3e21df1e9a8e13396d7b67c33d39ba0ab7ba008"
+    },
+    {
+      "evidence_id": "evidence_014",
+      "source_path": "E:\\ReSem\\artifacts\\v2_joint\\v2_joint_round01\\review_prepared\\energy_blade_seed_29\\packing_only_mip.png",
+      "source_sha256": "32d8beded627c69bc2ebe9b582ab7818f24d7d9d73249d98d312814edb236018"
+    },
+    {
+      "sample_id": "sample_D",
+      "identity": "seam_pack"
+    },
+    {
+      "evidence_id": "evidence_015",
+      "source_path": "E:\\ReSem\\artifacts\\v2_joint\\v2_joint_round01\\energy_blade\\seed_29\\seam_pack\\uv.png",
+      "source_sha256": "075a20da7a255408d25ed8e085b771a7d17d8e188e95b8f447d8dcedac40aeed"
+    },
+    {
+      "evidence_id": "evidence_016",
+      "source_path": "E:\\ReSem\\artifacts\\v2_joint\\v2_joint_round01\\review_prepared\\energy_blade_seed_29\\seam_pack_base.png",
+      "source_sha256": "d1886b0ccb4e51ea1cc16b1cc94ed1ac679e6e391b956bc754bda01baff5d09b"
+    },
+    {
+      "evidence_id": "evidence_017",
+      "source_path": "E:\\ReSem\\artifacts\\v2_joint\\v2_joint_round01\\review_prepared\\energy_blade_seed_29\\seam_pack_seam_crop.png",
+      "source_sha256": "6d700ae76e9d329573546ce6a6f110f4cce06ab071a1a9f7d3974c848f45678f"
+    },
+    {
+      "evidence_id": "evidence_018",
+      "source_path": "E:\\ReSem\\artifacts\\v2_joint\\v2_joint_round01\\review_prepared\\energy_blade_seed_29\\seam_pack_normal.png",
+      "source_sha256": "79f3171740d90d832b83d4287f28f414e60c386c09ec771f352d1b7110a3bf28"
+    },
+    {
+      "evidence_id": "evidence_019",
+      "source_path": "E:\\ReSem\\artifacts\\v2_joint\\v2_joint_round01\\review_prepared\\energy_blade_seed_29\\seam_pack_mip.png",
+      "source_sha256": "53e30e8fd0f0c8c3b3a8f5507dc635e9dd8bcb186301acf423942b7f8f19afce"
+    },
+    {
+      "evidence_id": "evidence_020",
+      "source_path": "E:\\ReSem\\artifacts\\v2_joint\\v2_joint_round01\\review_prepared\\energy_blade_seed_29\\reference_base.png",
+      "source_sha256": "3921be928ed6fb5794ba86024ace69f63597a3b8067ca1bf45f65e31767c4582"
+    },
+    {
+      "evidence_id": "evidence_021",
+      "source_path": "E:\\ReSem\\artifacts\\v2_joint\\v2_joint_round01\\review_prepared\\energy_blade_seed_29\\reference_seam_crop.png",
+      "source_sha256": "2393b4f6bfdcb29f024b7b16245e5afb5a077f3d018d247d49fc52ec8cfa983e"
+    },
+    {
+      "evidence_id": "evidence_022",
+      "source_path": "E:\\ReSem\\artifacts\\v2_joint\\v2_joint_round01\\review_prepared\\energy_blade_seed_29\\reference_normal.png",
+      "source_sha256": "d67002548f5acbc8228c08ed8b69be2d00d07fa113041dd0ec5a94c132c04832"
+    }
+  ]
+}

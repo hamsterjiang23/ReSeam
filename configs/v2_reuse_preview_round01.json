@@ -1,0 +1,20 @@
+{
+  "round_id": "v2_reuse_preview_round01",
+  "models": [
+    "energy_blade",
+    "dragon"
+  ],
+  "seconds_per_model": 300,
+  "inputs": {
+    "energy_blade": {
+      "pack/state.json": "9ef204e4a9ee86cfeab66c4943fe90fbda7a64e85cbf1d3175da08d49c0eeb26",
+      "blender/BaseColor.png": "29cbcc83973b216f43a3965989f0c6000fc36133a9a01aa1ea32b4bff38dba54",
+      "blender/bake.json": "28216ca898c58dbbf2a998780721f394fdc1a5933408af29b05cba1f011017d3"
+    },
+    "dragon": {
+      "pack/state.json": "ed0e20154aa6bf8ca4bb8d6364bea50c2d19831b98c322b6aeaed42c9ed6e7dc",
+      "blender/BaseColor.png": "fc0de9680986a426d52a7dab0908de9e2e250f10af7652791a376b2c354e325c",
+      "blender/bake.json": "1c1ef4491554175889827822900bd36306d0cc7cf5f86754aa0788d7131eaae9"
+    }
+  }
+}

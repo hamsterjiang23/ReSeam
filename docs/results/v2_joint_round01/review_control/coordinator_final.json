@@ -1,0 +1,255 @@
+{
+  "status": "COMPLETE",
+  "active_agents": [],
+  "review_used_seconds": 1456.8129999999983,
+  "review_remaining_seconds": 2143.1870000000017,
+  "review_cap_seconds": 3600.0,
+  "valid_count": 18,
+  "attempt_count": 20,
+  "all_fresh_context": true,
+  "all_agent_ids_recorded": true,
+  "packets": [
+    {
+      "packet": "dragon_seed_17",
+      "valid_count": 3,
+      "attempt_count": 3,
+      "records": [
+        {
+          "reviewer_id": "dragon_seed_17_judge1_attempt0",
+          "agent_id": "/root/blind_review_coordinator/dragon_seed_17_judge1_attempt0",
+          "attempt": 0,
+          "finished_file_unix": 1789890616.24478,
+          "raw_sha256": "fe860bff536a438e7df71e47dc2a9d70806e4ee5a1e78e06f6dd84d84767b671",
+          "status": "VALID_IMPORTED",
+          "imported": "E:/ReSem/artifacts/v2_joint/v2_joint_round01/reviews/dragon_seed_17/fdb38ae7c5f7674e.json"
+        },
+        {
+          "reviewer_id": "dragon_seed_17_judge2_attempt0",
+          "agent_id": "/root/blind_review_coordinator/dragon_seed_17_judge2_attempt0",
+          "attempt": 0,
+          "finished_file_unix": 1789890621.6936643,
+          "raw_sha256": "7b342db991ec36053f42c2231fba894b9fb7324effd4b1e78211126b6fb716c3",
+          "status": "VALID_IMPORTED",
+          "imported": "E:/ReSem/artifacts/v2_joint/v2_joint_round01/reviews/dragon_seed_17/1ada350bb04c94f1.json"
+        },
+        {
+          "reviewer_id": "dragon_seed_17_judge3_attempt0",
+          "agent_id": "/root/blind_review_coordinator/dragon_seed_17_judge3_attempt0",
+          "attempt": 0,
+          "finished_file_unix": 1789890690.902837,
+          "raw_sha256": "111b7f680e9da05e37dd2cfb02ef3ce2207a634896c9e585eb1ec928d44a11f9",
+          "status": "VALID_IMPORTED",
+          "imported": "E:/ReSem/artifacts/v2_joint/v2_joint_round01/reviews/dragon_seed_17/8cc34259d7730dbb.json"
+        }
+      ]
+    },
+    {
+      "packet": "dragon_seed_29",
+      "valid_count": 3,
+      "attempt_count": 3,
+      "records": [
+        {
+          "reviewer_id": "dragon_seed_29_judge1_attempt0",
+          "agent_id": "/root/blind_review_coordinator/dragon_seed_29_judge1_attempt0",
+          "attempt": 0,
+          "finished_file_unix": 1789890773.9901733,
+          "raw_sha256": "4a807e43d7851aa6bdc594c9375ca85d45035d22f70c5ac2760291074fceb959",
+          "status": "VALID_IMPORTED",
+          "imported": "E:/ReSem/artifacts/v2_joint/v2_joint_round01/reviews/dragon_seed_29/b4a60bae8f7d7780.json"
+        },
+        {
+          "reviewer_id": "dragon_seed_29_judge2_attempt0",
+          "agent_id": "/root/blind_review_coordinator/dragon_seed_29_judge2_attempt0",
+          "attempt": 0,
+          "finished_file_unix": 1789890783.0945535,
+          "raw_sha256": "cad458e88948f1141e048466ccf44eec0162b1e2a1a7bbd96bfe999cb2fd3d68",
+          "status": "VALID_IMPORTED",
+          "imported": "E:/ReSem/artifacts/v2_joint/v2_joint_round01/reviews/dragon_seed_29/bd73c7c6aec8a7b8.json"
+        },
+        {
+          "reviewer_id": "dragon_seed_29_judge3_attempt0",
+          "agent_id": "/root/blind_review_coordinator/dragon_seed_29_judge3_attempt0",
+          "attempt": 0,
+          "finished_file_unix": 1789890857.399573,
+          "raw_sha256": "a3740761f91e98334235a734df0e30ecfcad3992cf75091efe185f768cecb5e6",
+          "status": "VALID_IMPORTED",
+          "imported": "E:/ReSem/artifacts/v2_joint/v2_joint_round01/reviews/dragon_seed_29/ca0b0bb3ab7440d4.json"
+        }
+      ]
+    },
+    {
+      "packet": "dragon_seed_43",
+      "valid_count": 3,
+      "attempt_count": 3,
+      "records": [
+        {
+          "reviewer_id": "dragon_seed_43_judge1_attempt0",
+          "agent_id": "/root/blind_review_coordinator/dragon_seed_43_judge1_attempt0",
+          "attempt": 0,
+          "finished_file_unix": 1789890935.5493405,
+          "raw_sha256": "c4eeeb0909de9be7272ada11eb70259bfd768e03e1587005d0bd1eb67d3d716b",
+          "status": "VALID_IMPORTED",
+          "imported": "E:/ReSem/artifacts/v2_joint/v2_joint_round01/reviews/dragon_seed_43/00b3422133796ed1.json"
+        },
+        {
+          "reviewer_id": "dragon_seed_43_judge2_attempt0",
+          "agent_id": "/root/blind_review_coordinator/dragon_seed_43_judge2_attempt0",
+          "attempt": 0,
+          "finished_file_unix": 1789890937.544788,
+          "raw_sha256": "cf06065e855d55124dac92cdd5be967c77821cfdd044741055109e5a51301cac",
+          "status": "VALID_IMPORTED",
+          "imported": "E:/ReSem/artifacts/v2_joint/v2_joint_round01/reviews/dragon_seed_43/ac2b3f39976c1399.json"
+        },
+        {
+          "reviewer_id": "dragon_seed_43_judge3_attempt0",
+          "agent_id": "/root/blind_review_coordinator/dragon_seed_43_judge3_attempt0",
+          "attempt": 0,
+          "finished_file_unix": 1789891015.7368212,
+          "raw_sha256": "2ca86f0321e6f56bf6dd76fec044bcb21aa1ad7030a360041e220eb512c3397b",
+          "status": "VALID_IMPORTED",
+          "imported": "E:/ReSem/artifacts/v2_joint/v2_joint_round01/reviews/dragon_seed_43/00ba13c2188d7c61.json"
+        }
+      ]
+    },
+    {
+      "packet": "energy_blade_seed_17",
+      "valid_count": 3,
+      "attempt_count": 5,
+      "records": [
+        {
+          "reviewer_id": "energy_blade_seed_17_judge1_attempt0",
+          "agent_id": "/root/blind_review_coordinator/energy_blade_seed_17_judge1_attempt0",
+          "attempt": 0,
+          "status": "INVALID_OR_MISSING",
+          "reason": "MISSING_REVIEW"
+        },
+        {
+          "reviewer_id": "energy_blade_seed_17_judge2_attempt0",
+          "agent_id": "/root/blind_review_coordinator/energy_blade_seed_17_judge2_attempt0",
+          "attempt": 0,
+          "status": "INVALID_OR_MISSING",
+          "reason": "MISSING_REVIEW"
+        },
+        {
+          "reviewer_id": "energy_blade_seed_17_judge1_attempt1",
+          "agent_id": "/root/blind_review_coordinator/energy_blade_seed_17_judge1_attempt1",
+          "attempt": 1,
+          "finished_file_unix": 1789890134.8468864,
+          "raw_sha256": "b60f5fdc22fb36394276a3fdcbc65702828e300ecf731527d560ff1bb30c6ede",
+          "status": "VALID_IMPORTED",
+          "imported": "E:/ReSem/artifacts/v2_joint/v2_joint_round01/reviews/energy_blade_seed_17/e4d08eada79ccea0.json"
+        },
+        {
+          "reviewer_id": "energy_blade_seed_17_judge2_attempt1",
+          "agent_id": "/root/blind_review_coordinator/energy_blade_seed_17_judge2_attempt1",
+          "attempt": 1,
+          "finished_file_unix": 1789890138.901393,
+          "raw_sha256": "540ba360d0fcf64ab8f846adb3035de8751ad7fdeafe808fc98bd9ad98620460",
+          "status": "VALID_IMPORTED",
+          "imported": "E:/ReSem/artifacts/v2_joint/v2_joint_round01/reviews/energy_blade_seed_17/52934cde29ff0f39.json"
+        },
+        {
+          "reviewer_id": "energy_blade_seed_17_judge3_attempt0",
+          "agent_id": "/root/blind_review_coordinator/energy_blade_seed_17_judge3_attempt0",
+          "attempt": 0,
+          "finished_file_unix": 1789888981.894755,
+          "raw_sha256": "e9a9c4d00a1accb6020daec33ca1df2a1fcf12b9b07c3deee71dbd357d0f7273",
+          "status": "VALID_IMPORTED",
+          "imported": "E:/ReSem/artifacts/v2_joint/v2_joint_round01/reviews/energy_blade_seed_17/1970aea8524d7535.json"
+        }
+      ]
+    },
+    {
+      "packet": "energy_blade_seed_29",
+      "valid_count": 3,
+      "attempt_count": 3,
+      "records": [
+        {
+          "reviewer_id": "energy_blade_seed_29_judge1_attempt0",
+          "agent_id": "/root/blind_review_coordinator/energy_blade_seed_29_judge1_attempt0",
+          "attempt": 0,
+          "finished_file_unix": 1789890247.134639,
+          "raw_sha256": "d7d48178af122bf49e743d29517eac6f5d9c9b5e5add795305adc7762786041c",
+          "status": "VALID_IMPORTED",
+          "imported": "E:/ReSem/artifacts/v2_joint/v2_joint_round01/reviews/energy_blade_seed_29/489d1aed0283b4b6.json"
+        },
+        {
+          "reviewer_id": "energy_blade_seed_29_judge2_attempt0",
+          "agent_id": "/root/blind_review_coordinator/energy_blade_seed_29_judge2_attempt0",
+          "attempt": 0,
+          "finished_file_unix": 1789890246.3322492,
+          "raw_sha256": "44d376079cd7aa927f5539ce81130ba66f35412c857733fec0d634226a294bae",
+          "status": "VALID_IMPORTED",
+          "imported": "E:/ReSem/artifacts/v2_joint/v2_joint_round01/reviews/energy_blade_seed_29/fbb6f9922afc8490.json"
+        },
+        {
+          "reviewer_id": "energy_blade_seed_29_judge3_attempt0",
+          "agent_id": "/root/blind_review_coordinator/energy_blade_seed_29_judge3_attempt0",
+          "attempt": 0,
+          "finished_file_unix": 1789890337.898664,
+          "raw_sha256": "4bb8d42617036e45e5e7da34889944b77f2bd33f8c01984bf7893719f58cca72",
+          "status": "VALID_IMPORTED",
+          "imported": "E:/ReSem/artifacts/v2_joint/v2_joint_round01/reviews/energy_blade_seed_29/ede79ee271f974b5.json"
+        }
+      ]
+    },
+    {
+      "packet": "energy_blade_seed_43",
+      "valid_count": 3,
+      "attempt_count": 3,
+      "records": [
+        {
+          "reviewer_id": "energy_blade_seed_43_judge1_attempt0",
+          "agent_id": "/root/blind_review_coordinator/energy_blade_seed_43_judge1_attempt0",
+          "attempt": 0,
+          "finished_file_unix": 1789890438.5105426,
+          "raw_sha256": "ea04cdb6b7c9664f7abcac41536df442f82491c123523ebf6969625c8c1dfb47",
+          "status": "VALID_IMPORTED",
+          "imported": "E:/ReSem/artifacts/v2_joint/v2_joint_round01/reviews/energy_blade_seed_43/841d5903012e114e.json"
+        },
+        {
+          "reviewer_id": "energy_blade_seed_43_judge2_attempt0",
+          "agent_id": "/root/blind_review_coordinator/energy_blade_seed_43_judge2_attempt0",
+          "attempt": 0,
+          "finished_file_unix": 1789890431.6941588,
+          "raw_sha256": "e1a7f58869ac5af0a7328ead5d9183a36409be2590486287e184435b319800a0",
+          "status": "VALID_IMPORTED",
+          "imported": "E:/ReSem/artifacts/v2_joint/v2_joint_round01/reviews/energy_blade_seed_43/260a1593cdfdde22.json"
+        },
+        {
+          "reviewer_id": "energy_blade_seed_43_judge3_attempt0",
+          "agent_id": "/root/blind_review_coordinator/energy_blade_seed_43_judge3_attempt0",
+          "attempt": 0,
+          "finished_file_unix": 1789890530.0136864,
+          "raw_sha256": "7e309c5cd79c07db5525af48859a5b20d8f288316288d4a6b416cd3e320d7cc2",
+          "status": "VALID_IMPORTED",
+          "imported": "E:/ReSem/artifacts/v2_joint/v2_joint_round01/reviews/energy_blade_seed_43/3d9f0ab9781fb355.json"
+        }
+      ]
+    }
+  ],
+  "failures": [
+    {
+      "reviewer_id": "energy_blade_seed_17_judge1_attempt0",
+      "agent_id": "/root/blind_review_coordinator/energy_blade_seed_17_judge1_attempt0",
+      "attempt": 0,
+      "status": "INVALID_OR_MISSING",
+      "reason": "MISSING_REVIEW"
+    },
+    {
+      "reviewer_id": "energy_blade_seed_17_judge2_attempt0",
+      "agent_id": "/root/blind_review_coordinator/energy_blade_seed_17_judge2_attempt0",
+      "attempt": 0,
+      "status": "INVALID_OR_MISSING",
+      "reason": "MISSING_REVIEW"
+    }
+  ],
+  "notes": [
+    "Two initial reviewer attempts missing at collection; interrupted after deadline; each retried exactly once in a fresh context",
+    "Initial energy_blade_seed_17_first reservation expired before dispatch; no reviewer attempt",
+    "Execution window revision authorized by root before retry dispatch; original valid judge3 retained",
+    "pueue daemon unavailable at first resume; restarted hidden; failed add created no task or reviewer attempt",
+    "Dispatch timestamps recorded after dispatch, not exact dispatch instants; model metadata unavailable",
+    "No changes to rubric, images, anonymous mapping, scoring standards or frozen algorithm code; coordinator did not score or unblind"
+  ]
+}

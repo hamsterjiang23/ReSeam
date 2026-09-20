@@ -71,8 +71,28 @@ def main() -> None:
     unwrap.add_argument("--annotations", type=Path)
     benchmark = commands.add_parser("benchmark")
     benchmark.add_argument("--config", type=Path, required=True)
+    packing = commands.add_parser("pack-benchmark")
+    packing.add_argument("--config", type=Path, required=True)
+    reuse = commands.add_parser("reuse-preview")
+    reuse.add_argument("--config", type=Path, required=True)
     report = commands.add_parser("report")
     report.add_argument("--round", type=Path, required=True)
+    joint = commands.add_parser("joint-unwrap")
+    joint.add_argument("--model", choices=["energy_blade", "dragon"], required=True)
+    joint.add_argument("--track", choices=["packing_only", "seam_pack", "reuse_pack", "joint"], required=True)
+    joint.add_argument("--seed", type=int, default=17)
+    joint.add_argument("--seconds", type=float, default=300)
+    joint.add_argument("--output", type=Path, required=True)
+    joint_benchmark = commands.add_parser("joint-benchmark")
+    joint_benchmark.add_argument("--config", type=Path, required=True)
+    review_export = commands.add_parser("review-export")
+    review_export.add_argument("--round", type=Path, required=True)
+    review_import = commands.add_parser("review-import")
+    review_import.add_argument("--packet", type=Path, required=True)
+    review_import.add_argument("--review", type=Path, required=True)
+    review_import.add_argument("--output", type=Path, required=True)
+    joint_report = commands.add_parser("joint-report")
+    joint_report.add_argument("--round", type=Path, required=True)
     args = parser.parse_args()
     root = args.root.resolve()
     if args.command == "doctor":
@@ -103,6 +123,44 @@ def main() -> None:
         from .benchmark import run_benchmark
 
         run_benchmark(root, args.config)
+    elif args.command == "pack-benchmark":
+        from .packing_benchmark import run_packing_benchmark
+
+        run_packing_benchmark(root, args.config.resolve())
+    elif args.command == "reuse-preview":
+        from .reuse_preview import run_preview
+
+        run_preview(root, args.config.resolve())
+    elif args.command == "joint-unwrap":
+        import time
+
+        from .joint_budget import JointBudget
+        from .joint_search import run_joint
+
+        with JointBudget(root / "artifacts/v2_joint/budget.json").run(
+            str(args.output), "smoke", args.seconds
+        ) as deadline:
+            result = run_joint(
+                root, args.model, args.track, args.seed, args.output.resolve(), deadline - time.monotonic()
+            )
+        print(json.dumps({k: result.get(k) for k in ("status", "quality", "reason")}, ensure_ascii=False))
+    elif args.command == "joint-benchmark":
+        from .joint_benchmark import run_joint_benchmark
+
+        run_joint_benchmark(root, args.config.resolve())
+    elif args.command == "review-export":
+        from .joint_report import export_round_packets
+
+        for path in export_round_packets(args.round.resolve()):
+            print(path)
+    elif args.command == "review-import":
+        from .joint_review import import_review
+
+        print(import_review(args.packet.resolve(), args.review.resolve(), args.output.resolve()))
+    elif args.command == "joint-report":
+        from .joint_report import generate_joint_report
+
+        generate_joint_report(args.round.resolve())
     else:
         from .report import generate_report
 

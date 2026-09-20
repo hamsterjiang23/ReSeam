@@ -1,0 +1,780 @@
+{
+  "account": "v2_joint",
+  "limit_seconds": 28800,
+  "stage_caps": {
+    "smoke": 3600.0,
+    "geometry": 10800.0,
+    "downstream": 7200.0,
+    "review": 3600.0,
+    "report": 3600.0
+  },
+  "runs": [
+    {
+      "label": "smoke01_dragon",
+      "stage": "smoke",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T02:31:41.284388+00:00",
+      "reserved_seconds": 90.0,
+      "charged_seconds": 4.609000000000151,
+      "overrun": false
+    },
+    {
+      "label": "smoke02_dragon_warm",
+      "stage": "smoke",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T02:39:11.746747+00:00",
+      "reserved_seconds": 90.0,
+      "charged_seconds": 5.734000000000151,
+      "overrun": false
+    },
+    {
+      "label": "smoke03_dragon_refined",
+      "stage": "smoke",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T02:44:22.188258+00:00",
+      "reserved_seconds": 90.0,
+      "charged_seconds": 9.532000000000153,
+      "overrun": false
+    },
+    {
+      "label": "smoke04_dragon_members",
+      "stage": "smoke",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T02:47:39.940484+00:00",
+      "reserved_seconds": 90.0,
+      "charged_seconds": 13.282000000000153,
+      "overrun": false
+    },
+    {
+      "label": "smoke05_dragon_contacts",
+      "stage": "smoke",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T02:59:09.069480+00:00",
+      "reserved_seconds": 90.0,
+      "charged_seconds": 61.15599999999995,
+      "overrun": false
+    },
+    {
+      "label": "smoke06_dragon_planar",
+      "stage": "smoke",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T03:03:50.647282+00:00",
+      "reserved_seconds": 90.0,
+      "charged_seconds": 29.563000000000102,
+      "overrun": false
+    },
+    {
+      "label": "smoke07_dragon_continuity",
+      "stage": "smoke",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T03:06:21.317478+00:00",
+      "reserved_seconds": 90.0,
+      "charged_seconds": 57.702999999999975,
+      "overrun": false
+    },
+    {
+      "label": "smoke08_dragon_fastcontacts",
+      "stage": "smoke",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T03:21:51.125260+00:00",
+      "reserved_seconds": 90.0,
+      "charged_seconds": 9.530999999999949,
+      "overrun": false
+    },
+    {
+      "label": "worker_smoke01",
+      "stage": "smoke",
+      "status": "FAILED_OR_INTERRUPTED",
+      "started_utc": "2026-09-20T03:23:55.800167+00:00",
+      "reserved_seconds": 110,
+      "charged_seconds": 5.171999999999571,
+      "overrun": false
+    },
+    {
+      "label": "worker_smoke02",
+      "stage": "smoke",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T03:24:41.839650+00:00",
+      "reserved_seconds": 110,
+      "charged_seconds": 3.625,
+      "overrun": false
+    },
+    {
+      "label": "pipeline_smoke01_dragon",
+      "stage": "smoke",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T03:31:41.379525+00:00",
+      "reserved_seconds": 180.0,
+      "charged_seconds": 31.703999999999724,
+      "overrun": false
+    },
+    {
+      "label": "pipeline_smoke02_density",
+      "stage": "smoke",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T03:37:47.929469+00:00",
+      "reserved_seconds": 180.0,
+      "charged_seconds": 28.96900000000005,
+      "overrun": false
+    },
+    {
+      "label": "controller_smoke01",
+      "stage": "smoke",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T04:14:57.206693+00:00",
+      "reserved_seconds": 600,
+      "charged_seconds": 196.3119999999999,
+      "overrun": false
+    },
+    {
+      "label": "controller_smoke02_dragon",
+      "stage": "smoke",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T04:23:23.207579+00:00",
+      "reserved_seconds": 600,
+      "charged_seconds": 135.4369999999999,
+      "overrun": false
+    },
+    {
+      "label": "worker_smoke03_export",
+      "stage": "smoke",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T04:25:39.467071+00:00",
+      "reserved_seconds": 110,
+      "charged_seconds": 4.264999999999418,
+      "overrun": false
+    },
+    {
+      "label": "v2_joint_round01/energy_blade/seed_17/packing_only",
+      "stage": "geometry",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T04:31:12.617266+00:00",
+      "reserved_seconds": 300,
+      "charged_seconds": 282.7029999999995,
+      "overrun": false
+    },
+    {
+      "label": "v2_joint_round01/energy_blade/seed_17/seam_pack",
+      "stage": "geometry",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T04:35:55.410300+00:00",
+      "reserved_seconds": 300,
+      "charged_seconds": 282.6720000000005,
+      "overrun": false
+    },
+    {
+      "label": "v2_joint_round01/energy_blade/seed_17/reuse_pack",
+      "stage": "geometry",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T04:40:38.164685+00:00",
+      "reserved_seconds": 300,
+      "charged_seconds": 282.7340000000004,
+      "overrun": false
+    },
+    {
+      "label": "v2_joint_round01/energy_blade/seed_17/joint",
+      "stage": "geometry",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T04:45:20.988306+00:00",
+      "reserved_seconds": 300,
+      "charged_seconds": 282.71900000000096,
+      "overrun": false
+    },
+    {
+      "label": "v2_joint_round01/energy_blade/seed_29/packing_only",
+      "stage": "geometry",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T04:50:03.794250+00:00",
+      "reserved_seconds": 300,
+      "charged_seconds": 282.70300000000134,
+      "overrun": false
+    },
+    {
+      "label": "v2_joint_round01/energy_blade/seed_29/seam_pack",
+      "stage": "geometry",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T04:54:46.591618+00:00",
+      "reserved_seconds": 300,
+      "charged_seconds": 282.71800000000076,
+      "overrun": false
+    },
+    {
+      "label": "v2_joint_round01/energy_blade/seed_29/reuse_pack",
+      "stage": "geometry",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T04:59:29.390293+00:00",
+      "reserved_seconds": 300,
+      "charged_seconds": 282.71899999999914,
+      "overrun": false
+    },
+    {
+      "label": "v2_joint_round01/energy_blade/seed_29/joint",
+      "stage": "geometry",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T05:04:12.191481+00:00",
+      "reserved_seconds": 300,
+      "charged_seconds": 282.75,
+      "overrun": false
+    },
+    {
+      "label": "v2_joint_round01/energy_blade/seed_43/packing_only",
+      "stage": "geometry",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T05:08:55.019743+00:00",
+      "reserved_seconds": 300,
+      "charged_seconds": 282.7350000000006,
+      "overrun": false
+    },
+    {
+      "label": "v2_joint_round01/energy_blade/seed_43/seam_pack",
+      "stage": "geometry",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T05:13:37.839326+00:00",
+      "reserved_seconds": 300,
+      "charged_seconds": 282.7340000000004,
+      "overrun": false
+    },
+    {
+      "label": "v2_joint_round01/energy_blade/seed_43/reuse_pack",
+      "stage": "geometry",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T05:18:20.670805+00:00",
+      "reserved_seconds": 300,
+      "charged_seconds": 282.76500000000124,
+      "overrun": false
+    },
+    {
+      "label": "v2_joint_round01/energy_blade/seed_43/joint",
+      "stage": "geometry",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T05:23:03.527972+00:00",
+      "reserved_seconds": 300,
+      "charged_seconds": 282.7659999999996,
+      "overrun": false
+    },
+    {
+      "label": "v2_joint_round01/dragon/seed_17/packing_only",
+      "stage": "geometry",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T05:27:46.379948+00:00",
+      "reserved_seconds": 300,
+      "charged_seconds": 283.7039999999997,
+      "overrun": false
+    },
+    {
+      "label": "v2_joint_round01/dragon/seed_17/seam_pack",
+      "stage": "geometry",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T05:32:30.182440+00:00",
+      "reserved_seconds": 300,
+      "charged_seconds": 285.0,
+      "overrun": false
+    },
+    {
+      "label": "v2_joint_round01/dragon/seed_17/reuse_pack",
+      "stage": "geometry",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T05:37:15.275374+00:00",
+      "reserved_seconds": 300,
+      "charged_seconds": 283.6720000000005,
+      "overrun": false
+    },
+    {
+      "label": "v2_joint_round01/dragon/seed_17/joint",
+      "stage": "geometry",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T05:41:59.050344+00:00",
+      "reserved_seconds": 300,
+      "charged_seconds": 284.09300000000076,
+      "overrun": false
+    },
+    {
+      "label": "v2_joint_round01/dragon/seed_29/packing_only",
+      "stage": "geometry",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T05:46:43.238096+00:00",
+      "reserved_seconds": 300,
+      "charged_seconds": 283.6880000000001,
+      "overrun": false
+    },
+    {
+      "label": "v2_joint_round01/dragon/seed_29/seam_pack",
+      "stage": "geometry",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T05:51:27.021720+00:00",
+      "reserved_seconds": 300,
+      "charged_seconds": 282.90600000000086,
+      "overrun": false
+    },
+    {
+      "label": "v2_joint_round01/dragon/seed_29/reuse_pack",
+      "stage": "geometry",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T05:56:10.037249+00:00",
+      "reserved_seconds": 300,
+      "charged_seconds": 284.8590000000004,
+      "overrun": false
+    },
+    {
+      "label": "v2_joint_round01/dragon/seed_29/joint",
+      "stage": "geometry",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T06:00:55.016083+00:00",
+      "reserved_seconds": 300,
+      "charged_seconds": 283.65699999999924,
+      "overrun": false
+    },
+    {
+      "label": "v2_joint_round01/dragon/seed_43/packing_only",
+      "stage": "geometry",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T06:05:38.782219+00:00",
+      "reserved_seconds": 300,
+      "charged_seconds": 284.5159999999996,
+      "overrun": false
+    },
+    {
+      "label": "v2_joint_round01/dragon/seed_43/seam_pack",
+      "stage": "geometry",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T06:10:23.403137+00:00",
+      "reserved_seconds": 300,
+      "charged_seconds": 284.21900000000096,
+      "overrun": false
+    },
+    {
+      "label": "v2_joint_round01/dragon/seed_43/reuse_pack",
+      "stage": "geometry",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T06:15:07.766724+00:00",
+      "reserved_seconds": 300,
+      "charged_seconds": 283.78199999999924,
+      "overrun": false
+    },
+    {
+      "label": "v2_joint_round01/dragon/seed_43/joint",
+      "stage": "geometry",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T06:19:51.665874+00:00",
+      "reserved_seconds": 300,
+      "charged_seconds": 283.9840000000004,
+      "overrun": false
+    },
+    {
+      "label": "v2_joint_round01/reference/energy_blade",
+      "stage": "downstream",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T06:24:35.804014+00:00",
+      "reserved_seconds": 240,
+      "charged_seconds": 20.79699999999866,
+      "overrun": false
+    },
+    {
+      "label": "v2_joint_round01/reference/dragon",
+      "stage": "downstream",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T06:24:56.688557+00:00",
+      "reserved_seconds": 240,
+      "charged_seconds": 19.46899999999914,
+      "overrun": false
+    },
+    {
+      "label": "v2_joint_round01/downstream/energy_blade/seed_17/packing_only",
+      "stage": "downstream",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T06:25:16.235625+00:00",
+      "reserved_seconds": 270,
+      "charged_seconds": 40.92200000000048,
+      "overrun": false
+    },
+    {
+      "label": "v2_joint_round01/downstream/energy_blade/seed_17/seam_pack",
+      "stage": "downstream",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T06:25:57.267655+00:00",
+      "reserved_seconds": 270,
+      "charged_seconds": 40.28199999999924,
+      "overrun": false
+    },
+    {
+      "label": "v2_joint_round01/downstream/energy_blade/seed_17/reuse_pack",
+      "stage": "downstream",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T06:26:37.661787+00:00",
+      "reserved_seconds": 270,
+      "charged_seconds": 40.64000000000124,
+      "overrun": false
+    },
+    {
+      "label": "v2_joint_round01/downstream/energy_blade/seed_17/joint",
+      "stage": "downstream",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T06:27:18.427579+00:00",
+      "reserved_seconds": 270,
+      "charged_seconds": 43.21899999999914,
+      "overrun": false
+    },
+    {
+      "label": "v2_joint_round01/downstream/energy_blade/seed_29/packing_only",
+      "stage": "downstream",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T06:28:01.776679+00:00",
+      "reserved_seconds": 270,
+      "charged_seconds": 40.95299999999952,
+      "overrun": false
+    },
+    {
+      "label": "v2_joint_round01/downstream/energy_blade/seed_29/seam_pack",
+      "stage": "downstream",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T06:28:42.850097+00:00",
+      "reserved_seconds": 270,
+      "charged_seconds": 41.39100000000144,
+      "overrun": false
+    },
+    {
+      "label": "v2_joint_round01/downstream/energy_blade/seed_29/reuse_pack",
+      "stage": "downstream",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T06:29:24.362423+00:00",
+      "reserved_seconds": 270,
+      "charged_seconds": 40.76600000000144,
+      "overrun": false
+    },
+    {
+      "label": "v2_joint_round01/downstream/energy_blade/seed_29/joint",
+      "stage": "downstream",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T06:30:05.241068+00:00",
+      "reserved_seconds": 270,
+      "charged_seconds": 42.45299999999952,
+      "overrun": false
+    },
+    {
+      "label": "v2_joint_round01/downstream/energy_blade/seed_43/packing_only",
+      "stage": "downstream",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T06:30:47.829148+00:00",
+      "reserved_seconds": 270,
+      "charged_seconds": 56.26599999999962,
+      "overrun": false
+    },
+    {
+      "label": "v2_joint_round01/downstream/energy_blade/seed_43/seam_pack",
+      "stage": "downstream",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T06:31:44.428643+00:00",
+      "reserved_seconds": 270,
+      "charged_seconds": 45.15699999999924,
+      "overrun": false
+    },
+    {
+      "label": "v2_joint_round01/downstream/energy_blade/seed_43/reuse_pack",
+      "stage": "downstream",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T06:32:29.716573+00:00",
+      "reserved_seconds": 270,
+      "charged_seconds": 41.17100000000028,
+      "overrun": false
+    },
+    {
+      "label": "v2_joint_round01/downstream/energy_blade/seed_43/joint",
+      "stage": "downstream",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T06:33:11.003279+00:00",
+      "reserved_seconds": 270,
+      "charged_seconds": 41.625,
+      "overrun": false
+    },
+    {
+      "label": "v2_joint_round01/downstream/dragon/seed_17/packing_only",
+      "stage": "downstream",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T06:33:52.730480+00:00",
+      "reserved_seconds": 270,
+      "charged_seconds": 43.3130000000001,
+      "overrun": false
+    },
+    {
+      "label": "v2_joint_round01/downstream/dragon/seed_17/seam_pack",
+      "stage": "downstream",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T06:34:36.162417+00:00",
+      "reserved_seconds": 270,
+      "charged_seconds": 42.42200000000048,
+      "overrun": false
+    },
+    {
+      "label": "v2_joint_round01/downstream/dragon/seed_17/reuse_pack",
+      "stage": "downstream",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T06:35:18.702512+00:00",
+      "reserved_seconds": 270,
+      "charged_seconds": 42.09399999999914,
+      "overrun": false
+    },
+    {
+      "label": "v2_joint_round01/downstream/dragon/seed_17/joint",
+      "stage": "downstream",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T06:36:00.902702+00:00",
+      "reserved_seconds": 270,
+      "charged_seconds": 42.625,
+      "overrun": false
+    },
+    {
+      "label": "v2_joint_round01/downstream/dragon/seed_29/packing_only",
+      "stage": "downstream",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T06:36:43.646204+00:00",
+      "reserved_seconds": 270,
+      "charged_seconds": 42.4380000000001,
+      "overrun": false
+    },
+    {
+      "label": "v2_joint_round01/downstream/dragon/seed_29/seam_pack",
+      "stage": "downstream",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T06:37:26.198819+00:00",
+      "reserved_seconds": 270,
+      "charged_seconds": 44.64099999999962,
+      "overrun": false
+    },
+    {
+      "label": "v2_joint_round01/downstream/dragon/seed_29/reuse_pack",
+      "stage": "downstream",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T06:38:10.961376+00:00",
+      "reserved_seconds": 270,
+      "charged_seconds": 43.13999999999942,
+      "overrun": false
+    },
+    {
+      "label": "v2_joint_round01/downstream/dragon/seed_29/joint",
+      "stage": "downstream",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T06:38:54.221334+00:00",
+      "reserved_seconds": 270,
+      "charged_seconds": 41.65599999999904,
+      "overrun": false
+    },
+    {
+      "label": "v2_joint_round01/downstream/dragon/seed_43/packing_only",
+      "stage": "downstream",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T06:39:35.986966+00:00",
+      "reserved_seconds": 270,
+      "charged_seconds": 41.78099999999904,
+      "overrun": false
+    },
+    {
+      "label": "v2_joint_round01/downstream/dragon/seed_43/seam_pack",
+      "stage": "downstream",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T06:40:17.869431+00:00",
+      "reserved_seconds": 270,
+      "charged_seconds": 42.2970000000023,
+      "overrun": false
+    },
+    {
+      "label": "v2_joint_round01/downstream/dragon/seed_43/reuse_pack",
+      "stage": "downstream",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T06:41:00.291936+00:00",
+      "reserved_seconds": 270,
+      "charged_seconds": 42.0,
+      "overrun": false
+    },
+    {
+      "label": "v2_joint_round01/downstream/dragon/seed_43/joint",
+      "stage": "downstream",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T06:41:42.412704+00:00",
+      "reserved_seconds": 270,
+      "charged_seconds": 41.73400000000038,
+      "overrun": false
+    },
+    {
+      "label": "v2_joint_round01/export_review_packets",
+      "stage": "report",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T06:57:06.175430+00:00",
+      "reserved_seconds": 180,
+      "charged_seconds": 5.264999999999418,
+      "overrun": false
+    },
+    {
+      "label": "review/energy_blade_seed_17_first",
+      "stage": "review",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T07:02:03.692486+00:00",
+      "reserved_seconds": 210.0,
+      "charged_seconds": 210.0,
+      "overrun": false
+    },
+    {
+      "label": "v2_joint_round01/objective_audit",
+      "stage": "report",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T07:14:32.188736+00:00",
+      "reserved_seconds": 30,
+      "charged_seconds": 0.4069999999992433,
+      "overrun": false
+    },
+    {
+      "label": "review/energy_blade_seed_17_pair",
+      "stage": "review",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T07:17:32.699830+00:00",
+      "reserved_seconds": 210.0,
+      "charged_seconds": 210.01599999999962,
+      "overrun": true
+    },
+    {
+      "label": "review/energy_blade_seed_17_third",
+      "stage": "review",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T07:21:36.476467+00:00",
+      "reserved_seconds": 210.0,
+      "charged_seconds": 101.5470000000023,
+      "overrun": false
+    },
+    {
+      "label": "review/energy_blade_seed_17_retry",
+      "stage": "review",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T07:41:00.357813+00:00",
+      "reserved_seconds": 450.0,
+      "charged_seconds": 91.51599999999962,
+      "overrun": false
+    },
+    {
+      "label": "review/energy_blade_seed_29_pair",
+      "stage": "review",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T07:42:47.667182+00:00",
+      "reserved_seconds": 450.0,
+      "charged_seconds": 98.54699999999866,
+      "overrun": false
+    },
+    {
+      "label": "review/energy_blade_seed_29_third",
+      "stage": "review",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T07:44:28.005789+00:00",
+      "reserved_seconds": 450.0,
+      "charged_seconds": 87.26600000000326,
+      "overrun": false
+    },
+    {
+      "label": "review/energy_blade_seed_43_pair",
+      "stage": "review",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T07:45:57.009095+00:00",
+      "reserved_seconds": 450.0,
+      "charged_seconds": 97.53200000000288,
+      "overrun": false
+    },
+    {
+      "label": "review/energy_blade_seed_43_third",
+      "stage": "review",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T07:47:36.494256+00:00",
+      "reserved_seconds": 450.0,
+      "charged_seconds": 91.26499999999942,
+      "overrun": false
+    },
+    {
+      "label": "review/dragon_seed_17_pair",
+      "stage": "review",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T07:49:09.760857+00:00",
+      "reserved_seconds": 450.0,
+      "charged_seconds": 88.03200000000288,
+      "overrun": false
+    },
+    {
+      "label": "review/dragon_seed_17_third",
+      "stage": "review",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T07:50:39.695971+00:00",
+      "reserved_seconds": 450.0,
+      "charged_seconds": 68.43699999999808,
+      "overrun": false
+    },
+    {
+      "label": "review/dragon_seed_29_pair",
+      "stage": "review",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T07:51:49.942169+00:00",
+      "reserved_seconds": 450.0,
+      "charged_seconds": 88.75,
+      "overrun": false
+    },
+    {
+      "label": "review/dragon_seed_29_third",
+      "stage": "review",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T07:53:20.417982+00:00",
+      "reserved_seconds": 450.0,
+      "charged_seconds": 76.21799999999712,
+      "overrun": false
+    },
+    {
+      "label": "review/dragon_seed_43_pair",
+      "stage": "review",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T07:54:38.158919+00:00",
+      "reserved_seconds": 450.0,
+      "charged_seconds": 76.23399999999674,
+      "overrun": false
+    },
+    {
+      "label": "review/dragon_seed_43_third",
+      "stage": "review",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T07:55:56.313451+00:00",
+      "reserved_seconds": 450.0,
+      "charged_seconds": 71.4529999999977,
+      "overrun": false
+    },
+    {
+      "label": "v2_joint_round01/aggregate_proxy",
+      "stage": "report",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T07:57:46.472959+00:00",
+      "reserved_seconds": 120,
+      "charged_seconds": 0.4680000000007567,
+      "overrun": false
+    },
+    {
+      "label": "v2_joint_round01/additional_views",
+      "stage": "downstream",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T07:57:48.376612+00:00",
+      "reserved_seconds": 900,
+      "charged_seconds": 382.70300000000134,
+      "overrun": false
+    },
+    {
+      "label": "v2_joint_round01/final_delivery",
+      "stage": "report",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T08:10:09.261248+00:00",
+      "reserved_seconds": 180,
+      "charged_seconds": 0.5320000000028813,
+      "overrun": false
+    },
+    {
+      "label": "v2_joint_round01/final_checks",
+      "stage": "report",
+      "status": "COMPLETE",
+      "started_utc": "2026-09-20T08:17:06.985608+00:00",
+      "reserved_seconds": 30,
+      "charged_seconds": 0.14099999999962165,
+      "overrun": false
+    }
+  ],
+  "total_charged_seconds": 10308.973000000005,
+  "remaining_seconds": 18491.026999999995
+}
