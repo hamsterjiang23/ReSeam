@@ -1,5 +1,35 @@
 # ReSeam 项目约束
 
+已授权的上游拓扑阶段见 [烘焙优先变体](docs/bake-topology-plan.md)：允许从固定父资产派生独立 variant，先验证无共享烘焙，再研究缩图与共享。历史低模/输入和 v1 固定几何数学问题保持原样，各 variant 内固定拓扑进行公平 UV 对照，跨拓扑收益不得归因于 UV 机制。本轮具体执行以下整龙合同，在选定规范化父资产内固定几何。`[verified: 用户“加入拓扑优化，先做好烘焙”及本轮接受的整龙计划；assets/v1/README.md 多轮测试规则2、9]`
+
+## 本轮对话：LLM 辅助复用的执行要点
+
+- 当前新增[整龙 LLM UV 复用执行合同](docs/dragon-llm-reuse-plan.md)：固定 `tripo_p2` 规范化几何，允许左右细小纹理差异对称化，保护头脸和明显特征，先交付 UV＋BaseColor。翅膀、四肢的部件级共享及角刺逐组结论为目标；单对成功、入口登记或测试通过不能代表整龙完成。完整 PBR、GPU、artist 状态独立。`[verified: 用户接受的整龙计划及三项选择]`
+- 本轮允许 OptCuts 作为显式区域展开实验后端，优先级高于下文“仅参考/对照”的历史路线限制；该例外不替换历史自研求解器，也不改写旧实验。先核实版本、面角身份和小型冒烟，实际运行或拒绝均留证据，不把 OptCuts 展开能力等同于跨部件复用。`[verified: 用户“几何工具比如optcus等等都是可以”；其余为执行约束]` `[opinion]`
+- 通过 `region.define` 记录原面 ID、保护面和理由，允许跨旧岛语义区域；用 `view.render` 的颜色、棋盘格、错误视图和像素选取定位。区域定义不授权共享，`uv.reparameterize` 或 `reuse.check_pair` 改动后仍需独立几何和颜色验收；参数以 `tools describe` 为准。`[verified: regions.py define_region；views.py render_views；后半为执行约束]` `[opinion]`
+- 颜色对称化以 `material.target` 冻结源贴图及固定对应；外观修改与重建误差分开，保护区不能由候选贴图重定义。`basecolor_reuse` 的通过仅属于声明的颜色范围，`basecolor_diagnostic` 历史结果不升级；完整 mip 写出与 LOD 0/1/2 验收分开记录。`[verified: 用户接受的整龙计划“颜色验收”；接口及执行约束为opinion]` `[opinion]`
+- 必须比较无共享必要修复、OptCuts 无共享修复、纯几何复用和 Agent 迭代复用。受控比较锁定父状态、预处理、候选池、UV 起点、目标、后端、质量和预算；端到端比较单列，另补冻结对称化目标的无共享对照，计入失败成本。`[verified: 用户 Baseline 对照要求；具体合同为opinion]` `[opinion]`
+- 每个关键步骤保存父子快照哈希、同视角图、相同口径指标及变化量、Agent 理由、输入、耗时、接受或拒绝与失败面。消融从同一父状态只改研究变量；修正影响 Baseline 或验收时另建冻结轮次并重跑，禁止旧 Baseline 对新代码候选。报告附实际贴图和模型，连通岛、独立图块、共享组分别统计。`[verified: 用户“各个关键步骤修正前后的记录”；具体合同为opinion]` `[opinion]`
+
+- 用户新增 `model/dragon/tripo_p2` 作为独立测试资产；原 FBX/JPG 保留，GLB 属性拆点变体与原始三角形的对应见[实验审计](docs/results/agent-tools-tripo-p2.md)。不覆盖固定 energy_blade/dragon；`basecolor_diagnostic` 必须标注未复现材质扩展与未测通道，不准冒充 PBR 验收。`[verified: 用户最新指定路径；artifacts/agent_tools_v1/tripo_p2_audit.json]`
+
+- Agent 工具入口为 `uv run reseam tools list/describe/run`，工作流程见 [reseam-uv Skill](skills/reseam-uv/SKILL.md)与[运行说明](docs/running-agent-tools.md)。CLI 每次使用新输出目录与不可变父快照；先无共享基线，提案绑定状态哈希；重新排布后重新烘焙和验收。完整 mip 写出不等于全部 LOD 通过；报告必须注明验收 LOD。真实对照附实际贴图，明确 accepted/diagnostic，不替代完整求解器交付。`[verified: src/reseam/agent_tools/runner.py run_tool；material.py validate_quality/export_asset；其余为执行约束]`
+
+用户需求、拟定流程、上游项目与证据状态统一见 [README 对话要点](README.md#对话要点llm-辅助-uv-复用修复)。用户粘贴文章及两份附件是需求/研究线索；推测流程不得写成作者已公开的真实实现，README 的上游核对不等于本机复现成功。`[verified: 本轮用户整理请求；第一份附件开头的推测声明]`
+
+- 复用范围只限同一模型内部；分别比较同预算清晰度、同画质最小实际字节。默认普通材质UV，不引入特殊解码Shader作为捷径。`[verified: 用户“只关注同一模型内的区域复用”；derivation/v1.md §1–§3]`
+- LLM/VLM负责可追溯的语义候选、保护区与独占建议，也可负责操作决策、生成/调用脚本及看图迭代；几何算法负责对应和UV，最终编码/烘焙/渲染决定接受。提案必须绑定原面/区域ID及证据，记录模型、提示词、脚本、工具输入输出、人工修订和成本；自报置信度不能授权交叠或替代硬约束。`[opinion]`
+- 作者自述与推测分开：用户提供的[作者回复](docs/assets/llm-uv-reference/author-reply.png)仅确认“基本靠llm自己的判断，人工干预不太多”；具体流程仍按[README最小复现路线](README.md#作者回复与最小复现路线)作为待验证设计。不得宣称作者用了某个插件、训练了专用模型或已通过多通道保真验收。`[verified: author-reply.png 作者回复文字；其余为执行约束]`
+- 优先用保留原UV的编号岛/区域完成“LLM分组与操作决策 → 对应/堆叠 → 按组重排 → 看图反馈”的小流程对照，保持无共享烘焙优先。UV连通岛数、共享组数、独立图块数分别报告；同色标记和图块减少不能替代真实UV、材质和存储验收，小流程也不替代完整算法交付。`[opinion]`
+- 语义区域可跨既有碎片UV岛；严格同拓扑堆叠作为基线，近似部件继续采用曲面对应/共同域和最终逐面表达检查。不得把图同构失败、最近点命中或同一语义名当作复用不可行/可行的证明。`[opinion]`
+- 上游低模可来自Tripo等工具，无需一律本地再减面。遵循已授权的烘焙优先顺序；拓扑调整仅写独立variant，重建身份和对应，禁止改历史输入或将跨拓扑收益归于UV算法。`[verified: 用户上游重拓扑讨论及“加入拓扑优化，先做好烘焙”；assets/v1/README.md 多轮规则2、9]`
+- 用户指定的[刺模型参考](docs/results/chloe-spike-reference.md)约束制作目标：连贯纹理部件、合理共享与独占，结合外观判断细长面，不能全模型强制等边化。第二UV用途与实际Shader变换要单独核实，不自动视为Lightmap。`[verified: 用户“这个是刺的模型和贴图的合理的样子”；参考报告 unity_material_reproduced=false；设计解读为opinion]` `[opinion]`
+- UV改变后须重新烘焙/重采样；共享成员先独立取样/烘焙和比较，再形成共同贴图，避免组内写入顺序覆盖。颜色、切线法线/镜像TBN、AO/ORM差异及mip分别检查，冲突保守退回整面独占；材质复用UV与要求非重叠的Lightmap通道分开处理。`[opinion]`
+- UVgami/UniV用于重复部件堆叠参考，Magic UV用于候选分组和图同构复制参考，UV Toolkit/UV Mechanic用于岛、密度及诊断参考，xatlas用于展开/重排对照，MCP项目只作执行/预览/导出参考；完整入口和边界见README参考表。不得将文档功能当已集成模块，不得把UV Toolkit规划中的形状哈希当现成功能。`[verified: 本轮核对的UVgami Docs、UniV README、Magic-UV pack_uv.py、UV Toolkit Roadmap、UV Mechanic README；后半为执行约束]`
+- 引用或接入前锁定具体版本/API/源码及许可：附件5.2示例不直接复制到4.5；blender-asset-mcp文档要求5.2+；PartUV项目许可与PartField依赖限制分开核查。第三方模块不自动替换自研求解器；OptCuts 的整龙实验后端例外按本节最新授权执行。`[verified: 附件API版本说明；blender-asset-mcp README Requirements；references/PartUV/LICENSE；用户本轮授权]`
+- 纯几何与几何+LLM必须做同质量/预算的实际对照，计入调用、失败与验收成本；共同候选池机制消融和不同提案来源的端到端比较分开。神经网络仅作明确辅助消融，不能用训练loss替代交付。`[opinion]`
+- 报告附真实产生的贴图及完整mip、UV/接缝/同色复用组和渲染对照；明确拒绝/未运行，不凭岛数、覆盖率、共享率、包体或单一颜色均值宣布最终质量/节省。原始字节、包体、网格副本开销分列。`[verified: 用户实际贴图要求；derivation/v1.md §2–§3；其余为执行约束]`
+
 适用范围：本目录及其子目录。当前定位和验收以 [README.md](README.md)、[V1 历史目标](goal/v1.md) 与 [V2 目标](goal/v2.md) 为准；[研究报告](goal/UV_展开方案_研究报告_v0.1.md) 提供原始数学定义与实验草案。
 
 ## 应用与目的
@@ -10,7 +40,8 @@
 
 ## 范围与命名
 
-- 后续开发以 [求解器重新设计](goal/solver-redesign.md) 为当前方向：借鉴OptCuts高层思路，自研求解器；OptCuts仅作为参考、对照和历史复现，不作为新求解器后端或默认初始化。保留旧实现与冻结实验，不改写历史。
+- 当前实施按[完整实现与对比目标](goal/budget-v1-implementation.md)及[derivation/v1](derivation/v1.md)推进；使用固定两模型多轮调优，完整算法与真实 baseline 报告均为完成条件，不以开发诊断完成代替。
+- 独立求解器按 [重新设计方向](goal/solver-redesign.md) 继续自研，OptCuts 不作为该路线默认后端或初始化；本轮[整龙工具实验](docs/dragon-llm-reuse-plan.md)的显式后端授权独立适用。保留旧实现与冻结实验，不改写历史。
 - 方法名统一为 ReSeam；无需逐字母缩写，不将 OptCuts 或 Optimal 加入方法名。
 - V1 展开与切缝自动 A/B 已记录结论，人工验收待完成；不追溯把空间利用率设为 V1 主目标。
 - V2按 [联合计划](docs/v2-joint-plan.md) 开发，结论以 [联合结果](docs/v2-joint-results.md) 为准。技术/实验流程完成、真实近似复用成功和artist交付须分开判定；AT/SQP/OT不要求逐一复现。
@@ -33,7 +64,7 @@
 
 ## 实验与证据
 
-- 固定测试资产仅用 [assets/v1](assets/v1/README.md) 中的 energy_blade（500 面）与 dragon（2000 面）；依据 manifest 校验哈希，使用真实材质高模和已对齐无 UV 低模，不重做历史 alignment、不覆盖输入。
+- 历史固定测试资产使用 [assets/v1](assets/v1/README.md) 中的 energy_blade（500 面）与 dragon（2000 面）；依据 manifest 校验哈希，使用真实材质高模和已对齐无 UV 低模，不重做历史 alignment、不覆盖输入。用户新增的[三视图龙](docs/assets/dragon-uv-test-v1/README.md)作为独立测试扩展，待模型交回后记录来源、生成设置、文件哈希、原UV与材质，另建无共享基线和实验，不替换历史两模型或混算同一资产收益。`[verified: 用户“我去生成的一个模型让你进行测试”；其余为执行约束]`
 - [Artist 真值](assets/gt/README.md) 是独立参考：逐对象、材质和 UV 通道统计面积并集与重复覆盖，不替换固定低模，不跨不同拓扑自动迁移硬约束。
 - 遵循资产目录中的多轮协议：方法或参数变更新建 round_id，保留四种历史方法与 ReSeam 对照；随机方法默认种子 17、29、43，独立初始化、失败不剔除、输出不覆盖。派生重拓扑另建 variant，两模型多轮结果不代表独立模型泛化。
 - 先验证小型构造网格上的索引可逆、旧边界可删除、合法性与完整回退，再扩大实验规模。

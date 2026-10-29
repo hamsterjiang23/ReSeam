@@ -1,0 +1,33 @@
+{
+  "round_id": "budget_v1_resolution_diagnostic_round03",
+  "model": "dragon",
+  "seed": 17,
+  "seconds": 180.0,
+  "solver_seconds": 30,
+  "solver_iterations": 240,
+  "maximum_region_faces": 32,
+  "maximum_roi_attempts": 15,
+  "resolutions": [
+    128,
+    256,
+    512
+  ],
+  "mip_levels": [
+    0
+  ],
+  "samples_per_face": 16,
+  "gap_pixels": 2,
+  "border_pixels": 2,
+  "padding_pixels": 2,
+  "outer_fraction": 0.2,
+  "correspondence_fraction": 0.005,
+  "normal_angle_degrees": 45,
+  "maximum_anisotropy": 2,
+  "mean_shape_limit": 0.025,
+  "maximum_neighbor_density_ratio": 2,
+  "max_projection_fraction": 0.02,
+  "color_mean_limit": 0.025,
+  "color_p95_limit": 0.08,
+  "color_max_limit": 0.2,
+  "coupling_weight": 10
+}

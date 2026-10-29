@@ -42,7 +42,22 @@ def main() -> None:
     parser = argparse.ArgumentParser(prog="reseam")
     parser.add_argument("--root", type=Path, default=Path.cwd())
     commands = parser.add_subparsers(dest="command", required=True)
+    tools_parser = commands.add_parser("tools", help="Immutable JSON agent operations")
+    tool_commands = tools_parser.add_subparsers(dest="tool_command", required=True)
+    tool_commands.add_parser("list")
+    tool_describe = tool_commands.add_parser("describe")
+    tool_describe.add_argument("tool_name")
+    tool_run = tool_commands.add_parser("run")
+    tool_run.add_argument("tool_name")
+    tool_run.add_argument("--request", type=Path, required=True)
+    tool_run.add_argument("--output", type=Path, required=True)
     commands.add_parser("doctor")
+    budget = commands.add_parser("budget-solve")
+    budget.add_argument("--config", type=Path, required=True)
+    budget.add_argument("--output", type=Path, required=True)
+    comparison = commands.add_parser("budget-compare")
+    comparison.add_argument("--config", type=Path, required=True)
+    comparison.add_argument("--output", type=Path, required=True)
     unwrap = commands.add_parser("unwrap")
     unwrap.add_argument("--model", choices=["energy_blade", "dragon"], required=True)
     unwrap.add_argument(
@@ -95,8 +110,55 @@ def main() -> None:
     joint_report.add_argument("--round", type=Path, required=True)
     args = parser.parse_args()
     root = args.root.resolve()
+    if args.command == "tools":
+        from .agent_tools.registry import TOOLS, describe
+        from .agent_tools.runner import run_tool
+
+        try:
+            if args.tool_command == "list":
+                tool_result = {"schema_version": 1, "tools": [describe(name) for name in TOOLS]}
+            elif args.tool_command == "describe":
+                tool_result = describe(args.tool_name)
+            else:
+                tool_result = run_tool(args.tool_name, args.request, args.output)
+        except (ValueError, OSError) as error:
+            tool_result = {"status": "ERROR", "reason": str(error), "execution_success": False}
+        print(json.dumps(tool_result, ensure_ascii=False, indent=2, allow_nan=False))
+        if tool_result.get("status", "OK") != "OK":
+            raise SystemExit(1)
+        return
     if args.command == "doctor":
         print(json.dumps(doctor(root), ensure_ascii=False, indent=2))
+    elif args.command == "budget-solve":
+        from .budget_experiment import run_budget_experiment
+
+        result = run_budget_experiment(root, args.config.resolve(), args.output.resolve())
+        print(
+            json.dumps(
+                {
+                    key: result.get(key)
+                    for key in (
+                        "round_id",
+                        "status",
+                        "reason",
+                        "wall_seconds",
+                        "full_v1_validated",
+                        "input_unchanged",
+                    )
+                },
+                ensure_ascii=False,
+                indent=2,
+            )
+        )
+        if result["status"] != "DEVELOPMENT_DIAGNOSTICS_COMPLETE":
+            raise SystemExit(1)
+    elif args.command == "budget-compare":
+        from .budget_compare import run_budget_comparison
+
+        result = run_budget_comparison(root, args.config.resolve(), args.output.resolve())
+        print(json.dumps(result, ensure_ascii=False, indent=2))
+        if result.get("status") != "COMPARISON_COMPLETE":
+            raise SystemExit(1)
     elif args.command == "unwrap":
         result = run_unwrap(
             root,

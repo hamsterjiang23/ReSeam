@@ -1,0 +1,11 @@
+{
+  "round_id": "budget_v1_complete_smoke_round01",
+  "models": ["energy_blade", "dragon"],
+  "methods": ["independent", "joint"],
+  "seeds": [17],
+  "resolutions": [64],
+  "seconds_per_target": 35,
+  "setup_seconds_per_model": 120,
+  "options": {},
+  "formal": false
+}

@@ -27,6 +27,313 @@
       "weights_downloaded": false,
       "dependency_installation_status": "not_run",
       "acquisition": "official_partial_clone"
+    },
+    {
+      "name": "UniV",
+      "path": "references/UniV",
+      "origin": "https://github.com/Oxicid/UniV.git",
+      "expected_origin_matches": true,
+      "commit": "8790a8ae99f1df0ab34e521780ffb7329430101b",
+      "shallow": true,
+      "tracked_files": 398,
+      "clean": true,
+      "worktree_status": "",
+      "missing_tracked_files": [],
+      "git_lfs_pointer_files": [],
+      "nested_gitlink_paths": [],
+      "license_files": [
+        {
+          "path": "LICENSE",
+          "sha256": "230184f60bae2feaf244f10a8bac053c8ff33a183bcc365b4d8b876d2b7f4809"
+        }
+      ],
+      "fsck_connectivity_passed": true,
+      "fsck_output": "",
+      "build_test_status": "not_run",
+      "weights_downloaded": false,
+      "dependency_installation_status": "not_run",
+      "acquisition": "official_depth1_blob_filtered_clone",
+      "nested_dependencies_initialized": false,
+      "verified_at_utc": "2026-10-29T02:39:29.181902+00:00"
+    },
+    {
+      "name": "Magic-UV",
+      "path": "references/Magic-UV",
+      "origin": "https://github.com/nutti/Magic-UV.git",
+      "expected_origin_matches": true,
+      "commit": "cc0635a7fc3ada7cf3d9f1a19cf8fd0b01c1af60",
+      "shallow": true,
+      "tracked_files": 108,
+      "clean": true,
+      "worktree_status": "",
+      "missing_tracked_files": [],
+      "git_lfs_pointer_files": [],
+      "nested_gitlink_paths": [],
+      "license_files": [
+        {
+          "path": "LICENSE",
+          "sha256": "8618b7b95e94da34a3ef7e6b0fb940b09843a3d5fd91076ddfdfa667093beb73"
+        }
+      ],
+      "fsck_connectivity_passed": true,
+      "fsck_output": "",
+      "build_test_status": "not_run",
+      "weights_downloaded": false,
+      "dependency_installation_status": "not_run",
+      "acquisition": "official_depth1_blob_filtered_clone",
+      "nested_dependencies_initialized": false,
+      "verified_at_utc": "2026-10-29T02:39:29.181902+00:00"
+    },
+    {
+      "name": "uv-toolkit",
+      "path": "references/uv-toolkit",
+      "origin": "https://github.com/pedcorr/uv-toolkit.git",
+      "expected_origin_matches": true,
+      "commit": "3eba2c837f1c0e318b6ff1c311d0164d51fb595a",
+      "shallow": true,
+      "tracked_files": 31,
+      "clean": true,
+      "worktree_status": "",
+      "missing_tracked_files": [],
+      "git_lfs_pointer_files": [],
+      "nested_gitlink_paths": [],
+      "license_files": [],
+      "fsck_connectivity_passed": true,
+      "fsck_output": "",
+      "build_test_status": "not_run",
+      "weights_downloaded": false,
+      "dependency_installation_status": "not_run",
+      "acquisition": "official_depth1_blob_filtered_clone",
+      "nested_dependencies_initialized": false,
+      "verified_at_utc": "2026-10-29T02:39:29.181902+00:00",
+      "license_declaration_files": [
+        {
+          "path": "blender_manifest.toml",
+          "sha256": "d3d0f7bb544e16de734ce1d2a4de300f38fd6f184b22238e3f294e0ee40a2a94"
+        }
+      ],
+      "license_note": "No standalone LICENSE in this snapshot; blender_manifest.toml declares SPDX:GPL-3.0-or-later."
+    },
+    {
+      "name": "uv_mechanic",
+      "path": "references/uv_mechanic",
+      "origin": "https://github.com/theanine3D/uv_mechanic.git",
+      "expected_origin_matches": true,
+      "commit": "046b465e533463ae4293665c2caefb4b61eafd73",
+      "shallow": true,
+      "tracked_files": 86,
+      "clean": true,
+      "worktree_status": "",
+      "missing_tracked_files": [],
+      "git_lfs_pointer_files": [],
+      "nested_gitlink_paths": [],
+      "license_files": [
+        {
+          "path": "LICENSE",
+          "sha256": "9168182578a278c2a952bc6069c1e70cbb89a5647a392b2a2724b2075a963c78"
+        }
+      ],
+      "fsck_connectivity_passed": true,
+      "fsck_output": "",
+      "build_test_status": "not_run",
+      "weights_downloaded": false,
+      "dependency_installation_status": "not_run",
+      "acquisition": "official_depth1_blob_filtered_clone",
+      "nested_dependencies_initialized": false,
+      "verified_at_utc": "2026-10-29T02:39:29.181902+00:00"
+    },
+    {
+      "name": "UVgami",
+      "path": "references/UVgami",
+      "origin": "https://github.com/DanielBoxer/UVgami.git",
+      "expected_origin_matches": true,
+      "commit": "0cb3826b3d831688d9791633350b097ce3f2064b",
+      "shallow": true,
+      "tracked_files": 141,
+      "clean": true,
+      "worktree_status": "",
+      "missing_tracked_files": [],
+      "git_lfs_pointer_files": [],
+      "nested_gitlink_paths": [],
+      "license_files": [
+        {
+          "path": "LICENSE",
+          "sha256": "230184f60bae2feaf244f10a8bac053c8ff33a183bcc365b4d8b876d2b7f4809"
+        }
+      ],
+      "fsck_connectivity_passed": true,
+      "fsck_output": "",
+      "build_test_status": "not_run",
+      "weights_downloaded": false,
+      "dependency_installation_status": "not_run",
+      "acquisition": "official_depth1_blob_filtered_clone",
+      "nested_dependencies_initialized": false,
+      "verified_at_utc": "2026-10-29T02:39:29.181902+00:00"
+    },
+    {
+      "name": "dcc-mcp-blender",
+      "path": "references/dcc-mcp-blender",
+      "origin": "https://github.com/dcc-mcp/dcc-mcp-blender.git",
+      "expected_origin_matches": true,
+      "commit": "8d8027fe4377b4d399d545869fc11b80e04ff785",
+      "shallow": true,
+      "tracked_files": 784,
+      "clean": true,
+      "worktree_status": "",
+      "missing_tracked_files": [],
+      "git_lfs_pointer_files": [],
+      "nested_gitlink_paths": [],
+      "license_files": [
+        {
+          "path": "LICENSE",
+          "sha256": "b6e4ed87de81bb0e8d49bcfc5d97b2f116a0f16116b404ed65462d00a58eb499"
+        }
+      ],
+      "fsck_connectivity_passed": true,
+      "fsck_output": "",
+      "build_test_status": "not_run",
+      "weights_downloaded": false,
+      "dependency_installation_status": "not_run",
+      "acquisition": "official_depth1_blob_filtered_clone",
+      "nested_dependencies_initialized": false,
+      "verified_at_utc": "2026-10-29T02:39:29.181902+00:00"
+    },
+    {
+      "name": "blender-asset-mcp",
+      "path": "references/blender-asset-mcp",
+      "origin": "https://github.com/yi00it/blender-asset-mcp.git",
+      "expected_origin_matches": true,
+      "commit": "0fb15af9243c529c8d67e3f88fee67772af78a8d",
+      "shallow": true,
+      "tracked_files": 63,
+      "clean": true,
+      "worktree_status": "",
+      "missing_tracked_files": [],
+      "git_lfs_pointer_files": [],
+      "nested_gitlink_paths": [],
+      "license_files": [
+        {
+          "path": "LICENSE",
+          "sha256": "3c3bd803ed18450f9f40d325dae045482c03f1928a0dac6ebfdb6b8d9d3c197e"
+        }
+      ],
+      "fsck_connectivity_passed": true,
+      "fsck_output": "",
+      "build_test_status": "not_run",
+      "weights_downloaded": false,
+      "dependency_installation_status": "not_run",
+      "acquisition": "official_depth1_blob_filtered_clone",
+      "nested_dependencies_initialized": false,
+      "verified_at_utc": "2026-10-29T02:39:29.181902+00:00"
+    },
+    {
+      "name": "xatlas",
+      "path": "references/xatlas",
+      "origin": "https://github.com/jpcy/xatlas.git",
+      "expected_origin_matches": true,
+      "commit": "f700c7790aaa030e794b52ba7791a05c085faf0c",
+      "shallow": true,
+      "tracked_files": 972,
+      "clean": true,
+      "worktree_status": "",
+      "missing_tracked_files": [],
+      "git_lfs_pointer_files": [],
+      "nested_gitlink_paths": [],
+      "license_files": [
+        {
+          "path": "LICENSE",
+          "sha256": "e5a169df33973d376510bbf384cd9eb3cf44278bd6f4bedfc2fff5403f03dde2"
+        },
+        {
+          "path": "source/thirdparty/OpenFBX/LICENSE",
+          "sha256": "80e6d67e6a956250cad0bfed7bccd91c71fe5e8cf8e648ba89905f97ac1b87eb"
+        },
+        {
+          "path": "source/thirdparty/bgfx/LICENSE",
+          "sha256": "13e3bc388ea9e270a5ebdab2c9abc475c2b842e6247b75d479353631367ccc47"
+        },
+        {
+          "path": "source/thirdparty/bimg/LICENSE",
+          "sha256": "13e3bc388ea9e270a5ebdab2c9abc475c2b842e6247b75d479353631367ccc47"
+        },
+        {
+          "path": "source/thirdparty/bx/LICENSE",
+          "sha256": "13e3bc388ea9e270a5ebdab2c9abc475c2b842e6247b75d479353631367ccc47"
+        },
+        {
+          "path": "source/thirdparty/bx/include/tinystl/LICENSE",
+          "sha256": "48ff5b605b903471cfe4d5f69b19c2aa678a5b2660f1e12084f070d0bc741b98"
+        },
+        {
+          "path": "source/thirdparty/eigen/COPYING.BSD",
+          "sha256": "5ab9737046ce13a51c5999b3194e37c44f1b056b530755120b847576890f3c68"
+        },
+        {
+          "path": "source/thirdparty/eigen/COPYING.GPL",
+          "sha256": "0b383d5a63da644f628d99c33976ea6487ed89aaa59f0b3257992deac1171e6b"
+        },
+        {
+          "path": "source/thirdparty/eigen/COPYING.LGPL",
+          "sha256": "1e7e6bae5a5bde32f1ae5a7c37a082d1ab03cf89354f7f936ac40be9e39a6531"
+        },
+        {
+          "path": "source/thirdparty/eigen/COPYING.MINPACK",
+          "sha256": "f5b330efdad110cdd84d585ec61220b0650461fa599e36b13e1726c9346dcfb9"
+        },
+        {
+          "path": "source/thirdparty/eigen/COPYING.MPL2",
+          "sha256": "cde215e5b42363eb28ca2462c4558ff4807b38f383c537624c31e44657ac58f4"
+        },
+        {
+          "path": "source/thirdparty/eigen/COPYING.README",
+          "sha256": "4db6561ac96c94942817f0c489282a219e5fd8ed374e2dfd58d85f48aff3ebf9"
+        },
+        {
+          "path": "source/thirdparty/glfw/LICENSE.md",
+          "sha256": "7593ce7c7be05f3a0589ebc78091ba3db70f82c7a4acaea15a0b70230247df2c"
+        },
+        {
+          "path": "source/thirdparty/imgui/LICENSE.txt",
+          "sha256": "2d9ee3bf71be3e105d45fe5499d44660fed394c43124fccfc4a8b058f26c7f7c"
+        },
+        {
+          "path": "source/thirdparty/libigl/LICENSE.GPL",
+          "sha256": "0b383d5a63da644f628d99c33976ea6487ed89aaa59f0b3257992deac1171e6b"
+        },
+        {
+          "path": "source/thirdparty/libigl/LICENSE.MPL2",
+          "sha256": "cde215e5b42363eb28ca2462c4558ff4807b38f383c537624c31e44657ac58f4"
+        },
+        {
+          "path": "source/thirdparty/mimalloc/LICENSE",
+          "sha256": "bd42177f9bcc7f81181f6c418dd73e02d9df2f5c71f3642cff0c812888baa220"
+        },
+        {
+          "path": "source/thirdparty/nativefiledialog/LICENSE",
+          "sha256": "cc8f6d4f2e9a7e966d049555edb8180e67549fb13d9119d96cdcce62c314e43c"
+        }
+      ],
+      "fsck_connectivity_passed": true,
+      "fsck_output": "",
+      "build_test_status": "not_run",
+      "weights_downloaded": false,
+      "dependency_installation_status": "not_run",
+      "acquisition": "official_depth1_blob_filtered_clone",
+      "nested_dependencies_initialized": false,
+      "verified_at_utc": "2026-10-29T02:39:29.181902+00:00"
     }
-  ]
+  ],
+  "source_acquisition_verified_at_utc": "2026-10-29T02:39:29.181902+00:00",
+  "new_reference_names": [
+    "UniV",
+    "Magic-UV",
+    "uv-toolkit",
+    "uv_mechanic",
+    "UVgami",
+    "dcc-mcp-blender",
+    "blender-asset-mcp",
+    "xatlas"
+  ],
+  "verification_evidence": "artifacts/reference_acquisition/20261029T023619Z/verification.json",
+  "snapshot_policy": "Pinned submodules; no automatic reference updates, dependency installation, or build/runtime validation."
 }

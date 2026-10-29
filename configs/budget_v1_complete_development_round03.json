@@ -1,0 +1,29 @@
+{
+  "round_id": "budget_v1_complete_development_round03",
+  "models": [
+    "energy_blade",
+    "dragon"
+  ],
+  "methods": [
+    "independent",
+    "old_pair",
+    "geometry_only",
+    "joint",
+    "optcuts"
+  ],
+  "seeds": [
+    17
+  ],
+  "resolutions": [
+    512
+  ],
+  "seconds_per_target": 90,
+  "setup_seconds_per_model": 180,
+  "options": {
+    "iterations": 20,
+    "candidate_limit": 6,
+    "render_size": 48,
+    "include_optcuts_reference": true
+  },
+  "formal": false
+}

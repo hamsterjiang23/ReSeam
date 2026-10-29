@@ -4,3 +4,27 @@
 [submodule "references/PartUV"]
 	path = references/PartUV
 	url = https://github.com/EricWang12/PartUV.git
+[submodule "references/UniV"]
+	path = references/UniV
+	url = https://github.com/Oxicid/UniV.git
+[submodule "references/Magic-UV"]
+	path = references/Magic-UV
+	url = https://github.com/nutti/Magic-UV.git
+[submodule "references/uv-toolkit"]
+	path = references/uv-toolkit
+	url = https://github.com/pedcorr/uv-toolkit.git
+[submodule "references/uv_mechanic"]
+	path = references/uv_mechanic
+	url = https://github.com/theanine3D/uv_mechanic.git
+[submodule "references/UVgami"]
+	path = references/UVgami
+	url = https://github.com/DanielBoxer/UVgami.git
+[submodule "references/dcc-mcp-blender"]
+	path = references/dcc-mcp-blender
+	url = https://github.com/dcc-mcp/dcc-mcp-blender.git
+[submodule "references/blender-asset-mcp"]
+	path = references/blender-asset-mcp
+	url = https://github.com/yi00it/blender-asset-mcp.git
+[submodule "references/xatlas"]
+	path = references/xatlas
+	url = https://github.com/jpcy/xatlas.git

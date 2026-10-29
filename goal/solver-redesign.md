@@ -1,6 +1,8 @@
 # 求解器重新设计：当前方向与边界
 
-状态：方向已确认，具体优化模型和数值算法尚待设计。本次先归档V1/V2实现与实验；后续以本文件约束新方案。`[verified: 用户本轮“复用的是他顶层的idea，需要重新设计求解器”]`
+当前优先阶段已按用户确认扩展为[烘焙优先的拓扑变体](../docs/bake-topology-plan.md)：先验证无共享烘焙，再研究缩图与复用。固定几何v1推导和历史资产保持独立，后续对比按拓扑variant分组。`[verified: 本轮用户选择“加入拓扑优化，先做好烘焙”；assets/v1/README.md 多轮测试规则2、9]`
+
+状态：[预算恢复和交付存档的核心缺项已修复](../docs/results/budget_v1_completion_followup.md)，新的完整真实对照仍待执行；当前优先拓扑与烘焙。旧60项轮因完整性审计中止，不能当作新算法完整对比；尚无已证明的同质量缩图收益。旧V1/V2继续归档。目标见[完整实施与对比](budget-v1-implementation.md)，诊断及实际贴图见[中止报告](../artifacts/budget_v1/budget_v1_comparison_round05/report.after_audit.md)。`[verified: docs/results/budget_v1_completion_followup.md 审计项与当前状态；artifacts/budget_v1/budget_v1_comparison_round05/audit_interruption.json reason]`
 
 ## 已确定的方向
 
@@ -18,4 +20,4 @@
 
 [V2首轮结果](../docs/v2-joint-results.md)：能量刀取得有限排布改善，龙无改善，真实复用组为0；真实复用候选没有进入材质门禁。该结果支持重新检查求解问题与可行性处理，不能证明近似复用不可行，也不能归因于左右纹理不兼容。`[verified: docs/results/v2_joint_round01_summary.json candidates/groups]`
 
-新求解器尚未实现，不预先承诺全局最优、特定算法名称或优于OptCuts的性能。`[opinion]`
+每预算 UV/纹理联合更新、完整面独占例外和 CPU 多通道/实际纹素中心验收已接通；自动区域发现仍限于初始化的启发式几何区域对，神经网络提案与目标引擎验收尚未实施。实际效果由完整冻结对照判定，不预先承诺全局最优或优于OptCuts。`[verified: src/reseam/budget_solver.py、budget_material.py 当前入口；docs/running-budget-complete-v1.md 范围]` `[opinion]`

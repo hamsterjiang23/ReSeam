@@ -1,9 +1,90 @@
 # ReSeam
 
+当前正在实施[整龙 LLM UV 复用与 Baseline 对照](docs/dragon-llm-reuse-plan.md)：在 `tripo_p2` 固定规范化几何上，由 Agent 看图选区域、解释失败并修订，允许细小颜色差异对称化，保护头脸等特征。无共享修复、OptCuts 无共享修复、纯几何复用和 Agent 迭代复用均须独立记录；关键步骤前后证据和真实贴图是必交付项。此入口表示实施目标，不表示整龙共享、颜色验收或存储节省已经完成。`[verified: 用户接受的整龙计划及 Baseline／修正记录要求]` `[opinion]`
+
+本轮交付范围为 UV＋BaseColor；新增 `region.define`、区域展开、源颜色目标冻结及颜色复用验收流程，参数以 `tools describe` 为准。用户明确允许 OptCuts 作为本轮实验展开后端，此例外不改写历史自研求解器、V1/V2 或完整 PBR 的验收口径。`[verified: 用户本轮允许 OptCuts 等几何工具及“先完成 UV＋颜色复用”选择；registry.py 新工具登记]`
+
+Agent UV 工具集入口：`uv run reseam tools list`。使用 [运行说明](docs/running-agent-tools.md)与[reseam-uv Skill](skills/reseam-uv/SKILL.md)完成导入、候选、共享、排布、真实烘焙和独立验收导出；[真实两模型报告](artifacts/agent_tools_v1/round01/report.md)附实际贴图。工具闭环、复用收益与艺术验收分别判定，不替代下述完整求解器目标。`[verified: src/reseam/cli.py tools 分支；docs/running-agent-tools.md 对照运行]`
+
+新增用户提供的 [tripo_p2 龙实验](docs/results/agent-tools-tripo-p2.md)：原始资产独立保留，已测试 UV 问题面隔离、镜像对应与 256/512/1024 真实颜色贴图；完整材质与缩图质量未通过，不计入已验收收益。`[verified: artifacts/agent_tools_v1/tripo_p2_audit.json color_experiments/full_material_supported]`
+
+用户已将下一阶段明确为[加入拓扑优化，先做好无共享烘焙](docs/bake-topology-plan.md)。历史500/2000面低模保持原样，独立变体先检查面形、法线与投射，再测缩图和区域复用；不能将拓扑变化归为固定几何UV算法的收益。`[verified: 本轮用户选择“加入拓扑优化，先做好烘焙”；assets/v1/README.md 多轮测试规则2]`
+
+当前执行目标：[完整实现新求解器 v1 并与 baseline 对比](goal/budget-v1-implementation.md)。继续使用固定 energy_blade 与 dragon 调优；完整实现与实际对比报告均为完成条件。`[verified: 用户2026-10-28本轮授权；goal/budget-v1-implementation.md 完成条件]`
+
+60项旧对照已因审计缺项中止，原始记录与[实际贴图](artifacts/budget_v1/budget_v1_comparison_round05/texture_gallery_after_audit/gallery.md)保留，仅作诊断。式(19)恢复、完整排序、baseline保护及对应记录/截止时间问题已修复，状态见[完整性后续](docs/results/budget_v1_completion_followup.md)；尚未完成新冻结对照，也没有合格缩图收益。`[verified: artifacts/budget_v1/budget_v1_comparison_round05/audit_interruption.json reason；docs/results/budget_v1_completion_followup.md 审计项与实际检查]`
+
+早期几何内核与 BaseColor 开发诊断见[首阶段开发说明](docs/running-budget-v1.md)：真实龙翼缩减区域几何通过、颜色拒绝。该页和紧凑摘要保留对应早期实现状态，不用它们代表当前完整矩阵的结果。`[verified: docs/results/budget_v1_development_summary.json scope 与 full_v1_implemented=false]`
+
+## 对话要点：LLM 辅助 UV 复用修复
+
+用户给出的业务需求是优化 AI 生成游戏资产的贴图清晰度与存储成本：**只研究同一模型内部的区域复用**，例如左右翅膀、四肢、角和重复装饰。既比较相同贴图预算下的有效纹素密度，也比较满足相同画质时的最小实际纹理字节数；岛少、重叠多或图集看起来更满都不能单独证明收益。默认输出普通材质 UV，不依赖特殊解码 Shader。`[verified: 本轮用户“只关注同一模型内的区域复用”；derivation/v1.md §1–§3；用户粘贴的《LLM的UV复用修复实验》业务描述]`
+
+用户粘贴的文章展示了重复部件识别、UV 岛减少和复用标记，但未给出可核对的作者算法、代码与完整实验配置。两份补充对话中的流程是可实施的推测方案，不能写成已确认的作者原始实现，也不能承诺任意 AI 模型都可完整复现。下面的设计与上游参考不是作者实现证据；ReSeam 的工具调用、Agent 实际决策和真实模型复用结果须分别用各轮产物证明。`[verified: 本轮粘贴文章及第一份附件“根据结果反推……不是确认过的作者原始实现”；其余为opinion]` `[opinion]`
+
+### 怎么实现：语义提案与几何执行分工
+
+**LLM/VLM 提出哪些部件值得复用，几何求解器验证并生成 UV，实际烘焙与渲染决定是否接受。** 不把 LLM 直接输出的大量浮点 UV 坐标作为默认方案，也不把“左右翅膀”“同组”或模型自报置信度作为重叠许可。`[opinion]`
+
+1. **准备资产与烘焙基线**：保存原模型、原始 UV、全部实际材质及哈希。低模可来自 Tripo 等上游重拓扑，也可在有必要时本地生成独立 variant；不要求无条件再减面。按用户最新选择，先检查拓扑、法线和高低模投射，建立可用的无共享烘焙，再做缩图/复用。拓扑改变后重建面身份和对应，不迁移旧硬约束冒充仍有效。`[verified: 用户“加入拓扑优化，先做好烘焙”；assets/v1/README.md 多轮测试规则2、9；其余为设计opinion]` `[opinion]`
+2. **给模型可追溯的信息**：提取原面/面角 ID、连通区域、现有 UV 岛、邻接、面积、空间位置与材质统计，生成多视角图、带区域编号的模型图和 UV 图。语义区域可以跨越当前碎片岛；不能让既有碎片划分永久限制候选。`[opinion]`
+3. **生成结构化复用提案**：LLM/VLM 返回源/目标区域 ID、mirror/repeated/approximate 关系、语义、证据图、置信度以及必须独占的纹样。记录模型版本、提示词、输入与输出、调用耗时和费用；置信度只是提案信息，不是经过标定的可行性概率。人工指定区域也必须标明来源。`[opinion]`
+4. **验证曲面与外观兼容**：严格同拓扑复制只作便宜基线；近似部件使用配准和曲面对应，保存目标面及重心坐标，允许不同顶点数和三角划分。最近点、ICP 或有限往返误差只作证据，还要检查区域连续性、映射折叠、最终逐面仿射 UV 的表达误差及真实交叠单元；颜色、法线和 ORM 的兼容分别验收。`[verified: AGENTS.md 实现不变量；derivation/v1.md §4–§6；其余为设计opinion]` `[opinion]`
+5. **修复接缝、共享与排布**：对通过验证的区域建立共同参数域；处理必要边界切缝、连贯岛与整面独占例外。仅给兼容组许可重叠；打包时将整组视为一个对象，保留成员的相对映射，复查畸变、纹素密度、间距和边界。候选失败恢复完整状态，不能只恢复 UV 忘掉组、对应或纹理。`[opinion]`
+6. **重新生成纹理并验收**：UV 改变后，原纹理须按原始外观重新烘焙/重采样。共享成员先分别烘焙与比较，再形成共同纹理或退回独占，避免多个成员往同一图块写入而产生顺序覆盖。检查镜像 TBN、法线约定、AO 差异、颜色空间、过滤和 mip，最后用独立视图/灯光及目标引擎检查。输出模型、真实贴图、UV/接缝/复用标记、质量与成本报告。`[opinion]`
+
+### 作者回复与最小复现路线
+
+2026-10-29用户补充的[作者回复截图](docs/assets/llm-uv-reference/author-reply.png)写明：“基本靠llm自己的判断，人工干预不太多”。这支持作者自述由LLM主导判断，但未公开具体模型、提示词、程序、对应算法或烘焙验收。截图作为用户提供的来源保留，[清单](docs/assets/llm-uv-reference/manifest.json)记录原文件与SHA256；不能据此声称已独立复现作者系统。`[verified: author-reply.png 作者回复文字；manifest.json]`
+
+[UV前后图](docs/assets/llm-uv-reference/uv-comparison.webp)将左侧标作82个UV连通岛，右侧标作42个独立纹理区；[正面](docs/assets/llm-uv-reference/front.webp)、[背面](docs/assets/llm-uv-reference/back.webp)与[侧面](docs/assets/llm-uv-reference/side.webp)展示同色复用组及灰模接缝。组数、独立图块数和拓扑连通岛数须分别统计，不能将堆叠后的视觉减少直接当作删缝合岛；这些展示也没有给出原始彩色材质、法线和mip的保真对照。`[verified: 所链接截图的标题、图例与展示内容；统计解释为opinion]` `[opinion]`
+
+**优先验证的推测流程是“已有UV岛 → LLM分组和操作决策 → 几何对应与堆叠 → 按组重排 → 看图迭代”。** LLM可同时负责语义判断、选择操作、生成或调用脚本以及读反馈修订；不将其作用限缩为给部件命名。以下是本项目拟实施路线，不是作者已披露的实现。`[opinion]`
+
+1. **保留起点并编号**：保存输入几何、原UV、材质与面角身份，提取岛/区域的面集合、邻接、面积、位置、边界及拓扑统计，输出带编号的多视图。先从已有UV岛构造候选，再按需跨岛组合，不把岛编号等同于语义部件。`[opinion]`
+2. **输出可执行提案**：LLM提出共享成员、代表区域、镜像/重复关系、独占与保护区、操作次序和依据。实际脚本也要保存；记录模型、提示词、工具输入输出及人工修订，区分Agent决策、程序计算和人工指定。`[opinion]`
+3. **先验证便宜的堆叠基线**：精确重复先尝试拓扑匹配/UV复制；镜像候选处理方向与切线基。不同拓扑转入曲面对应与逐面UV拟合，或明确拒绝当前候选，不能凭同名、同色、最近点或图同构失败作最终可行性判断。`[opinion]`
+4. **整组排布并检查反馈**：代表区域参与打包，同组成员应用一致的图集变换，保留相对对应。输出编号UV、实际接缝、同色组、畸变及错误定位，供LLM提出下一次修改；执行前后全量验证，失败完整回退。`[opinion]`
+5. **接回真实材质验收**：无共享烘焙先达标，共享成员分别烘焙/取样后再形成共同贴图，检查BaseColor、Normal、ORM、过滤和mip；最终比较同画质实际字节与同预算清晰度。先做这条小流程的可运行对照，不要求先求完完整预算优化问题；它也不能替代完整算法和baseline的最终交付。`[opinion]`
+
+新增测试龙由用户使用[三张独立建模参考图](docs/assets/dragon-uv-test-v1/README.md)生成。它作为单独的新资产接收、记录生成来源/设置/哈希并建立自己的原UV与无共享烘焙基线；保留历史energy_blade与dragon及既有实验。新图是参考设计，不能作为实际3D拓扑、严格几何一致性或可复用性的证明。`[verified: 用户“我去生成的一个模型让你进行测试”及“拆成三张独立的图”；接收与验收规则为opinion]` `[opinion]`
+
+### 已核对的工程参考
+
+以下于 **2026-10-29** 核对上游文档或指定源码；“有此功能”不等于本机已安装、已跑通或满足 ReSeam 的近似复用合同。第三方工具用于模块参考和显式对照，不自动替换当前自研求解器或初始化。`[verified: 本轮上游页面与源码读取；goal/solver-redesign.md 已确定的方向]`
+
+上述新增8个GitHub仓库已克隆并作为子模块固定在本地[references](references/README.md)，与原OptCuts、PartUV共10项；完整提交、origin及许可文件哈希见[清单](references/manifest.json)。源码获取不代表插件安装或功能验证。`[verified: references/manifest.json new_reference_names/repositories；本轮获取核验]`
+
+|参考|可借鉴内容|必须保留的边界|
+|---|---|---|
+|[UVgami](https://github.com/DanielBoxer/UVgami) / [官方指南](https://uvgami.com/docs/)|Stack Similar 检测重复网格部件，只展开一份再复制 UV；另有局部展开、松弛与合岛工具。`[verified: 官方指南 Stack Similar、UV Editor Tools]`|可作精确重复部件流程对照；上述文档不是 LLM 语义提案或任意近似曲面的成功证明。`[opinion]`|
+|[UniV](https://github.com/Oxicid/UniV)|Stack 叠放相似几何岛；Stitch、Relax、纹素密度等操作可供参考。`[verified: README Operators，Stack/Stitch/Relax/Adjust & Normalize]`|先核实实际匹配条件、操作上下文与版本，不把“similar”解释为任意非同构部件。`[opinion]`|
+|[Magic UV](https://github.com/nutti/Magic-UV) / [Pack UV 源码](https://github.com/nutti/Magic-UV/blob/master/src/magic_uv/op/pack_uv.py)|先按 UV 中心、尺寸和 UV 数筛选；Accurate Island Copy 路径建立 UV 图、检测图同构，再复制对应坐标。`[verified: pack_uv.py _group_island 与 execute 的 accurate_island_copy 分支]`|这是已有 UV 候选匹配/复制参考，不是任意三维语义区域检测器；同构基线失败不能否定近似复用。`[opinion]`|
+|[UV Toolkit](https://github.com/pedcorr/uv-toolkit)|文档列出岛提取、Stack/Unstack、MaxRects/BSSF、密度及重叠检查。`[verified: README Transform、Texel Density、Architecture]`|形状哈希 StackIslands 仍列在 V2 Roadmap；README 的部分功能描述与规划交叉，须以具体源码及冒烟核验，不引用其利用率宣传值作为本项目结果。`[verified: README Roadmap V2；其余为opinion]` `[opinion]`|
+|[UV Mechanic](https://github.com/theanine3D/uv_mechanic)|按拓扑选相似岛，以及岛间重叠、岛内自重叠和密度诊断。`[verified: README Select、Texel Density]`|README 的岛间 Overlap 是包围盒检测；不能直接替代本项目逐三角形交叠许可/单射验收。`[verified: README Select Overlap；其余为opinion]` `[opinion]`|
+|[xatlas](https://github.com/jpcy/xatlas)|ComputeCharts/PackCharts 与已有 UV 的 AddUvMesh/PackCharts 分工，可作无共享展开/重排对照。`[verified: README Generate an atlas、Pack multiple atlases into a single atlas]`|展开/打包库的存在不证明具有语义复用；原面角身份与排布结果仍要核验。`[opinion]`|
+|[dcc-mcp-blender](https://github.com/dcc-mcp/dcc-mcp-blender)|官方工具表有 get_uv_islands、unwrap_uvs、pack_uvs、validate_mesh、烘焙及导出接口。`[verified: README Available MCP Tools，blender-uv-ops/validation/texture-bake/interchange]`|它提供执行通道，不能据此声称内置文章的复用算法；接入前核对实际工具 schema、运行实例和可回退范围。`[opinion]`|
+|[blender-asset-mcp](https://github.com/yi00it/blender-asset-mcp)|文档提供实际预览渲染、资产预算检查、LOD 与 GLB/FBX 导出。`[verified: README Checks its own work、Game-ready output]`|本次读到的 Requirements 为 Blender 5.2+；不能直接假定兼容此前使用的 4.5.11，也不证明内置语义共享。`[verified: README Requirements；其余为opinion]` `[opinion]`|
+|[OptCuts / PartUV 固定参考](references/README.md)|展开、切缝、分区与合并机制参考；本轮整龙工作流另允许显式调用 OptCuts。`[verified: references/README.md 阅读入口；用户接受的整龙计划]`|历史新求解器默认后端/初始化限制保持；本轮实验例外见[执行合同](docs/dragon-llm-reuse-plan.md)。PartUV 项目与 PartField 依赖许可分开核查。`[verified: goal/solver-redesign.md；references/PartUV/LICENSE；整龙执行合同“工具与判断”]`|
+
+NumPy/Trimesh 可承载已有数值与网格处理，Open3D/ICP 可作为配准候选；工具选择不替代曲面双射、材质和烘焙验证。“Symmetry-Aware Mesh Processing”作为附件提出的研究方向保留，未给出准确原文前不编造书目。参数化、联合 UV/贴图优化、重复内容去除与 texture carving 的既有来源见[文献索引](references/literature.md)和[推导参考](derivation/v1.md#12-参考来源与新意边界)，不将语义提案、堆叠或 LLM 控制 Blender 本身宣称为新算法。`[verified: 两份用户附件的技术建议；references/literature.md；derivation/v1.md §12；设计取舍为opinion]` `[opinion]`
+
+### 对话确定的验收与下一步
+
+- **先可用烘焙，再缩图和复用**。允许上游重拓扑输入；新增拓扑单列 variant，保留固定能量刀/龙和全部失败记录。当前拓扑/烘焙顺序见[执行计划](docs/bake-topology-plan.md)，固定几何算法仍按[完整实现与对比目标](goal/budget-v1-implementation.md)验收。`[verified: 用户明确选择“加入拓扑优化，先做好烘焙”；assets/v1/README.md 多轮规则]`
+- **以实际制作参考理解“合理 UV”**。用户提供的[刺模型拆解](docs/results/chloe-spike-reference.md)包含实际两套 UV 与256×256贴图：部件、UV 和纹理图案需协同，保留连贯区域和有意义的独占差异，不能将细长结构一律当错误。第二套 UV 的用途与 Unity 材质变换尚未核实，不自动称为 Lightmap 通道。`[verified: docs/results/chloe-spike-reference.md 检查表与边界；设计目标为opinion]` `[opinion]`
+- **复用不等于无损**。左右伤痕、文字、颜色、法线或 AO 不同时，需明确共同纹理如何取舍/优化，允许部分共享与独占；不得默认复制一侧覆盖另一侧。材质共享 UV 与业务要求非重叠的 Lightmap UV 分开处理。`[opinion]`
+- **面积收益与字节收益分开**。固定尺寸/格式/通道/mip 下，重叠本身不会改变既定纹理布局字节数；收益可能是同预算更清楚，也可能是经最终验收后减小图集。报告全部实际通道和 mip 的 payload、文件包体及网格副本成本，不用覆盖率或共享率替代。`[verified: derivation/v1.md §2 存储定义；其余为验收设计opinion]` `[opinion]`
+- **检验 LLM 的额外价值**。先用精确重复/纯几何模块建立对照，再测几何+LLM 提案的端到端效果，计入全部提案、拒绝、调用与验证成本。另用共同候选池、UV 起点及预算比较提案排序/语义保护机制；不能把不同搜索量造成的改善全归给 LLM。`[opinion]`
+- **神经网络可作为辅助消融**。用于语义分割、匹配提案、难参数预测或初始化；学习输出和训练 loss 不能绕过最终几何、编码、多通道与视觉验收，不因优化困难就自动增加训练流程。`[verified: 用户“难以求解……考虑神经网络”；其余为设计opinion]` `[opinion]`
+- **报告必须附实际产物**。给出原始/修改 UV、接缝与复用组同色标记、独占例外、真实 BaseColor/Normal/ORM、完整 mip、近景和渲染对照；明确已接受、被拒绝及未运行状态。源码/文档核对、流程成功、实际复用、存储改善和 artist 验收分别记录。`[verified: 用户“报告里附带上实际的产生的贴图”；AGENTS.md 实验与证据；其余为交付设计opinion]` `[opinion]`
+
+附件中的 Blender 5.2 API 示例和“UVgami 新版移除 Symmetry”等版本性说法不直接转成运行指令：执行前查看所用版本的 RNA/接口与变更记录。外部工具先单模型冒烟，锁定版本、源码和许可后再纳入对照；本次整理不代表安装或自动切换工具。`[verified: 第一份附件对copy_mirrored_faces的版本说明；第二份附件版本性断言；执行规则为opinion]` `[opinion]`
+
 **Reversible Seam Restructuring with Adaptive Relaxation for UV Unwrapping**  
 **基于可撤销接缝重构与自适应松弛的 UV 展开**
 
-**下一阶段：[重新设计求解器](goal/solver-redesign.md)。** 借鉴OptCuts高层思路，自研ReSeam求解器；OptCuts保留为参考、对照和历史复现，不再作为新方案的求解后端或默认初始化。下面的V1/V2结果是已归档的旧实现，不代表新求解器已经完成。`[verified: 用户本轮方向更新]`
+**独立求解器方向：[重新设计求解器](goal/solver-redesign.md)。** 该路线借鉴 OptCuts 高层思路、自研 ReSeam，OptCuts 保留为参考、对照和历史复现。用户本轮授权的[整龙工具实验](docs/dragon-llm-reuse-plan.md)允许显式使用 OptCuts 后端，两者分别归因；下面 V1/V2 结果继续保持历史口径，不代表新求解器或整龙目标已完成。`[verified: 用户历史求解器方向与本轮接受的整龙计划]`
 
 ReSeam 面向 AI 生成高模经过重拓扑后的低模，研究如何切缝和展开，使 UV 便于艺术家编辑、支持可靠烘焙，并适合后续可微贴图优化。在映射合法、畸变受控的前提下，改善接缝位置、区域连续性与碎片结构，减少人工修整成本；接缝短、岛少是评价的一部分，不代表已经达到 artist 目标。
 
@@ -144,7 +225,7 @@ AI 生成模型与重拓扑低模应以**近似对称区域**为研究入口，�
 - [V2 运行说明](docs/running-v2.md)：联合搜索、独立预算、匿名评审与UTF-8后处理命令。
 - [V2 联合结果](docs/v2-joint-results.md)：24项对照、代理评分、未成功的真实复用与证据边界。
 - [V2 紧凑证据归档](docs/results/v2_joint_round01/README.md)：随Git同步的矩阵、原始评分、执行记录和预览；完整大体积产物保留在本地artifacts。
-- [求解器重新设计](goal/solver-redesign.md)：当前方向与新方案边界，OptCuts只保留参考/对照用途。
+- [求解器重新设计](goal/solver-redesign.md)：独立求解器方向与边界；整龙工具实验的 OptCuts 后端例外见[执行合同](docs/dragon-llm-reuse-plan.md)。
 - [Artist 参考与质量目标](docs/artist-quality-reference.md)：用户提供的成品贴图参考、初步反馈及覆盖率／密度／安全间距的边界。
 - [人工编辑任务](docs/artist-review-task.md)：匿名场景、限时修整、UV 导出、技术复核与重烘焙。
 - [实现记录](implementation-notes.md)：偏差、审查修复和已知边界。

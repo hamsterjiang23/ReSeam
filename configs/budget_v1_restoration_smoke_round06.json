@@ -1,0 +1,18 @@
+{
+  "round_id": "budget_v1_restoration_smoke_round06",
+  "models": ["energy_blade"],
+  "methods": ["bake_only", "texture_only", "joint"],
+  "seeds": [17],
+  "resolutions": [256],
+  "seconds_per_target": 90,
+  "setup_seconds_per_model": 120,
+  "formal": false,
+  "options": {
+    "iterations": 2,
+    "candidate_limit": 6,
+    "final_validation_candidates": 3,
+    "restoration_local_iterations": 120,
+    "render_size": 32,
+    "tail_shape_limit": 0.1
+  }
+}

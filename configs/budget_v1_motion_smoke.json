@@ -1,0 +1,24 @@
+{
+  "round_id": "budget_v1_motion_smoke_round04",
+  "models": [
+    "energy_blade"
+  ],
+  "methods": [
+    "joint"
+  ],
+  "seeds": [
+    17
+  ],
+  "resolutions": [
+    256
+  ],
+  "seconds_per_target": 60,
+  "setup_seconds_per_model": 120,
+  "formal": false,
+  "options": {
+    "iterations": 12,
+    "candidate_limit": 2,
+    "final_validation_candidates": 2,
+    "render_size": 32
+  }
+}
