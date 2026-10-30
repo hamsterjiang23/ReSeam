@@ -96,8 +96,14 @@ def import_asset(request: dict[str, object], output: Path, deadline: float) -> d
         raise TypeError("ASSET_PATH_REQUIRED")
     source = Path(raw).resolve()
     suffix = source.suffix.lower()
+    restore_requested = any(key in request for key in (
+        "original_topology", "restore_regions", "source_parent_snapshot",
+    ))
+    if restore_requested and (suffix != ".glb" or request.get("repair_degenerate_faces", False)
+                              or request.get("initialize_uv") is not None):
+        raise ValueError("TOPOLOGY_RESTORE_REQUIRES_AUTHORED_GLB_UV_WITHOUT_OTHER_IMPORT_REPAIRS")
     if suffix not in {".obj", ".glb", ".fbx"}:
-        raise ValueError("UNSUPPORTED_ASSET_FORMAT: GLB, triangular OBJ or FBX required")
+        raise ValueError("UNSUPPORTED_ASSET_FORMAT: GLB, OBJ or FBX required")
     frozen = output / "inputs"
     frozen.mkdir()
     copied = frozen / source.name
@@ -116,6 +122,10 @@ def import_asset(request: dict[str, object], output: Path, deadline: float) -> d
     if reference is not None and not isinstance(reference, str):
         raise ValueError("REFERENCE_PATH_MUST_BE_STRING")
     metadata: dict[str, object]
+    polygon_obj = suffix == ".obj" and any(
+        len(row) != 4 for line in copied.read_text(encoding="utf-8-sig").splitlines()
+        if (row := line.split()) and row[0] == "f"
+    )
     if suffix == ".obj":
         uv_presence = [
             len(parts := token.split("/")) > 1 and bool(parts[1])
@@ -125,6 +135,7 @@ def import_asset(request: dict[str, object], output: Path, deadline: float) -> d
         ]
         if any(uv_presence) and not all(uv_presence):
             raise ValueError("UNSUPPORTED_MIXED_UV_PRESENCE: preserve authored OBJ UV")
+    if suffix == ".obj" and not polygon_obj:
         vertices, faces, uv, uv_faces = read_obj(copied)
         present = uv_faces.shape == faces.shape and len(uv) > 0
         corners = uv[uv_faces] if present else np.zeros((*faces.shape, 2))
@@ -160,6 +171,10 @@ def import_asset(request: dict[str, object], output: Path, deadline: float) -> d
                        (frozen / "imported.npz", frozen / "identity.json", frozen / "reference.glb"))
         if reference is None:
             reference = str(frozen / "reference.glb")
+    if "polygon_topology" not in metadata:
+        metadata["polygon_topology"] = {"polygons": faces.tolist(),
+            "triangle_to_polygon": list(range(len(faces))),
+            "source": "input explicit triangles; no inferred quads"}
     mesh = make_mesh(vertices, faces)
     if not metadata["source_uv_present"]:
         if request.get("initialize_uv") != "xatlas":
@@ -189,12 +204,25 @@ def import_asset(request: dict[str, object], output: Path, deadline: float) -> d
         metadata["uv_repair"] = {"faces": repaired, "method": "explicit intrinsic whole-face isolation",
                                   "requires_pack": bool(repaired)}
     surface = state_from_corner_uv(mesh, corners, corner_ids=ids)
+    restoration: dict[str, object] | None = None
+    if restore_requested:
+        from .topology_restore import restore_import_topology
+
+        surface, restoration, original_source = restore_import_topology(surface, request, frozen, deadline)
+        sources.append(original_source)
+        metadata["topology_restoration"] = restoration
+        # Restored vertex indices are different from the importer namespace.
+        # Original quad provenance cannot be asserted without a separate map.
+        metadata["polygon_topology"] = {"polygons": surface.mesh.faces.tolist(),
+            "triangle_to_polygon": list(range(len(surface.mesh.faces))),
+            "source": "restored explicit triangles; source polygon topology not transferred"}
     if reference is not None:
         ref = Path(reference).resolve()
         if ref.suffix.lower() != ".glb":
             raise ValueError("MATERIAL_REFERENCE_MUST_BE_GLB")
         destination = frozen / "material_reference.glb"
-        shutil.copy2(ref, destination)
+        if ref != destination.resolve():
+            shutil.copy2(ref, destination)
         sources.append({"path": str(destination), "original_path": str(ref), "sha256": file_hash(destination)})
         metadata["reference_glb"] = str(destination)
     metadata.update({"source_manifest": sources, "source_path": str(source),
@@ -204,11 +232,24 @@ def import_asset(request: dict[str, object], output: Path, deadline: float) -> d
                      "identity_policy": ("Blender original loop ancestry; conservative polygon boundaries" if suffix == ".fbx"
                                          else "source indices; no coordinate proximity welding"),
                      "active_uv_channel": "per-object active layer in metadata" if suffix == ".fbx" else 0})
+    if restoration is not None:
+        metadata["asset_id"] = object_hash({
+            "source_asset_id": metadata["asset_id"],
+            "source_parent_state_hash": restoration["source_parent_state_hash"],
+            "geometry_representation_hash": restoration["geometry_representation_hash"],
+            "restoration_config_hash": restoration["restoration_config_hash"],
+            "original_topology_sha256": restoration["original_topology_sha256"],
+        })
+        metadata["identity_policy"] = "verified original vertex IDs within selected regions; exact face corners"
     check_deadline(deadline)
     snapshot = save_snapshot(BudgetState(surface), output / "snapshot", metadata)
-    return {**snapshot_result(snapshot), "faces": len(faces), "vertices": len(vertices),
+    if restoration is not None:
+        write_json(output / "topology_restoration.json", restoration)
+    return {**snapshot_result(snapshot), "faces": len(surface.mesh.faces), "vertices": len(surface.mesh.vertices),
             "source_uv_preserved": bool(metadata["source_uv_present"]) and not repaired,
-            "material_validation": "NOT_RUN", "geometry_passed": None}
+            "material_validation": "NOT_RUN", "geometry_passed": None,
+            **({"topology_restoration": str((output / "topology_restoration.json").resolve())}
+               if restoration is not None else {})}
 
 
 def render_views(request: dict[str, object], output: Path, deadline: float) -> dict[str, object]:

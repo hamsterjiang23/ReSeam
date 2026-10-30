@@ -18,7 +18,6 @@ import shapely
 import trimesh
 from PIL import Image
 from shapely import STRtree
-from trimesh.triangles import closest_point
 from trimesh.visual.material import PBRMaterial
 from trimesh.visual.texture import TextureVisuals
 
@@ -34,9 +33,8 @@ from ..budget_texture import (
     sample_rgba8,
 )
 from ..mesh import chart_labels
-from ..surface_match import barycentric_coordinates
 from ..types import FloatArray, IntArray, MeshState
-from .geometry import geometry_report
+from .geometry import _DEFAULT_PROFILE, geometry_report
 from .state import (
     Snapshot,
     check_deadline,
@@ -51,6 +49,68 @@ SCOPE = "basecolor_reuse"
 _DEFAULT_LIMITS = {"color_mean": .025, "color_p95": .08, "color_max": .20,
                    "render_mean": .025, "render_p95": .08, "render_max": .20,
                    "seam_mean": .025, "seam_max": .20}
+
+_LAYOUT_KEYS = {"resolution", "gap_pixels", "border_pixels", "balance_density"}
+
+
+def _geometry_contract(profile: dict[str, object]) -> dict[str, object]:
+    """Bind correspondence and quality policy; layout is stage-specific."""
+    return {key: profile[key] for key in (*_DEFAULT_PROFILE, "preserve_source_uv")
+            if key not in _LAYOUT_KEYS and key in profile}
+
+
+def _geometry_profile(request: dict[str, object], bound: dict[str, object] | None = None,
+                      resolution: int | None = None) -> dict[str, object]:
+    raw = request.get("geometry_profile", {})
+    if not isinstance(raw, dict) or set(raw) - set(_DEFAULT_PROFILE) - {"balance_density", "preserve_source_uv"}:
+        raise ValueError("INVALID_BASECOLOR_GEOMETRY_PROFILE")
+    profile = {**_DEFAULT_PROFILE, **(bound or {}), **raw}
+    for key, value in profile.items():
+        if key == "preserve_source_uv":
+            from .source_uv import source_uv_policy
+            profile[key] = source_uv_policy(value)
+        elif key in ("quality_constraints", "balance_density"):
+            if not isinstance(value, bool):
+                raise ValueError(f"BOOLEAN_REQUIRED:{key}")
+        elif key == "resolution":
+            if type(value) is not int or value < 1:
+                raise ValueError("INVALID_GEOMETRY_RESOLUTION")
+        elif type(value) not in (int, float) or not np.isfinite(value) or value < 0:
+            raise ValueError(f"NONNEGATIVE_FINITE_GEOMETRY_VALUE_REQUIRED:{key}")
+        else:
+            profile[key] = float(value)
+    if cast(float, profile["normal_angle_degrees"]) > 180:
+        raise ValueError("INVALID_GEOMETRY_NORMAL_ANGLE")
+    if bound is not None and _geometry_contract(profile) != _geometry_contract(bound):
+        raise ValueError("BASECOLOR_GEOMETRY_PROFILE_MISMATCH:freeze a new target for another policy")
+    if resolution is not None:
+        if "resolution" in raw and raw["resolution"] != resolution:
+            raise ValueError("BASECOLOR_GEOMETRY_RESOLUTION_MISMATCH")
+        profile["resolution"] = resolution
+    return profile
+
+
+def _record_geometry_profile(record: dict[str, object]) -> dict[str, object]:
+    profile = _geometry_profile(record)
+    if ("geometry_profile" in record
+            and record.get("geometry_profile_hash") != object_hash(profile)):
+        raise ValueError("BASECOLOR_GEOMETRY_PROFILE_CHANGED")
+    return profile
+
+
+def _geometry_metadata(profile: dict[str, object]) -> dict[str, object]:
+    strict = _geometry_contract(profile) == _geometry_contract(_DEFAULT_PROFILE)
+    return {"geometry_profile": profile, "geometry_profile_hash": object_hash(profile),
+            "geometry_policy": "strict_default" if strict else "explicit_custom",
+            "strict_geometry_profile_applied": strict, "artist_reviewed": False}
+
+
+def _prerequisite_profile(profile: dict[str, object], request: dict[str, object]) -> dict[str, object]:
+    # Historically target/bake checked safety, leaving shape acceptance to
+    # quality.validate. An explicitly supplied policy is checked as requested.
+    explicit = "geometry_profile" in request
+    return {**profile, "gap_pixels": 0., "border_pixels": 0.,
+            "quality_constraints": profile["quality_constraints"] if explicit else False}
 
 
 def _int(request: dict[str, object], key: str, default: int, low: int, high: int) -> int:
@@ -116,6 +176,40 @@ class _Domain:
     tree: STRtree
 
 
+def _project_uv_barycentric(triangles: FloatArray, points: FloatArray) -> FloatArray:
+    """Closest UV triangle barycentrics without a world-scale absolute tolerance.
+
+    UV determinants shrink to fourth order in generic 3D projection predicates;
+    a fixed tolerance can therefore classify a valid tiny interior as an edge.
+    Use the 2D determinant for interior membership and exact segment clamping for
+    the outside case. Geometry validation separately rejects degenerate faces.
+    """
+    first, second = triangles[:, 1] - triangles[:, 0], triangles[:, 2] - triangles[:, 0]
+    delta = points - triangles[:, 0]
+    determinant = first[:, 0] * second[:, 1] - first[:, 1] * second[:, 0]
+    if np.any(determinant == 0):
+        raise ValueError("DEGENERATE_UV_PROJECTION_TRIANGLE")
+    b = (delta[:, 0] * second[:, 1] - delta[:, 1] * second[:, 0]) / determinant
+    c = (first[:, 0] * delta[:, 1] - first[:, 1] * delta[:, 0]) / determinant
+    result = np.column_stack((1 - b - c, b, c))
+    outside = np.flatnonzero(np.any(result < 0, axis=1))
+    if len(outside):
+        candidates: list[FloatArray] = []
+        barycentric: list[FloatArray] = []
+        for start, end in ((0, 1), (1, 2), (2, 0)):
+            edge = triangles[outside, end] - triangles[outside, start]
+            offset = points[outside] - triangles[outside, start]
+            denominator = np.sum(edge * edge, axis=1)
+            t = np.clip(np.sum(offset * edge, axis=1) / denominator, 0, 1)
+            candidates.append(triangles[outside, start] + t[:, None] * edge)
+            weights = np.zeros((len(outside), 3)); weights[:, start] = 1 - t; weights[:, end] = t
+            barycentric.append(weights)
+        distances = np.sum((np.stack(candidates, axis=1) - points[outside, None]) ** 2, axis=2)
+        nearest = np.argmin(distances, axis=1)
+        result[outside] = np.stack(barycentric, axis=1)[np.arange(len(outside)), nearest]
+    return result
+
+
 class ColorTarget:
     """Frozen surface signal, addressable by original face and barycentric point."""
 
@@ -126,6 +220,7 @@ class ColorTarget:
         digest = record.pop("target_hash", None)
         if digest != object_hash(record) or record.get("scope") != SCOPE:
             raise ValueError("TARGET_MANIFEST_HASH_MISMATCH")
+        _record_geometry_profile(self.record)
         if record.get("asset_id") != snapshot.asset_id or record.get("geometry_hash") != _geometry_hash(snapshot):
             raise ValueError("TARGET_ASSET_OR_GEOMETRY_MISMATCH")
         self.reference, source, _ = _source(snapshot)
@@ -181,9 +276,7 @@ class ColorTarget:
             # Texture footprint extension uses the nearest point on the same
             # master domain. Center samples were authorized by geometry gates.
             ids[missing] = np.asarray(domain.tree.nearest(points[missing]), dtype=np.int64)
-        xyz = np.column_stack((uv, np.zeros(len(uv))))
-        projected = closest_point(domain.triangles[ids], xyz)
-        coordinates = barycentric_coordinates(domain.triangles[ids], projected)
+        coordinates = _project_uv_barycentric(domain.triangles[ids, :, :2], uv)
         source_uv = np.einsum("nc,ncd->nd", coordinates, domain.source_uv[ids])
         return self._source_color(source_uv)
 
@@ -221,9 +314,7 @@ No image produced by the candidate bake is read here.
         uv = bary[outside] @ self.uv[face]
         points = shapely.points(uv)
         selected = np.asarray(domain.tree.nearest(points), dtype=np.int64)
-        xyz = np.column_stack((uv, np.zeros(len(uv))))
-        projected = closest_point(domain.triangles[selected], xyz)
-        coordinates = barycentric_coordinates(domain.triangles[selected], projected)
+        coordinates = _project_uv_barycentric(domain.triangles[selected, :, :2], uv)
         values = np.empty((len(uv), 4))
         for index in np.unique(selected):
             keep = selected == index
@@ -287,6 +378,7 @@ def _freeze_topology(request: dict[str, object], reference: ReferenceSurface,
 
 def freeze_target(request: dict[str, object], output: Path, deadline: float) -> dict[str, object]:
     snapshot = require_snapshot(request)
+    profile = _geometry_profile(request)
     reference, source, material = _source(snapshot)
     policy = request.get("policy", "symmetrize" if snapshot.state.groups else "source_original")
     if policy not in ("symmetrize", "source_original"):
@@ -316,9 +408,10 @@ def freeze_target(request: dict[str, object], output: Path, deadline: float) -> 
         raise ValueError("UNKNOWN_MASTER_GROUP")
     groups: list[dict[str, object]] = []
     if policy == "symmetrize":
-        safety = geometry_report(snapshot.state, {"quality_constraints": False, "gap_pixels": 0,
-                                                  "border_pixels": 0})
-        if safety.get("hard_valid") is not True:
+        safety_profile = _prerequisite_profile(profile, request)
+        safety = geometry_report(snapshot.state, safety_profile)
+        write_json(output / "geometry.json", {"profile": safety_profile, "geometry": safety})
+        if safety.get("valid") is not True:
             raise ValueError("SYMMETRIC_TARGET_REQUIRES_LEGAL_SHARED_STATE")
         for group in snapshot.state.groups:
             if set(protected).intersection(group.first_faces + group.second_faces):
@@ -344,6 +437,7 @@ def freeze_target(request: dict[str, object], output: Path, deadline: float) -> 
         "original_topology": original_topology,
         "signal": "original source texture sampled through frozen source face/corner and shared UV domain",
         "master_default": "first member; caller must record any semantic source-side decision",
+        **_geometry_metadata(profile),
     }
     record["target_hash"] = object_hash(record)
     write_json(output / "target.json", record)
@@ -364,7 +458,8 @@ def freeze_target(request: dict[str, object], output: Path, deadline: float) -> 
     return {"status": "OK", "execution_success": True, "target": str((output / "target.json").resolve()),
             "target_hash": record["target_hash"], "policy": policy,
             "appearance_change": str((output / "appearance_change.json").resolve()),
-            "modified_faces": len(target.slaves), "full_pbr_passed": False}
+            "modified_faces": len(target.slaves), "full_pbr_passed": False,
+            **_geometry_metadata(profile)}
 
 
 def _target(snapshot: Snapshot, request: dict[str, object], output: Path, deadline: float) -> ColorTarget:
@@ -372,7 +467,10 @@ def _target(snapshot: Snapshot, request: dict[str, object], output: Path, deadli
     if path is None:
         folder = output / "source_target"
         folder.mkdir()
-        frozen = freeze_target({"snapshot": str(snapshot.root), "policy": "source_original"}, folder, deadline)
+        target_request: dict[str, object] = {"snapshot": str(snapshot.root), "policy": "source_original"}
+        if "geometry_profile" in request:
+            target_request["geometry_profile"] = request["geometry_profile"]
+        frozen = freeze_target(target_request, folder, deadline)
         path = frozen["target"]
     if not isinstance(path, str):
         raise TypeError("TARGET_PATH_REQUIRED")
@@ -481,11 +579,13 @@ def bake_color_reuse(request: dict[str, object], output: Path, deadline: float) 
     if resolution & (resolution - 1):
         raise ValueError("BASECOLOR_REUSE_REQUIRES_POWER_OF_TWO_RESOLUTION")
     padding = _int(request, "padding_pixels", 4, 0, resolution // 2 - 1)
-    safety = geometry_report(snapshot.state, {"resolution": resolution, "quality_constraints": False,
-                                             "gap_pixels": 0, "border_pixels": 0})
-    if safety.get("hard_valid") is not True:
-        return {"status": "REJECTED", "execution_success": True, "reason": "GEOMETRY_UNSAFE", "geometry": safety}
     target = _target(snapshot, request, output, deadline)
+    profile = _geometry_profile(request, _record_geometry_profile(target.record), resolution)
+    safety_profile = _prerequisite_profile(profile, request)
+    safety = geometry_report(snapshot.state, safety_profile)
+    write_json(output / "geometry.json", {"profile": safety_profile, "geometry": safety})
+    if safety.get("valid") is not True:
+        return {"status": "REJECTED", "execution_success": True, "reason": "GEOMETRY_UNSAFE", "geometry": safety}
     base = np.zeros((resolution, resolution, 4), dtype=np.uint8)
     owner = np.full((resolution, resolution), -1, dtype=np.int32)
     surface = snapshot.state.surface
@@ -556,13 +656,15 @@ def bake_color_reuse(request: dict[str, object], output: Path, deadline: float) 
         "coverage_definition": "source-sampled triangle buffer support; geometric_coverage.npy separately stores center rasterization; neither is continuous geometric occupancy",
         "files": {str(p.relative_to(output)): file_hash(p) for p in [*paths, output / "coverage.npy", output / "geometric_coverage.npy"]},
         "full_pbr_passed": False, "gpu_verified": False, "artist_reviewed": False,
+        **_geometry_metadata(profile),
     }
     check_deadline(deadline)
     ColorTarget(require_snapshot(request), target.path)
     write_json(output / "bake.json", manifest)
     return {"status": "OK", "execution_success": True, "scope": SCOPE,
             "bake": str((output / "bake.json").resolve()), "target": str(target.path),
-            "payload_bytes": manifest["payload_bytes"], "quality_accepted": False, "full_pbr_passed": False}
+            "payload_bytes": manifest["payload_bytes"], "quality_accepted": False, "full_pbr_passed": False,
+            **_geometry_metadata(profile)}
 
 
 def _load(snapshot: Snapshot, path: Path) -> tuple[dict[str, object], ColorTarget, list[Uint8Array]]:
@@ -574,6 +676,8 @@ def _load(snapshot: Snapshot, path: Path) -> tuple[dict[str, object], ColorTarge
     if file_hash(target_path) != record.get("target_sha256"):
         raise ValueError("BAKE_TARGET_CHANGED")
     target = ColorTarget(snapshot, target_path)
+    _geometry_profile({"geometry_profile": _record_geometry_profile(record)},
+                      _record_geometry_profile(target.record))
     files = record.get("files")
     if not isinstance(files, dict) or not files:
         raise ValueError("BAKE_FILES_REQUIRED")
@@ -612,10 +716,7 @@ def validate_color_reuse(request: dict[str, object], output: Path, deadline: flo
         if type(value) not in (float, int) or not np.isfinite(value) or value <= 0:
             raise ValueError("POSITIVE_FINITE_COLOR_THRESHOLD_REQUIRED")
         limits[str(key)] = float(value)
-    profile = request.get("geometry_profile", {})
-    if not isinstance(profile, dict):
-        raise TypeError("GEOMETRY_PROFILE_REQUIRED")
-    profile = {**profile, "resolution": size, "quality_constraints": True}
+    profile = _geometry_profile(request, _record_geometry_profile(record), size)
     geometry = geometry_report(snapshot.state, profile)
     surface = snapshot.state.surface
     signal = AtlasSignal(target, surface, cache_filter=True)
@@ -679,12 +780,14 @@ def validate_color_reuse(request: dict[str, object], output: Path, deadline: flo
         "geometry": geometry, "material": material, "render": rendering, "seams": seams,
         "profile": protocol, "profile_hash": object_hash(protocol), "payload_bytes": record["payload_bytes"],
         "full_pbr_passed": False, "gpu_verified": False, "artist_reviewed": False,
+        **_geometry_metadata(profile),
     }
     write_json(output / "validation.json", evidence)
     return {"status": "OK" if valid else "REJECTED", "execution_success": True, "scope": SCOPE,
             "quality_accepted": valid, "full_pbr_passed": False, "geometry_valid": geometry.get("valid"),
             "material_valid": material["valid"], "render_valid": rendering["valid"], "seams_valid": seams["valid"],
-            "validation": str((output / "validation.json").resolve()), "payload_bytes": record["payload_bytes"]}
+            "validation": str((output / "validation.json").resolve()), "payload_bytes": record["payload_bytes"],
+            **_geometry_metadata(profile)}
 
 
 def _render(target: ColorTarget, surface: MeshState, levels: list[Uint8Array], mips: list[int], size: int,
@@ -815,6 +918,10 @@ def export_color_reuse(request: dict[str, object], output: Path, deadline: float
                      or evidence.get("target_hash") != record["target_hash"]
                      or evidence.get("profile_hash") != object_hash(evidence.get("profile"))):
         raise ValueError("STALE_BASECOLOR_VALIDATION")
+    if evidence:
+        validation_profile = cast(dict[str, object], evidence.get("profile", {}))
+        _geometry_profile({"geometry_profile": validation_profile.get("geometry", {})},
+                          _record_geometry_profile(record))
     valid = evidence.get("valid") is True and all(isinstance(evidence.get(k), dict)
         and cast(dict[str, object], evidence[k]).get("valid") is True for k in ("geometry", "material", "render", "seams"))
     if mode == "accepted" and not valid:
@@ -829,6 +936,12 @@ def export_color_reuse(request: dict[str, object], output: Path, deadline: float
     mesh.metadata["validation_scope"] = "BaseColor only; source specular and other PBR channels not reproduced"
     mesh.export(output / "asset.glb", file_type="glb")
     shutil.copytree(path.parent / "texture", output / "texture")
+    for name in cast(dict[str, str], record["files"]):
+        relative = (path.parent / name).resolve().relative_to(path.parent.resolve())
+        if relative.parts[0] != "texture":
+            destination = output / relative
+            destination.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(path.parent / relative, destination)
     shutil.copytree(snapshot.root, output / "snapshot")
     (output / "target").mkdir()
     shutil.copy2(target.path, output / "target/target.json")
@@ -842,15 +955,37 @@ def export_color_reuse(request: dict[str, object], output: Path, deadline: float
         "full_pbr_passed": False, "gpu_verified": False, "artist_reviewed": False,
         "state_hash": snapshot.state_hash, "target_hash": record["target_hash"],
         "payload_bytes": record["payload_bytes"], "package_bytes": record["package_bytes"],
+        "codec": record.get("codec", "RGBA8_SRGB_RGB_LINEAR_ALPHA"),
+        "runtime_texture_bytes": record.get("runtime_texture_bytes", record["payload_bytes"]),
+        "runtime_package_bytes": record.get("runtime_package_bytes", record["package_bytes"]),
+        "decoded_preview_bytes": record.get("decoded_preview_bytes", sum(level.nbytes for level in levels)),
+        "decoded_preview_package_bytes": record.get("decoded_preview_package_bytes", record["package_bytes"]),
+        "runtime_artifacts": record.get("runtime_artifacts", []),
+        "delivered_artifact_bytes_scope": "artifact tree at export-handler completion; excludes late runner transport receipt/log bytes",
         "validated_mips": cast(dict[str, object], evidence.get("profile", {})).get("mip_levels", []),
         "preview_material": "BaseColor diagnostic presentation; roughness=1 metallic=0; not source PBR",
-        "files": {str(p.relative_to(output)): file_hash(p) for p in sorted(output.rglob("*")) if p.is_file()}}
+        "files": {str(p.relative_to(output)): file_hash(p) for p in sorted(output.rglob("*")) if p.is_file()},
+        **_geometry_metadata(_record_geometry_profile(record))}
     write_json(output / "export.json", result)
     (output / "report.md").write_text(
         f"# Base Color UV 复用导出\n\n- 验收范围：`{SCOPE}`；通过：`{valid}`；导出模式：`{mode}`。\n"
-        f"- 已验收 LOD：`{result['validated_mips']}`；完整 mip 字节：`{record['payload_bytes']}`。\n"
+        f"- 已检查 LOD：`{result['validated_mips']}`；完整 mip 字节：`{record['payload_bytes']}`。\n"
+        f"- 编码：`{result['codec']}`；运行时纹理字节：`{result['runtime_texture_bytes']}`；解码预览像素字节：`{result['decoded_preview_bytes']}`。\n"
+        f"- 几何配置：`{result['geometry_policy']}`；使用严格默认配置：`{result['strict_geometry_profile_applied']}`。\n"
         "- 完整 PBR、GPU、艺术验收均未完成；预览材质不复现源 Specular。\n\n"
         "![实际颜色贴图](texture/BaseColor_mip0.png)\n", encoding="utf-8")
+    # Include the exported preview GLB, debug snapshots, reports, and this
+    # manifest in delivery size. This is deliberately not codec payload size.
+    for _ in range(4):
+        delivered = sum(p.stat().st_size for p in output.rglob("*") if p.is_file())
+        if result.get("delivered_artifact_bytes") == delivered:
+            break
+        result["delivered_artifact_bytes"] = delivered
+        write_json(output / "export.json", result)
     return {"status": "OK", "execution_success": True, "scope": SCOPE, "quality_accepted": valid,
             "full_pbr_passed": False, "asset": str((output / "asset.glb").resolve()),
-            "report": str((output / "report.md").resolve()), "manifest": str((output / "export.json").resolve())}
+            "report": str((output / "report.md").resolve()), "manifest": str((output / "export.json").resolve()),
+            "codec": result["codec"], "runtime_texture_bytes": result["runtime_texture_bytes"],
+            "decoded_preview_bytes": result["decoded_preview_bytes"],
+            "delivered_artifact_bytes": result["delivered_artifact_bytes"],
+            **_geometry_metadata(_record_geometry_profile(record))}

@@ -14,7 +14,7 @@ from .state import file_hash, read_object, write_json
 
 def _versions() -> dict[str, str]:
     packages: dict[str, str] = {}
-    for name in ("numpy", "scipy", "trimesh", "pillow", "shapely", "xatlas"):
+    for name in ("numpy", "scipy", "trimesh", "pillow", "shapely", "xatlas", "ispc-texcomp"):
         try:
             packages[name] = version(name)
         except PackageNotFoundError:
@@ -36,7 +36,8 @@ def run_tool(name: str, request_path: Path, output: Path) -> dict[str, object]:
     package = Path(__file__).resolve().parents[1]
     sources = sorted(package.rglob("*.py"))
     scripts = package.parents[1] / "scripts"
-    sources.extend(p for p in (scripts / "bake_variant_worker.py", scripts / "agent_asset_worker.py") if p.is_file())
+    sources.extend(p for p in (scripts / "bake_variant_worker.py", scripts / "agent_asset_worker.py",
+                              scripts / "agent_unwrap_worker.py", scripts / "agent_pack_worker.py") if p.is_file())
     write_json(output / "provenance.json", {
         "python": sys.version, "request_sha256": file_hash(output / "request.json"),
         "source_sha256": {str(p): file_hash(p) for p in sources},

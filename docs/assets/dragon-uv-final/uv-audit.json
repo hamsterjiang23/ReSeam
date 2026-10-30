@@ -1,0 +1,15 @@
+{
+  "vertices_unchanged": true,
+  "faces_unchanged": true,
+  "face_count": 11450,
+  "old_charts": 134,
+  "new_charts": 92,
+  "old_charts_split": [],
+  "shared_groups": 46,
+  "shared_faces": 11450,
+  "no_duplicate_membership": true,
+  "mirror_uv_max_error": 0.0,
+  "original_edge_component_count": 92,
+  "old_used_uv_vertices": 7642,
+  "new_used_uv_vertices": 7326
+}

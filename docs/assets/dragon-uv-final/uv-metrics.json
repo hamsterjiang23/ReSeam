@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "state_hash": "59d20f7ed753ab7b9132cfe477318217a295974630bbcfa4c61635fe6a999566",
+  "asset_id": "b6ec411224cad17fb88edae8ec945b3bd12c6fcc7b89575f88fa1b1e91949e95",
+  "source_snapshot": "E:\\ReSem\\artifacts\\meshquery_v1\\island_merge01\\sole_formal\\sole_repaired_islands\\pack\\snapshot\\snapshot.json",
+  "source_snapshot_sha256": "2c5737bd37f135459b816b2322d26f4645c48a607e83253f8a1dec20694e0656",
+  "geometry_report_object_sha256": "a01917bfa3add3d16192e86ced2d0a30a8bd1dfa7e142c70327f7dffb7998fe3",
+  "resolution": 2048,
+  "metrics_verified": true,
+  "verification_reason": "SOURCE_UV_PRESERVED_NEW_CONFLICTS_REJECTED",
+  "full_geometry_passed": true,
+  "hard_geometry_passed": true,
+  "quality_constraints_checked": false,
+  "strict_hard_geometry_passed": false,
+  "geometry_acceptance_scope": "preserve_source_uv_conflicts_appearance_first",
+  "preserved_source_conflict_count": 44,
+  "uv_connected_charts": 92,
+  "packing_owners": 46,
+  "actual_independent_tiles": 46,
+  "authorized_positive_overlap_cells": 5753,
+  "global": {
+    "face_count": 11450,
+    "surface_area": 1.4965282205471029,
+    "actual_shared_surface_area": 1.4965282205471029,
+    "actual_shared_surface_fraction": 1.0
+  },
+  "selection": {
+    "face_count": 11450,
+    "face_ids_sha256": "6c4aff6fefd15330f3203a3c2a6f93878535e74d4ec9b826bdadaf9edd6f1af6",
+    "surface_area": 1.4965282205471029,
+    "actual_shared_surface_area": 1.4965282205471029,
+    "actual_shared_surface_fraction": 1.0
+  },
+  "measurement_method": "All UV charts form DSU nodes; join only authorized compatible strict-positive intersection cells after full hard validation. Per-face intersection UNION / UV face area times original3D face area; both members count. Selection never limits global geometry or tile count.",
+  "positive_overlap_area_floor": 0.0,
+  "material_validated": false,
+  "global_metrics_scope": "all_original_faces",
+  "inspection_report": "E:\\ReSem\\artifacts\\meshquery_v1\\island_merge01\\sole_formal\\sole_repaired_islands\\inspect\\inspection.json",
+  "inspection_report_sha256": "01252c137c1cbcab8c607010c2f61fe0a08123459d5abfcb680e0a6c466dfd3d",
+  "geometry_report_json_pointer": "/geometry"
+}

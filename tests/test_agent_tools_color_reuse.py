@@ -1,7 +1,9 @@
 """Source-bound color targets remain independent of candidate UV and atlas files."""
 
 import time
+from dataclasses import replace
 from pathlib import Path
+from typing import cast
 
 import numpy as np
 import pytest
@@ -10,8 +12,10 @@ from PIL import Image
 from reseam.agent_tools.color_reuse import (
     AtlasSignal,
     ColorTarget,
+    _bary,
     _filtered,
     _mips,
+    _project_uv_barycentric,
     _render,
     bake_color_reuse,
     export_color_reuse,
@@ -65,6 +69,75 @@ def _shared(root: Path, original: Snapshot) -> Snapshot:
     return load_snapshot(Path(str(applied["snapshot"])))
 
 
+def test_explicit_geometry_policy_is_bound_across_target_bake_and_validation(tmp_path: Path) -> None:
+    original = _source(tmp_path)
+    shared = _shared(tmp_path, original)
+    state = shared.state.copy()
+    state.groups = (replace(state.groups[0], plane_offset=.05),)
+    shifted = save_snapshot(state, tmp_path / "shifted", shared.metadata, shared)
+    with pytest.raises(ValueError, match="LEGAL_SHARED_STATE"):
+        freeze_target({"snapshot": str(shifted.root)}, _folder(tmp_path, "strict"), _deadline())
+    policy: dict[str, object] = {"correspondence_fraction": .1, "normal_angle_degrees": 180,
+                                 "quality_constraints": False}
+    frozen = freeze_target({"snapshot": str(shifted.root), "geometry_profile": policy},
+                           _folder(tmp_path, "relaxed"), _deadline())
+    assert frozen["strict_geometry_profile_applied"] is False
+    assert frozen["artist_reviewed"] is False
+    common: dict[str, object] = {"snapshot": str(shifted.root), "target": frozen["target"],
+                                "resolution": 128, "padding_pixels": 8}
+    with pytest.raises(ValueError, match="GEOMETRY_PROFILE_MISMATCH"):
+        bake_color_reuse({**common, "geometry_profile": {"correspondence_fraction": .2}},
+                          _folder(tmp_path, "mismatched_bake"), _deadline())
+    baked = bake_color_reuse(common, _folder(tmp_path, "relaxed_bake"), _deadline())
+    assert baked["status"] == "OK"
+    validated = validate_color_reuse({"snapshot": str(shifted.root), "bake": baked["bake"],
+                                      "render_size": 16}, _folder(tmp_path, "relaxed_validation"), _deadline())
+    assert validated["quality_accepted"] is True
+    assert validated["geometry_policy"] == "explicit_custom"
+    evidence = read_object(Path(str(validated["validation"])))
+    assert cast(dict[str, object], evidence["geometry"])["quality_constraints_checked"] is False
+    assert evidence["artist_reviewed"] is False
+    with pytest.raises(ValueError, match="GEOMETRY_PROFILE_MISMATCH"):
+        validate_color_reuse({"snapshot": str(shifted.root), "bake": baked["bake"],
+                              "geometry_profile": {"quality_constraints": True}},
+                             _folder(tmp_path, "mismatched_validation"), _deadline())
+    # An independent no-sharing control may use the same source-derived target.
+    baseline = bake_color_reuse({**common, "snapshot": str(original.root)},
+                                _folder(tmp_path, "control"), _deadline())
+    assert baseline["geometry_profile_hash"] == baked["geometry_profile_hash"]
+
+
+def test_explicit_normal_limit_reaches_target_safety_check(tmp_path: Path) -> None:
+    original = _source(tmp_path)
+    shared = _shared(tmp_path, original)
+    state = shared.state.copy()
+    state.groups = (replace(state.groups[0], plane_normal=(2**-.5, 2**-.5, 0.)),)
+    snapshot = save_snapshot(state, tmp_path / "turned_plane", shared.metadata, shared)
+    broad_distance: dict[str, object] = {"correspondence_fraction": 1., "quality_constraints": False}
+    with pytest.raises(ValueError, match="LEGAL_SHARED_STATE"):
+        freeze_target({"snapshot": str(snapshot.root), "geometry_profile": broad_distance},
+                       _folder(tmp_path, "normal_strict"), _deadline())
+    frozen = freeze_target({"snapshot": str(snapshot.root),
+                            "geometry_profile": {**broad_distance, "normal_angle_degrees": 180}},
+                           _folder(tmp_path, "normal_relaxed"), _deadline())
+    assert frozen["status"] == "OK"
+    assert frozen["strict_geometry_profile_applied"] is False
+
+
+def test_custom_geometry_policy_still_rejects_undeclared_overlap(tmp_path: Path) -> None:
+    original = _source(tmp_path)
+    state = original.state.copy()
+    state.surface.uv[state.surface.uv_faces[2:]] = state.surface.uv[state.surface.uv_faces[:2]]
+    invalid = save_snapshot(state, tmp_path / "invalid_overlap", original.metadata, original)
+    baked = bake_color_reuse({"snapshot": str(invalid.root), "resolution": 32,
+                              "geometry_profile": {"normal_angle_degrees": 180,
+                                                   "correspondence_fraction": 1., "quality_constraints": False}},
+                             _folder(tmp_path, "invalid_bake"), _deadline())
+    assert baked["status"] == "REJECTED"
+    assert baked["reason"] == "GEOMETRY_UNSAFE"
+    assert not (tmp_path / "invalid_bake/texture").exists()
+
+
 def test_target_symmetry_is_source_bound_and_reusable_on_baseline(tmp_path: Path) -> None:
     original = _source(tmp_path)
     shared = _shared(tmp_path, original)
@@ -90,6 +163,35 @@ def test_opaque_source_alpha_does_not_become_missing_atlas_coverage(tmp_path: Pa
     assert target.sample(0, np.array([[.2, .3, .5]]))[0, 3] == 1
 
 
+def test_uv_triangle_projection_is_scale_invariant() -> None:
+    triangle = np.array([[[0., 0.], [1., 0.], [0., 1.]]] * 3)
+    points = np.array([[.25, .25], [.7, .7], [-.2, .5]])
+    expected = np.array([[.5, .25, .25], [0., .5, .5], [.5, 0., .5]])
+    for scale in (1., 1e-3, 1e-5):
+        actual = _project_uv_barycentric(.79 + scale * triangle, .79 + scale * points)
+        assert np.allclose(actual, expected, rtol=0, atol=1e-10)
+
+
+def test_tiny_chart_reference_is_independent_of_query_face_and_cache(tmp_path: Path) -> None:
+    original = _source(tmp_path, checker=True)
+    frozen = freeze_target({"snapshot": str(original.root)}, _folder(tmp_path, "target"), _deadline())
+    target = ColorTarget(original, Path(str(frozen["target"])))
+    surface = original.state.surface.copy()
+    surface.uv = .79 + .001 * surface.uv
+    triangles = surface.uv[surface.uv_faces]
+    signal = AtlasSignal(target, surface, cache_filter=True)
+    reference = AtlasSignal(target, surface)
+    points = np.array([[.3, .3, .4], [.6, .3, .1]]) @ triangles[1]
+    # Recover barycentrics in the other triangle, including negative coordinates.
+    query = _bary(triangles[0], points)
+    assert np.allclose(signal.sample(0, query), reference.sample(1, np.array([[.3, .3, .4], [.6, .3, .1]])), atol=1e-9)
+    first = _filtered(signal, 0, triangles[0], points, 8192, 0)
+    second = _filtered(signal, 1, triangles[1], points, 8192, 0)
+    direct = _filtered(reference, 1, triangles[1], points, 8192, 0)
+    assert np.allclose(first, second, atol=1e-9)
+    assert np.allclose(second, direct, atol=1e-9)
+
+
 def test_long_thin_triangle_apex_has_source_sampled_support(tmp_path: Path) -> None:
     original = _source(tmp_path)
     surface = original.state.surface
@@ -108,7 +210,7 @@ def test_long_thin_triangle_apex_has_source_sampled_support(tmp_path: Path) -> N
     assert np.all(sampled[:, 3] == 1)
     assert np.allclose(sampled[:, :3], [.7, .1, .1], atol=.005)
     manifest = read_object(tmp_path / "bake/bake.json")
-    assert 0 not in manifest["subtexel_faces"]  # The tail has centers; only the apex is unsupported by center rasterization.
+    assert 0 not in cast(list[int], manifest["subtexel_faces"])  # The tail has centers; only the apex is unsupported by center rasterization.
     geometric = np.load(tmp_path / "bake/geometric_coverage.npy")
     assert not geometric[int((1-points[0, 1])*256), int(points[0, 0]*256)]
 

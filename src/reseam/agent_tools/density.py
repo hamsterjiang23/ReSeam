@@ -11,6 +11,36 @@ from ..validation import jacobians
 from .state import check_deadline
 
 
+def scale_selected_owners(state: BudgetState, factors: dict[str, object]) -> BudgetState:
+    """A stable face selects its whole owner; shared members receive one scale."""
+    owners, _ = owners_and_members(state)
+    requested: dict[int, float] = {}
+    for face, factor in factors.items():
+        if (not face.isdecimal() or not 0 <= int(face) < len(owners)
+                or not isinstance(factor, (int, float)) or isinstance(factor, bool)
+                or not math.isfinite(factor) or not .25 <= factor <= 4):
+            raise ValueError("FACE_DENSITY_SCALE_REQUIRES_FACE_ID_AND_FACTOR_0_25_TO_4")
+        owner = int(owners[int(face)])
+        if owner in requested and requested[owner] != float(factor):
+            raise ValueError("CONFLICTING_DENSITY_SCALES_FOR_ONE_OWNER")
+        requested[owner] = float(factor)
+    result = state.copy()
+    used: set[int] = set()
+    for owner in np.unique(owners):
+        ids = np.unique(result.surface.uv_faces[owners == owner])
+        if used.intersection(ids.tolist()):
+            raise ValueError("UV_ID_SHARED_BETWEEN_DIFFERENT_OWNERS")
+        used.update(ids.tolist())
+        if int(owner) in requested:
+            center = result.surface.uv[ids].mean(axis=0)
+            result.surface.uv[ids] = (result.surface.uv[ids] - center) * requested[int(owner)] + center
+    result.invalidate()
+    result.evidence["requested_density_scale"] = {"face_selection": factors,
+        "owner_scales": {str(key): value for key, value in requested.items()},
+        "contract": "one-time owner-relative UV scale; subsequent balance and geometry validation required"}
+    return result
+
+
 def balance_density(
     state: BudgetState, maximum_ratio: float, resolution: int, gap_pixels: float,
     border_pixels: float, deadline: float,

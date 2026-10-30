@@ -1,0 +1,74 @@
+{
+  "exports": [
+    {
+      "case": "retained_islands",
+      "label": "export",
+      "asset": "E:\\ReSem\\artifacts\\meshquery_v1\\island_merge01\\formal\\retained_islands\\export\\asset.glb",
+      "asset_sha256": "7747cee59cfe9866349351f1dfaf8de053c16d829190285368f31f1e05adc3e9",
+      "reimported_geometry_count": 1,
+      "face_count": 11450,
+      "expected_face_count": 11450,
+      "max_position_error": 0.0,
+      "max_corner_uv_error": 4.466114678081112e-08,
+      "uv_channels": [
+        "TEXCOORD_0"
+      ],
+      "embedded_texture_dimensions": [
+        2048,
+        2048,
+        4
+      ],
+      "embedded_texture_pixels_equal": true,
+      "geometry_uv_image_verified": true,
+      "verification_scope": "independent GLB parse + trimesh image/geometry/UV readback; not GPU/artist acceptance"
+    },
+    {
+      "case": "merged_islands",
+      "label": "export",
+      "asset": "E:\\ReSem\\artifacts\\meshquery_v1\\island_merge01\\formal\\merged_islands\\export\\asset.glb",
+      "asset_sha256": "c3ec21ca4281aea8978ec115965c5e0743c983c5d8f4ec243f5143b2611d2468",
+      "reimported_geometry_count": 1,
+      "face_count": 11450,
+      "expected_face_count": 11450,
+      "max_position_error": 0.0,
+      "max_corner_uv_error": 4.467508540884069e-08,
+      "uv_channels": [
+        "TEXCOORD_0"
+      ],
+      "embedded_texture_dimensions": [
+        2048,
+        2048,
+        4
+      ],
+      "embedded_texture_pixels_equal": true,
+      "geometry_uv_image_verified": true,
+      "verification_scope": "independent GLB parse + trimesh image/geometry/UV readback; not GPU/artist acceptance"
+    },
+    {
+      "case": "sole_repaired_islands",
+      "label": "export",
+      "asset": "E:\\ReSem\\artifacts\\meshquery_v1\\island_merge01\\sole_formal\\sole_repaired_islands\\export\\asset.glb",
+      "asset_sha256": "c9517fbff9cc9a60bf3861715ab58b4091bdc05b7dae93a5ad3ca08b874e8c6f",
+      "reimported_geometry_count": 1,
+      "face_count": 11450,
+      "expected_face_count": 11450,
+      "max_position_error": 0.0,
+      "max_corner_uv_error": 4.458647306915253e-08,
+      "uv_channels": [
+        "TEXCOORD_0"
+      ],
+      "embedded_texture_dimensions": [
+        2048,
+        2048,
+        4
+      ],
+      "embedded_texture_pixels_equal": true,
+      "geometry_uv_image_verified": true,
+      "verification_scope": "independent GLB parse + trimesh image/geometry/UV readback; not GPU/artist acceptance"
+    }
+  ],
+  "all_passed": true,
+  "full_pbr_passed": false,
+  "gpu_verified": false,
+  "human_accepted": false
+}

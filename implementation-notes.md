@@ -236,3 +236,78 @@
 - 选中开发分支包含翼膜、踝部、翼尖三组：203→205连通岛，203→202独立排布对象。另有10组合法但更碎的探索分支，未按组数选择它；颜色和存储尚未验收。`[verified: geometry_agent_best03/checkpoint.md 与 replay_plan.json]`
 - 颜色开发检查暴露长薄三角形尖端无纹素中心覆盖、原始属性拆点接缝漏检及不支持的顶点颜色被忽略；独立审计反例与修复测试保留，修复后必须新建正式轮。原始FBX身份NPZ可提供拆点前邻接，禁止按空间近点焊接推断。`[verified: scripts/agent_asset_worker.py imported.npz/ancestry输出；tests/test_agent_tools_color_reuse_audit.py；opinion: 正式执行约束]`
 - 基线脚本冻结源、目标、状态、后端和依赖；成对消融逐个嵌套参数校验。准备失败、超时和导出失败保留，不能把成功调用计为已验收最小存储。`[verified: agent_tools/experiment.py changed_fields；scripts/compare_dragon_reuse.py]`
+
+### 优先级纠正与下一轮UV对应
+- 用户明确“关键是UV岛复用，贴图压缩不是很关键”。暂停编码支线和编码矩阵，继续扩大同模型部件共享；已产生的编码诊断保留。`[verified: 用户最新纠正]`
+- 四路径几何准备已完成89次调用、445.173秒，共同预处理42.735秒；自动几何为203岛/201对象/2组，Agent为205岛/202对象/3组。技术准备成功仍不等于整龙复用完成。`[verified: dragon_reuse_formal_round01/preparation/branches.json paths/summary]`
+- 新发现：现有共享单元的对应检查只使用一个世界镜像平面，不表达位置、朝向或尺度不同的重复部件。正在新增显式相似变换sQ+t及双向检查；这是可追溯对应模型扩展，几何与UV拉伸门限保持不变，不能仅凭拟合授权交叠。旧镜像路径与历史结果保留。`[verified: budget_state.py OVERLAP_CORRESPONDENCE原reflect检查；opinion: 新设计与边界]`
+- 编码支线遗留BC7真实纹理透明度254/255的OPAQUE语义拒绝，已保存最小反例；当前不将BC7标为真实资产可用。此项不作为UV扩大复用的前置要求。`[verified: geometry_bc7_preflight01/decoded_alpha.json与alpha_reproducer.json]`
+
+- 已建立独立原始连接恢复变体：7007→6552顶点表、10832原面不变，逐角XYZ与UV值/ID bitwise相等；仅按原始FBX顶点ID恢复8个流形部件，通用跨现有UV边界会显式拒绝。新变体另起同父四路对照，不能混旧变体收益。`[verified: topology_restore_preflight01/independent_geometry_witness.json；verification.json]`
+- 完整脚的新共同域不再因断裂拓扑初始化失败，但圆边界调和图仍畸变超限。背刺30迭代将最大κ17.276→6.524、邻接density3.932→2.590，均未达2；下一机制是主UV岛感知的目标接缝重建，不继续重复调整ICP。`[verified: geometry_restored_regions01/steps.md]`
+
+## 部件重展开与复用（2026-10-30）
+### Deviations
+- 本轮保留完整模型，以原面集合逻辑分区；临时计算网格可沿原边复制顶点，再仅将逐角UV写回。OptCuts主域失败时明确记录共同凸域回退，不将回退结果记作OptCuts展开收益。
+### Discovered edge cases
+- 旧共同域路径在初始化前执行最近点对应门禁；新paired_domain需独立入口，先构建边界锚点和共同UV，再从UV生成对应。
+- 切口同一个原顶点可能有两个边界副本；锚点使用原面+面角标识切口侧，不能仅用原顶点ID。
+### Questions for review
+- 本轮先完成双翼、四肢和角刺；躯干尾巴保留原区域布局。外观优先，统计实际图块和覆盖，不以单个部件或工具成功作为整龙完成。
+- 真实显式切口补充：圆柱8块旧UV经指定纵向原边OptCuts展开为1块，13.719秒，实际切口1条；最初PowerShell嵌套列表展开造成请求拒绝，错误证据保留，使用新输出重试。成对切口两侧面角身份回归通过。
+- 全量pytest本轮659通过（64.90秒）；独立代码review无新缺陷。正式真实实验期间源码和控制器冻结，新增测试与文档不改变执行代码。
+- 颜色预检拒绝初始19组目标：正面大腿深蓝块、侧面翼臂块状色差明显。问题区域按源/目标逐组定位，保留全部失败；不将44.6%共享覆盖当成外观通过。
+- 新边界情形：3个弧段锚点可能给出合法但语义错位的内部映射；侧角由3锚点改为19个完整边界锚点通过。手臂48锚点修正了覆盖，但受旧density balance返回未排布状态影响而拒绝。
+- 诊断发现balance_density在同owner密度冲突时返回原状态，_packed未继续packing；因此大面积未排布交叠不是UV身份别名。外观优先新轮次统一禁用密度平衡，再对所有路径排布；代码与旧证据保留。
+- 用户进一步确认小幅颜色差异完全可接受。当前完整边界修正完成后进入真实烘焙，不继续追逐像素一致；仅明显错贴/大块异常/特征损坏触发回退，数值验收状态独立报告。
+- 颜色球已实现为只读reuse.check_color：Oklab(D65)欧氏距离乘100，低5/中10/高20（项目默认，可自定义），输入已解码线性RGB；W3C转换来源记录在代码和输出。真实龙40,576采样：高档99.24%修改区域面积加权球内，但全部采样检查仍为false，球外证据保留，不伪称通过。
+- 后续4点/面几何参考采样表明翼骨大部分明暗差异源于原贴图左右已有差异；先前把所有可见色块归因为UV错配的判断过早。新预检保留该修正，按用户颜色容忍度处理源差异。
+
+本轮实施偏差：1项，密度平衡替换为uniform排布，重跑受影响的自动对照；另完成用户追加的颜色球接口。
+最需再看：原始121岛与规范化203岛父状态不同，最终169连通岛不能宣称少于原始121。
+已记录边界情况：切口侧身份、边界采样覆盖、密度拒绝返回未排布状态、源左右明暗差异及颜色球球外点。
+最终验证：679 pytest通过；ruff、basedpyright、Skill及空白检查通过；10份真实GLB重新载入核验通过，数值渲染/接缝拒绝保留。
+下轮先读：docs/results/dragon-component-reuse.md与components_report02/report.md；工具默认中档，当前高档UV＋BaseColor预览保留19组共享。
+
+## 原始121岛保留实验（2026-10-30）
+### Deviations
+- 用户要求跳过78面隔离修复，从原始121岛直接进行部件重展开与复用。独立新轮次；既有203岛对照和所有历史产物保留。
+### Discovered edge cases
+- 原UV已有33对正面积交叠和20对接触；统一排布后仍有49对原有冲突。新增显式源状态哈希绑定模式，只保留共同相似变换下未改变的原有面对布局，不自动切面；新冲突仍拒绝。严格检查结果单列，原交叠不计共享收益。
+- 原始UV初值的翼骨OptCuts保留11对旧交叠，另一侧原生退出11；原代码明确不检查单岛输入的全局交叠。停止并保留round01，新增显式initial_uv=geometry，从部件几何重新初始化，未选区域原UV保留；成功后另建round02。
+- 同父同代码initial_uv消融：existing拒绝，geometry成功；完整38侧OptCuts成功后岛数121→117。新OptCuts给大腿、手臂增加了不一致切口，直接迁移失败；保持完整自然区域，另起原边界共同凸域修正，保留同父失败对照。
+### Questions for review
+- 验收以原始121岛、OptCuts无共享、自动及Agent共享同父对照与实际外观为准；不以203岛旧父结果代替新轮基线。
+
+本轮实施偏差：2项，OptCuts从几何初始化，以及大腿／手臂沿原自然边界建立共同凸域；均保留同父对照。`[verified: raw121_initialization_ablation02与raw121_repairs03/steps.json]`
+最需再看：源UV已有小交叠，保留模式与严格结果分列；不自动挖三角小岛。`[verified: raw121_report01/preservation.json；opinion: 执行方式]`
+边界结果：121→117岛、121→98图块，19组共享；单面岛3→3，5732个未选面保持UV形状，内部新增切缝0。`[verified: raw121_report01/uv_summary.json及preservation.json]`
+最终验证：685 pytest、ruff、basedpyright、Skill与空白检查通过；7份实际GLB独立载入全部通过。数值渲染／接缝拒绝与Agent外观预览独立记录。`[verified: raw121_report01/verification.json及quality_summary.json]`
+下轮先读：docs/results/dragon-raw-uv-reuse.md与raw121_report01/report.md；保留源UV和geometry初始化选项已写入并同步reseam-uv Skill。`[verified: 对应文档及verification.json skill]`
+
+## MeshQuery 工具实现（2026-10-30）
+
+交付入口：[三资产整体报告](docs/results/meshquery-uv-reconstruction.md)汇总实际共享、真实贴图／GLB、全模型碎片反馈与未通过边界；[工具验证](docs/results/meshquery-tool-verification.md)单列公开入口、测试、原生后端和独立Skill反馈。统一canonical受控对照及新增视角检查已完成，详见整体报告；既有端到端路径差额不作Skill因果结论。`[verified: artifacts/meshquery_v1/history_report01/report.md; artifacts/meshquery_v1/tripo_report01/report.md 失败与回退]` `[opinion]`
+
+### Deviations
+- 依据公开论文实现工具，不宣称作者代码复现。SeamCut 当前使用原边中点图上的曲率各向异性路径与三边历史，是离散适配，未冒称连续流线实现。
+- 主流程采用 VLM 多视图与几何分区；PartField 单列研究适配。依赖状态以实际运行环境检查为准。
+### Discovered edge cases
+- Blender 编辑模式切换会使旧 UV 层引用失效；后台工作器返回对象模式后重新取得 UV 层，原生三后端冒烟通过。
+- 四边形边环要求原多边形身份，禁止按相邻三角形或空间重合猜测四边形。既有三角快照使用路径／边界算子。
+### Questions for review
+- 独立 Skill 实操已完成：圆柱48→1，旧输入的来源身份和质量拒绝保留；反馈补齐SQL schema、算子参数说明及诊断报告错误。构造来源统一float32后新圆柱限定颜色验收通过，圆锥由相同UV的padding4→8修正LOD2覆盖。
+- 历史两资产新轮次已生成真实贴图及重导入记录，tripo主流程、匹配控制及canonical比较均已完成；入口和构造成功不替代复杂资产验收。
+- 完整旧岛闭包实际避免外部碎片：能量刀自然选区OptCuts68→70，闭包选区同后端→62。局部图块减少不能替代全模型统计。
+- tripo19组几何共享成功后，目标看图仍发现白色特征错位；像素→原面→共享组定位纠正了单凭部件名字的归因。先整块修复或解除，再重冻结目标，不能用统计通过比例盖过明显边界变化。
+
+
+## 整龙镜像与紧凑排布（2026-10-30）
+
+用户授权改变几何后，新建半边裁切／镜像variant并保存原面重心来源。134连通岛中的67对准确堆叠，独立图块67，对照134；新参考保留原8192贴图像素。原资产不覆盖，midplane顶点身份保持独立。`[verified: whole_half01/create/mirror_variant.json；independent_audit/results.json]`
+
+首次Blender轮廓排布在512下仅24.75%，低于矩形26.68%；实测间距21.47px高于请求8px。将双侧轮廓margin换算修正为每侧半间距后，占用42.40%，实测间距10.14px，原始失败保留。2048同参数对照中共享矩形27.98%、轮廓57.95%，镜像对应角UV差仍为零。`[verified: whole_half01/compact512、compact512_gap_corrected/geometry.json；whole_half_formal_shared01 两个pack/geometry.json]`
+
+1536被当前POT烘焙合同拒绝，保留无贴图状态；1024/512实际生成，原固定像素留边路径均因渲染最大误差拒绝，颜色／接缝通过。增加同2048父快照的像素留边消融，最终结果以[整龙报告](docs/results/dragon-whole-half-reuse.md)为准。`[verified: whole_half_sizes01/matrix.json；whole_half01/margin_config.json]`
+
+最终保留2048共享轮廓版为限定协议通过结果，保守留边1024版为Agent四视角接受的节省型预览；两个固定布局缩留边试验未提升整体数值接受，未选用。9份真实GLB重导入通过；完整CLI实测2473.424秒、共享自适应路径1852.112秒，预算预扣不冒充实测。`[verified: whole_half01/appearance_review.json、reimport_all.json、cost_ledger.json]`

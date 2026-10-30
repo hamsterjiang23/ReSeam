@@ -1,5 +1,21 @@
 # ReSeam
 
+[仓库内龙模型交付包](docs/assets/dragon-uv-final/README.md)包含UV数据对照图、模型前后渲染、最终GLB、真实BaseColor完整mip及核验摘要。当前模型为外观预览，严格渲染探针未全通过。`[verified: docs/assets/dragon-uv-final/manifest.json、quality-result.json]`
+
+最新[镜像龙真实合岛](docs/results/dragon-uv-island-merge.md)：保持镜像变体的几何不变，头冠每侧16→1岛、脚部每侧7→1岛，整龙134→92连通岛、67→46独立图块，均减少31.3%；所有面仍参与左右共享。脚底补切口后仍为单岛，已输出2048真实贴图及GLB。当前为Agent看图接受的预览，严格渲染探针仍拒绝，原已验收版本保留。`[verified: island_merge01/final_uv_audit.json、summary.json、appearance_review.json；opinion: 外观判断]`
+
+此前[整龙镜像共享与紧凑排布](docs/results/dragon-whole-half-reuse.md)：用户授权的新镜像模型包含134个连通UV岛，67对实际堆叠后只排67个独立图块；同几何无共享为134图块。2048轮廓排布占用率由矩形排布的27.98%提高至57.95%，已写出真实贴图与GLB并通过当前UV＋BaseColor有限探针协议。原模型和固定几何结果保留，人工／PBR／引擎验收独立。`[verified: whole_half_formal_shared01 两个pack/geometry.json及shared_blender_concave/validate/validation.json；whole_half01/independent_audit/results.json]`
+
+镜像龙另附1024节省型预览，RGBA8完整mip为5,592,404字节，较2048的22,369,620字节减少75%；Agent四视角初筛可接受，两个mip渲染探针仍超原阈值，不视为完整数值通过。512近景模糊和1536后端不支持均保留记录。`[verified: whole_half01/appearance_review.json selected_small_preview；whole_half_sizes01/shared_compact_1024/validate/validation.json；whole_half_sizes01/matrix.json]`
+
+固定几何路线的[保留原始121岛的部件复用结果](docs/results/dragon-raw-uv-reuse.md)：跳过异常面逐面隔离，得到117连通岛、98独立图块、19组真实共享；原始与最终均3个单面岛。五条2048对照与两项512冒烟、实际GLB／贴图和全部拒绝均保留，当前交付为Agent看图接受的UV＋BaseColor预览。`[verified: raw121_report01/report.md、preservation.json及appearance_review.json；opinion: 外观判断]`
+
+[部件复用实测结果](docs/results/dragon-component-reuse.md)已附完整龙GLB、真实2048贴图和五路径×两尺寸对照：固定修复父资产203图块降至150，保留19组共享；低／中／高颜色球及全部球外、数值拒绝项分别记录。当前交付为Agent看图接受的UV＋BaseColor预览。`[verified: components_report02/report.md、export_integrity.json；opinion: 交付口径]`
+
+2026-10-30按[部件重展开路线](docs/dragon-component-reuse.md)推进双翼、四肢和角刺：逻辑区域保留原面身份，显式切口重建 UV，锚点共同域完成堆叠；真实结果、失败和外观预检在新轮次单独记录。`[verified: 用户接受的部件实施计划；opinion: 实施记录方式]`
+
+颜色复用支持[低／中／高颜色球容忍度](docs/dragon-component-reuse.md#颜色球容忍度)：`reuse.check_color` 检查原色到冻结共享目标的Oklab距离，球内满足容忍度，球外区域交给Agent看图判断；默认中档，支持自定义半径。`[verified: 用户新增颜色球要求；color_tolerance.py check_color/tolerance；opinion: 球外判断方式]`
+
 当前正在实施[整龙 LLM UV 复用与 Baseline 对照](docs/dragon-llm-reuse-plan.md)：在 `tripo_p2` 固定规范化几何上，由 Agent 看图选区域、解释失败并修订，允许细小颜色差异对称化，保护头脸等特征。无共享修复、OptCuts 无共享修复、纯几何复用和 Agent 迭代复用均须独立记录；关键步骤前后证据和真实贴图是必交付项。此入口表示实施目标，不表示整龙共享、颜色验收或存储节省已经完成。`[verified: 用户接受的整龙计划及 Baseline／修正记录要求]` `[opinion]`
 
 本轮交付范围为 UV＋BaseColor；新增 `region.define`、区域展开、源颜色目标冻结及颜色复用验收流程，参数以 `tools describe` 为准。用户明确允许 OptCuts 作为本轮实验展开后端，此例外不改写历史自研求解器、V1/V2 或完整 PBR 的验收口径。`[verified: 用户本轮允许 OptCuts 等几何工具及“先完成 UV＋颜色复用”选择；registry.py 新工具登记]`
@@ -233,3 +249,27 @@ AI 生成模型与重拓扑低模应以**近似对称区域**为研究入口，�
 人工步骤使用 [统一编辑任务](docs/artist-review-task.md)：匿名 Blender 场景、15 分钟修整、逐角 UV 导出、固定几何与约束复核、重新烘焙及真实偏好记录。自动验证不会将人工验收标为完成。V1 保留原人工验收口径；V2 的技术/实验完成及代理评价按 [新目标](goal/v2.md) 分开记录，人工缺席不阻塞自动阶段。
 
 本项目不预设全局最优、同预算必胜或艺术家级布局结论；效果与适用范围由实验决定。
+
+
+最大限度压缩继续按[尺寸、编码与纹素预算协议](docs/dragon-compression-protocol.md)执行：四条路径统一比较RGBA8和真实BC1／BC7解码验收，公共眼部密度修正单独消融；不得把编码收益归因于UV共享，或把运行时纹理字节当成整个调试交付包体。`[verified: 用户最新压缩要求；opinion: 统一执行约束]`
+
+
+当前优先级以用户最新纠正为准：重点是 **UV岛复用**。继续扩大部件对应与实际共享、减少共享后的碎片；编码压缩暂作支线。四路径几何检查点见[UV复用进度](docs/results/dragon-uv-reuse-progress.md)，尚未宣称整龙有效复用完成。`[verified: 用户最新纠正；opinion: 执行优先级]`
+
+用户进一步要求以实际外观为主要验收标准，不以严格的几何审计作为目标。后续另建外观优先实验，允许近似对应和较宽松的几何参数，保留UV有限、非退化和模型可正常显示等基本条件；对照图和人工／艺术验收单列，不能将宽松结果写成已通过旧严格协议。`[verified: 用户“只要外观上可以通过就行”；opinion: 实验执行方式]`
+
+候选部件相似度约70%即可尝试合并，低于70%也可以尝试；相似度的定义须明确，最后仍根据合并后的实际外观判断。`[verified: 用户对“70”的澄清；opinion: 评估方式]`
+
+整脚候选已在同资产几何对照中将实际独立图块203→200；8K真实贴图仍有7处LOD2接缝拒绝，同目标无共享控制通过。源外观对照发现白爪向趾根扩张，已保留失败与真实贴图，不能将该候选称为有效整龙复用。`[verified: artifacts/dragon_reuse_development/geometry_restored_baselines02/README.md；restored_whole_foot_color_pair03/comparison_metrics.json]`
+
+对称化目标先用 `material.target` 冻结，再用 `view.render mode=basecolor,target=...` 查看原始／目标／差异与具体原面，经过Agent外观预检才进入烘焙。高差异的明显特征保留独占；新目标不得跳过这一步。`[verified: src/reseam/agent_tools/views.py；views_frozen_target_smoke_01/render/views.json；opinion: 执行准入规则]`
+
+## Training-Free 语义引导 UV 重构
+
+三资产实际结果见[MeshQuery UV重构报告](docs/results/meshquery-uv-reconstruction.md)：能量刀62岛／59图块、历史龙翼173岛／171图块，Tripo项目路径117岛／99图块、18组共享，附真实2048贴图与GLB。数值拒绝、Agent目标／外观初筛与人工状态分别记录；统一canonical受控比较已完成，两路同为117岛／102图块／15组，未观察到项目切口的图块收益，不据端到端路径差额宣称Skill因果收益。`[verified: artifacts/meshquery_v1/history_report01/report.md 结果边界; artifacts/meshquery_v1/tripo_project_color01/project_color/inspect/result.json; validate/result.json]` `[opinion]`
+
+当前新增 MeshQuery 风格网格查询、程序化选边、切缝计划与反馈工具，详细接口和实现差异见 [工具说明](docs/meshquery-tools.md)。采用通用预训练 VLM 决策与确定性几何执行，不新增训练或微调；主流程使用多视图与几何候选，PartField 单列研究适配。`[opinion]`
+
+重构范围是切缝与 UV 组织，保持原几何、面及身份；已有可用 UV 优先保留。依次验证无共享展开、真实原贴图重采样及部件共享，连通岛减少与独立图块减少分开报告。具体决策链见[方法说明](docs/semantic-uv-reconstruction.md)，逐工具证据和独立 Skill 实操见[工具验证](docs/results/meshquery-tool-verification.md)。不凭入口或构造测试宣布工业生产可用。`[opinion]`
+
+用户新增整半镜像变体：明确允许改变几何时，通过 `asset.mirror_variant` 保留一半并镜像另一半，生成同一新几何的UV共享/无共享对照。原资产和固定几何结果保留，结果及来源见 `artifacts/meshquery_v1/whole_half01`；该变体不归为固定几何算法收益。`[verified: 用户最新镜像授权；mirror_asset.py；opinion: 结果边界]`

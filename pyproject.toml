@@ -12,6 +12,11 @@ dependencies = ["numpy>=2.2,<3", "scipy>=1.15,<2", "trimesh>=4.9,<5", "pillow>=1
 [project.scripts]
 reseam = "reseam.cli:main"
 
+[project.optional-dependencies]
+compression = [
+    "ispc-texcomp==1.0.1",
+]
+
 [dependency-groups]
 dev = ["pytest>=8,<10", "ruff>=0.12", "basedpyright>=1.30"]
 

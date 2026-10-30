@@ -12,6 +12,7 @@ from .joint_types import Correspondence, JointProfile, ReuseGroup, V2State
 from .joint_validation import density_objective, validate_joint_quality
 from .mesh import make_mesh, sha256, state_dict
 from .pipeline import write_json
+from .reuse_transform import similarity_transform
 from .types import MeshState
 
 
@@ -49,6 +50,7 @@ def load_joint(path: Path) -> V2State:
             g["plane_offset"],
             g["first_orientation"],
             g["second_orientation"],
+            None if g.get("first_to_second") is None else similarity_transform(g["first_to_second"]),
         )
         for g in data["groups"]
     )

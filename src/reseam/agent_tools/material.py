@@ -359,6 +359,8 @@ def _save_bake(
 
 def _load_bake(snapshot: Snapshot, path: Path) -> tuple[MaterialAtlas, dict[str, object]]:
     record = read_object(path)
+    if record.get("status") == "BASE_COLOR_DIAGNOSTIC":
+        raise ValueError("DIAGNOSTIC_REPORT_IS_NOT_BAKE_MANIFEST: use its preview GLB; quality.validate/asset.export require bake.json")
     if record.get("state_hash") != snapshot.state_hash or record.get("asset_id") != snapshot.asset_id:
         raise ValueError("STALE_BAKE")
     files = record.get("files")
@@ -505,6 +507,8 @@ def bake_material_tool(request: dict[str, object], output: Path, deadline: float
         raise ValueError("UNSUPPORTED_MATERIAL_MODE")
     check_deadline(deadline)
     snapshot = require_snapshot(request)
+    if any(group.first_to_second is not None for group in snapshot.state.groups):
+        raise ValueError("SIMILARITY_PBR_UNSUPPORTED: use the independent basecolor_reuse scope")
     resolution = _integer(request, "resolution", 256)
     if not 8 <= resolution <= 2048:
         raise ValueError("INVALID_BAKE_RESOLUTION")

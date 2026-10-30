@@ -55,3 +55,42 @@ def test_stale_region_request_is_rejected(tmp_path: Path) -> None:
     with pytest.raises(ValueError, match="STALE"):
         define_region({"snapshot": str(parent), "state_hash": "old", "name": "wing", "faces": [0]},
                       tmp_path / "invalid", time.monotonic() + 5)
+
+
+def test_seed_and_original_edge_barrier_select_one_side(tmp_path: Path) -> None:
+    parent = _snapshot(tmp_path / "parent")
+    before = load_snapshot(parent)
+    result = define_region({"snapshot": str(parent), "name": "one_half", "seed_faces": [0],
+                            "boundary_edges": [[0, 2]]}, tmp_path / "region", time.monotonic() + 5)
+    child = load_snapshot(Path(str(result["snapshot"])))
+    assert result["face_count"] == 1
+    assert result["selection_mesh_face_ids"] == [0]
+    assert Path(str(result["selection_mesh"])).is_file()
+    assert np.array_equal(child.state.surface.uv, before.state.surface.uv)
+    assert np.array_equal(child.state.surface.mesh.faces, before.state.surface.mesh.faces)
+
+
+def test_seed_on_both_sides_of_barrier_is_rejected(tmp_path: Path) -> None:
+    parent = _snapshot(tmp_path / "parent")
+    with pytest.raises(ValueError, match="DOES_NOT_SEPARATE"):
+        define_region({"snapshot": str(parent), "name": "leak", "seed_faces": [0, 1],
+                       "boundary_edges": [[0, 2]]}, tmp_path / "invalid", time.monotonic() + 5)
+    assert not (tmp_path / "invalid" / "snapshot").exists()
+
+
+def test_expired_region_selection_never_writes_child(tmp_path: Path) -> None:
+    parent = _snapshot(tmp_path / "parent")
+    with pytest.raises(TimeoutError):
+        define_region({"snapshot": str(parent), "name": "expired", "seed_faces": [0],
+                       "boundary_edges": [[0, 2]]}, tmp_path / "invalid", time.monotonic() - 1)
+    assert not (tmp_path / "invalid" / "snapshot").exists()
+
+
+def test_incomplete_barrier_cannot_silently_flood_around_cut(tmp_path: Path) -> None:
+    from test_agent_tools_regional_cut import cylinder
+
+    parent = save_snapshot(BudgetState(cylinder()), tmp_path / "parent", {}).root
+    with pytest.raises(ValueError, match="DOES_NOT_SEPARATE"):
+        define_region({"snapshot": str(parent), "name": "open_barrier", "seed_faces": [0],
+                       "boundary_edges": [[0, 4]]}, tmp_path / "invalid", time.monotonic() + 5)
+    assert not (tmp_path / "invalid" / "snapshot").exists()

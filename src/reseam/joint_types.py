@@ -5,6 +5,9 @@ from dataclasses import dataclass, field
 
 from .types import MeshState
 
+SimilarityTransform = tuple[tuple[float, float, float, float],
+                            tuple[float, float, float, float], tuple[float, float, float, float]]
+
 
 @dataclass(frozen=True)
 class Correspondence:
@@ -24,6 +27,7 @@ class ReuseGroup:
     plane_offset: float
     first_orientation: int = 1
     second_orientation: int = -1
+    first_to_second: SimilarityTransform | None = None
 
 
 @dataclass

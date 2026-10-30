@@ -56,6 +56,8 @@ def validate_joint_geometry(state: V2State, profile: JointProfile, packed: bool 
     next_owner = int(labels.max()) + 1
     ids: set[str] = set()
     for group in state.groups:
+        if group.first_to_second is not None:
+            return {"valid": False, "errors": ["SIMILARITY_REQUIRES_BUDGET_VALIDATOR"]}
         all_faces = group.first_faces + group.second_faces
         normal = np.asarray(group.plane_normal, dtype=float)
         if (

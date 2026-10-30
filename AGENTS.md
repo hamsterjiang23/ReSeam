@@ -1,5 +1,9 @@
 # ReSeam 项目约束
 
+最新用户要求见[原始UV保留实验](docs/results/dragon-raw-uv-reuse.md)：从原始121岛起步，禁止先逐面隔离异常面来换取严格门禁通过。显式 `profile.preserve_source_uv={snapshot,state_hash}` 仅保留原有冲突面对未改变的共同相似布局；严格结果单列，原始交叠不算新增复用。新冲突、明显错贴或特征破坏仍须记录和修正，优先整块调整。旧203岛路径保留，不充当本轮原始基线。`[verified: 用户最新“不要先拆碎裂”；opinion: 工具与比较口径]`
+
+本轮按[部件重展开与共享](docs/dragon-component-reuse.md)实施：双翼、四肢和角刺用原面集合逻辑分区，计算网格临时沿原边切开；`paired_domain` 通过面角锚点建立共同布局。OptCuts 输出的实际 `result_seam_edges` 必须传给成对步骤；不假定两侧边界采样相同或凸域自动保证完全覆盖。先看源/冻结目标/差异，再烘焙；完整特征片保留独占优先于逐面挖洞。`[verified: 用户接受的部件计划；opinion: 执行细节]`
+
 已授权的上游拓扑阶段见 [烘焙优先变体](docs/bake-topology-plan.md)：允许从固定父资产派生独立 variant，先验证无共享烘焙，再研究缩图与共享。历史低模/输入和 v1 固定几何数学问题保持原样，各 variant 内固定拓扑进行公平 UV 对照，跨拓扑收益不得归因于 UV 机制。本轮具体执行以下整龙合同，在选定规范化父资产内固定几何。`[verified: 用户“加入拓扑优化，先做好烘焙”及本轮接受的整龙计划；assets/v1/README.md 多轮测试规则2、9]`
 
 ## 本轮对话：LLM 辅助复用的执行要点
@@ -89,3 +93,38 @@
 - Python 使用 uv，所有函数参数与返回值必须有类型注解；检查工具优先 ruff 与 basedpyright。
 - 根据改动运行相应检查，交付时注明实际检查及结果；未执行的实验明确标为待完成。
 - 运行入口见 [V1](docs/running-v1.md) 和 [V2](docs/running-v2.md)；采用 uv run pytest、ruff check、basedpyright。Windows中文后处理显式使用UTF-8。正式运行期间冻结代码，修复后另建round，不覆盖原始证据。
+
+
+最大限度压缩继续按[尺寸、编码与纹素预算协议](docs/dragon-compression-protocol.md)执行：四条路径统一比较RGBA8和真实BC1／BC7解码验收，公共眼部密度修正单独消融；不得把编码收益归因于UV共享，或把运行时纹理字节当成整个调试交付包体。`[verified: 用户最新压缩要求；opinion: 统一执行约束]`
+
+
+当前优先级以用户最新纠正为准：重点是 **UV岛复用**。继续扩大部件对应与实际共享、减少共享后的碎片；编码压缩暂作支线。四路径几何检查点见[UV复用进度](docs/results/dragon-uv-reuse-progress.md)，尚未宣称整龙有效复用完成。`[verified: 用户最新纠正；opinion: 执行优先级]`
+
+最新验收取舍：外观优先，不要求严格几何审计。新增实验可采用较宽松的对应和畸变参数，保留可正常导出和显示的基本条件；在独立轮次记录实际设置，以原始／复用渲染及实际贴图比较。旧严格结果保留，宽松通过和人工外观验收分别标记。`[verified: 用户“只要外观上可以通过就行”；opinion: 执行方式]`
+
+候选部件约70%相似时即可尝试UV合并，低于70%也可以尝试；这是候选探索取舍，不是最终外观质量评分或共享面积指标。必须说明相似度实际定义，不凭距离或任意加权值冒称客观百分比；合并后看实际外观。`[verified: 用户对“70”的澄清；opinion: 指标与验收口径]`
+
+对有意改色的目标，先 `material.target`，再 `view.render mode=basecolor,target=...` 看同镜头原始／目标／差异，记录Agent是否接受明显特征的变化，然后才烘焙。原始保护集合必须保留，可新增特征保护；目标一旦改变就重新预检。整脚实验的白爪扩张与7处mip接缝拒绝作为反例保留，不将同目标重建通过等同于原外观保留。`[verified: restored_whole_foot_color_pair03/comparison_metrics.json；views_frozen_target_smoke_01/render/views.json；opinion: 后续执行规则]`
+
+部件复用最新外观取舍：小幅颜色、明暗和细节差异可以接受，优先保留大块共享；只对明显错贴、大片异常色块、眼嘴或爪子等特征损坏做修正或整块回退。旧数值颜色阈值继续如实报告，不作为这轮Agent外观判断的替身。`[verified: 用户“其实颜色差异不大是完全可以接受的”；opinion: 执行口径]`
+
+颜色容忍度使用 `reuse.check_color` 的低／中／高颜色球与可配置半径。比较原色到冻结共享目标；球内自动满足容忍度，球外保留定位和Agent判断。只有全部采样在球内才写color_accepted=true，面积覆盖率不得冒充全部通过；该检查不替代贴图重建/mip验收。`[verified: 用户颜色球需求；color_tolerance.py check_color；opinion: 执行方式]`
+
+本轮部件工具与实际UV＋BaseColor预览产物见[结果](docs/results/dragon-component-reuse.md)：修复父状态203图块→150、19组共享，五路径×两尺寸共10份真实贴图/GLB已独立载入核验。旧数值渲染/接缝门禁仍拒绝，导出身份diagnostic；不得改写成完整PBR、GPU或人工通过。原始Tripo121岛另列，不把修复父状态增益混作原始岛数下降。`[verified: components_report02/report.md、export_integrity.json、appearance_review.json；opinion: 交付边界]`
+
+## MeshQuery 工具与 AI 资产重构（当前实施）
+
+按用户接受的完整工具计划实施。以原始面／边身份构建可查询网格，Agent 编写并预览接缝计划，再调用独立展开与反馈工具。通用预训练 VLM 不做任务训练；主流程不强制 PartField，PartField 作为独立研究路径。原文未公开的算法细节和三角网格适配必须标为项目实现选择。`[verified: 用户本轮接受计划；opinion: 执行规则]`
+
+继续优先保留可用原 UV，不重新启动全模型逐面隔离。几何、面集合不变；四边形边环只基于保留的原多边形身份，不从三角对推断。接缝对称不等于 UV 堆叠。所有路径绑定父状态、计划与索引哈希，统一后端、采样和预算做对照；真实颜色、失败与每步证据必须交付。详见 [工具说明](docs/meshquery-tools.md) 和 [Skill](skills/reseam-uv/SKILL.md)。`[opinion]`
+
+自然选区跨旧岛时先统计全模型前后岛数，必要时比较完整旧岛闭包，避免只报告选区内部减少而忽略外侧碎片。目标出现白色边界／爪子迁移时，用同镜头像素拾取定位实际原面与共享组；部件名字与颜色球比例均不能替代特征检查。方法及证据边界见[语义重构说明](docs/semantic-uv-reconstruction.md)。`[opinion]`
+
+最新独立变体授权：用户明确允许保留一半并镜像生成另一半，优先扩大UV复用。仅在新镜像variant中允许沿对称平面裁切、重新三角化及精确镜像；原资产与固定几何历史保持不变，逐新面角记录来源面和重心坐标。镜像模型共享与无共享从相同新父几何派生；不能将几何对称化收益归为固定几何UV算法收益。`[verified: 用户“允许，新建镜像模型，优先实现大面积复用”；opinion: 实施约束]`
+
+
+最新授权与排布规则：用户已明确允许“新建镜像模型，优先实现大面积复用”。此时可用 `asset.mirror_variant` 沿中线裁切半边并镜像几何及UV，建立新asset；保留原模型，并以同一新几何做共享／无共享对照。此例外仅适用于显式授权的新variant，不撤销固定几何路线的身份约束。`[verified: 用户镜像选项答复；opinion: 实施范围]`
+
+紧凑排布使用显式 `uv.pack backend=blender_concave`，一组只排一个主图块，以同一相似变换回放全部成员，独立测量实际覆盖和像素间距。各分辨率的padding、gap、border要明确记录；可测试固定已验收UV并按分辨率同比换算像素留边，但必须重新烘焙与看图。原默认矩形排布保留作对照，不把缩图、几何镜像与排布收益混算。`[verified: 用户紧凑排布与缩图要求；opinion: 工作流]`
+
+复用后继续检查同一原边连通表面内的多余接缝，允许整块重展开后再复制镜像UV；堆叠与真实合岛分别计数。必要的开口切缝不一定增加岛数：本轮脚底分支切口改善白爪外观，单脚仍为1岛。不要为减少计数而焊接空间不相邻的部件；全局下限结论须限定原边身份和固定几何。当前134→92岛、67→46图块的实际对照及失败记录见[真实合岛报告](docs/results/dragon-uv-island-merge.md)，其严格渲染探针未全通过，不能升级为数值质量通过。`[verified: 用户真实合岛要求；island_merge01/sole_reparameterize/reparameterization.json、final_uv_audit.json、summary.json；opinion: 后续工作规则]`

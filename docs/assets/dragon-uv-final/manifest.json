@@ -1,0 +1,186 @@
+{
+  "files": [
+    {
+      "file": "uv_before_after.png",
+      "source": "artifacts/meshquery_v1/uv_comparison01/uv_before_after.png",
+      "bytes": 3981529,
+      "sha256": "bb3427f5f70f4f152f022d092a02c1a2340b6eccf885379c8733009acb69964f"
+    },
+    {
+      "file": "uv_before_after.pdf",
+      "source": "artifacts/meshquery_v1/uv_comparison01/uv_before_after.pdf",
+      "bytes": 315773,
+      "sha256": "53a1dfa4db03cf20fb05dc220c668e0e648523c6542925c9a94d3bfe2c2b6745"
+    },
+    {
+      "file": "model_before_after.png",
+      "source": "artifacts/meshquery_v1/uv_comparison01/model_before_after.png",
+      "bytes": 2377588,
+      "sha256": "d1de9a971d0ba76a8c0f246e17989bfd404335c49328297bd6e5c6fbc97a54ba"
+    },
+    {
+      "file": "texture_before_after.png",
+      "source": "artifacts/meshquery_v1/uv_comparison01/texture_before_after.png",
+      "bytes": 3228880,
+      "sha256": "6dca257e256e96a597a2ace41810373c813738878a71ae32bc258f2a74f157d4"
+    },
+    {
+      "file": "measurements.json",
+      "source": "artifacts/meshquery_v1/uv_comparison01/measurements.json",
+      "bytes": 1514,
+      "sha256": "82c2ffa50cda94b3f940cd7bd7cf3d264c74062f9ab075e350a7e41db1096238"
+    },
+    {
+      "file": "verification.json",
+      "source": "artifacts/meshquery_v1/uv_comparison01/verification.json",
+      "bytes": 1013,
+      "sha256": "3ea170527c36ef8567d7c655827156e2bec9ebcab41fbca43fc4e82cb4c019c5"
+    },
+    {
+      "file": "dragon.glb",
+      "source": "artifacts/meshquery_v1/island_merge01/sole_formal/sole_repaired_islands/export/asset.glb",
+      "bytes": 3687732,
+      "sha256": "c9517fbff9cc9a60bf3861715ab58b4091bdc05b7dae93a5ad3ca08b874e8c6f"
+    },
+    {
+      "file": "experiment-summary.json",
+      "source": "artifacts/meshquery_v1/island_merge01/summary.json",
+      "bytes": 12183,
+      "sha256": "3f365f08d02bbf8f4db820fe8fe2f6828a0817985fcac1f6a271fe6eaedcd988"
+    },
+    {
+      "file": "uv-audit.json",
+      "source": "artifacts/meshquery_v1/island_merge01/final_uv_audit.json",
+      "bytes": 379,
+      "sha256": "c7701ee1dda8d663baf8750554fab5ba85afc372e536cf27d2e15bbc6b81d775"
+    },
+    {
+      "file": "reimport.json",
+      "source": "artifacts/meshquery_v1/island_merge01/reimport_all.json",
+      "bytes": 2619,
+      "sha256": "1ceb8560930eb5adf7d24fbf640226fff2c13c635943abfc5287064a5b875c2b"
+    },
+    {
+      "file": "quality-result.json",
+      "source": "artifacts/meshquery_v1/island_merge01/sole_formal/sole_repaired_islands/validate/result.json",
+      "bytes": 1388,
+      "sha256": "d4c87514c35a451ef6a80bcdc62ae166e6e346e413ad314f76df69c66ffd4a3c"
+    },
+    {
+      "file": "uv-metrics.json",
+      "source": "artifacts/meshquery_v1/island_merge01/sole_formal/sole_repaired_islands/inspect/uv_metrics.json",
+      "bytes": 2244,
+      "sha256": "eed7578b34c0c910ccd0036790edfc36a90fe72dbd16ad8877cccd132d6dc56b"
+    },
+    {
+      "file": "texture/BaseColor_mip0.png",
+      "source": "artifacts/meshquery_v1/island_merge01/sole_formal/sole_repaired_islands/bake/texture/BaseColor_mip0.png",
+      "bytes": 2861965,
+      "sha256": "330c1ec7a9b495651d4ae7a43cc497a89faf7e41b2b3344c7c3c04ac35b9c261"
+    },
+    {
+      "file": "texture/BaseColor_mip1.png",
+      "source": "artifacts/meshquery_v1/island_merge01/sole_formal/sole_repaired_islands/bake/texture/BaseColor_mip1.png",
+      "bytes": 952004,
+      "sha256": "83c4880316a1a090a3476de8ec008529eb4cac0054e2bc5e6d62048eacf29502"
+    },
+    {
+      "file": "texture/BaseColor_mip10.png",
+      "source": "artifacts/meshquery_v1/island_merge01/sole_formal/sole_repaired_islands/bake/texture/BaseColor_mip10.png",
+      "bytes": 84,
+      "sha256": "778b7bc95fdca6b0f404d3245aa2b34d672305fc2fa0cdd72ab35e873b013e67"
+    },
+    {
+      "file": "texture/BaseColor_mip11.png",
+      "source": "artifacts/meshquery_v1/island_merge01/sole_formal/sole_repaired_islands/bake/texture/BaseColor_mip11.png",
+      "bytes": 70,
+      "sha256": "17316cac333c775477db207ec8823e6017cc6372c2ad48811119913bf3aa5714"
+    },
+    {
+      "file": "texture/BaseColor_mip2.png",
+      "source": "artifacts/meshquery_v1/island_merge01/sole_formal/sole_repaired_islands/bake/texture/BaseColor_mip2.png",
+      "bytes": 318605,
+      "sha256": "679f1f3cb192559bbd79fda706f0a177b742d5a643d2d4441a5cbe9ab57182a5"
+    },
+    {
+      "file": "texture/BaseColor_mip3.png",
+      "source": "artifacts/meshquery_v1/island_merge01/sole_formal/sole_repaired_islands/bake/texture/BaseColor_mip3.png",
+      "bytes": 110903,
+      "sha256": "259c71fc94476139b16f9b8ac3ee203fb6ef9da0d4fd1a3c28793fdb10958038"
+    },
+    {
+      "file": "texture/BaseColor_mip4.png",
+      "source": "artifacts/meshquery_v1/island_merge01/sole_formal/sole_repaired_islands/bake/texture/BaseColor_mip4.png",
+      "bytes": 38201,
+      "sha256": "584fa848571ee5f1018105bb06551a26708ebd39211ef6aee8a2738b466c3f5d"
+    },
+    {
+      "file": "texture/BaseColor_mip5.png",
+      "source": "artifacts/meshquery_v1/island_merge01/sole_formal/sole_repaired_islands/bake/texture/BaseColor_mip5.png",
+      "bytes": 12420,
+      "sha256": "495b6c29794e673961da56b8e2d37053b8bdcd0ecc887a88ce1a7176beefe0d9"
+    },
+    {
+      "file": "texture/BaseColor_mip6.png",
+      "source": "artifacts/meshquery_v1/island_merge01/sole_formal/sole_repaired_islands/bake/texture/BaseColor_mip6.png",
+      "bytes": 3741,
+      "sha256": "b1c9317079820dbccdba76654a6c255e91526017af5eca5952f5cc467eb47aff"
+    },
+    {
+      "file": "texture/BaseColor_mip7.png",
+      "source": "artifacts/meshquery_v1/island_merge01/sole_formal/sole_repaired_islands/bake/texture/BaseColor_mip7.png",
+      "bytes": 1077,
+      "sha256": "998211fb9a5a06fd8b256a75798c0b22e12f92372d7cf79eac7cac35e60917f6"
+    },
+    {
+      "file": "texture/BaseColor_mip8.png",
+      "source": "artifacts/meshquery_v1/island_merge01/sole_formal/sole_repaired_islands/bake/texture/BaseColor_mip8.png",
+      "bytes": 332,
+      "sha256": "c849112f6387d32cffa6d878ad3aa0e2877950026e93b25a75206fc9deec63ad"
+    },
+    {
+      "file": "texture/BaseColor_mip9.png",
+      "source": "artifacts/meshquery_v1/island_merge01/sole_formal/sole_repaired_islands/bake/texture/BaseColor_mip9.png",
+      "bytes": 136,
+      "sha256": "702893978512ad45f9b79cf3b44049c672657d1627ec91dc0ffd5cd557d77fa2"
+    },
+    {
+      "file": "baseline-uv.png",
+      "source": "artifacts/meshquery_v1/island_merge01/formal/retained_islands/views/uv.png",
+      "bytes": 113726,
+      "sha256": "941a28b75c01614390a749005a1c22df7303680b10a395ee20a1701915d65d40"
+    },
+    {
+      "file": "final-uv.png",
+      "source": "artifacts/meshquery_v1/island_merge01/sole_formal/sole_repaired_islands/views/uv.png",
+      "bytes": 99880,
+      "sha256": "d4f56ee819f26d8542489df96f5bdf0e12531bcc95df75fbe481506a97acf522"
+    },
+    {
+      "file": "baseline-foot.png",
+      "source": "artifacts/meshquery_v1/island_merge01/foot_retained_islands/left.png",
+      "bytes": 105325,
+      "sha256": "7598af64ece3f45fff19b653b622f6d66c85abe76e33fa83e8971f13a9504d61"
+    },
+    {
+      "file": "uncut-foot.png",
+      "source": "artifacts/meshquery_v1/island_merge01/foot_merged_islands/left.png",
+      "bytes": 84934,
+      "sha256": "3acda16eb6dca47a34b9c92b7bce6030d9764badccefa9adc1eb2f84f4701e0e"
+    },
+    {
+      "file": "repaired-foot.png",
+      "source": "artifacts/meshquery_v1/island_merge01/foot_repaired/left.png",
+      "bytes": 103698,
+      "sha256": "7396c27d4e11bc2d2af46c0592162875abf83e75ac7fdd80558e36ecac7b9835"
+    },
+    {
+      "file": "final-oblique.png",
+      "source": "artifacts/meshquery_v1/island_merge01/sole_formal/sole_repaired_islands/views/oblique.png",
+      "bytes": 275529,
+      "sha256": "15368368410646259d0c112d2208ebe1be9b7169d6328224d6cab93ffb2da716"
+    }
+  ],
+  "quality_scope": "BaseColor appearance preview; strict render rejected",
+  "historical_artifacts": "Not copied; remain local and gitignored"
+}

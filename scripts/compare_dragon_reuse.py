@@ -72,13 +72,13 @@ def preparation_cost(entry: dict[str, object]) -> dict[str, object]:
 def report(output: Path, rows: list[dict[str, object]]) -> None:
     lines = ["# 整龙 UV 与颜色复用对照", "",
              "验收范围为 BaseColor；完整PBR、GPU与人工验收未通过本报告认定。`[verified: protocol.json scope]`", "",
-             "|目标|路径|尺寸|连通岛|独立图块|活动共享组|状态|颜色通过|交付成功|完整mip字节|包体字节|证据|",
+             "|目标|路径|尺寸/编码|连通岛|独立图块|活动共享组|状态|颜色通过|交付成功|完整mip字节|包体字节|证据|",
              "|---|---|---|---|---|---|---|---|---|---|---|---|"]
     for row in rows:
         metrics = _obj(row.get("snapshot_metrics", {}))
         label = str(row["label"])
         geometry = _obj(row.get("geometry", {}))
-        lines.append(f"|{row['target']}|{row['method']}|{row['resolution']}|{metrics.get('chart_count','—')}"
+        lines.append(f"|{row['target']}|{row['method']}|{row['resolution']} / {row.get('codec', 'RGBA8')}|{metrics.get('chart_count','—')}"
                      f"|{geometry.get('packing_groups','—')}|{geometry.get('active_reuse_groups','—')}"
                      f"|{row['status']}|{row.get('quality_accepted',False)}|{row.get('delivery_succeeded',False)}"
                      f"|{row.get('payload_bytes','—')}|{row.get('package_bytes','—')}"
@@ -89,7 +89,7 @@ def report(output: Path, rows: list[dict[str, object]]) -> None:
                     and row.get("quality_accepted") is True and row.get("delivery_succeeded") is True
                     and type(row.get("payload_bytes")) is int]
         best = min(accepted, key=lambda row: int(str(row["payload_bytes"]))) if accepted else None
-        text = f"{best['payload_bytes']} 字节，{best['resolution']}²" if best else "无已验收结果，最小存储未知"
+        text = f"{best['payload_bytes']} 字节，{best['resolution']}² {best.get('codec', 'RGBA8')}" if best else "无已验收结果，最小存储未知"
         lines.append(f"- {target}/{method}：{text}。`[verified: matrix.json]`")
     lines += ["", "## 实际产物", ""]
     for row in rows:
@@ -128,6 +128,10 @@ def main() -> None:
     resolutions = plan.get("resolutions", [512, 1024, 2048, 4096, 8192])
     if not isinstance(resolutions, list) or any(type(size) is not int for size in resolutions):
         raise ValueError("INTEGER_RESOLUTIONS_REQUIRED")
+    codecs = plan.get("codecs", ["RGBA8"])
+    if (not isinstance(codecs, list) or not codecs or len(set(codecs)) != len(codecs)
+            or any(codec not in ("RGBA8", "BC1_SRGB", "BC7_SRGB") for codec in codecs)):
+        raise ValueError("SUPPORTED_DISTINCT_CODECS_REQUIRED")
     profile = _obj(plan.get("geometry_profile", {}))
     pinned_inputs = input_manifest(plan, args.plan)
     root = Path(__file__).resolve().parents[1]
@@ -143,13 +147,16 @@ def main() -> None:
     for target in targets:
         for method in paths:
             for size in resolutions:
-                rows.append({"label": f"{target}_{method}_{size}", "target": target, "method": method,
-                             "resolution": size, "status": "NOT_RUN", "quality_accepted": False})
+                for codec in codecs:
+                    rows.append({"label": f"{target}_{method}_{size}_{str(codec).lower()}", "target": target,
+                                 "method": method, "codec": codec, "resolution": size,
+                                 "status": "NOT_RUN", "quality_accepted": False})
     geometry_ids = {snapshot_metrics(str(_obj(path)["snapshot"]))["geometry_hash"] for path in paths.values()
                     if isinstance(_obj(path).get("snapshot"), str)}
     if len(geometry_ids) != 1:
         raise ValueError("CROSS_TOPOLOGY_COMPARISON_FORBIDDEN")
     write_json(output / "matrix.json", rows)
+    preparations: dict[tuple[str, str, int], dict[str, object]] = {}
     for row in rows:
         verify_inputs(pinned_inputs)
         label = str(row["label"])
@@ -160,8 +167,15 @@ def main() -> None:
             continue
         current = str(path["snapshot"])
         size = row["resolution"]
-        packed = experiment.call("uv.pack", {"snapshot": current, "profile": {**profile, "resolution": size}},
-                                 label + "_pack", reason="统一尺寸与间距，独立从冻结路径状态开始")
+        cache_key = (str(row["target"]), str(row["method"]), int(str(size)))
+        cached = preparations.get(cache_key)
+        packed = _obj(cached["pack"]) if cached is not None else experiment.call(
+            "uv.pack", {"snapshot": current, "profile": {**profile, "resolution": size}},
+            label + "_pack", reason="统一尺寸与间距，独立从冻结路径状态开始")
+        if cached is None:
+            cached = {"pack": packed, "prepared_for": label}
+            preparations[cache_key] = cached
+        row["shared_preparation"] = cached["prepared_for"]
         row["pack"] = packed
         if "report" in packed:
             geometry = read_object(Path(str(packed["report"])))
@@ -177,8 +191,20 @@ def main() -> None:
             target = targets[str(row["target"])]
             if target is not None:
                 request["target"] = target
-            baked = experiment.call("material.bake", request, label + "_bake",
-                                    reason="从冻结目标重建实际颜色贴图，保存完整mip")
+            if "bake" not in cached:
+                cached["bake"] = experiment.call("material.bake", request, label + "_bake",
+                    reason="从冻结目标重建实际颜色贴图，保存完整mip；编码变体共用此烘焙")
+                base_result = _obj(cached["bake"])
+                if "bake" in base_result:
+                    cached["bake_sha256"] = file_hash(Path(str(base_result["bake"])))
+            baked = _obj(cached["bake"])
+            if "bake" in baked and file_hash(Path(str(baked["bake"]))) != cached["bake_sha256"]:
+                raise ValueError("SHARED_SOURCE_BAKE_CHANGED")
+            if row["codec"] in ("BC1_SRGB", "BC7_SRGB") and "bake" in baked:
+                row["uncompressed_bake"] = baked
+                baked = experiment.call("material.encode", {"snapshot": current, "bake": baked["bake"],
+                    "codec": row["codec"], "timeout_seconds": 300}, label + "_encode",
+                    reason="真实块压缩后解码，重新验收；尺寸与压缩前源贴图不变")
             row["bake"] = baked
             row["payload_bytes"] = baked.get("payload_bytes")
             if "bake" in baked:
@@ -201,6 +227,11 @@ def main() -> None:
                         "validation": validated["validation"], "mode": "accepted" if row["quality_accepted"] else "diagnostic"},
                         label + "_export", reason="导出实际贴图和颜色预览，完整PBR状态保持未验收")
                     exported = _obj(row["export"])
+                    if "output" in exported:
+                        row["tool_output_tree_bytes"] = sum(item.stat().st_size for item in
+                            Path(str(exported["output"])).rglob("*") if item.is_file())
+                    row["texture_package_scope"] = ("DDS runtime texture only; decoded previews separate" if
+                        row["codec"] != "RGBA8" else "complete mip PNG package; GPU bytes separately in payload_bytes")
                     delivered = exported.get("status") == "OK" and "asset" in exported and "manifest" in exported
                     if delivered:
                         manifest_path = Path(str(exported["manifest"]))

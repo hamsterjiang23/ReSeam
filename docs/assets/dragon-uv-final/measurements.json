@@ -1,0 +1,46 @@
+[
+  {
+    "name": "original",
+    "snapshot": "E:\\ReSem\\artifacts\\dragon_reuse_development\\topology_restore_preflight01\\semantic_patches\\snapshot\\snapshot.json",
+    "texture": "E:\\ReSem\\model\\dragon\\tripo_p2\\blue dragon 3d model\\blue_dragon_3d_model.fbm\\blue_dragon_3d_model_basecolor.jpg",
+    "state_hash": "093a37ec01937cdf70a9923028855d3d8f84e04960504d2b742ff00e6cca16ce",
+    "faces": 10832,
+    "charts": 121,
+    "groups": 0,
+    "coverage": 0.7254857184191058,
+    "uv_bounds": [
+      [
+        0.0011599957942962646,
+        0.0011600255966186523
+      ],
+      [
+        0.9984869360923767,
+        0.997647225856781
+      ]
+    ],
+    "independent_tiles": 121,
+    "authorized_shared_surface_fraction": 0.0
+  },
+  {
+    "name": "current",
+    "snapshot": "E:\\ReSem\\artifacts\\meshquery_v1\\island_merge01\\sole_formal\\sole_repaired_islands\\pack\\snapshot\\snapshot.json",
+    "texture": "E:\\ReSem\\artifacts\\meshquery_v1\\island_merge01\\sole_formal\\sole_repaired_islands\\bake\\texture\\BaseColor_mip0.png",
+    "state_hash": "59d20f7ed753ab7b9132cfe477318217a295974630bbcfa4c61635fe6a999566",
+    "faces": 11450,
+    "charts": 92,
+    "groups": 46,
+    "coverage": 0.5726051881041325,
+    "uv_bounds": [
+      [
+        0.0048828125000000555,
+        0.015294287931775452
+      ],
+      [
+        0.9951171875,
+        0.9847057120682245
+      ]
+    ],
+    "independent_tiles": 46,
+    "authorized_shared_surface_fraction": 1.0
+  }
+]

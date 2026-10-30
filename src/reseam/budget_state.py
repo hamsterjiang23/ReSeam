@@ -13,7 +13,7 @@ from shapely.geometry.base import BaseGeometry
 from .joint_types import Correspondence, ReuseGroup
 from .joint_validation import uv_barycentric
 from .mesh import chart_labels, state_from_corner_uv
-from .surface_match import reflect
+from .reuse_transform import mapped_normals, mapped_points, similarity_transform, transform_parity
 from .types import FloatArray, IntArray, MeshState
 from .validation import jacobians, topology_errors
 
@@ -251,6 +251,13 @@ def validate_budget_safety(
     for group in state.groups:
         all_faces = group.first_faces + group.second_faces
         normal = np.asarray(group.plane_normal, dtype=float)
+        if group.first_to_second is not None:
+            try:
+                similarity_transform(group.first_to_second)
+            except (ValueError, TypeError):
+                return invalid(["INVALID_REUSE_SIMILARITY"])
+            if group.second_orientation != group.first_orientation * transform_parity(group.first_to_second):
+                return invalid(["REUSE_SIMILARITY_ORIENTATION_MISMATCH"])
         if (group.group_id in ids or not group.first_faces or not group.second_faces
                 or len(set(all_faces)) != len(all_faces) or min(all_faces) < 0 or max(all_faces) >= count
                 or assigned.intersection(all_faces) or normal.shape != (3,)
@@ -284,6 +291,7 @@ def validate_budget_safety(
     if not math.isfinite(diagonal) or diagonal <= 0:
         return invalid(["INVALID_ORIGINAL_BOUNDING_BOX"])
     max_error, max_angle = 0.0, 0.0
+    max_forward_error, max_inverse_error = 0.0, 0.0
     authorized_area = 0.0
     overlap_cells = 0
     positive_cells = 0
@@ -311,10 +319,21 @@ def validate_budget_safety(
         point_a = uv_barycentric(corners[first], uv) @ triangles[first]
         point_b = uv_barycentric(corners[second], uv) @ triangles[second]
         normal = np.asarray(group.plane_normal)
-        error = float(np.linalg.norm(reflect(point_a, normal, group.plane_offset) - point_b, axis=1).max())
+        inverse = member[first] == 1
+        error = float(np.linalg.norm(mapped_points(point_a, normal, group.plane_offset,
+            group.first_to_second, inverse=bool(inverse)) - point_b, axis=1).max())
+        reverse_error = error
+        if group.first_to_second is not None:
+            reverse_error = float(np.linalg.norm(mapped_points(point_b, normal, group.plane_offset,
+                group.first_to_second, inverse=not bool(inverse)) - point_a, axis=1).max())
+        forward_error, inverse_error = (reverse_error, error) if inverse else (error, reverse_error)
+        max_forward_error = max(max_forward_error, forward_error / diagonal)
+        max_inverse_error = max(max_inverse_error, inverse_error / diagonal)
+        error = max(error, reverse_error)
         error /= diagonal
         angle = float(np.degrees(np.arccos(np.clip(
-            reflect(normals[first], normal, 0) @ normals[second], -1, 1))))
+            mapped_normals(normals[first], normal, group.first_to_second,
+                           inverse=bool(inverse)) @ normals[second], -1, 1))))
         max_error, max_angle = max(max_error, error), max(max_angle, angle)
         if error > correspondence_fraction + 1e-10 or angle > normal_angle_degrees + 1e-8:
             errors.append(f"OVERLAP_CORRESPONDENCE:{first}:{second}")
@@ -346,6 +365,8 @@ def validate_budget_safety(
         "nominal_reuse_groups": len(state.groups), "active_reuse_groups": len(active),
         "active_reuse_group_ids": active, "group_authorized_overlap_area": group_areas,
         "max_overlap_geometry_error": max_error, "maximum_overlap_normal_angle_degrees": max_angle,
+        "maximum_forward_overlap_error_fraction": max_forward_error,
+        "maximum_inverse_overlap_error_fraction": max_inverse_error,
         "minimum_oriented_determinant": float(determinant.min()),
         "minimum_gap_pixels": gap if math.isfinite(gap) else None,
         "minimum_border_pixels": border, "packing_groups": len(shapes),
@@ -483,7 +504,8 @@ def exclusive_faces(state: BudgetState, face_ids: tuple[int, ...]) -> BudgetStat
         second = tuple(f for f in group.second_faces if f not in released)
         if first and second:
             groups.append(ReuseGroup(group.group_id, first, second, group.plane_normal,
-                                     group.plane_offset, group.first_orientation, group.second_orientation))
+                                     group.plane_offset, group.first_orientation, group.second_orientation,
+                                     group.first_to_second))
         else:
             removed_group_faces.update(first + second)
     # Dissolved mirrored members become independent, positive-orientation charts.

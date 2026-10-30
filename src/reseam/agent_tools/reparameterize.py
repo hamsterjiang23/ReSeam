@@ -1,5 +1,8 @@
 """Explicit regional parameterization with immutable original face identities."""
 
+import json
+import os
+import subprocess
 import time
 from pathlib import Path
 
@@ -8,10 +11,68 @@ from scipy.sparse import csr_matrix
 from scipy.sparse.linalg import spsolve
 
 from ..budget_state import embed_region
-from ..mesh import make_mesh, read_obj, state_from_corner_uv, write_obj
+from ..mesh import chart_labels, make_mesh, read_obj, state_from_corner_uv, write_obj
 from ..runtime import linux_path, read_runtime, run_process, wsl_command
 from ..types import FloatArray, IntArray, MeshState
+from .regional_cut import cut_region
 from .state import check_deadline, file_hash, require_snapshot, save_snapshot, snapshot_result, write_json
+
+
+def _blender_unwrap(
+    local: MeshState, request: dict[str, object], output: Path, deadline: float,
+) -> tuple[MeshState, dict[str, object]]:
+    root = Path(__file__).resolve().parents[3]
+    if "blender" in request:
+        blender = Path(str(request["blender"]))
+    else:
+        runtime = read_runtime(root)
+        blender = Path(str(runtime.get("blender", "E:/Blender 4.5.11/blender.exe")))
+    if not blender.is_file():
+        raise FileNotFoundError("BLENDER_MISSING:" + str(blender))
+    methods = {"blender_lscm": "CONFORMAL", "blender_abf": "ANGLE_BASED",
+               "blender_minimum_stretch": "MINIMUM_STRETCH"}
+    method = methods[str(request["backend"])]
+    folder = output / "blender"
+    folder.mkdir()
+    source = folder / "input.npz"
+    np.savez_compressed(source, vertices=local.mesh.vertices, faces=local.mesh.faces)
+    worker = root / "scripts/agent_unwrap_worker.py"
+    config = folder / "request.json"
+    write_json(config, {"input": str(source.resolve()), "output": str(folder.resolve()), "method": method})
+    argv = [str(blender), "--background", "--factory-startup", "--threads", "1", "--python-exit-code", "1",
+            "--python", str(worker), "--", str(config.resolve())]
+    write_json(folder / "command.json", argv)
+    environment = {**os.environ, "OMP_NUM_THREADS": "1", "OPENBLAS_NUM_THREADS": "1",
+                   "MKL_NUM_THREADS": "1", "PYTHONUNBUFFERED": "1"}
+    check_deadline(deadline)
+    with (folder / "process.log").open("w", encoding="utf-8") as log:
+        process = subprocess.Popen(argv, stdout=log, stderr=subprocess.STDOUT, env=environment,
+                                   creationflags=subprocess.CREATE_NO_WINDOW if os.name == "nt" else 0)
+        try:
+            process.wait(timeout=max(.01, deadline - time.monotonic()))
+        except subprocess.TimeoutExpired as error:
+            if os.name == "nt":
+                subprocess.run(["taskkill", "/PID", str(process.pid), "/T", "/F"],
+                               stdout=log, stderr=subprocess.STDOUT, check=False)
+            else:
+                process.kill()
+            process.wait()
+            raise TimeoutError("BLENDER_UNWRAP_TIMEOUT") from error
+    if process.returncode:
+        details = (folder / "process.log").read_text(encoding="utf-8", errors="replace")
+        reason = next((line.strip() for line in details.splitlines() if "ValueError:" in line), "see process.log")
+        raise ValueError("BLENDER_UNWRAP_FAILED:" + reason)
+    check_deadline(deadline)
+    with np.load(folder / "unwrapped.npz", allow_pickle=False) as arrays:
+        if not np.array_equal(arrays["faces"], local.mesh.faces):
+            raise ValueError("BLENDER_ORIGINAL_FACE_IDENTITY_CHANGED")
+        if not np.allclose(arrays["vertices"], local.mesh.vertices, rtol=1e-6, atol=local.mesh.scale * 1e-7):
+            raise ValueError("BLENDER_ORIGINAL_GEOMETRY_CHANGED")
+        state = state_from_corner_uv(local.mesh, arrays["corner_uv"], corner_ids=arrays["corner_ids"])
+    report = json.loads((folder / "backend.json").read_text(encoding="utf-8"))
+    report.update({"executable": str(blender), "worker_sha256": file_hash(worker),
+                   "input_sha256": file_hash(source), "output_sha256": file_hash(folder / "unwrapped.npz")})
+    return state, report
 
 
 def boundary_loop(faces: IntArray) -> list[int]:
@@ -123,6 +184,7 @@ def _import_optcuts(local: MeshState, path: Path) -> MeshState:
 
 def reparameterize(request: dict[str, object], output: Path, deadline: float) -> dict[str, object]:
     from .geometry import _edited_metadata, _face_list, _packed, _profile, geometry_report
+    check_deadline(deadline)
     snapshot = require_snapshot(request)
     raw = request.get("faces")
     if raw is None:
@@ -132,15 +194,27 @@ def reparameterize(request: dict[str, object], output: Path, deadline: float) ->
     if any(set(faces).intersection(g.first_faces+g.second_faces) for g in base.groups):
         raise ValueError("REPARAMETERIZE_SHARED_REGION_REQUIRES_UNSHARE")
     backend = request.get("backend", "harmonic")
-    local_mesh = make_mesh(base.surface.mesh.vertices, base.surface.mesh.faces[list(faces)])
-    local = state_from_corner_uv(local_mesh, base.surface.uv[base.surface.uv_faces[list(faces)]],
-                                 corner_ids=base.surface.uv_faces[list(faces)])
-    record: dict[str,object] = {"backend": backend, "faces": list(faces), "original_face_count": len(faces)}
+    initial_uv = request.get("initial_uv", "existing")
+    if initial_uv not in ("existing", "geometry"):
+        raise ValueError("UNKNOWN_REPARAMETERIZATION_INITIAL_UV")
+    cut = cut_region(base.surface, faces, request.get("seam_edges", []), deadline)
+    local_mesh, local = cut.surface.mesh, cut.surface
+    record: dict[str,object] = {
+        "backend": backend, "initial_uv": initial_uv, "faces": list(faces), "original_face_count": len(faces),
+        "requested_seam_edges": [list(edge) for edge in cut.seam_edges],
+        "temporary_original_vertex_ids": cut.original_vertex_ids.tolist(),
+        "temporary_corner_vertex_ids": local_mesh.faces.tolist(),
+        "old_region_chart_count": len(np.unique(chart_labels(base.surface)[list(faces)])),
+    }
     output.mkdir(parents=True, exist_ok=True)
     if backend == "harmonic":
-        corners, ids, loop = harmonic_uv(base.surface, faces)
+        corners, ids, loop = harmonic_uv(local, tuple(range(len(faces))))
         local = state_from_corner_uv(local_mesh, corners, corner_ids=ids)
         record["boundary_vertices"] = loop
+        record["boundary_original_vertices"] = cut.original_vertex_ids[loop].tolist()
+    elif backend in {"blender_lscm", "blender_abf", "blender_minimum_stretch"}:
+        local, backend_report = _blender_unwrap(local, request, output, deadline)
+        record["blender"] = backend_report
     elif backend == "optcuts":
         root = Path(__file__).resolve().parents[3]
         runtime = read_runtime(root)
@@ -153,7 +227,18 @@ def reparameterize(request: dict[str, object], output: Path, deadline: float) ->
         used = np.unique(local_mesh.faces)
         compact = make_mesh(local_mesh.vertices[used], np.searchsorted(used,local_mesh.faces))
         source = state_from_corner_uv(compact, local.uv[local.uv_faces], corner_ids=local.uv_faces)
-        write_obj(path, source)
+        if initial_uv == "geometry":
+            # OptCuts otherwise trusts locally injective one-chart input UV
+            # without checking global overlap (main.cpp initialization branch).
+            # Supply only the requested cut geometry; let its own initializer
+            # create UV, without isolating any original triangle beforehand.
+            with path.open("w", encoding="utf-8", newline="\n") as stream:
+                for vertex in compact.vertices:
+                    stream.write("v " + " ".join(format(float(x), ".17g") for x in vertex) + "\n")
+                for face in compact.faces:
+                    stream.write("f " + " ".join(str(int(v) + 1) for v in face) + "\n")
+        else:
+            write_obj(path, source)
         remaining = max(0., deadline-time.monotonic())
         check_deadline(deadline)
         command = wsl_command(runtime, [linux_path(binary),"100",linux_path(path.resolve()),
@@ -169,8 +254,15 @@ def reparameterize(request: dict[str, object], output: Path, deadline: float) ->
     else:
         raise ValueError("UNKNOWN_REPARAMETERIZATION_BACKEND")
     check_deadline(deadline)
+    # Restore original geometry and original face rows before embedding UV.
+    # Only temporary vertices were split; the asset topology never changes.
+    original_mesh = make_mesh(base.surface.mesh.vertices, base.surface.mesh.faces[list(faces)])
+    original_local = state_from_corner_uv(original_mesh, local.uv[local.uv_faces], corner_ids=local.uv_faces)
+    record["result_seam_edges"] = [list(original_mesh.edges[index]) for index in sorted(original_local.seams)]
+    record["result_chart_count"] = int(chart_labels(original_local).max()) + 1
+    record["result_corner_uv_ids"] = original_local.uv_faces.tolist()
     profile = _profile(request)
-    proposed = _packed(embed_region(base,local,faces,None), profile,deadline=deadline)
+    proposed = _packed(embed_region(base,original_local,faces,None), profile,deadline=deadline)
     report = geometry_report(proposed,profile)
     record["geometry"] = report
     write_json(output/"reparameterization.json",record)

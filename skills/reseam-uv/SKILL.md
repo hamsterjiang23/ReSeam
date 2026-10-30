@@ -18,6 +18,21 @@ uv run reseam tools run <工具名> --request <request.json> --output <从未存
 
 ## 执行路线
 
+需要按语义重构接缝、减少旧岛碎片时，先读 [网格查询与接缝计划](references/meshquery.md)。
+使用 `mesh.index/query` 观察，`region.propose` 提供候选，Agent 看图命名后调用 `region.define`。
+用 `seam.select/preview` 确认真实边，再 `seam.submit_plan/apply` 展开；参数以 `tools describe` 为准。
+多视图、SQL 数值和部件标签共同支持决策，标签或对称切缝本身不是共享许可。
+
+保留原UV可用区域，只对已声明区域改接缝。薄翼膜正反面分别观察，翼骨和四肢优先背面纵切，
+角刺保留根到尖的连续走向；眼嘴、爪子明显颜色边界列为保护区。
+三角网格不猜四边形边环，改用原边路径、区域边界和折痕算子。先无共享展开与烘焙，
+再比较成对共享。单个计划失败回到父快照，整块修改路径或锚点，不自动隔离大量三角面。
+
+主流程由当前 Agent 提供通用预训练 VLM 判断，不训练或微调模型。PartField 是独立研究分区路径，
+其许可、权重和运行成本单列；不因研究依赖缺失切换主流程算法或伪造论文复现。
+每个重工具默认300秒，每条真实路径总预算2400秒；保留同一假设最多三次修订及全部失败。
+报告区分工具实现、实际改进、Agent外观评价、人工认可；工业可用性和泛化仍需额外证据。
+
 1. `asset.import` 冻结原始输入。GLB 是完整材质路径；OBJ 用独立 `reference` GLB 供应真实材质。输入无 UV 时显式设置 `initialize_uv: "xatlas"`。不替换用户输入或历史试验资产。
 2. `uv.inspect` 查看编号岛、畸变和重叠；`view.render` 查看真实颜色、棋盘格、编号岛、接缝或错误面。需要定位时传入 `pick_pixels` 取得原面 ID 与重心坐标，再用 `selected_faces` 或 `region_id` 查看局部。诊断视图不替代质量渲染。
 3. 先用 `uv.pack`、`material.bake`、`quality.validate` 建立无共享基线。记录全部配置、分辨率、阈值和耗时。基线不通过时报告失败区域，先排查投射、拓扑、UV 或材料支持问题。
@@ -26,17 +41,68 @@ uv run reseam tools run <工具名> --request <request.json> --output <从未存
 6. 对新快照重新 `material.bake`、`quality.validate`；旧贴图或旧验收不能用于改过 UV 的状态。比较完整实际通道和 mip，不以岛少、填充率或 BaseColor 预览代替质量验收。
 7. `asset.export` 导出已验收结果。没有通过结果时可用明确的 `mode: "diagnostic"` 导出失败证据，并保留最好已通过快照。最终报告链接真实贴图、原始/修改 UV、渲染、最低已验收字节数及所有拒绝/超时成本。工具完成、节省存储、艺术验收分别报告。
 
+`material.target` / `basecolor_reuse` 要求源材质参考与导入网格具有相同原面角身份和对应位置。
+不同高模到低模的 OBJ＋reference 输入不能直接走此路线；使用显式投射烘焙，保留投射误差。
+`basecolor_diagnostic` 只返回颜色报告、真实贴图和预览 GLB，不产生可传入 `quality.validate` / `asset.export` 的 `bake.json`。
+其结果可独立重新导入检查，但不能升级成正式材质验收；需要这两个接口时使用支持的 PBR 或同身份颜色路径。
+观察模型时读取返回的坐标约定：固定镜头下某一视角为空可能是开放薄片侧视，继续检查其它视角。
+
 ## 整龙迭代与颜色范围
 
 本轮 tripo_p2 的执行合同在仓库 `docs/dragon-llm-reuse-plan.md`，完整参数以 `tools describe` 为准；接口列出不代表后端冒烟或整龙验收已通过。
 
 - 按脚与腿、翼膜与翼骨、重复角刺推进。头脸和明显特征默认保护。先取得部件级共享，再扩展整龙；同一假设连续三次失败后，依据错误面更换对应、区域或展开方法。
+- 本轮优先实际UV复用。独立图块、实际交叠覆盖面积和烘焙质量是主要结果；编码压缩留作可选诊断。共享组成员面积不等于实际交叠面积，排布owner数也不等于实际交叠连通图块数。
+- 语义区域跨多个旧岛时，可检查 `chart_aware` 对应：按主UV图分组并重建目标切缝。需修复时显式保留带拒绝标记的诊断快照；不能直接当作已通过结果。固定映射后释放冲突面，优先提出连贯的整面例外，再用 `exclusive_layout=preserve_patches` 保留片内UV，避免删除主面后重新投影产生孔洞塌缩。
+- 排布把原零面积接触变成新正面积冲突时，可显式启用 `repair_packing_roundoff`。该选项改变受限的实际UV坐标并重新执行完整门禁；它不提供面积豁免。读取操作记录中的修正次数、节点变化和拒绝原因，实际未执行修正时不归因于它。
 - `uv.reparameterize` 显式选择区域及几何后端。本轮允许 OptCuts 作为实验展开后端；先核验面角映射、原几何不变和运行版本。它不替代跨部件对应，也不改变历史自研求解器的范围。
 - 仅在用户允许对称化修饰时，选择主纹理成员并用 `material.target` 冻结源贴图及固定对应构成的目标；保护区保持原信号。目标不能由待验收贴图反向生成，外观修改量与重建误差分别报告。
 - `material.bake mode=basecolor_reuse` 使用明确的颜色目标，再调用独立验收与导出。其通过只代表报告声明的 UV＋BaseColor 范围，不能变成完整 PBR、GPU 或艺术通过。`basecolor_diagnostic` 仍保持仅诊断身份。
 - 冻结对称化目标后，为它单独运行无共享对照。新龙协议验证 LOD 0、1、2；完整 mip 写出不代表其余层通过。纹理尺寸枚举不假定成功单调。
+- 对从 FBX 属性拆点导出的模型，给 `material.target` 提供可追溯的 `original_topology`，恢复原始面角邻接的接缝检查；没有该证据时只报告输入网格范围，不能按坐标焊接来补身份。
+- 追求更小贴图时，可通过 `uv.pack face_density_scale` 对错误集中部位做一次完整 owner 的密度调整，随后恢复密度约束并重新验收；普通后续排布不重复施加。公共调整向全部 Baseline 提供，单独保存同父状态消融。
+- 需要编码诊断时才调用 `material.encode`，随后重新验收；参数查工具说明。它不代替UV复用比较，也不自动代表目标GPU已验证。
+
+## 用户授权的镜像几何变体
+
+只有用户明确允许新建完全对称的模型时，调用 `asset.mirror_variant allow_geometry_change=true`，
+选择对称平面及保留侧。工具裁切半边、镜像几何和UV，并输出同一新几何的共享／无共享快照。
+原输入保留；新面通过原面ID和重心坐标追溯。不能把这个跨几何结果归为固定几何UV重构收益。
+继续用源侧真实材质烘焙，检查中线、脸、脚爪与轮廓；记录中线顶点连接策略和BaseColor范围，
+不自动声称完整PBR、动画或水密性通过。未授权改变几何时继续使用原模型的成对对应路线。
+
+## 紧凑排布与缩图
+
+使用 `uv.pack backend=blender_concave` 按真实岛轮廓旋转、统一缩放和排布；需要本机 Blender。
+每个共享组只排主图块，再把同一个相似变换施加到全部成员，保持实际堆叠。
+`density_normalize=false` 保留各岛相对纹素分配；未经说明不要通过逐岛缩小制造高占用率。
+与 `rectangles` 对照必须固定分辨率、gap、border、密度规则和父快照，读取独立几何报告中的
+`unique_coverage`、`minimum_gap_pixels` 和 `minimum_border_pixels`；后端请求的 margin 不是实际间距。
+保留原 UV 内部冲突时，显式绑定来源策略；不得把新交叠算作排布增益。
+
+紧凑排布不会自动降低纹理字节。候选尺寸分别重新排布、烘焙和渲染，逐项保留结果，不假设尺寸
+与外观通过单调。记录实际 mip 尺寸和字节；同分辨率清晰度、同外观缩图
+收益分开。当前 `basecolor_reuse` 烘焙仅接受二次幂尺寸；1536会被拒绝，不能把已排布当作
+已产出该尺寸贴图。继续保留未缩图对照，观察眼嘴、爪尖、翼尖与接缝。BaseColor 外观判断不升级为
+完整 PBR 或人工艺术认可。
+
+降低分辨率时，图块间距与烘焙填充分别记录；不能默认二者都可同比减半。
+留边变化后检查实际mip覆盖、接缝和渲染，并保留未缩图对照。一次只改变明确机制；
+同一假设多次未改善则回到最好已验收结果，小尺寸探索按实际范围标为预览。
 
 ## Baseline 与步骤证据
+
+用户要求保留原始可用UV时，不先运行 `reuse.apply action=exclusive` 隔离异常面。可显式设置 `profile.preserve_source_uv={snapshot,state_hash}`，同一策略通过 `geometry_profile` 绑定目标、烘焙和验收。它仅容忍指定源快照已存在、局部布局保持共同旋转/缩放/平移的交叠或接触；不新增岛，严格检查失败另行保留。新冲突仍拒绝，原有小交叠不计入共享面积或新增堆叠收益。没有该字段时维持严格行为。
+
+`material.target` 后使用 `reuse.check_color` 设置 `level=low|medium|high`（默认中），也可传入正数 `radius`。它比较源颜色与冻结共享目标的Oklab球形距离，同时输出三档统计和 `exceedance_faces`；半径单位与预设以 `tools describe` 为准。球内满足容忍度；球外区域看图判断，保留越界证据，不因少量点自动挖出碎片。仅全部采样球内才记录 `color_accepted=true`。颜色球检查、源/目标视觉判断及候选烘焙重建验收各自记录，不相互冒充。
+
+部件重展开使用 `region.define seed_faces+boundary_edges` 或显式面集合，`uv.reparameterize seam_edges` 删除旧内部碎片并建立新切口；边使用原顶点ID对。计算时临时提取，最终仅写回原模型UV。OptCuts可能增加切口，读取 `result_seam_edges` 后传给下一步。
+
+OptCuts可能直接信任单岛旧UV而遗漏全局交叠；明确重做部件时可设置 `initial_uv=geometry`，只将指定切口后的部件几何传给后端计算新初值。未选区域原UV保留，不通过先把原面拆成独立三角岛来初始化。默认 `existing` 保留旧行为；读取实际后端与拒绝证据。
+
+`reuse.check_pair mode=paired_domain` 接收成对区域、两侧切口和至少三个 `boundary_anchors`。锚点用 `{first:[原面ID,面角],second:[原面ID,面角]}` 指定切口侧，按对应边界弧段组织。`domain=master_uv` 尝试主侧当前布局；允许的凸域回退明确记录。未配对边界采样仍可能造成覆盖不足，须读实际交叠覆盖，不能假定共享率100%。失败优先调整锚点、切口、自然分区；整个特征片可保留独占。
+
+颜色目标预检先用 `material.target` 冻结，再 `view.render mode=basecolor,target=...` 查看原始、目标及差异。记录Agent判断后才烘焙；`view.render texture=...` 才是实际烘焙贴图预览。`uv.inspect selected_faces/region_id` 返回所选区域实际共享面积；全局真实图块数不因选择缩小。外观优先的显式 `geometry_profile` 绑定目标、烘焙与验收，与旧严格协议分开记录。
 
 整龙实验必须比较无共享必要修复、OptCuts 无共享修复、纯几何复用、Agent 迭代复用。受控比较使用相同父资产、预处理、候选池、UV 起点、目标外观、后端、质量与执行预算；不同提案来源的端到端比较单列。失败、超时、未运行都保留，不只输出最好结果。
 

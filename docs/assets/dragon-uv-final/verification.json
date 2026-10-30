@@ -1,0 +1,33 @@
+{
+  "original_corner_uv_unchanged_from_import": true,
+  "original_uv_area_union": 0.7254857184191058,
+  "current_uv_area_union": 0.5726051881041325,
+  "island_reduction_percent": 23.96694214876033,
+  "independent_tile_reduction_percent": 61.98347107438016,
+  "files": {
+    "uv_before_after.png": {
+      "size": [
+        3240,
+        2340
+      ],
+      "sha256": "bb3427f5f70f4f152f022d092a02c1a2340b6eccf885379c8733009acb69964f"
+    },
+    "model_before_after.png": {
+      "size": [
+        2880,
+        2400
+      ],
+      "sha256": "d1de9a971d0ba76a8c0f246e17989bfd404335c49328297bd6e5c6fbc97a54ba"
+    },
+    "texture_before_after.png": {
+      "size": [
+        2880,
+        1680
+      ],
+      "sha256": "6dca257e256e96a597a2ace41810373c813738878a71ae32bc258f2a74f157d4"
+    }
+  },
+  "render_calls": "2 public view.render calls, 3 matching camera directions each, same auto-fit policy",
+  "visual_review": "UV labels, legends, model panels checked",
+  "ruff": "PASS"
+}

@@ -12,6 +12,7 @@ import numpy as np
 from ..budget_state import BudgetState
 from ..joint_types import Correspondence, ReuseGroup
 from ..mesh import make_mesh
+from ..reuse_transform import similarity_transform
 from ..types import MeshState
 
 
@@ -116,6 +117,7 @@ def load_snapshot(path: Path) -> Snapshot:
         str(g["group_id"]), tuple(g["first_faces"]), tuple(g["second_faces"]),
         tuple(g["plane_normal"]), float(g["plane_offset"]),
         int(g["first_orientation"]), int(g["second_orientation"]),
+        None if g.get("first_to_second") is None else similarity_transform(g["first_to_second"]),
     ) for g in record["groups"])
     correspondences = tuple(Correspondence(
         int(c["source_face"]), tuple(c["source_barycentric"]), int(c["target_face"]),

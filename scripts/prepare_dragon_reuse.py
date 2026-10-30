@@ -1,6 +1,7 @@
 """Prepare four immutable UV branches; semantic candidates are supplied by the Agent."""
 
 import argparse
+import json
 import math
 import time
 from pathlib import Path
@@ -102,12 +103,16 @@ def bind_request(request: dict[str, object], bindings: dict[str, dict[str, objec
 class Preparation:
     def __init__(self, plan_path: Path, output: Path, *, freeze: bool = True) -> None:
         self.started = time.monotonic()
+        self.branch_started = {"no_share": self.started}
+        self.common_seconds = 0.
         self.failure: dict[str, str] | None = None
         self.completed = False
         self.plan_path = plan_path.resolve()
         self.plan = read_object(self.plan_path)
         base = self.plan_path.parent
         self.source = load_snapshot(_path(base, self.plan["snapshot"]))
+        if self.source.state.groups:
+            raise ValueError("COMMON_PARENT_MUST_BE_UNSHARED")
         decision_path = _path(base, self.plan["decisions"])
         replay_path = _path(base, self.plan["agent_replay"])
         self.decisions, self.replay = read_object(decision_path), read_object(replay_path)
@@ -171,6 +176,7 @@ class Preparation:
         record: dict[str, object] = {
             "paths": self.paths, "common_snapshot": self.common, "common_setup_receipts": self.common_receipts,
             "geometry_profile": self.profile, "padding_pixels": 8, "input_sha256": self.pinned,
+            "common_wall_seconds": self.common_seconds,
             "automatic_candidates": self.automatic, "summary": self.experiment.summary(),
             "wall_seconds_total": time.monotonic() - self.started,
             "run_status": "FAILED" if self.failure else "COMPLETED" if self.completed else "RUNNING",
@@ -186,12 +192,17 @@ class Preparation:
 
     def finish_path(self, method: str, snapshot: str, receipts: list[str], *, ready: bool,
                     reason: str = "") -> None:
+        elapsed = time.monotonic() - self.branch_started[method]
+        if method == "no_share":
+            self.common_seconds = elapsed
         self.paths[method] = {
             "snapshot": snapshot if ready else None, "last_valid_snapshot": snapshot,
             "setup_status": "READY" if ready else "SETUP_REJECTED", "setup_reason": reason,
             "setup_receipts": [*self.common_receipts, *receipts], "branch_setup_receipts": receipts,
             "fork_parent": self.common, "metrics": snapshot_metrics(snapshot),
             "packing_groups": packing_owners(snapshot), "final_quality_passed": None,
+            "branch_wall_seconds": elapsed if method != "no_share" else 0.,
+            "common_wall_seconds": self.common_seconds,
         }
         self.save()
 
@@ -210,7 +221,8 @@ class Preparation:
                 self.finish_path("no_share", current, [], ready=False, reason="COMMON_REGION_DEFINITION_FAILED")
                 return False
             current = str(result["snapshot"])
-        packed = self.call("uv.pack", {"snapshot": current, "profile": self.profile}, "common_pack",
+        packed = self.call("uv.pack", {"snapshot": current, "profile": self.profile,
+                           "face_density_scale": self.plan.get("face_density_scale", {})}, "common_pack",
                            reason="共同预处理：相同密度规则和mip安全间距", receipts=self.common_receipts)
         if packed.get("status") != "OK" or packed.get("geometry_passed") is not True:
             self.finish_path("no_share", current, [], ready=False, reason="COMMON_GEOMETRY_REJECTED")
@@ -220,6 +232,7 @@ class Preparation:
         return True
 
     def prepare_optcuts(self) -> None:
+        self.branch_started["optcuts_no_share"] = time.monotonic()
         assert self.common is not None
         current, receipts = self.common, []
         name = str(self.plan.get("optcuts_pair", "wing_membrane"))
@@ -242,6 +255,7 @@ class Preparation:
         self.finish_path("optcuts_no_share", current, receipts, ready=True)
 
     def prepare_automatic(self) -> None:
+        self.branch_started["geometry_auto"] = time.monotonic()
         assert self.common is not None
         current, receipts = self.common, []
         areas = self.source.state.surface.mesh.areas
@@ -306,6 +320,7 @@ class Preparation:
             selection_scope="geometry decisions conditioned on the same frozen Agent semantic regions")
 
     def prepare_agent(self) -> None:
+        self.branch_started["agent"] = time.monotonic()
         assert self.common is not None
         current, receipts = self.common, []
         bindings: dict[str, dict[str, object]] = {"initial_snapshot": {"snapshot": self.common}}
@@ -363,7 +378,7 @@ def main() -> None:
     parser.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
     result = Preparation(args.plan, args.output).run()
-    print({name: _object(entry)["setup_status"] for name, entry in _object(result["paths"]).items()})
+    print(json.dumps({name: _object(entry)["setup_status"] for name, entry in _object(result["paths"]).items()}))
 
 
 if __name__ == "__main__":

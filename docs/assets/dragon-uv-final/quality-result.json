@@ -1,0 +1,36 @@
+{
+  "status": "REJECTED",
+  "execution_success": true,
+  "scope": "basecolor_reuse",
+  "quality_accepted": false,
+  "full_pbr_passed": false,
+  "geometry_valid": true,
+  "material_valid": true,
+  "render_valid": false,
+  "seams_valid": true,
+  "validation": "E:\\ReSem\\artifacts\\meshquery_v1\\island_merge01\\sole_formal\\sole_repaired_islands\\validate\\validation.json",
+  "payload_bytes": 22369620,
+  "geometry_profile": {
+    "resolution": 2048,
+    "gap_pixels": 16.0,
+    "border_pixels": 8.0,
+    "correspondence_fraction": 0.1,
+    "normal_angle_degrees": 180.0,
+    "maximum_anisotropy": 2.0,
+    "mean_shape_limit": 0.025,
+    "tail_shape_limit": 0.1,
+    "maximum_density_ratio": 2.0,
+    "quality_constraints": false,
+    "preserve_source_uv": {
+      "snapshot": "E:\\ReSem\\artifacts\\meshquery_v1\\whole_half01\\create\\variant_root\\snapshot.json",
+      "state_hash": "4fe71f37abe8f80cea238877470e526d328f91e3f9197a01d696e08ec3796eb8"
+    }
+  },
+  "geometry_profile_hash": "8f7ed82102d6c708fc72f7d20139af91ce558319bbb31baecb5a22ea58ec8da2",
+  "geometry_policy": "explicit_custom",
+  "strict_geometry_profile_applied": false,
+  "artist_reviewed": false,
+  "tool": "quality.validate",
+  "wall_seconds": 177.0470000000205,
+  "output": "E:\\ReSem\\artifacts\\meshquery_v1\\island_merge01\\sole_formal\\sole_repaired_islands\\validate"
+}

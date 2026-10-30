@@ -1,0 +1,94 @@
+{
+  "created_at_utc": "2026-10-29T03:03:41.196631+00:00",
+  "generator": "built-in image_gen",
+  "model_identifier": "not returned by tool",
+  "state": "GENERATED_AND_INSPECTED",
+  "requested_deliverables": [
+    "front.png",
+    "left-side.png",
+    "back.png"
+  ],
+  "source_reference_manifest": "../llm-uv-reference/manifest.json",
+  "subject_reference_files": [
+    "../llm-uv-reference/front.webp",
+    "../llm-uv-reference/back.webp",
+    "../llm-uv-reference/side.webp"
+  ],
+  "method": "Generate a shared reference sheet from user screenshots, then use image_gen to create each independent view from that sheet. Files are copied without pixel editing.",
+  "visual_check": {
+    "single_subject_per_delivered_image": true,
+    "front_left_profile_back_present": true,
+    "no_labels_or_seam_overlays": true,
+    "major_anatomy_uncropped": true,
+    "palette_coherent": true
+  },
+  "limits": [
+    "AI-generated modeling references, not renders of one reconstructed 3D mesh.",
+    "Pixel-exact cross-view geometry and equal camera magnification are not certified.",
+    "Ice-blue palette is a new design choice, not recovered original material."
+  ],
+  "model_received": false,
+  "uv_experiment_status": "NOT_RUN_NEW_MODEL_NOT_RECEIVED",
+  "files": [
+    {
+      "file": "turnaround-source.png",
+      "role": "intermediate consistency reference",
+      "source_file": "C:\\Users\\admin\\.codex\\generated_images\\01a1813f-0369-73b3-a437-1c83e7d1a42c\\exec-de62e889-d2b3-4e6d-b3bb-4652f0736aac.png",
+      "sha256": "e2c942ddc671cdb8407c0c63f133a3ab235a9b7be334399e92a053718ef0f284",
+      "bytes": 1353126,
+      "dimensions": [
+        2172,
+        724
+      ],
+      "mode": "RGB",
+      "prompt_file": "generation-prompt.txt",
+      "prompt_sha256": "7534ad3b08e3b861e42700bf3e7181d66065ba0707a47487cbd9f546e41bf67e",
+      "decode_verified": true
+    },
+    {
+      "file": "front.png",
+      "role": "independent modeling reference",
+      "source_file": "C:\\Users\\admin\\.codex\\generated_images\\01a1813f-0369-73b3-a437-1c83e7d1a42c\\exec-de488987-9fbb-4479-85c2-0046b1b540aa.png",
+      "sha256": "83f56c56ebca46fd1d11440019adab4ea72a08b6bc4536eadbfed1d246dd1ab1",
+      "bytes": 1627793,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "prompt_file": "front-prompt.txt",
+      "prompt_sha256": "5b3e610904ecf2a46f6bd9dd3b08741a40d68c5c64910e01c18ae6ef3791fd64",
+      "decode_verified": true
+    },
+    {
+      "file": "left-side.png",
+      "role": "independent modeling reference",
+      "source_file": "C:\\Users\\admin\\.codex\\generated_images\\01a1813f-0369-73b3-a437-1c83e7d1a42c\\exec-c3306956-e8a5-4025-aec8-e93161fdd0ca.png",
+      "sha256": "fff1b0d2e53f5c60522c6eaeb94dd13e4bde787cbe628f257990b2f75016257d",
+      "bytes": 1265786,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "prompt_file": "left-side-prompt.txt",
+      "prompt_sha256": "2821fc4e83a0674332eff095b3df458048e04c2069cc327a144f4b8d0464077f",
+      "decode_verified": true
+    },
+    {
+      "file": "back.png",
+      "role": "independent modeling reference",
+      "source_file": "C:\\Users\\admin\\.codex\\generated_images\\01a1813f-0369-73b3-a437-1c83e7d1a42c\\exec-1d6e7a51-07be-44b9-9dd7-5fa74c77b307.png",
+      "sha256": "32f04f85cf993f7c8ebe60267e21da178f39ca2a045c806bc93a7d22bdeedc32",
+      "bytes": 1645612,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "prompt_file": "back-prompt.txt",
+      "prompt_sha256": "4dc1e235f4e7880988772b07182612a04cd653b17be6af52e5d3d54e64e07d8f",
+      "decode_verified": true
+    }
+  ]
+}

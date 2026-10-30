@@ -13,7 +13,7 @@ import numpy as np
 
 from .budget_state import BudgetState
 from .joint_types import Correspondence
-from .surface_match import reflect
+from .reuse_transform import mapped_normals, mapped_points, similarity_transform
 from .types import FloatArray
 
 _PROBES = np.asarray(
@@ -126,6 +126,12 @@ def update_uv_correspondences(
         _check_deadline(deadline)
         all_faces = group.first_faces + group.second_faces
         normal = np.asarray(group.plane_normal, dtype=float)
+        if group.first_to_second is not None:
+            try:
+                similarity_transform(group.first_to_second)
+            except (ValueError, TypeError):
+                failed.append("INVALID_REUSE_SIMILARITY")
+                break
         if (not group.first_faces or not group.second_faces or len(set(all_faces)) != len(all_faces)
                 or min(all_faces) < 0 or max(all_faces) >= len(mesh.faces)
                 or required.intersection(all_faces) or group.group_id in group_names
@@ -138,6 +144,7 @@ def update_uv_correspondences(
         group_names.add(group.group_id)
         for sources, targets in ((group.first_faces, group.second_faces),
                                  (group.second_faces, group.first_faces)):
+            inverse = sources == group.second_faces
             for source in sources:
                 _check_deadline(deadline)
                 for sample_index, source_bary in enumerate(_PROBES):
@@ -178,11 +185,13 @@ def update_uv_correspondences(
                         continue
                     back_face, back_bary = min(back_hits, key=lambda item: item[0])
                     back_point = back_bary @ geometry[back_face]
-                    position = float(np.linalg.norm(reflect(source_point, normal, group.plane_offset)
+                    position = float(np.linalg.norm(mapped_points(source_point, normal, group.plane_offset,
+                                                                  group.first_to_second, inverse=inverse)
                                                     - target_point) / diagonal)
                     cycle = float(np.linalg.norm(back_point - source_point) / diagonal)
                     angle = float(np.degrees(np.arccos(np.clip(
-                        reflect(normals[source], normal, 0) @ normals[target], -1, 1))))
+                        mapped_normals(normals[source], normal, group.first_to_second,
+                                       inverse=inverse) @ normals[target], -1, 1))))
                     maximum_error = max(maximum_error, position)
                     maximum_cycle = max(maximum_cycle, cycle)
                     maximum_angle = max(maximum_angle, angle)

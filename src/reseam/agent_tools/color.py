@@ -40,8 +40,12 @@ def bake_color_diagnostic(request: dict[str, object], output: Path, deadline: fl
     mips = request.get("mip_levels", [0, 1])
     if not isinstance(mips, list) or not mips or any(type(mip) is not int for mip in mips):
         raise ValueError("INVALID_MIP_LEVELS")
-    safety = geometry_report(snapshot.state, {"resolution": resolution, "gap_pixels": 0,
-                                             "border_pixels": 0, "quality_constraints": False})
+    raw_profile = request.get("geometry_profile", {})
+    if not isinstance(raw_profile, dict):
+        raise TypeError("GEOMETRY_PROFILE_MUST_BE_OBJECT")
+    profile = {"resolution": resolution, "gap_pixels": 0,
+               "border_pixels": 0, "quality_constraints": False, **raw_profile}
+    safety = geometry_report(snapshot.state, profile)
     if safety.get("hard_valid") is not True:
         return {"status": "REJECTED", "execution_success": True, "reason": "GEOMETRY_UNSAFE", "geometry": safety}
     check_deadline(deadline)
@@ -67,6 +71,7 @@ def bake_color_diagnostic(request: dict[str, object], output: Path, deadline: fl
     result: dict[str, object] = {"status": "BASE_COLOR_DIAGNOSTIC", "quality_accepted": False,
         "state_hash": snapshot.state_hash, "asset_id": snapshot.asset_id,
         "source": source, "source_sha256": file_hash(Path(source)), "geometry": safety,
+        "geometry_profile": profile,
         "color_quality": quality, "metadata": atlas.metadata,
         "ignored_for_color_only": {"material_extensions": material.get("extensions", {}),
                                    "channels": ["normal", "roughness", "metallic", "occlusion", "specular", "render"]},

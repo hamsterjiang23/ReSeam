@@ -13,7 +13,10 @@ def main() -> None:
     request = json.loads(Path(sys.argv[sys.argv.index("--") + 1]).read_text(encoding="utf-8"))
     folder = Path(request["output"])
     bpy.ops.wm.read_factory_settings(use_empty=True)
-    bpy.ops.import_scene.fbx(filepath=request["source"])
+    if Path(request["source"]).suffix.lower() == ".obj":
+        bpy.ops.wm.obj_import(filepath=request["source"])
+    else:
+        bpy.ops.import_scene.fbx(filepath=request["source"])
     image_sources: list[dict[str, object]] = []
     for image in bpy.data.images:
         if image.source != "FILE":
@@ -37,6 +40,8 @@ def main() -> None:
     identities: list[list[int]] = []
     ancestry: list[dict[str, Any]] = []
     objects: list[dict[str, object]] = []
+    polygons: list[list[int]] = []
+    triangle_to_polygon: list[int] = []
     has_uv = True
     loop_offset = 0
     uv_presence: list[bool] = []
@@ -46,10 +51,16 @@ def main() -> None:
         mesh = obj.data
         mesh.calc_loop_triangles()
         offset = len(vertices)
+        polygon_offset = len(polygons)
         start = len(faces)
         for vertex in mesh.vertices:
             world = obj.matrix_world @ vertex.co
             vertices.append([float(world.x), float(world.z), -float(world.y)])
+        for polygon in mesh.polygons:
+            indices = [offset + int(v) for v in polygon.vertices]
+            if obj.matrix_world.determinant() < 0:
+                indices = [indices[0], *reversed(indices[1:])]
+            polygons.append(indices)
         layer = mesh.uv_layers.active
         has_uv &= layer is not None
         uv_presence.append(layer is not None)
@@ -63,6 +74,7 @@ def main() -> None:
             # Preserve imported loop identity conservatively, never weld by UV values.
             ids = [loop_offset + i for i in loops]
             faces.append(face)
+            triangle_to_polygon.append(polygon_offset + triangle.polygon_index)
             uv.append(values)
             identities.append(ids)
             ancestry.append({"object": obj.name, "polygon": triangle.polygon_index,
@@ -79,6 +91,8 @@ def main() -> None:
     np.savez_compressed(folder / "imported.npz", vertices=np.asarray(vertices), faces=np.asarray(faces),
                         corner_uv=np.asarray(uv), corner_ids=np.asarray(identities))
     (folder / "identity.json").write_text(json.dumps({"objects": objects, "ancestry": ancestry,
+        "polygon_topology": {"polygons": polygons, "triangle_to_polygon": triangle_to_polygon,
+                             "source": "Blender original polygons and loop_triangles; snapshot vertex indices"},
         "source_uv_present": has_uv, "images": image_sources,
         "coordinates": "glTF Y-up", "triangulation": "Blender loop_triangles"},
         ensure_ascii=False, indent=2), encoding="utf-8")

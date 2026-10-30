@@ -1,5 +1,9 @@
 # Agent UV 工具集 v1
 
+颜色容忍度由 `reuse.check_color` 设置低／中／高球半径（默认中），检查原始颜色到冻结共享目标的Oklab距离；支持自定义半径与球外区域定位。调用前已有 `material.target`，具体参数见 `tools describe`，解释和真实三档结果见[颜色球](dragon-component-reuse.md#颜色球容忍度)。这是源外观变化检查，与烘焙重建验收分别报告。`[verified: color_tolerance.py check_color；opinion: 报告方式]`
+
+部件切缝、面角锚点和 `paired_domain` 的参数与流程见[部件重展开](dragon-component-reuse.md)。真实龙的部件范围为双翼、四肢和角刺；每组记录 OptCuts 实际切口和共同域回退，图块减少与外观结论分别报告。`[verified: 用户接受的部件计划；opinion: 报告方式]`
+
 当前新增的[整龙 LLM 复用执行合同](dragon-llm-reuse-plan.md)正在实施：四条 Baseline、逐步修正证据、可控颜色对称化及独立 `basecolor_reuse` 验收范围。下文接口登记、单项测试和历史结果均不能代替本轮整龙完成判定。`[verified: 用户接受的整龙计划；dragon-llm-reuse-plan.md 完成条件]`
 
 统一入口为 `uv run reseam tools list`、`tools describe <name>` 与 `tools run <name> --request request.json --output <新目录>`；旧实验命令保留。请求与返回为 JSON，大数组保存在快照/贴图文件中。`[verified: src/reseam/cli.py tools 分支；agent_tools/runner.py run_tool]`

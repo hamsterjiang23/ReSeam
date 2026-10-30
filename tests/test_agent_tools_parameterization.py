@@ -62,6 +62,34 @@ def test_regional_harmonic_keeps_original_geometry(tmp_path: Path) -> None:
     assert np.array_equal(mapped.state.surface.mesh.faces,source.state.surface.mesh.faces)
 
 
+def test_explicit_cut_cylinder_reparameterizes_without_geometry_change(tmp_path: Path) -> None:
+    from test_agent_tools_regional_cut import cylinder
+
+    source = save_snapshot(BudgetState(cylinder()), tmp_path / 'source', {})
+    result = reparameterize({'snapshot': str(source.root), 'faces': list(range(8)),
+                             'backend': 'harmonic', 'seam_edges': [[0, 4]],
+                             'profile': {'resolution': 128, 'gap_pixels': 2, 'border_pixels': 2,
+                                         'quality_constraints': False}},
+                            tmp_path / 'mapped', time.monotonic() + 30)
+    assert result['status'] == 'OK', result
+    mapped = load_snapshot(Path(str(result['snapshot'])))
+    assert np.array_equal(mapped.state.surface.mesh.vertices, source.state.surface.mesh.vertices)
+    assert np.array_equal(mapped.state.surface.mesh.faces, source.state.surface.mesh.faces)
+    edge = mapped.state.surface.mesh.edges.index((0, 4))
+    assert edge in mapped.state.surface.seams
+
+
+def test_expired_cut_reparameterization_never_writes_snapshot(tmp_path: Path) -> None:
+    source = save_snapshot(_square(), tmp_path / 'source', {})
+    before = fingerprint(source.state)
+    with pytest.raises(TimeoutError):
+        reparameterize({'snapshot': str(source.root), 'faces': [0, 1],
+                        'backend': 'harmonic', 'seam_edges': []},
+                       tmp_path / 'expired', time.monotonic() - 1)
+    assert not (tmp_path / 'expired' / 'snapshot').exists()
+    assert fingerprint(load_snapshot(source.root).state) == before
+
+
 def test_topology_match_rejects_different_diagonals_without_false_negative_claim() -> None:
     mapped=topology_copy(_square().surface,(0,1),(2,3),np.asarray([1.,0,0]),0,.005,time.monotonic()+2)
     assert mapped is None
