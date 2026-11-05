@@ -35,4 +35,4 @@ uv run python baseline/run_dragon.py finish --method optcuts --output artifacts/
 
 复用率必须拆开报告：表面参与有效共享比例、去除有效重复占位的比例、复用倍数。未经对应与外观确认的交叠不计有效共享；零面积、翻转、自交、超时与依赖失败均保留，不自动拆小岛修复。`[verified: 用户要求对比UV复用率；opinion: 统计口径]`
 
-上游目录为独立Git工作树，按 sources.json 固定。当前未创建新的远程仓库或推送；若后续将其并入主仓库，需要保留其上游身份与许可。`[verified: 本轮Git克隆记录；opinion: 后续交付方式]`
+上游目录作为主仓库Git子模块交付，固定提交与远端URL见 `.gitmodules` 和 `sources.json`；项目适配器、实验脚本和MeshQuery项目源码快照按普通文件提交。更新上游版本时同时更新来源和许可记录。`[verified: .gitmodules；sources.json；opinion: 维护规则]`
