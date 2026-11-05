@@ -1,0 +1,391 @@
+{
+  "native_algorithm_calls_seconds": 1335.344999999972,
+  "common_evaluation_calls_seconds": 2003.3139999998966,
+  "meshquery_planner_calls_seconds": 146.9220000000205,
+  "development_smoke_and_failures_seconds": 991.1699999996927,
+  "development_calls": [
+    {
+      "path": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\dev_finish02\\evaluation\\reseam_shared_512\\bake\\result.json",
+      "tool": "material.bake",
+      "status": "OK",
+      "seconds": 22.79700000002049
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\dev_finish02\\evaluation\\reseam_shared_512\\color_views\\result.json",
+      "tool": "view.render",
+      "status": "OK",
+      "seconds": 6.140999999945052
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\dev_finish02\\evaluation\\reseam_shared_512\\export\\result.json",
+      "tool": "asset.export",
+      "status": "OK",
+      "seconds": 1.577999999979511
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\dev_finish02\\evaluation\\reseam_shared_512\\inspect\\result.json",
+      "tool": "uv.inspect",
+      "status": "OK",
+      "seconds": 14.609000000054948
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\dev_finish02\\evaluation\\reseam_shared_512\\native_views\\result.json",
+      "tool": "view.render",
+      "status": "OK",
+      "seconds": 4.297000000020489
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\dev_finish02\\evaluation\\reseam_shared_512\\pack\\result.json",
+      "tool": "uv.pack",
+      "status": "OK",
+      "seconds": 22.344000000040978
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\dev_finish02\\evaluation\\reseam_shared_512\\target\\result.json",
+      "tool": "material.target",
+      "status": "OK",
+      "seconds": 1.1410000000614673
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\dev_finish02\\evaluation\\reseam_shared_512\\uv_views\\result.json",
+      "tool": "view.render",
+      "status": "OK",
+      "seconds": 4.780999999959022
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\dev_finish02\\evaluation\\reseam_shared_512\\validate\\result.json",
+      "tool": "quality.validate",
+      "status": "REJECTED",
+      "seconds": 81.98499999998603
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\dev_fix02\\smoke\\partuv\\result.json",
+      "tool": "uv.baseline",
+      "status": "DEPENDENCY_MISSING",
+      "seconds": 0.9530000000959262
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\dev_fix03\\smoke\\flatten_anything\\result.json",
+      "tool": "uv.baseline",
+      "status": "OK",
+      "seconds": 52.0
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\dev_fix03\\smoke\\partuv\\result.json",
+      "tool": "uv.baseline",
+      "status": "OK",
+      "seconds": 50.01599999994505
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\round01\\evaluation\\blender_smart_512\\bake\\result.json",
+      "tool": "material.bake",
+      "status": "OK",
+      "seconds": 23.32799999997951
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\round01\\evaluation\\blender_smart_512\\color_views\\result.json",
+      "tool": "view.render",
+      "status": "OK",
+      "seconds": 6.359000000054948
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\round01\\evaluation\\blender_smart_512\\export\\result.json",
+      "tool": "asset.export",
+      "status": "OK",
+      "seconds": 1.6559999999590218
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\round01\\evaluation\\blender_smart_512\\inspect\\result.json",
+      "tool": "uv.inspect",
+      "status": "OK",
+      "seconds": 11.39000000001397
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\round01\\evaluation\\blender_smart_512\\native_views\\result.json",
+      "tool": "view.render",
+      "status": "OK",
+      "seconds": 5.922000000020489
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\round01\\evaluation\\blender_smart_512\\pack\\result.json",
+      "tool": "uv.pack",
+      "status": "OK",
+      "seconds": 18.155999999959022
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\round01\\evaluation\\blender_smart_512\\target\\result.json",
+      "tool": "material.target",
+      "status": "OK",
+      "seconds": 1.202999999979511
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\round01\\evaluation\\blender_smart_512\\uv_views\\result.json",
+      "tool": "view.render",
+      "status": "OK",
+      "seconds": 5.827999999979511
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\round01\\evaluation\\blender_smart_512\\validate\\result.json",
+      "tool": "quality.validate",
+      "status": "REJECTED",
+      "seconds": 55.53099999995902
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\round01\\evaluation\\optcuts_512\\bake\\result.json",
+      "tool": "material.bake",
+      "status": "OK",
+      "seconds": 21.70299999997951
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\round01\\evaluation\\optcuts_512\\color_views\\result.json",
+      "tool": "view.render",
+      "status": "OK",
+      "seconds": 5.797000000020489
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\round01\\evaluation\\optcuts_512\\export\\result.json",
+      "tool": "asset.export",
+      "status": "OK",
+      "seconds": 1.5309999999590218
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\round01\\evaluation\\optcuts_512\\inspect\\result.json",
+      "tool": "uv.inspect",
+      "status": "OK",
+      "seconds": 9.39000000001397
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\round01\\evaluation\\optcuts_512\\native_views\\result.json",
+      "tool": "view.render",
+      "status": "OK",
+      "seconds": 4.094000000040978
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\round01\\evaluation\\optcuts_512\\pack\\result.json",
+      "tool": "uv.pack",
+      "status": "OK",
+      "seconds": 23.95299999997951
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\round01\\evaluation\\optcuts_512\\target\\result.json",
+      "tool": "material.target",
+      "status": "OK",
+      "seconds": 1.125
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\round01\\evaluation\\optcuts_512\\uv_views\\result.json",
+      "tool": "view.render",
+      "status": "OK",
+      "seconds": 4.827999999979511
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\round01\\evaluation\\optcuts_512\\validate\\result.json",
+      "tool": "quality.validate",
+      "status": "REJECTED",
+      "seconds": 54.43700000003446
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\round01\\evaluation\\partuv_512\\bake\\result.json",
+      "tool": "material.bake",
+      "status": "OK",
+      "seconds": 53.57900000002701
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\round01\\evaluation\\partuv_512\\color_views\\result.json",
+      "tool": "view.render",
+      "status": "OK",
+      "seconds": 6.890999999945052
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\round01\\evaluation\\partuv_512\\export\\result.json",
+      "tool": "asset.export",
+      "status": "OK",
+      "seconds": 1.625
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\round01\\evaluation\\partuv_512\\inspect\\result.json",
+      "tool": "uv.inspect",
+      "status": "OK",
+      "seconds": 44.85999999998603
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\round01\\evaluation\\partuv_512\\native_views\\result.json",
+      "tool": "view.render",
+      "status": "OK",
+      "seconds": 5.14000000001397
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\round01\\evaluation\\partuv_512\\pack\\result.json",
+      "tool": "uv.pack",
+      "status": "OK",
+      "seconds": 47.79700000002049
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\round01\\evaluation\\partuv_512\\target\\result.json",
+      "tool": "material.target",
+      "status": "OK",
+      "seconds": 1.1410000000614673
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\round01\\evaluation\\partuv_512\\uv_views\\result.json",
+      "tool": "view.render",
+      "status": "OK",
+      "seconds": 5.827999999979511
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\round01\\evaluation\\partuv_512\\validate\\result.json",
+      "tool": "quality.validate",
+      "status": "REJECTED",
+      "seconds": 87.51500000001397
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\round01\\evaluation\\reseam_shared_512\\native_views\\result.json",
+      "tool": "view.render",
+      "status": "OK",
+      "seconds": 4.515999999945052
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\round01\\evaluation\\reseam_shared_512\\pack\\result.json",
+      "tool": "uv.pack",
+      "status": "REJECTED",
+      "seconds": 25.218999999924563
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\round01\\evaluation\\xatlas_512\\native_views\\result.json",
+      "tool": "view.render",
+      "status": "OK",
+      "seconds": 5.342999999993481
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\round01\\evaluation\\xatlas_512\\pack\\result.json",
+      "tool": "uv.pack",
+      "status": "REJECTED",
+      "seconds": 1.062999999965541
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\round01\\meshquery\\blender_abf\\result.json",
+      "tool": "seam.apply",
+      "status": "REJECTED",
+      "seconds": 1.422000000020489
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\round01\\meshquery\\blender_lscm\\result.json",
+      "tool": "seam.apply",
+      "status": "REJECTED",
+      "seconds": 1.3900000000139698
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\round01\\meshquery\\blender_minimum_stretch\\result.json",
+      "tool": "seam.apply",
+      "status": "REJECTED",
+      "seconds": 1.422000000020489
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\round01\\meshquery\\components\\result.json",
+      "tool": "mesh.query",
+      "status": "OK",
+      "seconds": 1.2179999999934807
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\round01\\meshquery\\index\\result.json",
+      "tool": "mesh.index",
+      "status": "OK",
+      "seconds": 114.32799999997951
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\round01\\meshquery\\natural_plan\\result.json",
+      "tool": "seam.submit_plan",
+      "status": "REJECTED",
+      "seconds": 1.375
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\round01\\meshquery\\natural_preview\\result.json",
+      "tool": "seam.preview",
+      "status": "OK",
+      "seconds": 4.655999999959022
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\round01\\meshquery\\observe\\result.json",
+      "tool": "view.render",
+      "status": "OK",
+      "seconds": 3.2040000000270084
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\round01\\meshquery\\propose\\result.json",
+      "tool": "region.propose",
+      "status": "OK",
+      "seconds": 1.3119999999180436
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\round01\\meshquery\\repaired_blender_minimum_stretch\\result.json",
+      "tool": "seam.apply",
+      "status": "OK",
+      "seconds": 12.452999999979511
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\round01\\meshquery\\repaired_plan\\result.json",
+      "tool": "seam.submit_plan",
+      "status": "OK",
+      "seconds": 1.3429999999934807
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\round01\\meshquery\\repaired_preview\\result.json",
+      "tool": "seam.preview",
+      "status": "OK",
+      "seconds": 4.594000000040978
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\round01\\meshquery\\rim_bridge_0\\result.json",
+      "tool": "seam.select",
+      "status": "OK",
+      "seconds": 1.0
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\round01\\meshquery\\rim_bridge_1\\result.json",
+      "tool": "seam.select",
+      "status": "OK",
+      "seconds": 0.9379999999655411
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\round01\\meshquery\\rim_bridge_40\\result.json",
+      "tool": "seam.select",
+      "status": "OK",
+      "seconds": 0.9220000000204891
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\round01\\meshquery\\rim_bridge_41\\result.json",
+      "tool": "seam.select",
+      "status": "OK",
+      "seconds": 0.9529999999795109
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\round01\\smoke\\blender_smart\\result.json",
+      "tool": "uv.baseline",
+      "status": "OK",
+      "seconds": 1.4689999999245629
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\round01\\smoke\\optcuts\\result.json",
+      "tool": "uv.baseline",
+      "status": "OK",
+      "seconds": 6.797000000020489
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\round01\\smoke\\partuv\\result.json",
+      "tool": "uv.baseline",
+      "status": "ERROR",
+      "seconds": 20.108999999938533
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\round01\\smoke\\xatlas\\result.json",
+      "tool": "uv.baseline",
+      "status": "OK",
+      "seconds": 0.875
+    }
+  ],
+  "source_acquisition_and_install_seconds": null,
+  "coding_seconds": null,
+  "llm_reasoning_seconds": null,
+  "llm_tokens": null,
+  "llm_fee": null
+}

@@ -11,7 +11,7 @@
 
 ## 部件判断
 
-如果用户明确允许改变几何以获得完全对称模型，可使用 `asset.mirror_variant`，显式设置 `allow_geometry_change=true`，从一侧裁切并镜像建立新asset。先查看中线、脸部和明显色界；该入口返回同一新几何的共享／无共享快照，二者必须同设置烘焙对照。原资产和历史结果保留。它属于上游变体，不能归为固定几何UV修复收益；中线当前保持显式双侧身份，不按坐标焊接。`[verified: mirror_asset.py mirror_asset；symmetry_variant.py build_symmetry_variant；opinion: 工作流]`
+如果当前资产已明确授权创建镜像新模型，转到 [对称复用与真实合岛](symmetry-reuse-and-merge.md) 的几何路线步骤。该流程也处理复用后删去多余切缝、切口反馈和紧凑排布；未授权时保持本流程的原几何对应路线。`[opinion]`
 
 默认四个水平镜头看不到脚底、顶部和被遮挡的翼膜。`view.render` 与 `seam.preview` 可显式传 `cameras`（完整参数以 `tools describe` 为准），例如 `[{"name":"underside","azimuth":180,"elevation":-65},{"name":"oblique","azimuth":45,"elevation":30}]`。这会替换默认镜头；原始、冻结目标、实际烘焙及无共享对照必须使用同一列表。角度按Y轴向上，elevation ±90为正顶／底视。`pick_pixels` 使用列表中的镜头名称，读取原面和附近边；不可把背景或未看见的面当已检查。`[verified: views.py _cameras/render_views；opinion: 制作规则]`
 

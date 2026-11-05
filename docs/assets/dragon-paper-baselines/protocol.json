@@ -1,0 +1,32 @@
+{
+  "source": "E:\\ReSem\\docs\\assets\\dragon-midplane-cleanup\\dragon.glb",
+  "source_sha256": "21b33834d81f7a8a0f8d079a4fbfc4387b06464f3cc08259ed3d43776a998c9a",
+  "parent": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\round02\\parent\\snapshot.json",
+  "state_hash": "93bc497c49f3e2752e609fbe6de22adb340485b5efbde6e87b17afd8674d352c",
+  "faces": 11338,
+  "reference": "completed 2048 BaseColor frozen before algorithms",
+  "resolution": 2048,
+  "padding_pixels": 8,
+  "gap_pixels": 8,
+  "border_pixels": 8,
+  "algorithm_budget_seconds": 2400,
+  "tool_budget_seconds": 300,
+  "scope": "UV+BaseColor",
+  "methods": [
+    "flatten_anything",
+    "optcuts",
+    "xatlas",
+    "blender_smart",
+    "partuv",
+    "meshquery_project_implementation",
+    "reseam_shared",
+    "reseam_unshared"
+  ],
+  "paper": "https://arxiv.org/html/2610.02507v1",
+  "paper_packing_margin": 0.001,
+  "packing_difference": "production comparison uses fixed 8px gaps/borders, not paper .001 margin",
+  "seed_policy": "OptCuts0; PartUV42; deterministic xatlas/Smart repeat once; FAM17",
+  "historical_reseam_cost": "precomputed layout, prior creation costs not zero; no equal-budget claim",
+  "artist_reviewed": false,
+  "gpu_material_verified": false
+}

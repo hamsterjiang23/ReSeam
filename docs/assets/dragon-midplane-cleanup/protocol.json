@@ -1,0 +1,25 @@
+{
+  "parent_snapshot": "E:\\ReSem\\artifacts\\meshquery_v1\\compact_search01\\gap8_seed0\\pack\\snapshot\\snapshot.json",
+  "plane_offset": 0.00025,
+  "reason": "retained near-plane strip band ends at x=0.0002441702236; move cut plane beyond it",
+  "packing_seeds": [
+    0,
+    17,
+    29
+  ],
+  "gap_pixels": 8,
+  "border_pixels": 8,
+  "resolution": 2048,
+  "padding_pixels": 8,
+  "mip_levels": [
+    0,
+    1,
+    2
+  ],
+  "budget_seconds": 2400,
+  "code_hashes": {
+    "src/reseam/agent_tools/symmetry_variant.py": "2e30040d60e170bff1c591d7d97f94a2fa2e81d0513b5d75205239a9bb386b13",
+    "src/reseam/agent_tools/mirror_asset.py": "4d11d5a8c6857a7312cf3beaf37ac6f370064c6a20561eda39011c3716fb8e25",
+    "src/reseam/agent_tools/compact_packing.py": "398e675b02388bee1133ab68cdcaf8be5b577c49171e2745a10b9343f7eb2baa"
+  }
+}

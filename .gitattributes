@@ -3,8 +3,15 @@
 # Preserve the exact bytes recorded in the asset manifest, including provenance.
 assets/v1/** -text whitespace=cr-at-eol,-blank-at-eof
 *.glb binary
+*.pdf binary
 assets/gt/*.FBX binary
 assets/gt/*.png binary
 # Preserve hashes of archived experiment manifests and raw reviews.
 docs/results/v2_joint_round01/** -text whitespace=cr-at-eol,-blank-at-eof
 docs/assets/dragon-uv-final/** -text whitespace=cr-at-eol,-blank-at-eof
+# Preserve byte-level evidence in the new portable result packages.
+docs/assets/dragon-midplane-cleanup/** -text whitespace=cr-at-eol,-blank-at-eof
+docs/assets/dragon-packing-search/** -text whitespace=cr-at-eol,-blank-at-eof
+docs/assets/dragon-paper-baselines/** -text whitespace=cr-at-eol,-blank-at-eof
+output/pdf/** -text whitespace=cr-at-eol,-blank-at-eof
+baseline/MeshQuery/project_source_snapshot/** -text whitespace=cr-at-eol,-blank-at-eof

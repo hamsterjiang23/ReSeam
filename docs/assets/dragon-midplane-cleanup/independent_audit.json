@@ -1,0 +1,78 @@
+{
+  "old_thin_charts": [
+    {
+      "chart": 1,
+      "faces": 31,
+      "median_triangle_altitude_pixels": 0.43385987152034666
+    },
+    {
+      "chart": 3,
+      "faces": 22,
+      "median_triangle_altitude_pixels": 0.484885840307826
+    },
+    {
+      "chart": 6,
+      "faces": 29,
+      "median_triangle_altitude_pixels": 0.5646033195972379
+    },
+    {
+      "chart": 9,
+      "faces": 29,
+      "median_triangle_altitude_pixels": 0.46054891212075677
+    },
+    {
+      "chart": 41,
+      "faces": 18,
+      "median_triangle_altitude_pixels": 0.45525383398270824
+    },
+    {
+      "chart": 42,
+      "faces": 39,
+      "median_triangle_altitude_pixels": 0.427416135875124
+    },
+    {
+      "chart": 47,
+      "faces": 31,
+      "median_triangle_altitude_pixels": 0.43385987152034666
+    },
+    {
+      "chart": 49,
+      "faces": 22,
+      "median_triangle_altitude_pixels": 0.484885840307826
+    },
+    {
+      "chart": 52,
+      "faces": 29,
+      "median_triangle_altitude_pixels": 0.5646033195972379
+    },
+    {
+      "chart": 55,
+      "faces": 29,
+      "median_triangle_altitude_pixels": 0.46054891212075677
+    },
+    {
+      "chart": 87,
+      "faces": 18,
+      "median_triangle_altitude_pixels": 0.45525383398270824
+    },
+    {
+      "chart": 88,
+      "faces": 39,
+      "median_triangle_altitude_pixels": 0.427416135875124
+    }
+  ],
+  "new_thin_charts": [],
+  "old_thin_face_count": 336,
+  "all_old_thin_faces_removed_by_plane_clip": true,
+  "new_faces": 11338,
+  "new_charts": 80,
+  "shared_groups": 40,
+  "source_geometry_barycentric_error": 2.9592650108156704e-08,
+  "source_uv_barycentric_error": 0.0,
+  "mirror_uv_max_error": 0.0,
+  "independent_union_coverage": 0.6507865459152864,
+  "old_area": 1.4965282205471029,
+  "new_area": 1.4941946416893699,
+  "source_arrays_unchanged": true,
+  "code_hashes_unchanged": true
+}

@@ -28,3 +28,27 @@
 [submodule "references/xatlas"]
 	path = references/xatlas
 	url = https://github.com/jpcy/xatlas.git
+[submodule "baseline/FlattenAnything"]
+	path = baseline/FlattenAnything
+	url = https://github.com/keeganhk/FlattenAnything.git
+	ignore = untracked
+[submodule "baseline/OptCuts"]
+	path = baseline/OptCuts
+	url = https://github.com/liminchen/OptCuts.git
+	ignore = untracked
+[submodule "baseline/xatlas"]
+	path = baseline/xatlas
+	url = https://github.com/jpcy/xatlas.git
+	ignore = untracked
+[submodule "baseline/xatlas-python"]
+	path = baseline/xatlas-python
+	url = https://github.com/mworchel/xatlas-python.git
+	ignore = untracked
+[submodule "baseline/PartUV"]
+	path = baseline/PartUV
+	url = https://github.com/EricWang12/PartUV.git
+	ignore = untracked
+[submodule "baseline/Blender"]
+	path = baseline/Blender
+	url = https://github.com/blender/blender.git
+	ignore = untracked

@@ -1,0 +1,30 @@
+{
+  "parent": "E:\\ReSem\\artifacts\\meshquery_v1\\island_merge01\\sole_formal\\sole_repaired_islands\\pack\\snapshot\\snapshot.json",
+  "parent_file_sha256": "2c5737bd37f135459b816b2322d26f4645c48a607e83253f8a1dec20694e0656",
+  "seeds": [
+    0,
+    17,
+    29
+  ],
+  "gaps": [
+    16,
+    12,
+    8
+  ],
+  "border_pixels": 8,
+  "padding_pixels": 8,
+  "density_normalize": false,
+  "resolution": 2048,
+  "mip_levels": [
+    0,
+    1,
+    2
+  ],
+  "budget_seconds": 2400,
+  "selection": "best legal coverage per gap; compare common baseline",
+  "code_hashes": {
+    "src/reseam/agent_tools/compact_packing.py": "398e675b02388bee1133ab68cdcaf8be5b577c49171e2745a10b9343f7eb2baa",
+    "src/reseam/agent_tools/geometry.py": "58169b0f8234097a7b95dd659d18318c12a4f78fbf2a8eb57080a3a566e26be9",
+    "scripts/agent_pack_worker.py": "f0fc91752d2349fc3929a8437e81dded4bf12f8244e6aa5c7894d42aeac3072c"
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "files": [
+    {
+      "file": "summary.json",
+      "source": "artifacts\\meshquery_v1\\midplane_cleanup01\\summary.json",
+      "bytes": 12178,
+      "sha256": "463d5d6c23f78b8922eddd96a257a1daf95230bd90cdaa0ff851604fede64ca7"
+    },
+    {
+      "file": "protocol.json",
+      "source": "artifacts\\meshquery_v1\\midplane_cleanup01\\protocol.json",
+      "bytes": 846,
+      "sha256": "e857207ca83e967e32d2006e3b507c8612f04334e98552c42bd81609b7aa2c67"
+    },
+    {
+      "file": "independent_audit.json",
+      "source": "artifacts\\meshquery_v1\\midplane_cleanup01\\independent_audit.json",
+      "bytes": 1927,
+      "sha256": "38bc8c8f86839645371acb6075ecf513c7bcc14d26eddf0a2a6e3422bf372f36"
+    },
+    {
+      "file": "search.json",
+      "source": "artifacts\\meshquery_v1\\midplane_cleanup01\\search.json",
+      "bytes": 3342,
+      "sha256": "2f05cd5488623e7ac89d381c77cd87571651437020c2656f9edf6be2fd9d2834"
+    },
+    {
+      "file": "uv_before_after.png",
+      "source": "artifacts\\meshquery_v1\\midplane_cleanup01\\uv_before_after.png",
+      "bytes": 1687335,
+      "sha256": "b6175be71baac826c9a4800379458137ad707c144682810995b4bd6c75d37687"
+    },
+    {
+      "file": "model_before_after.png",
+      "source": "artifacts\\meshquery_v1\\midplane_cleanup01\\model_before_after.png",
+      "bytes": 981637,
+      "sha256": "13baf80ef81e1a8d68c8b758244b36f67439f596ccd43e50df1fc99756e485b9"
+    },
+    {
+      "file": "dragon.glb",
+      "source": "artifacts\\meshquery_v1\\midplane_cleanup01\\seed29\\export\\asset.glb",
+      "bytes": 3903232,
+      "sha256": "21b33834d81f7a8a0f8d079a4fbfc4387b06464f3cc08259ed3d43776a998c9a"
+    },
+    {
+      "file": "validation.json",
+      "source": "artifacts\\meshquery_v1\\midplane_cleanup01\\seed29\\validate\\validation.json",
+      "bytes": 10918242,
+      "sha256": "f78473ead14a326804dfdfb2bf4345559b1072f3a83ed1bd5c1063855a7788a7"
+    },
+    {
+      "file": "mirror_variant.json",
+      "source": "artifacts\\meshquery_v1\\midplane_cleanup01\\create\\mirror_variant.json",
+      "bytes": 3173,
+      "sha256": "028c3a04511baf71418ffddd5cbcd3fabf3b6bb6c32e931e537a44ebc2e8bb6f"
+    },
+    {
+      "file": "source_correspondence.npz",
+      "source": "artifacts\\meshquery_v1\\midplane_cleanup01\\create\\source_correspondence.npz",
+      "bytes": 55727,
+      "sha256": "b3aa8a64c3ce9c98ed7cc3bec67e534ef6dd014001266535d91f4098f04acbc7"
+    },
+    {
+      "file": "upstream_source_correspondence.npz",
+      "source": "artifacts\\meshquery_v1\\whole_half01\\create\\source_correspondence.npz",
+      "bytes": 57800,
+      "sha256": "2f17d183157299d581911b0bdf122b51124f220a2fb324d5dba4ca2097cde829"
+    },
+    {
+      "file": "texture/BaseColor_mip0.png",
+      "source": "artifacts\\meshquery_v1\\midplane_cleanup01\\seed29\\bake\\texture\\BaseColor_mip0.png",
+      "bytes": 3085518,
+      "sha256": "83f2f72d79cba5767ec39aafc4b621fb7eab84739024050fac553ca65068cbe3"
+    },
+    {
+      "file": "texture/BaseColor_mip1.png",
+      "source": "artifacts\\meshquery_v1\\midplane_cleanup01\\seed29\\bake\\texture\\BaseColor_mip1.png",
+      "bytes": 1012746,
+      "sha256": "4d248e2f1bb751725ee4fdb15f6130c48473ead1ab58806d1c8739bf91786135"
+    },
+    {
+      "file": "texture/BaseColor_mip10.png",
+      "source": "artifacts\\meshquery_v1\\midplane_cleanup01\\seed29\\bake\\texture\\BaseColor_mip10.png",
+      "bytes": 84,
+      "sha256": "7fcf45e7f4d8b483b70e582333fabca077ad9eb8076de1cd0110c335f2f85ad7"
+    },
+    {
+      "file": "texture/BaseColor_mip11.png",
+      "source": "artifacts\\meshquery_v1\\midplane_cleanup01\\seed29\\bake\\texture\\BaseColor_mip11.png",
+      "bytes": 70,
+      "sha256": "76e376d7049f1b95f3a0b7ca3f02553c5e1901539f705e3b8b8d050387e6f699"
+    },
+    {
+      "file": "texture/BaseColor_mip2.png",
+      "source": "artifacts\\meshquery_v1\\midplane_cleanup01\\seed29\\bake\\texture\\BaseColor_mip2.png",
+      "bytes": 331220,
+      "sha256": "a6d0610e782369375302cb4a8042de11cf18f9d094f7acfe0a95b2c7dae10035"
+    },
+    {
+      "file": "texture/BaseColor_mip3.png",
+      "source": "artifacts\\meshquery_v1\\midplane_cleanup01\\seed29\\bake\\texture\\BaseColor_mip3.png",
+      "bytes": 111536,
+      "sha256": "ef1ffc88b02b8d4f07f193f7dd78dff0fd8018ace9a1b114e6cc1d3d77b67f8b"
+    },
+    {
+      "file": "texture/BaseColor_mip4.png",
+      "source": "artifacts\\meshquery_v1\\midplane_cleanup01\\seed29\\bake\\texture\\BaseColor_mip4.png",
+      "bytes": 37945,
+      "sha256": "9cfdb9c3eb22fd253134b1550981f196abf4ec32989535a51ab8beb6d3737a5f"
+    },
+    {
+      "file": "texture/BaseColor_mip5.png",
+      "source": "artifacts\\meshquery_v1\\midplane_cleanup01\\seed29\\bake\\texture\\BaseColor_mip5.png",
+      "bytes": 12459,
+      "sha256": "f8cd7bcb56f64a1d19ccc5f3bddd12ec793b45b4889622ac8b56934d1171f873"
+    },
+    {
+      "file": "texture/BaseColor_mip6.png",
+      "source": "artifacts\\meshquery_v1\\midplane_cleanup01\\seed29\\bake\\texture\\BaseColor_mip6.png",
+      "bytes": 3793,
+      "sha256": "d716063e45fda117ae8299b5daf63d398806fe7df1995f9afdd4b4086b271d8c"
+    },
+    {
+      "file": "texture/BaseColor_mip7.png",
+      "source": "artifacts\\meshquery_v1\\midplane_cleanup01\\seed29\\bake\\texture\\BaseColor_mip7.png",
+      "bytes": 1094,
+      "sha256": "4f7653011c624649bffff217c80f5833f092756483e7972da8f8a272d27cac06"
+    },
+    {
+      "file": "texture/BaseColor_mip8.png",
+      "source": "artifacts\\meshquery_v1\\midplane_cleanup01\\seed29\\bake\\texture\\BaseColor_mip8.png",
+      "bytes": 332,
+      "sha256": "0231a90ece552be3e42b86224be1b6056dbf911e38d9bad95cb951bef406e279"
+    },
+    {
+      "file": "texture/BaseColor_mip9.png",
+      "source": "artifacts\\meshquery_v1\\midplane_cleanup01\\seed29\\bake\\texture\\BaseColor_mip9.png",
+      "bytes": 136,
+      "sha256": "7c8f445fd3442e898da5a404534a4d836e90edba7df3c08f414a16537303f4b3"
+    }
+  ]
+}

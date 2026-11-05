@@ -1,0 +1,74 @@
+{
+  "all_passed": true,
+  "native_input_geometry_hashes": [
+    "b128ecb76e92a35c1aba30f5f6f4ae1279d995d40c292c271cf545f6730dc7ac"
+  ],
+  "geometry_faces": 11338,
+  "models_reimported": [
+    {
+      "method": "optcuts",
+      "faces": 11338,
+      "position_max_error": 0.0,
+      "uv_max_error": 4.465597047698111e-08,
+      "texture_pixels_equal": true,
+      "full_mips": 12,
+      "payload_bytes": 22369620
+    },
+    {
+      "method": "blender_smart",
+      "faces": 11338,
+      "position_max_error": 0.0,
+      "uv_max_error": 4.4674943300293535e-08,
+      "texture_pixels_equal": true,
+      "full_mips": 12,
+      "payload_bytes": 22369620
+    },
+    {
+      "method": "partuv",
+      "faces": 11338,
+      "position_max_error": 0.0,
+      "uv_max_error": 4.459399227663141e-08,
+      "texture_pixels_equal": true,
+      "full_mips": 12,
+      "payload_bytes": 22369620
+    },
+    {
+      "method": "meshquery_project",
+      "faces": 11338,
+      "position_max_error": 0.0,
+      "uv_max_error": 4.449091506320002e-08,
+      "texture_pixels_equal": true,
+      "full_mips": 12,
+      "payload_bytes": 22369620
+    },
+    {
+      "method": "reseam_shared",
+      "faces": 11338,
+      "position_max_error": 0.0,
+      "uv_max_error": 4.461332636651605e-08,
+      "texture_pixels_equal": true,
+      "full_mips": 12,
+      "payload_bytes": 22369620
+    },
+    {
+      "method": "reseam_unshared",
+      "faces": 11338,
+      "position_max_error": 0.0,
+      "uv_max_error": 4.468734426943399e-08,
+      "texture_pixels_equal": true,
+      "full_mips": 12,
+      "payload_bytes": 22369620
+    }
+  ],
+  "failed_native_uv_paths_retained": [
+    "flatten_anything",
+    "xatlas"
+  ],
+  "frozen_source_files_unchanged": 104,
+  "checkout_eol_only_differences": [],
+  "source_hash_scope": "exact archived bytes; checkout differences allowed only for Git CRLF/LF normalization",
+  "portable_replay_geometry_uv_groups_equal": true,
+  "replayed_xatlas_charts": 643,
+  "png_images_decoded": 103,
+  "note": "Integrity verification, not upgrading quality-rejected or artist/GPU/PBR states"
+}

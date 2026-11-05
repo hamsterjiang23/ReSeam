@@ -38,6 +38,9 @@ def run_tool(name: str, request_path: Path, output: Path) -> dict[str, object]:
     scripts = package.parents[1] / "scripts"
     sources.extend(p for p in (scripts / "bake_variant_worker.py", scripts / "agent_asset_worker.py",
                               scripts / "agent_unwrap_worker.py", scripts / "agent_pack_worker.py") if p.is_file())
+    baseline_root = package.parents[1] / "baseline"
+    sources.extend(sorted(baseline_root.glob("*.py")))
+    sources.extend(sorted((baseline_root / "adapters").glob("*.py")))
     write_json(output / "provenance.json", {
         "python": sys.version, "request_sha256": file_hash(output / "request.json"),
         "source_sha256": {str(p): file_hash(p) for p in sources},

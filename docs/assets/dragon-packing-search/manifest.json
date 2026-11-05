@@ -1,0 +1,286 @@
+{
+  "files": [
+    {
+      "file": "summary.json",
+      "source": "artifacts\\meshquery_v1\\compact_search01\\summary.json",
+      "bytes": 21538,
+      "sha256": "f4e4c07cfe1a8500f93cea12ed39b8cbc26496ef093e6a48e76957a726c3db82"
+    },
+    {
+      "file": "protocol.json",
+      "source": "artifacts\\meshquery_v1\\compact_search01\\protocol.json",
+      "bytes": 926,
+      "sha256": "281aa3ef0626832ad51d20406475b743c747d96dffb7fc2253a5c335a7d8fccd"
+    },
+    {
+      "file": "search_results.json",
+      "source": "artifacts\\meshquery_v1\\compact_search01\\search_results.json",
+      "bytes": 11036,
+      "sha256": "0cbc087b70cc963ff261c61ace417292b349475d86fa983b3640875bd9da3a5d"
+    },
+    {
+      "file": "independent_audit.json",
+      "source": "artifacts\\meshquery_v1\\compact_search01\\independent_audit.json",
+      "bytes": 2642,
+      "sha256": "9a13a91f5e4a14ef6bf02cd1187af47706b3fc5b15ca3ac3059d4298c7e096a8"
+    },
+    {
+      "file": "uv_comparison.png",
+      "source": "artifacts\\meshquery_v1\\compact_search01\\uv_comparison.png",
+      "bytes": 2710493,
+      "sha256": "74660aed5caf5d5daf8de162a740a7ec04aa7732ef0f3e170c4fc3b685838d22"
+    },
+    {
+      "file": "model_comparison.png",
+      "source": "artifacts\\meshquery_v1\\compact_search01\\model_comparison.png",
+      "bytes": 1609425,
+      "sha256": "3c9f4ce6de17269dbdf3a8abaab01f1b708b7260fe22b18e299c1a7e0a98dffb"
+    },
+    {
+      "file": "gap12_seed17/dragon.glb",
+      "source": "artifacts\\meshquery_v1\\compact_search01\\gap12_seed17\\export\\asset.glb",
+      "bytes": 3734572,
+      "sha256": "b115099a4f6bce9636967855969b0f9602104d410ef494a6875b3a07a14d3d4f"
+    },
+    {
+      "file": "gap12_seed17/validation.json",
+      "source": "artifacts\\meshquery_v1\\compact_search01\\gap12_seed17\\validate\\validation.json",
+      "bytes": 11026506,
+      "sha256": "32a0269d0aefbd597682edffa2e15d3c06bd8296e0d34ad97c5d5c5d897320b3"
+    },
+    {
+      "file": "gap12_seed17/texture/BaseColor_mip0.png",
+      "source": "artifacts\\meshquery_v1\\compact_search01\\gap12_seed17\\bake\\texture\\BaseColor_mip0.png",
+      "bytes": 2908807,
+      "sha256": "39de74283ecb09b14768a7d6d83d6e4a656018921587c5e76b883e361c7aa92c"
+    },
+    {
+      "file": "gap12_seed17/texture/BaseColor_mip1.png",
+      "source": "artifacts\\meshquery_v1\\compact_search01\\gap12_seed17\\bake\\texture\\BaseColor_mip1.png",
+      "bytes": 964315,
+      "sha256": "b55bc4a83f922421e6fa3160bb1f9f1d6fd3f55fc099ad38b32f4e999785368a"
+    },
+    {
+      "file": "gap12_seed17/texture/BaseColor_mip10.png",
+      "source": "artifacts\\meshquery_v1\\compact_search01\\gap12_seed17\\bake\\texture\\BaseColor_mip10.png",
+      "bytes": 84,
+      "sha256": "92655fe9e290932aaebde6abe58edac20241533c8449384e8826dd7c81a83c95"
+    },
+    {
+      "file": "gap12_seed17/texture/BaseColor_mip11.png",
+      "source": "artifacts\\meshquery_v1\\compact_search01\\gap12_seed17\\bake\\texture\\BaseColor_mip11.png",
+      "bytes": 70,
+      "sha256": "f934c9551f8ca07cdabc74af0407517a40381e22a670679bfd1e955bdff614ef"
+    },
+    {
+      "file": "gap12_seed17/texture/BaseColor_mip2.png",
+      "source": "artifacts\\meshquery_v1\\compact_search01\\gap12_seed17\\bake\\texture\\BaseColor_mip2.png",
+      "bytes": 320897,
+      "sha256": "423e7a8fedae460ce3b4b0b1faacb84027bbb41c01d111d35baefcca9c0c9c6d"
+    },
+    {
+      "file": "gap12_seed17/texture/BaseColor_mip3.png",
+      "source": "artifacts\\meshquery_v1\\compact_search01\\gap12_seed17\\bake\\texture\\BaseColor_mip3.png",
+      "bytes": 111304,
+      "sha256": "c62c26c29012b2cb09a3016586c7c7b2b3727a295c3ea8eff185ac6a321383af"
+    },
+    {
+      "file": "gap12_seed17/texture/BaseColor_mip4.png",
+      "source": "artifacts\\meshquery_v1\\compact_search01\\gap12_seed17\\bake\\texture\\BaseColor_mip4.png",
+      "bytes": 37778,
+      "sha256": "7ce577cd700e3f8fa631774badba1af2f65546890c163297803fc77390e724f6"
+    },
+    {
+      "file": "gap12_seed17/texture/BaseColor_mip5.png",
+      "source": "artifacts\\meshquery_v1\\compact_search01\\gap12_seed17\\bake\\texture\\BaseColor_mip5.png",
+      "bytes": 12196,
+      "sha256": "b29c55e8a2309b0aeac56caed083ea1f17551dc43f1994a378c0bc58a85a137f"
+    },
+    {
+      "file": "gap12_seed17/texture/BaseColor_mip6.png",
+      "source": "artifacts\\meshquery_v1\\compact_search01\\gap12_seed17\\bake\\texture\\BaseColor_mip6.png",
+      "bytes": 3694,
+      "sha256": "3e25dedcd7be2c6fc5001f2048ff6b1a934277abeea40a1ab4b3ca922294a5d3"
+    },
+    {
+      "file": "gap12_seed17/texture/BaseColor_mip7.png",
+      "source": "artifacts\\meshquery_v1\\compact_search01\\gap12_seed17\\bake\\texture\\BaseColor_mip7.png",
+      "bytes": 1100,
+      "sha256": "61fb8a80e0ba69634ab980b5a395ac7b16df1c554d782f4151d8177ab8a6deb6"
+    },
+    {
+      "file": "gap12_seed17/texture/BaseColor_mip8.png",
+      "source": "artifacts\\meshquery_v1\\compact_search01\\gap12_seed17\\bake\\texture\\BaseColor_mip8.png",
+      "bytes": 332,
+      "sha256": "72dcd54119548148be9132a5a211a27d46e892d27f1f83cf3d4d4d408efcad86"
+    },
+    {
+      "file": "gap12_seed17/texture/BaseColor_mip9.png",
+      "source": "artifacts\\meshquery_v1\\compact_search01\\gap12_seed17\\bake\\texture\\BaseColor_mip9.png",
+      "bytes": 136,
+      "sha256": "2914b3598bbdd4344e783ec365a73918616959b5c227788e8a2a3352f9c7e6fe"
+    },
+    {
+      "file": "gap8_seed0/dragon.glb",
+      "source": "artifacts\\meshquery_v1\\compact_search01\\gap8_seed0\\export\\asset.glb",
+      "bytes": 3780144,
+      "sha256": "a3e479ac85a167c7355d7c6a0815ee2822a3475d92ba185e8f7dc5338bce6775"
+    },
+    {
+      "file": "gap8_seed0/validation.json",
+      "source": "artifacts\\meshquery_v1\\compact_search01\\gap8_seed0\\validate\\validation.json",
+      "bytes": 11026953,
+      "sha256": "5e786616b3fb188b095879b1f077aac44f47b0c90cc66ac1afb34a372a6f2be2"
+    },
+    {
+      "file": "gap8_seed0/texture/BaseColor_mip0.png",
+      "source": "artifacts\\meshquery_v1\\compact_search01\\gap8_seed0\\bake\\texture\\BaseColor_mip0.png",
+      "bytes": 2954379,
+      "sha256": "a0bb4f9b3c7f1ec2bebe1098f38b5e347f19194bfe9d973ab914d01e491f6c48"
+    },
+    {
+      "file": "gap8_seed0/texture/BaseColor_mip1.png",
+      "source": "artifacts\\meshquery_v1\\compact_search01\\gap8_seed0\\bake\\texture\\BaseColor_mip1.png",
+      "bytes": 977136,
+      "sha256": "029bfcffe1b86fd1a6492d41b519cc9b4ad946c7e6c53f712a9f7c06d4b48778"
+    },
+    {
+      "file": "gap8_seed0/texture/BaseColor_mip10.png",
+      "source": "artifacts\\meshquery_v1\\compact_search01\\gap8_seed0\\bake\\texture\\BaseColor_mip10.png",
+      "bytes": 84,
+      "sha256": "4e127a3fbfa020ed16e02c8cd2493728bbae8e2e4ee71fd88682a30c7d8ab3a5"
+    },
+    {
+      "file": "gap8_seed0/texture/BaseColor_mip11.png",
+      "source": "artifacts\\meshquery_v1\\compact_search01\\gap8_seed0\\bake\\texture\\BaseColor_mip11.png",
+      "bytes": 70,
+      "sha256": "ab88f8d575f4c8529b8611e4691aeac6349d2a2f2f787fc39406a7b737e26546"
+    },
+    {
+      "file": "gap8_seed0/texture/BaseColor_mip2.png",
+      "source": "artifacts\\meshquery_v1\\compact_search01\\gap8_seed0\\bake\\texture\\BaseColor_mip2.png",
+      "bytes": 322580,
+      "sha256": "3cffece5fb6be473dfab347164af12a44889d59c2cdb58ab1ca9bbd5956decde"
+    },
+    {
+      "file": "gap8_seed0/texture/BaseColor_mip3.png",
+      "source": "artifacts\\meshquery_v1\\compact_search01\\gap8_seed0\\bake\\texture\\BaseColor_mip3.png",
+      "bytes": 110274,
+      "sha256": "eccceb28120d9a21ad869e6caf872fe0666eaae767a3a18cd30454d12a11abb0"
+    },
+    {
+      "file": "gap8_seed0/texture/BaseColor_mip4.png",
+      "source": "artifacts\\meshquery_v1\\compact_search01\\gap8_seed0\\bake\\texture\\BaseColor_mip4.png",
+      "bytes": 37307,
+      "sha256": "313dd3848c1c97a65dbb69657239dbd9fb8e20c04e5e780f354905a8e0ea76ef"
+    },
+    {
+      "file": "gap8_seed0/texture/BaseColor_mip5.png",
+      "source": "artifacts\\meshquery_v1\\compact_search01\\gap8_seed0\\bake\\texture\\BaseColor_mip5.png",
+      "bytes": 11976,
+      "sha256": "9cf62ec7d85e8b8e0a656287db58afea7d60a4845f7502171a401210b9737d91"
+    },
+    {
+      "file": "gap8_seed0/texture/BaseColor_mip6.png",
+      "source": "artifacts\\meshquery_v1\\compact_search01\\gap8_seed0\\bake\\texture\\BaseColor_mip6.png",
+      "bytes": 3607,
+      "sha256": "78d7f7dfa1e711817cf4f8a034c4413e42823f143905fc3422a0ad587957052c"
+    },
+    {
+      "file": "gap8_seed0/texture/BaseColor_mip7.png",
+      "source": "artifacts\\meshquery_v1\\compact_search01\\gap8_seed0\\bake\\texture\\BaseColor_mip7.png",
+      "bytes": 1079,
+      "sha256": "0e7d8a3ecc08d483f528f6742aba1b021239667f560b5b4d6248be69ecf3ac11"
+    },
+    {
+      "file": "gap8_seed0/texture/BaseColor_mip8.png",
+      "source": "artifacts\\meshquery_v1\\compact_search01\\gap8_seed0\\bake\\texture\\BaseColor_mip8.png",
+      "bytes": 332,
+      "sha256": "c2bd066cc889722753a9f1a9c4af1b4e573c0808f67c86e0d6c8d4225985e96d"
+    },
+    {
+      "file": "gap8_seed0/texture/BaseColor_mip9.png",
+      "source": "artifacts\\meshquery_v1\\compact_search01\\gap8_seed0\\bake\\texture\\BaseColor_mip9.png",
+      "bytes": 136,
+      "sha256": "3986ea9d7ef85e087e18fcc3b21d0f85979808a36d7727e59c81c1b03ef85699"
+    },
+    {
+      "file": "gap8_seed0_1024/dragon.glb",
+      "source": "artifacts\\meshquery_v1\\compact_search01\\gap8_seed0_1024\\export\\asset.glb",
+      "bytes": 1807928,
+      "sha256": "d864b3527ce9f1d1a2d3b29fced1536fad874bef7d8dd517e52f86c16215e522"
+    },
+    {
+      "file": "gap8_seed0_1024/validation.json",
+      "source": "artifacts\\meshquery_v1\\compact_search01\\gap8_seed0_1024\\validate\\validation.json",
+      "bytes": 11029216,
+      "sha256": "2c15ab70eeb038bfc32c63726c130fe49702084bfb5c4ba5e4c148d70fc9ad5f"
+    },
+    {
+      "file": "gap8_seed0_1024/texture/BaseColor_mip0.png",
+      "source": "artifacts\\meshquery_v1\\compact_search01\\gap8_seed0_1024\\bake\\texture\\BaseColor_mip0.png",
+      "bytes": 982161,
+      "sha256": "6ab0ecb9b20a1c94520645d474a932d93a5d88fe9b106a43067eb9e8a66fcbe9"
+    },
+    {
+      "file": "gap8_seed0_1024/texture/BaseColor_mip1.png",
+      "source": "artifacts\\meshquery_v1\\compact_search01\\gap8_seed0_1024\\bake\\texture\\BaseColor_mip1.png",
+      "bytes": 320156,
+      "sha256": "6f333448aeaf024d4f7a1faa11d33417e09fe4eb5b2d01fd83826ee324fc3f34"
+    },
+    {
+      "file": "gap8_seed0_1024/texture/BaseColor_mip10.png",
+      "source": "artifacts\\meshquery_v1\\compact_search01\\gap8_seed0_1024\\bake\\texture\\BaseColor_mip10.png",
+      "bytes": 70,
+      "sha256": "f0b5f5d7d90a96e2871dafb2f38b702b5549fa632c224c1f678623b97856fc82"
+    },
+    {
+      "file": "gap8_seed0_1024/texture/BaseColor_mip2.png",
+      "source": "artifacts\\meshquery_v1\\compact_search01\\gap8_seed0_1024\\bake\\texture\\BaseColor_mip2.png",
+      "bytes": 108875,
+      "sha256": "d69cd6d1e1297e5fac8812d5a7cd69bd8c9466460d92aa989b0bb3f3473e55a0"
+    },
+    {
+      "file": "gap8_seed0_1024/texture/BaseColor_mip3.png",
+      "source": "artifacts\\meshquery_v1\\compact_search01\\gap8_seed0_1024\\bake\\texture\\BaseColor_mip3.png",
+      "bytes": 36592,
+      "sha256": "47bdd6c0590481995811a9253ac4d34c8fbef00bccc60d8f8c032bffa473985c"
+    },
+    {
+      "file": "gap8_seed0_1024/texture/BaseColor_mip4.png",
+      "source": "artifacts\\meshquery_v1\\compact_search01\\gap8_seed0_1024\\bake\\texture\\BaseColor_mip4.png",
+      "bytes": 11666,
+      "sha256": "22181b34657a00be1da982adf9452233c3b7e06752b8aa585530e83e2b1b02f0"
+    },
+    {
+      "file": "gap8_seed0_1024/texture/BaseColor_mip5.png",
+      "source": "artifacts\\meshquery_v1\\compact_search01\\gap8_seed0_1024\\bake\\texture\\BaseColor_mip5.png",
+      "bytes": 3542,
+      "sha256": "7a0bc3b15ee043e0003af4427fc15404c9edc387e2ab319c37d3d4758fc073ba"
+    },
+    {
+      "file": "gap8_seed0_1024/texture/BaseColor_mip6.png",
+      "source": "artifacts\\meshquery_v1\\compact_search01\\gap8_seed0_1024\\bake\\texture\\BaseColor_mip6.png",
+      "bytes": 1061,
+      "sha256": "2977daa7d555fdff22ddf1ebba19e874d041c7cd9d751bdc8a26004f3f7f39e5"
+    },
+    {
+      "file": "gap8_seed0_1024/texture/BaseColor_mip7.png",
+      "source": "artifacts\\meshquery_v1\\compact_search01\\gap8_seed0_1024\\bake\\texture\\BaseColor_mip7.png",
+      "bytes": 332,
+      "sha256": "c6283acc3bc5274e27ab01a1b295091d940e45d49c65633a4de364d00e9eda7b"
+    },
+    {
+      "file": "gap8_seed0_1024/texture/BaseColor_mip8.png",
+      "source": "artifacts\\meshquery_v1\\compact_search01\\gap8_seed0_1024\\bake\\texture\\BaseColor_mip8.png",
+      "bytes": 136,
+      "sha256": "57acb5ed032df63b32f543169f77e186bba1d3626e866300f41e6d6ad1e4333d"
+    },
+    {
+      "file": "gap8_seed0_1024/texture/BaseColor_mip9.png",
+      "source": "artifacts\\meshquery_v1\\compact_search01\\gap8_seed0_1024\\bake\\texture\\BaseColor_mip9.png",
+      "bytes": 84,
+      "sha256": "d1d48c5b4ce5605b4231f10a26035e77f693ac86eb29cfaa90ff95669bd28585"
+    }
+  ]
+}

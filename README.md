@@ -1,8 +1,16 @@
 # ReSeam
 
-[仓库内龙模型交付包](docs/assets/dragon-uv-final/README.md)包含UV数据对照图、模型前后渲染、最终GLB、真实BaseColor完整mip及核验摘要。当前模型为外观预览，严格渲染探针未全通过。`[verified: docs/assets/dragon-uv-final/manifest.json、quality-result.json]`
+最新独立实验：[完成龙模型的 MeshQuery 全基线对照目标](goal/dragon-paper-baselines.md)。官方源码与项目适配器统一位于 [baseline](baseline/README.md)，逐项比较UV岛、有效复用率、真实贴图与外观；运行和质量通过分别记录。`[verified: 本轮用户要求；opinion: 实验范围]`
 
-最新[镜像龙真实合岛](docs/results/dragon-uv-island-merge.md)：保持镜像变体的几何不变，头冠每侧16→1岛、脚部每侧7→1岛，整龙134→92连通岛、67→46独立图块，均减少31.3%；所有面仍参与左右共享。脚底补切口后仍为单岛，已输出2048真实贴图及GLB。当前为Agent看图接受的预览，严格渲染探针仍拒绝，原已验收版本保留。`[verified: island_merge01/final_uv_audit.json、summary.json、appearance_review.json；opinion: 外观判断]`
+龙模型最新预览见[80岛中线修复交付包](docs/assets/dragon-midplane-cleanup/README.md)，包含修正版GLB、真实BaseColor完整mip、UV／模型前后图和来源核验；历史[92岛交付包](docs/assets/dragon-uv-final/README.md)保留。最新版本颜色/接缝通过、严格渲染拒绝。`[verified: dragon-midplane-cleanup/summary.json quality/audit；两份交付README]`
+
+[完整过程复盘](docs/results/dragon-final-workflow-retrospective.md)开头汇总当前80岛状态，再保留镜像新模型、整半共享、ABF++合岛、脚底切口、多起点排布及中线薄条修复的来源与比较范围。历史失败与验收身份分别保留。`[verified: 复盘文档「最新状态」「历史交付复盘」及后续证据]`
+
+新增[固定岛形状的排布与缩图对照](docs/results/dragon-packing-search.md)：9次多起点／间距搜索保持92岛、46图块，覆盖率57.26%→59.93%；真实2048与1024贴图、模型及完整mip见[交付包](docs/assets/dragon-packing-search/README.md)。2048候选颜色/接缝通过但渲染拒绝，1024颜色/接缝/渲染均拒绝，未获得同质量缩图结论。`[verified: dragon-packing-search/summary.json search/cases]`
+
+最新[中线薄条修复](docs/results/dragon-midplane-cleanup.md)：在独立镜像变体中修正裁切平面，消除12个细线岛，92→80岛、46→40图块，覆盖率59.93%→65.08%，附[修正版模型与真实贴图](docs/assets/dragon-midplane-cleanup/README.md)。颜色/接缝检查通过、严格渲染仍拒绝；镜像工具和Skill新增中线薄条复核提示。`[verified: dragon-midplane-cleanup/summary.json；mirror_asset.py midplane_review_required；Skill专项workflow]`
+
+此前[镜像龙真实合岛](docs/results/dragon-uv-island-merge.md)：保持镜像变体的几何不变，头冠每侧16→1岛、脚部每侧7→1岛，整龙134→92连通岛、67→46独立图块，均减少31.3%；所有面仍参与左右共享。脚底补切口后仍为单岛，已输出2048真实贴图及GLB。该轮为Agent看图接受的预览，严格渲染探针仍拒绝，原已验收版本保留。`[verified: island_merge01/final_uv_audit.json、summary.json、appearance_review.json；opinion: 外观判断]`
 
 此前[整龙镜像共享与紧凑排布](docs/results/dragon-whole-half-reuse.md)：用户授权的新镜像模型包含134个连通UV岛，67对实际堆叠后只排67个独立图块；同几何无共享为134图块。2048轮廓排布占用率由矩形排布的27.98%提高至57.95%，已写出真实贴图与GLB并通过当前UV＋BaseColor有限探针协议。原模型和固定几何结果保留，人工／PBR／引擎验收独立。`[verified: whole_half_formal_shared01 两个pack/geometry.json及shared_blender_concave/validate/validation.json；whole_half01/independent_audit/results.json]`
 
@@ -21,6 +29,8 @@
 本轮交付范围为 UV＋BaseColor；新增 `region.define`、区域展开、源颜色目标冻结及颜色复用验收流程，参数以 `tools describe` 为准。用户明确允许 OptCuts 作为本轮实验展开后端，此例外不改写历史自研求解器、V1/V2 或完整 PBR 的验收口径。`[verified: 用户本轮允许 OptCuts 等几何工具及“先完成 UV＋颜色复用”选择；registry.py 新工具登记]`
 
 Agent UV 工具集入口：`uv run reseam tools list`。使用 [运行说明](docs/running-agent-tools.md)与[reseam-uv Skill](skills/reseam-uv/SKILL.md)完成导入、候选、共享、排布、真实烘焙和独立验收导出；[真实两模型报告](artifacts/agent_tools_v1/round01/report.md)附实际贴图。工具闭环、复用收益与艺术验收分别判定，不替代下述完整求解器目标。`[verified: src/reseam/cli.py tools 分支；docs/running-agent-tools.md 对照运行]`
+
+对称部件共享、整半镜像复用、共享后真正合岛及紧凑排布，使用 [对称复用与真实合岛 workflow](skills/reseam-uv/references/symmetry-reuse-and-merge.md)。可直接要求 Agent：“使用 $reseam-uv，保留这个资产的原几何，完成部件复用、真实合岛与前后对照”；允许镜像时明确指定当前资产授权。流程区分已验收结果与外观预览，按实际失败修正整块切口。`[verified: workflow「输入与启动判断」「真正合岛与切口反馈」「每步记录与交付模板」；opinion: 调用示例]`
 
 新增用户提供的 [tripo_p2 龙实验](docs/results/agent-tools-tripo-p2.md)：原始资产独立保留，已测试 UV 问题面隔离、镜像对应与 256/512/1024 真实颜色贴图；完整材质与缩图质量未通过，不计入已验收收益。`[verified: artifacts/agent_tools_v1/tripo_p2_audit.json color_experiments/full_material_supported]`
 

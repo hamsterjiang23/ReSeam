@@ -1,5 +1,7 @@
 # ReSeam 项目约束
 
+当前新增[完成龙模型的论文全基线目标](goal/dragon-paper-baselines.md)：使用最新80岛镜像龙的同一固定几何与完成BaseColor参考，对比FlattenAnything、OptCuts、xatlas、Blender Smart UV、PartUV、MeshQuery及ReSeam共享/解除共享。源码优先官方并统一保存在baseline/；未找到MeshQuery官方代码时明确标为项目实现。逐方法必须报告有效UV复用率，不能把未许可交叠计为复用；失败和开发轮历史保留。`[verified: 用户本轮及追加请求；opinion: 统一比较合同]`
+
 最新用户要求见[原始UV保留实验](docs/results/dragon-raw-uv-reuse.md)：从原始121岛起步，禁止先逐面隔离异常面来换取严格门禁通过。显式 `profile.preserve_source_uv={snapshot,state_hash}` 仅保留原有冲突面对未改变的共同相似布局；严格结果单列，原始交叠不算新增复用。新冲突、明显错贴或特征破坏仍须记录和修正，优先整块调整。旧203岛路径保留，不充当本轮原始基线。`[verified: 用户最新“不要先拆碎裂”；opinion: 工具与比较口径]`
 
 本轮按[部件重展开与共享](docs/dragon-component-reuse.md)实施：双翼、四肢和角刺用原面集合逻辑分区，计算网格临时沿原边切开；`paired_domain` 通过面角锚点建立共同布局。OptCuts 输出的实际 `result_seam_edges` 必须传给成对步骤；不假定两侧边界采样相同或凸域自动保证完全覆盖。先看源/冻结目标/差异，再烘焙；完整特征片保留独占优先于逐面挖洞。`[verified: 用户接受的部件计划；opinion: 执行细节]`
@@ -127,4 +129,6 @@
 
 紧凑排布使用显式 `uv.pack backend=blender_concave`，一组只排一个主图块，以同一相似变换回放全部成员，独立测量实际覆盖和像素间距。各分辨率的padding、gap、border要明确记录；可测试固定已验收UV并按分辨率同比换算像素留边，但必须重新烘焙与看图。原默认矩形排布保留作对照，不把缩图、几何镜像与排布收益混算。`[verified: 用户紧凑排布与缩图要求；opinion: 工作流]`
 
-复用后继续检查同一原边连通表面内的多余接缝，允许整块重展开后再复制镜像UV；堆叠与真实合岛分别计数。必要的开口切缝不一定增加岛数：本轮脚底分支切口改善白爪外观，单脚仍为1岛。不要为减少计数而焊接空间不相邻的部件；全局下限结论须限定原边身份和固定几何。当前134→92岛、67→46图块的实际对照及失败记录见[真实合岛报告](docs/results/dragon-uv-island-merge.md)，其严格渲染探针未全通过，不能升级为数值质量通过。`[verified: 用户真实合岛要求；island_merge01/sole_reparameterize/reparameterization.json、final_uv_audit.json、summary.json；opinion: 后续工作规则]`
+复用后继续检查同一原边连通表面内的多余接缝，允许整块重展开后再复制镜像UV；堆叠与真实合岛分别计数。必要的开口切缝不一定增加岛数：脚底分支切口改善白爪外观，单脚仍为1岛。不要为减少计数而焊接空间不相邻的部件；全局下限结论须限定原边身份和固定几何。历史134→92岛、67→46图块的实际对照及失败记录见[真实合岛报告](docs/results/dragon-uv-island-merge.md)，其严格渲染探针未全通过，不能升级为数值质量通过。`[verified: 用户真实合岛要求；island_merge01/sole_reparameterize/reparameterization.json、final_uv_audit.json、summary.json；opinion: 后续工作规则]`
+
+最新[中线薄条修复](docs/results/dragon-midplane-cleanup.md)在独立镜像变体中得到80岛／40图块、65.08%覆盖，已消除12个已定位细条岛；颜色/接缝通过、严格渲染拒绝。出现孤立细线时按Skill检查 `uv_label_mapping`、三维来源和 `midplane_strip_candidates`，区分UV压扁与裁切薄条。工具候选按几何尺度、案例像素厚度统计按分辨率，两者不能混用；只在已授权的新变体中调整平面，不继承旧模型偏移值或旧面ID。`[verified: dragon-midplane-cleanup/summary.json、independent_audit.json；opinion: 流程要求]`

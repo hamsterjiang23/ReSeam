@@ -1,5 +1,7 @@
 # 龙模型与UV对照交付
 
+本目录保留历史92岛／46图块交付；最新80岛／40图块版本见[中线薄条修复包](../dragon-midplane-cleanup/README.md)，完整演进见[总复盘](../../results/dragon-final-workflow-retrospective.md)。本目录的原始测量和质量JSON保持历史口径。`[verified: 两份summary/measurements对应数据；opinion: 版本阅读说明]`
+
 本目录随Git提交，克隆后可直接查看；文件来源、大小和SHA256见[清单](manifest.json)。清单中的历史`source`路径仅供追溯，交付文件使用本目录相对路径。`[verified: manifest.json files]`
 
 - [彩色UV与数据对照](uv_before_after.png) · [矢量PDF](uv_before_after.pdf)。`[verified: manifest.json 对应文件]`

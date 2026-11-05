@@ -1,0 +1,98 @@
+{
+  "date": "2026-11-05",
+  "repositories": [
+    {
+      "name": "FlattenAnything",
+      "origin": "https://github.com/keeganhk/FlattenAnything.git",
+      "commit": "215680a42ec3d384533c2abb3a61efb51a16883d",
+      "dirty": "?? util/__pycache__/",
+      "license_files": [],
+      "submodules": "",
+      "lfs_assets_downloaded": null,
+      "tracked_modifications": "",
+      "untracked_generated_files": "util/__pycache__/func.cpython-311.pyc\nutil/__pycache__/model.cpython-311.pyc\nutil/__pycache__/workflow.cpython-311.pyc",
+      "license_status": "NO_LICENSE_FILE_IN_UPSTREAM_SNAPSHOT",
+      "build_dependencies_complete": null
+    },
+    {
+      "name": "OptCuts",
+      "origin": "https://github.com/liminchen/OptCuts.git",
+      "commit": "cd2302671af7954f263b0ea93d8419aa943d54be",
+      "dirty": "",
+      "license_files": [
+        "LICENSE.txt"
+      ],
+      "submodules": "",
+      "lfs_assets_downloaded": null,
+      "tracked_modifications": "",
+      "untracked_generated_files": "",
+      "license_status": "see retained license files",
+      "build_dependencies_complete": null
+    },
+    {
+      "name": "xatlas",
+      "origin": "https://github.com/jpcy/xatlas.git",
+      "commit": "f700c7790aaa030e794b52ba7791a05c085faf0c",
+      "dirty": "",
+      "license_files": [
+        "LICENSE"
+      ],
+      "submodules": "",
+      "lfs_assets_downloaded": null,
+      "tracked_modifications": "",
+      "untracked_generated_files": "",
+      "license_status": "see retained license files",
+      "build_dependencies_complete": null
+    },
+    {
+      "name": "xatlas-python",
+      "origin": "https://github.com/mworchel/xatlas-python.git",
+      "commit": "64bbecad2db3e01767d28f8ad6f41f6fbdb04db3",
+      "dirty": "",
+      "license_files": [
+        "LICENSE"
+      ],
+      "submodules": "a2e59f0e7065404b44dfe92a28aca47ba1378dc4 extern/pybind11 (a2e59f0)\n-f700c7790aaa030e794b52ba7791a05c085faf0c extern/xatlas",
+      "lfs_assets_downloaded": null,
+      "tracked_modifications": "",
+      "untracked_generated_files": "",
+      "license_status": "see retained license files",
+      "build_dependencies_complete": null
+    },
+    {
+      "name": "PartUV",
+      "origin": "https://github.com/EricWang12/PartUV.git",
+      "commit": "46bad07092a9396f00d7e04ea90369ded7de3d18",
+      "dirty": "",
+      "license_files": [
+        "LICENSE"
+      ],
+      "submodules": "",
+      "lfs_assets_downloaded": null,
+      "tracked_modifications": "",
+      "untracked_generated_files": "",
+      "license_status": "see retained license files",
+      "build_dependencies_complete": null
+    },
+    {
+      "name": "Blender",
+      "origin": "https://github.com/blender/blender.git",
+      "commit": "4db51e9d1e1e2e7f9e96e9305607824c39f7b554",
+      "dirty": "",
+      "license_files": [
+        "COPYING"
+      ],
+      "submodules": "-c1b8027b12441d29b9a344c3f1524d3ce9fa127d lib/linux_x64\n-441cb7e2477e11dad9f417af3bccbbab9ec344b3 lib/macos_arm64\n-c6731b0e7d39ce8a9b282b1bbcda47407d66400a lib/macos_x64\n-0d309c4af68a13d55fd550beaec8cb5a3c0ee2e2 lib/windows_arm64\n-a5426d2cc41dddeaea3dfa150c24798e02f757fc lib/windows_x64",
+      "lfs_assets_downloaded": false,
+      "tracked_modifications": "",
+      "untracked_generated_files": "",
+      "license_status": "see retained license files",
+      "build_dependencies_complete": false
+    }
+  ],
+  "meshquery": {
+    "official_repository_found": false,
+    "evidence": "https://marcoschouten.github.io/ only paper link; title/author targeted searches",
+    "implementation": "existing ReSeam mesh-query/seam tools with current Agent decisions"
+  }
+}

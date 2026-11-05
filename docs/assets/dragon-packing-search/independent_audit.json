@@ -1,0 +1,77 @@
+{
+  "cases": [
+    {
+      "label": "gap16_seed0",
+      "geometry_faces_uv_identities_and_groups_unchanged": true,
+      "mirror_uv_max_error": 0.0,
+      "uniform_edge_length_error": 3.400058012914542e-16,
+      "independent_union_coverage": 0.570672653376879,
+      "owner_count": 46
+    },
+    {
+      "label": "gap16_seed17",
+      "geometry_faces_uv_identities_and_groups_unchanged": true,
+      "mirror_uv_max_error": 0.0,
+      "uniform_edge_length_error": 3.625572064791527e-16,
+      "independent_union_coverage": 0.5622412456211371,
+      "owner_count": 46
+    },
+    {
+      "label": "gap16_seed29",
+      "geometry_faces_uv_identities_and_groups_unchanged": true,
+      "mirror_uv_max_error": 0.0,
+      "uniform_edge_length_error": 3.2959746043559335e-16,
+      "independent_union_coverage": 0.536261142106063,
+      "owner_count": 46
+    },
+    {
+      "label": "gap12_seed0",
+      "geometry_faces_uv_identities_and_groups_unchanged": true,
+      "mirror_uv_max_error": 0.0,
+      "uniform_edge_length_error": 3.400058012914542e-16,
+      "independent_union_coverage": 0.5776961333057766,
+      "owner_count": 46
+    },
+    {
+      "label": "gap12_seed17",
+      "geometry_faces_uv_identities_and_groups_unchanged": true,
+      "mirror_uv_max_error": 0.0,
+      "uniform_edge_length_error": 3.41740524767431e-16,
+      "independent_union_coverage": 0.5832925166300359,
+      "owner_count": 46
+    },
+    {
+      "label": "gap12_seed29",
+      "geometry_faces_uv_identities_and_groups_unchanged": true,
+      "mirror_uv_max_error": 0.0,
+      "uniform_edge_length_error": 3.2439329000766293e-16,
+      "independent_union_coverage": 0.5815633188775439,
+      "owner_count": 46
+    },
+    {
+      "label": "gap8_seed0",
+      "geometry_faces_uv_identities_and_groups_unchanged": true,
+      "mirror_uv_max_error": 0.0,
+      "uniform_edge_length_error": 3.7816971776294395e-16,
+      "independent_union_coverage": 0.5992707764295052,
+      "owner_count": 46
+    },
+    {
+      "label": "gap8_seed17",
+      "geometry_faces_uv_identities_and_groups_unchanged": true,
+      "mirror_uv_max_error": 0.0,
+      "uniform_edge_length_error": 3.7470027081099033e-16,
+      "independent_union_coverage": 0.5942935463862598,
+      "owner_count": 46
+    },
+    {
+      "label": "gap8_seed29",
+      "geometry_faces_uv_identities_and_groups_unchanged": true,
+      "mirror_uv_max_error": 0.0,
+      "uniform_edge_length_error": 3.5258254649228604e-16,
+      "independent_union_coverage": 0.5925074501796951,
+      "owner_count": 46
+    }
+  ],
+  "all_passed": true
+}

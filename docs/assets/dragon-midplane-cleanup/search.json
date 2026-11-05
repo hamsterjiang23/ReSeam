@@ -1,0 +1,79 @@
+{
+  "cases": [
+    {
+      "label": "seed0",
+      "result": {
+        "snapshot": "E:\\ReSem\\artifacts\\meshquery_v1\\midplane_cleanup01\\seed0\\pack\\snapshot\\snapshot.json",
+        "state_hash": "adc644828e085363c49573ef16a04e362f3390db10ac367d875b55e18046080b",
+        "asset_id": "a7b1bfc5d1fb43d487904a917624bbc05f8c89d32bf606a502198badb5ff7d31",
+        "status": "OK",
+        "execution_success": true,
+        "geometry_passed": true,
+        "hard_geometry_passed": true,
+        "final_quality_passed": null,
+        "requires_rebake": true,
+        "packing_backend": "blender_concave",
+        "report": "E:\\ReSem\\artifacts\\meshquery_v1\\midplane_cleanup01\\seed0\\pack\\geometry.json",
+        "tool": "uv.pack",
+        "wall_seconds": 21.18700000003446,
+        "output": "E:\\ReSem\\artifacts\\meshquery_v1\\midplane_cleanup01\\seed0\\pack"
+      },
+      "unique_coverage": 0.633426909901283,
+      "chart_count": 80,
+      "shared_group_count": 40,
+      "minimum_gap_pixels": 9.951995020581247,
+      "minimum_border_pixels": 10.0,
+      "hard_valid": true
+    },
+    {
+      "label": "seed17",
+      "result": {
+        "snapshot": "E:\\ReSem\\artifacts\\meshquery_v1\\midplane_cleanup01\\seed17\\pack\\snapshot\\snapshot.json",
+        "state_hash": "bb96f7fe98f7eba9b725c0aa4d57bf73ba11dd31d078f89f59472d2ea1e5263a",
+        "asset_id": "a7b1bfc5d1fb43d487904a917624bbc05f8c89d32bf606a502198badb5ff7d31",
+        "status": "OK",
+        "execution_success": true,
+        "geometry_passed": true,
+        "hard_geometry_passed": true,
+        "final_quality_passed": null,
+        "requires_rebake": true,
+        "packing_backend": "blender_concave",
+        "report": "E:\\ReSem\\artifacts\\meshquery_v1\\midplane_cleanup01\\seed17\\pack\\geometry.json",
+        "tool": "uv.pack",
+        "wall_seconds": 30.07799999997951,
+        "output": "E:\\ReSem\\artifacts\\meshquery_v1\\midplane_cleanup01\\seed17\\pack"
+      },
+      "unique_coverage": 0.6492481669395516,
+      "chart_count": 80,
+      "shared_group_count": 40,
+      "minimum_gap_pixels": 10.142058637370392,
+      "minimum_border_pixels": 10.0,
+      "hard_valid": true
+    },
+    {
+      "label": "seed29",
+      "result": {
+        "snapshot": "E:\\ReSem\\artifacts\\meshquery_v1\\midplane_cleanup01\\seed29\\pack\\snapshot\\snapshot.json",
+        "state_hash": "4c9ed778e4b6766116fbf8fb816020688b99088f73ac5b543efc6b4ad8f37c3f",
+        "asset_id": "a7b1bfc5d1fb43d487904a917624bbc05f8c89d32bf606a502198badb5ff7d31",
+        "status": "OK",
+        "execution_success": true,
+        "geometry_passed": true,
+        "hard_geometry_passed": true,
+        "final_quality_passed": null,
+        "requires_rebake": true,
+        "packing_backend": "blender_concave",
+        "report": "E:\\ReSem\\artifacts\\meshquery_v1\\midplane_cleanup01\\seed29\\pack\\geometry.json",
+        "tool": "uv.pack",
+        "wall_seconds": 30.375,
+        "output": "E:\\ReSem\\artifacts\\meshquery_v1\\midplane_cleanup01\\seed29\\pack"
+      },
+      "unique_coverage": 0.6507865459152863,
+      "chart_count": 80,
+      "shared_group_count": 40,
+      "minimum_gap_pixels": 10.323953597443431,
+      "minimum_border_pixels": 9.999999999999886,
+      "hard_valid": true
+    }
+  ]
+}

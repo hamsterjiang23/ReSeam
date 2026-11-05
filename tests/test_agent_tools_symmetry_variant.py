@@ -132,3 +132,18 @@ def test_deadline_mid_operation_never_mutates_source(monkeypatch: pytest.MonkeyP
     np.testing.assert_array_equal(source.uv, before[1])
     np.testing.assert_array_equal(source.mesh.faces, faces)
     np.testing.assert_array_equal(source.uv_faces, uv_faces)
+
+
+def test_near_plane_strip_is_reported_and_corrected_plane_removes_it() -> None:
+    source = _surface([[-1., 0., 0.], [1e-4, 0., 0.], [1e-4, 1., 0.],
+                       [.5, 3., 0.], [1., 3., 0.], [1., 4., 0.]], [[0, 1, 2], [3, 4, 5]])
+    before = source.mesh.vertices.copy()
+    old = build_symmetry_variant(source, deadline=_deadline())
+    assert old.report["midplane_review_required"] is True
+    candidates = old.report["midplane_strip_candidates"]
+    assert isinstance(candidates, list) and len(candidates) == 1
+    corrected = build_symmetry_variant(source, plane_offset=2e-4, deadline=_deadline())
+    assert corrected.report["midplane_review_required"] is False
+    assert corrected.report["retained_source_faces"] == 1
+    assert corrected.source_face_ids.tolist() == [1, 1]
+    np.testing.assert_array_equal(source.mesh.vertices, before)

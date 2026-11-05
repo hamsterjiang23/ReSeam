@@ -93,7 +93,8 @@ def test_backend_nonuniform_scales_rejected_without_mutation(
     assert fingerprint(state) == before
 
 
-def test_real_blender_contours_common_scale_identity_and_spacing(tmp_path: Path) -> None:
+@pytest.mark.parametrize("seed", [0, 17])
+def test_real_blender_contours_common_scale_identity_and_spacing(tmp_path: Path, seed: int) -> None:
     blender = Path("E:/Blender 4.5.11/blender.exe")
     if not blender.is_file():
         pytest.skip("Isolated Blender 4.5 runtime unavailable")
@@ -104,7 +105,7 @@ def test_real_blender_contours_common_scale_identity_and_spacing(tmp_path: Path)
     before = fingerprint(source)
     result, report = compact_packing.compact_pack(
         source, 512, gap_pixels=8, border_pixels=6, blender=blender, worker=worker,
-        output=tmp_path / "real", deadline=time.monotonic() + 300)
+        output=tmp_path / "real", deadline=time.monotonic() + 300, seed=seed)
     assert fingerprint(source) == before
     np.testing.assert_array_equal(result.surface.mesh.vertices, source.surface.mesh.vertices)
     np.testing.assert_array_equal(result.surface.mesh.faces, source.surface.mesh.faces)
@@ -129,3 +130,50 @@ def test_real_blender_contours_common_scale_identity_and_spacing(tmp_path: Path)
         assert b / a == pytest.approx(scale, rel=1e-12)
     assert report["owner_count"] == 2
     assert report["unwrap_called"] is False
+    assert report["packing_seed"] == seed
+
+
+def test_seeded_starts_are_reproducible_rigid_and_keep_parent(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    state = _paired_l_shapes()
+    before = fingerprint(state)
+
+    def identity_backend(argv: list[str], folder: Path, deadline: float) -> float:
+        assert argv and deadline > 0
+        with np.load(folder / "input.npz", allow_pickle=False) as arrays:
+            np.savez_compressed(folder / "packed.npz", faces=arrays["faces"], owners=arrays["owners"],
+                                source_faces=arrays["source_faces"], corner_uv=arrays["uv"][arrays["faces"]])
+        (folder / "backend.json").write_text('{}', encoding="utf-8")
+        return .01
+
+    monkeypatch.setattr(compact_packing, "_run_blender", identity_backend)
+    fake = tmp_path / "worker"
+    fake.write_text("not executed")
+    results = []
+    for i, seed in enumerate([17, 17, 29]):
+        result, report = compact_packing.compact_pack(
+            state, 512, blender=fake, worker=fake, output=tmp_path / str(i),
+            deadline=time.monotonic() + 30, seed=seed)
+        results.append(result.surface.uv)
+        assert report["initial_rotations_radians"]
+        for group in result.groups:
+            np.testing.assert_array_equal(result.surface.uv[result.surface.uv_faces[list(group.first_faces)]],
+                                          result.surface.uv[result.surface.uv_faces[list(group.second_faces)]])
+        scale = report["common_scale_original_uv"]
+        assert isinstance(scale, float)
+        for a, b in zip(state.surface.uv[state.surface.uv_faces],
+                        result.surface.uv[result.surface.uv_faces], strict=True):
+            np.testing.assert_allclose(np.linalg.norm(b[:, None] - b[None, :], axis=-1),
+                                       np.linalg.norm(a[:, None] - a[None, :], axis=-1) * scale, atol=1e-12)
+    np.testing.assert_array_equal(results[0], results[1])
+    assert not np.array_equal(results[0], results[2])
+    assert fingerprint(state) == before
+
+
+@pytest.mark.parametrize("seed", [-1, 2**32, True, 1.5])
+def test_invalid_seed_fails_before_backend(tmp_path: Path, seed: int) -> None:
+    with pytest.raises(ValueError, match="INVALID_PACKING_SEED"):
+        compact_packing.compact_pack(_paired_l_shapes(), 512, blender=tmp_path / "missing",
+                                    worker=tmp_path / "missing", output=tmp_path,
+                                    deadline=time.monotonic() + 30, seed=seed)

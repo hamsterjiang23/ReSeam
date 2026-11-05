@@ -870,7 +870,7 @@ def pack_uv(request: dict[str, object], output: Path, deadline: float) -> dict[s
         candidate, packing_record = compact_pack(source, _integer(profile, "resolution", 256, 1),
             gap_pixels=_number(profile, "gap_pixels", 4), border_pixels=_number(profile, "border_pixels", 4),
             blender=blender, worker=root / "scripts/agent_pack_worker.py", output=output / "blender",
-            deadline=deadline)
+            deadline=deadline, seed=_integer(request, "packing_seed", 0, 0))
         write_json(output / "packing.json", packing_record)
     else:
         raise ValueError("UNKNOWN_PACKING_BACKEND")

@@ -1,0 +1,265 @@
+{
+  "page_count": 10,
+  "page_size_points": [
+    1280.0,
+    720.0
+  ],
+  "pages": [
+    {
+      "page": 1,
+      "title": "从 AI 生成资产，到可复用 UV 的龙模型",
+      "source": "[verified: docs/assets/dragon-uv-final/measurements.json; dragon-midplane-cleanup/summary.json, validation.json]"
+    },
+    {
+      "page": 2,
+      "title": "输入问题：碎片多，也有可复用的区域",
+      "source": "[verified: docs/assets/dragon-uv-final/measurements.json; skills/reseam-uv/SKILL.md]"
+    },
+    {
+      "page": 3,
+      "title": "完整工作流：视觉决策与几何工具协同",
+      "source": "[verified: skills/reseam-uv/SKILL.md; references/symmetry-reuse-and-merge.md]"
+    },
+    {
+      "page": 4,
+      "title": "观察与分区：先定位，再决定怎样复用",
+      "source": "[verified: view.render request/results; skills/reseam-uv/SKILL.md; final group view is a presentation aid]"
+    },
+    {
+      "page": 5,
+      "title": "整半镜像共享：先减少重复占位",
+      "source": "[verified: docs/results/dragon-whole-half-reuse.md; whole_half01/create/mirror_variant.json]"
+    },
+    {
+      "page": 6,
+      "title": "真实合岛：把自然表面的碎片重新展开",
+      "source": "[verified: island_merge01/merge_results.json; candidate_regions.json; sole_reparameterize/reparameterization.json]"
+    },
+    {
+      "page": 7,
+      "title": "外观反馈：白爪模糊后，重新设计脚底切口",
+      "source": "[verified: docs/assets/dragon-uv-final foot images/experiment-summary.json; island_merge01/sole_reparameterize_request.json]"
+    },
+    {
+      "page": 8,
+      "title": "紧凑排布与缩图：先看实测收益",
+      "source": "[verified: docs/assets/dragon-packing-search/summary.json search/cases; independent_audit.json]"
+    },
+    {
+      "page": 9,
+      "title": "中线薄条修复：从细线岛追溯到裁切几何",
+      "source": "[verified: docs/assets/dragon-midplane-cleanup/independent_audit.json, mirror_variant.json, summary.json]"
+    },
+    {
+      "page": 10,
+      "title": "最终交付：成果、边界与可复用经验",
+      "source": "[verified: dragon-midplane-cleanup/manifest.json, validation.json; skills/reseam-uv/SKILL.md]"
+    }
+  ],
+  "uv_panel_checks": [
+    {
+      "asset": "old_arrays",
+      "faces": 363,
+      "charts": 16
+    },
+    {
+      "asset": "head_arrays",
+      "faces": 363,
+      "charts": 1
+    },
+    {
+      "asset": "old_arrays",
+      "faces": 1198,
+      "charts": 7
+    },
+    {
+      "asset": "foot_arrays",
+      "faces": 1198,
+      "charts": 1
+    }
+  ],
+  "assets": [
+    {
+      "key": "original_model",
+      "source": "artifacts/meshquery_v1/uv_comparison01/original/oblique.png",
+      "file": "source-assets\\original_model.png",
+      "sha256": "0ea028bf42565ef79b1df006433c2d8be47040bd2f35ff745f8076319132531c"
+    },
+    {
+      "key": "original_front",
+      "source": "artifacts/meshquery_v1/uv_comparison01/original/front.png",
+      "file": "source-assets\\original_front.png",
+      "sha256": "1557b6b2064acc6d5c9d448832f3373acad5a3b7dae026bd331d0545bb730c16"
+    },
+    {
+      "key": "original_side",
+      "source": "artifacts/meshquery_v1/uv_comparison01/original/left.png",
+      "file": "source-assets\\original_side.png",
+      "sha256": "ba0baae6fa9a2832db6aa0c009766536dfab6131a2cd8a153069e1bc1d463b5b"
+    },
+    {
+      "key": "original_uv",
+      "source": "artifacts/meshquery_v1/uv_comparison01/original/uv.png",
+      "file": "source-assets\\original_uv.png",
+      "sha256": "33066915d563251fa4d034b63f7bac321c96556a874449451772f6be8e56d3d4"
+    },
+    {
+      "key": "original_texture",
+      "source": "model/dragon/tripo_p2/blue dragon 3d model/blue_dragon_3d_model.fbm/blue_dragon_3d_model_basecolor.jpg",
+      "file": "source-assets\\original_texture.jpg",
+      "sha256": "f54bf1b717a7d73739d7ebe560c9c0425743a089cf264a6b2a6164e89f5fb317"
+    },
+    {
+      "key": "final_model",
+      "source": "artifacts/meshquery_v1/midplane_cleanup01/seed29/views/oblique.png",
+      "file": "source-assets\\final_model.png",
+      "sha256": "7f08f553c96b3141e9b0177f4ac0c0d193031bf82b17de35ebb058c62b2b8ac0"
+    },
+    {
+      "key": "final_uv",
+      "source": "artifacts/meshquery_v1/midplane_cleanup01/seed29/views/uv.png",
+      "file": "source-assets\\final_uv.png",
+      "sha256": "ba03feabd83d7970b4235870eda257a4b32d6f10dc88d1f876125e8e78c0f59b"
+    },
+    {
+      "key": "final_texture",
+      "source": "docs/assets/dragon-midplane-cleanup/texture/BaseColor_mip0.png",
+      "file": "source-assets\\final_texture.png",
+      "sha256": "83f2f72d79cba5767ec39aafc4b621fb7eab84739024050fac553ca65068cbe3"
+    },
+    {
+      "key": "groups",
+      "source": "tmp/pdfs/reseam-workflow/groups/front.png",
+      "file": "source-assets\\groups.png",
+      "sha256": "f1c4c1da42b924063eee997c081bf94a92dd7cc927283ecbb2d5dfcb7ae0b503"
+    },
+    {
+      "key": "sole_cut",
+      "source": "tmp/pdfs/reseam-workflow/sole_cut_lines/sole.png",
+      "file": "source-assets\\sole_cut.png",
+      "sha256": "1af1cbe5ec0cd6510914af21ad7eba9f938e11a10e11f3e3d5d2156c4684ddda"
+    },
+    {
+      "key": "thin_crop",
+      "source": "tmp/pdfs/reseam-workflow/thin-lines.png",
+      "file": "source-assets\\thin_crop.png",
+      "sha256": "3b5dd451c4a5646b93b9fcc0e1e65ce96a170e7c0e40b53437ae31f98cc667f3"
+    },
+    {
+      "key": "unshared_uv",
+      "source": "artifacts/meshquery_v1/whole_half_formal_unshared01/unshared_blender_concave/views/uv.png",
+      "file": "source-assets\\unshared_uv.png",
+      "sha256": "97f537bb657c3e5dc010d73b5496cea70c1204b1ade2fe74d8c4b08820181a19"
+    },
+    {
+      "key": "shared_uv",
+      "source": "artifacts/meshquery_v1/whole_half_formal_shared01/shared_blender_concave/views/uv.png",
+      "file": "source-assets\\shared_uv.png",
+      "sha256": "9f3d5bc2fb4105e13f740d833799952101d192d405515628de5b33fe9e54f1d0"
+    },
+    {
+      "key": "foot_baseline",
+      "source": "docs/assets/dragon-uv-final/baseline-foot.png",
+      "file": "source-assets\\foot_baseline.png",
+      "sha256": "7598af64ece3f45fff19b653b622f6d66c85abe76e33fa83e8971f13a9504d61"
+    },
+    {
+      "key": "foot_uncut",
+      "source": "docs/assets/dragon-uv-final/uncut-foot.png",
+      "file": "source-assets\\foot_uncut.png",
+      "sha256": "3acda16eb6dca47a34b9c92b7bce6030d9764badccefa9adc1eb2f84f4701e0e"
+    },
+    {
+      "key": "foot_repaired",
+      "source": "docs/assets/dragon-uv-final/repaired-foot.png",
+      "file": "source-assets\\foot_repaired.png",
+      "sha256": "7396c27d4e11bc2d2af46c0592162875abf83e75ac7fdd80558e36ecac7b9835"
+    },
+    {
+      "key": "packing_before",
+      "source": "artifacts/meshquery_v1/compact_search01/baseline/views_clean/uv.png",
+      "file": "source-assets\\packing_before.png",
+      "sha256": "cce90fa22fbd25fb6d968452cac2cc83cef43cae4367da8f0220e042948a958c"
+    },
+    {
+      "key": "packing_after",
+      "source": "artifacts/meshquery_v1/compact_search01/gap8_seed0/views_clean/uv.png",
+      "file": "source-assets\\packing_after.png",
+      "sha256": "e6cbaf2a806f38197c49c51801af4b3e9686db6559269dd5830b9a5eac299738"
+    },
+    {
+      "key": "packing_texture",
+      "source": "docs/assets/dragon-packing-search/gap8_seed0/texture/BaseColor_mip0.png",
+      "file": "source-assets\\packing_texture.png",
+      "sha256": "a0bb4f9b3c7f1ec2bebe1098f38b5e347f19194bfe9d973ab914d01e491f6c48"
+    },
+    {
+      "key": "small_texture",
+      "source": "docs/assets/dragon-packing-search/gap8_seed0_1024/texture/BaseColor_mip0.png",
+      "file": "source-assets\\small_texture.png",
+      "sha256": "6ab0ecb9b20a1c94520645d474a932d93a5d88fe9b106a43067eb9e8a66fcbe9"
+    },
+    {
+      "key": "original_metrics",
+      "source": "docs/assets/dragon-uv-final/measurements.json",
+      "file": "source-assets\\original_metrics.json",
+      "sha256": "82c2ffa50cda94b3f940cd7bd7cf3d264c74062f9ab075e350a7e41db1096238"
+    },
+    {
+      "key": "merge_summary",
+      "source": "docs/assets/dragon-uv-final/experiment-summary.json",
+      "file": "source-assets\\merge_summary.json",
+      "sha256": "3f365f08d02bbf8f4db820fe8fe2f6828a0817985fcac1f6a271fe6eaedcd988"
+    },
+    {
+      "key": "mirror_report",
+      "source": "docs/results/dragon-whole-half-reuse.md",
+      "file": "source-assets\\mirror_report.md",
+      "sha256": "6a7ffa571d33cd3ccb7e129b6a32e5bd875b716f8c31e2e6851ffdd3c182cb5b"
+    },
+    {
+      "key": "packing_summary",
+      "source": "docs/assets/dragon-packing-search/summary.json",
+      "file": "source-assets\\packing_summary.json",
+      "sha256": "f4e4c07cfe1a8500f93cea12ed39b8cbc26496ef093e6a48e76957a726c3db82"
+    },
+    {
+      "key": "final_summary",
+      "source": "docs/assets/dragon-midplane-cleanup/summary.json",
+      "file": "source-assets\\final_summary.json",
+      "sha256": "463d5d6c23f78b8922eddd96a257a1daf95230bd90cdaa0ff851604fede64ca7"
+    },
+    {
+      "key": "final_validation",
+      "source": "docs/assets/dragon-midplane-cleanup/validation.json",
+      "file": "source-assets\\final_validation.json",
+      "sha256": "f78473ead14a326804dfdfb2bf4345559b1072f3a83ed1bd5c1063855a7788a7"
+    },
+    {
+      "key": "regions",
+      "source": "artifacts/meshquery_v1/island_merge01/candidate_regions.json",
+      "file": "source-assets\\regions.json",
+      "sha256": "04391fbd01a1eb15489d6d8364556f8a235ac46d5cb8ea39debf5233410fee2c"
+    },
+    {
+      "key": "old_arrays",
+      "source": "artifacts/meshquery_v1/whole_half_formal_shared01/shared_blender_concave/pack/snapshot/arrays.npz",
+      "file": "source-assets\\old_arrays.npz",
+      "sha256": "ae4e8886ae919bcf1597d1198f936d8108d818b1bf932bed730c5eb89c7bef84"
+    },
+    {
+      "key": "head_arrays",
+      "source": "artifacts/meshquery_v1/island_merge01/component36_blender_abf_apply/snapshot/arrays.npz",
+      "file": "source-assets\\head_arrays.npz",
+      "sha256": "ec9ebcd45b1edbe9dea0b7fa6b6ab443f8e21cef69d0d25110dd5235f46afd6b"
+    },
+    {
+      "key": "foot_arrays",
+      "source": "artifacts/meshquery_v1/island_merge01/sole_reparameterize/snapshot/arrays.npz",
+      "file": "source-assets\\foot_arrays.npz",
+      "sha256": "af788a0d4445f2df965741345ed5cb79603f29f9e386122886409926f739e2be"
+    }
+  ],
+  "text_extraction": "PASS; Chinese and first-page metrics checked",
+  "pdf_sha256": "b32b43847edd330a38199c666593c7347276a9d8f13ca400d5a1fe4ed6fc4343"
+}

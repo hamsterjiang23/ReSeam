@@ -120,4 +120,5 @@ def mirror_asset(request: dict[str, object], output: Path, deadline: float) -> d
             "unshared_snapshot": str(unshared_snapshot.root / "snapshot.json"),
             "variant_root": str(root.root / "snapshot.json"), "reference_glb": str(reference.resolve()),
             "geometry_changed": True, "requires_rebake": True, "final_quality_passed": None,
+            "midplane_review_required": variant.report["midplane_review_required"],
             "report": str((output / "mirror_variant.json").resolve())}

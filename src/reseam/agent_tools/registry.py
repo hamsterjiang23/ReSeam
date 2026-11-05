@@ -8,6 +8,12 @@ from typing import cast
 Handler = Callable[[dict[str, object], Path, float], dict[str, object]]
 
 TOOLS: dict[str, tuple[str, str, str, dict[str, object]]] = {
+    "uv.baseline": ("baselines", "run_baseline", "Run an isolated upstream UV baseline on fixed geometry.",
+                    {"method": "xatlas|blender_smart|optcuts|partuv|flatten_anything",
+                     "seed": "paper defaults: OptCuts=0, PartUV=42; others=17",
+                     "points": "FlattenAnything: 10000; smoke may explicitly use fewer",
+                     "iterations": "FlattenAnything: 10000; smoke >=10",
+                     "note": "raw native output and immutable snapshot; no quality acceptance or automatic repairs; MeshQuery uses mesh/seam tools"}),
     "mesh.index": ("mesh_query", "index_mesh", "Build a snapshot-bound queryable mesh database.",
                    {"ao_rays": "8; integer 0..64; zero explicitly disables AO/thickness and stores NULL",
                     "note": "stable original face/edge IDs; index.json + mesh.db; no geometry or UV changes"}),
@@ -59,6 +65,7 @@ TOOLS: dict[str, tuple[str, str, str, dict[str, object]]] = {
                              {"allow_geometry_change": "required true; upstream variant only, original asset preserved",
                               "axis": "x(default)|y|z", "offset": "finite plane coordinate, default 0",
                               "keep_positive": "true(default); retained side supplies geometry and BaseColor",
+                              "note": "offset is explicit, not inferred symmetry; result midplane_review_required and report midplane_strip_candidates flag near-plane whole-chart strips for visual review, never automatic deletion",
                               "profile": "common packing profile; no automatic quality acceptance"}),
     "asset.import": ("assets", "import_asset", "Freeze geometry, original UV and material sources.",
                      {"path": "required absolute GLB/OBJ/FBX", "reference": "optional opaque PBR GLB",
@@ -126,6 +133,7 @@ TOOLS: dict[str, tuple[str, str, str, dict[str, object]]] = {
                      "repair_packing_roundoff": "false; exclusive action only; bounded explicit target UV correction for new packing conflicts with exactly zero pre-pack intersection; full geometry gates retained"}),
     "uv.pack": ("geometry", "pack_uv", "Pack groups together and recheck exact overlap permissions.",
                 {"density_normalize": True,
+                 "packing_seed": "0(default)..4294967295; blender_concave only; 0 preserves legacy initialization, nonzero permutes master order and rotates intact owners reproducibly",
                  "backend": "rectangles(default)|blender_concave; latter packs representative exact island contours and replays the same similarity on every shared member; requires Blender",
                  "blender": "optional executable for blender_concave",
                  "repair_packing_roundoff": "false; bounded explicit target UV correction only for newly introduced cross-member cells having exactly zero intersection before packing; full geometry gates retained",

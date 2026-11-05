@@ -77,7 +77,7 @@ def _run_blender(argv: list[str], folder: Path, deadline: float) -> float:
 def compact_pack(
     state: BudgetState, resolution: int, *, gap_pixels: float = 4.0, border_pixels: float = 4.0,
     blender: Path, worker: Path, output: Path, deadline: float,
-    fit_tolerance_uv: float = 2e-6,
+    fit_tolerance_uv: float = 2e-6, seed: int = 0,
 ) -> tuple[BudgetState, dict[str, object]]:
     """Pack one master per owner and apply its same similarity to every member.
 
@@ -87,6 +87,8 @@ def compact_pack(
     whose footprint can extend outside their selected master's outline.
     """
     check_deadline(deadline)
+    if isinstance(seed, bool) or not isinstance(seed, int) or not 0 <= seed < 2**32:
+        raise ValueError("INVALID_PACKING_SEED")
     safety_pixels = 2.0
     values = np.asarray([gap_pixels, border_pixels, fit_tolerance_uv], dtype=float)
     if (not np.isfinite(values).all() or min(gap_pixels, border_pixels) < 0
@@ -98,6 +100,9 @@ def compact_pack(
         raise FileNotFoundError("BLENDER_PACK_WORKER_MISSING:" + str(worker))
     owners, members = owners_and_members(state)
     unique_owners = np.unique(owners)
+    rng = np.random.default_rng(seed)
+    if seed:
+        unique_owners = rng.permutation(unique_owners)
     owner_uv: dict[int, IntArray] = {}
     master_faces: list[int] = []
     master_owners: list[int] = []
@@ -135,6 +140,17 @@ def compact_pack(
     if not np.isfinite(extent) or extent <= 0.0:
         raise ValueError("COMPACT_PACK_DEGENERATE_UV")
     normalized = (original_uv - origin) / extent
+    input_uv = normalized.copy()
+    initial_rotations: dict[str, float] = {}
+    if seed:
+        for record in master_records:
+            owner = int(str(record["owner"]))
+            ids = owner_uv[owner]
+            angle = float(rng.uniform(-np.pi, np.pi))
+            rotation = np.array([[np.cos(angle), np.sin(angle)], [-np.sin(angle), np.cos(angle)]])
+            center = input_uv[ids].mean(axis=0)
+            input_uv[ids] = (input_uv[ids] - center) @ rotation + center
+            initial_rotations[str(owner)] = angle
     selected_uv_faces = state.surface.uv_faces[master_faces]
     selected_ids, local_faces = np.unique(selected_uv_faces, return_inverse=True)
     local_faces = local_faces.reshape(-1, 3)
@@ -148,7 +164,7 @@ def compact_pack(
     folder = output / "blender_pack"
     folder.mkdir(parents=True, exist_ok=False)
     input_path = folder / "input.npz"
-    np.savez_compressed(input_path, uv=normalized[selected_ids], faces=local_faces,
+    np.savez_compressed(input_path, uv=input_uv[selected_ids], faces=local_faces,
                         source_faces=np.asarray(master_faces), owners=np.asarray(master_owners))
     request = folder / "request.json"
     write_json(request, {"input": str(input_path.resolve()), "output": str(folder.resolve()),
@@ -204,6 +220,7 @@ def compact_pack(
         "worker_sha256": file_hash(worker), "input_sha256": file_hash(input_path),
         "output_sha256": file_hash(folder / "packed.npz"), "blender": str(blender),
         "backend_seconds": seconds, "owner_count": len(unique_owners), "masters": master_records,
+        "packing_seed": seed, "initial_rotations_radians": initial_rotations,
         "transforms": records, "input_origin": origin.tolist(), "input_extent": extent,
         "common_scale_normalized": common_scale, "final_border_scale": final_scale,
         "common_scale_original_uv": common_scale * final_scale / extent,

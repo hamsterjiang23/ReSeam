@@ -10,7 +10,7 @@ from dataclasses import dataclass
 import numpy as np
 from numpy.typing import NDArray
 
-from ..mesh import make_mesh
+from ..mesh import chart_labels, make_mesh
 from ..types import FloatArray, IntArray, MeshState
 from .state import check_deadline
 
@@ -181,6 +181,18 @@ def build_symmetry_variant(
                 break
     surface = MeshState(mesh, frozenset(seams), np.concatenate((retained_uv, retained_uv)), all_uv_faces)
     count = len(faces)
+    labels = chart_labels(surface)
+    strip_candidates: list[dict[str, object]] = []
+    # Diagnose, never silently delete: a real thin central fin may be intentional.
+    band = source.mesh.scale * 1e-3
+    for label in np.unique(labels[:count]):
+        check_deadline(deadline)
+        selected = np.flatnonzero(labels[:count] == label)
+        points = mesh.vertices[mesh.faces[selected]]
+        depth = float(np.max(np.abs(points[:, :, plane_axis] - plane_offset)))
+        if depth < band:
+            strip_candidates.append({"chart_id": int(label), "retained_face_ids": selected.tolist(),
+                "maximum_plane_distance": depth, "distance_fraction": depth / source.mesh.scale})
     bary = np.asarray(barycentrics, dtype=np.float64)
     pairs = np.column_stack((np.arange(count, dtype=np.int64), np.arange(count, dtype=np.int64) + count))
     report: dict[str, object] = {
@@ -195,6 +207,10 @@ def build_symmetry_variant(
         "midplane_geometry": "disconnected_explicit_source_identities",
         "mirrored_corner_permutation": corner_order, "coordinate_welding": False,
         "retained_area": float(mesh.areas[:count].sum()), "output_area": float(mesh.areas.sum()),
+        "midplane_strip_candidates": strip_candidates,
+        "midplane_review_required": bool(strip_candidates),
+        "midplane_strip_band_fraction": 1e-3,
+        "midplane_strip_policy": "diagnostic candidates, not deletion authorization; inspect plane and source geometry",
     }
     check_deadline(deadline)
     return SymmetryVariant(

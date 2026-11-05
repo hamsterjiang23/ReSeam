@@ -1,0 +1,42 @@
+{
+  "page_count": 10,
+  "landscape_16_9": true,
+  "chinese_extractable": true,
+  "embedded_fonts": {
+    "/AAAAAA+MicrosoftYaHei-Bold-0": true,
+    "/AAAAAB+MicrosoftYaHei-Bold-0": true,
+    "/AAAAAA+MicrosoftYaHei-0": true,
+    "/AAAAAB+MicrosoftYaHei-0": true
+  },
+  "page_previews": 10,
+  "source_hashes_checked": 30,
+  "metric_assertions": "PASS",
+  "uv_chart_assertions": [
+    {
+      "asset": "old_arrays",
+      "faces": 363,
+      "charts": 16
+    },
+    {
+      "asset": "head_arrays",
+      "faces": 363,
+      "charts": 1
+    },
+    {
+      "asset": "old_arrays",
+      "faces": 1198,
+      "charts": 7
+    },
+    {
+      "asset": "foot_arrays",
+      "faces": 1198,
+      "charts": 1
+    }
+  ],
+  "pdf_sha256": "b32b43847edd330a38199c666593c7347276a9d8f13ca400d5a1fe4ed6fc4343",
+  "pdf_bytes": 18962546,
+  "poppler_render": "PASS; all 10 pages at 1600x900",
+  "visual_review": "All pages inspected; source/data labels, image proportions, Chinese text and footnotes checked",
+  "ruff": "PASS",
+  "basedpyright": "PASS with bundled Python dependency path"
+}

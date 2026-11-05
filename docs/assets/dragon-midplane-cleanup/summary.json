@@ -1,0 +1,338 @@
+{
+  "audit": {
+    "old_thin_charts": [
+      {
+        "chart": 1,
+        "faces": 31,
+        "median_triangle_altitude_pixels": 0.43385987152034666
+      },
+      {
+        "chart": 3,
+        "faces": 22,
+        "median_triangle_altitude_pixels": 0.484885840307826
+      },
+      {
+        "chart": 6,
+        "faces": 29,
+        "median_triangle_altitude_pixels": 0.5646033195972379
+      },
+      {
+        "chart": 9,
+        "faces": 29,
+        "median_triangle_altitude_pixels": 0.46054891212075677
+      },
+      {
+        "chart": 41,
+        "faces": 18,
+        "median_triangle_altitude_pixels": 0.45525383398270824
+      },
+      {
+        "chart": 42,
+        "faces": 39,
+        "median_triangle_altitude_pixels": 0.427416135875124
+      },
+      {
+        "chart": 47,
+        "faces": 31,
+        "median_triangle_altitude_pixels": 0.43385987152034666
+      },
+      {
+        "chart": 49,
+        "faces": 22,
+        "median_triangle_altitude_pixels": 0.484885840307826
+      },
+      {
+        "chart": 52,
+        "faces": 29,
+        "median_triangle_altitude_pixels": 0.5646033195972379
+      },
+      {
+        "chart": 55,
+        "faces": 29,
+        "median_triangle_altitude_pixels": 0.46054891212075677
+      },
+      {
+        "chart": 87,
+        "faces": 18,
+        "median_triangle_altitude_pixels": 0.45525383398270824
+      },
+      {
+        "chart": 88,
+        "faces": 39,
+        "median_triangle_altitude_pixels": 0.427416135875124
+      }
+    ],
+    "new_thin_charts": [],
+    "old_thin_face_count": 336,
+    "all_old_thin_faces_removed_by_plane_clip": true,
+    "new_faces": 11338,
+    "new_charts": 80,
+    "shared_groups": 40,
+    "source_geometry_barycentric_error": 2.9592650108156704e-08,
+    "source_uv_barycentric_error": 0.0,
+    "mirror_uv_max_error": 0.0,
+    "independent_union_coverage": 0.6507865459152864,
+    "old_area": 1.4965282205471029,
+    "new_area": 1.4941946416893699,
+    "source_arrays_unchanged": true,
+    "code_hashes_unchanged": true
+  },
+  "variant": {
+    "source_faces": 11450,
+    "retained_source_faces": 5507,
+    "discarded_source_faces": 5943,
+    "clipped_source_faces": 426,
+    "split_source_faces": 162,
+    "coplanar_source_faces": 0,
+    "retained_faces": 5669,
+    "reflected_faces": 5669,
+    "output_faces": 11338,
+    "retained_vertices": 3560,
+    "output_vertices": 7120,
+    "retained_uv_vertices": 3611,
+    "output_uv_vertices": 7222,
+    "plane_axis": 0,
+    "plane_offset": 0.00025,
+    "keep_positive": true,
+    "midplane_geometry": "disconnected_explicit_source_identities",
+    "mirrored_corner_permutation": [
+      0,
+      2,
+      1
+    ],
+    "coordinate_welding": false,
+    "retained_area": 0.7470973170080849,
+    "output_area": 1.4941946340161696,
+    "midplane_strip_candidates": [],
+    "midplane_review_required": false,
+    "midplane_strip_band_fraction": 0.001,
+    "midplane_strip_policy": "diagnostic candidates, not deletion authorization; inspect plane and source geometry",
+    "parent_asset_id": "b6ec411224cad17fb88edae8ec945b3bd12c6fcc7b89575f88fa1b1e91949e95",
+    "variant_asset_id": "a7b1bfc5d1fb43d487904a917624bbc05f8c89d32bf606a502198badb5ff7d31",
+    "parent_state_hash": "1f8b56fb3eebc7a4b36d51d7821dd717f28fcd515abaafac0bdaced7e1b1e682",
+    "float32_position_max_abs_error": 2.9592650108156704e-08,
+    "source_uv_interpolation": "source triangle barycentric; reflected members use retained-side source",
+    "shared_groups": 40,
+    "geometry_changed": true,
+    "original_asset_modified": false,
+    "geometry_validated": false,
+    "quality_accepted": null,
+    "full_pbr_passed": false,
+    "shared_snapshot": {
+      "snapshot": "E:\\ReSem\\artifacts\\meshquery_v1\\midplane_cleanup01\\create\\shared\\snapshot.json",
+      "state_hash": "04cfcb7f36a14090672ab5a038ad432b91bd6362ee8ac909a52466b552ddabc2",
+      "asset_id": "a7b1bfc5d1fb43d487904a917624bbc05f8c89d32bf606a502198badb5ff7d31"
+    },
+    "unshared_snapshot": {
+      "snapshot": "E:\\ReSem\\artifacts\\meshquery_v1\\midplane_cleanup01\\create\\unshared\\snapshot.json",
+      "state_hash": "007c3cc23887010f0676a115d02f20dfcff8e152aaa3478f7dbcfb9b91e85ace",
+      "asset_id": "a7b1bfc5d1fb43d487904a917624bbc05f8c89d32bf606a502198badb5ff7d31"
+    },
+    "variant_root": {
+      "snapshot": "E:\\ReSem\\artifacts\\meshquery_v1\\midplane_cleanup01\\create\\variant_root\\snapshot.json",
+      "state_hash": "543aec76916da5d254d369f830f4255c15df614c57ca69af8a01c88283204643",
+      "asset_id": "a7b1bfc5d1fb43d487904a917624bbc05f8c89d32bf606a502198badb5ff7d31"
+    },
+    "source_reference_glb": "E:\\ReSem\\artifacts\\meshquery_v1\\midplane_cleanup01\\create\\mirrored_source.glb",
+    "source_correspondence": "E:\\ReSem\\artifacts\\meshquery_v1\\midplane_cleanup01\\create\\source_correspondence.npz",
+    "profile": {
+      "resolution": 2048,
+      "gap_pixels": 8,
+      "border_pixels": 8,
+      "correspondence_fraction": 0.005,
+      "normal_angle_degrees": 45.0,
+      "maximum_anisotropy": 2.0,
+      "mean_shape_limit": 0.025,
+      "tail_shape_limit": 0.1,
+      "maximum_density_ratio": 2.0,
+      "quality_constraints": false,
+      "balance_density": false
+    },
+    "scope": "explicit upstream geometry variant, not fixed-geometry UV improvement"
+  },
+  "packing_search": {
+    "cases": [
+      {
+        "label": "seed0",
+        "result": {
+          "snapshot": "E:\\ReSem\\artifacts\\meshquery_v1\\midplane_cleanup01\\seed0\\pack\\snapshot\\snapshot.json",
+          "state_hash": "adc644828e085363c49573ef16a04e362f3390db10ac367d875b55e18046080b",
+          "asset_id": "a7b1bfc5d1fb43d487904a917624bbc05f8c89d32bf606a502198badb5ff7d31",
+          "status": "OK",
+          "execution_success": true,
+          "geometry_passed": true,
+          "hard_geometry_passed": true,
+          "final_quality_passed": null,
+          "requires_rebake": true,
+          "packing_backend": "blender_concave",
+          "report": "E:\\ReSem\\artifacts\\meshquery_v1\\midplane_cleanup01\\seed0\\pack\\geometry.json",
+          "tool": "uv.pack",
+          "wall_seconds": 21.18700000003446,
+          "output": "E:\\ReSem\\artifacts\\meshquery_v1\\midplane_cleanup01\\seed0\\pack"
+        },
+        "unique_coverage": 0.633426909901283,
+        "chart_count": 80,
+        "shared_group_count": 40,
+        "minimum_gap_pixels": 9.951995020581247,
+        "minimum_border_pixels": 10.0,
+        "hard_valid": true
+      },
+      {
+        "label": "seed17",
+        "result": {
+          "snapshot": "E:\\ReSem\\artifacts\\meshquery_v1\\midplane_cleanup01\\seed17\\pack\\snapshot\\snapshot.json",
+          "state_hash": "bb96f7fe98f7eba9b725c0aa4d57bf73ba11dd31d078f89f59472d2ea1e5263a",
+          "asset_id": "a7b1bfc5d1fb43d487904a917624bbc05f8c89d32bf606a502198badb5ff7d31",
+          "status": "OK",
+          "execution_success": true,
+          "geometry_passed": true,
+          "hard_geometry_passed": true,
+          "final_quality_passed": null,
+          "requires_rebake": true,
+          "packing_backend": "blender_concave",
+          "report": "E:\\ReSem\\artifacts\\meshquery_v1\\midplane_cleanup01\\seed17\\pack\\geometry.json",
+          "tool": "uv.pack",
+          "wall_seconds": 30.07799999997951,
+          "output": "E:\\ReSem\\artifacts\\meshquery_v1\\midplane_cleanup01\\seed17\\pack"
+        },
+        "unique_coverage": 0.6492481669395516,
+        "chart_count": 80,
+        "shared_group_count": 40,
+        "minimum_gap_pixels": 10.142058637370392,
+        "minimum_border_pixels": 10.0,
+        "hard_valid": true
+      },
+      {
+        "label": "seed29",
+        "result": {
+          "snapshot": "E:\\ReSem\\artifacts\\meshquery_v1\\midplane_cleanup01\\seed29\\pack\\snapshot\\snapshot.json",
+          "state_hash": "4c9ed778e4b6766116fbf8fb816020688b99088f73ac5b543efc6b4ad8f37c3f",
+          "asset_id": "a7b1bfc5d1fb43d487904a917624bbc05f8c89d32bf606a502198badb5ff7d31",
+          "status": "OK",
+          "execution_success": true,
+          "geometry_passed": true,
+          "hard_geometry_passed": true,
+          "final_quality_passed": null,
+          "requires_rebake": true,
+          "packing_backend": "blender_concave",
+          "report": "E:\\ReSem\\artifacts\\meshquery_v1\\midplane_cleanup01\\seed29\\pack\\geometry.json",
+          "tool": "uv.pack",
+          "wall_seconds": 30.375,
+          "output": "E:\\ReSem\\artifacts\\meshquery_v1\\midplane_cleanup01\\seed29\\pack"
+        },
+        "unique_coverage": 0.6507865459152863,
+        "chart_count": 80,
+        "shared_group_count": 40,
+        "minimum_gap_pixels": 10.323953597443431,
+        "minimum_border_pixels": 9.999999999999886,
+        "hard_valid": true
+      }
+    ]
+  },
+  "quality": {
+    "status": "REJECTED",
+    "execution_success": true,
+    "scope": "basecolor_reuse",
+    "quality_accepted": false,
+    "full_pbr_passed": false,
+    "geometry_valid": true,
+    "material_valid": true,
+    "render_valid": false,
+    "seams_valid": true,
+    "validation": "E:\\ReSem\\artifacts\\meshquery_v1\\midplane_cleanup01\\seed29\\validate\\validation.json",
+    "payload_bytes": 22369620,
+    "geometry_profile": {
+      "resolution": 2048,
+      "gap_pixels": 8.0,
+      "border_pixels": 8.0,
+      "correspondence_fraction": 0.1,
+      "normal_angle_degrees": 180.0,
+      "maximum_anisotropy": 2.0,
+      "mean_shape_limit": 0.025,
+      "tail_shape_limit": 0.1,
+      "maximum_density_ratio": 2.0,
+      "quality_constraints": false,
+      "preserve_source_uv": {
+        "snapshot": "E:\\ReSem\\artifacts\\meshquery_v1\\midplane_cleanup01\\create\\variant_root\\snapshot.json",
+        "state_hash": "543aec76916da5d254d369f830f4255c15df614c57ca69af8a01c88283204643"
+      }
+    },
+    "geometry_profile_hash": "e063cc3ed9ff4eff12a1c48166fbcc2371ef616da2ea04323a5f9e64ef0d191a",
+    "geometry_policy": "explicit_custom",
+    "strict_geometry_profile_applied": false,
+    "artist_reviewed": false,
+    "tool": "quality.validate",
+    "wall_seconds": 170.5779999999795,
+    "output": "E:\\ReSem\\artifacts\\meshquery_v1\\midplane_cleanup01\\seed29\\validate"
+  },
+  "coverage": 0.6507865459152863,
+  "minimum_gap_pixels": 10.323953597443431,
+  "payload_bytes": 22369620,
+  "png_mip_bytes": 4596933,
+  "reimport": {
+    "position_error": 0.0,
+    "corner_uv_error": 4.4585514613615373e-08,
+    "embedded_pixels_equal": true
+  },
+  "calls": [
+    {
+      "path": "create\\result.json",
+      "tool": "asset.mirror_variant",
+      "status": "OK",
+      "seconds": 7.702999999979511
+    },
+    {
+      "path": "seed0\\pack\\result.json",
+      "tool": "uv.pack",
+      "status": "OK",
+      "seconds": 21.18700000003446
+    },
+    {
+      "path": "seed17\\pack\\result.json",
+      "tool": "uv.pack",
+      "status": "OK",
+      "seconds": 30.07799999997951
+    },
+    {
+      "path": "seed29\\bake\\result.json",
+      "tool": "material.bake",
+      "status": "OK",
+      "seconds": 51.18700000003446
+    },
+    {
+      "path": "seed29\\export\\result.json",
+      "tool": "asset.export",
+      "status": "OK",
+      "seconds": 2.797000000020489
+    },
+    {
+      "path": "seed29\\pack\\result.json",
+      "tool": "uv.pack",
+      "status": "OK",
+      "seconds": 30.375
+    },
+    {
+      "path": "seed29\\target\\result.json",
+      "tool": "material.target",
+      "status": "OK",
+      "seconds": 2.9839999999385327
+    },
+    {
+      "path": "seed29\\validate\\result.json",
+      "tool": "quality.validate",
+      "status": "REJECTED",
+      "seconds": 170.5779999999795
+    },
+    {
+      "path": "seed29\\views\\result.json",
+      "tool": "view.render",
+      "status": "OK",
+      "seconds": 4.375
+    }
+  ],
+  "tool_seconds": 321.2639999999665,
+  "scope": "new mirrored geometry variant; UV+BaseColor",
+  "full_pbr_passed": false,
+  "gpu_verified": false,
+  "human_accepted": false
+}
