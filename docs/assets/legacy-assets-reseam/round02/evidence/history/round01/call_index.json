@@ -1,0 +1,3804 @@
+{
+  "calls": [
+    {
+      "asset": "chloe",
+      "label": "chloe\\controls\\unshare_1a391d96c7",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.172000000020489,
+      "source_result_sha256": "a5e0256d006da131da27a44d30855ad9d293a94df0277389780889628e0ba19f",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\controls\\unshare_1a391d96c7\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\controls\\unshare_23cea8a630",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.2349999999860302,
+      "source_result_sha256": "b597302ed25f53161bd7ea0f6cd803c76bee1143796cc795263837ea2dcf1d42",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\controls\\unshare_23cea8a630\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\controls\\unshare_final",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.187000000034459,
+      "source_result_sha256": "31b48cc1b92de9eb05c3685d653a7e4a85f49a77357bef28412c068b30441d85",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\controls\\unshare_final\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\fixed\\approximate",
+      "status": "REJECTED",
+      "reason": "SURFACE_CORRESPONDENCE_REJECTED",
+      "seconds": 1.0929999999934807,
+      "source_result_sha256": "0f7e0849fe16c2aa92975b3eac822e22a7f0ca6d622fd6140ffd054be150e037",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\fixed\\approximate\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\fixed\\exact",
+      "status": "REJECTED",
+      "reason": "SURFACE_CORRESPONDENCE_REJECTED",
+      "seconds": 1.0940000000409782,
+      "source_result_sha256": "45ec9750b1649960fe6c907849871512c45324fd0f3db9a6385047db95b35beb",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\fixed\\exact\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\merge\\blender_abf",
+      "status": "REJECTED",
+      "reason": "REPARAMETERIZATION_GEOMETRY_REJECTED",
+      "seconds": 1.6410000000614673,
+      "source_result_sha256": "f262b8fe28253c49e52806265d8bb24688abf07b6a76426b714ed8eac01661d7",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\merge\\blender_abf\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\merge\\blender_lscm",
+      "status": "REJECTED",
+      "reason": "REPARAMETERIZATION_GEOMETRY_REJECTED",
+      "seconds": 1.702999999979511,
+      "source_result_sha256": "976b229b4efd6fff83c7908dd5b2619a3911524b497fb7171c1237905958ee7b",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\merge\\blender_lscm\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\merge\\harmonic",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.172000000020489,
+      "source_result_sha256": "4175d9d9456580bbece582f6942cc62465b457c603e366d1451be5354a81a88c",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\merge\\harmonic\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\merge\\harmonic_apply",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.577999999979511,
+      "source_result_sha256": "aa8278f59671a8780001e5eb4714adc4f3f871e5ccf1e4d9f3c6d41cc57c6e5c",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\merge\\harmonic_apply\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\merge\\harmonic_final\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.4070000000065193,
+      "source_result_sha256": "21734e600e3eba7d0966efc0f8dc81aa6d8757a8ce56ad0fe2ccc92e32adb786",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\merge\\harmonic_final\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\merge\\harmonic_final\\uv_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.7660000000614673,
+      "source_result_sha256": "cbf36767ff33c549a9fb076b919921317422ee788b39b0a7bd26577cbf1ae2d4",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\merge\\harmonic_final\\uv_views\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\merge\\harmonic_pair",
+      "status": "OK",
+      "reason": null,
+      "seconds": 2.219000000040978,
+      "source_result_sha256": "f75350737e1b0a044d286e14e02d267dbcbda65a40aea233a16368b5f741b69a",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\merge\\harmonic_pair\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\merge\\optcuts",
+      "status": "OK",
+      "reason": null,
+      "seconds": 11.265999999945052,
+      "source_result_sha256": "4833803ee1cfd6a0f8b16aa5d85b76b35cebe52147828a63da5df368c39b3a09",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\merge\\optcuts\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\merge\\optcuts_pair",
+      "status": "REJECTED",
+      "reason": "EXACT_TOPOLOGY_NOT_MATCHED",
+      "seconds": 1.3119999999180436,
+      "source_result_sha256": "4e2b91887cd7900cdd65b0138e1f8ad2fdbaf9b27ffb096efa2fc55f1b38efca",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\merge\\optcuts_pair\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\merge\\optcuts_topology_apply",
+      "status": "OK",
+      "reason": null,
+      "seconds": 2.7660000000614673,
+      "source_result_sha256": "057feef2f1d35b04da61971a927775f6a24343c01cd8702702321d0c4c949098",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\merge\\optcuts_topology_apply\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\merge\\optcuts_topology_pair",
+      "status": "OK",
+      "reason": null,
+      "seconds": 4.140999999945052,
+      "source_result_sha256": "f32a61966b34c5617616d263d35f79a9f77ea652e03308c05e42bfe659d2470d",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\merge\\optcuts_topology_pair\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\merge\\topology_final\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 2.5160000000614673,
+      "source_result_sha256": "930cceb832a99a686f520bea90e325833e575e42e2afe11100764209ff512424",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\merge\\topology_final\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\merge\\topology_final\\uv_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 3.0,
+      "source_result_sha256": "9cbc21ff463bd06bff1450eb3c315594524d8b26caa1e89713cbfc30ea154daf",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\merge\\topology_final\\uv_views\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\merge\\unshare",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.125,
+      "source_result_sha256": "190c7aed828fd6656f5ad6a5cbdfe3633063781bd83ada2355f9766543d1a981",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\merge\\unshare\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\merge_x\\final\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.4070000000065193,
+      "source_result_sha256": "b881ef4fa470b4798548b29777c3f5c03642473a044c882e807f7e300f721fe4",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\merge_x\\final\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\merge_x\\final\\uv_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.562000000034459,
+      "source_result_sha256": "5486d17448daccc5581b622a3f0a3e0568bfb1f90794f11007560c442ac92311",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\merge_x\\final\\uv_views\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\merge_x\\harmonic",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.0940000000409782,
+      "source_result_sha256": "8b33f792248255bf2d322796fbdfac186e55dac472b55f872068c5fea478b3d5",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\merge_x\\harmonic\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\merge_x\\harmonic_apply",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.547000000020489,
+      "source_result_sha256": "8d08877aa848b21de9f3f4fcc08c541978347b67771abb82a733b30242676097",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\merge_x\\harmonic_apply\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\merge_x\\harmonic_exact",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.875,
+      "source_result_sha256": "7eac3bd2500131d58c8898509b2684407b6588cd41f37e30469c5e27e651c58e",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\merge_x\\harmonic_exact\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\merge_x\\unshare",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.062999999965541,
+      "source_result_sha256": "3783dfe634dc31f19ac11f18717200bed83116820ab9389cea9ff745af2956cd",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\merge_x\\unshare\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror\\create",
+      "status": "OK",
+      "reason": null,
+      "seconds": 0.9689999999245629,
+      "source_result_sha256": "49f19fa03bf67cc491f79bc4b9efc52495276b5e31f59675d3a5ac3fa9e400bb",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror\\create\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.25,
+      "source_result_sha256": "c7443eac34fdb8563ecd26820b874cdf33e02670522a42130a65fc2aff6ce1ec",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror\\uv_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.5940000000409782,
+      "source_result_sha256": "d1830615ac09877d4bb71a88efc2e75aa7c47973129fca48479f9818312b790c",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror\\uv_views\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared\\128\\pack_17",
+      "status": "REJECTED",
+      "reason": "COMPACT_PACK_REQUIRES_SINGLE_MASTER_CHART:6",
+      "seconds": 0.9220000000204891,
+      "source_result_sha256": "7c3110f7f0035ffdaa2c614c1ef98462e8073062bb0f5d0de2d11732680d07e6",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared\\128\\pack_17\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared\\128\\pack_29",
+      "status": "REJECTED",
+      "reason": "COMPACT_PACK_REQUIRES_SINGLE_MASTER_CHART:6",
+      "seconds": 0.9379999999655411,
+      "source_result_sha256": "7fe6a89b22d9e5776b8cefac840f37bd399eb98ad3d764da5279b74cdd8a5f97",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared\\128\\pack_29\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared\\128\\pack_43",
+      "status": "REJECTED",
+      "reason": "COMPACT_PACK_REQUIRES_SINGLE_MASTER_CHART:6",
+      "seconds": 0.9220000000204891,
+      "source_result_sha256": "a5780d65efca6ed315fc2dfa3a7413b722be63350b6b1c6d2e7257db288188ce",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared\\128\\pack_43\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared\\256\\pack_17",
+      "status": "REJECTED",
+      "reason": "COMPACT_PACK_REQUIRES_SINGLE_MASTER_CHART:6",
+      "seconds": 0.9690000000409782,
+      "source_result_sha256": "c820475729eca5ec1a7e6aeab17c9f86a4a0c7238637f4cc91ef1b25898c65e6",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared\\256\\pack_17\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared\\256\\pack_29",
+      "status": "REJECTED",
+      "reason": "COMPACT_PACK_REQUIRES_SINGLE_MASTER_CHART:6",
+      "seconds": 0.9059999999590218,
+      "source_result_sha256": "eaed5231009d0383226e2adb41b00d986a9bf80f6c07774960472da20f79671b",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared\\256\\pack_29\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared\\256\\pack_43",
+      "status": "REJECTED",
+      "reason": "COMPACT_PACK_REQUIRES_SINGLE_MASTER_CHART:6",
+      "seconds": 1.0150000000139698,
+      "source_result_sha256": "893f64730dbb339d339f4d25c4de40994db5499cbebfba5872c35cc3ef83ed48",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared\\256\\pack_43\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared\\64\\pack_17",
+      "status": "REJECTED",
+      "reason": "COMPACT_PACK_REQUIRES_SINGLE_MASTER_CHART:6",
+      "seconds": 0.9379999999655411,
+      "source_result_sha256": "7681b80c503ddc5fb12c3670e722b43ac6ea473da43b43e3ba8f0da76844fe33",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared\\64\\pack_17\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared\\64\\pack_29",
+      "status": "REJECTED",
+      "reason": "COMPACT_PACK_REQUIRES_SINGLE_MASTER_CHART:6",
+      "seconds": 0.9370000000344589,
+      "source_result_sha256": "90abdee277794ffb6e67186e1d55375883c8d57bb13c9e5aaf264379c274ee31",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared\\64\\pack_29\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared\\64\\pack_43",
+      "status": "REJECTED",
+      "reason": "COMPACT_PACK_REQUIRES_SINGLE_MASTER_CHART:6",
+      "seconds": 0.9529999999795109,
+      "source_result_sha256": "317e5ab4f8868c5f1a6b8e3c439c7cde2aaec2f61a5d4886e86757c76259badb",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared\\64\\pack_43\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared\\color_tolerance",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.015999999945052,
+      "source_result_sha256": "f84b36bc8864b73bd98d3940b80b8b82ffef75f5a670cc67d9f6b8b7ce4c2b41",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared\\color_tolerance\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared\\frozen_target",
+      "status": "OK",
+      "reason": null,
+      "seconds": 0.9529999999795109,
+      "source_result_sha256": "a1543984b37894ce1df24b915c52d46fcb39b201fdf18e8557e28e2f5526cd19",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared\\frozen_target\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared\\source_target_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.702999999979511,
+      "source_result_sha256": "b68b00c4b8e5c5885e27e53ebc3496bb68640b941d7e7b7edcc84d5af5d42594",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared\\source_target_views\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_final\\128\\bake",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.734000000054948,
+      "source_result_sha256": "dda631f71dd800199c7667d472b49cafd1a5188fa5c6918f1083ea756d3cc2d3",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_final\\128\\bake\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_final\\128\\color_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 2.1880000000819564,
+      "source_result_sha256": "e75dcb4e1fbc314989b26125bbb296768bdad33f65c830cdbe471247007b539e",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_final\\128\\color_views\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_final\\128\\export",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.1559999999590218,
+      "source_result_sha256": "72a43547b275642fd82d206c5c2bc85c448b66ee5cbb54209f1c81b44996ed50",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_final\\128\\export\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_final\\128\\final\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.3599999999860302,
+      "source_result_sha256": "e1baa86397c3af38685229d7a845acefdfafdc70681acf6d979420db677c99a1",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_final\\128\\final\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_final\\128\\final\\uv_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.6869999999180436,
+      "source_result_sha256": "5f8decd847fb8a4cbc909eed8f3129b7e874f7302f9454631554f24ca767812c",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_final\\128\\final\\uv_views\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_final\\128\\inspect_17\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.3589999999385327,
+      "source_result_sha256": "5a57e12b24cdc4181fb5d939d086ce343f001c80c52510e8605e22d01f663991",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_final\\128\\inspect_17\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_final\\128\\inspect_29\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.3440000000409782,
+      "source_result_sha256": "ae390803a54f37cbd110a30df8828c8da53c4ead0138f8f8a5aba0358b3bc8ab",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_final\\128\\inspect_29\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_final\\128\\inspect_43\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.375,
+      "source_result_sha256": "0c9a9e7965dde99cb0efb5a256cee0335ad58a262937ed2ddadd491f33a1aa43",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_final\\128\\inspect_43\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_final\\128\\pack_17",
+      "status": "OK",
+      "reason": null,
+      "seconds": 2.0780000000959262,
+      "source_result_sha256": "355e9b50dc1e6703bdc112dc74644e310d09b49a58255263ccd31259670c2236",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_final\\128\\pack_17\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_final\\128\\pack_29",
+      "status": "OK",
+      "reason": null,
+      "seconds": 2.0929999999934807,
+      "source_result_sha256": "894504e455b1fb1548ab4fb380e175380b5e1316ffdac1e2dfefce5a1c268651",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_final\\128\\pack_29\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_final\\128\\pack_43",
+      "status": "OK",
+      "reason": null,
+      "seconds": 2.172000000020489,
+      "source_result_sha256": "f36bdd1c5c168861eef60040138b4dff2c275710bde437d3f4acadfba3c27ed2",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_final\\128\\pack_43\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_final\\128\\quality",
+      "status": "REJECTED",
+      "reason": null,
+      "seconds": 4.797000000020489,
+      "source_result_sha256": "9e91161ee9b9785534d2c1583f6edaadec33840d547e995e9925228f38904e2b",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_final\\128\\quality\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_final\\256\\bake",
+      "status": "OK",
+      "reason": null,
+      "seconds": 2.077999999979511,
+      "source_result_sha256": "fdbc1f1a855e08d6b6e24ff6a347e97565b3f99d758c1a79977d4f808743ac34",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_final\\256\\bake\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_final\\256\\color_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 2.10999999998603,
+      "source_result_sha256": "05d3274bcf68b714f9bbf90e294b14cff5995c1c93eb76997696834c5d85f12e",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_final\\256\\color_views\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_final\\256\\export",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.109000000054948,
+      "source_result_sha256": "941666dc5a12e19762ed6622e21d9266bd97c059807e6fb89a6e50f504d246fe",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_final\\256\\export\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_final\\256\\final\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.3440000000409782,
+      "source_result_sha256": "23bc6027c0d91eb393761d360a2c76c0a05f3d9d9f54cb8ea606f91d5519c011",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_final\\256\\final\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_final\\256\\final\\uv_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.609000000054948,
+      "source_result_sha256": "239434de5480799146b226024f1ced265f8d57564d3e3a0a54545a543c896c93",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_final\\256\\final\\uv_views\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_final\\256\\inspect_17\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.390999999945052,
+      "source_result_sha256": "896bafa99e07464fe87c887582c7d8ecc7170ae362c8973f6f30f61e8652250b",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_final\\256\\inspect_17\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_final\\256\\inspect_29\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.3290000000270084,
+      "source_result_sha256": "e5fe73f1356313eaacb743d30793800d91b940f97e238a186b44dfb89b034a05",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_final\\256\\inspect_29\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_final\\256\\inspect_43\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.327999999979511,
+      "source_result_sha256": "b9d8f8d10fd3dc22fc64694bdb411d378e9fd59997e7507b6e1b7895e419d289",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_final\\256\\inspect_43\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_final\\256\\pack_17",
+      "status": "OK",
+      "reason": null,
+      "seconds": 2.0780000000959262,
+      "source_result_sha256": "734c760b6922b226e6790b53bf82d4234959d11f195ca41118742f0e4db83a50",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_final\\256\\pack_17\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_final\\256\\pack_29",
+      "status": "OK",
+      "reason": null,
+      "seconds": 2.202999999979511,
+      "source_result_sha256": "619765ae6718710b78732009a1b641f565837d3ff6657e22b2168f87a89eb410",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_final\\256\\pack_29\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_final\\256\\pack_43",
+      "status": "OK",
+      "reason": null,
+      "seconds": 2.0929999999934807,
+      "source_result_sha256": "cad7ae8ffe2bcfcda5b591e42442a5b0d30550c7c98d5e05330374f8c2e6d2ed",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_final\\256\\pack_43\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_final\\256\\quality",
+      "status": "REJECTED",
+      "reason": null,
+      "seconds": 5.797000000020489,
+      "source_result_sha256": "19bab0ac6972fca5585670cc9de3332989bbca64e733348b08b94b93e23aa519",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_final\\256\\quality\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_final\\64\\bake",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.640999999945052,
+      "source_result_sha256": "a91263afb78c5b61fb6dce6d2108cf1ebdedb7a4415b409278258520190b9235",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_final\\64\\bake\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_final\\64\\color_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 2.031000000075437,
+      "source_result_sha256": "761398f63900380237020afd75dfc8aacb64c081d5ba75a77e06fb6cf1af475b",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_final\\64\\color_views\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_final\\64\\export",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.172000000020489,
+      "source_result_sha256": "cb2b57e0baa65f83aa9e3fdaf8650d6d561067b561dd233ba363bc94ff5b4900",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_final\\64\\export\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_final\\64\\final\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.375,
+      "source_result_sha256": "3755cf91fcac2b64362fb54383ce0aa422e8872f394e3b649233b17ab2dcadb1",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_final\\64\\final\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_final\\64\\final\\uv_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.6559999999590218,
+      "source_result_sha256": "ac9e054084325c51cb057d5790d3c185f3ce85a261da31f58379fab2cf8bc767",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_final\\64\\final\\uv_views\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_final\\64\\inspect_17\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.390999999945052,
+      "source_result_sha256": "a196556173f9335fd5738559f81d7fedf0041098ca01bf6a12aa12874965d81b",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_final\\64\\inspect_17\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_final\\64\\inspect_29\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.4059999999590218,
+      "source_result_sha256": "bf3c0db25f2b935af6d0aedb27966dd03fd2443ee1914860889ef0d58974d63a",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_final\\64\\inspect_29\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_final\\64\\inspect_43\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.375,
+      "source_result_sha256": "d83b2262ecc8e9e93d47246a46d9d642f63e9174706c3d2ea24369563a829dee",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_final\\64\\inspect_43\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_final\\64\\pack_17",
+      "status": "OK",
+      "reason": null,
+      "seconds": 2.25,
+      "source_result_sha256": "64a31092288e68eb761302c4eafc6782e892216ba92a86ac73449c675f72086a",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_final\\64\\pack_17\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_final\\64\\pack_29",
+      "status": "OK",
+      "reason": null,
+      "seconds": 2.1719999999040738,
+      "source_result_sha256": "7232a7d5e8fcaa9c65dea08499ec4ecda380eef119f81982d57431f680d4b56a",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_final\\64\\pack_29\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_final\\64\\pack_43",
+      "status": "OK",
+      "reason": null,
+      "seconds": 2.187999999965541,
+      "source_result_sha256": "1c94ca58d89a3d442ef36bac2626aa6415bbcd6c554107b7df6e4dd49c863058",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_final\\64\\pack_43\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_final\\64\\quality",
+      "status": "REJECTED",
+      "reason": null,
+      "seconds": 3.843999999924563,
+      "source_result_sha256": "82899437688cfe334435dae405bb06ecb8c3e495f23e7a03245aaa6ece3866cc",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_final\\64\\quality\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_final\\color_tolerance",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.0160000000614673,
+      "source_result_sha256": "61d494419824b7bb9fbd406d1e88f8efb9521188b2d4668282914488b0cfa6da",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_final\\color_tolerance\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_final\\frozen_target",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.0,
+      "source_result_sha256": "a29cbd9ca0eeb9778fb3729b9cfe1407b8df04a261b91b1b5b160ecb0f95f38b",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_final\\frozen_target\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_final\\source_target_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.640999999945052,
+      "source_result_sha256": "493596aa792432b890075bcae0c8cf3222cc2eb0535e7717ce06005b623c7824",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_final\\source_target_views\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_x_final\\128\\bake",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.7650000000139698,
+      "source_result_sha256": "5793ed074e9a1552aef6d510809e33f705f142e4ae3572010a389808deb4dcb1",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_x_final\\128\\bake\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_x_final\\128\\color_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 2.093999999924563,
+      "source_result_sha256": "01a98689ad5777bb76530c83c983e42e20a13055d4f422b713b88d9164d56367",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_x_final\\128\\color_views\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_x_final\\128\\export",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.1559999999590218,
+      "source_result_sha256": "6f3dfa238dafc42787af078b8d5c96e04006375ba0cca9714392e15803acf737",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_x_final\\128\\export\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_x_final\\128\\final\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.437000000034459,
+      "source_result_sha256": "d6114de26d2b8be2253359ab825c70d3ba5ebae711abc59f8b6d7dd019c5d64c",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_x_final\\128\\final\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_x_final\\128\\final\\uv_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.625,
+      "source_result_sha256": "adbeda9133b5e1800437a7b5bbea9af72843e32825f7b4b2e1bffadaa932f5f2",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_x_final\\128\\final\\uv_views\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_x_final\\128\\inspect_17\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.437000000034459,
+      "source_result_sha256": "8c1273b2a3f812db07a512dbc4abec4bc25cf22bd27edef8a9139c91f763e2f7",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_x_final\\128\\inspect_17\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_x_final\\128\\inspect_29\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.3900000000139698,
+      "source_result_sha256": "afd87001caee186707915623f59b6f4107806e7d31b0ea0322127e11b5d5a1a3",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_x_final\\128\\inspect_29\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_x_final\\128\\inspect_43\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.375,
+      "source_result_sha256": "0875f496ba1becd036b3e15d47d94e335c44749e49d821e423084cc2097fb4bf",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_x_final\\128\\inspect_43\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_x_final\\128\\pack_17",
+      "status": "OK",
+      "reason": null,
+      "seconds": 2.0790000000270084,
+      "source_result_sha256": "9ada5eaa46ede5b29758574a62d42c29d591b76916be44ade82488c861dcfe54",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_x_final\\128\\pack_17\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_x_final\\128\\pack_29",
+      "status": "OK",
+      "reason": null,
+      "seconds": 2.1410000000614673,
+      "source_result_sha256": "e9e49f0b2df7a97632fb2c6a4cc669d8c04eaf4654fdeaa0472ccf15175eae5b",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_x_final\\128\\pack_29\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_x_final\\128\\pack_43",
+      "status": "OK",
+      "reason": null,
+      "seconds": 2.1880000000819564,
+      "source_result_sha256": "91fc19e1f7dd0a64d1891aaac53b4c53b7232f3719a6cd723bccde420391bb88",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_x_final\\128\\pack_43\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_x_final\\128\\quality",
+      "status": "REJECTED",
+      "reason": null,
+      "seconds": 5.077999999979511,
+      "source_result_sha256": "763df28aa2658c6169dacc749d1d159e44dc8eaf5b86fd2caa1920c833a62606",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_x_final\\128\\quality\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_x_final\\256\\bake",
+      "status": "OK",
+      "reason": null,
+      "seconds": 2.0,
+      "source_result_sha256": "9bd89cb3603fbcf4ed7736cde7f68c454ae1b56b8b9a93f844f7f2cfbf50024e",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_x_final\\256\\bake\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_x_final\\256\\color_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.875,
+      "source_result_sha256": "4d406cc46d28127989169881f979eec19cb8a05e454d34491ec7de73035a6b24",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_x_final\\256\\color_views\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_x_final\\256\\export",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.0940000000409782,
+      "source_result_sha256": "fb79c9c2bf4f8a949510705991cb83d7fea9bee1618168110f5c89b906c0d66f",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_x_final\\256\\export\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_x_final\\256\\final\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.3119999999180436,
+      "source_result_sha256": "44f906ebdd64534f596a0935d8a89b46dc656ed299f670ca452c079722971ec0",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_x_final\\256\\final\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_x_final\\256\\final\\uv_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.562000000034459,
+      "source_result_sha256": "76ef6630a33e802033cc58c65c316e2c1821432ee9d444f25d071eea7158edb3",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_x_final\\256\\final\\uv_views\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_x_final\\256\\inspect_17\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.3280000000959262,
+      "source_result_sha256": "e36d034daf08d4e32346204caa2282335e45bb5af96aab2d547520fc3d71cf22",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_x_final\\256\\inspect_17\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_x_final\\256\\inspect_29\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.312000000034459,
+      "source_result_sha256": "96506ae98c426f5227ac77ed21a8d7cf983d081ed3b9980316dfa4395a070795",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_x_final\\256\\inspect_29\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_x_final\\256\\inspect_43\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.327999999979511,
+      "source_result_sha256": "002832eaa4448e484b99edb78988a1e2e4487b3e134400e84df7e8618ac5e47e",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_x_final\\256\\inspect_43\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_x_final\\256\\pack_17",
+      "status": "OK",
+      "reason": null,
+      "seconds": 2.156000000075437,
+      "source_result_sha256": "ea69c58ccd5bd56e391a9ba9cf199b5b8dcf4ebe16c1df60dc6b4260aa74b982",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_x_final\\256\\pack_17\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_x_final\\256\\pack_29",
+      "status": "OK",
+      "reason": null,
+      "seconds": 2.1089999999385327,
+      "source_result_sha256": "f40c08cf3cbbc4bccaa6d2e16abc020c1e0ecec18d2c5a918f0c4c8109738160",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_x_final\\256\\pack_29\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_x_final\\256\\pack_43",
+      "status": "OK",
+      "reason": null,
+      "seconds": 2.094000000040978,
+      "source_result_sha256": "bea2aad31d7c3689e9b6da1d2ff69cd36d572c963102d0bcd4b086b598a15e51",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_x_final\\256\\pack_43\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_x_final\\256\\quality",
+      "status": "REJECTED",
+      "reason": null,
+      "seconds": 5.952999999979511,
+      "source_result_sha256": "851983ef3df6a73909f0c19ffa7b3ad1616bc9b9459f5265df17430881710349",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_x_final\\256\\quality\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_x_final\\64\\bake",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.5929999999934807,
+      "source_result_sha256": "3e253baef8d061fc1e1de6eafa9affe5fb3d6748b7df82459d8d0f6b4172d5bb",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_x_final\\64\\bake\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_x_final\\64\\color_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 2.01500000001397,
+      "source_result_sha256": "4c7488e51f011b9701fd22835515293252105235b1ef583b0944d200655a6b51",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_x_final\\64\\color_views\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_x_final\\64\\export",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.187999999965541,
+      "source_result_sha256": "19d1b564c9fdc8647c8c2db90e916d9f40ce8f8df62435cc8c626a19f8dcec14",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_x_final\\64\\export\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_x_final\\64\\final\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.3439999999245629,
+      "source_result_sha256": "74b5d5167358f5f25d78318042e911f08b46a2b9ed167addffa81b3a9c84da7b",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_x_final\\64\\final\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_x_final\\64\\final\\uv_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.5459999999729916,
+      "source_result_sha256": "fa5c0c5efffd61ebf762e675bcb31f9b880f926aca1290ce33a059bade622797",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_x_final\\64\\final\\uv_views\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_x_final\\64\\inspect_17\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.4530000000959262,
+      "source_result_sha256": "4069e6ec6cd31be6a73d1b0d1ac655e372c83814df9d5f405fb7c425288588fc",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_x_final\\64\\inspect_17\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_x_final\\64\\inspect_29\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.390999999945052,
+      "source_result_sha256": "1601d08d9ce0504eadc26fb4b8b1892a4694863264a8537713ac36034c7bd844",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_x_final\\64\\inspect_29\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_x_final\\64\\inspect_43\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.422000000020489,
+      "source_result_sha256": "8b47e0b21dc12d5ee822c2a7221aef7cbca3bca49fa3c6b49dd122dfcd26b5d5",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_x_final\\64\\inspect_43\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_x_final\\64\\pack_17",
+      "status": "OK",
+      "reason": null,
+      "seconds": 2.343999999924563,
+      "source_result_sha256": "729582262a8308568ea96d7a2139624bbafe2cd94e765b63b3b21f71ce0d78ea",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_x_final\\64\\pack_17\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_x_final\\64\\pack_29",
+      "status": "OK",
+      "reason": null,
+      "seconds": 2.280999999959022,
+      "source_result_sha256": "306e78ff8b80252fc4eb886b58f7be655f3ec1fa6a97716c67f14c3fe9844473",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_x_final\\64\\pack_29\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_x_final\\64\\pack_43",
+      "status": "OK",
+      "reason": null,
+      "seconds": 2.2820000000065193,
+      "source_result_sha256": "47dc4de4e419ebdeab571a635e0ec286cf36f1d94d85b84d8c17e130e7f570e3",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_x_final\\64\\pack_43\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_x_final\\64\\quality",
+      "status": "REJECTED",
+      "reason": null,
+      "seconds": 3.812999999965541,
+      "source_result_sha256": "26ee7a48a32ab0c7267617af39f6bae4be2c85f1de08b467e8bb86d0ec38ace4",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_x_final\\64\\quality\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_x_final\\color_tolerance",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.0310000000754371,
+      "source_result_sha256": "62d0e56a4aeb521e221f3fb6eb0bcb7acb24e9141e86fea5edb84d18af5f73ad",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_x_final\\color_tolerance\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_x_final\\frozen_target",
+      "status": "OK",
+      "reason": null,
+      "seconds": 0.9839999999385327,
+      "source_result_sha256": "928f60dcdf8c4426d269d2550cb9bb1f35c46c269d2a4bdaaa8b33cf8091a187",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_x_final\\frozen_target\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_shared_x_final\\source_target_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.609000000054948,
+      "source_result_sha256": "53a45c5f8b85aa26f6e3cdb229643b6da56b1a435e434bd915938e73ce17e15b",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_shared_x_final\\source_target_views\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared\\128\\bake",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.734000000054948,
+      "source_result_sha256": "9fdf8034b12d7328018d687117042087f166f0a4fc9b2b2ce0190034e11ac27e",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared\\128\\bake\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared\\128\\color_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 2.0,
+      "source_result_sha256": "239e0323147f3dbe5269a9eae043c38845de780a8846816353e3aebd437afcda",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared\\128\\color_views\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared\\128\\export",
+      "status": "OK",
+      "reason": null,
+      "seconds": 0.9839999999385327,
+      "source_result_sha256": "af9ba852a3983ee437041391d5761ab49cf860cadbd6d18b06be32c413d33b9e",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared\\128\\export\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared\\128\\final\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.077999999979511,
+      "source_result_sha256": "1dddd70138c332ea2e3e80dd1183a7a31480cbdb05f562b8cd2fd4f510e362ca",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared\\128\\final\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared\\128\\final\\uv_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.5790000000270084,
+      "source_result_sha256": "e6fa42cfa1226a5330e87061d0fc6faed1a0c740d5ce108794a4177a9155f1db",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared\\128\\final\\uv_views\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared\\128\\inspect_17\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.0940000000409782,
+      "source_result_sha256": "96be906332233f55a6aac5863dece925164908385d728d6c0b8de2e178b85175",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared\\128\\inspect_17\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared\\128\\inspect_29\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.0940000000409782,
+      "source_result_sha256": "8c634ad8ea7a1c5ef59e6e1f637367b223b0d893ae684a84dfd5dc26e44a607c",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared\\128\\inspect_29\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared\\128\\inspect_43\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.0940000000409782,
+      "source_result_sha256": "a87f2ca88d450512af3a5c070d7f64daa313638a22d0e7f3a32c1b8ef7586fe4",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared\\128\\inspect_43\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared\\128\\pack_17",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.9070000000065193,
+      "source_result_sha256": "f89aac18774716d6c260fedd43520e19571dd8bec5fcf49c57e4e9dec18be84a",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared\\128\\pack_17\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared\\128\\pack_29",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.8910000000614673,
+      "source_result_sha256": "09f8a8664a4da67c658cac756f35e9e46e145c6ecb83f91b9c61cfa3ec9db096",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared\\128\\pack_29\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared\\128\\pack_43",
+      "status": "OK",
+      "reason": null,
+      "seconds": 2.077999999979511,
+      "source_result_sha256": "463bf0560ad3e76ef7e6a8929e21a0b69377cffef0aa0d55aabb0b80a69f3f68",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared\\128\\pack_43\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared\\128\\quality",
+      "status": "REJECTED",
+      "reason": null,
+      "seconds": 3.984000000054948,
+      "source_result_sha256": "d8217b7baf7fbf9061d87f0883b9fbfae857a4714bc2698472eb9df1759fb4c7",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared\\128\\quality\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared\\256\\bake",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.937000000034459,
+      "source_result_sha256": "bccbb1bfa780cdcee68dd33b13fa403e9878b360da870a8af4b5a43431c12496",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared\\256\\bake\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared\\256\\color_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 2.030999999959022,
+      "source_result_sha256": "eed0534b5ab36dcaca1ca94e07faf43498076d3e49e6fcb30971680aac665613",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared\\256\\color_views\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared\\256\\export",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.0,
+      "source_result_sha256": "a7f9bd0ac05803239b8d5bf3adb360c7a8d14c0d7d61641f775c95ffc0ff6e84",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared\\256\\export\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared\\256\\final\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.1570000000065193,
+      "source_result_sha256": "19b8ddb202f48e46fa01a1976fcb48e0b03902ddf8bee08cc52559b767db8219",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared\\256\\final\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared\\256\\final\\uv_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.672000000020489,
+      "source_result_sha256": "acd59fcf675ca3a53e9957764a3243d049fbf39a42b54acbc2cc355bf75bac38",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared\\256\\final\\uv_views\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared\\256\\inspect_17\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.1560000000754371,
+      "source_result_sha256": "91d8ec40b94a4728e583d5baac6ed2f1ae816e17426d5f39be0cddf38918db53",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared\\256\\inspect_17\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared\\256\\inspect_29\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.125,
+      "source_result_sha256": "c79e27ef4d12d91d6db93360b75a526461be92a22d818ea25a68235a08b28f5a",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared\\256\\inspect_29\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared\\256\\inspect_43\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.1400000000139698,
+      "source_result_sha256": "2a86a73c3610c822467290bc99d94af380f98dc6d36bbfb4950ef3bf98ec181a",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared\\256\\inspect_43\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared\\256\\pack_17",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.9059999999590218,
+      "source_result_sha256": "c7e61e7bc9637b2e3ea407b317c970509f26c353ff40162ddb7efa07161bd762",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared\\256\\pack_17\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared\\256\\pack_29",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.875,
+      "source_result_sha256": "48d591ebcfc1828d702c103e29e13fb700f25c6a9b757ae19549c563644c89fa",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared\\256\\pack_29\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared\\256\\pack_43",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.859000000054948,
+      "source_result_sha256": "d91251205719d0bfdf945983714d7dcea39356cf0efe2107d0f7a2f705f39d3c",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared\\256\\pack_43\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared\\256\\quality",
+      "status": "REJECTED",
+      "reason": null,
+      "seconds": 5.062999999965541,
+      "source_result_sha256": "30c6c6e0d291e7a1eb46d48f3b28502614fac98f3f10e400bd92fa0a32930e41",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared\\256\\quality\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared\\64\\bake",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.4679999999934807,
+      "source_result_sha256": "f2d0013ff206e79381d2d3c314e5b156c8c357c7919878ca2e0b7d4cc10d67b2",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared\\64\\bake\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared\\64\\color_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 2.0469999999040738,
+      "source_result_sha256": "2e3788577536306b0c3e8f243693de131546bc6ef1c5aecfe4fb122e0b16d06e",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared\\64\\color_views\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared\\64\\export",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.1400000000139698,
+      "source_result_sha256": "5ee6db4426c63d6462860530876edd81a2f16626ef72fc899aea02f6cb6b0b40",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared\\64\\export\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared\\64\\final\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.0940000000409782,
+      "source_result_sha256": "28cb9f27e8f62cd8bb040976e09ff18ca6a45809ac842a0aba59b636cccaa76e",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared\\64\\final\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared\\64\\final\\uv_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.6089999999385327,
+      "source_result_sha256": "b659d2b748272d4b80526eac7d2100821de88c453b27a35b0522bdff5f99c7d6",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared\\64\\final\\uv_views\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared\\64\\inspect_17\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.0780000000959262,
+      "source_result_sha256": "eb25e47fbfbf7daa159361e414fa7b3f625d797d2edd06b480c71dee6fc81376",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared\\64\\inspect_17\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared\\64\\inspect_29\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.077999999979511,
+      "source_result_sha256": "09fdcd68f33659056e3343450dc0eee0b5634b1ceeda2409fcbc78ea344d1742",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared\\64\\inspect_29\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared\\64\\inspect_43\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.1099999999860302,
+      "source_result_sha256": "7b3dd562feacff514f0d73458f678f177a392a578b1d3edd8580a8c7bdccfa84",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared\\64\\inspect_43\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared\\64\\pack_17",
+      "status": "OK",
+      "reason": null,
+      "seconds": 2.01500000001397,
+      "source_result_sha256": "883763f86d4d8e5476ca29d3fe3e1c999a5d614e71e83aaabc83d6d2f445bff3",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared\\64\\pack_17\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared\\64\\pack_29",
+      "status": "OK",
+      "reason": null,
+      "seconds": 2.0790000000270084,
+      "source_result_sha256": "5b8da142f434b174852053a5c2f2b098869f0d445c1d764f79baebe62f777a21",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared\\64\\pack_29\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared\\64\\pack_43",
+      "status": "OK",
+      "reason": null,
+      "seconds": 2.030999999959022,
+      "source_result_sha256": "89033bae51687a9c0ac44e04b7e55fdbe241de6d98072daa5450a472bd711797",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared\\64\\pack_43\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared\\64\\quality",
+      "status": "REJECTED",
+      "reason": null,
+      "seconds": 5.282000000006519,
+      "source_result_sha256": "709ac6282d0128047bb8b4b633c6232bbf6c9cd1b214bf714e3206cd5cb2a373",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared\\64\\quality\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared\\color_tolerance",
+      "status": "OK",
+      "reason": null,
+      "seconds": 0.9060000000754371,
+      "source_result_sha256": "dd541dfbb082ede5c445e478961798ea31299621c77b3a7269de809223d185f0",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared\\color_tolerance\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared\\frozen_target",
+      "status": "OK",
+      "reason": null,
+      "seconds": 0.9059999999590218,
+      "source_result_sha256": "994bc1166895a1663e3356ff91b0ac2c972e4b1f1fa78bedf3679d862404fe97",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared\\frozen_target\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared\\source_target_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.7189999999245629,
+      "source_result_sha256": "05170ce1667459b5b8d1d47614228949442ae1a1882ff294832ce171d51cfa29",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared\\source_target_views\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_final\\128\\bake",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.562000000034459,
+      "source_result_sha256": "d769392f933f80e4c445802b9d2e7bd4fdc4260172ba3edcc7ec49fa3ded5ce4",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_final\\128\\bake\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_final\\128\\color_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 2.0459999999729916,
+      "source_result_sha256": "1196928477c4e96762af3f80c38f54b2466e5a7edd985330e4ece210a13edfc3",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_final\\128\\color_views\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_final\\128\\export",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.0,
+      "source_result_sha256": "6017de7db02a1a24e0827c94226f17822104a1dbd272f1421305a442a89a97e1",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_final\\128\\export\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_final\\128\\final\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.1410000000614673,
+      "source_result_sha256": "af9114ea2c3b2cf021cdd487718bfdd38a15c77350f9286f468c1557affa4f6a",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_final\\128\\final\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_final\\128\\final\\uv_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.6400000000139698,
+      "source_result_sha256": "2f26e65156f2e46fa46435e1b2f14496acc65c5bb1786fd17db87fbbe7999a9f",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_final\\128\\final\\uv_views\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_final\\128\\inspect_17\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.125,
+      "source_result_sha256": "aefe4bb885bbbd98a286583ef94708602f231e3faed32642b80a61842ada5fcb",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_final\\128\\inspect_17\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_final\\128\\inspect_29\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.1570000000065193,
+      "source_result_sha256": "e4e7daabb960326fa1de4f3452cdd274a961c824cb8acdf1e6192ade2c3755ec",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_final\\128\\inspect_29\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_final\\128\\inspect_43\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.2179999999934807,
+      "source_result_sha256": "eb1c58fc49e9f68903994a617cfca169766f7be84bcffc717c1fe4eb7b81d73e",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_final\\128\\inspect_43\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_final\\128\\pack_17",
+      "status": "OK",
+      "reason": null,
+      "seconds": 3.797000000020489,
+      "source_result_sha256": "fc13b9d44b1cc8e2ef071d16a8c9e487ed615248e668121663e17b9b7b9ffa1c",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_final\\128\\pack_17\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_final\\128\\pack_29",
+      "status": "OK",
+      "reason": null,
+      "seconds": 3.51500000001397,
+      "source_result_sha256": "7b3fe03a384a9ff3c598642fd5c1e618eb97cec5dc29a0fae8473ce2fb767b43",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_final\\128\\pack_29\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_final\\128\\pack_43",
+      "status": "OK",
+      "reason": null,
+      "seconds": 3.2179999999934807,
+      "source_result_sha256": "18799d1d4ed8d42b4978c5d573d0aa7c1164d6a1f798a384832475842fba0625",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_final\\128\\pack_43\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_final\\128\\quality",
+      "status": "REJECTED",
+      "reason": null,
+      "seconds": 3.797000000020489,
+      "source_result_sha256": "120a2e0c95bf054b25dcc73975d6158219aea5e0de633ea7dda76b3e6014c04d",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_final\\128\\quality\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_final\\256\\bake",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.8119999999180436,
+      "source_result_sha256": "5a07190c086ad518a7055f305912a5e95924520c9983adf2cc0f959383829ccc",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_final\\256\\bake\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_final\\256\\color_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 2.0,
+      "source_result_sha256": "f5c08afb8deb13b70cabe3fe5740c342afaa8decab790b3034c5e7a045a2b883",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_final\\256\\color_views\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_final\\256\\export",
+      "status": "OK",
+      "reason": null,
+      "seconds": 0.9540000000270084,
+      "source_result_sha256": "c38b0845b3d630e54f928a20f926485e3321b71f84e48eea1736ddb5ff46c77a",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_final\\256\\export\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_final\\256\\final\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.0939999999245629,
+      "source_result_sha256": "6ea4fd2060b34c904ab6924c57307e60f002ae771981354af91fb9bd63d22e57",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_final\\256\\final\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_final\\256\\final\\uv_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.5469999999040738,
+      "source_result_sha256": "93c91a077dc34719b4a7035abca71349375d5bb01fcdd0121d6339bbb153e4fd",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_final\\256\\final\\uv_views\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_final\\256\\inspect_17\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.109000000054948,
+      "source_result_sha256": "f58eec7ef921b6feedcd9b0a3d65c79623e76134c8ab086c49f6824838c26619",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_final\\256\\inspect_17\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_final\\256\\inspect_29\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.109000000054948,
+      "source_result_sha256": "49200ecdbd355c8e7580b0eb7fff52c8895892d4305c5bdc6e737ee7d65773db",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_final\\256\\inspect_29\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_final\\256\\inspect_43\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.0780000000959262,
+      "source_result_sha256": "888102cf5abfb9700b5c42c99cd0591566ffd553d92c83d49b3f3cecac5f7bc9",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_final\\256\\inspect_43\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_final\\256\\pack_17",
+      "status": "OK",
+      "reason": null,
+      "seconds": 3.0,
+      "source_result_sha256": "e65061251157b51514b1c265ce132a58d1d9b06351700b5c982ca2be8eae3052",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_final\\256\\pack_17\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_final\\256\\pack_29",
+      "status": "OK",
+      "reason": null,
+      "seconds": 4.407000000006519,
+      "source_result_sha256": "f0c553ccf44cc0434f77ffea135bd04aa810e37c8974a65dc42f67598988ebac",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_final\\256\\pack_29\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_final\\256\\pack_43",
+      "status": "OK",
+      "reason": null,
+      "seconds": 3.937999999965541,
+      "source_result_sha256": "2bd6a7ffedf13b4ab3ba2149db86e87a80db9ffbdefa1173db9a32f9b85a963f",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_final\\256\\pack_43\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_final\\256\\quality",
+      "status": "REJECTED",
+      "reason": null,
+      "seconds": 4.827999999979511,
+      "source_result_sha256": "b0f82c5876b8343d7d022a0c1c3d50716046537ffd3f3420dd605b0983808050",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_final\\256\\quality\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_final\\64\\bake",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.3900000000139698,
+      "source_result_sha256": "24aa2686809dc346ba805f35d3f4457590914aaefe87b51cb09fbefeba8197cb",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_final\\64\\bake\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_final\\64\\color_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 2.015999999945052,
+      "source_result_sha256": "2cb24e11312a0d2a45cd6a678f10fe19f68580e20fa85daa7901f00231bb662b",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_final\\64\\color_views\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_final\\64\\export",
+      "status": "OK",
+      "reason": null,
+      "seconds": 0.9690000000409782,
+      "source_result_sha256": "073eba4f38e5ac731727381e941e778735a5059893a5d9ae342a0a63d7e6bb13",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_final\\64\\export\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_final\\64\\final\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.0929999999934807,
+      "source_result_sha256": "90115a81a7864afd8777e433d8d3203fa2acc776cd63a3fe18145dea02d0fd94",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_final\\64\\final\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_final\\64\\final\\uv_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.562999999965541,
+      "source_result_sha256": "d1f3147afddab66ea1169d950fc1ea6c0848872f6bf020fb9478e3ca35da6169",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_final\\64\\final\\uv_views\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_final\\64\\inspect_17\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.1400000000139698,
+      "source_result_sha256": "5ba1a680f462be5185234e6138b01ca9f1b9aec3e3ecb9d7ca2a0882ad066b0a",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_final\\64\\inspect_17\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_final\\64\\inspect_29\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.140999999945052,
+      "source_result_sha256": "e4c1ba278f5d0758aea6e53e3527f9081c479260ab2c5a23fc349a9989894ef5",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_final\\64\\inspect_29\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_final\\64\\inspect_43\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.077999999979511,
+      "source_result_sha256": "a2f3c7984c2c69dfcbfc53cb48c39ca63c1c479ecb51331abbf36a26757946d1",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_final\\64\\inspect_43\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_final\\64\\pack_17",
+      "status": "OK",
+      "reason": null,
+      "seconds": 3.5,
+      "source_result_sha256": "2138709d4e32d4732e5f4dca619b781ae961eccd9a7204fed3fb09e327b52fd8",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_final\\64\\pack_17\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_final\\64\\pack_29",
+      "status": "OK",
+      "reason": null,
+      "seconds": 2.969000000040978,
+      "source_result_sha256": "aebec22c2142451c17ed0a993c97b5bb5974619f4c63cd8e15fbac9e850b5711",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_final\\64\\pack_29\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_final\\64\\pack_43",
+      "status": "OK",
+      "reason": null,
+      "seconds": 2.672000000020489,
+      "source_result_sha256": "8f44946d7df756c77f3ab02a0a4c97e2b2319450be396573223de6a9460405d5",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_final\\64\\pack_43\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_final\\64\\quality",
+      "status": "REJECTED",
+      "reason": null,
+      "seconds": 3.1410000000614673,
+      "source_result_sha256": "2f4cbe07f0943f0762a8dff2259831be228f187c93ff668e2710c36f98e622bf",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_final\\64\\quality\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_final\\color_tolerance",
+      "status": "OK",
+      "reason": null,
+      "seconds": 0.9060000000754371,
+      "source_result_sha256": "90895b09ad2bf81dd4ada51c5d5a9e14389ae68613de80fec1c727da95a24c61",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_final\\color_tolerance\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_final\\frozen_target",
+      "status": "OK",
+      "reason": null,
+      "seconds": 0.9220000000204891,
+      "source_result_sha256": "a399575475fd004982d2856b04c757096b0e0f05dd7b17570280a1c232c0918b",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_final\\frozen_target\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_final\\source_target_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.5940000000409782,
+      "source_result_sha256": "40013db317b2ae6b73849cf658cca8a308e17b299ae199f405e35a281065330f",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_final\\source_target_views\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_x_final\\128\\bake",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.5929999999934807,
+      "source_result_sha256": "bc130cee02afbce70bcbe53ea41f7afcb71c83c9f5cb3e665aef207f4f43916d",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_x_final\\128\\bake\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_x_final\\128\\color_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 2.062000000034459,
+      "source_result_sha256": "19ff35ab9fb87b08c920ce751f0ea91841ae96c263a350698b1ee0141ec049ea",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_x_final\\128\\color_views\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_x_final\\128\\export",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.109000000054948,
+      "source_result_sha256": "d20ce33a7882733315087aa6e8a39d69ba632b563e25d00c8a317ced92eafb39",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_x_final\\128\\export\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_x_final\\128\\final\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.1559999999590218,
+      "source_result_sha256": "78149039fbbc58327c0f5e01242d3710584905b9f3756eff59cefc0d99528632",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_x_final\\128\\final\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_x_final\\128\\final\\uv_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.5469999999040738,
+      "source_result_sha256": "fec3f51c95e1fa3d1ba0b030622dbff6486b41ec6c6a67d6d463014886609744",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_x_final\\128\\final\\uv_views\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_x_final\\128\\inspect_17\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.0780000000959262,
+      "source_result_sha256": "530dde87022895d0bebd9127eceb7a44cf9d47e0de6105b1aa5d8e6f6419bfe1",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_x_final\\128\\inspect_17\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_x_final\\128\\inspect_29\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.125,
+      "source_result_sha256": "57e69e280584b4a2710fe855a6aac5637222e840653f5508ad5b65de50020353",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_x_final\\128\\inspect_29\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_x_final\\128\\inspect_43\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.125,
+      "source_result_sha256": "838038546e88976cc0b0bb2173609ad447190c01a44d3af56f471e51f679ecea",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_x_final\\128\\inspect_43\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_x_final\\128\\pack_17",
+      "status": "OK",
+      "reason": null,
+      "seconds": 2.422000000020489,
+      "source_result_sha256": "95d7cd6ac40c73ca38e18c56bce63d2bba1af72c48332a2585198672bd8086e5",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_x_final\\128\\pack_17\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_x_final\\128\\pack_29",
+      "status": "OK",
+      "reason": null,
+      "seconds": 2.5,
+      "source_result_sha256": "a1b2ae5c646a1c8b13f0cb30b2d8c991edc385cf5b4eb6449124466f1eed782f",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_x_final\\128\\pack_29\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_x_final\\128\\pack_43",
+      "status": "OK",
+      "reason": null,
+      "seconds": 2.702999999979511,
+      "source_result_sha256": "7717dd3f200a33ed811f74e491196dc169633b2d2cf4faf8cadd28d80022ed55",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_x_final\\128\\pack_43\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_x_final\\128\\quality",
+      "status": "REJECTED",
+      "reason": null,
+      "seconds": 3.906000000075437,
+      "source_result_sha256": "591d0ab407e35d2a9f3648831c0d8f4685bcddc9b928ed44a2ae0d0c04ed7402",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_x_final\\128\\quality\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_x_final\\256\\bake",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.797000000020489,
+      "source_result_sha256": "77801573e537e2cebfe0c9b2b6574715fcffbefc134ffbbbb79e2cbdab1407cb",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_x_final\\256\\bake\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_x_final\\256\\color_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.8440000000409782,
+      "source_result_sha256": "e5db6200d76b18008d0535782bd6b772c45cbb0dc808d66bb615be7f442b710a",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_x_final\\256\\color_views\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_x_final\\256\\export",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.015999999945052,
+      "source_result_sha256": "2c07d7e52d309d6bfd920558cb5552c7bd513bcacfe4d188630bdd9f19ff323e",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_x_final\\256\\export\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_x_final\\256\\final\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.062000000034459,
+      "source_result_sha256": "a401f2cad5696272eb2b1c896c895b120e8fffb9054bed64431d417a3be8122d",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_x_final\\256\\final\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_x_final\\256\\final\\uv_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.5,
+      "source_result_sha256": "a0bf8541ed8e73c34009b14a2e58ec616445af5fde6f9cceac083db9eedc1386",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_x_final\\256\\final\\uv_views\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_x_final\\256\\inspect_17\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.172000000020489,
+      "source_result_sha256": "2346a00f3b79567634623266dcf321b8ee7ed5e714f0d93cd557dd51e9e810f3",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_x_final\\256\\inspect_17\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_x_final\\256\\inspect_29\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.109000000054948,
+      "source_result_sha256": "5a122677948d8359ac6b81549da1dc25f7c6f7ee9814d4649abca76dc5b30311",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_x_final\\256\\inspect_29\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_x_final\\256\\inspect_43\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.077999999979511,
+      "source_result_sha256": "132d73fbea904770d1c8aac20392eee624f5f60ad5b6389bca07465276faaee4",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_x_final\\256\\inspect_43\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_x_final\\256\\pack_17",
+      "status": "OK",
+      "reason": null,
+      "seconds": 2.906000000075437,
+      "source_result_sha256": "53f1f3787d6e08505de6d63caf684928e3de451a0cf78058ffceed86840263dc",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_x_final\\256\\pack_17\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_x_final\\256\\pack_29",
+      "status": "OK",
+      "reason": null,
+      "seconds": 2.9839999999385327,
+      "source_result_sha256": "f992a1dbf8ea3403fd0913828ab2174f04faae65c819987849b0359980ef8b95",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_x_final\\256\\pack_29\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_x_final\\256\\pack_43",
+      "status": "OK",
+      "reason": null,
+      "seconds": 2.202999999979511,
+      "source_result_sha256": "8588548b7eed3b3e629d038d4c9212d510b3ec7238365842173c230fe483b42b",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_x_final\\256\\pack_43\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_x_final\\256\\quality",
+      "status": "REJECTED",
+      "reason": null,
+      "seconds": 4.780999999959022,
+      "source_result_sha256": "795d86ffbb49670d719879570f5bbf661c21507b95a7f96b89c5484388e4b933",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_x_final\\256\\quality\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_x_final\\64\\bake",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.5619999999180436,
+      "source_result_sha256": "61e8d0d5aad651d9a38bb03822aca8e612f938dbfc21c040a8c8b47fb532bbbd",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_x_final\\64\\bake\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_x_final\\64\\color_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.9070000000065193,
+      "source_result_sha256": "dae46ac633b3b671b49b848cb4e88ad71891a308e54d39d21c036cf3d9884238",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_x_final\\64\\color_views\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_x_final\\64\\export",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.0,
+      "source_result_sha256": "ca5397f8aa88e941d13ea23cc03b1eb03e53d7f4e810497189943a6e1bb1ed50",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_x_final\\64\\export\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_x_final\\64\\final\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.4849999999860302,
+      "source_result_sha256": "90db9c12cacea207a0965ffcc3778fa7de513f0b5541a45977601f2703370cfa",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_x_final\\64\\final\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_x_final\\64\\final\\uv_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.6099999999860302,
+      "source_result_sha256": "8750e1a199a9e96ee285ce9299952b5c369f47b153364a37821185fb51f1c2b8",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_x_final\\64\\final\\uv_views\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_x_final\\64\\inspect_17\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.187000000034459,
+      "source_result_sha256": "00f84897341981932df8db6e63c7ed07e9ea141933910cf2e2d204f7c36152a9",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_x_final\\64\\inspect_17\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_x_final\\64\\inspect_29\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.202999999979511,
+      "source_result_sha256": "73e6eae971b6e0b55e5df7e0378c75841bd2bdbfc79c793ea0a04c226e24a819",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_x_final\\64\\inspect_29\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_x_final\\64\\inspect_43\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.2349999999860302,
+      "source_result_sha256": "c4e5575c5c48ac3fcc565a785f06869a7485388e1fabe21732bb36acdf2adf2d",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_x_final\\64\\inspect_43\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_x_final\\64\\pack_17",
+      "status": "OK",
+      "reason": null,
+      "seconds": 2.6410000000614673,
+      "source_result_sha256": "4393ec44f4225f6d852529e795d666a8450bdcb7c46bc5d53dd8822f938e849a",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_x_final\\64\\pack_17\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_x_final\\64\\pack_29",
+      "status": "OK",
+      "reason": null,
+      "seconds": 2.577999999979511,
+      "source_result_sha256": "2e08512daa494becc8af68e2a585bd8a34b0c3271b14babb19225a2031e078f9",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_x_final\\64\\pack_29\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_x_final\\64\\pack_43",
+      "status": "OK",
+      "reason": null,
+      "seconds": 3.094000000040978,
+      "source_result_sha256": "18bffe740fe2c0f886fa6297f138baaaacf42441fbcb166c7d93453f25b27536",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_x_final\\64\\pack_43\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_x_final\\64\\quality",
+      "status": "REJECTED",
+      "reason": null,
+      "seconds": 3.4530000000959262,
+      "source_result_sha256": "05135ce7ab0f22c6b40a1ec20632ebe3941af7c764828d5220f031d52b1dbecb",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_x_final\\64\\quality\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_x_final\\color_tolerance",
+      "status": "OK",
+      "reason": null,
+      "seconds": 0.875,
+      "source_result_sha256": "3729c2bd2e12c94d5ebc47adce44269b70d02010c6b7b5cb1ac870d00e9f1a5f",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_x_final\\color_tolerance\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_x_final\\frozen_target",
+      "status": "OK",
+      "reason": null,
+      "seconds": 0.875,
+      "source_result_sha256": "0c50736a00af1cae0d528639847863152bbb2ca19a434db4c0e004ce5b015748",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_x_final\\frozen_target\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_unshared_x_final\\source_target_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.4690000000409782,
+      "source_result_sha256": "c3784de644fa948031bfc8c9c248850c014ef44f53e395ff25e6106c0e154aaa",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_unshared_x_final\\source_target_views\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_x\\create",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.0,
+      "source_result_sha256": "a01c4f088d2747bf2549122271287e097736e94b86048964ded0eccf6b637490",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_x\\create\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_x\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.2810000000754371,
+      "source_result_sha256": "43a671ccdced338e93a2a18eebadaa095538d24020729d15d07bddace72fc956",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_x\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_x\\source_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.422000000020489,
+      "source_result_sha256": "e33bedcc79e0b2ed7c8e87675a37c5bdf064afefc9975c85bc16164c1ed8d242",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_x\\source_views\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\mirror_x\\uv_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.547000000020489,
+      "source_result_sha256": "2e9b2279f7b395e397af146e95f34ea98b7ee46e8c2d4a89b579473a895d57a1",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\mirror_x\\uv_views\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\optcuts\\128\\bake",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.547000000020489,
+      "source_result_sha256": "e347e12f66952772f3714bd75648b6a5cb6da4c9173a94a9728fd268a609dbb8",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\optcuts\\128\\bake\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\optcuts\\128\\color_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.952999999979511,
+      "source_result_sha256": "90a2444ee0dcb7e61249655167a5357328c3ba544ea5852962797c41cb084bc5",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\optcuts\\128\\color_views\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\optcuts\\128\\export",
+      "status": "OK",
+      "reason": null,
+      "seconds": 0.984000000054948,
+      "source_result_sha256": "7a2c58e6419fbccc3a0bbed4904cbb0dc496e124033d28bfeaebdcf40f7e9c93",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\optcuts\\128\\export\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\optcuts\\128\\final\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.0780000000959262,
+      "source_result_sha256": "1c73a4037b6f9828ac4eaf60f77e6d69c3bc84e47126b7140adecb622447327a",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\optcuts\\128\\final\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\optcuts\\128\\final\\uv_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.5939999999245629,
+      "source_result_sha256": "57b88d41cea0e6b44413f4253db050d3b7de3d3c18728689bbb117b666b3357c",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\optcuts\\128\\final\\uv_views\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\optcuts\\128\\inspect_17\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.062999999965541,
+      "source_result_sha256": "e415914559e89c562e4cbaa858b93f3e50a737af046711c3ffd2f1676578e4cb",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\optcuts\\128\\inspect_17\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\optcuts\\128\\inspect_29\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.077999999979511,
+      "source_result_sha256": "a67f20ec4ae02b802fb715fd9a69e7b26c66a8b826354c8a3fa1b8bde7ae1099",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\optcuts\\128\\inspect_29\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\optcuts\\128\\inspect_43\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.0929999999934807,
+      "source_result_sha256": "6ee01694eb8419a8b2bc8818f7c306d9982ba90a2e9f6c25c5fe82015c3dadd5",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\optcuts\\128\\inspect_43\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\optcuts\\128\\pack_17",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.952999999979511,
+      "source_result_sha256": "6b596639f17a6eb902a3a31218c993b4fce18d4490411f176f8d05d325f1c9da",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\optcuts\\128\\pack_17\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\optcuts\\128\\pack_29",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.9219999999040738,
+      "source_result_sha256": "17a7e8fa0b958d2fd9bf19b09e973de3e55d120bf4a4d5bd24ae8f6a31a0b7b7",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\optcuts\\128\\pack_29\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\optcuts\\128\\pack_43",
+      "status": "OK",
+      "reason": null,
+      "seconds": 2.01500000001397,
+      "source_result_sha256": "76e09a8b44276af95ed3457ebda166469e84f6985499a851e9195e06832f67f3",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\optcuts\\128\\pack_43\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\optcuts\\128\\quality",
+      "status": "REJECTED",
+      "reason": null,
+      "seconds": 3.48499999998603,
+      "source_result_sha256": "999f03633a839749ac887bebf808d33f287492167f1d9bc3a8cbcd42d1de4758",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\optcuts\\128\\quality\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\optcuts\\256\\bake",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.734000000054948,
+      "source_result_sha256": "ee8d9163ee795db9fcd14c05e6886b281c1d2aebe2ea93aee5987363f5599d2b",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\optcuts\\256\\bake\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\optcuts\\256\\color_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 2.0630000000819564,
+      "source_result_sha256": "7df81395d5c18489613c87925c244bdd311e769b1e8cbc5202050b5249876e7d",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\optcuts\\256\\color_views\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\optcuts\\256\\export",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.047000000020489,
+      "source_result_sha256": "0da40c4c73cb494732b849d8d04c8be6a0f8e23909ad26f7275dd653b8af7722",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\optcuts\\256\\export\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\optcuts\\256\\final\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.0790000000270084,
+      "source_result_sha256": "c5f2b1d8c96117f3d80c321a196f4d42671164e8ba49ee33054d98b39dd23d94",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\optcuts\\256\\final\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\optcuts\\256\\final\\uv_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.625,
+      "source_result_sha256": "919fed9992b550b96a2e24a1f415b375222a670133f80ee2130260833004eb73",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\optcuts\\256\\final\\uv_views\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\optcuts\\256\\inspect_17\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.0929999999934807,
+      "source_result_sha256": "c094106cf6ba131d7f57fe4c89fe25ecf582af45565fcfad36b593bfe7144430",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\optcuts\\256\\inspect_17\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\optcuts\\256\\inspect_29\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.1559999999590218,
+      "source_result_sha256": "de76b1b2eb8f0ab0a3a171a8584b985d143b62125b20dcae5796c2a395fe5b32",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\optcuts\\256\\inspect_29\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\optcuts\\256\\inspect_43\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.1089999999385327,
+      "source_result_sha256": "f3a8af6395e367e0525450c0f150249d5186ca70919712c81d272b45918f0902",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\optcuts\\256\\inspect_43\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\optcuts\\256\\pack_17",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.937000000034459,
+      "source_result_sha256": "b883a2d57ff33f9bb2dabda944ac87687075f472c13f8044c468f15a8ae49b1b",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\optcuts\\256\\pack_17\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\optcuts\\256\\pack_29",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.984000000054948,
+      "source_result_sha256": "1ce3366e2fb80921c91f83b588073bbf0d06d52ad00adc94dd77a1c0e9217caf",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\optcuts\\256\\pack_29\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\optcuts\\256\\pack_43",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.9849999999860302,
+      "source_result_sha256": "b3cad7a74a5ce3fd338c2d3e90d0822ef52e818fc72254db471137693389c3b7",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\optcuts\\256\\pack_43\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\optcuts\\256\\quality",
+      "status": "REJECTED",
+      "reason": null,
+      "seconds": 4.48499999998603,
+      "source_result_sha256": "1b3584596dfa18fb6d50eb5a8befa7dc1df0e3ce137ec268202380bf8d551c50",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\optcuts\\256\\quality\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\optcuts\\64\\bake",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.390999999945052,
+      "source_result_sha256": "8111719cc48e4226db931c91ed3a8b0b5d82fcf972ced80950a07e0ff9b20229",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\optcuts\\64\\bake\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\optcuts\\64\\color_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 2.0320000000065193,
+      "source_result_sha256": "0865127f27f200ed54091000f2d7f4189aaa5682b4885d1ad1942833eace61c8",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\optcuts\\64\\color_views\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\optcuts\\64\\export",
+      "status": "OK",
+      "reason": null,
+      "seconds": 0.984000000054948,
+      "source_result_sha256": "f5bb3d5187e715ec3382fb52fcbb831e8dc91e08c0c989a86cd497551545ecf4",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\optcuts\\64\\export\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\optcuts\\64\\final\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.047000000020489,
+      "source_result_sha256": "b0618b9f3b8983ec8142de1a9df478b049ab17478e7522f392eb2b5bb443b061",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\optcuts\\64\\final\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\optcuts\\64\\final\\uv_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.5939999999245629,
+      "source_result_sha256": "a82825b7209b0397daddf36ff0dcb760ca67b8de0b42da0e1b69fe534d06500a",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\optcuts\\64\\final\\uv_views\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\optcuts\\64\\inspect_17\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.047000000020489,
+      "source_result_sha256": "74504ebfb4e72db6b85359d33581bb8b5cef28dfedaada97823e777c4f478cfb",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\optcuts\\64\\inspect_17\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\optcuts\\64\\inspect_29\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.077999999979511,
+      "source_result_sha256": "7d810bafd637f05b2b48b803c05b73688d36123b49a4fb158f94c87bbfca086c",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\optcuts\\64\\inspect_29\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\optcuts\\64\\inspect_43\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.0309999999590218,
+      "source_result_sha256": "e22f1104a90fdaee35fcf5f025baab9cf214fdced315d3541e697de586ff1b4c",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\optcuts\\64\\inspect_43\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\optcuts\\64\\pack_17",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.984000000054948,
+      "source_result_sha256": "d684a3af14ac5740645d6dafbd3c7ddc3251ec8ab513939457d73ea4eebb7a33",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\optcuts\\64\\pack_17\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\optcuts\\64\\pack_29",
+      "status": "OK",
+      "reason": null,
+      "seconds": 2.0,
+      "source_result_sha256": "f0d09774d16514b1d8c6f3986a78ee0f6011b2d90ef80d8d22c4da4db5b18552",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\optcuts\\64\\pack_29\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\optcuts\\64\\pack_43",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.9849999999860302,
+      "source_result_sha256": "6cfd6c6ae9a024af761e2a47581da1d239b00f8d8533870820190f7762bd3955",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\optcuts\\64\\pack_43\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\optcuts\\64\\quality",
+      "status": "REJECTED",
+      "reason": null,
+      "seconds": 3.0,
+      "source_result_sha256": "1648318585e8790e1d776bfbb26219b2f13b3272d3d2f4cefd10554382df6683",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\optcuts\\64\\quality\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\optcuts\\color_tolerance",
+      "status": "OK",
+      "reason": null,
+      "seconds": 0.9379999999655411,
+      "source_result_sha256": "5b2404e79e8e89378d952a5934e9dad3ad9bc91797c1551193d04639e591f799",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\optcuts\\color_tolerance\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\optcuts\\frozen_target",
+      "status": "OK",
+      "reason": null,
+      "seconds": 0.9379999999655411,
+      "source_result_sha256": "c58ba0ea6f60eef52c16a72e03f79501d3c83e701eff4728b33905397073e9be",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\optcuts\\frozen_target\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\optcuts\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.172000000020489,
+      "source_result_sha256": "50a9153efecabe490c377808865ecb9823973d0144fdae36cd4390a1b5fcc35d",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\optcuts\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\optcuts\\native",
+      "status": "OK",
+      "reason": null,
+      "seconds": 14.75,
+      "source_result_sha256": "7283a7130a32af39c815dd7464d7bf3350ea091a319a59c8a42d273d2e981ef1",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\optcuts\\native\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\optcuts\\source_target_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.5940000000409782,
+      "source_result_sha256": "d1f010ff34a6690f5dfaa332e0e0c0cc43a25e40c64aadb8d1b958e1b6128a68",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\optcuts\\source_target_views\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\optcuts\\uv_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.672000000020489,
+      "source_result_sha256": "0cf4e74fccf907ac1607c6545a61cbc52413f62dde775811425dd9e12cc476de",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\optcuts\\uv_views\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\source\\color_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.562999999965541,
+      "source_result_sha256": "6b27e9f791219d2ce88167cc32c9610bb44ca60971bd1aa74309ad0692ccd749",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\source\\color_views\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\source\\import",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.7809999999590218,
+      "source_result_sha256": "3e635ab3b4b36f1d9ebdd68c74dc1b27644d29b2772afd34b0beee47575b394e",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\source\\import\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\source\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 0.9370000000344589,
+      "source_result_sha256": "46db29fde15e2e0a53387cde3852115916eb3b54bcdacaeb54fd0aa8edb4caf7",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\source\\inspect\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\source\\target",
+      "status": "OK",
+      "reason": null,
+      "seconds": 0.9529999999795109,
+      "source_result_sha256": "8f3890823c5e95a3edf1621edb7465b1c2f530a42aa58fb2d94f5c3279829f90",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\source\\target\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\source\\uv_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.6099999999860302,
+      "source_result_sha256": "e52431484e41f6bedc598851ab8344f81188b7372bd783dd22cbffccd203fdad",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\source\\uv_views\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\source_uv\\128\\pack_17",
+      "status": "REJECTED",
+      "reason": "PACKED_GEOMETRY_REJECTED",
+      "seconds": 22.844000000040978,
+      "source_result_sha256": "69b63ae651048edef0710013daf466a73109667d3649948a3f5c749cd58406b7",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\source_uv\\128\\pack_17\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\source_uv\\128\\pack_29",
+      "status": "REJECTED",
+      "reason": "PACKED_GEOMETRY_REJECTED",
+      "seconds": 25.76500000001397,
+      "source_result_sha256": "dc891d6ad34d8b3c5d88e79e09edef802cce445485c88838a1dde5cf438ef131",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\source_uv\\128\\pack_29\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\source_uv\\128\\pack_43",
+      "status": "REJECTED",
+      "reason": "PACKED_GEOMETRY_REJECTED",
+      "seconds": 29.28200000000652,
+      "source_result_sha256": "b8ab68a089d00a90fdb850820cdc47c08f2268b03a90a00a01dd7d2744f00fd2",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\source_uv\\128\\pack_43\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\source_uv\\256\\pack_17",
+      "status": "REJECTED",
+      "reason": "PACKED_GEOMETRY_REJECTED",
+      "seconds": 20.54700000002049,
+      "source_result_sha256": "2298e61f98cd9f62448126edd3b91c3b474b26157912f7fb0d86d90a906e7d40",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\source_uv\\256\\pack_17\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\source_uv\\256\\pack_29",
+      "status": "REJECTED",
+      "reason": "PACKED_GEOMETRY_REJECTED",
+      "seconds": 25.25,
+      "source_result_sha256": "03c222e3fc2f210376d79842867f1a58549fdd55cad7eb82b058dcbedc4116d2",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\source_uv\\256\\pack_29\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\source_uv\\256\\pack_43",
+      "status": "REJECTED",
+      "reason": "PACKED_GEOMETRY_REJECTED",
+      "seconds": 41.51600000006147,
+      "source_result_sha256": "a58449c7b8afc48a6e86c0668e1363b950c96f1ee313d0df4c4f1a7750f7dd9c",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\source_uv\\256\\pack_43\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\source_uv\\64\\pack_17",
+      "status": "REJECTED",
+      "reason": "PACKED_GEOMETRY_REJECTED",
+      "seconds": 9.203000000095926,
+      "source_result_sha256": "fc3e58a33ed8c39fbff42e2063e804a4939dd4a7dba8cf14c13538c46dc9b786",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\source_uv\\64\\pack_17\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\source_uv\\64\\pack_29",
+      "status": "REJECTED",
+      "reason": "PACKED_GEOMETRY_REJECTED",
+      "seconds": 12.15700000000652,
+      "source_result_sha256": "85a06ee4fe4d418bba5bdd6bdb354711c0605d7463e9cd6cae7a68cbc6f910f4",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\source_uv\\64\\pack_29\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\source_uv\\64\\pack_43",
+      "status": "REJECTED",
+      "reason": "PACKED_GEOMETRY_REJECTED",
+      "seconds": 15.031000000075437,
+      "source_result_sha256": "424e7c2f3e3621e259cf67b783d913b15659b96c4de39e1abe13905db21d8110",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\source_uv\\64\\pack_43\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\source_uv\\color_tolerance",
+      "status": "OK",
+      "reason": null,
+      "seconds": 0.890999999945052,
+      "source_result_sha256": "f3b6e342ce5ac55223518553fa1036c7a256e7f914b1bab93acc050a903492ec",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\source_uv\\color_tolerance\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\source_uv\\frozen_target",
+      "status": "OK",
+      "reason": null,
+      "seconds": 0.8910000000614673,
+      "source_result_sha256": "240654f53d9deab6c075adbd11761098ae667d699f5a6274fc6912820d9ae057",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\source_uv\\frozen_target\\result.json"
+    },
+    {
+      "asset": "chloe",
+      "label": "chloe\\source_uv\\source_target_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.5310000000754371,
+      "source_result_sha256": "ed6728a2891b7a33fe93ec5184882fcad82d1a42fdc8769c793d7cc0321af568",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\chloe\\source_uv\\source_target_views\\result.json"
+    },
+    {
+      "asset": "dragon",
+      "label": "dragon\\fixed\\approximate",
+      "status": "REJECTED",
+      "reason": "AFFINE_UV_OR_PACKING_REJECTED",
+      "seconds": 5.483999999938533,
+      "source_result_sha256": "07e4e4feb426302a2afed7f2baa143e1272cc5b9b5497f6c968227c238bae0fc",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\dragon\\fixed\\approximate\\result.json"
+    },
+    {
+      "asset": "dragon",
+      "label": "dragon\\fixed\\exact",
+      "status": "REJECTED",
+      "reason": "EXACT_TOPOLOGY_NOT_MATCHED",
+      "seconds": 5.327999999979511,
+      "source_result_sha256": "391c2100df4b4e5108f7e11cfd0576c8be1aedc1777c01bb9d7601c7e2009e96",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\dragon\\fixed\\exact\\result.json"
+    },
+    {
+      "asset": "dragon",
+      "label": "dragon\\merge\\blender_abf",
+      "status": "REJECTED",
+      "reason": "REPARAMETERIZATION_GEOMETRY_REJECTED",
+      "seconds": 1.827999999979511,
+      "source_result_sha256": "9bb40263399244cdc639a01405578ddaad71956306db5bfa03f1813183979e5d",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\dragon\\merge\\blender_abf\\result.json"
+    },
+    {
+      "asset": "dragon",
+      "label": "dragon\\merge\\blender_lscm",
+      "status": "REJECTED",
+      "reason": "REPARAMETERIZATION_GEOMETRY_REJECTED",
+      "seconds": 2.047000000020489,
+      "source_result_sha256": "d39baeab22a24591b99d78b88f3c40c835a68e499e1124ce94353647c80b8e76",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\dragon\\merge\\blender_lscm\\result.json"
+    },
+    {
+      "asset": "dragon",
+      "label": "dragon\\merge\\final\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 2.547000000020489,
+      "source_result_sha256": "82c1ee1cc78411e41f2b297df529047f395d9b001392cf7972ede4f1e35f0b92",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\dragon\\merge\\final\\inspect\\result.json"
+    },
+    {
+      "asset": "dragon",
+      "label": "dragon\\merge\\final\\uv_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.9060000000754371,
+      "source_result_sha256": "65019407737f094fc6f874654f0ca1b4a332da84f5bd0502a5e1500c57396941",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\dragon\\merge\\final\\uv_views\\result.json"
+    },
+    {
+      "asset": "dragon",
+      "label": "dragon\\merge\\grouped_final\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 2.4070000000065193,
+      "source_result_sha256": "b0421b8f843b3f47506be42e9147a8e12b4b5967deccafb84c537ffabe91839b",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\dragon\\merge\\grouped_final\\inspect\\result.json"
+    },
+    {
+      "asset": "dragon",
+      "label": "dragon\\merge\\grouped_final\\uv_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.812000000034459,
+      "source_result_sha256": "18b0da59a573281acc3f2ba0c88bd262c6b1b876733349a4a2e7acaf0e0fd24e",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\dragon\\merge\\grouped_final\\uv_views\\result.json"
+    },
+    {
+      "asset": "dragon",
+      "label": "dragon\\merge\\harmonic",
+      "status": "REJECTED",
+      "reason": "HARMONIC_REQUIRES_DISK_EULER_CHARACTERISTIC",
+      "seconds": 0.9689999999245629,
+      "source_result_sha256": "0fe6f2a131604e1dcf3b8d8998bc77e6bc78496bee505f90a5070a37680f8d42",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\dragon\\merge\\harmonic\\result.json"
+    },
+    {
+      "asset": "dragon",
+      "label": "dragon\\merge\\optcuts",
+      "status": "OK",
+      "reason": null,
+      "seconds": 11.172000000020489,
+      "source_result_sha256": "9a243f84e028dec471c94c82f8232c7c7b0686bdff8ce62eb1e8bd0b794754f4",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\dragon\\merge\\optcuts\\result.json"
+    },
+    {
+      "asset": "dragon",
+      "label": "dragon\\merge\\optcuts_apply",
+      "status": "OK",
+      "reason": null,
+      "seconds": 3.297000000020489,
+      "source_result_sha256": "1e8f217a8c01638be78de4b64e6ba27a539f18a1baa925e7eb2ff340ae8897ea",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\dragon\\merge\\optcuts_apply\\result.json"
+    },
+    {
+      "asset": "dragon",
+      "label": "dragon\\merge\\optcuts_pair",
+      "status": "OK",
+      "reason": null,
+      "seconds": 7.954000000027008,
+      "source_result_sha256": "2ddccf8b51f729535a274ee2ea8173dded7fc7f7fdbe405536eb3549e7a98eb7",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\dragon\\merge\\optcuts_pair\\result.json"
+    },
+    {
+      "asset": "dragon",
+      "label": "dragon\\merge\\perchart_0_apply",
+      "status": "OK",
+      "reason": null,
+      "seconds": 3.172000000020489,
+      "source_result_sha256": "eddb8d6efb1dc6ae08d1c281a7fb7e1f9be47014cc140e25504b7b098378bbf9",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\dragon\\merge\\perchart_0_apply\\result.json"
+    },
+    {
+      "asset": "dragon",
+      "label": "dragon\\merge\\perchart_0_pair",
+      "status": "OK",
+      "reason": null,
+      "seconds": 7.625,
+      "source_result_sha256": "7e305ed44afa3ae6da393fe4ebc8fdd27978fb5f2dde661ece27a8f598078062",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\dragon\\merge\\perchart_0_pair\\result.json"
+    },
+    {
+      "asset": "dragon",
+      "label": "dragon\\merge\\perchart_0_region",
+      "status": "OK",
+      "reason": null,
+      "seconds": 0.9839999999385327,
+      "source_result_sha256": "0b0500f5bb5e000e736ffc453f3f7ccf67a2d6e69dde611689e4e1c7dc37d418",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\dragon\\merge\\perchart_0_region\\result.json"
+    },
+    {
+      "asset": "dragon",
+      "label": "dragon\\merge\\perchart_1_apply",
+      "status": "OK",
+      "reason": null,
+      "seconds": 3.26500000001397,
+      "source_result_sha256": "31c7930bf593b6739f15da97894ce0c053ec661d3615068299d2764c08489ff2",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\dragon\\merge\\perchart_1_apply\\result.json"
+    },
+    {
+      "asset": "dragon",
+      "label": "dragon\\merge\\perchart_1_pair",
+      "status": "OK",
+      "reason": null,
+      "seconds": 3.047000000020489,
+      "source_result_sha256": "9471d2593af3c93f02ded906607f998b5ed75cf7d429b8ce165721e5af48d35a",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\dragon\\merge\\perchart_1_pair\\result.json"
+    },
+    {
+      "asset": "dragon",
+      "label": "dragon\\merge\\perchart_1_region",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.765999999945052,
+      "source_result_sha256": "3e6ca68d7cfb2365cabfba7acf7d50d0af7bb89541b2c7fc96a1cc92adf0f8bf",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\dragon\\merge\\perchart_1_region\\result.json"
+    },
+    {
+      "asset": "dragon",
+      "label": "dragon\\merge\\perchart_2_apply",
+      "status": "OK",
+      "reason": null,
+      "seconds": 3.327999999979511,
+      "source_result_sha256": "7f770d40ff990d08f452fc87ae4f462b8ab0ef5525a47ed644e50572873c05f3",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\dragon\\merge\\perchart_2_apply\\result.json"
+    },
+    {
+      "asset": "dragon",
+      "label": "dragon\\merge\\perchart_2_pair",
+      "status": "OK",
+      "reason": null,
+      "seconds": 3.047000000020489,
+      "source_result_sha256": "518a6518f3eb9c9d022e7262e883f1d2961607c8e90f8fde5a46b65fda635761",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\dragon\\merge\\perchart_2_pair\\result.json"
+    },
+    {
+      "asset": "dragon",
+      "label": "dragon\\merge\\perchart_2_region",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.734000000054948,
+      "source_result_sha256": "8316907bcd83a07d837328260fa5f217a2d3299c8334f1c34295c8406e62fa0b",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\dragon\\merge\\perchart_2_region\\result.json"
+    },
+    {
+      "asset": "dragon",
+      "label": "dragon\\merge\\unshare",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.7820000000065193,
+      "source_result_sha256": "b7a6a9d890f362be8773786700372fef87c088fec6e5aa2c3e1b65934d995229",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\dragon\\merge\\unshare\\result.json"
+    },
+    {
+      "asset": "dragon",
+      "label": "dragon\\mirror\\create",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.1570000000065193,
+      "source_result_sha256": "1d5c92acb436935ec1f4fd81e73057599aa97fb6644daff58ba2fb73897920dd",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\dragon\\mirror\\create\\result.json"
+    },
+    {
+      "asset": "dragon",
+      "label": "dragon\\mirror\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 2.327999999979511,
+      "source_result_sha256": "8a0a59ed7d73e3136fb7216603d185d4e40999cdb67e80a3e062860d5c559f5d",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\dragon\\mirror\\inspect\\result.json"
+    },
+    {
+      "asset": "dragon",
+      "label": "dragon\\mirror\\uv_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.6719999999040738,
+      "source_result_sha256": "431eb0b060b9af7a07bbe853a623113448214aa4e76bb087d02784c7adb6bce2",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\dragon\\mirror\\uv_views\\result.json"
+    },
+    {
+      "asset": "dragon",
+      "label": "dragon\\optcuts\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.75,
+      "source_result_sha256": "28190aee9e34fc38667b89d95a05d0e3c347cbe7119798f28dd799667ab47977",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\dragon\\optcuts\\inspect\\result.json"
+    },
+    {
+      "asset": "dragon",
+      "label": "dragon\\optcuts\\native",
+      "status": "OK",
+      "reason": null,
+      "seconds": 29.983999999938533,
+      "source_result_sha256": "450dc96811cda05f2d431a5b99f5adc96ef1129b40b0ac41fa3f52abc5a0d310",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\dragon\\optcuts\\native\\result.json"
+    },
+    {
+      "asset": "dragon",
+      "label": "dragon\\optcuts\\uv_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.640999999945052,
+      "source_result_sha256": "33e938b8e19905cff46a1a3cef947faac3248e3e3872aacfb3361717b85e5836",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\dragon\\optcuts\\uv_views\\result.json"
+    },
+    {
+      "asset": "dragon",
+      "label": "dragon\\source\\color_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 29.031000000075437,
+      "source_result_sha256": "c67f912a75ab8530ab5ab302d8987c64f2fa1f693d942452d4961892749d30c9",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\dragon\\source\\color_views\\result.json"
+    },
+    {
+      "asset": "dragon",
+      "label": "dragon\\source\\import",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.047000000020489,
+      "source_result_sha256": "15683eaf57c1bee15430aac52f29375a7fff11eb5bac9a64c81380de2acf28e8",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\dragon\\source\\import\\result.json"
+    },
+    {
+      "asset": "dragon",
+      "label": "dragon\\source\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 0.9220000000204891,
+      "source_result_sha256": "90e2115c886fd6579b31f14b0d37b55c482bdd2f2eda53874315c69bdf2cee9e",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\dragon\\source\\inspect\\result.json"
+    },
+    {
+      "asset": "dragon",
+      "label": "dragon\\source\\target",
+      "status": "OK",
+      "reason": null,
+      "seconds": 8.39000000001397,
+      "source_result_sha256": "8c80cd5a110f072d1b407a64bc313d946c51dbde5f27c3ea7c1108c8e1bf5468",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\dragon\\source\\target\\result.json"
+    },
+    {
+      "asset": "dragon",
+      "label": "dragon\\source\\uv_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.625,
+      "source_result_sha256": "438cbbefff73982934d5ee1cb71ec88b31f36321a5ea529a50a35b7594d165e6",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\dragon\\source\\uv_views\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\controls\\unshare_dd5883d75d",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.312999999965541,
+      "source_result_sha256": "2768f4109ac0468a064d5dc2eb19a9b04bbb1d4c6ec7044a5c0e858d0e0d6c69",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\controls\\unshare_dd5883d75d\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\fixed\\approximate",
+      "status": "REJECTED",
+      "reason": "AFFINE_UV_OR_PACKING_REJECTED",
+      "seconds": 1.1560000000754371,
+      "source_result_sha256": "00e173aadaba3fb6843182f9bd9b549465509757913885fcd3edac81a29dd22a",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\fixed\\approximate\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\fixed\\exact",
+      "status": "REJECTED",
+      "reason": "EXACT_TOPOLOGY_NOT_MATCHED",
+      "seconds": 1.1099999999860302,
+      "source_result_sha256": "5e6f231a7e2dea88bee2506ae382532366cd8457ee81f8577daef17df4ba0ca8",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\fixed\\exact\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\merge\\blender_abf",
+      "status": "REJECTED",
+      "reason": "REPARAMETERIZATION_GEOMETRY_REJECTED",
+      "seconds": 1.577999999979511,
+      "source_result_sha256": "00c7b49b6ca3af5c439d23c26e6a9672a92243d7fabcb2fd1354aee17dea3d9a",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\merge\\blender_abf\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\merge\\blender_lscm",
+      "status": "REJECTED",
+      "reason": "REPARAMETERIZATION_GEOMETRY_REJECTED",
+      "seconds": 1.6869999999180436,
+      "source_result_sha256": "34a146253a48da1c64fc7f01992728a7dc30e034b1f39121199fe9b30fe96403",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\merge\\blender_lscm\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\merge\\harmonic",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.2349999999860302,
+      "source_result_sha256": "248f2d1b7157eb3f1437c24272ecd75aac922ba2362241d48d8c0f87eee33834",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\merge\\harmonic\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\merge\\harmonic_apply",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.7810000000754371,
+      "source_result_sha256": "5c9fd8dee8c978d2dadec6cf7044683da719a8616fcb04cc39ad04d194cbb4d0",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\merge\\harmonic_apply\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\merge\\harmonic_final\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.547000000020489,
+      "source_result_sha256": "8c602e35747855aacc2466fed307c060bc12b17a98b810d62d83708dd9728dc2",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\merge\\harmonic_final\\inspect\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\merge\\harmonic_final\\uv_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.437999999965541,
+      "source_result_sha256": "4d102ddbc84462523f82be1b852df0306856640b9cbd54979a680d9f7a278594",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\merge\\harmonic_final\\uv_views\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\merge\\harmonic_pair",
+      "status": "OK",
+      "reason": null,
+      "seconds": 2.265999999945052,
+      "source_result_sha256": "68c171051bcc69427d0acc0aa4e0d3b158d623c10a8ff7ba20b5aad8746076e3",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\merge\\harmonic_pair\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\merge\\optcuts",
+      "status": "TIMEOUT",
+      "reason": "TOOL_PROCESS_DEADLINE",
+      "seconds": 300.78100000007544,
+      "source_result_sha256": "a3511375a569063b1685baa903e5f6520eaa8792eb581e5bf644025246ef49e8",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\merge\\optcuts\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\merge\\topology_probe",
+      "status": "OK",
+      "reason": null,
+      "seconds": 0.9220000000204891,
+      "source_result_sha256": "6d0c4b28c4aaa4a926c9d6fbf321f73ff649c1fd0c1c4e355c6fae2cb9bd4297",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\merge\\topology_probe\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\merge\\unshare",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.140999999945052,
+      "source_result_sha256": "37fef3c4a645fc58713154a69b2802eba1e268cf8dc5fb5ee01ff7548b96f1a5",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\merge\\unshare\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\mirror\\create",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.047000000020489,
+      "source_result_sha256": "f092be888c35c699813aa4418f170983e6e1cfc9adf21a6f89b0a836e3ff0e6d",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\mirror\\create\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\mirror\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.312000000034459,
+      "source_result_sha256": "3eb6488d5166be8f57701ebdd91c21420cc903c0e00fc448f0da86e14faa43fc",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\mirror\\inspect\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\mirror\\uv_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.327999999979511,
+      "source_result_sha256": "e36ff6bf68be48b83594417ff68b0e123fa5e920eec730878536294df5fbb7a5",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\mirror\\uv_views\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\mirror_shared_final\\256\\bake",
+      "status": "OK",
+      "reason": null,
+      "seconds": 21.67200000002049,
+      "source_result_sha256": "b30c053500f0718e2638431edd70c4b44d4747db0bb1be5a29a55e89ecf8ff8d",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\mirror_shared_final\\256\\bake\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\mirror_shared_final\\256\\color_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.484000000054948,
+      "source_result_sha256": "a504b30f1e45cbe3d19e6c23c301723c2b043de6ede78603b78deae44ff4b944",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\mirror_shared_final\\256\\color_views\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\mirror_shared_final\\256\\export",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.7809999999590218,
+      "source_result_sha256": "8a4ca806c12a3f1574285277c6481bca04db93bed5ff58efb79193d2d964d80f",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\mirror_shared_final\\256\\export\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\mirror_shared_final\\256\\final\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.4690000000409782,
+      "source_result_sha256": "a902ad7c40c4b3b09c15ec52350bda06c5492f983c60a337f3c17ff0424a06f4",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\mirror_shared_final\\256\\final\\inspect\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\mirror_shared_final\\256\\final\\uv_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.375,
+      "source_result_sha256": "79c59e5309df981be3be57acb199e215edfefd4bc3812e6ac8d5043e74dcda23",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\mirror_shared_final\\256\\final\\uv_views\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\mirror_shared_final\\256\\inspect_17\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.452999999979511,
+      "source_result_sha256": "b24fd7291cdb6f7ba195d1eb38ba7c5719e84a78f784254ab0feff3f1e25dc66",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\mirror_shared_final\\256\\inspect_17\\inspect\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\mirror_shared_final\\256\\inspect_29\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.4689999999245629,
+      "source_result_sha256": "e0eda41dc73606f63d95d76e282329aa90a1862297bb08fb53af943c7e00ef3a",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\mirror_shared_final\\256\\inspect_29\\inspect\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\mirror_shared_final\\256\\inspect_43\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.4679999999934807,
+      "source_result_sha256": "a3fb46540b5b370e43db1299c4a44dd0429b141e920caf6a153e3021b98b0b81",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\mirror_shared_final\\256\\inspect_43\\inspect\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\mirror_shared_final\\256\\pack_17",
+      "status": "OK",
+      "reason": null,
+      "seconds": 2.390999999945052,
+      "source_result_sha256": "925f5658a621e3ff9026aeef686b35e08a7c1d1c65470eeb56564a00518ebb15",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\mirror_shared_final\\256\\pack_17\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\mirror_shared_final\\256\\pack_29",
+      "status": "OK",
+      "reason": null,
+      "seconds": 2.26500000001397,
+      "source_result_sha256": "a34a2edadeeb15db26a22de9eaa8d7c2b407627e910c1bb14bf5c83f2a2fc587",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\mirror_shared_final\\256\\pack_29\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\mirror_shared_final\\256\\pack_43",
+      "status": "OK",
+      "reason": null,
+      "seconds": 2.25,
+      "source_result_sha256": "ca71c87839e1c9de31a13ae1dffd6ac8b0769aa24d046c3923b5297d19d2b840",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\mirror_shared_final\\256\\pack_43\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\mirror_shared_final\\256\\quality",
+      "status": "REJECTED",
+      "reason": null,
+      "seconds": 83.09399999992456,
+      "source_result_sha256": "4066d657fb64a95a32f228bc536381450e8c2f31ce0b0996b7df2ef1d61632f6",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\mirror_shared_final\\256\\quality\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\mirror_shared_final\\color_tolerance",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.5150000000139698,
+      "source_result_sha256": "256acf92821da51eb0971bb0a7bc6276b9284e1bab82ee180d594e8448703577",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\mirror_shared_final\\color_tolerance\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\mirror_shared_final\\frozen_target",
+      "status": "OK",
+      "reason": null,
+      "seconds": 3.75,
+      "source_result_sha256": "1fefefce3c592386654b20dcfb6fed60bdd9839da17ac36a04dd8a2e9cd1b17a",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\mirror_shared_final\\frozen_target\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\mirror_shared_final\\source_target_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 8.937999999965541,
+      "source_result_sha256": "10cd5c4c8f54826ddd232f78f19bf96291fe37492e728e43ce4c7e67141d36dc",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\mirror_shared_final\\source_target_views\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\mirror_unshared_final\\256\\bake",
+      "status": "OK",
+      "reason": null,
+      "seconds": 16.421999999904074,
+      "source_result_sha256": "2f3f6024782773503af427f85c3c2b43da0e21bf0071cc978bc488db9059c36d",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\mirror_unshared_final\\256\\bake\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\mirror_unshared_final\\256\\color_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.3900000000139698,
+      "source_result_sha256": "1041fd97d7d9409f1b0325251c554002d46cc73702d1b58261a6ac0b76fe76cb",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\mirror_unshared_final\\256\\color_views\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\mirror_unshared_final\\256\\export",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.4839999999385327,
+      "source_result_sha256": "4b4a7bf7c0e3cce8157bd87d9669739a63b5ff8e605107cd2645c5c4c8afe4d0",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\mirror_unshared_final\\256\\export\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\mirror_unshared_final\\256\\final\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.172000000020489,
+      "source_result_sha256": "b2f69389478d6c28ef153853e820c5aa573fa965800352b33da25ef3e7c8b699",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\mirror_unshared_final\\256\\final\\inspect\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\mirror_unshared_final\\256\\final\\uv_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.312000000034459,
+      "source_result_sha256": "59d62d6dfc837ae530ca174d34089b809a66cefa46e14bd02a8bd673431eab1c",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\mirror_unshared_final\\256\\final\\uv_views\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\mirror_unshared_final\\256\\inspect_17\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.2190000000409782,
+      "source_result_sha256": "1e3b4e6126001a05ad96e8ece4aeb409a83724fb6c9ae63837826c921e1c3566",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\mirror_unshared_final\\256\\inspect_17\\inspect\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\mirror_unshared_final\\256\\inspect_29\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.234000000054948,
+      "source_result_sha256": "ae186934927e892f87977a5c48b96166a153e8271ef70a88740e2ba48e1ee03f",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\mirror_unshared_final\\256\\inspect_29\\inspect\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\mirror_unshared_final\\256\\inspect_43\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.172000000020489,
+      "source_result_sha256": "e5ee60aa3849369926a580021c481966942bb7f925249b4c3596c0ed2ae6faf9",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\mirror_unshared_final\\256\\inspect_43\\inspect\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\mirror_unshared_final\\256\\pack_17",
+      "status": "OK",
+      "reason": null,
+      "seconds": 2.562000000034459,
+      "source_result_sha256": "686353f5cb546801e3b6e65200d9164e20020184f19cc3bb16c355d55ba558a5",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\mirror_unshared_final\\256\\pack_17\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\mirror_unshared_final\\256\\pack_29",
+      "status": "OK",
+      "reason": null,
+      "seconds": 2.452999999979511,
+      "source_result_sha256": "5d06a37ecd93c2124b9146fb64c45e277a75bd568ee41783cd6b948a048fb2a3",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\mirror_unshared_final\\256\\pack_29\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\mirror_unshared_final\\256\\pack_43",
+      "status": "OK",
+      "reason": null,
+      "seconds": 2.452999999979511,
+      "source_result_sha256": "4c72125a10f8f7bdf69c55a4f4845b168d95d3867850acb15db5299b4468aa65",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\mirror_unshared_final\\256\\pack_43\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\mirror_unshared_final\\256\\quality",
+      "status": "REJECTED",
+      "reason": null,
+      "seconds": 41.46899999992456,
+      "source_result_sha256": "1363a84940650cc9e347ae6fe6a8b009f455c535e9468e6176879a4acca16db2",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\mirror_unshared_final\\256\\quality\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\mirror_unshared_final\\color_tolerance",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.422000000020489,
+      "source_result_sha256": "df6701ca6bdfefe9f52ba85c619279148c68939c9b82297b7493cf669451eee7",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\mirror_unshared_final\\color_tolerance\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\mirror_unshared_final\\frozen_target",
+      "status": "OK",
+      "reason": null,
+      "seconds": 3.48499999998603,
+      "source_result_sha256": "d0f140fab848e2cc065621abee9305b2d1159a1f7ecb10bfc058a36b027f63e9",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\mirror_unshared_final\\frozen_target\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\mirror_unshared_final\\source_target_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 8.468999999924563,
+      "source_result_sha256": "0807776ef137fcc1d5e353474aa34839e7a1eeb17dba36e7f15152f3979051f7",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\mirror_unshared_final\\source_target_views\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\optcuts\\256\\bake",
+      "status": "OK",
+      "reason": null,
+      "seconds": 20.171999999904074,
+      "source_result_sha256": "c0c6ff370546874a8f77de2ded23e375874ae9bfd2b66e4dca2993940a86771f",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\optcuts\\256\\bake\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\optcuts\\256\\color_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.3440000000409782,
+      "source_result_sha256": "396680b24e371e9c9e0548b76285ac63bb72a127fc05932e426948bdc98b0ffc",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\optcuts\\256\\color_views\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\optcuts\\256\\export",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.4839999999385327,
+      "source_result_sha256": "8a1bf18584272372c82c98e5272fa69dd361308c123f6936f94c077974988da7",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\optcuts\\256\\export\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\optcuts\\256\\final\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.109000000054948,
+      "source_result_sha256": "1c07cf91384ad25e907a3f496bf78512173bc30cad8d296b1efae89f113b93f5",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\optcuts\\256\\final\\inspect\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\optcuts\\256\\final\\uv_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.25,
+      "source_result_sha256": "eec4600dfd462df907ff3068cc669ccd61ff58d49ecc6f788a8882b5948ce9bc",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\optcuts\\256\\final\\uv_views\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\optcuts\\256\\inspect_17\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.077999999979511,
+      "source_result_sha256": "9d52da4ba03e45b5776ab30a38ec38cbd2b0d5beb474705a4534d2a7a3d22c58",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\optcuts\\256\\inspect_17\\inspect\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\optcuts\\256\\inspect_29\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.0630000000819564,
+      "source_result_sha256": "ed05e95fa9945aed2903502a76706cb1d02169d8f8ecad7b336dffff41eaefcd",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\optcuts\\256\\inspect_29\\inspect\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\optcuts\\256\\inspect_43\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.047000000020489,
+      "source_result_sha256": "d1b57d59b381db77c45dd31065840bdcf7fc0abb024c0e1eccd54d5bb879aee5",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\optcuts\\256\\inspect_43\\inspect\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\optcuts\\256\\pack_17",
+      "status": "OK",
+      "reason": null,
+      "seconds": 14.51500000001397,
+      "source_result_sha256": "3e883516ca22a22813a1747b44f8a9775bbd2eac49cb4c51a7b8af3c381feb17",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\optcuts\\256\\pack_17\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\optcuts\\256\\pack_29",
+      "status": "OK",
+      "reason": null,
+      "seconds": 13.59299999999348,
+      "source_result_sha256": "935b4d7492d5de0b6d04b8c93800cb8b6703db4fe5be18b495360ac08f788c63",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\optcuts\\256\\pack_29\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\optcuts\\256\\pack_43",
+      "status": "OK",
+      "reason": null,
+      "seconds": 15.14000000001397,
+      "source_result_sha256": "35394adb589417e96570f9f44aa12f1a425a4e92fc7e2a52270f3a060701e32c",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\optcuts\\256\\pack_43\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\optcuts\\256\\quality",
+      "status": "REJECTED",
+      "reason": null,
+      "seconds": 48.23399999993853,
+      "source_result_sha256": "2dff14e9171ab21af957f8370b010b7d65927f5f2169012d0e74d923d00758bd",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\optcuts\\256\\quality\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\optcuts\\color_tolerance",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.359000000054948,
+      "source_result_sha256": "15a94b45d8145ef3426f55a1d7bde02baf115d2881261572d68b8cb714647b74",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\optcuts\\color_tolerance\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\optcuts\\frozen_target",
+      "status": "OK",
+      "reason": null,
+      "seconds": 3.077999999979511,
+      "source_result_sha256": "6ea6de71380baf3b30e5cdf85c4c133437f2ab790f4ea42085aec4373b9454f4",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\optcuts\\frozen_target\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\optcuts\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.0780000000959262,
+      "source_result_sha256": "dd20264d759b4f367ec6e376f3b6c9a48561ef89b58458871bcd8109e8e508b5",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\optcuts\\inspect\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\optcuts\\native",
+      "status": "OK",
+      "reason": null,
+      "seconds": 9.84299999999348,
+      "source_result_sha256": "15daa5329f7898cc563ce918e1d9b265a500889ad448e63451c6fa0db7c182f6",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\optcuts\\native\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\optcuts\\source_target_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 8.093999999924563,
+      "source_result_sha256": "92678d4017a3b46f6da45b4652afa0d39155d5423da68dfa053f286adee84b7e",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\optcuts\\source_target_views\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\optcuts\\uv_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.297000000020489,
+      "source_result_sha256": "07de49f923988a21a2610564f75068c489ddb6ab86ef995513b892c86b735a12",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\optcuts\\uv_views\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\source\\color_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 7.969000000040978,
+      "source_result_sha256": "1daf5807971d8411c41bdcca2350e689cbdc2a535a99e3051f5bb74b0a9a22df",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\source\\color_views\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\source\\import",
+      "status": "OK",
+      "reason": null,
+      "seconds": 0.9690000000409782,
+      "source_result_sha256": "b9dcdab5778cbb4e32db924f6b1c4800c793a6bbe73b7a7ba642efb82c4c76d8",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\source\\import\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\source\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.047000000020489,
+      "source_result_sha256": "18a7be1b4fc534e8857366203679d9ab80049910b751eff8b5669ac889950634",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\source\\inspect\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\source\\target",
+      "status": "OK",
+      "reason": null,
+      "seconds": 3.125,
+      "source_result_sha256": "a9ac1b109bad8756eb2338dee78ffbc4219f7606ed672b4ddda65e740b06bdd0",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\source\\target\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\source\\uv_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.234000000054948,
+      "source_result_sha256": "94acbc23ca79580c49da36df870ecfe06f41458d824389c1fb841b128700c393",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\source\\uv_views\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\xatlas\\1024\\bake",
+      "status": "OK",
+      "reason": null,
+      "seconds": 249.5,
+      "source_result_sha256": "b10ff52e6748bdc7693283c76e74d6ecd3d7f3857f0a1a98aa7ae084a8a0da6f",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\xatlas\\1024\\bake\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\xatlas\\1024\\final\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 0.9690000000409782,
+      "source_result_sha256": "6a3ea370b6335ae5187984064c5b9a76cc53e3b4a2e0561828239f4770761876",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\xatlas\\1024\\final\\inspect\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\xatlas\\1024\\final\\uv_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.2190000000409782,
+      "source_result_sha256": "3f25c68a3ad8d2f774b18c6b8535a19c254082c10ef137cd4866348195c6e91a",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\xatlas\\1024\\final\\uv_views\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\xatlas\\1024\\inspect_17\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.0,
+      "source_result_sha256": "22f927094258c566b311d055e835ed56eec415e79bb405113b077ee2003fe5ba",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\xatlas\\1024\\inspect_17\\inspect\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\xatlas\\1024\\inspect_29\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 0.9839999999385327,
+      "source_result_sha256": "d35412dd5044d37fe5f99bc5e9579e3cdae742a79d0e035b89ab416e30922885",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\xatlas\\1024\\inspect_29\\inspect\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\xatlas\\1024\\inspect_43\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 0.9849999999860302,
+      "source_result_sha256": "b08ebbf586c88ceb45a1af3df5955f213df6f0ced18eeef9abfed288ef511b31",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\xatlas\\1024\\inspect_43\\inspect\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\xatlas\\1024\\pack_17",
+      "status": "OK",
+      "reason": null,
+      "seconds": 9.077999999979511,
+      "source_result_sha256": "a27f9a6f3223155935768c0243a44cbd840b061d140ef764e1fa1b1b9648370d",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\xatlas\\1024\\pack_17\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\xatlas\\1024\\pack_29",
+      "status": "OK",
+      "reason": null,
+      "seconds": 9.608999999938533,
+      "source_result_sha256": "f2ba09ac5c5c3736cd97d987c8d0b6d62d044baad6cf7695f9f521a1ecf1dd71",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\xatlas\\1024\\pack_29\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\xatlas\\1024\\pack_43",
+      "status": "OK",
+      "reason": null,
+      "seconds": 14.73499999998603,
+      "source_result_sha256": "a1a8501f541da464be56e678acdf29310739800722e9c599739b60d97458ff02",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\xatlas\\1024\\pack_43\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\xatlas\\1024\\quality",
+      "status": "INTERRUPTED",
+      "reason": "EVALUATOR_REVISION_NEW_ROUND",
+      "seconds": null,
+      "source_result_sha256": "24e03a4d3ec1331382116647f623406486c14e0873c7544a4c59af50a75e6bb9",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\xatlas\\1024\\quality\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\xatlas\\2048\\bake",
+      "status": "TIMEOUT",
+      "reason": "TOOL_PROCESS_DEADLINE",
+      "seconds": 300.5,
+      "source_result_sha256": "e62f9121b3beec824b04ab5159cb18e33d81f852cb52ec9adca5f68c62ebabc9",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\xatlas\\2048\\bake\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\xatlas\\2048\\final\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.047000000020489,
+      "source_result_sha256": "20d3d32e4c3673b82e4f5346e2f31dac21e5353e583faa93329ef5ff1caa99e1",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\xatlas\\2048\\final\\inspect\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\xatlas\\2048\\final\\uv_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.202999999979511,
+      "source_result_sha256": "708896dc643f58c60abca9ba6be1c5051a16477f552f7a2fb6fadbebbb91f51c",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\xatlas\\2048\\final\\uv_views\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\xatlas\\2048\\inspect_17\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 0.984000000054948,
+      "source_result_sha256": "e26818dadc963cba31e4ec980e8b9dea17e858417738b77b403b6ccc6bfe9f46",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\xatlas\\2048\\inspect_17\\inspect\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\xatlas\\2048\\inspect_29\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.0,
+      "source_result_sha256": "7c438c2dc4d467bde79868624a8fc6512c9176dea0e05b02f308a8bb6dfc4210",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\xatlas\\2048\\inspect_29\\inspect\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\xatlas\\2048\\inspect_43\\inspect",
+      "status": "OK",
+      "reason": null,
+      "seconds": 0.9849999999860302,
+      "source_result_sha256": "be9fd44a00361ff883a196b1a1fdf1a22a8b3c2e6e76bb7e7dfc8df54aa916b0",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\xatlas\\2048\\inspect_43\\inspect\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\xatlas\\2048\\pack_17",
+      "status": "OK",
+      "reason": null,
+      "seconds": 15.016000000061467,
+      "source_result_sha256": "4e5b56f41718c5a527bd5ca2b8a09932c39dc908730ff2c963ed46803d1294b6",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\xatlas\\2048\\pack_17\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\xatlas\\2048\\pack_29",
+      "status": "OK",
+      "reason": null,
+      "seconds": 8.155999999959022,
+      "source_result_sha256": "8b38e7fca15d7bc81c89b4d552d52b2a562afe6b6f7feeb93be34d698674e47a",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\xatlas\\2048\\pack_29\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\xatlas\\2048\\pack_43",
+      "status": "OK",
+      "reason": null,
+      "seconds": 14.452999999979511,
+      "source_result_sha256": "9554a1c8b6ce7a22839cb71e43cfba84d6d2a81ff27c6f2526a65534630519e1",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\xatlas\\2048\\pack_43\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\xatlas\\color_tolerance",
+      "status": "OK",
+      "reason": null,
+      "seconds": 1.4380000000819564,
+      "source_result_sha256": "7fdf235ca311cd5b8074cddc30010891c4ca7ec6ced0a9c0be47ee0ab83c3089",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\xatlas\\color_tolerance\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\xatlas\\frozen_target",
+      "status": "OK",
+      "reason": null,
+      "seconds": 3.25,
+      "source_result_sha256": "48176d7cb2450c0787a2edca393cb1c803abc78e9dcbe4d85b63354fdaf239e1",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\xatlas\\frozen_target\\result.json"
+    },
+    {
+      "asset": "energy_blade",
+      "label": "energy_blade\\xatlas\\source_target_views",
+      "status": "OK",
+      "reason": null,
+      "seconds": 8.562000000034459,
+      "source_result_sha256": "0e53f7908d8f4a9465e156ebf0dba6479925ff1e16f59b023f6ff80e7feff1a1",
+      "source_result": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round01\\energy_blade\\xatlas\\source_target_views\\result.json"
+    }
+  ],
+  "known_tool_seconds": 2238.0960000013,
+  "unknown_duration_calls": 1
+}

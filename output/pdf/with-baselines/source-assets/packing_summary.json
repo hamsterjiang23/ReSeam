@@ -1,0 +1,614 @@
+{
+  "protocol": {
+    "parent": "E:\\ReSem\\artifacts\\meshquery_v1\\island_merge01\\sole_formal\\sole_repaired_islands\\pack\\snapshot\\snapshot.json",
+    "parent_file_sha256": "2c5737bd37f135459b816b2322d26f4645c48a607e83253f8a1dec20694e0656",
+    "seeds": [
+      0,
+      17,
+      29
+    ],
+    "gaps": [
+      16,
+      12,
+      8
+    ],
+    "border_pixels": 8,
+    "padding_pixels": 8,
+    "density_normalize": false,
+    "resolution": 2048,
+    "mip_levels": [
+      0,
+      1,
+      2
+    ],
+    "budget_seconds": 2400,
+    "selection": "best legal coverage per gap; compare common baseline",
+    "code_hashes": {
+      "src/reseam/agent_tools/compact_packing.py": "398e675b02388bee1133ab68cdcaf8be5b577c49171e2745a10b9343f7eb2baa",
+      "src/reseam/agent_tools/geometry.py": "58169b0f8234097a7b95dd659d18318c12a4f78fbf2a8eb57080a3a566e26be9",
+      "scripts/agent_pack_worker.py": "f0fc91752d2349fc3929a8437e81dded4bf12f8244e6aa5c7894d42aeac3072c"
+    }
+  },
+  "search": {
+    "cases": [
+      {
+        "label": "gap16_seed0",
+        "gap": 16,
+        "seed": 0,
+        "result": {
+          "snapshot": "E:\\ReSem\\artifacts\\meshquery_v1\\compact_search01\\gap16_seed0\\pack\\snapshot\\snapshot.json",
+          "state_hash": "6f893f942dfc0fdee214cc0f91b9e593bd733ab3d77a6c9ecaad7dcd936013eb",
+          "asset_id": "b6ec411224cad17fb88edae8ec945b3bd12c6fcc7b89575f88fa1b1e91949e95",
+          "status": "OK",
+          "execution_success": true,
+          "geometry_passed": true,
+          "hard_geometry_passed": true,
+          "final_quality_passed": null,
+          "requires_rebake": true,
+          "packing_backend": "blender_concave",
+          "report": "E:\\ReSem\\artifacts\\meshquery_v1\\compact_search01\\gap16_seed0\\pack\\geometry.json",
+          "tool": "uv.pack",
+          "wall_seconds": 27.93799999996554,
+          "output": "E:\\ReSem\\artifacts\\meshquery_v1\\compact_search01\\gap16_seed0\\pack"
+        },
+        "unique_coverage": 0.5706726533768791,
+        "minimum_gap_pixels": 19.067215092733164,
+        "minimum_border_pixels": 10.0,
+        "chart_count": 92,
+        "shared_group_count": 46,
+        "hard_valid": true,
+        "packing_groups": 46,
+        "strict_hard_valid": false
+      },
+      {
+        "label": "gap16_seed17",
+        "gap": 16,
+        "seed": 17,
+        "result": {
+          "snapshot": "E:\\ReSem\\artifacts\\meshquery_v1\\compact_search01\\gap16_seed17\\pack\\snapshot\\snapshot.json",
+          "state_hash": "53a96c5e29a4e0fd8617b07901faa26834764c2a174e899476d8505945ba17e3",
+          "asset_id": "b6ec411224cad17fb88edae8ec945b3bd12c6fcc7b89575f88fa1b1e91949e95",
+          "status": "OK",
+          "execution_success": true,
+          "geometry_passed": true,
+          "hard_geometry_passed": true,
+          "final_quality_passed": null,
+          "requires_rebake": true,
+          "packing_backend": "blender_concave",
+          "report": "E:\\ReSem\\artifacts\\meshquery_v1\\compact_search01\\gap16_seed17\\pack\\geometry.json",
+          "tool": "uv.pack",
+          "wall_seconds": 20.936999999918044,
+          "output": "E:\\ReSem\\artifacts\\meshquery_v1\\compact_search01\\gap16_seed17\\pack"
+        },
+        "unique_coverage": 0.562241245621137,
+        "minimum_gap_pixels": 18.59328423673366,
+        "minimum_border_pixels": 10.0,
+        "chart_count": 92,
+        "shared_group_count": 46,
+        "hard_valid": true,
+        "packing_groups": 46,
+        "strict_hard_valid": false
+      },
+      {
+        "label": "gap16_seed29",
+        "gap": 16,
+        "seed": 29,
+        "result": {
+          "snapshot": "E:\\ReSem\\artifacts\\meshquery_v1\\compact_search01\\gap16_seed29\\pack\\snapshot\\snapshot.json",
+          "state_hash": "0a6b6a243c674bbcd305441284addb778d12b1131e70ba177f20ac0a95565fda",
+          "asset_id": "b6ec411224cad17fb88edae8ec945b3bd12c6fcc7b89575f88fa1b1e91949e95",
+          "status": "OK",
+          "execution_success": true,
+          "geometry_passed": true,
+          "hard_geometry_passed": true,
+          "final_quality_passed": null,
+          "requires_rebake": true,
+          "packing_backend": "blender_concave",
+          "report": "E:\\ReSem\\artifacts\\meshquery_v1\\compact_search01\\gap16_seed29\\pack\\geometry.json",
+          "tool": "uv.pack",
+          "wall_seconds": 23.625,
+          "output": "E:\\ReSem\\artifacts\\meshquery_v1\\compact_search01\\gap16_seed29\\pack"
+        },
+        "unique_coverage": 0.5362611421060628,
+        "minimum_gap_pixels": 18.165320138320844,
+        "minimum_border_pixels": 10.0,
+        "chart_count": 92,
+        "shared_group_count": 46,
+        "hard_valid": true,
+        "packing_groups": 46,
+        "strict_hard_valid": false
+      },
+      {
+        "label": "gap12_seed0",
+        "gap": 12,
+        "seed": 0,
+        "result": {
+          "snapshot": "E:\\ReSem\\artifacts\\meshquery_v1\\compact_search01\\gap12_seed0\\pack\\snapshot\\snapshot.json",
+          "state_hash": "2c3d6995cd94f2011341ad757fe2644902db228ffff25b05c9061a09b53438f4",
+          "asset_id": "b6ec411224cad17fb88edae8ec945b3bd12c6fcc7b89575f88fa1b1e91949e95",
+          "status": "OK",
+          "execution_success": true,
+          "geometry_passed": true,
+          "hard_geometry_passed": true,
+          "final_quality_passed": null,
+          "requires_rebake": true,
+          "packing_backend": "blender_concave",
+          "report": "E:\\ReSem\\artifacts\\meshquery_v1\\compact_search01\\gap12_seed0\\pack\\geometry.json",
+          "tool": "uv.pack",
+          "wall_seconds": 29.35999999998603,
+          "output": "E:\\ReSem\\artifacts\\meshquery_v1\\compact_search01\\gap12_seed0\\pack"
+        },
+        "unique_coverage": 0.5776961333057766,
+        "minimum_gap_pixels": 14.37898800608154,
+        "minimum_border_pixels": 10.0,
+        "chart_count": 92,
+        "shared_group_count": 46,
+        "hard_valid": true,
+        "packing_groups": 46,
+        "strict_hard_valid": false
+      },
+      {
+        "label": "gap12_seed17",
+        "gap": 12,
+        "seed": 17,
+        "result": {
+          "snapshot": "E:\\ReSem\\artifacts\\meshquery_v1\\compact_search01\\gap12_seed17\\pack\\snapshot\\snapshot.json",
+          "state_hash": "4736b4010adc13582b57da311df1f1b1f96cd2fbb6d6cc89e10f7dc194982c19",
+          "asset_id": "b6ec411224cad17fb88edae8ec945b3bd12c6fcc7b89575f88fa1b1e91949e95",
+          "status": "OK",
+          "execution_success": true,
+          "geometry_passed": true,
+          "hard_geometry_passed": true,
+          "final_quality_passed": null,
+          "requires_rebake": true,
+          "packing_backend": "blender_concave",
+          "report": "E:\\ReSem\\artifacts\\meshquery_v1\\compact_search01\\gap12_seed17\\pack\\geometry.json",
+          "tool": "uv.pack",
+          "wall_seconds": 38.81200000003446,
+          "output": "E:\\ReSem\\artifacts\\meshquery_v1\\compact_search01\\gap12_seed17\\pack"
+        },
+        "unique_coverage": 0.5832925166300358,
+        "minimum_gap_pixels": 13.896070077904795,
+        "minimum_border_pixels": 10.0,
+        "chart_count": 92,
+        "shared_group_count": 46,
+        "hard_valid": true,
+        "packing_groups": 46,
+        "strict_hard_valid": false
+      },
+      {
+        "label": "gap12_seed29",
+        "gap": 12,
+        "seed": 29,
+        "result": {
+          "snapshot": "E:\\ReSem\\artifacts\\meshquery_v1\\compact_search01\\gap12_seed29\\pack\\snapshot\\snapshot.json",
+          "state_hash": "dc279ecf6e29c68dad7953f8530df497303c04c0ec101a6711e76ca4b73d43d0",
+          "asset_id": "b6ec411224cad17fb88edae8ec945b3bd12c6fcc7b89575f88fa1b1e91949e95",
+          "status": "OK",
+          "execution_success": true,
+          "geometry_passed": true,
+          "hard_geometry_passed": true,
+          "final_quality_passed": null,
+          "requires_rebake": true,
+          "packing_backend": "blender_concave",
+          "report": "E:\\ReSem\\artifacts\\meshquery_v1\\compact_search01\\gap12_seed29\\pack\\geometry.json",
+          "tool": "uv.pack",
+          "wall_seconds": 24.35999999998603,
+          "output": "E:\\ReSem\\artifacts\\meshquery_v1\\compact_search01\\gap12_seed29\\pack"
+        },
+        "unique_coverage": 0.5815633188775439,
+        "minimum_gap_pixels": 14.275306098543666,
+        "minimum_border_pixels": 10.0,
+        "chart_count": 92,
+        "shared_group_count": 46,
+        "hard_valid": true,
+        "packing_groups": 46,
+        "strict_hard_valid": false
+      },
+      {
+        "label": "gap8_seed0",
+        "gap": 8,
+        "seed": 0,
+        "result": {
+          "snapshot": "E:\\ReSem\\artifacts\\meshquery_v1\\compact_search01\\gap8_seed0\\pack\\snapshot\\snapshot.json",
+          "state_hash": "1f8b56fb3eebc7a4b36d51d7821dd717f28fcd515abaafac0bdaced7e1b1e682",
+          "asset_id": "b6ec411224cad17fb88edae8ec945b3bd12c6fcc7b89575f88fa1b1e91949e95",
+          "status": "OK",
+          "execution_success": true,
+          "geometry_passed": true,
+          "hard_geometry_passed": true,
+          "final_quality_passed": null,
+          "requires_rebake": true,
+          "packing_backend": "blender_concave",
+          "report": "E:\\ReSem\\artifacts\\meshquery_v1\\compact_search01\\gap8_seed0\\pack\\geometry.json",
+          "tool": "uv.pack",
+          "wall_seconds": 26.81299999996554,
+          "output": "E:\\ReSem\\artifacts\\meshquery_v1\\compact_search01\\gap8_seed0\\pack"
+        },
+        "unique_coverage": 0.5992707764295053,
+        "minimum_gap_pixels": 9.803602320881197,
+        "minimum_border_pixels": 9.999999999999886,
+        "chart_count": 92,
+        "shared_group_count": 46,
+        "hard_valid": true,
+        "packing_groups": 46,
+        "strict_hard_valid": false
+      },
+      {
+        "label": "gap8_seed17",
+        "gap": 8,
+        "seed": 17,
+        "result": {
+          "snapshot": "E:\\ReSem\\artifacts\\meshquery_v1\\compact_search01\\gap8_seed17\\pack\\snapshot\\snapshot.json",
+          "state_hash": "1db9a0303c0eec6d08eb7dbb65e2a041743b41a434429976b18e89931234fdf6",
+          "asset_id": "b6ec411224cad17fb88edae8ec945b3bd12c6fcc7b89575f88fa1b1e91949e95",
+          "status": "OK",
+          "execution_success": true,
+          "geometry_passed": true,
+          "hard_geometry_passed": true,
+          "final_quality_passed": null,
+          "requires_rebake": true,
+          "packing_backend": "blender_concave",
+          "report": "E:\\ReSem\\artifacts\\meshquery_v1\\compact_search01\\gap8_seed17\\pack\\geometry.json",
+          "tool": "uv.pack",
+          "wall_seconds": 26.46799999999348,
+          "output": "E:\\ReSem\\artifacts\\meshquery_v1\\compact_search01\\gap8_seed17\\pack"
+        },
+        "unique_coverage": 0.5942935463862599,
+        "minimum_gap_pixels": 10.068959814958582,
+        "minimum_border_pixels": 9.999999999999886,
+        "chart_count": 92,
+        "shared_group_count": 46,
+        "hard_valid": true,
+        "packing_groups": 46,
+        "strict_hard_valid": false
+      },
+      {
+        "label": "gap8_seed29",
+        "gap": 8,
+        "seed": 29,
+        "result": {
+          "snapshot": "E:\\ReSem\\artifacts\\meshquery_v1\\compact_search01\\gap8_seed29\\pack\\snapshot\\snapshot.json",
+          "state_hash": "d7aa92719ce2ade134957d095178c57a78953671513cd25ccf84a3a1d42eb254",
+          "asset_id": "b6ec411224cad17fb88edae8ec945b3bd12c6fcc7b89575f88fa1b1e91949e95",
+          "status": "OK",
+          "execution_success": true,
+          "geometry_passed": true,
+          "hard_geometry_passed": true,
+          "final_quality_passed": null,
+          "requires_rebake": true,
+          "packing_backend": "blender_concave",
+          "report": "E:\\ReSem\\artifacts\\meshquery_v1\\compact_search01\\gap8_seed29\\pack\\geometry.json",
+          "tool": "uv.pack",
+          "wall_seconds": 28.125,
+          "output": "E:\\ReSem\\artifacts\\meshquery_v1\\compact_search01\\gap8_seed29\\pack"
+        },
+        "unique_coverage": 0.5925074501796953,
+        "minimum_gap_pixels": 10.160948916969962,
+        "minimum_border_pixels": 10.0,
+        "chart_count": 92,
+        "shared_group_count": 46,
+        "hard_valid": true,
+        "packing_groups": 46,
+        "strict_hard_valid": false
+      }
+    ]
+  },
+  "cases": [
+    {
+      "label": "baseline",
+      "charts": 92,
+      "coverage": 0.5726051881041325,
+      "groups": 46,
+      "minimum_gap_pixels": 18.75378161554561,
+      "minimum_border_pixels": 10.0,
+      "quality_accepted": false,
+      "material_valid": true,
+      "seams_valid": true,
+      "render_valid": false,
+      "worst_render_mean": 0.008121234942735154,
+      "worst_render_max": 0.46838320994839333,
+      "payload_bytes": 22369620,
+      "png_mip_bytes": 4299538,
+      "state_hash": "59d20f7ed753ab7b9132cfe477318217a295974630bbcfa4c61635fe6a999566",
+      "resolution": [
+        2048,
+        2048
+      ],
+      "reimport": {
+        "position_error": 0.0,
+        "corner_uv_error": 4.458647306915253e-08,
+        "embedded_pixels_equal": true,
+        "scope": "GLB geometry/UV/image; not GPU/artist"
+      }
+    },
+    {
+      "label": "gap12_seed17",
+      "charts": 92,
+      "coverage": 0.5832925166300358,
+      "groups": 46,
+      "minimum_gap_pixels": 13.896070077904795,
+      "minimum_border_pixels": 10.0,
+      "quality_accepted": false,
+      "material_valid": true,
+      "seams_valid": true,
+      "render_valid": false,
+      "worst_render_mean": 0.00818107217325462,
+      "worst_render_max": 0.41806154712655785,
+      "payload_bytes": 22369620,
+      "png_mip_bytes": 4360713,
+      "state_hash": "4736b4010adc13582b57da311df1f1b1f96cd2fbb6d6cc89e10f7dc194982c19",
+      "resolution": [
+        2048,
+        2048
+      ],
+      "reimport": {
+        "position_error": 0.0,
+        "corner_uv_error": 4.452852975234123e-08,
+        "embedded_pixels_equal": true,
+        "scope": "GLB geometry/UV/image; not GPU/artist"
+      }
+    },
+    {
+      "label": "gap8_seed0",
+      "charts": 92,
+      "coverage": 0.5992707764295053,
+      "groups": 46,
+      "minimum_gap_pixels": 9.803602320881197,
+      "minimum_border_pixels": 9.999999999999886,
+      "quality_accepted": false,
+      "material_valid": true,
+      "seams_valid": true,
+      "render_valid": false,
+      "worst_render_mean": 0.008103013601441632,
+      "worst_render_max": 0.5261559453289709,
+      "payload_bytes": 22369620,
+      "png_mip_bytes": 4418960,
+      "state_hash": "1f8b56fb3eebc7a4b36d51d7821dd717f28fcd515abaafac0bdaced7e1b1e682",
+      "resolution": [
+        2048,
+        2048
+      ],
+      "reimport": {
+        "position_error": 0.0,
+        "corner_uv_error": 4.457996094497929e-08,
+        "embedded_pixels_equal": true,
+        "scope": "GLB geometry/UV/image; not GPU/artist"
+      }
+    },
+    {
+      "label": "gap8_seed0_1024",
+      "charts": 92,
+      "coverage": 0.5992707764295053,
+      "groups": 46,
+      "minimum_gap_pixels": 4.901801160440598,
+      "minimum_border_pixels": 4.999999999999943,
+      "quality_accepted": false,
+      "material_valid": false,
+      "seams_valid": false,
+      "render_valid": false,
+      "worst_render_mean": 0.012883057206877446,
+      "worst_render_max": 0.5318100572654006,
+      "payload_bytes": 5592404,
+      "png_mip_bytes": 1464675,
+      "state_hash": "1f8b56fb3eebc7a4b36d51d7821dd717f28fcd515abaafac0bdaced7e1b1e682",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "reimport": {
+        "position_error": 0.0,
+        "corner_uv_error": 4.457996094497929e-08,
+        "embedded_pixels_equal": true,
+        "scope": "GLB geometry/UV/image; not GPU/artist"
+      }
+    }
+  ],
+  "calls": [
+    {
+      "path": "baseline\\bake\\result.json",
+      "tool": "material.bake",
+      "status": "OK",
+      "seconds": 50.34399999992456
+    },
+    {
+      "path": "baseline\\export\\result.json",
+      "tool": "asset.export",
+      "status": "OK",
+      "seconds": 3.219000000040978
+    },
+    {
+      "path": "baseline\\target\\result.json",
+      "tool": "material.target",
+      "status": "OK",
+      "seconds": 3.375
+    },
+    {
+      "path": "baseline\\validate\\result.json",
+      "tool": "quality.validate",
+      "status": "REJECTED",
+      "seconds": 165.8279999999795
+    },
+    {
+      "path": "baseline\\views\\result.json",
+      "tool": "view.render",
+      "status": "OK",
+      "seconds": 4.577999999979511
+    },
+    {
+      "path": "baseline\\views_clean\\result.json",
+      "tool": "view.render",
+      "status": "OK",
+      "seconds": 4.343999999924563
+    },
+    {
+      "path": "gap12_seed0\\pack\\result.json",
+      "tool": "uv.pack",
+      "status": "OK",
+      "seconds": 29.35999999998603
+    },
+    {
+      "path": "gap12_seed17\\bake\\result.json",
+      "tool": "material.bake",
+      "status": "OK",
+      "seconds": 50.82799999997951
+    },
+    {
+      "path": "gap12_seed17\\export\\result.json",
+      "tool": "asset.export",
+      "status": "OK",
+      "seconds": 3.172000000020489
+    },
+    {
+      "path": "gap12_seed17\\pack\\result.json",
+      "tool": "uv.pack",
+      "status": "OK",
+      "seconds": 38.81200000003446
+    },
+    {
+      "path": "gap12_seed17\\target\\result.json",
+      "tool": "material.target",
+      "status": "OK",
+      "seconds": 3.39000000001397
+    },
+    {
+      "path": "gap12_seed17\\validate\\result.json",
+      "tool": "quality.validate",
+      "status": "REJECTED",
+      "seconds": 169.56200000003446
+    },
+    {
+      "path": "gap12_seed17\\views\\result.json",
+      "tool": "view.render",
+      "status": "OK",
+      "seconds": 4.405999999959022
+    },
+    {
+      "path": "gap12_seed17\\views_clean\\result.json",
+      "tool": "view.render",
+      "status": "OK",
+      "seconds": 4.280999999959022
+    },
+    {
+      "path": "gap12_seed29\\pack\\result.json",
+      "tool": "uv.pack",
+      "status": "OK",
+      "seconds": 24.35999999998603
+    },
+    {
+      "path": "gap16_seed0\\pack\\result.json",
+      "tool": "uv.pack",
+      "status": "OK",
+      "seconds": 27.93799999996554
+    },
+    {
+      "path": "gap16_seed17\\pack\\result.json",
+      "tool": "uv.pack",
+      "status": "OK",
+      "seconds": 20.936999999918044
+    },
+    {
+      "path": "gap16_seed29\\pack\\result.json",
+      "tool": "uv.pack",
+      "status": "OK",
+      "seconds": 23.625
+    },
+    {
+      "path": "gap8_seed0\\bake\\result.json",
+      "tool": "material.bake",
+      "status": "OK",
+      "seconds": 51.34299999999348
+    },
+    {
+      "path": "gap8_seed0\\export\\result.json",
+      "tool": "asset.export",
+      "status": "OK",
+      "seconds": 3.234000000054948
+    },
+    {
+      "path": "gap8_seed0\\pack\\result.json",
+      "tool": "uv.pack",
+      "status": "OK",
+      "seconds": 26.81299999996554
+    },
+    {
+      "path": "gap8_seed0\\target\\result.json",
+      "tool": "material.target",
+      "status": "OK",
+      "seconds": 3.3910000000614673
+    },
+    {
+      "path": "gap8_seed0\\validate\\result.json",
+      "tool": "quality.validate",
+      "status": "REJECTED",
+      "seconds": 168.7970000000205
+    },
+    {
+      "path": "gap8_seed0\\views\\result.json",
+      "tool": "view.render",
+      "status": "OK",
+      "seconds": 4.5
+    },
+    {
+      "path": "gap8_seed0\\views_clean\\result.json",
+      "tool": "view.render",
+      "status": "OK",
+      "seconds": 4.359000000054948
+    },
+    {
+      "path": "gap8_seed0_1024\\bake\\result.json",
+      "tool": "material.bake",
+      "status": "OK",
+      "seconds": 32.04700000002049
+    },
+    {
+      "path": "gap8_seed0_1024\\export\\result.json",
+      "tool": "asset.export",
+      "status": "OK",
+      "seconds": 2.890999999945052
+    },
+    {
+      "path": "gap8_seed0_1024\\target\\result.json",
+      "tool": "material.target",
+      "status": "OK",
+      "seconds": 3.4679999999934807
+    },
+    {
+      "path": "gap8_seed0_1024\\validate\\result.json",
+      "tool": "quality.validate",
+      "status": "REJECTED",
+      "seconds": 159.2970000000205
+    },
+    {
+      "path": "gap8_seed0_1024\\views\\result.json",
+      "tool": "view.render",
+      "status": "OK",
+      "seconds": 4.39000000001397
+    },
+    {
+      "path": "gap8_seed0_1024\\views_clean\\result.json",
+      "tool": "view.render",
+      "status": "OK",
+      "seconds": 4.266000000061467
+    },
+    {
+      "path": "gap8_seed17\\pack\\result.json",
+      "tool": "uv.pack",
+      "status": "OK",
+      "seconds": 26.46799999999348
+    },
+    {
+      "path": "gap8_seed29\\pack\\result.json",
+      "tool": "uv.pack",
+      "status": "OK",
+      "seconds": 28.125
+    }
+  ],
+  "tool_seconds": 1155.747999999905,
+  "same_density_equivalent_side": 2001.916881052907,
+  "selected_preview": "gap8_seed0",
+  "human_accepted": false,
+  "full_pbr_passed": false,
+  "gpu_verified": false,
+  "interpretation": "Packing improved; no same-quality 1024 claim; preserve previous accepted 134-chart control"
+}

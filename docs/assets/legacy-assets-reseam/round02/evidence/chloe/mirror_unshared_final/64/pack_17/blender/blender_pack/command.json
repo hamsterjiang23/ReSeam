@@ -1,0 +1,13 @@
+[
+  "E:\\Blender 4.5.11\\blender.exe",
+  "--background",
+  "--factory-startup",
+  "--threads",
+  "1",
+  "--python-exit-code",
+  "1",
+  "--python",
+  "E:\\ReSem\\scripts\\agent_pack_worker.py",
+  "--",
+  "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\mirror_unshared_final\\64\\pack_17\\blender\\blender_pack\\request.json"
+]

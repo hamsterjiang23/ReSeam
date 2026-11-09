@@ -1,0 +1,661 @@
+{
+  "schema_version": 1,
+  "scope": "静态 CPU UV＋BaseColor；验证 LOD 0/1/2；完整 PBR、GPU、Unity 动态 Shader 与人工验收均独立",
+  "reproduce_input": "artifacts/legacy_assets_reseam/round02",
+  "reproduce_output": "docs/assets/legacy-assets-reseam/round02",
+  "experiment_finished_confirmed": true,
+  "source_fingerprint": {
+    "calls.json": "aa05aa8c8488ffd6d3f04110e00979d1152b53ca1de0f55604697fbacb6e02dc",
+    "chloe/appearance_review.json": "d762b841e8ff873d384637bb8efb93bdd70155a15de538e50cb247013819fae2",
+    "chloe/evaluations.json": "14fb2f4b2e971dfb3376928e62cde58abf8f2c8006c271cdb34443aa728aa9bf",
+    "chloe/states.json": "9f9ed34f99cf75f3f197bf25d527157708e0f83b655343b9e230632edd34e5fb",
+    "dragon/appearance_review.json": "e7436c69547a9959932be8e8b586321dc701dac6fcc0d4e45a43f629a7fceffc",
+    "dragon/evaluations.json": "7d37d3c1dd7339288cca8affd72754f45c0bbfe9ae662fc586ef62f6767ce3e9",
+    "dragon/states.json": "e861282ac89f630702326c4b103ba8f566c470f24b42750a307933944124ff05",
+    "energy_blade/appearance_review.json": "b6a694455aa4fd75b1be6f997e1e7b2cfa1ee822934a3decaf92273cef3657b8",
+    "energy_blade/evaluations.json": "3263b71736fca1e29513d9c83f90e161a781f21313ecc46421a75a7c8e926543",
+    "energy_blade/states.json": "9a8d107b36829ca57d19c1b4ac689bdea2cf9eff2ef61c867555a1406bab35dd",
+    "protocol.json": "1527591b2285840570bbda87fac72e68ed0066ba34fbe319802493c27413f53c"
+  },
+  "selected": {
+    "chloe": {
+      "key": "mirror_shared_final/256",
+      "selection_reason": "Agent 外观审阅指定；数值质量另列",
+      "review": {
+        "selected_key": "mirror_shared_final/256",
+        "appearance_accepted": true,
+        "reviewer": "current Agent",
+        "human_accepted": false,
+        "scope": "static RGB preview only; numerical rejection remains",
+        "evidence": [
+          "source/color_views/oblique_original.png",
+          "mirror_shared_final/256/color_views/front.png",
+          "mirror_shared_final/256/color_views/oblique.png",
+          "mirror_shared_final/256/color_views/back.png"
+        ],
+        "notes": "Reviewed front, oblique and back actual color images. Red shell, dark cavity and tapered tips remain legible after X-plane mirror; paired red/dark motifs are intentionally symmetrized. This is a preview acceptance, not original opposite-side appearance identity, Unity dynamic material, PBR, or numerical pass."
+      },
+      "numeric": {
+        "asset": "chloe",
+        "key": "mirror_shared_final/256",
+        "method": "mirror_shared_final",
+        "resolution": 256,
+        "status": "OK",
+        "chart_count": 2,
+        "faces": 590,
+        "vertices": 368,
+        "geometry_hash": "7a12444fe2c5e0cd96e5060f6fe9b924ccfe0d4020c82e0179707c951c7751bc",
+        "independent_tiles": 1,
+        "packing_owners": 1,
+        "shared_groups": 1,
+        "shared_surface_fraction": 1.0,
+        "unique_coverage": 0.7119554915662782,
+        "metrics_verified": true,
+        "geometry_passed": true,
+        "material_passed": false,
+        "render_passed": false,
+        "seams_passed": true,
+        "quality_accepted": false,
+        "export_mode": "diagnostic",
+        "mip_payload_bytes": 349524,
+        "texture_file_bytes": 117865,
+        "validated_mips": "[0, 1, 2]",
+        "glb_bytes": 136456,
+        "independent_reimport_passed": true,
+        "state_hash": "73fd480f7bb5552c0ad6444b7efc79f2afb526ff3b7ef8066dc19d8da6dd88a6",
+        "target": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\mirror_shared_final\\frozen_target\\target.json"
+      }
+    },
+    "energy_blade": {
+      "key": "mirror_shared_final/2048",
+      "selection_reason": "Agent 外观审阅指定；数值质量另列",
+      "review": {
+        "selected_key": "mirror_shared_final/2048",
+        "appearance_accepted": true,
+        "reviewer": "current Agent",
+        "human_accepted": false,
+        "scope": "static BaseColor preview; numerical render rejection retained",
+        "evidence": [
+          "source/color_views/oblique_original.png",
+          "mirror_shared_final/2048/color_views/front.png",
+          "mirror_shared_final/2048/color_views/oblique.png",
+          "mirror_shared_final/2048/color_views/back.png"
+        ],
+        "notes": "Reviewed front, oblique and back actual 2048 images. Long blade and unequal in-plane spikes stay recognizable; red/gold bands and the source speckled grey center remain. Front/back thickness was mirrored rather than the asymmetric in-plane outline. Surface color and seam probes passed; strict render tails reject. Preview acceptance only, not PBR or engine acceptance."
+      },
+      "numeric": {
+        "asset": "energy_blade",
+        "key": "mirror_shared_final/2048",
+        "method": "mirror_shared_final",
+        "resolution": 2048,
+        "status": "OK",
+        "chart_count": 2,
+        "faces": 700,
+        "vertices": 434,
+        "geometry_hash": "20eedfc34bd1958a3745bd43c67a96ffa9c33e07691f3a671c01b20273f31f5d",
+        "independent_tiles": 1,
+        "packing_owners": 1,
+        "shared_groups": 1,
+        "shared_surface_fraction": 1.0,
+        "unique_coverage": 0.7671881982190871,
+        "metrics_verified": true,
+        "geometry_passed": true,
+        "material_passed": true,
+        "render_passed": false,
+        "seams_passed": true,
+        "quality_accepted": false,
+        "export_mode": "diagnostic",
+        "mip_payload_bytes": 22369620,
+        "texture_file_bytes": 6433988,
+        "validated_mips": "[0, 1, 2]",
+        "glb_bytes": 4589668,
+        "independent_reimport_passed": true,
+        "state_hash": "631d180f431f45e679391573444f9ec143ae063386ba0ea809510532db601458",
+        "target": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\mirror_shared_final\\frozen_target\\target.json"
+      }
+    },
+    "dragon": {
+      "key": "mirror_shared_final/2048",
+      "selection_reason": "Agent 外观审阅指定；数值质量另列",
+      "review": {
+        "selected_key": "mirror_shared_final/2048",
+        "appearance_accepted": true,
+        "reviewer": "current Agent",
+        "human_accepted": false,
+        "scope": "static BaseColor preview; numerical render rejection retained",
+        "evidence": [
+          "source/color_views/oblique_original.png",
+          "mirror_shared_final/2048/color_views/front.png",
+          "mirror_shared_final/2048/color_views/oblique.png",
+          "mirror_shared_final/2048/color_views/back.png"
+        ],
+        "notes": "Reviewed front, oblique and back actual 2048 images. Pink/white wing edges and gold central rib motifs remain legible on the mirrored geometry. Retained-side motifs intentionally replace the opposite side. Low-mesh faceting remains a geometry limitation. Surface color and seam probes passed; render tails reject, so this is only Agent preview acceptance."
+      },
+      "numeric": {
+        "asset": "dragon",
+        "key": "mirror_shared_final/2048",
+        "method": "mirror_shared_final",
+        "resolution": 2048,
+        "status": "OK",
+        "chart_count": 6,
+        "faces": 2062,
+        "vertices": 1092,
+        "geometry_hash": "ef10836fcf1c44e88e2455f350d368a459f2628d67a497ad79330ec6fcbe3f7c",
+        "independent_tiles": 3,
+        "packing_owners": 3,
+        "shared_groups": 3,
+        "shared_surface_fraction": 1.0,
+        "unique_coverage": 0.20403520845783213,
+        "metrics_verified": true,
+        "geometry_passed": true,
+        "material_passed": true,
+        "render_passed": false,
+        "seams_passed": true,
+        "quality_accepted": false,
+        "export_mode": "diagnostic",
+        "mip_payload_bytes": 22369620,
+        "texture_file_bytes": 2884351,
+        "validated_mips": "[0, 1, 2]",
+        "glb_bytes": 2172016,
+        "independent_reimport_passed": true,
+        "state_hash": "89e3837a6d7d9c11574e9c577c9d6cbe9a438ba8d83a4eb9359382226942b455",
+        "target": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\mirror_shared_final\\frozen_target\\target.json"
+      }
+    }
+  },
+  "matched_controls": {
+    "chloe": {
+      "available": true,
+      "shared_key": "mirror_shared_final/256",
+      "control_key": "mirror_unshared_final/256",
+      "same_geometry": true,
+      "same_frozen_target": true,
+      "same_bounds": true,
+      "same_resolution": true,
+      "shared_geometry_hash": "7a12444fe2c5e0cd96e5060f6fe9b924ccfe0d4020c82e0179707c951c7751bc",
+      "control_geometry_hash": "7a12444fe2c5e0cd96e5060f6fe9b924ccfe0d4020c82e0179707c951c7751bc",
+      "shared_target_sha256": "85ee42b0c5082e238333552734be03093f87f450b299e4f0223d74806a8356d2",
+      "control_target_sha256": "85ee42b0c5082e238333552734be03093f87f450b299e4f0223d74806a8356d2",
+      "control_exported": true,
+      "control_numeric": {
+        "asset": "chloe",
+        "key": "mirror_unshared_final/256",
+        "method": "mirror_unshared_final",
+        "resolution": 256,
+        "status": "OK",
+        "chart_count": 2,
+        "faces": 590,
+        "vertices": 368,
+        "geometry_hash": "7a12444fe2c5e0cd96e5060f6fe9b924ccfe0d4020c82e0179707c951c7751bc",
+        "independent_tiles": 2,
+        "packing_owners": 2,
+        "shared_groups": 0,
+        "shared_surface_fraction": 0.0,
+        "unique_coverage": 0.47008995143747145,
+        "metrics_verified": true,
+        "geometry_passed": true,
+        "material_passed": false,
+        "render_passed": false,
+        "seams_passed": true,
+        "quality_accepted": false,
+        "export_mode": "diagnostic",
+        "mip_payload_bytes": 349524,
+        "texture_file_bytes": 101286,
+        "validated_mips": "[0, 1, 2]",
+        "glb_bytes": 127004,
+        "independent_reimport_passed": true,
+        "state_hash": "4c6e58568e54a0d95c7ee7e0bcb7870ca74643a23ee4b99567f6141f614de1c8",
+        "target": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\mirror_shared_final\\frozen_target\\target.json"
+      },
+      "comparison_conditions_passed": true
+    },
+    "energy_blade": {
+      "available": true,
+      "shared_key": "mirror_shared_final/2048",
+      "control_key": "mirror_unshared_final/2048",
+      "same_geometry": true,
+      "same_frozen_target": true,
+      "same_bounds": true,
+      "same_resolution": true,
+      "shared_geometry_hash": "20eedfc34bd1958a3745bd43c67a96ffa9c33e07691f3a671c01b20273f31f5d",
+      "control_geometry_hash": "20eedfc34bd1958a3745bd43c67a96ffa9c33e07691f3a671c01b20273f31f5d",
+      "shared_target_sha256": "b25c1eee6186aa3571652b0dd61314d603895dfca6625dd7a68aef1be0007462",
+      "control_target_sha256": "b25c1eee6186aa3571652b0dd61314d603895dfca6625dd7a68aef1be0007462",
+      "control_exported": true,
+      "control_numeric": {
+        "asset": "energy_blade",
+        "key": "mirror_unshared_final/2048",
+        "method": "mirror_unshared_final",
+        "resolution": 2048,
+        "status": "OK",
+        "chart_count": 2,
+        "faces": 700,
+        "vertices": 434,
+        "geometry_hash": "20eedfc34bd1958a3745bd43c67a96ffa9c33e07691f3a671c01b20273f31f5d",
+        "independent_tiles": 2,
+        "packing_owners": 2,
+        "shared_groups": 0,
+        "shared_surface_fraction": 0.0,
+        "unique_coverage": 0.5252012571872156,
+        "metrics_verified": true,
+        "geometry_passed": true,
+        "material_passed": true,
+        "render_passed": false,
+        "seams_passed": true,
+        "quality_accepted": false,
+        "export_mode": "diagnostic",
+        "mip_payload_bytes": 22369620,
+        "texture_file_bytes": 5242083,
+        "validated_mips": "[0, 1, 2]",
+        "glb_bytes": 3819404,
+        "independent_reimport_passed": true,
+        "state_hash": "6830861d4e1af8df1fac62ca939f082e130816f1e0ebf07a4a36f7670ef74066",
+        "target": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\mirror_shared_final\\frozen_target\\target.json"
+      },
+      "comparison_conditions_passed": true
+    },
+    "dragon": {
+      "available": true,
+      "shared_key": "mirror_shared_final/2048",
+      "control_key": "mirror_unshared_final/2048",
+      "same_geometry": true,
+      "same_frozen_target": true,
+      "same_bounds": true,
+      "same_resolution": true,
+      "shared_geometry_hash": "ef10836fcf1c44e88e2455f350d368a459f2628d67a497ad79330ec6fcbe3f7c",
+      "control_geometry_hash": "ef10836fcf1c44e88e2455f350d368a459f2628d67a497ad79330ec6fcbe3f7c",
+      "shared_target_sha256": "0e5e2409ba3d13cae44c30ea977e5b9903be2be075321c852b3258ec4a689ab9",
+      "control_target_sha256": "0e5e2409ba3d13cae44c30ea977e5b9903be2be075321c852b3258ec4a689ab9",
+      "control_exported": true,
+      "control_numeric": {
+        "asset": "dragon",
+        "key": "mirror_unshared_final/2048",
+        "method": "mirror_unshared_final",
+        "resolution": 2048,
+        "status": "OK",
+        "chart_count": 6,
+        "faces": 2062,
+        "vertices": 1092,
+        "geometry_hash": "ef10836fcf1c44e88e2455f350d368a459f2628d67a497ad79330ec6fcbe3f7c",
+        "independent_tiles": 6,
+        "packing_owners": 6,
+        "shared_groups": 0,
+        "shared_surface_fraction": 0.0,
+        "unique_coverage": 0.29846157073002316,
+        "metrics_verified": true,
+        "geometry_passed": true,
+        "material_passed": true,
+        "render_passed": false,
+        "seams_passed": true,
+        "quality_accepted": false,
+        "export_mode": "diagnostic",
+        "mip_payload_bytes": 22369620,
+        "texture_file_bytes": 4388940,
+        "validated_mips": "[0, 1, 2]",
+        "glb_bytes": 3233596,
+        "independent_reimport_passed": true,
+        "state_hash": "daed518549f4739e8502163333701c92bb42cf7a6ee0c61f8b44a2d3c719c175",
+        "target": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\mirror_shared_final\\frozen_target\\target.json"
+      },
+      "comparison_conditions_passed": true
+    }
+  },
+  "geometry_stages": {
+    "chloe": {
+      "import": {
+        "faces": 450,
+        "vertices": 227,
+        "geometry_hash": "c9b1f8c196896b45bcabf4298483391e937a06981a4ff13f02c9d04ec523b716",
+        "state_hash": "73fc4bac4e3d1246cab01c79973dddc34343b6555e78593de932f3c7f9182b46",
+        "bounds": [
+          [
+            0.6237664818763733,
+            -0.09121516346931458,
+            -0.7304652333259583
+          ],
+          [
+            0.9516278505325317,
+            0.15149185061454773,
+            0.8437146544456482
+          ]
+        ],
+        "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\source\\import\\snapshot\\snapshot.json"
+      },
+      "optcuts": {
+        "faces": 450,
+        "vertices": 227,
+        "geometry_hash": "c9b1f8c196896b45bcabf4298483391e937a06981a4ff13f02c9d04ec523b716",
+        "state_hash": "3e37775764631c95db3d0b2bb5921e711d6f26d195eb3d3fe7d1855d2c9973a8",
+        "bounds": [
+          [
+            0.6237664818763733,
+            -0.09121516346931458,
+            -0.7304652333259583
+          ],
+          [
+            0.9516278505325317,
+            0.15149185061454773,
+            0.8437146544456482
+          ]
+        ],
+        "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\optcuts\\native\\snapshot\\snapshot.json"
+      },
+      "mirror": {
+        "faces": 590,
+        "vertices": 368,
+        "geometry_hash": "7a12444fe2c5e0cd96e5060f6fe9b924ccfe0d4020c82e0179707c951c7751bc",
+        "state_hash": "187289b10f482bcd8408c65979245909dfec8345511cd9b5712c43f971dd42c8",
+        "bounds": [
+          [
+            0.6112968921661377,
+            -0.08879481256008148,
+            -0.7304652333259583
+          ],
+          [
+            0.9516278505325317,
+            0.15149185061454773,
+            0.6416904330253601
+          ]
+        ],
+        "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\mirror\\create\\shared\\snapshot.json"
+      },
+      "merge": {
+        "faces": 590,
+        "vertices": 368,
+        "geometry_hash": "7a12444fe2c5e0cd96e5060f6fe9b924ccfe0d4020c82e0179707c951c7751bc",
+        "state_hash": "73247b84163ddd8fc8a7708367e2636d3d87532b847d549a2cf3fa5784e763b2",
+        "bounds": [
+          [
+            0.6112968921661377,
+            -0.08879481256008148,
+            -0.7304652333259583
+          ],
+          [
+            0.9516278505325317,
+            0.15149185061454773,
+            0.6416904330253601
+          ]
+        ],
+        "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\merge\\harmonic_group0_apply\\snapshot\\snapshot.json"
+      }
+    },
+    "energy_blade": {
+      "import": {
+        "faces": 500,
+        "vertices": 252,
+        "geometry_hash": "578e7e2b77bfc14f42065144ee7e0d5f89e9d01a0f0b1b1f3e04206ee71b257a",
+        "state_hash": "bccf7133975883b2e623a2a108e445ba6d26c76ecfb7f8713fe9b40cc56c04d1",
+        "bounds": [
+          [
+            -0.49163818,
+            0.0,
+            -0.23090363
+          ],
+          [
+            0.49163818,
+            0.51376343,
+            0.23090363
+          ]
+        ],
+        "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\source\\import\\snapshot\\snapshot.json"
+      },
+      "optcuts": {
+        "faces": 500,
+        "vertices": 252,
+        "geometry_hash": "578e7e2b77bfc14f42065144ee7e0d5f89e9d01a0f0b1b1f3e04206ee71b257a",
+        "state_hash": "74b6fbd8b0cb24bb11bcd6eb734facce0d64640366135df06073848f5b97b0bb",
+        "bounds": [
+          [
+            -0.49163818,
+            0.0,
+            -0.23090363
+          ],
+          [
+            0.49163818,
+            0.51376343,
+            0.23090363
+          ]
+        ],
+        "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\optcuts\\native\\snapshot\\snapshot.json"
+      },
+      "mirror": {
+        "faces": 700,
+        "vertices": 434,
+        "geometry_hash": "20eedfc34bd1958a3745bd43c67a96ffa9c33e07691f3a671c01b20273f31f5d",
+        "state_hash": "f2dd08f50c4f907c2f6d6e20a326fbeedcf0a081a6a9dd65d8f16ec0b958064f",
+        "bounds": [
+          [
+            -0.48222893476486206,
+            0.0,
+            -0.23090362548828125
+          ],
+          [
+            0.49163818359375,
+            0.513763427734375,
+            0.23090362548828125
+          ]
+        ],
+        "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\mirror\\create\\shared\\snapshot.json"
+      },
+      "merge": {
+        "faces": 700,
+        "vertices": 434,
+        "geometry_hash": "20eedfc34bd1958a3745bd43c67a96ffa9c33e07691f3a671c01b20273f31f5d",
+        "state_hash": "dffea30c8dda2db4b938576de4c76afd82e812d4acf3ffec36c7e1b208738869",
+        "bounds": [
+          [
+            -0.48222893476486206,
+            0.0,
+            -0.23090362548828125
+          ],
+          [
+            0.49163818359375,
+            0.513763427734375,
+            0.23090362548828125
+          ]
+        ],
+        "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\merge\\harmonic_group0_apply\\snapshot\\snapshot.json"
+      }
+    },
+    "dragon": {
+      "import": {
+        "faces": 2000,
+        "vertices": 996,
+        "geometry_hash": "1f74f9dc786749e241a294fb8cd2257dd77e46af3551b5ade5129c52c36a6ec0",
+        "state_hash": "f0f1fa837341b5dc4f74ecc1d06014e602cca0635ec783f16e923ef179ec1e23",
+        "bounds": [
+          [
+            -0.49105835,
+            -0.00067603,
+            -0.23141539
+          ],
+          [
+            0.49105835,
+            0.60034645,
+            0.23141539
+          ]
+        ],
+        "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\source\\import\\snapshot\\snapshot.json"
+      },
+      "optcuts": {
+        "faces": 2000,
+        "vertices": 996,
+        "geometry_hash": "1f74f9dc786749e241a294fb8cd2257dd77e46af3551b5ade5129c52c36a6ec0",
+        "state_hash": "5322b15dbfda95a4b31f3537fff197d47e234e59458cde775abb0cb86239085e",
+        "bounds": [
+          [
+            -0.49105835,
+            -0.00067603,
+            -0.23141539
+          ],
+          [
+            0.49105835,
+            0.60034645,
+            0.23141539
+          ]
+        ],
+        "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\optcuts\\native\\snapshot\\snapshot.json"
+      },
+      "mirror": {
+        "faces": 2062,
+        "vertices": 1092,
+        "geometry_hash": "ef10836fcf1c44e88e2455f350d368a459f2628d67a497ad79330ec6fcbe3f7c",
+        "state_hash": "c76f310d31118928f14e4074d2a002474bb26049d5ebbbbe19ea741ee6ac1dda",
+        "bounds": [
+          [
+            -0.491058349609375,
+            -0.00033515511313453317,
+            -0.23141539096832275
+          ],
+          [
+            0.491058349609375,
+            0.6003464460372925,
+            0.22957168519496918
+          ]
+        ],
+        "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\mirror\\create\\shared\\snapshot.json"
+      },
+      "merge": {
+        "faces": 2062,
+        "vertices": 1092,
+        "geometry_hash": "ef10836fcf1c44e88e2455f350d368a459f2628d67a497ad79330ec6fcbe3f7c",
+        "state_hash": "f62ae92119649423332cfc3370a718cc5c872e02b2a73fe51bffd319789329e0",
+        "bounds": [
+          [
+            -0.491058349609375,
+            -0.00033515511313453317,
+            -0.23141539096832275
+          ],
+          [
+            0.491058349609375,
+            0.6003464460372925,
+            0.22957168519496918
+          ]
+        ],
+        "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\merge\\optcuts_group2_apply\\snapshot\\snapshot.json"
+      }
+    }
+  },
+  "evaluation_rows": 36,
+  "exported_glbs": 30,
+  "reimport_audits": 31,
+  "all_reimports_passed": true,
+  "calls": 515,
+  "total_tool_seconds": 8653.770000000251,
+  "path_costs": {
+    "chloe/source": {
+      "calls": 5,
+      "seconds": 7.124000000068918
+    },
+    "energy_blade/source": {
+      "calls": 5,
+      "seconds": 9.688000000081956
+    },
+    "dragon/source": {
+      "calls": 5,
+      "seconds": 30.531999999890104
+    },
+    "chloe/optcuts": {
+      "calls": 45,
+      "seconds": 85.88800000038464
+    },
+    "energy_blade/optcuts": {
+      "calls": 45,
+      "seconds": 1334.6239999994868
+    },
+    "dragon/optcuts": {
+      "calls": 45,
+      "seconds": 1256.2050000000745
+    },
+    "chloe/mirror": {
+      "calls": 3,
+      "seconds": 3.89000000001397
+    },
+    "energy_blade/mirror": {
+      "calls": 3,
+      "seconds": 3.656000000075437
+    },
+    "dragon/mirror": {
+      "calls": 3,
+      "seconds": 5.280999999959022
+    },
+    "chloe/merge": {
+      "calls": 8,
+      "seconds": 12.34499999997206
+    },
+    "energy_blade/merge": {
+      "calls": 8,
+      "seconds": 12.53200000000652
+    },
+    "dragon/merge": {
+      "calls": 13,
+      "seconds": 52.779999999911524
+    },
+    "chloe/fixed": {
+      "calls": 2,
+      "seconds": 2.375
+    },
+    "energy_blade/fixed": {
+      "calls": 2,
+      "seconds": 2.437000000034459
+    },
+    "dragon/fixed": {
+      "calls": 2,
+      "seconds": 11.172000000020489
+    },
+    "energy_blade/controls": {
+      "calls": 1,
+      "seconds": 1.327999999979511
+    },
+    "energy_blade/xatlas": {
+      "calls": 42,
+      "seconds": 951.6590000001015
+    },
+    "dragon/controls": {
+      "calls": 1,
+      "seconds": 2.077999999979511
+    },
+    "dragon/xatlas": {
+      "calls": 12,
+      "seconds": 196.0779999999795
+    },
+    "chloe/controls": {
+      "calls": 1,
+      "seconds": 1.265999999945052
+    },
+    "chloe/source_uv": {
+      "calls": 12,
+      "seconds": 202.93699999991804
+    },
+    "chloe/mirror_shared_final": {
+      "calls": 42,
+      "seconds": 80.70699999970384
+    },
+    "chloe/mirror_unshared_final": {
+      "calls": 42,
+      "seconds": 76.21700000029523
+    },
+    "dragon/mirror_shared_final": {
+      "calls": 42,
+      "seconds": 1308.373999999836
+    },
+    "energy_blade/mirror_shared_final": {
+      "calls": 42,
+      "seconds": 952.9240000002319
+    },
+    "dragon/mirror_unshared_final": {
+      "calls": 42,
+      "seconds": 1305.5810000003548
+    },
+    "energy_blade/mirror_unshared_final": {
+      "calls": 42,
+      "seconds": 744.091999999946
+    }
+  },
+  "failure_or_failed_gate_calls": 211,
+  "llm_cost": "not separately metered; this agent supplied the recorded operation decisions",
+  "gpu_verified": false,
+  "human_accepted": false,
+  "pbr_verified": false,
+  "inspection_scope": "Existing real outputs only; raw indexed GLB geometry/corner UV and auxiliary UV, embedded BaseColor, input and manifest hashes before/after; no solver/bake/full-suite rerun."
+}

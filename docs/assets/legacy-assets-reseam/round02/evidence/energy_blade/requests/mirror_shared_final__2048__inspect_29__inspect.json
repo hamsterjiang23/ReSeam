@@ -1,0 +1,12 @@
+{
+  "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\mirror_shared_final\\2048\\pack_29\\snapshot\\snapshot.json",
+  "profile": {
+    "quality_constraints": false,
+    "normal_angle_degrees": 180.0,
+    "correspondence_fraction": 0.08,
+    "resolution": 256,
+    "gap_pixels": 4,
+    "border_pixels": 4
+  },
+  "timeout_seconds": 300.0
+}

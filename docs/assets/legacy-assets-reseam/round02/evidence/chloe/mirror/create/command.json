@@ -1,0 +1,8 @@
+[
+  "E:\\ReSem\\.venv\\Scripts\\python.exe",
+  "-m",
+  "reseam.agent_tools.worker",
+  "asset.mirror_variant",
+  "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\mirror\\create",
+  "300.0"
+]

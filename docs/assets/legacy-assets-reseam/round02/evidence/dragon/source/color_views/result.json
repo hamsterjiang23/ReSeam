@@ -1,0 +1,36 @@
+{
+  "images": {
+    "front_original": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\source\\color_views\\front_original.png",
+    "front_target": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\source\\color_views\\front_target.png",
+    "front_difference": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\source\\color_views\\front_difference.png",
+    "front": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\source\\color_views\\front.png",
+    "oblique_original": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\source\\color_views\\oblique_original.png",
+    "oblique_target": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\source\\color_views\\oblique_target.png",
+    "oblique_difference": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\source\\color_views\\oblique_difference.png",
+    "oblique": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\source\\color_views\\oblique.png",
+    "back_original": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\source\\color_views\\back_original.png",
+    "back_target": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\source\\color_views\\back_target.png",
+    "back_difference": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\source\\color_views\\back_difference.png",
+    "back": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\source\\color_views\\back.png",
+    "uv": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\source\\color_views\\uv.png"
+  },
+  "face_rasters": {
+    "front": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\source\\color_views\\front_faces.npz",
+    "oblique": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\source\\color_views\\oblique_faces.npz",
+    "back": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\source\\color_views\\back_faces.npz"
+  },
+  "state_hash": "f0f1fa837341b5dc4f74ecc1d06014e602cca0635ec783f16e923ef179ec1e23",
+  "picked_faces": {
+    "front": [],
+    "oblique": [],
+    "back": []
+  },
+  "report": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\source\\color_views\\views.json",
+  "quality_evidence": false,
+  "coordinate_convention": "Y-up; front +Z, back -Z, left +X, right -X; orthographic auto-fit",
+  "status": "OK",
+  "execution_success": true,
+  "tool": "view.render",
+  "wall_seconds": 14.375,
+  "output": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\source\\color_views"
+}

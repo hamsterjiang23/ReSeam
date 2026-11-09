@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "pdf": "E:\\ReSem\\output\\pdf\\dragon-wholebody-refine\\镜像龙制作流程图解_含各UV实际渲染.pdf",
+  "sha256": "981e05bc7f7619267e273b6b3bb3b8059eea5f80b7fb8ff65d5c7d6264722c7a",
+  "pages": 45,
+  "rendered_pages": 45,
+  "unchanged_prefix_pages_pixel_equal": 42,
+  "added_pages_visually_reviewed": [
+    43,
+    44,
+    45
+  ],
+  "actual_render_count_including_original": 8,
+  "unavailable_methods": [
+    "flatten_anything",
+    "xatlas"
+  ],
+  "per_method_baked_uv_states_verified": 7,
+  "snapshot_arrays_hashes_verified": 7,
+  "original_and_six_baseline_card_pixels_equal": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "comparison_size": [
+    4992,
+    1460
+  ],
+  "native_resolution_embedded": true,
+  "pdf_attachments": 6,
+  "ruff": "PASS",
+  "basedpyright": "0 errors, 0 warnings, 0 notes",
+  "scope": "Actual per-UV baked BaseColor previews. Original is 8K cross-geometry reference. Two failed packing cases have no baked color output."
+}

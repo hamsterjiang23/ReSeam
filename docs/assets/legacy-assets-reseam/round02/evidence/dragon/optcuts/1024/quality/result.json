@@ -1,0 +1,32 @@
+{
+  "status": "REJECTED",
+  "execution_success": true,
+  "scope": "basecolor_reuse",
+  "quality_accepted": false,
+  "full_pbr_passed": false,
+  "geometry_valid": true,
+  "material_valid": false,
+  "render_valid": false,
+  "seams_valid": false,
+  "validation": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\optcuts\\1024\\quality\\validation.json",
+  "payload_bytes": 5592404,
+  "geometry_profile": {
+    "resolution": 1024,
+    "gap_pixels": 4.0,
+    "border_pixels": 4.0,
+    "correspondence_fraction": 0.08,
+    "normal_angle_degrees": 180.0,
+    "maximum_anisotropy": 2.0,
+    "mean_shape_limit": 0.025,
+    "tail_shape_limit": 0.1,
+    "maximum_density_ratio": 2.0,
+    "quality_constraints": false
+  },
+  "geometry_profile_hash": "5c8892213555297db30e5e2b26c1293dc9f2abf4aaf459fb70a244b02f99f85b",
+  "geometry_policy": "explicit_custom",
+  "strict_geometry_profile_applied": false,
+  "artist_reviewed": false,
+  "tool": "quality.validate",
+  "wall_seconds": 204.35900000005495,
+  "output": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\optcuts\\1024\\quality"
+}

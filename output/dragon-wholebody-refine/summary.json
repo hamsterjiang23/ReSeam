@@ -1,0 +1,373 @@
+{
+  "candidate": {
+    "label": "spikes_9_10_and_13_14_seed29",
+    "status": "OK",
+    "snapshot": "E:\\ReSem\\artifacts\\dragon_wholebody_refine\\round03\\spikes_9_10_and_13_14_seed29\\snapshot\\snapshot.json",
+    "state_hash": "8ebd51855f3cc614408abfefb5505656eea721a24ca3e02c80970a344f7aa813",
+    "coverage": 0.6304700083849542,
+    "minimum_gap_pixels": 10.15748737175791,
+    "charts": 80,
+    "groups": 38,
+    "geometry_hard_valid": true,
+    "geometry_unchanged": true,
+    "color_baked": false,
+    "appearance_accepted": null,
+    "seed": 29
+  },
+  "control": {
+    "label": "baseline_seed29",
+    "status": "OK",
+    "snapshot": "E:\\ReSem\\artifacts\\dragon_wholebody_refine\\round03\\baseline_seed29\\snapshot\\snapshot.json",
+    "state_hash": "263da06931a30b25918c8f8fcce135f047ab6c9f8bf23f3131c29c1ce07e3ad6",
+    "coverage": 0.6453274466185831,
+    "minimum_gap_pixels": 10.053639043831732,
+    "charts": 80,
+    "groups": 40,
+    "geometry_hard_valid": true,
+    "geometry_unchanged": true,
+    "color_baked": false,
+    "appearance_accepted": null,
+    "seed": 29
+  },
+  "comparison": "E:\\ReSem\\output\\dragon-wholebody-refine\\before-after.png",
+  "region_decisions": "E:\\ReSem\\artifacts\\dragon_wholebody_refine\\round03\\final_region_decisions.json",
+  "owner_origins": "E:\\ReSem\\artifacts\\dragon_wholebody_refine\\round03\\final_owner_origins.json",
+  "exports": [
+    {
+      "case": "candidate",
+      "source_asset": "E:\\ReSem\\artifacts\\dragon_wholebody_refine\\round03\\appearance\\candidate_diagnostic_export\\asset.glb",
+      "public_asset": "E:\\ReSem\\output\\dragon-wholebody-refine\\fewer-tiles-38\\model.glb",
+      "asset_sha256": "32df4061fac460b75d6393ebfb3735db0cc1087891e839ad5dad9c64e5599a12",
+      "position_max_error": 0.0,
+      "corner_uv_max_error": 4.4699857260077636e-08,
+      "embedded_pixels_equal": true,
+      "mips": [
+        {
+          "level": 0,
+          "dimensions": [
+            2048,
+            2048
+          ],
+          "path": "E:\\ReSem\\artifacts\\dragon_wholebody_refine\\round03\\appearance\\candidate_bake\\texture\\BaseColor_mip0.png",
+          "sha256": "49203cea3f652057b2dcfc3c3ea6e3851d2588fe210064feee36c47a096c667f"
+        },
+        {
+          "level": 1,
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "path": "E:\\ReSem\\artifacts\\dragon_wholebody_refine\\round03\\appearance\\candidate_bake\\texture\\BaseColor_mip1.png",
+          "sha256": "08fb041e1b7d1753a688e3fc8cc346dfe27122a680bfa5a2c856642cab04c0ea"
+        },
+        {
+          "level": 2,
+          "dimensions": [
+            512,
+            512
+          ],
+          "path": "E:\\ReSem\\artifacts\\dragon_wholebody_refine\\round03\\appearance\\candidate_bake\\texture\\BaseColor_mip2.png",
+          "sha256": "5a3207ad4d685802511572ae9bf6c8fb064c5d7caadaa0f4cc6ef5c5948a4c72"
+        },
+        {
+          "level": 3,
+          "dimensions": [
+            256,
+            256
+          ],
+          "path": "E:\\ReSem\\artifacts\\dragon_wholebody_refine\\round03\\appearance\\candidate_bake\\texture\\BaseColor_mip3.png",
+          "sha256": "453aac73d0ea54cfa1274ee1300842258b1c31c00b95998415b04f61be2fcc45"
+        },
+        {
+          "level": 4,
+          "dimensions": [
+            128,
+            128
+          ],
+          "path": "E:\\ReSem\\artifacts\\dragon_wholebody_refine\\round03\\appearance\\candidate_bake\\texture\\BaseColor_mip4.png",
+          "sha256": "a852b9440c52d241757ab1a634fdff0e002fd211be3037bad86589820a6f0dc3"
+        },
+        {
+          "level": 5,
+          "dimensions": [
+            64,
+            64
+          ],
+          "path": "E:\\ReSem\\artifacts\\dragon_wholebody_refine\\round03\\appearance\\candidate_bake\\texture\\BaseColor_mip5.png",
+          "sha256": "2da9a5463034413710ca066bd9379f82abd5c8311c4c60b9504d95a7e6725dc5"
+        },
+        {
+          "level": 6,
+          "dimensions": [
+            32,
+            32
+          ],
+          "path": "E:\\ReSem\\artifacts\\dragon_wholebody_refine\\round03\\appearance\\candidate_bake\\texture\\BaseColor_mip6.png",
+          "sha256": "afa1e7d860129de80093439f7f223fa8211d26bc52f5fc9d71bfc07c0d7d01bb"
+        },
+        {
+          "level": 7,
+          "dimensions": [
+            16,
+            16
+          ],
+          "path": "E:\\ReSem\\artifacts\\dragon_wholebody_refine\\round03\\appearance\\candidate_bake\\texture\\BaseColor_mip7.png",
+          "sha256": "07fe50143f9a0c9cf6ea988bcfecf8e2ae91cb86f9de5306e3af50f284ad851a"
+        },
+        {
+          "level": 8,
+          "dimensions": [
+            8,
+            8
+          ],
+          "path": "E:\\ReSem\\artifacts\\dragon_wholebody_refine\\round03\\appearance\\candidate_bake\\texture\\BaseColor_mip8.png",
+          "sha256": "0d13b68926d81ede10921713be7b34c90a6a4b6016c06f55088211e7c4892ff7"
+        },
+        {
+          "level": 9,
+          "dimensions": [
+            4,
+            4
+          ],
+          "path": "E:\\ReSem\\artifacts\\dragon_wholebody_refine\\round03\\appearance\\candidate_bake\\texture\\BaseColor_mip9.png",
+          "sha256": "74be904bb8c775268909eb929b25fa02169af2d40c116bdfdad35a21c1c9978c"
+        },
+        {
+          "level": 10,
+          "dimensions": [
+            2,
+            2
+          ],
+          "path": "E:\\ReSem\\artifacts\\dragon_wholebody_refine\\round03\\appearance\\candidate_bake\\texture\\BaseColor_mip10.png",
+          "sha256": "1c2e4eb8dbd3efbfd7205ec1f58043a4acba5c1b77a057d2521101a9c4aa19b3"
+        },
+        {
+          "level": 11,
+          "dimensions": [
+            1,
+            1
+          ],
+          "path": "E:\\ReSem\\artifacts\\dragon_wholebody_refine\\round03\\appearance\\candidate_bake\\texture\\BaseColor_mip11.png",
+          "sha256": "5494cf79e4ec89a0a2265d4389b7ffa9ecd4947ff3a6eceff5fa7a5d4455b0cc"
+        }
+      ],
+      "face_count": 11338,
+      "scope": "Independent GLB parser; UV+BaseColor only; no GPU/PBR/human acceptance"
+    },
+    {
+      "case": "baseline",
+      "source_asset": "E:\\ReSem\\artifacts\\dragon_wholebody_refine\\round03\\appearance\\baseline_diagnostic_export\\asset.glb",
+      "public_asset": "E:\\ReSem\\output\\dragon-wholebody-refine\\control-40\\model.glb",
+      "asset_sha256": "683c821872af570ee2ae97e1bdc957549ca365d623224d85577f9e38a9106120",
+      "position_max_error": 0.0,
+      "corner_uv_max_error": 4.459309588256133e-08,
+      "embedded_pixels_equal": true,
+      "mips": [
+        {
+          "level": 0,
+          "dimensions": [
+            2048,
+            2048
+          ],
+          "path": "E:\\ReSem\\artifacts\\dragon_wholebody_refine\\round03\\appearance\\baseline_bake\\texture\\BaseColor_mip0.png",
+          "sha256": "bdf34ac5b0125ebc26530020302e966c7625046c8647e84ce181825ae896e53d"
+        },
+        {
+          "level": 1,
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "path": "E:\\ReSem\\artifacts\\dragon_wholebody_refine\\round03\\appearance\\baseline_bake\\texture\\BaseColor_mip1.png",
+          "sha256": "4f820809ab1a818b21679bdd3e2160efbfed751fd3da9decf03f68c1369642a7"
+        },
+        {
+          "level": 2,
+          "dimensions": [
+            512,
+            512
+          ],
+          "path": "E:\\ReSem\\artifacts\\dragon_wholebody_refine\\round03\\appearance\\baseline_bake\\texture\\BaseColor_mip2.png",
+          "sha256": "01a0c3fb3e0ca1cb49d5f85623eb7c27c4548e55039700677d20dbfb37fa8e52"
+        },
+        {
+          "level": 3,
+          "dimensions": [
+            256,
+            256
+          ],
+          "path": "E:\\ReSem\\artifacts\\dragon_wholebody_refine\\round03\\appearance\\baseline_bake\\texture\\BaseColor_mip3.png",
+          "sha256": "31d5d46dc3b57b5242e8fd13de22a07f90c61c7cfaab3af1ed04c1b9eb6a0cae"
+        },
+        {
+          "level": 4,
+          "dimensions": [
+            128,
+            128
+          ],
+          "path": "E:\\ReSem\\artifacts\\dragon_wholebody_refine\\round03\\appearance\\baseline_bake\\texture\\BaseColor_mip4.png",
+          "sha256": "863200915c459c145f47ae586b360a2d1dd48ed90a0e6d9885db4bdd4a0e1520"
+        },
+        {
+          "level": 5,
+          "dimensions": [
+            64,
+            64
+          ],
+          "path": "E:\\ReSem\\artifacts\\dragon_wholebody_refine\\round03\\appearance\\baseline_bake\\texture\\BaseColor_mip5.png",
+          "sha256": "19397dff1842841a695eb2d1d8e61bdd07a572300c4f0e11c6a551fae15657bf"
+        },
+        {
+          "level": 6,
+          "dimensions": [
+            32,
+            32
+          ],
+          "path": "E:\\ReSem\\artifacts\\dragon_wholebody_refine\\round03\\appearance\\baseline_bake\\texture\\BaseColor_mip6.png",
+          "sha256": "7e506bf3fe767ed348549f92909cb933de0331d68858acaa790206f4a7b36db1"
+        },
+        {
+          "level": 7,
+          "dimensions": [
+            16,
+            16
+          ],
+          "path": "E:\\ReSem\\artifacts\\dragon_wholebody_refine\\round03\\appearance\\baseline_bake\\texture\\BaseColor_mip7.png",
+          "sha256": "710b846940ac5d75ae19ae784812a16a4bf6a4b3d0428eec6be0a64a1bc0e041"
+        },
+        {
+          "level": 8,
+          "dimensions": [
+            8,
+            8
+          ],
+          "path": "E:\\ReSem\\artifacts\\dragon_wholebody_refine\\round03\\appearance\\baseline_bake\\texture\\BaseColor_mip8.png",
+          "sha256": "2513fa4a21033de726370d52b562f4fea6eacaa0aeb97231c37f599bd54f1ab8"
+        },
+        {
+          "level": 9,
+          "dimensions": [
+            4,
+            4
+          ],
+          "path": "E:\\ReSem\\artifacts\\dragon_wholebody_refine\\round03\\appearance\\baseline_bake\\texture\\BaseColor_mip9.png",
+          "sha256": "5e45ff5cb798c41062f5b76ce6fa7e5efea67571984b6160b8ec740b781148ac"
+        },
+        {
+          "level": 10,
+          "dimensions": [
+            2,
+            2
+          ],
+          "path": "E:\\ReSem\\artifacts\\dragon_wholebody_refine\\round03\\appearance\\baseline_bake\\texture\\BaseColor_mip10.png",
+          "sha256": "1b14c122067778b83c70a163a5c2e712e06108a99ca93d52cf7f191f7ad53a06"
+        },
+        {
+          "level": 11,
+          "dimensions": [
+            1,
+            1
+          ],
+          "path": "E:\\ReSem\\artifacts\\dragon_wholebody_refine\\round03\\appearance\\baseline_bake\\texture\\BaseColor_mip11.png",
+          "sha256": "2bc29df70aca06fb146311abdf48e2a4ccf4c89af3dfc57ccfcb178d69bb675e"
+        }
+      ],
+      "face_count": 11338,
+      "scope": "Independent GLB parser; UV+BaseColor only; no GPU/PBR/human acceptance"
+    }
+  ],
+  "validation": [
+    {
+      "name": "candidate",
+      "validation": {
+        "status": "REJECTED",
+        "execution_success": true,
+        "scope": "basecolor_reuse",
+        "quality_accepted": false,
+        "full_pbr_passed": false,
+        "geometry_valid": true,
+        "material_valid": true,
+        "render_valid": false,
+        "seams_valid": true,
+        "validation": "E:\\ReSem\\artifacts\\dragon_wholebody_refine\\round03\\appearance\\candidate_validate\\validation.json",
+        "payload_bytes": 22369620,
+        "geometry_profile": {
+          "resolution": 2048,
+          "gap_pixels": 8.0,
+          "border_pixels": 8.0,
+          "correspondence_fraction": 0.1,
+          "normal_angle_degrees": 180.0,
+          "maximum_anisotropy": 2.0,
+          "mean_shape_limit": 0.025,
+          "tail_shape_limit": 0.1,
+          "maximum_density_ratio": 2.0,
+          "quality_constraints": false,
+          "balance_density": false,
+          "preserve_source_uv": {
+            "snapshot": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\round02\\evaluation\\reseam_shared_2048\\pack\\snapshot\\snapshot.json",
+            "state_hash": "dc7f4a962b8dd4e05f640dfb2e1a8f913423e24206e0a1481fe24ccfc34c81b3"
+          }
+        },
+        "geometry_profile_hash": "abcfb54df13d399a7a9c4b887a2a4903c977874d3f7b64b90b2c5a2a4ecc481f",
+        "geometry_policy": "explicit_custom",
+        "strict_geometry_profile_applied": false,
+        "artist_reviewed": false,
+        "tool": "quality.validate",
+        "wall_seconds": 181.4529999999795,
+        "output": "E:\\ReSem\\artifacts\\dragon_wholebody_refine\\round03\\appearance\\candidate_validate"
+      },
+      "agent_appearance_accepted": true,
+      "human_accepted": false,
+      "full_pbr_passed": false,
+      "gpu_verified": false
+    },
+    {
+      "name": "baseline",
+      "validation": {
+        "status": "REJECTED",
+        "execution_success": true,
+        "scope": "basecolor_reuse",
+        "quality_accepted": false,
+        "full_pbr_passed": false,
+        "geometry_valid": true,
+        "material_valid": true,
+        "render_valid": false,
+        "seams_valid": true,
+        "validation": "E:\\ReSem\\artifacts\\dragon_wholebody_refine\\round03\\appearance\\baseline_validate\\validation.json",
+        "payload_bytes": 22369620,
+        "geometry_profile": {
+          "resolution": 2048,
+          "gap_pixels": 8.0,
+          "border_pixels": 8.0,
+          "correspondence_fraction": 0.1,
+          "normal_angle_degrees": 180.0,
+          "maximum_anisotropy": 2.0,
+          "mean_shape_limit": 0.025,
+          "tail_shape_limit": 0.1,
+          "maximum_density_ratio": 2.0,
+          "quality_constraints": false,
+          "balance_density": false,
+          "preserve_source_uv": {
+            "snapshot": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\round02\\evaluation\\reseam_shared_2048\\pack\\snapshot\\snapshot.json",
+            "state_hash": "dc7f4a962b8dd4e05f640dfb2e1a8f913423e24206e0a1481fe24ccfc34c81b3"
+          }
+        },
+        "geometry_profile_hash": "abcfb54df13d399a7a9c4b887a2a4903c977874d3f7b64b90b2c5a2a4ecc481f",
+        "geometry_policy": "explicit_custom",
+        "strict_geometry_profile_applied": false,
+        "artist_reviewed": false,
+        "tool": "quality.validate",
+        "wall_seconds": 201.7970000000205,
+        "output": "E:\\ReSem\\artifacts\\dragon_wholebody_refine\\round03\\appearance\\baseline_validate"
+      },
+      "agent_appearance_accepted": null,
+      "human_accepted": false,
+      "full_pbr_passed": false,
+      "gpu_verified": false
+    }
+  ],
+  "selection_decision": "Prioritize fewer independent tiles. Coverage is lower than the same-setting 40-tile control and the retained historical 65.08% result.",
+  "runtime_texture_bytes_each": 22369620,
+  "runtime_texture_byte_savings": 0,
+  "historical_packing_coverage": 0.6507865459152863
+}

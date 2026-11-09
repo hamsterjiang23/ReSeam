@@ -1,0 +1,21 @@
+{
+  "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\mirror_shared_final\\512\\pack_43\\snapshot\\snapshot.json",
+  "state_hash": "ed6cea9851cfc0d6fc46bf7fe063057357e0cc3b4d5acd63c13947b2e798cc4f",
+  "asset_id": "ef10836fcf1c44e88e2455f350d368a459f2628d67a497ad79330ec6fcbe3f7c",
+  "status": "OK",
+  "execution_success": true,
+  "geometry_passed": true,
+  "final_quality_passed": null,
+  "report": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\mirror_shared_final\\512\\final\\inspect_resolution01\\inspection.json",
+  "chart_count": 6,
+  "shared_group_count": 3,
+  "unique_footprint": 0.20151954214667456,
+  "metrics_report": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\mirror_shared_final\\512\\final\\inspect_resolution01\\uv_metrics.json",
+  "metrics_verified": true,
+  "uv_connected_charts": 6,
+  "packing_owners": 3,
+  "actual_independent_tiles": 3,
+  "tool": "uv.inspect",
+  "wall_seconds": 2.577999999979511,
+  "output": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\mirror_shared_final\\512\\final\\inspect_resolution01"
+}

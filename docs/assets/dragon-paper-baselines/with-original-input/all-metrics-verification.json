@@ -1,0 +1,19 @@
+{
+  "metric_rows": 69,
+  "method_columns": 9,
+  "csv_roundtrip": "PASS",
+  "source_hashes_unchanged": true,
+  "status_assertions": "PASS",
+  "full_mips_source_models": 6,
+  "uv_algorithms_rerun": false,
+  "new_metric_evaluation_completed": true,
+  "metric_evaluation_cases": 9,
+  "markdown_best_cells": 96,
+  "metric_rows_with_best": 44,
+  "csv_contains_markdown": false,
+  "best_extrema_independent_check": "PASS",
+  "known_winner_regressions": 20,
+  "neutral_statistic_regressions": 9,
+  "markdown_cells_checked": 621,
+  "frozen_baseline_files_unchanged": 117
+}

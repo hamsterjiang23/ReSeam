@@ -1,0 +1,389 @@
+{
+  "rows": [
+    {
+      "asset": "docs\\assets\\optcuts-agent-uv\\round01\\models\\tripo\\optcuts\\seed17\\asset.glb",
+      "sha256": "0859d2abbac8895ef3cb5d5884ae058ea34d963a537fbfae3f142f8c36613a4d",
+      "passed": true,
+      "reimport": {
+        "asset": "docs\\assets\\optcuts-agent-uv\\round01\\models\\tripo\\optcuts\\seed17\\asset.glb",
+        "snapshot": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\tripo\\evaluate\\optcuts\\seed17\\pack\\snapshot\\snapshot.json",
+        "state_hash": "afd7df1fe1dfa05471297172094e403b0d77ccaf75a3b8a63a8e59c8e4f1bf19",
+        "asset_sha256": "0859d2abbac8895ef3cb5d5884ae058ea34d963a537fbfae3f142f8c36613a4d",
+        "geometry_hash": "38fc28ef73d985474d0c0cc02295d587a86f4e430a0be946a6b2eaba3dbb2a20",
+        "faces": 424,
+        "positions_max_abs_error": 0.0,
+        "corner_uv0_max_abs_error": 2.9607165163980653e-08,
+        "geometry_passed": true,
+        "corner_uv0_passed": true,
+        "attributes": [
+          "POSITION",
+          "TEXCOORD_0"
+        ],
+        "extra_uv": [],
+        "required_texcoord_1": false,
+        "embedded_basecolor_size": [
+          256,
+          256
+        ],
+        "embedded_basecolor_pixel_equal_to_mip0": true,
+        "passed": true,
+        "scope": "raw GLB accessor bounds, ordered indexed face corners, float32 coordinates and UVs, hash-bound auxiliary UV sidecar, embedded BaseColor pixels; no engine/GPU/Shader test"
+      },
+      "copied_glb_equals_export": true,
+      "mip_count": 9
+    },
+    {
+      "asset": "docs\\assets\\optcuts-agent-uv\\round01\\models\\tripo\\optcuts\\seed29\\asset.glb",
+      "sha256": "c86e506c8930e9f93ca86293ebf28d8562d2abc0614cb3ed074b43252a5f76bb",
+      "passed": true,
+      "reimport": {
+        "asset": "docs\\assets\\optcuts-agent-uv\\round01\\models\\tripo\\optcuts\\seed29\\asset.glb",
+        "snapshot": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\tripo\\evaluate\\optcuts\\seed29\\pack\\snapshot\\snapshot.json",
+        "state_hash": "16c219f730c6f2ac4c8822e3aa69519b17eb077e533080ec060a8b332306e223",
+        "asset_sha256": "c86e506c8930e9f93ca86293ebf28d8562d2abc0614cb3ed074b43252a5f76bb",
+        "geometry_hash": "38fc28ef73d985474d0c0cc02295d587a86f4e430a0be946a6b2eaba3dbb2a20",
+        "faces": 424,
+        "positions_max_abs_error": 0.0,
+        "corner_uv0_max_abs_error": 2.972180068727681e-08,
+        "geometry_passed": true,
+        "corner_uv0_passed": true,
+        "attributes": [
+          "POSITION",
+          "TEXCOORD_0"
+        ],
+        "extra_uv": [],
+        "required_texcoord_1": false,
+        "embedded_basecolor_size": [
+          256,
+          256
+        ],
+        "embedded_basecolor_pixel_equal_to_mip0": true,
+        "passed": true,
+        "scope": "raw GLB accessor bounds, ordered indexed face corners, float32 coordinates and UVs, hash-bound auxiliary UV sidecar, embedded BaseColor pixels; no engine/GPU/Shader test"
+      },
+      "copied_glb_equals_export": true,
+      "mip_count": 9
+    },
+    {
+      "asset": "docs\\assets\\optcuts-agent-uv\\round01\\models\\tripo\\optcuts\\seed43\\asset.glb",
+      "sha256": "12c26b9b8b1214cb26375477f7d9c17463e8e2ebcd5939331f0240d7b2e5a4ed",
+      "passed": true,
+      "reimport": {
+        "asset": "docs\\assets\\optcuts-agent-uv\\round01\\models\\tripo\\optcuts\\seed43\\asset.glb",
+        "snapshot": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\tripo\\evaluate\\optcuts\\seed43\\pack\\snapshot\\snapshot.json",
+        "state_hash": "faae46420886a5ee08f097b75e6cf11d64410a1ef1e94e65e3356e591f6d0b11",
+        "asset_sha256": "12c26b9b8b1214cb26375477f7d9c17463e8e2ebcd5939331f0240d7b2e5a4ed",
+        "geometry_hash": "38fc28ef73d985474d0c0cc02295d587a86f4e430a0be946a6b2eaba3dbb2a20",
+        "faces": 424,
+        "positions_max_abs_error": 0.0,
+        "corner_uv0_max_abs_error": 2.978329827207915e-08,
+        "geometry_passed": true,
+        "corner_uv0_passed": true,
+        "attributes": [
+          "POSITION",
+          "TEXCOORD_0"
+        ],
+        "extra_uv": [],
+        "required_texcoord_1": false,
+        "embedded_basecolor_size": [
+          256,
+          256
+        ],
+        "embedded_basecolor_pixel_equal_to_mip0": true,
+        "passed": true,
+        "scope": "raw GLB accessor bounds, ordered indexed face corners, float32 coordinates and UVs, hash-bound auxiliary UV sidecar, embedded BaseColor pixels; no engine/GPU/Shader test"
+      },
+      "copied_glb_equals_export": true,
+      "mip_count": 9
+    },
+    {
+      "asset": "docs\\assets\\optcuts-agent-uv\\round01\\models\\tripo\\agent_merge\\seed17\\asset.glb",
+      "sha256": "fec7db635aaa940fcee36da478901e12a70ecf8c7a25859eb6a320f815eb1089",
+      "passed": true,
+      "reimport": {
+        "asset": "docs\\assets\\optcuts-agent-uv\\round01\\models\\tripo\\agent_merge\\seed17\\asset.glb",
+        "snapshot": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\tripo\\evaluate\\agent_merge\\seed17\\pack\\snapshot\\snapshot.json",
+        "state_hash": "a364cbaf6b102f8272350314e9b3243792c1e62208b19f35c085fd939c1c5487",
+        "asset_sha256": "fec7db635aaa940fcee36da478901e12a70ecf8c7a25859eb6a320f815eb1089",
+        "geometry_hash": "38fc28ef73d985474d0c0cc02295d587a86f4e430a0be946a6b2eaba3dbb2a20",
+        "faces": 424,
+        "positions_max_abs_error": 0.0,
+        "corner_uv0_max_abs_error": 2.9721913485936113e-08,
+        "geometry_passed": true,
+        "corner_uv0_passed": true,
+        "attributes": [
+          "POSITION",
+          "TEXCOORD_0"
+        ],
+        "extra_uv": [],
+        "required_texcoord_1": false,
+        "embedded_basecolor_size": [
+          256,
+          256
+        ],
+        "embedded_basecolor_pixel_equal_to_mip0": true,
+        "passed": true,
+        "scope": "raw GLB accessor bounds, ordered indexed face corners, float32 coordinates and UVs, hash-bound auxiliary UV sidecar, embedded BaseColor pixels; no engine/GPU/Shader test"
+      },
+      "copied_glb_equals_export": true,
+      "mip_count": 9
+    },
+    {
+      "asset": "docs\\assets\\optcuts-agent-uv\\round01\\models\\tripo\\agent_merge\\seed29\\asset.glb",
+      "sha256": "ca4bbc26f018fe34c3adfd4d60782d3c018648bb814e0cd1a86b4b75438ee143",
+      "passed": true,
+      "reimport": {
+        "asset": "docs\\assets\\optcuts-agent-uv\\round01\\models\\tripo\\agent_merge\\seed29\\asset.glb",
+        "snapshot": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\tripo\\evaluate\\agent_merge\\seed29\\pack\\snapshot\\snapshot.json",
+        "state_hash": "0a7541dc89e2644ce7ef3ba83859c4e7482c041bd6c5f83b21418f6d8dd96b43",
+        "asset_sha256": "ca4bbc26f018fe34c3adfd4d60782d3c018648bb814e0cd1a86b4b75438ee143",
+        "geometry_hash": "38fc28ef73d985474d0c0cc02295d587a86f4e430a0be946a6b2eaba3dbb2a20",
+        "faces": 424,
+        "positions_max_abs_error": 0.0,
+        "corner_uv0_max_abs_error": 2.9763659092907346e-08,
+        "geometry_passed": true,
+        "corner_uv0_passed": true,
+        "attributes": [
+          "POSITION",
+          "TEXCOORD_0"
+        ],
+        "extra_uv": [],
+        "required_texcoord_1": false,
+        "embedded_basecolor_size": [
+          256,
+          256
+        ],
+        "embedded_basecolor_pixel_equal_to_mip0": true,
+        "passed": true,
+        "scope": "raw GLB accessor bounds, ordered indexed face corners, float32 coordinates and UVs, hash-bound auxiliary UV sidecar, embedded BaseColor pixels; no engine/GPU/Shader test"
+      },
+      "copied_glb_equals_export": true,
+      "mip_count": 9
+    },
+    {
+      "asset": "docs\\assets\\optcuts-agent-uv\\round01\\models\\tripo\\agent_merge\\seed43\\asset.glb",
+      "sha256": "d75bf2bd23669a0e0182effd97bdabccb886cdf06302f8eafc957bafac54b86d",
+      "passed": true,
+      "reimport": {
+        "asset": "docs\\assets\\optcuts-agent-uv\\round01\\models\\tripo\\agent_merge\\seed43\\asset.glb",
+        "snapshot": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\tripo\\evaluate\\agent_merge\\seed43\\pack\\snapshot\\snapshot.json",
+        "state_hash": "f21f5542179bcca391aa65840023c5d69f4b1b3b654f49a3e290307ea57a5c32",
+        "asset_sha256": "d75bf2bd23669a0e0182effd97bdabccb886cdf06302f8eafc957bafac54b86d",
+        "geometry_hash": "38fc28ef73d985474d0c0cc02295d587a86f4e430a0be946a6b2eaba3dbb2a20",
+        "faces": 424,
+        "positions_max_abs_error": 0.0,
+        "corner_uv0_max_abs_error": 2.9745631069388878e-08,
+        "geometry_passed": true,
+        "corner_uv0_passed": true,
+        "attributes": [
+          "POSITION",
+          "TEXCOORD_0"
+        ],
+        "extra_uv": [],
+        "required_texcoord_1": false,
+        "embedded_basecolor_size": [
+          256,
+          256
+        ],
+        "embedded_basecolor_pixel_equal_to_mip0": true,
+        "passed": true,
+        "scope": "raw GLB accessor bounds, ordered indexed face corners, float32 coordinates and UVs, hash-bound auxiliary UV sidecar, embedded BaseColor pixels; no engine/GPU/Shader test"
+      },
+      "copied_glb_equals_export": true,
+      "mip_count": 9
+    },
+    {
+      "asset": "docs\\assets\\optcuts-agent-uv\\round01\\models\\dragon\\optcuts\\seed17\\asset.glb",
+      "sha256": "255518e900d7f580710478a9058e8ebe03549742f477c433506efa61ceb8cec2",
+      "passed": true,
+      "reimport": {
+        "asset": "docs\\assets\\optcuts-agent-uv\\round01\\models\\dragon\\optcuts\\seed17\\asset.glb",
+        "snapshot": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\evaluate\\optcuts\\seed17\\pack\\snapshot\\snapshot.json",
+        "state_hash": "bc62affc8efa6383a57708196a37d04cbfdd9819c0a74305afa5aa7c888391b0",
+        "asset_sha256": "255518e900d7f580710478a9058e8ebe03549742f477c433506efa61ceb8cec2",
+        "geometry_hash": "a7b1bfc5d1fb43d487904a917624bbc05f8c89d32bf606a502198badb5ff7d31",
+        "faces": 11338,
+        "positions_max_abs_error": 0.0,
+        "corner_uv0_max_abs_error": 2.9793116196330516e-08,
+        "geometry_passed": true,
+        "corner_uv0_passed": true,
+        "attributes": [
+          "POSITION",
+          "TEXCOORD_0"
+        ],
+        "extra_uv": [],
+        "required_texcoord_1": false,
+        "embedded_basecolor_size": [
+          256,
+          256
+        ],
+        "embedded_basecolor_pixel_equal_to_mip0": true,
+        "passed": true,
+        "scope": "raw GLB accessor bounds, ordered indexed face corners, float32 coordinates and UVs, hash-bound auxiliary UV sidecar, embedded BaseColor pixels; no engine/GPU/Shader test"
+      },
+      "copied_glb_equals_export": true,
+      "mip_count": 9
+    },
+    {
+      "asset": "docs\\assets\\optcuts-agent-uv\\round01\\models\\dragon\\optcuts\\seed29\\asset.glb",
+      "sha256": "3a6e311343aaf8cb050aafc59b04d122861ba92855cb97c2cf26d7afe5a3dc3f",
+      "passed": true,
+      "reimport": {
+        "asset": "docs\\assets\\optcuts-agent-uv\\round01\\models\\dragon\\optcuts\\seed29\\asset.glb",
+        "snapshot": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\evaluate\\optcuts\\seed29\\pack\\snapshot\\snapshot.json",
+        "state_hash": "9e4043226c61c01aaff9ae85ce1c9498918456b50097cb854e46f0951090c03e",
+        "asset_sha256": "3a6e311343aaf8cb050aafc59b04d122861ba92855cb97c2cf26d7afe5a3dc3f",
+        "geometry_hash": "a7b1bfc5d1fb43d487904a917624bbc05f8c89d32bf606a502198badb5ff7d31",
+        "faces": 11338,
+        "positions_max_abs_error": 0.0,
+        "corner_uv0_max_abs_error": 2.9800639178567678e-08,
+        "geometry_passed": true,
+        "corner_uv0_passed": true,
+        "attributes": [
+          "POSITION",
+          "TEXCOORD_0"
+        ],
+        "extra_uv": [],
+        "required_texcoord_1": false,
+        "embedded_basecolor_size": [
+          256,
+          256
+        ],
+        "embedded_basecolor_pixel_equal_to_mip0": true,
+        "passed": true,
+        "scope": "raw GLB accessor bounds, ordered indexed face corners, float32 coordinates and UVs, hash-bound auxiliary UV sidecar, embedded BaseColor pixels; no engine/GPU/Shader test"
+      },
+      "copied_glb_equals_export": true,
+      "mip_count": 9
+    },
+    {
+      "asset": "docs\\assets\\optcuts-agent-uv\\round01\\models\\dragon\\optcuts\\seed43\\asset.glb",
+      "sha256": "fc5feccd10ae60f4e568146abb66c44d09730689e1014c7b18b38df1fcbbb6eb",
+      "passed": true,
+      "reimport": {
+        "asset": "docs\\assets\\optcuts-agent-uv\\round01\\models\\dragon\\optcuts\\seed43\\asset.glb",
+        "snapshot": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\evaluate\\optcuts\\seed43\\pack\\snapshot\\snapshot.json",
+        "state_hash": "d0b32f466c0b2dba98d24db77252b7154e3c69e838d09952ce4e2c863075417b",
+        "asset_sha256": "fc5feccd10ae60f4e568146abb66c44d09730689e1014c7b18b38df1fcbbb6eb",
+        "geometry_hash": "a7b1bfc5d1fb43d487904a917624bbc05f8c89d32bf606a502198badb5ff7d31",
+        "faces": 11338,
+        "positions_max_abs_error": 0.0,
+        "corner_uv0_max_abs_error": 2.9798243650347445e-08,
+        "geometry_passed": true,
+        "corner_uv0_passed": true,
+        "attributes": [
+          "POSITION",
+          "TEXCOORD_0"
+        ],
+        "extra_uv": [],
+        "required_texcoord_1": false,
+        "embedded_basecolor_size": [
+          256,
+          256
+        ],
+        "embedded_basecolor_pixel_equal_to_mip0": true,
+        "passed": true,
+        "scope": "raw GLB accessor bounds, ordered indexed face corners, float32 coordinates and UVs, hash-bound auxiliary UV sidecar, embedded BaseColor pixels; no engine/GPU/Shader test"
+      },
+      "copied_glb_equals_export": true,
+      "mip_count": 9
+    },
+    {
+      "asset": "docs\\assets\\optcuts-agent-uv\\round01\\models\\dragon\\agent_merge\\seed17\\asset.glb",
+      "sha256": "84674cfa523ede2810b721ae67c14e4564fb155bfaf1a7ee362ac0407204dc8a",
+      "passed": true,
+      "reimport": {
+        "asset": "docs\\assets\\optcuts-agent-uv\\round01\\models\\dragon\\agent_merge\\seed17\\asset.glb",
+        "snapshot": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\evaluate\\agent_merge\\seed17\\pack\\snapshot\\snapshot.json",
+        "state_hash": "d2325185428e36a8cfd06e1b512405252e7c122469ce238722e9badb161f8de3",
+        "asset_sha256": "84674cfa523ede2810b721ae67c14e4564fb155bfaf1a7ee362ac0407204dc8a",
+        "geometry_hash": "a7b1bfc5d1fb43d487904a917624bbc05f8c89d32bf606a502198badb5ff7d31",
+        "faces": 11338,
+        "positions_max_abs_error": 0.0,
+        "corner_uv0_max_abs_error": 2.9794581468678416e-08,
+        "geometry_passed": true,
+        "corner_uv0_passed": true,
+        "attributes": [
+          "POSITION",
+          "TEXCOORD_0"
+        ],
+        "extra_uv": [],
+        "required_texcoord_1": false,
+        "embedded_basecolor_size": [
+          256,
+          256
+        ],
+        "embedded_basecolor_pixel_equal_to_mip0": true,
+        "passed": true,
+        "scope": "raw GLB accessor bounds, ordered indexed face corners, float32 coordinates and UVs, hash-bound auxiliary UV sidecar, embedded BaseColor pixels; no engine/GPU/Shader test"
+      },
+      "copied_glb_equals_export": true,
+      "mip_count": 9
+    },
+    {
+      "asset": "docs\\assets\\optcuts-agent-uv\\round01\\models\\dragon\\agent_merge\\seed29\\asset.glb",
+      "sha256": "3c0e8e7333c43c24694256c9fbcf5c89826b674307039da84c1068734b4be5ff",
+      "passed": true,
+      "reimport": {
+        "asset": "docs\\assets\\optcuts-agent-uv\\round01\\models\\dragon\\agent_merge\\seed29\\asset.glb",
+        "snapshot": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\evaluate\\agent_merge\\seed29\\pack\\snapshot\\snapshot.json",
+        "state_hash": "a2cc418ef93f9d094240c2a00f5a488c52aedac13ca9cb75431dfb34a9b7d324",
+        "asset_sha256": "3c0e8e7333c43c24694256c9fbcf5c89826b674307039da84c1068734b4be5ff",
+        "geometry_hash": "a7b1bfc5d1fb43d487904a917624bbc05f8c89d32bf606a502198badb5ff7d31",
+        "faces": 11338,
+        "positions_max_abs_error": 0.0,
+        "corner_uv0_max_abs_error": 2.9760119479860236e-08,
+        "geometry_passed": true,
+        "corner_uv0_passed": true,
+        "attributes": [
+          "POSITION",
+          "TEXCOORD_0"
+        ],
+        "extra_uv": [],
+        "required_texcoord_1": false,
+        "embedded_basecolor_size": [
+          256,
+          256
+        ],
+        "embedded_basecolor_pixel_equal_to_mip0": true,
+        "passed": true,
+        "scope": "raw GLB accessor bounds, ordered indexed face corners, float32 coordinates and UVs, hash-bound auxiliary UV sidecar, embedded BaseColor pixels; no engine/GPU/Shader test"
+      },
+      "copied_glb_equals_export": true,
+      "mip_count": 9
+    },
+    {
+      "asset": "docs\\assets\\optcuts-agent-uv\\round01\\models\\dragon\\agent_merge\\seed43\\asset.glb",
+      "sha256": "71f2e9d22bea8ddb06f13af9ae91e8c91d4e56f3c15fc0e137b87f0ba565c91d",
+      "passed": true,
+      "reimport": {
+        "asset": "docs\\assets\\optcuts-agent-uv\\round01\\models\\dragon\\agent_merge\\seed43\\asset.glb",
+        "snapshot": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\evaluate\\agent_merge\\seed43\\pack\\snapshot\\snapshot.json",
+        "state_hash": "f26d7bf9521a591fd2fa6127eb4866a6226b4a5291fb0c5d4ea858f8666a31ba",
+        "asset_sha256": "71f2e9d22bea8ddb06f13af9ae91e8c91d4e56f3c15fc0e137b87f0ba565c91d",
+        "geometry_hash": "a7b1bfc5d1fb43d487904a917624bbc05f8c89d32bf606a502198badb5ff7d31",
+        "faces": 11338,
+        "positions_max_abs_error": 0.0,
+        "corner_uv0_max_abs_error": 2.9800836076621096e-08,
+        "geometry_passed": true,
+        "corner_uv0_passed": true,
+        "attributes": [
+          "POSITION",
+          "TEXCOORD_0"
+        ],
+        "extra_uv": [],
+        "required_texcoord_1": false,
+        "embedded_basecolor_size": [
+          256,
+          256
+        ],
+        "embedded_basecolor_pixel_equal_to_mip0": true,
+        "passed": true,
+        "scope": "raw GLB accessor bounds, ordered indexed face corners, float32 coordinates and UVs, hash-bound auxiliary UV sidecar, embedded BaseColor pixels; no engine/GPU/Shader test"
+      },
+      "copied_glb_equals_export": true,
+      "mip_count": 9
+    }
+  ],
+  "all_passed": true
+}

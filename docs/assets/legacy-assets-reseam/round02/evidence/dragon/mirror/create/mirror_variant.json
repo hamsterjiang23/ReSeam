@@ -1,0 +1,72 @@
+{
+  "source_faces": 2000,
+  "retained_source_faces": 1001,
+  "discarded_source_faces": 999,
+  "clipped_source_faces": 67,
+  "split_source_faces": 30,
+  "coplanar_source_faces": 0,
+  "retained_faces": 1031,
+  "reflected_faces": 1031,
+  "output_faces": 2062,
+  "retained_vertices": 546,
+  "output_vertices": 1092,
+  "retained_uv_vertices": 717,
+  "output_uv_vertices": 1434,
+  "plane_axis": 0,
+  "plane_offset": 0.0,
+  "keep_positive": true,
+  "midplane_geometry": "disconnected_explicit_source_identities",
+  "mirrored_corner_permutation": [
+    0,
+    2,
+    1
+  ],
+  "coordinate_welding": false,
+  "retained_area": 0.2601523274183796,
+  "output_area": 0.5203046548367593,
+  "midplane_strip_candidates": [],
+  "midplane_review_required": false,
+  "midplane_strip_band_fraction": 0.001,
+  "midplane_strip_policy": "diagnostic candidates, not deletion authorization; inspect plane and source geometry",
+  "parent_asset_id": "2efdd0a9704a7243fcd375606e4d0d44f8bec6a991b86df5640e2b0a32414023",
+  "variant_asset_id": "ef10836fcf1c44e88e2455f350d368a459f2628d67a497ad79330ec6fcbe3f7c",
+  "parent_state_hash": "5322b15dbfda95a4b31f3537fff197d47e234e59458cde775abb0cb86239085e",
+  "float32_position_max_abs_error": 1.4832324146674125e-08,
+  "source_uv_interpolation": "projected original-low lineage then original high",
+  "shared_groups": 7,
+  "geometry_changed": true,
+  "original_asset_modified": false,
+  "geometry_validated": false,
+  "quality_accepted": null,
+  "full_pbr_passed": false,
+  "shared_snapshot": {
+    "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\mirror\\create\\shared\\snapshot.json",
+    "state_hash": "c76f310d31118928f14e4074d2a002474bb26049d5ebbbbe19ea741ee6ac1dda",
+    "asset_id": "ef10836fcf1c44e88e2455f350d368a459f2628d67a497ad79330ec6fcbe3f7c"
+  },
+  "unshared_snapshot": {
+    "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\mirror\\create\\unshared\\snapshot.json",
+    "state_hash": "acd689604fdce23fc5793ffff5a79cdb176abe875a8ccef752f4a94a3b62192d",
+    "asset_id": "ef10836fcf1c44e88e2455f350d368a459f2628d67a497ad79330ec6fcbe3f7c"
+  },
+  "variant_root": {
+    "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\mirror\\create\\variant_root\\snapshot.json",
+    "state_hash": "d44c5a33149b86a2a39919c8e2a721fef1f3ef80ed9ca8ea9f09930280dd0720",
+    "asset_id": "ef10836fcf1c44e88e2455f350d368a459f2628d67a497ad79330ec6fcbe3f7c"
+  },
+  "source_reference_glb": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\source\\import\\inputs\\material_reference.glb",
+  "source_correspondence": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\mirror\\create\\source_correspondence.npz",
+  "profile": {
+    "resolution": 256,
+    "gap_pixels": 4,
+    "border_pixels": 4,
+    "correspondence_fraction": 0.08,
+    "normal_angle_degrees": 180.0,
+    "maximum_anisotropy": 2.0,
+    "mean_shape_limit": 0.025,
+    "tail_shape_limit": 0.1,
+    "maximum_density_ratio": 2.0,
+    "quality_constraints": false
+  },
+  "scope": "explicit upstream geometry variant, not fixed-geometry UV improvement"
+}

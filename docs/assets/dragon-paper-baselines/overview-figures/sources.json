@@ -1,0 +1,295 @@
+{
+  "methods": [
+    {
+      "key": "optcuts",
+      "year": "2018",
+      "name": "OptCuts",
+      "title": "OptCuts: Joint Optimization of Surface Cuts and Parameterization",
+      "publication": "TOG / SIGGRAPH Asia 2018 · P1",
+      "url": "https://www.cs.ubc.ca/labs/imager/tr/2018/OptCuts/",
+      "use": "调用固定官方源码对应的编译后端；项目负责输入输出与原面角对应。实际二进制哈希已记录。",
+      "category": "公开源码＋调用适配",
+      "evidence": "baseline/runner.py optcuts分支；sources.json OptCuts",
+      "native": "切缝与参数化联合优化"
+    },
+    {
+      "key": "flatten_anything",
+      "year": "2024",
+      "name": "FlattenAnything / FAM",
+      "title": "Flatten Anything: Unsupervised Neural Surface Parameterization",
+      "publication": "NeurIPS 2024 · P2",
+      "url": "https://arxiv.org/abs/2405.14633",
+      "use": "调用官方模型与train_fam训练循环；在当前资产训练后推理原顶点UV。项目仅适配IO与扩展装载。",
+      "category": "公开源码＋调用适配",
+      "evidence": "adapters/flatten_anything.py main；sources.json FlattenAnything",
+      "native": "当前资产训练神经映射"
+    },
+    {
+      "key": "partuv",
+      "year": "2025",
+      "name": "PartUV",
+      "title": "PartUV: Part-Based UV Unwrapping of 3D Meshes",
+      "publication": "按arXiv首次公开年份；2026年修订 · P3",
+      "url": "https://arxiv.org/abs/2511.16659",
+      "use": "调用官方PartUV 0.1.2与预训练PartField，执行预处理和pipeline_numpy；项目适配坐标与面角导入。",
+      "category": "官方包＋预训练权重",
+      "evidence": "adapters/partuv_worker.py main；measurements.json partuv",
+      "native": "部件层次＋递归几何展开"
+    },
+    {
+      "key": "meshquery_project",
+      "year": "2026",
+      "name": "MeshQuery 项目实现",
+      "title": "MeshQuery: Agentic Seam Planning for UV Parametrization",
+      "publication": "arXiv首次公开2026-10-01 · P4",
+      "url": "https://arxiv.org/abs/2610.02507",
+      "use": "归档检索未找到可核实的官方代码；用ReSeam网格查询、接缝计划和反馈工具实现论文公开机制。",
+      "category": "论文机制的项目实现",
+      "evidence": "baseline/MeshQuery/README.md；sources.json meshquery",
+      "native": "Agent规划切缝＋展开反馈"
+    },
+    {
+      "key": "xatlas",
+      "year": "工具",
+      "name": "xatlas",
+      "title": "Mesh parameterization / UV unwrapping library",
+      "publication": "官方仓库说明；不填论文发表年份 · P5",
+      "url": "https://github.com/jpcy/xatlas",
+      "use": "调用xatlas Python绑定的parametrize，使用默认chart选项；核验顶点映射和原三角面角身份。",
+      "category": "公开库＋Python绑定",
+      "evidence": "baseline/runner.py xatlas分支；sources.json xatlas-python",
+      "native": "自动分图、参数化与排布"
+    },
+    {
+      "key": "blender_smart",
+      "year": "工具",
+      "name": "Blender Smart UV",
+      "title": "Smart UV Project — Blender Manual",
+      "publication": "本轮运行Blender 4.5.11；工具而非独立论文 · P6",
+      "url": "https://docs.blender.org/manual/en/4.5/modeling/meshes/editing/uv.html#smart-uv-project",
+      "use": "直接调用Blender 4.5.11原生Smart UV Project，Angle Limit为66°；适配层负责隔离运行与UV导出。",
+      "category": "DCC原生工具＋适配",
+      "evidence": "baseline/runner.py blender_smart分支；measurements.json native_settings",
+      "native": "按面夹角分组与投影"
+    },
+    {
+      "key": "reseam_shared",
+      "year": "本项目",
+      "name": "ReSeam 共享",
+      "title": "整半镜像共享、真实合岛与紧凑排布工作流",
+      "publication": "项目方法；本轮使用既有完成布局，不对应独立外部论文 · D1",
+      "url": "",
+      "use": "复用已完成的镜像龙布局，以精确面角对应堆叠左右UV，再共同排布和真实重烘焙。历史制作成本另列。",
+      "category": "本项目流程／既有布局",
+      "evidence": "measurements.json reseam_shared；dragon-baselines-overview.md",
+      "native": "精确堆叠＋合岛＋共同排布"
+    },
+    {
+      "key": "reseam_unshared",
+      "year": "本项目",
+      "name": "ReSeam 解除共享",
+      "title": "同一完成布局的解除共享对照",
+      "publication": "项目消融对照；不作为新的独立展开算法 · D2",
+      "url": "",
+      "use": "从相同完成几何与来源目标解除共享，分别排布与重烘焙；用于观察堆叠带来的独立图块变化。",
+      "category": "本项目对照流程",
+      "evidence": "measurements.json reseam_unshared；dragon-baselines-overview.md",
+      "native": "相同布局解除共享对照"
+    }
+  ],
+  "public_source_check_date": "2026-11-05",
+  "public_source_scope": "P1–P5 official web pages opened; P6 uses retained local version and adapter evidence",
+  "upstream_versions": [
+    {
+      "name": "FlattenAnything",
+      "origin": "https://github.com/keeganhk/FlattenAnything.git",
+      "commit": "215680a42ec3d384533c2abb3a61efb51a16883d",
+      "license_status": "NO_LICENSE_FILE_IN_UPSTREAM_SNAPSHOT"
+    },
+    {
+      "name": "OptCuts",
+      "origin": "https://github.com/liminchen/OptCuts.git",
+      "commit": "cd2302671af7954f263b0ea93d8419aa943d54be",
+      "license_status": "see retained license files"
+    },
+    {
+      "name": "xatlas",
+      "origin": "https://github.com/jpcy/xatlas.git",
+      "commit": "f700c7790aaa030e794b52ba7791a05c085faf0c",
+      "license_status": "see retained license files"
+    },
+    {
+      "name": "xatlas-python",
+      "origin": "https://github.com/mworchel/xatlas-python.git",
+      "commit": "64bbecad2db3e01767d28f8ad6f41f6fbdb04db3",
+      "license_status": "see retained license files"
+    },
+    {
+      "name": "PartUV",
+      "origin": "https://github.com/EricWang12/PartUV.git",
+      "commit": "46bad07092a9396f00d7e04ea90369ded7de3d18",
+      "license_status": "see retained license files"
+    },
+    {
+      "name": "Blender",
+      "origin": "https://github.com/blender/blender.git",
+      "commit": "4db51e9d1e1e2e7f9e96e9305607824c39f7b554",
+      "license_status": "see retained license files"
+    }
+  ],
+  "native_settings": {
+    "flatten_anything": {
+      "seed": 17,
+      "input_uv_omitted": true,
+      "automatic_geometry_repair": false,
+      "points": 10000,
+      "iterations": 10000,
+      "seconds": 1001.8206519800001,
+      "peak_cuda_bytes": 1745271296,
+      "torch": "2.7.1+cu126",
+      "implementation": "official model.py and workflow.train_fam",
+      "geometry": "process=False; inference at all original vertices; no remeshing",
+      "seam_extraction": "continuous vertex UV; no undocumented seam repair or triangle isolation"
+    },
+    "optcuts": {
+      "seed": 0,
+      "input_uv_omitted": true,
+      "automatic_geometry_repair": false,
+      "lambda": 0.999,
+      "distortion_bound": 4.1,
+      "binary_sha256": "29e6ec810d697919cc788aacdeeb5c7c597c744008fb91d202c7ddafeb5087a2",
+      "geometry_mapping": "existing original-face/corner importer; ambiguous identity rejects"
+    },
+    "xatlas": {
+      "seed": 17,
+      "input_uv_omitted": true,
+      "automatic_geometry_repair": false,
+      "chart_options": "official defaults via xatlas.parametrize"
+    },
+    "blender_smart": {
+      "seed": 17,
+      "input_uv_omitted": true,
+      "automatic_geometry_repair": false,
+      "angle_degrees": 66,
+      "island_margin": 0.03,
+      "blender": "4.5.11 LTS",
+      "worker_sha256": "040c99ecafc18d54b9a48bd9fd1f5006510bd08c7ceeaa661935fb082eee08de"
+    },
+    "partuv": {
+      "seed": 42,
+      "input_uv_omitted": true,
+      "automatic_geometry_repair": false,
+      "threshold": 1.25,
+      "backend": {
+        "partuv": "0.1.2",
+        "seed": 42,
+        "seconds": 10.500276962999976,
+        "inverse_scale": 0.9008903228793921,
+        "inverse_center": [
+          0.00024999500000000285,
+          0.41137165,
+          0.000526760000000015
+        ],
+        "preprocessed_faces": 11338
+      },
+      "worker_sha256": "e1e4aa2ccc08bcfa91b377c7c9d82c491290846578f9448baeb9b92bfd729c9e"
+    },
+    "meshquery_project": {},
+    "reseam_shared": {},
+    "reseam_unshared": {}
+  },
+  "source_files": [
+    {
+      "path": "docs/assets/dragon-paper-baselines/measurements.json",
+      "sha256": "217d54e4f68902c27269de62780641491f3fcf29163ff5763375ae3dae16d7d0"
+    },
+    {
+      "path": "docs/assets/dragon-paper-baselines/protocol.json",
+      "sha256": "f64b6a5b074590d4681334c28ec38ff46f6ebd440fe5c57e88fb6ca226224842"
+    },
+    {
+      "path": "baseline/sources.json",
+      "sha256": "92ec46add97638629216980baa62ee4ae8a54bdea8273a0941d062df3cfabde5"
+    },
+    {
+      "path": "baseline/runner.py",
+      "sha256": "894780a0962942693f5dcab9587274fc0fe0ac86f21eb62a456b884653b7dbe4"
+    },
+    {
+      "path": "baseline/adapters/flatten_anything.py",
+      "sha256": "cfc705765c723a305fab2702b9475080a6e83fca2e9d0d746f56a958f5b9ff75"
+    },
+    {
+      "path": "baseline/adapters/partuv_worker.py",
+      "sha256": "e1e4aa2ccc08bcfa91b377c7c9d82c491290846578f9448baeb9b92bfd729c9e"
+    },
+    {
+      "path": "baseline/MeshQuery/README.md",
+      "sha256": "154c939008d65b4ff8225add50f95919ae99c3a56ae5db174be68ac00756d86f"
+    },
+    {
+      "path": "docs/assets/dragon-paper-baselines/with-original-input/paper-metrics-protocol.json",
+      "sha256": "876200cae1ce8ed7c137631deb9be5230ed7f8c6dcd0edbe9c383d1367388ee2"
+    },
+    {
+      "path": "docs/assets/dragon-paper-baselines/with-original-input/comparison-evidence.json",
+      "sha256": "fd6cfe216e15f73b47f843ee242fbc004d0fcd5694baee117165a1071d9140da"
+    },
+    {
+      "path": "scripts/build_baseline_reference_figures.py",
+      "sha256": "d7ea02a0d84ee41090f7407ea3184b2b4501205d9b1aef940fde1e9700df9910"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "01-methods-and-papers.png",
+      "text_blocks_checked": 39,
+      "sha256": "8655e0aa1a779ada6b520c7920c564dbba8e2e2c445f243b4d6d520eca2b1f23",
+      "size": [
+        3000,
+        1480
+      ]
+    },
+    {
+      "path": "02-implementation-and-provenance.png",
+      "text_blocks_checked": 39,
+      "sha256": "c024b81d1492bb31ff958383be64ca70705db02b65cb4523a02d007c87f7d3ad",
+      "size": [
+        3000,
+        2130
+      ]
+    },
+    {
+      "path": "03-baseline-workflow-mindmap.png",
+      "text_blocks_checked": 86,
+      "sha256": "fbd4d6f0c124f93698d6564ec71976e67b4664f1040620515010a9f608f237fb",
+      "size": [
+        3420,
+        3740
+      ]
+    }
+  ],
+  "text_bounds": "PASS: every text block width, height and canvas bounds asserted",
+  "visual_review": {
+    "status": "PASS",
+    "images_reviewed": [
+      "01-methods-and-papers.png",
+      "02-implementation-and-provenance.png",
+      "03-baseline-workflow-mindmap.png"
+    ],
+    "checks": "all three inspected; no observed overlap, missing glyphs or clipping; original resolution retained for zoom"
+  },
+  "new_solver_or_bakes": false,
+  "verification": {
+    "png_decode_and_hash": 3,
+    "source_hashes": 10,
+    "text_blocks_checked": 164,
+    "method_metrics_and_states": 8,
+    "paper_titles_and_years": 4,
+    "frozen_baseline_files_unchanged": 117,
+    "local_links_checked": 47,
+    "intro_primary_images": 3,
+    "ruff": "PASS",
+    "basedpyright": "PASS: 0 errors, 0 warnings, 0 notes"
+  }
+}

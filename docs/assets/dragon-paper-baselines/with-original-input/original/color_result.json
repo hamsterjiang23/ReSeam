@@ -1,0 +1,21 @@
+{
+  "images": {
+    "oblique": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\with_original_input01\\color\\oblique.png",
+    "uv": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\with_original_input01\\color\\uv.png"
+  },
+  "face_rasters": {
+    "oblique": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\with_original_input01\\color\\oblique_faces.npz"
+  },
+  "state_hash": "093a37ec01937cdf70a9923028855d3d8f84e04960504d2b742ff00e6cca16ce",
+  "picked_faces": {
+    "oblique": []
+  },
+  "report": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\with_original_input01\\color\\views.json",
+  "quality_evidence": false,
+  "coordinate_convention": "Y-up; front +Z, back -Z, left +X, right -X; orthographic auto-fit",
+  "status": "OK",
+  "execution_success": true,
+  "tool": "view.render",
+  "wall_seconds": 2.89000000001397,
+  "output": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\with_original_input01\\color"
+}

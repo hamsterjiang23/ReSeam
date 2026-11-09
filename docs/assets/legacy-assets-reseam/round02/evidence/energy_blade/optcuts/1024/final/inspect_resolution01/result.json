@@ -1,0 +1,21 @@
+{
+  "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\optcuts\\1024\\pack_17\\snapshot\\snapshot.json",
+  "state_hash": "8d37f60e92031aa2518ae43a92f71b46d95bddfcdcbf4d13300237c75694b045",
+  "asset_id": "aaa32cc5f2a8dd9934e54ddb20d28be1e56d5f22e38fbe1e22b927d4074f87e6",
+  "status": "OK",
+  "execution_success": true,
+  "geometry_passed": true,
+  "final_quality_passed": null,
+  "report": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\optcuts\\1024\\final\\inspect_resolution01\\inspection.json",
+  "chart_count": 16,
+  "shared_group_count": 0,
+  "unique_footprint": 0.5730747562080938,
+  "metrics_report": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\optcuts\\1024\\final\\inspect_resolution01\\uv_metrics.json",
+  "metrics_verified": true,
+  "uv_connected_charts": 16,
+  "packing_owners": 16,
+  "actual_independent_tiles": 16,
+  "tool": "uv.inspect",
+  "wall_seconds": 1.0940000000409782,
+  "output": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\optcuts\\1024\\final\\inspect_resolution01"
+}

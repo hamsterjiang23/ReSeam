@@ -1,0 +1,29 @@
+{
+  "status": "OK",
+  "execution_success": true,
+  "target": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\source\\target\\target.json",
+  "target_hash": "be000fbb2dc04c5239ae4c57ee33cc169183c7187df110dc8e1bad346a9f7f35",
+  "policy": "source_original",
+  "appearance_change": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\source\\target\\appearance_change.json",
+  "modified_faces": 0,
+  "full_pbr_passed": false,
+  "geometry_profile": {
+    "resolution": 256,
+    "gap_pixels": 4.0,
+    "border_pixels": 4.0,
+    "correspondence_fraction": 0.08,
+    "normal_angle_degrees": 180.0,
+    "maximum_anisotropy": 2.0,
+    "mean_shape_limit": 0.025,
+    "tail_shape_limit": 0.1,
+    "maximum_density_ratio": 2.0,
+    "quality_constraints": false
+  },
+  "geometry_profile_hash": "97bc17be7b69e50c697e654f43a32b1881cd6dea4b82ea5a38c521a5bc914a9d",
+  "geometry_policy": "explicit_custom",
+  "strict_geometry_profile_applied": false,
+  "artist_reviewed": false,
+  "tool": "material.target",
+  "wall_seconds": 12.063000000081956,
+  "output": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\source\\target"
+}

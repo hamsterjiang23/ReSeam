@@ -1,0 +1,2218 @@
+{
+  "rows": [
+    {
+      "geometry": "original",
+      "method": "optcuts_unshared",
+      "seed": 17,
+      "status": "OK",
+      "snapshot": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\optcuts_unshared\\seed17\\pack\\snapshot\\snapshot.json",
+      "texture": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\optcuts_unshared\\seed17\\bake\\texture\\BaseColor_mip0.png",
+      "charts": 3,
+      "anisotropy_median": 1.1295392293461153,
+      "anisotropy_p95": 1.790551964200667,
+      "anisotropy_max": 3.8070346433452085,
+      "seam_length_normalized": 6.153653911553429,
+      "geometry_hash": "c9b1f8c196896b45bcabf4298483391e937a06981a4ff13f02c9d04ec523b716",
+      "above_two_face_count": 11,
+      "independent_tiles": 3,
+      "actual_shared_surface_fraction": 0.0,
+      "quality_accepted": false,
+      "shared_groups": 0,
+      "unique_coverage": 0.2674082674162144,
+      "reimport_passed": true,
+      "png_full_mip_file_bytes": 83037,
+      "rgba8_full_mip_runtime_bytes": 349524,
+      "written_mip_count": 9,
+      "glb_bytes": 100804,
+      "evidence": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\optcuts_unshared\\seed17"
+    },
+    {
+      "geometry": "original",
+      "method": "optcuts_unshared",
+      "seed": 29,
+      "status": "OK",
+      "snapshot": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\optcuts_unshared\\seed29\\pack\\snapshot\\snapshot.json",
+      "texture": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\optcuts_unshared\\seed29\\bake\\texture\\BaseColor_mip0.png",
+      "charts": 3,
+      "anisotropy_median": 1.1295392293461137,
+      "anisotropy_p95": 1.7905519642006706,
+      "anisotropy_max": 3.807034643345266,
+      "seam_length_normalized": 6.153653911553429,
+      "geometry_hash": "c9b1f8c196896b45bcabf4298483391e937a06981a4ff13f02c9d04ec523b716",
+      "above_two_face_count": 11,
+      "independent_tiles": 3,
+      "actual_shared_surface_fraction": 0.0,
+      "quality_accepted": false,
+      "shared_groups": 0,
+      "unique_coverage": 0.2674082892119935,
+      "reimport_passed": true,
+      "png_full_mip_file_bytes": 83030,
+      "rgba8_full_mip_runtime_bytes": 349524,
+      "written_mip_count": 9,
+      "glb_bytes": 100796,
+      "evidence": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\optcuts_unshared\\seed29"
+    },
+    {
+      "geometry": "original",
+      "method": "optcuts_unshared",
+      "seed": 43,
+      "status": "OK",
+      "snapshot": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\optcuts_unshared\\seed43\\pack\\snapshot\\snapshot.json",
+      "texture": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\optcuts_unshared\\seed43\\bake\\texture\\BaseColor_mip0.png",
+      "charts": 3,
+      "anisotropy_median": 1.1295392293461148,
+      "anisotropy_p95": 1.790551964200693,
+      "anisotropy_max": 3.8070346433452147,
+      "seam_length_normalized": 6.153653911553429,
+      "geometry_hash": "c9b1f8c196896b45bcabf4298483391e937a06981a4ff13f02c9d04ec523b716",
+      "above_two_face_count": 11,
+      "independent_tiles": 3,
+      "actual_shared_surface_fraction": 0.0,
+      "quality_accepted": false,
+      "shared_groups": 0,
+      "unique_coverage": 0.267408266873999,
+      "reimport_passed": true,
+      "png_full_mip_file_bytes": 83044,
+      "rgba8_full_mip_runtime_bytes": 349524,
+      "written_mip_count": 9,
+      "glb_bytes": 100800,
+      "evidence": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\optcuts_unshared\\seed43"
+    },
+    {
+      "geometry": "original",
+      "method": "hard_unshared",
+      "seed": 17,
+      "status": "OK",
+      "snapshot": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\hard_unshared\\seed17\\pack\\snapshot\\snapshot.json",
+      "texture": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\hard_unshared\\seed17\\bake\\texture\\BaseColor_mip0.png",
+      "charts": 111,
+      "anisotropy_median": 1.023810729409291,
+      "anisotropy_p95": 1.1709612589772762,
+      "anisotropy_max": 2.1515527101751823,
+      "seam_length_normalized": 29.66164592140799,
+      "geometry_hash": "c9b1f8c196896b45bcabf4298483391e937a06981a4ff13f02c9d04ec523b716",
+      "above_two_face_count": 1,
+      "independent_tiles": 111,
+      "actual_shared_surface_fraction": 0.0,
+      "quality_accepted": false,
+      "shared_groups": 0,
+      "unique_coverage": 0.2190732682911695,
+      "reimport_passed": true,
+      "png_full_mip_file_bytes": 147905,
+      "rgba8_full_mip_runtime_bytes": 349524,
+      "written_mip_count": 9,
+      "glb_bytes": 138384,
+      "evidence": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\hard_unshared\\seed17"
+    },
+    {
+      "geometry": "original",
+      "method": "hard_unshared",
+      "seed": 29,
+      "status": "OK",
+      "snapshot": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\hard_unshared\\seed29\\pack\\snapshot\\snapshot.json",
+      "texture": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\hard_unshared\\seed29\\bake\\texture\\BaseColor_mip0.png",
+      "charts": 111,
+      "anisotropy_median": 1.0238107294092884,
+      "anisotropy_p95": 1.1709612589772687,
+      "anisotropy_max": 2.151552710175192,
+      "seam_length_normalized": 29.66164592140799,
+      "geometry_hash": "c9b1f8c196896b45bcabf4298483391e937a06981a4ff13f02c9d04ec523b716",
+      "above_two_face_count": 1,
+      "independent_tiles": 111,
+      "actual_shared_surface_fraction": 0.0,
+      "quality_accepted": false,
+      "shared_groups": 0,
+      "unique_coverage": 0.22497025950917876,
+      "reimport_passed": true,
+      "png_full_mip_file_bytes": 148043,
+      "rgba8_full_mip_runtime_bytes": 349524,
+      "written_mip_count": 9,
+      "glb_bytes": 138176,
+      "evidence": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\hard_unshared\\seed29"
+    },
+    {
+      "geometry": "original",
+      "method": "hard_unshared",
+      "seed": 43,
+      "status": "OK",
+      "snapshot": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\hard_unshared\\seed43\\pack\\snapshot\\snapshot.json",
+      "texture": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\hard_unshared\\seed43\\bake\\texture\\BaseColor_mip0.png",
+      "charts": 111,
+      "anisotropy_median": 1.0238107294092882,
+      "anisotropy_p95": 1.170961258977288,
+      "anisotropy_max": 2.1515527101752117,
+      "seam_length_normalized": 29.66164592140799,
+      "geometry_hash": "c9b1f8c196896b45bcabf4298483391e937a06981a4ff13f02c9d04ec523b716",
+      "above_two_face_count": 1,
+      "independent_tiles": 111,
+      "actual_shared_surface_fraction": 0.0,
+      "quality_accepted": false,
+      "shared_groups": 0,
+      "unique_coverage": 0.22453066220788417,
+      "reimport_passed": true,
+      "png_full_mip_file_bytes": 148662,
+      "rgba8_full_mip_runtime_bytes": 349524,
+      "written_mip_count": 9,
+      "glb_bytes": 138968,
+      "evidence": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\hard_unshared\\seed43"
+    },
+    {
+      "geometry": "original",
+      "method": "hard_shared",
+      "seed": 17,
+      "status": "OK",
+      "snapshot": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\hard_shared\\seed17\\pack\\snapshot\\snapshot.json",
+      "texture": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\hard_shared\\seed17\\bake\\texture\\BaseColor_mip0.png",
+      "charts": 111,
+      "anisotropy_median": 1.0263094324839117,
+      "anisotropy_p95": 1.2991380866851043,
+      "anisotropy_max": 75.32293842128388,
+      "seam_length_normalized": 29.66164592140799,
+      "geometry_hash": "c9b1f8c196896b45bcabf4298483391e937a06981a4ff13f02c9d04ec523b716",
+      "above_two_face_count": 8,
+      "independent_tiles": 108,
+      "actual_shared_surface_fraction": 0.021509035146151847,
+      "quality_accepted": false,
+      "shared_groups": 3,
+      "unique_coverage": 0.22403840123432844,
+      "reimport_passed": true,
+      "png_full_mip_file_bytes": 145762,
+      "rgba8_full_mip_runtime_bytes": 349524,
+      "written_mip_count": 9,
+      "glb_bytes": 136932,
+      "evidence": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\hard_shared\\seed17"
+    },
+    {
+      "geometry": "original",
+      "method": "hard_shared",
+      "seed": 29,
+      "status": "OK",
+      "snapshot": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\hard_shared\\seed29\\pack\\snapshot\\snapshot.json",
+      "texture": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\hard_shared\\seed29\\bake\\texture\\BaseColor_mip0.png",
+      "charts": 111,
+      "anisotropy_median": 1.0263094324839157,
+      "anisotropy_p95": 1.2991380866851046,
+      "anisotropy_max": 75.32293842131236,
+      "seam_length_normalized": 29.66164592140799,
+      "geometry_hash": "c9b1f8c196896b45bcabf4298483391e937a06981a4ff13f02c9d04ec523b716",
+      "above_two_face_count": 8,
+      "independent_tiles": 108,
+      "actual_shared_surface_fraction": 0.021509035146151927,
+      "quality_accepted": false,
+      "shared_groups": 3,
+      "unique_coverage": 0.22802194749165133,
+      "reimport_passed": true,
+      "png_full_mip_file_bytes": 148518,
+      "rgba8_full_mip_runtime_bytes": 349524,
+      "written_mip_count": 9,
+      "glb_bytes": 138716,
+      "evidence": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\hard_shared\\seed29"
+    },
+    {
+      "geometry": "original",
+      "method": "hard_shared",
+      "seed": 43,
+      "status": "OK",
+      "snapshot": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\hard_shared\\seed43\\pack\\snapshot\\snapshot.json",
+      "texture": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\hard_shared\\seed43\\bake\\texture\\BaseColor_mip0.png",
+      "charts": 111,
+      "anisotropy_median": 1.0263094324839144,
+      "anisotropy_p95": 1.2991380866850966,
+      "anisotropy_max": 75.32293842128165,
+      "seam_length_normalized": 29.66164592140799,
+      "geometry_hash": "c9b1f8c196896b45bcabf4298483391e937a06981a4ff13f02c9d04ec523b716",
+      "above_two_face_count": 8,
+      "independent_tiles": 108,
+      "actual_shared_surface_fraction": 0.021509035146151878,
+      "quality_accepted": false,
+      "shared_groups": 3,
+      "unique_coverage": 0.23006721013756812,
+      "reimport_passed": true,
+      "png_full_mip_file_bytes": 150408,
+      "rgba8_full_mip_runtime_bytes": 349524,
+      "written_mip_count": 9,
+      "glb_bytes": 140772,
+      "evidence": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\hard_shared\\seed43"
+    },
+    {
+      "geometry": "mirror",
+      "method": "optcuts_unshared",
+      "seed": 17,
+      "status": "OK",
+      "snapshot": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\optcuts_unshared\\seed17\\pack\\snapshot\\snapshot.json",
+      "texture": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\optcuts_unshared\\seed17\\bake\\texture\\BaseColor_mip0.png",
+      "charts": 3,
+      "anisotropy_median": 1.1010174917624456,
+      "anisotropy_p95": 1.8317301499728171,
+      "anisotropy_max": 3.3929791442158304,
+      "seam_length_normalized": 3.4230560806509986,
+      "geometry_hash": "7a12444fe2c5e0cd96e5060f6fe9b924ccfe0d4020c82e0179707c951c7751bc",
+      "above_two_face_count": 24,
+      "independent_tiles": 3,
+      "actual_shared_surface_fraction": 0.0,
+      "quality_accepted": false,
+      "shared_groups": 0,
+      "unique_coverage": 0.24231362414042795,
+      "reimport_passed": true,
+      "png_full_mip_file_bytes": 81371,
+      "rgba8_full_mip_runtime_bytes": 349524,
+      "written_mip_count": 9,
+      "glb_bytes": 112400,
+      "evidence": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\optcuts_unshared\\seed17"
+    },
+    {
+      "geometry": "mirror",
+      "method": "optcuts_unshared",
+      "seed": 29,
+      "status": "OK",
+      "snapshot": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\optcuts_unshared\\seed29\\pack\\snapshot\\snapshot.json",
+      "texture": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\optcuts_unshared\\seed29\\bake\\texture\\BaseColor_mip0.png",
+      "charts": 3,
+      "anisotropy_median": 1.1010174917624471,
+      "anisotropy_p95": 1.8317301499728305,
+      "anisotropy_max": 3.392979144215907,
+      "seam_length_normalized": 3.4230560806509986,
+      "geometry_hash": "7a12444fe2c5e0cd96e5060f6fe9b924ccfe0d4020c82e0179707c951c7751bc",
+      "above_two_face_count": 24,
+      "independent_tiles": 3,
+      "actual_shared_surface_fraction": 0.0,
+      "quality_accepted": false,
+      "shared_groups": 0,
+      "unique_coverage": 0.2423136803863923,
+      "reimport_passed": true,
+      "png_full_mip_file_bytes": 81364,
+      "rgba8_full_mip_runtime_bytes": 349524,
+      "written_mip_count": 9,
+      "glb_bytes": 112400,
+      "evidence": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\optcuts_unshared\\seed29"
+    },
+    {
+      "geometry": "mirror",
+      "method": "optcuts_unshared",
+      "seed": 43,
+      "status": "OK",
+      "snapshot": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\optcuts_unshared\\seed43\\pack\\snapshot\\snapshot.json",
+      "texture": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\optcuts_unshared\\seed43\\bake\\texture\\BaseColor_mip0.png",
+      "charts": 3,
+      "anisotropy_median": 1.1010174917624496,
+      "anisotropy_p95": 1.8317301499728416,
+      "anisotropy_max": 3.39297914421586,
+      "seam_length_normalized": 3.4230560806509986,
+      "geometry_hash": "7a12444fe2c5e0cd96e5060f6fe9b924ccfe0d4020c82e0179707c951c7751bc",
+      "above_two_face_count": 24,
+      "independent_tiles": 3,
+      "actual_shared_surface_fraction": 0.0,
+      "quality_accepted": false,
+      "shared_groups": 0,
+      "unique_coverage": 0.22747511377541932,
+      "reimport_passed": true,
+      "png_full_mip_file_bytes": 76769,
+      "rgba8_full_mip_runtime_bytes": 349524,
+      "written_mip_count": 9,
+      "glb_bytes": 109744,
+      "evidence": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\optcuts_unshared\\seed43"
+    },
+    {
+      "geometry": "mirror",
+      "method": "hard_unshared",
+      "seed": 17,
+      "status": "OK",
+      "snapshot": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\hard_unshared\\seed17\\pack\\snapshot\\snapshot.json",
+      "texture": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\hard_unshared\\seed17\\bake\\texture\\BaseColor_mip0.png",
+      "charts": 104,
+      "anisotropy_median": 1.0000027799432756,
+      "anisotropy_p95": 1.0000405569294515,
+      "anisotropy_max": 1.001586124448078,
+      "seam_length_normalized": 25.60526023665884,
+      "geometry_hash": "7a12444fe2c5e0cd96e5060f6fe9b924ccfe0d4020c82e0179707c951c7751bc",
+      "above_two_face_count": 0,
+      "independent_tiles": 104,
+      "actual_shared_surface_fraction": 0.0,
+      "quality_accepted": false,
+      "shared_groups": 0,
+      "unique_coverage": 0.23402375722844265,
+      "reimport_passed": true,
+      "png_full_mip_file_bytes": 143659,
+      "rgba8_full_mip_runtime_bytes": 349524,
+      "written_mip_count": 9,
+      "glb_bytes": 149384,
+      "evidence": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\hard_unshared\\seed17"
+    },
+    {
+      "geometry": "mirror",
+      "method": "hard_unshared",
+      "seed": 29,
+      "status": "OK",
+      "snapshot": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\hard_unshared\\seed29\\pack\\snapshot\\snapshot.json",
+      "texture": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\hard_unshared\\seed29\\bake\\texture\\BaseColor_mip0.png",
+      "charts": 104,
+      "anisotropy_median": 1.000002779943266,
+      "anisotropy_p95": 1.0000405569295052,
+      "anisotropy_max": 1.001586124448081,
+      "seam_length_normalized": 25.60526023665884,
+      "geometry_hash": "7a12444fe2c5e0cd96e5060f6fe9b924ccfe0d4020c82e0179707c951c7751bc",
+      "above_two_face_count": 0,
+      "independent_tiles": 104,
+      "actual_shared_surface_fraction": 0.0,
+      "quality_accepted": false,
+      "shared_groups": 0,
+      "unique_coverage": 0.2424992554792845,
+      "reimport_passed": true,
+      "png_full_mip_file_bytes": 147824,
+      "rgba8_full_mip_runtime_bytes": 349524,
+      "written_mip_count": 9,
+      "glb_bytes": 152080,
+      "evidence": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\hard_unshared\\seed29"
+    },
+    {
+      "geometry": "mirror",
+      "method": "hard_unshared",
+      "seed": 43,
+      "status": "OK",
+      "snapshot": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\hard_unshared\\seed43\\pack\\snapshot\\snapshot.json",
+      "texture": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\hard_unshared\\seed43\\bake\\texture\\BaseColor_mip0.png",
+      "charts": 104,
+      "anisotropy_median": 1.000002779943272,
+      "anisotropy_p95": 1.0000405569294895,
+      "anisotropy_max": 1.0015861244480826,
+      "seam_length_normalized": 25.60526023665884,
+      "geometry_hash": "7a12444fe2c5e0cd96e5060f6fe9b924ccfe0d4020c82e0179707c951c7751bc",
+      "above_two_face_count": 0,
+      "independent_tiles": 104,
+      "actual_shared_surface_fraction": 0.0,
+      "quality_accepted": false,
+      "shared_groups": 0,
+      "unique_coverage": 0.24184733764965466,
+      "reimport_passed": true,
+      "png_full_mip_file_bytes": 146618,
+      "rgba8_full_mip_runtime_bytes": 349524,
+      "written_mip_count": 9,
+      "glb_bytes": 151756,
+      "evidence": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\hard_unshared\\seed43"
+    },
+    {
+      "geometry": "mirror",
+      "method": "hard_shared",
+      "seed": 17,
+      "status": "OK",
+      "snapshot": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\hard_shared\\seed17\\pack\\snapshot\\snapshot.json",
+      "texture": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\hard_shared\\seed17\\bake\\texture\\BaseColor_mip0.png",
+      "charts": 104,
+      "anisotropy_median": 1.000002825556452,
+      "anisotropy_p95": 1.0000462726337256,
+      "anisotropy_max": 1.0015861244480835,
+      "seam_length_normalized": 25.60526023665884,
+      "geometry_hash": "7a12444fe2c5e0cd96e5060f6fe9b924ccfe0d4020c82e0179707c951c7751bc",
+      "above_two_face_count": 0,
+      "independent_tiles": 52,
+      "actual_shared_surface_fraction": 1.0,
+      "quality_accepted": false,
+      "shared_groups": 52,
+      "unique_coverage": 0.1751959108479522,
+      "reimport_passed": true,
+      "png_full_mip_file_bytes": 100308,
+      "rgba8_full_mip_runtime_bytes": 349524,
+      "written_mip_count": 9,
+      "glb_bytes": 121792,
+      "evidence": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\hard_shared\\seed17"
+    },
+    {
+      "geometry": "mirror",
+      "method": "hard_shared",
+      "seed": 29,
+      "status": "OK",
+      "snapshot": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\hard_shared\\seed29\\pack\\snapshot\\snapshot.json",
+      "texture": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\hard_shared\\seed29\\bake\\texture\\BaseColor_mip0.png",
+      "charts": 104,
+      "anisotropy_median": 1.000002825556448,
+      "anisotropy_p95": 1.000046272633709,
+      "anisotropy_max": 1.0015861244480835,
+      "seam_length_normalized": 25.60526023665884,
+      "geometry_hash": "7a12444fe2c5e0cd96e5060f6fe9b924ccfe0d4020c82e0179707c951c7751bc",
+      "above_two_face_count": 0,
+      "independent_tiles": 52,
+      "actual_shared_surface_fraction": 1.0,
+      "quality_accepted": false,
+      "shared_groups": 52,
+      "unique_coverage": 0.17918066831309826,
+      "reimport_passed": true,
+      "png_full_mip_file_bytes": 100740,
+      "rgba8_full_mip_runtime_bytes": 349524,
+      "written_mip_count": 9,
+      "glb_bytes": 122160,
+      "evidence": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\hard_shared\\seed29"
+    },
+    {
+      "geometry": "mirror",
+      "method": "hard_shared",
+      "seed": 43,
+      "status": "OK",
+      "snapshot": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\hard_shared\\seed43\\pack\\snapshot\\snapshot.json",
+      "texture": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\hard_shared\\seed43\\bake\\texture\\BaseColor_mip0.png",
+      "charts": 104,
+      "anisotropy_median": 1.0000028255564617,
+      "anisotropy_p95": 1.0000462726336903,
+      "anisotropy_max": 1.0015861244480788,
+      "seam_length_normalized": 25.60526023665884,
+      "geometry_hash": "7a12444fe2c5e0cd96e5060f6fe9b924ccfe0d4020c82e0179707c951c7751bc",
+      "above_two_face_count": 0,
+      "independent_tiles": 52,
+      "actual_shared_surface_fraction": 1.0,
+      "quality_accepted": false,
+      "shared_groups": 52,
+      "unique_coverage": 0.1822398555624725,
+      "reimport_passed": true,
+      "png_full_mip_file_bytes": 98787,
+      "rgba8_full_mip_runtime_bytes": 349524,
+      "written_mip_count": 9,
+      "glb_bytes": 120924,
+      "evidence": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\hard_shared\\seed43"
+    },
+    {
+      "geometry": "mirror",
+      "method": "harmonic_shared",
+      "seed": 17,
+      "status": "OK",
+      "snapshot": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\harmonic_shared\\seed17\\pack\\snapshot\\snapshot.json",
+      "texture": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\harmonic_shared\\seed17\\bake\\texture\\BaseColor_mip0.png",
+      "charts": 2,
+      "anisotropy_median": 5.076395077328835,
+      "anisotropy_p95": 32.079669381191884,
+      "anisotropy_max": 119.54622571516761,
+      "seam_length_normalized": 0.0,
+      "geometry_hash": "7a12444fe2c5e0cd96e5060f6fe9b924ccfe0d4020c82e0179707c951c7751bc",
+      "above_two_face_count": 496,
+      "independent_tiles": 1,
+      "actual_shared_surface_fraction": 1.0,
+      "quality_accepted": false,
+      "shared_groups": 1,
+      "unique_coverage": 0.7119554915662787,
+      "reimport_passed": true,
+      "png_full_mip_file_bytes": 117865,
+      "rgba8_full_mip_runtime_bytes": 349524,
+      "written_mip_count": 9,
+      "glb_bytes": 136456,
+      "evidence": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\harmonic_shared\\seed17"
+    },
+    {
+      "geometry": "mirror",
+      "method": "harmonic_shared",
+      "seed": 29,
+      "status": "OK",
+      "snapshot": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\harmonic_shared\\seed29\\pack\\snapshot\\snapshot.json",
+      "texture": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\harmonic_shared\\seed29\\bake\\texture\\BaseColor_mip0.png",
+      "charts": 2,
+      "anisotropy_median": 5.076395077328842,
+      "anisotropy_p95": 32.07966938119237,
+      "anisotropy_max": 119.54622571516771,
+      "seam_length_normalized": 0.0,
+      "geometry_hash": "7a12444fe2c5e0cd96e5060f6fe9b924ccfe0d4020c82e0179707c951c7751bc",
+      "above_two_face_count": 496,
+      "independent_tiles": 1,
+      "actual_shared_surface_fraction": 1.0,
+      "quality_accepted": false,
+      "shared_groups": 1,
+      "unique_coverage": 0.7119554745706593,
+      "reimport_passed": true,
+      "png_full_mip_file_bytes": 117863,
+      "rgba8_full_mip_runtime_bytes": 349524,
+      "written_mip_count": 9,
+      "glb_bytes": 136452,
+      "evidence": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\harmonic_shared\\seed29"
+    },
+    {
+      "geometry": "mirror",
+      "method": "harmonic_shared",
+      "seed": 43,
+      "status": "OK",
+      "snapshot": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\harmonic_shared\\seed43\\pack\\snapshot\\snapshot.json",
+      "texture": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\harmonic_shared\\seed43\\bake\\texture\\BaseColor_mip0.png",
+      "charts": 2,
+      "anisotropy_median": 5.076395077328824,
+      "anisotropy_p95": 32.079669381192225,
+      "anisotropy_max": 119.54622571516767,
+      "seam_length_normalized": 0.0,
+      "geometry_hash": "7a12444fe2c5e0cd96e5060f6fe9b924ccfe0d4020c82e0179707c951c7751bc",
+      "above_two_face_count": 496,
+      "independent_tiles": 1,
+      "actual_shared_surface_fraction": 1.0,
+      "quality_accepted": false,
+      "shared_groups": 1,
+      "unique_coverage": 0.7119554662085312,
+      "reimport_passed": true,
+      "png_full_mip_file_bytes": 117862,
+      "rgba8_full_mip_runtime_bytes": 349524,
+      "written_mip_count": 9,
+      "glb_bytes": 136452,
+      "evidence": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\harmonic_shared\\seed43"
+    }
+  ],
+  "timing": {
+    "original": {
+      "tool_seconds": 253.88799999991897,
+      "direct_seconds": 0.924000000115484,
+      "report_seconds": 0.3825000000069849,
+      "budget_seconds": 2400,
+      "scope": "machine execution; Agent image review time not measured"
+    },
+    "mirror": {
+      "tool_seconds": 408.5699999993667,
+      "direct_seconds": 4.775000000488944,
+      "report_seconds": 0.3825000000069849,
+      "budget_seconds": 2400,
+      "scope": "machine execution; Agent image review time not measured"
+    }
+  },
+  "provenance": [
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_30_blender_lscm\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_45_blender_lscm\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_45_blender_minimum_stretch\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_60_blender_lscm\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_60_blender_minimum_stretch\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair0_apply\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair0_exact\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair10_apply\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair10_exact\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair11_apply\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair11_exact\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair12_apply\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair12_exact\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair13_apply\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair13_exact\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair14_apply\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair14_exact\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair15_apply\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair15_exact\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair16_apply\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair16_exact\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair17_apply\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair17_exact\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair18_apply\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair18_exact\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair19_apply\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair19_exact\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair1_apply\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair1_exact\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair20_apply\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair20_exact\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair21_apply\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair21_exact\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair22_apply\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair22_exact\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair23_apply\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair23_exact\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair24_apply\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair24_exact\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair25_apply\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair25_exact\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair26_apply\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair26_exact\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair27_apply\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair27_exact\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair28_apply\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair28_exact\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair29_apply\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair29_exact\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair2_apply\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair2_exact\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair30_apply\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair30_exact\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair31_apply\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair31_exact\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair32_apply\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair32_exact\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair33_apply\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair33_exact\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair34_apply\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair34_exact\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair35_apply\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair35_exact\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair36_apply\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair36_exact\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair37_apply\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair37_exact\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair38_apply\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair38_exact\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair39_apply\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair39_exact\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair3_apply\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair3_exact\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair40_apply\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair40_exact\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair41_apply\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair41_exact\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair42_apply\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair42_exact\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair43_apply\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair43_exact\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair44_apply\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair44_exact\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair45_apply\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair45_exact\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair46_apply\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair46_exact\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair47_apply\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair47_exact\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair48_apply\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair48_exact\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair49_apply\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair49_exact\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair4_apply\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair4_exact\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair50_apply\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair50_exact\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair51_apply\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair51_exact\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair5_apply\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair5_exact\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair6_apply\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair6_exact\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair7_apply\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair7_exact\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair8_apply\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair8_exact\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair9_apply\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\hard_pair9_exact\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\harmonic\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\harmonic_pair0_apply\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\harmonic_pair0_exact\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\candidates\\optcuts\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\hard_shared\\seed17\\bake\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\hard_shared\\seed17\\closeup_flat_hypothesis\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\hard_shared\\seed17\\closeup_fold_hypothesis\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\hard_shared\\seed17\\closeup_tip_hypothesis\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\hard_shared\\seed17\\export\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\hard_shared\\seed17\\inspect\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\hard_shared\\seed17\\pack\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\hard_shared\\seed17\\quality\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\hard_shared\\seed17\\views_basecolor\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\hard_shared\\seed17\\views_checker\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\hard_shared\\seed17\\views_distortion\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\hard_shared\\seed17\\views_groups\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\hard_shared\\seed29\\bake\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\hard_shared\\seed29\\export\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\hard_shared\\seed29\\inspect\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\hard_shared\\seed29\\pack\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\hard_shared\\seed29\\quality\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\hard_shared\\seed43\\bake\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\hard_shared\\seed43\\export\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\hard_shared\\seed43\\inspect\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\hard_shared\\seed43\\pack\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\hard_shared\\seed43\\quality\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\hard_unshared\\seed17\\bake\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\hard_unshared\\seed17\\closeup_flat_hypothesis\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\hard_unshared\\seed17\\closeup_fold_hypothesis\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\hard_unshared\\seed17\\closeup_tip_hypothesis\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\hard_unshared\\seed17\\export\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\hard_unshared\\seed17\\inspect\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\hard_unshared\\seed17\\pack\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\hard_unshared\\seed17\\quality\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\hard_unshared\\seed17\\views_basecolor\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\hard_unshared\\seed17\\views_checker\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\hard_unshared\\seed17\\views_distortion\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\hard_unshared\\seed17\\views_groups\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\hard_unshared\\seed29\\bake\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\hard_unshared\\seed29\\export\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\hard_unshared\\seed29\\inspect\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\hard_unshared\\seed29\\pack\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\hard_unshared\\seed29\\quality\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\hard_unshared\\seed43\\bake\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\hard_unshared\\seed43\\export\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\hard_unshared\\seed43\\inspect\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\hard_unshared\\seed43\\pack\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\hard_unshared\\seed43\\quality\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\harmonic_shared\\seed17\\bake\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\harmonic_shared\\seed17\\closeup_flat_hypothesis\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\harmonic_shared\\seed17\\closeup_fold_hypothesis\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\harmonic_shared\\seed17\\closeup_tip_hypothesis\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\harmonic_shared\\seed17\\export\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\harmonic_shared\\seed17\\inspect\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\harmonic_shared\\seed17\\pack\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\harmonic_shared\\seed17\\quality\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\harmonic_shared\\seed17\\views_basecolor\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\harmonic_shared\\seed17\\views_checker\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\harmonic_shared\\seed17\\views_distortion\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\harmonic_shared\\seed17\\views_groups\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\harmonic_shared\\seed29\\bake\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\harmonic_shared\\seed29\\export\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\harmonic_shared\\seed29\\inspect\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\harmonic_shared\\seed29\\pack\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\harmonic_shared\\seed29\\quality\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\harmonic_shared\\seed43\\bake\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\harmonic_shared\\seed43\\export\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\harmonic_shared\\seed43\\inspect\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\harmonic_shared\\seed43\\pack\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\harmonic_shared\\seed43\\quality\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\optcuts_unshared\\seed17\\bake\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\optcuts_unshared\\seed17\\closeup_flat_hypothesis\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\optcuts_unshared\\seed17\\closeup_fold_hypothesis\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\optcuts_unshared\\seed17\\closeup_tip_hypothesis\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\optcuts_unshared\\seed17\\export\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\optcuts_unshared\\seed17\\inspect\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\optcuts_unshared\\seed17\\pack\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\optcuts_unshared\\seed17\\quality\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\optcuts_unshared\\seed17\\views_basecolor\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\optcuts_unshared\\seed17\\views_checker\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\optcuts_unshared\\seed17\\views_distortion\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\optcuts_unshared\\seed17\\views_groups\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\optcuts_unshared\\seed29\\bake\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\optcuts_unshared\\seed29\\export\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\optcuts_unshared\\seed29\\inspect\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\optcuts_unshared\\seed29\\pack\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\optcuts_unshared\\seed29\\quality\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\optcuts_unshared\\seed43\\bake\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\optcuts_unshared\\seed43\\export\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\optcuts_unshared\\seed43\\inspect\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\optcuts_unshared\\seed43\\pack\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\evaluate\\optcuts_unshared\\seed43\\quality\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\prepare\\hard_edges_30\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\prepare\\hard_edges_45\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\prepare\\hard_edges_60\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\prepare\\mesh_index\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\prepare\\source_views\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\smoke\\flat_hypothesis\\define\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\smoke\\flat_hypothesis\\lscm\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\smoke\\flat_hypothesis\\minimum_stretch\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\smoke\\flat_hypothesis\\views\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\smoke\\fold_hypothesis\\define\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\smoke\\fold_hypothesis\\lscm\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\smoke\\fold_hypothesis\\views\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\smoke\\tip_hypothesis\\define\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\smoke\\tip_hypothesis\\lscm\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\smoke\\tip_hypothesis\\views\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\target\\color_sphere\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\target\\freeze\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\mirror\\target\\views\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\candidates\\hard_30_blender_lscm\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\candidates\\hard_30_blender_minimum_stretch\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\candidates\\hard_45_blender_lscm\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\candidates\\hard_45_blender_minimum_stretch\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\candidates\\hard_60_blender_lscm\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\candidates\\hard_60_blender_minimum_stretch\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\candidates\\hard_find\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\candidates\\hard_pair0_apply\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\candidates\\hard_pair0_approximate\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\candidates\\hard_pair0_exact\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\candidates\\hard_pair0_topology\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\candidates\\hard_pair1_apply\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\candidates\\hard_pair1_approximate\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\candidates\\hard_pair1_exact\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\candidates\\hard_pair1_topology\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\candidates\\hard_pair2_apply\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\candidates\\hard_pair2_approximate\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\candidates\\hard_pair2_exact\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\candidates\\hard_pair2_topology\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\candidates\\optcuts\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\candidates\\polygon_fans_blender_lscm\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\candidates\\polygon_fans_blender_minimum_stretch\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\candidates\\polygon_fan_plan\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\hard_shared\\seed17\\bake\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\hard_shared\\seed17\\closeup_flat_hypothesis\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\hard_shared\\seed17\\closeup_fold_hypothesis\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\hard_shared\\seed17\\closeup_tip_hypothesis\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\hard_shared\\seed17\\export\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\hard_shared\\seed17\\inspect\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\hard_shared\\seed17\\pack\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\hard_shared\\seed17\\quality\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\hard_shared\\seed17\\views_basecolor\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\hard_shared\\seed17\\views_checker\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\hard_shared\\seed17\\views_distortion\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\hard_shared\\seed17\\views_groups\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\hard_shared\\seed29\\bake\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\hard_shared\\seed29\\export\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\hard_shared\\seed29\\inspect\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\hard_shared\\seed29\\pack\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\hard_shared\\seed29\\quality\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\hard_shared\\seed43\\bake\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\hard_shared\\seed43\\export\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\hard_shared\\seed43\\inspect\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\hard_shared\\seed43\\pack\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\hard_shared\\seed43\\quality\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\hard_unshared\\seed17\\bake\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\hard_unshared\\seed17\\closeup_flat_hypothesis\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\hard_unshared\\seed17\\closeup_fold_hypothesis\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\hard_unshared\\seed17\\closeup_tip_hypothesis\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\hard_unshared\\seed17\\export\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\hard_unshared\\seed17\\inspect\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\hard_unshared\\seed17\\pack\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\hard_unshared\\seed17\\quality\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\hard_unshared\\seed17\\views_basecolor\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\hard_unshared\\seed17\\views_checker\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\hard_unshared\\seed17\\views_distortion\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\hard_unshared\\seed17\\views_groups\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\hard_unshared\\seed29\\bake\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\hard_unshared\\seed29\\export\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\hard_unshared\\seed29\\inspect\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\hard_unshared\\seed29\\pack\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\hard_unshared\\seed29\\quality\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\hard_unshared\\seed43\\bake\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\hard_unshared\\seed43\\export\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\hard_unshared\\seed43\\inspect\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\hard_unshared\\seed43\\pack\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\hard_unshared\\seed43\\quality\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\optcuts_unshared\\seed17\\bake\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\optcuts_unshared\\seed17\\closeup_flat_hypothesis\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\optcuts_unshared\\seed17\\closeup_fold_hypothesis\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\optcuts_unshared\\seed17\\closeup_tip_hypothesis\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\optcuts_unshared\\seed17\\export\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\optcuts_unshared\\seed17\\inspect\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\optcuts_unshared\\seed17\\pack\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\optcuts_unshared\\seed17\\quality\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\optcuts_unshared\\seed17\\views_basecolor\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\optcuts_unshared\\seed17\\views_checker\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\optcuts_unshared\\seed17\\views_distortion\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\optcuts_unshared\\seed17\\views_groups\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\optcuts_unshared\\seed29\\bake\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\optcuts_unshared\\seed29\\export\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\optcuts_unshared\\seed29\\inspect\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\optcuts_unshared\\seed29\\pack\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\optcuts_unshared\\seed29\\quality\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\optcuts_unshared\\seed43\\bake\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\optcuts_unshared\\seed43\\export\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\optcuts_unshared\\seed43\\inspect\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\optcuts_unshared\\seed43\\pack\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\evaluate\\optcuts_unshared\\seed43\\quality\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\prepare\\hard_edges_30\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\prepare\\hard_edges_45\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\prepare\\hard_edges_60\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\prepare\\import\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\prepare\\mesh_index\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\prepare\\source_views\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\smoke\\flat_hypothesis\\define\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\smoke\\flat_hypothesis\\lscm\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\smoke\\flat_hypothesis\\minimum_stretch\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\smoke\\flat_hypothesis\\views\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\smoke\\fold_hypothesis\\define\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\smoke\\fold_hypothesis\\lscm\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\smoke\\fold_hypothesis\\minimum_stretch\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\smoke\\fold_hypothesis\\views\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\smoke\\tip_hypothesis\\define\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\smoke\\tip_hypothesis\\lscm\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\smoke\\tip_hypothesis\\minimum_stretch\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\smoke\\tip_hypothesis\\views\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\target\\color_sphere\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\target\\freeze\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\target\\views\\provenance.json",
+      "mismatches": [],
+      "passed": true
+    }
+  ],
+  "report_code_sha256": "b41d15fdf729e0edeca5dc7a998daad091420e21a61a376a13a721009a2f5b8f",
+  "source_root": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01",
+  "full_pbr_passed": false,
+  "gpu_verified": false,
+  "human_accepted": false
+}

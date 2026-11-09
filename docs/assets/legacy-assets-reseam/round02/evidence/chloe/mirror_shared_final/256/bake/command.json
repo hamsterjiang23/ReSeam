@@ -1,0 +1,8 @@
+[
+  "E:\\ReSem\\.venv\\Scripts\\python.exe",
+  "-m",
+  "reseam.agent_tools.worker",
+  "material.bake",
+  "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\mirror_shared_final\\256\\bake",
+  "300.0"
+]

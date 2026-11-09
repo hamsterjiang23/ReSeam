@@ -1,0 +1,27 @@
+{
+  "snapshot": "E:/ReSem/artifacts/dragon_wholebody_refine/round03/spikes_9_10_and_13_14_seed29/snapshot/snapshot.json",
+  "bake": "E:/ReSem/artifacts/dragon_wholebody_refine/round03/appearance/candidate_bake/bake.json",
+  "before": {
+    "snapshot": "E:\\ReSem\\artifacts\\dragon_wholebody_refine\\round03\\baseline_seed29\\snapshot\\snapshot.json",
+    "bake": "E:\\ReSem\\artifacts\\dragon_wholebody_refine\\round03\\appearance\\baseline_bake\\bake.json"
+  },
+  "size": 512,
+  "cameras": [
+    {
+      "name": "front",
+      "azimuth": 0,
+      "elevation": 0
+    },
+    {
+      "name": "back",
+      "azimuth": 180,
+      "elevation": 0
+    },
+    {
+      "name": "oblique",
+      "azimuth": 35,
+      "elevation": 15
+    }
+  ],
+  "timeout_seconds": 300
+}

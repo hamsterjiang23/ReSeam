@@ -19,6 +19,15 @@ class Correspondence:
 
 
 @dataclass(frozen=True)
+class ReuseMember:
+    """One additional isolated surface, mapped from the group's first member."""
+
+    faces: tuple[int, ...]
+    orientation: int
+    first_to_member: SimilarityTransform
+
+
+@dataclass(frozen=True)
 class ReuseGroup:
     group_id: str
     first_faces: tuple[int, ...]
@@ -28,6 +37,7 @@ class ReuseGroup:
     first_orientation: int = 1
     second_orientation: int = -1
     first_to_second: SimilarityTransform | None = None
+    member_maps: tuple[ReuseMember, ...] = ()
 
 
 @dataclass

@@ -1,0 +1,73 @@
+{
+  "scope": "basecolor_reuse",
+  "mode": "diagnostic",
+  "quality_accepted": false,
+  "full_pbr_passed": false,
+  "gpu_verified": false,
+  "artist_reviewed": false,
+  "state_hash": "bfb8bb303154d71b318c2614665896fd227f7dd6734044374ea27dd9d22d517d",
+  "target_hash": "bc9709afe484dd0eee8086f352fa765c23b6067b600912a884e89dc0495d052b",
+  "payload_bytes": 349524,
+  "package_bytes": 83089,
+  "codec": "RGBA8_SRGB_RGB_LINEAR_ALPHA",
+  "runtime_texture_bytes": 349524,
+  "runtime_package_bytes": 83089,
+  "decoded_preview_bytes": 349524,
+  "decoded_preview_package_bytes": 83089,
+  "runtime_artifacts": [],
+  "delivered_artifact_bytes_scope": "artifact tree at export-handler completion; excludes late runner transport receipt/log bytes",
+  "validated_mips": [
+    0,
+    1,
+    2
+  ],
+  "preview_material": "BaseColor diagnostic presentation; roughness=1 metallic=0; not source PBR",
+  "files": {
+    "asset.glb": "b2de857629eaa45b40e30d2968c799e2bee65b1846e6b996998185b83655d517",
+    "bake.json": "467a544db7173e8b62ecccd8936007b8d0edb0b5675b1821d3cd4cc50b5f13c7",
+    "command.json": "39a2c107235ef2bd578bf85f90f40a67315d0b66b4edc5c8b92f4189afceec99",
+    "coverage.npy": "66ac2d2f2d94352c3123a10790f6ad5db1c860368d3179d19dbee7397073204d",
+    "geometric_coverage.npy": "e23969f5646bed300b0051990ad322ba9efd4ca03ddbdaa8a516c6c5623d41f8",
+    "process.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "provenance.json": "f5e811f75f1efd0ca274fafb7afc2c83024cb261b66609529c48b0540f0b648f",
+    "request.json": "7783dae8d448d2ad2e730864b1e0be6249f79bddca56ad5a4efc00c22dd57757",
+    "snapshot\\arrays.npz": "169ba07f1e2d42914601897e3e1cf6fb961f0fd605cf12b71590250e3ebd1e75",
+    "snapshot\\snapshot.json": "fd61dbc08c8ef8c05adfc63bd8d3d600b6e59343b47abe3821e92e4cf135ce01",
+    "target\\target.json": "16e4518b0029d15eef1a66209e98b21004c784043ab2930b36b4d1c58bf9195d",
+    "target\\target.npz": "58033e478eed13de29d56430511bf5f03a7985f5cdc56fef19da093f559b9f67",
+    "texture\\BaseColor_mip0.png": "68569e474168689c722431efcbea030ff0e8af047be29bf3038b7ac9d4ea5c00",
+    "texture\\BaseColor_mip1.png": "c414bba546f058c8670ac727320fbc6741b6d4c5c2abda8fcbf3ea01e57c1e65",
+    "texture\\BaseColor_mip2.png": "9b68897366ffc0240af96c456424b5aa15f46b67080d1e0091b94f27dbccd2e1",
+    "texture\\BaseColor_mip3.png": "b4ee23af996c259d314352de0a5b5b2f19e9639b162334d2445c13068f5fed2c",
+    "texture\\BaseColor_mip4.png": "30a89c9845862725fa9a3d51d5f8385e6144881c78e202be008b4691653b0d9b",
+    "texture\\BaseColor_mip5.png": "99177e7349ef86a474eed6926867c950282774a0fe86934209af1c503b15ebe2",
+    "texture\\BaseColor_mip6.png": "87773a05a3efed3c4888be871089d53d5e844dfb0147920ebeaf0b99e8f69556",
+    "texture\\BaseColor_mip7.png": "f014f6e390f0098fb73028f3967a6126a1729b8abb05ae838115e8788d6eda68",
+    "texture\\BaseColor_mip8.png": "7712cd5db8b8d907c6eaf8f4dcfbd01da7507f93558f56dccdc5f362d3484f70",
+    "validation.json": "b1482dfb60d34165973f9d8388bbe2074f10340ce39a50837e22519fc6bc71d7",
+    "extra_uv.npz": "e5e5e5ee7a9a3dcdeb3dfab5ce641f4595d2e7ed07e2ba70bd417997332ee8ea"
+  },
+  "geometry_profile": {
+    "resolution": 256,
+    "gap_pixels": 4.0,
+    "border_pixels": 4.0,
+    "correspondence_fraction": 0.08,
+    "normal_angle_degrees": 180.0,
+    "maximum_anisotropy": 2.0,
+    "mean_shape_limit": 0.025,
+    "tail_shape_limit": 0.1,
+    "maximum_density_ratio": 2.0,
+    "quality_constraints": false
+  },
+  "geometry_profile_hash": "97bc17be7b69e50c697e654f43a32b1881cd6dea4b82ea5a38c521a5bc914a9d",
+  "geometry_policy": "explicit_custom",
+  "strict_geometry_profile_applied": false,
+  "delivered_artifact_bytes": 1018256,
+  "auxiliary_uv": {
+    "extra_uv_layers": 1,
+    "extra_uv_mapping": {
+      "TEXCOORD_1": "UVChannel_2"
+    },
+    "extra_uv_export": "source face/corner ancestry; float32 GLB attributes"
+  }
+}

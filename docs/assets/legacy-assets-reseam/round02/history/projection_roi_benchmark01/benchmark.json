@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "measured_at_utc": "2026-11-05T09:17:30.652624+00:00",
+  "asset": "energy_blade",
+  "low_faces": 500,
+  "high_faces": 1630,
+  "queries": 10000,
+  "protocol": {
+    "deterministic_queries": "20 _stratified_barycentric probes per original low face, original face order",
+    "projection_max_fraction": 0.02,
+    "timing": "perf_counter wall seconds; one measurement each; excludes asset loading and sampler constructor",
+    "cold_roi": "includes all original-face ROI cache construction and source-map observation bookkeeping",
+    "warm_roi": "same queries with fixed original-face ROI cache retained; audit counters reset",
+    "full_face_grouped": "one full-reference sample call per original low face, 20 points each",
+    "comparison": "same original high ReferenceSurface, exact nearest points; OPAQUE alpha normalized to one",
+    "scope": "CPU query microbenchmark; not end-to-end bake, quality validation, GPU or artist acceptance"
+  },
+  "full_one_batch_seconds": 1.3423918000189587,
+  "full_face_grouped_seconds": 1.0570441000163555,
+  "roi_cold_seconds": 0.5522812000708655,
+  "roi_warm_seconds": 0.3000230999896303,
+  "warm_speedup_vs_single_batch": 4.474294812850597,
+  "warm_speedup_vs_face_grouped": 3.52320904641306,
+  "max_color_abs_difference": 0.0,
+  "max_projection_distance_difference": 0.0,
+  "source_face_mismatches": 0,
+  "max_matching_face_barycentric_difference": 0.0,
+  "cold_warm_max_color_difference": 0.0,
+  "invalid_queries": 0,
+  "roi_queries": 9998,
+  "full_reference_queries": 2,
+  "outside_bounds": 2,
+  "distance_fallback": 0,
+  "empty_roi_fallback": 0,
+  "roi_faces_min": 9,
+  "roi_faces_mean": 83.31,
+  "roi_faces_max": 192,
+  "source_rule_hash": "cb48826d48865170d7ba4e9265d329ef146633f8d14fa4455c919bc1fa1d9090",
+  "rule": {
+    "schema_version": 1,
+    "rule": "original_low_barycentric_then_exact_nearest_original_high_fixed_original_face_aabb_roi_v2",
+    "normalization": "original_low_aabb_diagonal",
+    "original_low_diagonal": 1.2016868175730822,
+    "projection_max_fraction": 0.02,
+    "max_distance": 0.024033736351461644,
+    "reference_sha256": "c60df75a9e3293caca0927507bfbf1619feebd96a184969e306ef0888ae41b9d",
+    "lineage_arrays_hash": "4b2419323aebed9399954fd300a91ae7379b2997f2ef3c2eebd54c519846fb77",
+    "acceleration": "ReferenceSurface.restrict_bounds per original-low face AABB expanded by max_distance",
+    "roi_fallback": "full original high for points outside fixed AABB, empty ROI, or ROI distance above bound"
+  },
+  "environment": {
+    "python": "3.11.15",
+    "platform": "Windows-10-10.0.19044-SP0",
+    "numpy": "2.4.6",
+    "trimesh": "4.12.2"
+  },
+  "files": {
+    "low_input": {
+      "path": "E:\\ReSem\\assets\\v1\\energy_blade\\low.obj",
+      "sha256": "77014ff31afde09f75b2fa8659f76ed347ed51533eae064c11d623598eab772c"
+    },
+    "high_input": {
+      "path": "E:\\ReSem\\assets\\v1\\energy_blade\\high.glb",
+      "sha256": "c60df75a9e3293caca0927507bfbf1619feebd96a184969e306ef0888ae41b9d"
+    },
+    "projected_source_code": {
+      "path": "src/reseam/agent_tools/projected_source.py",
+      "sha256": "3fd6d294580859de2abdbe915754fe59cf6174a0a35dd1d86821365a6f5f7fed"
+    },
+    "reference_code": {
+      "path": "src/reseam/budget_texture.py",
+      "sha256": "31ce84336dd5d5c069164a1db0aee15a26c18bcf3245e6c57502efe31278417d"
+    },
+    "probe_script": {
+      "path": "probe.py",
+      "sha256": "a91ae4ef4e9a8c789852220df2c961cd6b1847d8e38a7d777172ec84d9e3ff2b"
+    },
+    "query_witnesses": {
+      "path": "benchmark_queries.npz",
+      "sha256": "425daaa64c96788fcb40d01bc9ffc66681db27957fc881dccf50c18c90ae6992"
+    }
+  }
+}

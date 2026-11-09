@@ -1,0 +1,16 @@
+{
+  "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\optcuts\\2048\\pack_17\\snapshot\\snapshot.json",
+  "state_hash": "0dd4b9fb4dfd7e776d0ff422b8369089e0f58073a1e1f42b227a1ca244f8620f",
+  "asset_id": "2efdd0a9704a7243fcd375606e4d0d44f8bec6a991b86df5640e2b0a32414023",
+  "status": "OK",
+  "execution_success": true,
+  "geometry_passed": true,
+  "hard_geometry_passed": true,
+  "final_quality_passed": null,
+  "requires_rebake": true,
+  "packing_backend": "blender_concave",
+  "report": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\optcuts\\2048\\pack_17\\geometry.json",
+  "tool": "uv.pack",
+  "wall_seconds": 4.952999999979511,
+  "output": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\optcuts\\2048\\pack_17"
+}

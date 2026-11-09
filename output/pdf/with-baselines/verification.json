@@ -1,0 +1,111 @@
+{
+  "pages": 10,
+  "page_size_points": [
+    1280.0,
+    720.0
+  ],
+  "fonts_embedded": [
+    "/AAAAAA+MicrosoftYaHei-0",
+    "/AAAAAA+MicrosoftYaHei-Bold-0",
+    "/AAAAAB+MicrosoftYaHei-0",
+    "/AAAAAB+MicrosoftYaHei-Bold-0"
+  ],
+  "assets_hashed": 61,
+  "method_rows": 8,
+  "text_extraction": "PASS",
+  "baseline_numbers_checked": true,
+  "smart_uv_and_partuv_render_status_preserved": true,
+  "uv_panel_checks": [
+    {
+      "asset": "old_arrays",
+      "faces": 363,
+      "charts": 16
+    },
+    {
+      "asset": "head_arrays",
+      "faces": 363,
+      "charts": 1
+    },
+    {
+      "asset": "old_arrays",
+      "faces": 1198,
+      "charts": 7
+    },
+    {
+      "asset": "foot_arrays",
+      "faces": 1198,
+      "charts": 1
+    }
+  ],
+  "pdf_sha256": "323f644e5a5d3fdcd315017127ec53075a584dbe82df1a1b7fc95c550e5fe638",
+  "visual_review": {
+    "status": "PASS",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "method": "Poppler 90dpi; individual page inspection and contact sheet; updated page9 rechecked",
+    "findings": "No observed clipping, missing Chinese glyphs, stretched images, or overlapping labels"
+  },
+  "decoded_images": 59,
+  "rendered_page_pixels": [
+    1600,
+    900
+  ],
+  "original_pdf_unchanged": true,
+  "original_pdf_sha256": "b32b43847edd330a38199c666593c7347276a9d8f13ca400d5a1fe4ed6fc4343",
+  "source_metrics": "docs/assets/dragon-paper-baselines/measurements.json",
+  "numerical_experiments_rerun": false,
+  "ruff": "PASS: uv run ruff check scripts/build_uv_baseline_pdf.py",
+  "basedpyright": "PASS: 0 errors, 0 warnings, 0 notes; bundled runtime --pythonpath",
+  "page_pngs": [
+    {
+      "file": "pages/page-01.png",
+      "sha256": "bc5e21c9b67a432bae17611d37710bd7caa804cdfd518c5facbcbc40cc77be18"
+    },
+    {
+      "file": "pages/page-02.png",
+      "sha256": "7d9b5717db5f9ef3b5856edd698cf8ad03b9c9fdb22f9ed8eac3f28013bb2a72"
+    },
+    {
+      "file": "pages/page-03.png",
+      "sha256": "9b7142054b0e6f67fec05ec3b82c2d2e8dd0399b66d5ee4f303c84d3d4a9f7d5"
+    },
+    {
+      "file": "pages/page-04.png",
+      "sha256": "750555950ad08b1bce32e36a168f68d42679ab9ddad3730b7a5813fefbfff654"
+    },
+    {
+      "file": "pages/page-05.png",
+      "sha256": "aee552dbd4b86410effe814cca0de5db60a3146d8b2105ea4475c4a4eef97ab9"
+    },
+    {
+      "file": "pages/page-06.png",
+      "sha256": "fd99eea8c6ba4271407c95611de2fe6415e04d53e7b0dabe6fe9fdfa6ecc93f3"
+    },
+    {
+      "file": "pages/page-07.png",
+      "sha256": "c6dbbb03d5463ab8a50d5fbef1e3aec21bddc585a3af8527980d6c9ad20ed9d8"
+    },
+    {
+      "file": "pages/page-08.png",
+      "sha256": "8509a46c015aef5ea24f82de8831047074eab9874078ad388c0746e9b1abb56a"
+    },
+    {
+      "file": "pages/page-09.png",
+      "sha256": "d784673937d282a5645fb5ef73eb3b6b7a0517cacfaa591ea5e52201f4506e27"
+    },
+    {
+      "file": "pages/page-10.png",
+      "sha256": "d538499cc6ca9f84213c89d248e7df8bb6f338fe4d4dd3f7eed0672e8b8e7e21"
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "asset_id": "20eedfc34bd1958a3745bd43c67a96ffa9c33e07691f3a671c01b20273f31f5d",
+  "geometry_hash": "20eedfc34bd1958a3745bd43c67a96ffa9c33e07691f3a671c01b20273f31f5d",
+  "parent_hash": "dffea30c8dda2db4b938576de4c76afd82e812d4acf3ffec36c7e1b208738869",
+  "arrays_sha256": "6311595e02d24f15d86a26d066be37624b689e9ba645851e1efdfde8eaba8e64",
+  "metadata": {
+    "reference_glb": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\source\\import\\inputs\\material_reference.glb",
+    "source_uv_present": true,
+    "source_manifest": [
+      {
+        "path": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\source\\import\\inputs\\material_reference.glb",
+        "sha256": "c60df75a9e3293caca0927507bfbf1619feebd96a184969e306ef0888ae41b9d"
+      },
+      {
+        "path": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\mirror\\create\\source_correspondence.npz",
+        "sha256": "0146c9f7058587d60db49800b016f400977f7b27b6e74178cbb639b2af94a59d"
+      },
+      {
+        "path": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\mirror\\create\\projected_lineage.npz",
+        "sha256": "81ffb3430f27a52d0647dcf0f2500dffac329e697d9fad4f7c976a97ce5861ad"
+      }
+    ],
+    "derived_from": {
+      "asset_id": "aaa32cc5f2a8dd9934e54ddb20d28be1e56d5f22e38fbe1e22b927d4074f87e6",
+      "state_hash": "74b6fbd8b0cb24bb11bcd6eb734facce0d64640366135df06073848f5b97b0bb",
+      "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\optcuts\\native\\snapshot\\snapshot.json"
+    },
+    "geometry_variant": "plane_clip_then_exact_mirror",
+    "basecolor_only": true,
+    "source_material_scope": {
+      "scope": "original high BaseColor through frozen original-low lineage",
+      "projected_source": {
+        "schema_version": 1,
+        "reference_glb": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\source\\import\\inputs\\material_reference.glb",
+        "reference_sha256": "c60df75a9e3293caca0927507bfbf1619feebd96a184969e306ef0888ae41b9d",
+        "projection_max_fraction": 0.02,
+        "lineage_npz": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\mirror\\create\\parent_lineage.npz",
+        "lineage_sha256": "a7c894c825bc6e8a476a5e2f39b426d1c7b60c3e0a7b40c1db2f9a37c05fa35a"
+      }
+    },
+    "requires_rebake": true,
+    "source_correspondence": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\mirror\\create\\source_correspondence.npz",
+    "projected_source": {
+      "schema_version": 1,
+      "reference_glb": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\source\\import\\inputs\\material_reference.glb",
+      "reference_sha256": "c60df75a9e3293caca0927507bfbf1619feebd96a184969e306ef0888ae41b9d",
+      "projection_max_fraction": 0.02,
+      "lineage_npz": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\mirror\\create\\projected_lineage.npz",
+      "lineage_sha256": "81ffb3430f27a52d0647dcf0f2500dffac329e697d9fad4f7c976a97ce5861ad"
+    },
+    "last_operation": "reuse.unshare",
+    "geometry_profile": {
+      "resolution": 256,
+      "gap_pixels": 4,
+      "border_pixels": 4,
+      "correspondence_fraction": 0.08,
+      "normal_angle_degrees": 180.0,
+      "maximum_anisotropy": 2.0,
+      "mean_shape_limit": 0.025,
+      "tail_shape_limit": 0.1,
+      "maximum_density_ratio": 2.0,
+      "quality_constraints": false
+    }
+  },
+  "seams": [],
+  "surface_version": 12,
+  "version": 12,
+  "groups": [],
+  "correspondences": [],
+  "correspondence_records": [],
+  "evidence": {},
+  "state_hash": "cd2367cb746e9d1fcfc4d43a92386bbda931aa0d064e089c44ec13bd97a7281e"
+}

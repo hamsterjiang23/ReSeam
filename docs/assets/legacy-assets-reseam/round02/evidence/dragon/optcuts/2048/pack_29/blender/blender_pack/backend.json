@@ -1,0 +1,37 @@
+{
+  "backend": "blender_concave",
+  "blender_version": "4.5.11 LTS",
+  "settings": {
+    "shape_method": "CONCAVE",
+    "rotate": true,
+    "rotate_method": "ANY",
+    "margin_method": "FRACTION",
+    "margin": 0.002465483234714004,
+    "merge_overlap": false,
+    "scale": true,
+    "pin": false
+  },
+  "capabilities": {
+    "shape_method": [
+      "CONCAVE",
+      "CONVEX",
+      "AABB"
+    ],
+    "rotate_method": [
+      "ANY",
+      "CARDINAL",
+      "AXIS_ALIGNED",
+      "AXIS_ALIGNED_X",
+      "AXIS_ALIGNED_Y"
+    ],
+    "margin_method": [
+      "SCALED",
+      "ADD",
+      "FRACTION"
+    ]
+  },
+  "threads": 1,
+  "device": "CPU",
+  "face_count": 2000,
+  "unwrap_called": false
+}

@@ -1,0 +1,49 @@
+{
+  "package": "reseam-skills-v1.1.0",
+  "skills": [
+    "reseam-uv",
+    "reseam-hard-surface"
+  ],
+  "files": [
+    {
+      "path": "reseam-uv/references/environment-setup.md",
+      "bytes": 10561,
+      "sha256": "6c48f61c41b12c6ad1b5727d1e0fd5d90247e57ef63ef52f2158f5d98eb080d0"
+    },
+    {
+      "path": "reseam-uv/references/meshquery.md",
+      "bytes": 6238,
+      "sha256": "1fa027ee649a7fbddace0a187a5b6af6dba7883488aea335fed199d553c7a9ed"
+    },
+    {
+      "path": "reseam-uv/references/projected-source-and-extra-uv.md",
+      "bytes": 3962,
+      "sha256": "5bbb9038e82d3e257488e7683134c0482fd056f3066811e93196bb1fb9176ba5"
+    },
+    {
+      "path": "reseam-uv/references/symmetry-reuse-and-merge.md",
+      "bytes": 17449,
+      "sha256": "b06f9aca48106d9f6419ae144accf4c0ce47a0bff4d2e7ddf9d1eab55a33ff4d"
+    },
+    {
+      "path": "reseam-uv/SKILL.md",
+      "bytes": 16059,
+      "sha256": "1cd00cd73eeea281c7300b94aa61afa27717ceda1a2ce8ef9c1bd1f565a470ad"
+    },
+    {
+      "path": "reseam-hard-surface/SKILL.md",
+      "bytes": 5633,
+      "sha256": "1823779f475cc4432df9a80a83e52041cb620e7d2e4e4965143c0cccceed596d"
+    }
+  ],
+  "scope": "Skill instructions and references; ReSeam project source and selected backend installations required",
+  "excluded": [
+    "personal runtime config",
+    "credentials",
+    "models",
+    "weights",
+    "native binaries"
+  ],
+  "dependency_guide": "reseam-uv/references/environment-setup.md",
+  "clean_machine_install_verified": false
+}

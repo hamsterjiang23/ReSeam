@@ -1,0 +1,11 @@
+{
+  "comparison": "E:\\ReSem\\output\\artist-tools\\dragon-38\\review\\comparison.json",
+  "viewer": "E:\\ReSem\\output\\artist-tools\\dragon-38\\review\\review.html",
+  "comparison_hash": "36cb482de725ca88f3a238fdb52813dc0578527d08981da2d4876341dbb222e5",
+  "visual_decision": "pending",
+  "status": "OK",
+  "execution_success": true,
+  "tool": "artist.compare",
+  "wall_seconds": 11.187999999849126,
+  "output": "E:\\ReSem\\output\\artist-tools\\dragon-38\\review"
+}

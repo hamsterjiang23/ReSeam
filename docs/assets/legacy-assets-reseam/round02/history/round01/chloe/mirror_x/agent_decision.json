@@ -1,0 +1,7 @@
+{
+  "observation": "Y-plane harmonic preview introduced visually prominent downward horns and changed the upper crest arrangement; reject this geometry appearance despite 100% UV sharing",
+  "revision": "try transverse X plane, preserving vertical top/bottom feature layout",
+  "prior_result": "mirror_shared_final/256/color_views/oblique.png",
+  "axis": "x",
+  "offset": 0.7814623713493347
+}

@@ -1,0 +1,100 @@
+{
+  "chloe": {
+    "faces": 450,
+    "vertices": 227,
+    "source_uv_present": true,
+    "uv_initialization": "preserved_input_uv",
+    "static_color_binding": {
+      "source_texture": "F:\\MLBB_Test\\haijiangli1_HAMSTERMLBB\\Assets\\Art\\Prefabs\\TempPrefabs\\waipai\\Effect\\Hero\\112_Chloe\\skin07\\Tex\\Temp_FX_Tex_112_chloe_WWW_12_1.png",
+      "frozen_texture": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\source\\import\\inputs\\basecolor\\Temp_FX_Tex_112_chloe_WWW_12_1.png",
+      "texture_sha256": "7e01877f0633c18b4587641cd06140168a0f054d8de54b43e6ebecd347cc29ee",
+      "uv_channel": "UVChannel_1",
+      "shader": "explicit standard static BaseColor",
+      "unity_material_reproduced": false,
+      "source_shader_reproduced": false,
+      "scope": "RGB/RGBA image + chosen UV only; Unity UV transforms, animation, blending unverified"
+    },
+    "extra_uv": {
+      "path": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\source\\import\\inputs\\extra_uv.npz",
+      "sha256": "e5e5e5ee7a9a3dcdeb3dfab5ce641f4595d2e7ed07e2ba70bd417997332ee8ea",
+      "layers": [
+        {
+          "name": "UVChannel_2",
+          "array": "layer_0",
+          "texcoord": 1
+        }
+      ],
+      "face_count": 450,
+      "mapping": "snapshot face/corner order; UV bottom-left"
+    },
+    "source_manifest": [
+      {
+        "path": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\source\\import\\inputs\\Temp_FX_Mod_112_chloe_YM_95.FBX",
+        "original_path": "F:\\MLBB_Test\\haijiangli1_HAMSTERMLBB\\Assets\\Art\\Prefabs\\TempPrefabs\\waipai\\Effect\\Hero\\112_Chloe\\skin07\\Mesh\\Temp_FX_Mod_112_chloe_YM_95.FBX",
+        "sha256": "27337eb3f7e40cd01b3cca10027c951d4f7b437f0ff7e8b451c131df0ceb8ce1"
+      },
+      {
+        "path": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\source\\import\\inputs\\basecolor\\Temp_FX_Tex_112_chloe_WWW_12_1.png",
+        "original_path": "F:\\MLBB_Test\\haijiangli1_HAMSTERMLBB\\Assets\\Art\\Prefabs\\TempPrefabs\\waipai\\Effect\\Hero\\112_Chloe\\skin07\\Tex\\Temp_FX_Tex_112_chloe_WWW_12_1.png",
+        "sha256": "7e01877f0633c18b4587641cd06140168a0f054d8de54b43e6ebecd347cc29ee"
+      },
+      {
+        "path": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\source\\import\\inputs\\imported.npz",
+        "sha256": "ad6c4bef8b2efd40237f1dc755331a01486c6aea23f2366d18a3decefa35f25e"
+      },
+      {
+        "path": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\source\\import\\inputs\\identity.json",
+        "sha256": "48269dd82ce04385b7d7d906586a02577f1d3ee58db2b9c8d78420821e9f3af9"
+      },
+      {
+        "path": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\source\\import\\inputs\\material_reference.glb",
+        "original_path": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\source\\import\\inputs\\explicit_reference.glb",
+        "sha256": "b8a9d811923948eb138d7ae567cbd7470fd792c9f380adf5f07116a550702d6e"
+      },
+      {
+        "path": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\source\\import\\inputs\\extra_uv.npz",
+        "sha256": "e5e5e5ee7a9a3dcdeb3dfab5ce641f4595d2e7ed07e2ba70bd417997332ee8ea"
+      }
+    ]
+  },
+  "energy_blade": {
+    "faces": 500,
+    "vertices": 252,
+    "source_uv_present": false,
+    "uv_initialization": "xatlas",
+    "static_color_binding": null,
+    "extra_uv": null,
+    "source_manifest": [
+      {
+        "path": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\source\\import\\inputs\\low.obj",
+        "original_path": "E:\\ReSem\\assets\\v1\\energy_blade\\low.obj",
+        "sha256": "77014ff31afde09f75b2fa8659f76ed347ed51533eae064c11d623598eab772c"
+      },
+      {
+        "path": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\source\\import\\inputs\\material_reference.glb",
+        "original_path": "E:\\ReSem\\assets\\v1\\energy_blade\\high.glb",
+        "sha256": "c60df75a9e3293caca0927507bfbf1619feebd96a184969e306ef0888ae41b9d"
+      }
+    ]
+  },
+  "dragon": {
+    "faces": 2000,
+    "vertices": 996,
+    "source_uv_present": false,
+    "uv_initialization": "xatlas",
+    "static_color_binding": null,
+    "extra_uv": null,
+    "source_manifest": [
+      {
+        "path": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\source\\import\\inputs\\low.obj",
+        "original_path": "E:\\ReSem\\assets\\v1\\dragon\\low.obj",
+        "sha256": "d43a3a181211d3b003f2df54b73212ec0ef0e266e1a628e54b8c74a20ff9b570"
+      },
+      {
+        "path": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\source\\import\\inputs\\material_reference.glb",
+        "original_path": "E:\\ReSem\\assets\\v1\\dragon\\high.glb",
+        "sha256": "a5e0edbf7d13753d16d06f6aee1b2718d1199e6593a69eae9999fbe315334ace"
+      }
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\mirror_unshared_final\\2048\\pack_17\\snapshot\\snapshot.json",
+  "profile": {
+    "quality_constraints": false,
+    "normal_angle_degrees": 180.0,
+    "correspondence_fraction": 0.08,
+    "resolution": 2048,
+    "gap_pixels": 8,
+    "border_pixels": 8
+  },
+  "timeout_seconds": 300
+}

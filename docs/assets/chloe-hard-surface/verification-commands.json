@@ -1,0 +1,59 @@
+{
+  "checks": [
+    {
+      "command": "uv run pytest tests/test_agent_tools_hard_edges.py tests/test_chloe_hard_surface_driver.py tests/test_agent_tools_regional_cut.py tests/test_agent_tools_uv_preservation.py tests/test_agent_tools_projected_source.py tests/test_agent_tools_projected_mirror.py tests/test_agent_tools_mesh_query.py tests/test_agent_tools_regions.py -q",
+      "result": "65 passed in 3.96s"
+    },
+    {
+      "command": "uv run pytest tests/test_tripo_hard_surface_projection.py -q",
+      "result": "1 passed in 0.79s"
+    },
+    {
+      "command": "uv run ruff check src/reseam/agent_tools/hard_edges.py src/reseam/agent_tools/assets.py src/reseam/agent_tools/registry.py scripts/agent_asset_worker.py scripts/agent_fbx_uv.py scripts/run_chloe_hard_surface.py scripts/run_tripo_spike_hard_surface.py scripts/build_chloe_hard_surface_report.py scripts/build_tripo_spike_hard_surface_report.py tests/test_agent_tools_hard_edges.py tests/test_chloe_hard_surface_driver.py",
+      "result": "All checks passed"
+    },
+    {
+      "command": "uv run basedpyright src/reseam/agent_tools/hard_edges.py src/reseam/agent_tools/assets.py src/reseam/agent_tools/registry.py scripts/agent_asset_worker.py scripts/agent_fbx_uv.py scripts/run_chloe_hard_surface.py scripts/run_tripo_spike_hard_surface.py scripts/build_chloe_hard_surface_report.py scripts/build_tripo_spike_hard_surface_report.py tests/test_agent_tools_hard_edges.py tests/test_chloe_hard_surface_driver.py",
+      "result": "0 errors, 0 warnings, 0 notes"
+    },
+    {
+      "command": "uv run ruff check tests/test_tripo_hard_surface_projection.py",
+      "result": "All checks passed"
+    },
+    {
+      "command": "uv run basedpyright tests/test_tripo_hard_surface_projection.py",
+      "result": "0 errors, 0 warnings, 0 notes"
+    },
+    {
+      "command": "uv run --with pyyaml python -X utf8 C:/Users/admin/.codex/skills/.system/skill-creator/scripts/quick_validate.py E:/ReSem/skills/reseam-hard-surface",
+      "result": "Skill is valid"
+    },
+    {
+      "command": "uv run --with pyyaml python -X utf8 C:/Users/admin/.codex/skills/.system/skill-creator/scripts/quick_validate.py C:/Users/admin/.codex/skills/reseam-hard-surface",
+      "result": "Skill is valid"
+    },
+    {
+      "command": "git diff --check -- scripts/agent_asset_worker.py src/reseam/agent_tools/assets.py src/reseam/agent_tools/registry.py skills/reseam-uv/SKILL.md README.md AGENTS.md goal/v1.md implementation-notes.md",
+      "result": "exit 0; line-ending notices only"
+    },
+    {
+      "command": "uv run pytest tests/test_agent_tools_hard_edges.py tests/test_chloe_hard_surface_driver.py tests/test_tripo_hard_surface_projection.py tests/test_agent_tools_regional_cut.py tests/test_agent_tools_uv_preservation.py tests/test_agent_tools_projected_source.py tests/test_agent_tools_projected_mirror.py tests/test_agent_tools_mesh_query.py tests/test_agent_tools_regions.py -q",
+      "result": "67 passed in 3.92s"
+    },
+    {
+      "command": "uv run ruff check src/reseam/agent_tools/hard_edges.py src/reseam/agent_tools/assets.py src/reseam/agent_tools/registry.py scripts/agent_asset_worker.py scripts/agent_fbx_uv.py scripts/run_chloe_hard_surface.py scripts/run_tripo_spike_hard_surface.py scripts/build_chloe_hard_surface_report.py scripts/build_tripo_spike_hard_surface_report.py tests/test_agent_tools_hard_edges.py tests/test_chloe_hard_surface_driver.py tests/test_tripo_hard_surface_projection.py",
+      "result": "All checks passed"
+    },
+    {
+      "command": "uv run basedpyright src/reseam/agent_tools/hard_edges.py src/reseam/agent_tools/assets.py src/reseam/agent_tools/registry.py scripts/agent_asset_worker.py scripts/agent_fbx_uv.py scripts/run_chloe_hard_surface.py scripts/run_tripo_spike_hard_surface.py scripts/build_chloe_hard_surface_report.py scripts/build_tripo_spike_hard_surface_report.py tests/test_agent_tools_hard_edges.py tests/test_chloe_hard_surface_driver.py tests/test_tripo_hard_surface_projection.py",
+      "result": "0 errors, 0 warnings, 0 notes"
+    }
+  ],
+  "total_distinct_tests": 67,
+  "artifact_checks": [
+    "round01/verification.json",
+    "../tripo-spike-hard-surface/round03/verification.json"
+  ],
+  "outputs_scope": "30 actual GLBs with nine BaseColor mips each; all numerically rejected, explicitly diagnostic",
+  "post_experiment_orchestration": "round01/post_experiment_orchestration.json"
+}

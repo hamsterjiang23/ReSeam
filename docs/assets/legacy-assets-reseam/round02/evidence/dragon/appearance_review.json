@@ -1,0 +1,14 @@
+{
+  "selected_key": "mirror_shared_final/2048",
+  "appearance_accepted": true,
+  "reviewer": "current Agent",
+  "human_accepted": false,
+  "scope": "static BaseColor preview; numerical render rejection retained",
+  "evidence": [
+    "source/color_views/oblique_original.png",
+    "mirror_shared_final/2048/color_views/front.png",
+    "mirror_shared_final/2048/color_views/oblique.png",
+    "mirror_shared_final/2048/color_views/back.png"
+  ],
+  "notes": "Reviewed front, oblique and back actual 2048 images. Pink/white wing edges and gold central rib motifs remain legible on the mirrored geometry. Retained-side motifs intentionally replace the opposite side. Low-mesh faceting remains a geometry limitation. Surface color and seam probes passed; render tails reject, so this is only Agent preview acceptance."
+}

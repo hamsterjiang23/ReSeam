@@ -1,0 +1,16 @@
+{
+  "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\mirror_unshared_final\\2048\\pack_43\\snapshot\\snapshot.json",
+  "bake": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\mirror_unshared_final\\2048\\bake\\bake.json",
+  "mip_levels": [
+    0,
+    1,
+    2
+  ],
+  "render_size": 96,
+  "timeout_seconds": 900.0,
+  "geometry_profile": {
+    "quality_constraints": false,
+    "normal_angle_degrees": 180.0,
+    "correspondence_fraction": 0.08
+  }
+}

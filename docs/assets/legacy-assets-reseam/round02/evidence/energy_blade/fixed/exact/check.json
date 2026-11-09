@@ -1,0 +1,4 @@
+{
+  "reason": "EXACT_TOPOLOGY_NOT_MATCHED",
+  "conclusion": "approximate surface sharing remains unevaluated"
+}

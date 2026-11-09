@@ -1,0 +1,33 @@
+{
+  "status": "OK",
+  "execution_success": true,
+  "scope": "basecolor_reuse",
+  "quality_accepted": false,
+  "full_pbr_passed": false,
+  "asset": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\mirror_unshared_final\\2048\\export\\asset.glb",
+  "report": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\mirror_unshared_final\\2048\\export\\report.md",
+  "manifest": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\mirror_unshared_final\\2048\\export\\export.json",
+  "codec": "RGBA8_SRGB_RGB_LINEAR_ALPHA",
+  "runtime_texture_bytes": 22369620,
+  "decoded_preview_bytes": 22369620,
+  "delivered_artifact_bytes": 20793795,
+  "geometry_profile": {
+    "resolution": 2048,
+    "gap_pixels": 4.0,
+    "border_pixels": 4.0,
+    "correspondence_fraction": 0.08,
+    "normal_angle_degrees": 180.0,
+    "maximum_anisotropy": 2.0,
+    "mean_shape_limit": 0.025,
+    "tail_shape_limit": 0.1,
+    "maximum_density_ratio": 2.0,
+    "quality_constraints": false
+  },
+  "geometry_profile_hash": "bb7adcd086144b87f68d889c5192d02c4ed0389cdc4765dd7465f878f1e381ed",
+  "geometry_policy": "explicit_custom",
+  "strict_geometry_profile_applied": false,
+  "artist_reviewed": false,
+  "tool": "asset.export",
+  "wall_seconds": 3.062999999965541,
+  "output": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\mirror_unshared_final\\2048\\export"
+}

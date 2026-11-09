@@ -1,0 +1,9 @@
+[
+  "E:\\Blender 4.5.11\\blender.exe",
+  "--background",
+  "--factory-startup",
+  "--python",
+  "E:\\ReSem\\scripts\\artist_render_worker.py",
+  "--",
+  "E:\\ReSem\\output\\artist-tools\\dragon-38\\render\\render-request.json"
+]

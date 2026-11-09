@@ -1,0 +1,18 @@
+{
+  "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\merge\\optcuts_group2_apply\\snapshot\\snapshot.json",
+  "action": "unshare",
+  "group_ids": [
+    "reuse:6d2ef570f7da035c",
+    "reuse:a8344557405b49f6",
+    "reuse:b9efbf165016e054"
+  ],
+  "profile": {
+    "quality_constraints": false,
+    "normal_angle_degrees": 180.0,
+    "correspondence_fraction": 0.08,
+    "resolution": 256,
+    "gap_pixels": 4,
+    "border_pixels": 4
+  },
+  "timeout_seconds": 300.0
+}

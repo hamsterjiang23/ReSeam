@@ -1,0 +1,11 @@
+{
+  "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\merge\\optcuts_group2_apply\\snapshot\\snapshot.json",
+  "policy": "source_original",
+  "geometry_profile": {
+    "quality_constraints": false,
+    "normal_angle_degrees": 180.0,
+    "correspondence_fraction": 0.08
+  },
+  "source_mode": "projected_high",
+  "timeout_seconds": 300.0
+}

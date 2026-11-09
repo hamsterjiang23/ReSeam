@@ -1,0 +1,19 @@
+{
+  "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\mirror\\create\\shared\\snapshot.json",
+  "state_hash": "187289b10f482bcd8408c65979245909dfec8345511cd9b5712c43f971dd42c8",
+  "asset_id": "7a12444fe2c5e0cd96e5060f6fe9b924ccfe0d4020c82e0179707c951c7751bc",
+  "shared_snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\mirror\\create\\shared\\snapshot.json",
+  "unshared_snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\mirror\\create\\unshared\\snapshot.json",
+  "variant_root": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\mirror\\create\\variant_root\\snapshot.json",
+  "reference_glb": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\mirror\\create\\mirrored_source.glb",
+  "geometry_changed": true,
+  "requires_rebake": true,
+  "final_quality_passed": null,
+  "midplane_review_required": false,
+  "report": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\mirror\\create\\mirror_variant.json",
+  "status": "OK",
+  "execution_success": true,
+  "tool": "asset.mirror_variant",
+  "wall_seconds": 0.9370000000344589,
+  "output": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\mirror\\create"
+}

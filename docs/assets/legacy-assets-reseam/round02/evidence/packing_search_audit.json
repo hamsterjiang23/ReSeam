@@ -1,0 +1,797 @@
+{
+  "rows": [
+    {
+      "asset": "chloe",
+      "key": "source_uv/256",
+      "attempts": [
+        {
+          "seed": 17,
+          "status": "REJECTED",
+          "state_hash": null
+        },
+        {
+          "seed": 29,
+          "status": "REJECTED",
+          "state_hash": null
+        },
+        {
+          "seed": 43,
+          "status": "REJECTED",
+          "state_hash": null
+        }
+      ],
+      "unique_successful_state_hashes": 0
+    },
+    {
+      "asset": "chloe",
+      "key": "source_uv/128",
+      "attempts": [
+        {
+          "seed": 17,
+          "status": "REJECTED",
+          "state_hash": null
+        },
+        {
+          "seed": 29,
+          "status": "REJECTED",
+          "state_hash": null
+        },
+        {
+          "seed": 43,
+          "status": "REJECTED",
+          "state_hash": null
+        }
+      ],
+      "unique_successful_state_hashes": 0
+    },
+    {
+      "asset": "chloe",
+      "key": "source_uv/64",
+      "attempts": [
+        {
+          "seed": 17,
+          "status": "REJECTED",
+          "state_hash": null
+        },
+        {
+          "seed": 29,
+          "status": "REJECTED",
+          "state_hash": null
+        },
+        {
+          "seed": 43,
+          "status": "REJECTED",
+          "state_hash": null
+        }
+      ],
+      "unique_successful_state_hashes": 0
+    },
+    {
+      "asset": "chloe",
+      "key": "optcuts/256",
+      "attempts": [
+        {
+          "seed": 17,
+          "status": "OK",
+          "state_hash": "e9c888ed193cc9a42b603dd135f632e1bab3ea9965e7f28d45a1d47237483a22"
+        },
+        {
+          "seed": 29,
+          "status": "OK",
+          "state_hash": "36abde7b1bc18362ab2aa7d19e6e077268b197cfe161d285ae30a598ad9fc3f2"
+        },
+        {
+          "seed": 43,
+          "status": "OK",
+          "state_hash": "bfb8bb303154d71b318c2614665896fd227f7dd6734044374ea27dd9d22d517d"
+        }
+      ],
+      "unique_successful_state_hashes": 3
+    },
+    {
+      "asset": "chloe",
+      "key": "optcuts/128",
+      "attempts": [
+        {
+          "seed": 17,
+          "status": "OK",
+          "state_hash": "e6521d051a154794376c559f6870ae4b3f12fa763f79a753041335344116db3d"
+        },
+        {
+          "seed": 29,
+          "status": "OK",
+          "state_hash": "d7ba3c805294cb5c6f2c8ea4aae9ebe6b8342256bcfcd1f407c9e64573bcaf38"
+        },
+        {
+          "seed": 43,
+          "status": "OK",
+          "state_hash": "432a8a5b2fa8aa6daff17b9542780b8fbb18d5c6cdee257989cae0c1acb9f7a2"
+        }
+      ],
+      "unique_successful_state_hashes": 3
+    },
+    {
+      "asset": "chloe",
+      "key": "optcuts/64",
+      "attempts": [
+        {
+          "seed": 17,
+          "status": "OK",
+          "state_hash": "e4eaf60ef8d6af1bfbaae27efa6514efaebe8c04ccfd88ec6e3299158280096a"
+        },
+        {
+          "seed": 29,
+          "status": "OK",
+          "state_hash": "5c639ff8c18dac3e1267a6bfcea5f8ddd970e48e687e1fcaa0d90832c9dd7c1c"
+        },
+        {
+          "seed": 43,
+          "status": "OK",
+          "state_hash": "eb3b745a123c32e06d2da61219784d0abbe66b56dfa508c537370178c23bf8b7"
+        }
+      ],
+      "unique_successful_state_hashes": 3
+    },
+    {
+      "asset": "chloe",
+      "key": "mirror_shared_final/256",
+      "attempts": [
+        {
+          "seed": 17,
+          "status": "OK",
+          "state_hash": "73fd480f7bb5552c0ad6444b7efc79f2afb526ff3b7ef8066dc19d8da6dd88a6"
+        },
+        {
+          "seed": 29,
+          "status": "OK",
+          "state_hash": "9b5e1e4e1a365d4abd3dc9655577ab351cc3c22831d7fe932c5c728fdd2409d9"
+        },
+        {
+          "seed": 43,
+          "status": "OK",
+          "state_hash": "ec0c707f46bccd3af52eea0c990d62ea4e7a0020061a0a9b273d89ffecebd0eb"
+        }
+      ],
+      "unique_successful_state_hashes": 3
+    },
+    {
+      "asset": "chloe",
+      "key": "mirror_shared_final/128",
+      "attempts": [
+        {
+          "seed": 17,
+          "status": "OK",
+          "state_hash": "626b5a0061e541ab249bb08d586160f90b257a3b0546520ef2ba27f8c9e33166"
+        },
+        {
+          "seed": 29,
+          "status": "OK",
+          "state_hash": "1e3a896580381df5461f49ac43bb958e0086dba307f73c38d185e3559370cdb2"
+        },
+        {
+          "seed": 43,
+          "status": "OK",
+          "state_hash": "6a1cb6bda3b20839d2aa596d5d5d8e6d3ac4d691f2a7ecddfab036d3e0072ee5"
+        }
+      ],
+      "unique_successful_state_hashes": 3
+    },
+    {
+      "asset": "chloe",
+      "key": "mirror_shared_final/64",
+      "attempts": [
+        {
+          "seed": 17,
+          "status": "OK",
+          "state_hash": "c17e79a4519a39fa8a6027079175ff21bf682c9cd458932bf8b2e63f2b2dc127"
+        },
+        {
+          "seed": 29,
+          "status": "OK",
+          "state_hash": "d9e6a2d9ad9dc836ced68f7eef35424fd6544a56b3abca2306209a79dc6a1628"
+        },
+        {
+          "seed": 43,
+          "status": "OK",
+          "state_hash": "df6cc4b50b56be5ba427b75e41088ee96502447708ab06e1aa4c5bc5456a35d4"
+        }
+      ],
+      "unique_successful_state_hashes": 3
+    },
+    {
+      "asset": "chloe",
+      "key": "mirror_unshared_final/256",
+      "attempts": [
+        {
+          "seed": 17,
+          "status": "OK",
+          "state_hash": "4c6e58568e54a0d95c7ee7e0bcb7870ca74643a23ee4b99567f6141f614de1c8"
+        },
+        {
+          "seed": 29,
+          "status": "OK",
+          "state_hash": "df27a25214bab08b30e77e059280ad8dbd7741846ae34b0565ac3fdb3d283f2b"
+        },
+        {
+          "seed": 43,
+          "status": "OK",
+          "state_hash": "1c98872173a984091fcf6824af5671abf08d41ec9e0139e29c30b5ecfad65b28"
+        }
+      ],
+      "unique_successful_state_hashes": 3
+    },
+    {
+      "asset": "chloe",
+      "key": "mirror_unshared_final/128",
+      "attempts": [
+        {
+          "seed": 17,
+          "status": "OK",
+          "state_hash": "1c42ae304e2625e08e86cbf6a70e7c1c42c006a59e0f62bdc6720ebf44bea872"
+        },
+        {
+          "seed": 29,
+          "status": "OK",
+          "state_hash": "7d206d076574a2d5e3b10a64dc0b527c7bf2a0ef71986294a358b2c9d0871437"
+        },
+        {
+          "seed": 43,
+          "status": "OK",
+          "state_hash": "b0464d839fb48e7561c629904d2347db985aae5df1f7e4cdfb866ef625ecfd0a"
+        }
+      ],
+      "unique_successful_state_hashes": 3
+    },
+    {
+      "asset": "chloe",
+      "key": "mirror_unshared_final/64",
+      "attempts": [
+        {
+          "seed": 17,
+          "status": "OK",
+          "state_hash": "337e157033811b215e4986d3af361c4998c18ccff901407ad4d9848572fb7bf5"
+        },
+        {
+          "seed": 29,
+          "status": "OK",
+          "state_hash": "ee9a00c9b4159914f822ca1dcdd9e5db079ce6b2b340cc059af3e8bb8c9128db"
+        },
+        {
+          "seed": 43,
+          "status": "OK",
+          "state_hash": "6a7142269c7d94673b0e0640bc05516726e4a183319dbb34484ac201371703f6"
+        }
+      ],
+      "unique_successful_state_hashes": 3
+    },
+    {
+      "asset": "energy_blade",
+      "key": "xatlas/2048",
+      "attempts": [
+        {
+          "seed": 17,
+          "status": "OK",
+          "state_hash": "9d2596dc98c6d9c88c55563802e445cd82d79d467825b5f173785ac5173e3b4e"
+        },
+        {
+          "seed": 29,
+          "status": "OK",
+          "state_hash": "00331a68a6afc2ee92f8469c37521d23ae05c5a8c842be54dc2fdbde1a38cc09"
+        },
+        {
+          "seed": 43,
+          "status": "OK",
+          "state_hash": "efcd08f7ac6799e58bdb582da1088a612222db9603e70aab6692de529285b30b"
+        }
+      ],
+      "unique_successful_state_hashes": 3
+    },
+    {
+      "asset": "energy_blade",
+      "key": "xatlas/1024",
+      "attempts": [
+        {
+          "seed": 17,
+          "status": "OK",
+          "state_hash": "a71c0a91226f7d341b334fbd645fb1640e49d1cea284324f49ebd5139dc3a424"
+        },
+        {
+          "seed": 29,
+          "status": "OK",
+          "state_hash": "54993a6fea4119d7eddf34f0b957e6fffe104d4145f011a0661c9f1cdea88ca0"
+        },
+        {
+          "seed": 43,
+          "status": "OK",
+          "state_hash": "4da8f76f9cb9bda71b307f7cfbdde23c13047783769fa0c1cf5d00aef4d84c4d"
+        }
+      ],
+      "unique_successful_state_hashes": 3
+    },
+    {
+      "asset": "energy_blade",
+      "key": "xatlas/512",
+      "attempts": [
+        {
+          "seed": 17,
+          "status": "OK",
+          "state_hash": "b0590b38981047e82c88fe2a0bb0afe433331ce42e4139e0d6dc2bcc07300bbd"
+        },
+        {
+          "seed": 29,
+          "status": "OK",
+          "state_hash": "761d474aa70c59564e69b516242a2fd1ffdfd1f7310dbf594c0637ecaa72dec0"
+        },
+        {
+          "seed": 43,
+          "status": "OK",
+          "state_hash": "859117083fc44eaea730848ad9900cfab2ded2f6e92c36e5b5341a734e92c3c0"
+        }
+      ],
+      "unique_successful_state_hashes": 3
+    },
+    {
+      "asset": "energy_blade",
+      "key": "optcuts/2048",
+      "attempts": [
+        {
+          "seed": 17,
+          "status": "OK",
+          "state_hash": "82314ea036a372237974ac7ab142632bd8d5148ad7d9a9af5f0627b42cf4f7fc"
+        },
+        {
+          "seed": 29,
+          "status": "OK",
+          "state_hash": "c1a2f95f59193f82d18ea048dc4bb0b4f1876dc7162384eee85f37b149a5c23b"
+        },
+        {
+          "seed": 43,
+          "status": "OK",
+          "state_hash": "9e1bbbdc5517770217db6a27c73bb9e84edacc75de45c6748ace0db8a0177341"
+        }
+      ],
+      "unique_successful_state_hashes": 3
+    },
+    {
+      "asset": "energy_blade",
+      "key": "optcuts/1024",
+      "attempts": [
+        {
+          "seed": 17,
+          "status": "OK",
+          "state_hash": "8d37f60e92031aa2518ae43a92f71b46d95bddfcdcbf4d13300237c75694b045"
+        },
+        {
+          "seed": 29,
+          "status": "OK",
+          "state_hash": "5d8a2cb089f101fc63f0058620025cfe737d88f7c4a32537713879d054df049b"
+        },
+        {
+          "seed": 43,
+          "status": "OK",
+          "state_hash": "9bf15e74d6ea9abcd4a7697e24e736f38970e5d11bbd9bf4aa6d71c6600397f6"
+        }
+      ],
+      "unique_successful_state_hashes": 3
+    },
+    {
+      "asset": "energy_blade",
+      "key": "optcuts/512",
+      "attempts": [
+        {
+          "seed": 17,
+          "status": "OK",
+          "state_hash": "d3dea1529daab5474fe1bc1229c96b5e5bf41047af4c9270240d5b184a40817b"
+        },
+        {
+          "seed": 29,
+          "status": "OK",
+          "state_hash": "5a99d1d38f0a05fb0b5f9fb7e80fd6e02280becf569767dbbbbfd9f92eb17aad"
+        },
+        {
+          "seed": 43,
+          "status": "OK",
+          "state_hash": "a22d04cb168dfa8c11b62e53906517a219f22f390b9b935b2f66b4cd1a02d901"
+        }
+      ],
+      "unique_successful_state_hashes": 3
+    },
+    {
+      "asset": "energy_blade",
+      "key": "mirror_shared_final/2048",
+      "attempts": [
+        {
+          "seed": 17,
+          "status": "OK",
+          "state_hash": "631d180f431f45e679391573444f9ec143ae063386ba0ea809510532db601458"
+        },
+        {
+          "seed": 29,
+          "status": "OK",
+          "state_hash": "1b9c14c517a8a8e6d59ef4a9b1e6b056aabd3703cf4d785e45e43bd974e58fe6"
+        },
+        {
+          "seed": 43,
+          "status": "OK",
+          "state_hash": "bc40423919ffedd828f1a86ad7faf6483f361baaa8caba46aae427850b354ab0"
+        }
+      ],
+      "unique_successful_state_hashes": 3
+    },
+    {
+      "asset": "energy_blade",
+      "key": "mirror_shared_final/1024",
+      "attempts": [
+        {
+          "seed": 17,
+          "status": "OK",
+          "state_hash": "9fd2a88ad92be2e1548cd72d4829dd9655aa6f6e1cfea38b90448aca2fbc474d"
+        },
+        {
+          "seed": 29,
+          "status": "OK",
+          "state_hash": "040414cbb8c19180aa2565270281c7c6f66cf9c65643707c222cd405bbb56149"
+        },
+        {
+          "seed": 43,
+          "status": "OK",
+          "state_hash": "fb3c4edb673648d1ae32aea385ffad0e86c4c766cc69b33d8ec2d1a3b2aa9e61"
+        }
+      ],
+      "unique_successful_state_hashes": 3
+    },
+    {
+      "asset": "energy_blade",
+      "key": "mirror_shared_final/512",
+      "attempts": [
+        {
+          "seed": 17,
+          "status": "OK",
+          "state_hash": "0d32677084bd18b466194ada15de88d3c46a0707f94a175feeae3f6070b2d7bc"
+        },
+        {
+          "seed": 29,
+          "status": "OK",
+          "state_hash": "b510467d6965d9601e2c61967d21820256d956039e58474ace84eed826d4f56d"
+        },
+        {
+          "seed": 43,
+          "status": "OK",
+          "state_hash": "07e156e9b52a41b7dc4ee23028c4f6a96b450a7ca358de20ca32570f57908ef4"
+        }
+      ],
+      "unique_successful_state_hashes": 3
+    },
+    {
+      "asset": "energy_blade",
+      "key": "mirror_unshared_final/2048",
+      "attempts": [
+        {
+          "seed": 17,
+          "status": "OK",
+          "state_hash": "7dbe267c19410975876e85b41dd51a764f9623f7674804d6d4dfcd8a25fea413"
+        },
+        {
+          "seed": 29,
+          "status": "OK",
+          "state_hash": "1869d7bca4dba222af37001abf2f5f0347e8e232b96563215afaa44d35d17404"
+        },
+        {
+          "seed": 43,
+          "status": "OK",
+          "state_hash": "6830861d4e1af8df1fac62ca939f082e130816f1e0ebf07a4a36f7670ef74066"
+        }
+      ],
+      "unique_successful_state_hashes": 3
+    },
+    {
+      "asset": "energy_blade",
+      "key": "mirror_unshared_final/1024",
+      "attempts": [
+        {
+          "seed": 17,
+          "status": "OK",
+          "state_hash": "684189d146af4ac5b71ec4478b79d44a5e453fcc4658353bc1e4f72c2c758446"
+        },
+        {
+          "seed": 29,
+          "status": "OK",
+          "state_hash": "ad0d4f4b8607e3fa8ae7b8f2a465ab850e15c59f0b2558fafba5c1c322a78b9c"
+        },
+        {
+          "seed": 43,
+          "status": "OK",
+          "state_hash": "60592e80865ead2113bfec463b9f762d9e1844ca5898d0f841047fa797179e09"
+        }
+      ],
+      "unique_successful_state_hashes": 3
+    },
+    {
+      "asset": "energy_blade",
+      "key": "mirror_unshared_final/512",
+      "attempts": [
+        {
+          "seed": 17,
+          "status": "OK",
+          "state_hash": "44a4f715825d189faa28239794b19e5d57d022d5022149e1a34b5512f8657da0"
+        },
+        {
+          "seed": 29,
+          "status": "OK",
+          "state_hash": "1275b49be1cc5ee25c2bbf5751e96ef13fa3c1524d84be1e31662bcaf16df19a"
+        },
+        {
+          "seed": 43,
+          "status": "OK",
+          "state_hash": "9d571df183b8c7a841b4b633425169f843c506bfb5e2cb96a35e47ee655a164f"
+        }
+      ],
+      "unique_successful_state_hashes": 3
+    },
+    {
+      "asset": "dragon",
+      "key": "xatlas/2048",
+      "attempts": [
+        {
+          "seed": 17,
+          "status": "REJECTED",
+          "state_hash": null
+        },
+        {
+          "seed": 29,
+          "status": "REJECTED",
+          "state_hash": null
+        },
+        {
+          "seed": 43,
+          "status": "REJECTED",
+          "state_hash": null
+        }
+      ],
+      "unique_successful_state_hashes": 0
+    },
+    {
+      "asset": "dragon",
+      "key": "xatlas/1024",
+      "attempts": [
+        {
+          "seed": 17,
+          "status": "REJECTED",
+          "state_hash": null
+        },
+        {
+          "seed": 29,
+          "status": "REJECTED",
+          "state_hash": null
+        },
+        {
+          "seed": 43,
+          "status": "REJECTED",
+          "state_hash": null
+        }
+      ],
+      "unique_successful_state_hashes": 0
+    },
+    {
+      "asset": "dragon",
+      "key": "xatlas/512",
+      "attempts": [
+        {
+          "seed": 17,
+          "status": "REJECTED",
+          "state_hash": null
+        },
+        {
+          "seed": 29,
+          "status": "REJECTED",
+          "state_hash": null
+        },
+        {
+          "seed": 43,
+          "status": "REJECTED",
+          "state_hash": null
+        }
+      ],
+      "unique_successful_state_hashes": 0
+    },
+    {
+      "asset": "dragon",
+      "key": "optcuts/2048",
+      "attempts": [
+        {
+          "seed": 17,
+          "status": "OK",
+          "state_hash": "0dd4b9fb4dfd7e776d0ff422b8369089e0f58073a1e1f42b227a1ca244f8620f"
+        },
+        {
+          "seed": 29,
+          "status": "OK",
+          "state_hash": "eb6c162abead4291914ab0d3a50b1682b8f2898922ede8441589656c6519d53c"
+        },
+        {
+          "seed": 43,
+          "status": "OK",
+          "state_hash": "d7d23fc91501fe9c94ad5f81d6a23d28f6896a2c4d0b8a256e975da08a135f5f"
+        }
+      ],
+      "unique_successful_state_hashes": 3
+    },
+    {
+      "asset": "dragon",
+      "key": "optcuts/1024",
+      "attempts": [
+        {
+          "seed": 17,
+          "status": "OK",
+          "state_hash": "1d0a6f65bfa19612dececf587bee7cc22c677d49e429edc4024ee483f00cb845"
+        },
+        {
+          "seed": 29,
+          "status": "OK",
+          "state_hash": "9808f6f5e4b491a5204fa226e09c42f96ad88e90272b61356b88c8c6db5aeee5"
+        },
+        {
+          "seed": 43,
+          "status": "OK",
+          "state_hash": "2aa0ca46e086de95d81879a688a7764b1f80141559be121bd89632a893c5f637"
+        }
+      ],
+      "unique_successful_state_hashes": 3
+    },
+    {
+      "asset": "dragon",
+      "key": "optcuts/512",
+      "attempts": [
+        {
+          "seed": 17,
+          "status": "OK",
+          "state_hash": "61954be5c85212f23a2747838214726a3de3c020c5a49a133f4f1cc6e836cd16"
+        },
+        {
+          "seed": 29,
+          "status": "OK",
+          "state_hash": "a90c4fc16076e3f3f26bc77c53a5074ce19486f6aa632a9777d70a9bd35cf343"
+        },
+        {
+          "seed": 43,
+          "status": "OK",
+          "state_hash": "6f31d9b8caf9bd4a287de188aa674d4b55792c9522906dfdf755cce5bcffb635"
+        }
+      ],
+      "unique_successful_state_hashes": 3
+    },
+    {
+      "asset": "dragon",
+      "key": "mirror_shared_final/2048",
+      "attempts": [
+        {
+          "seed": 17,
+          "status": "OK",
+          "state_hash": "194c2778f561636c08cbca1c9b85e0950da57364539a79672dda1d6e41f5323c"
+        },
+        {
+          "seed": 29,
+          "status": "OK",
+          "state_hash": "c122ae587730af2ab99cad0a66aca8fb6bab234cc34f88173112e901ed099472"
+        },
+        {
+          "seed": 43,
+          "status": "OK",
+          "state_hash": "89e3837a6d7d9c11574e9c577c9d6cbe9a438ba8d83a4eb9359382226942b455"
+        }
+      ],
+      "unique_successful_state_hashes": 3
+    },
+    {
+      "asset": "dragon",
+      "key": "mirror_shared_final/1024",
+      "attempts": [
+        {
+          "seed": 17,
+          "status": "OK",
+          "state_hash": "bbd59563b274a2096cd3c429bfc1784a2651554a54a29a9a9374af6ebcbf3169"
+        },
+        {
+          "seed": 29,
+          "status": "OK",
+          "state_hash": "f76df59b6a4fbcc118b8a4f8f16680113b022868aba625f5fb1e82c2079ec036"
+        },
+        {
+          "seed": 43,
+          "status": "OK",
+          "state_hash": "373fa0188c5b98e086671fefc68f66a0c3229ac55a74b070fb28e0c11919b362"
+        }
+      ],
+      "unique_successful_state_hashes": 3
+    },
+    {
+      "asset": "dragon",
+      "key": "mirror_shared_final/512",
+      "attempts": [
+        {
+          "seed": 17,
+          "status": "OK",
+          "state_hash": "9587afbe4184faacbae6762937ce8b1191bb61839c36f02f4f8d79d6c4d55e23"
+        },
+        {
+          "seed": 29,
+          "status": "OK",
+          "state_hash": "3b58ffcc3ad7b57d8c5bcd08f17924fcb5fb0433e72089d628877e6c5abf2708"
+        },
+        {
+          "seed": 43,
+          "status": "OK",
+          "state_hash": "ed6cea9851cfc0d6fc46bf7fe063057357e0cc3b4d5acd63c13947b2e798cc4f"
+        }
+      ],
+      "unique_successful_state_hashes": 3
+    },
+    {
+      "asset": "dragon",
+      "key": "mirror_unshared_final/2048",
+      "attempts": [
+        {
+          "seed": 17,
+          "status": "OK",
+          "state_hash": "daed518549f4739e8502163333701c92bb42cf7a6ee0c61f8b44a2d3c719c175"
+        },
+        {
+          "seed": 29,
+          "status": "OK",
+          "state_hash": "ca649475569557e860a8254e9942cb51916604699d84cd5a2f1bf740e60e66ba"
+        },
+        {
+          "seed": 43,
+          "status": "OK",
+          "state_hash": "36a2bb1cde47144e047819466283b810663fcd234fda1669afd8a00bd7e77a7b"
+        }
+      ],
+      "unique_successful_state_hashes": 3
+    },
+    {
+      "asset": "dragon",
+      "key": "mirror_unshared_final/1024",
+      "attempts": [
+        {
+          "seed": 17,
+          "status": "OK",
+          "state_hash": "4d39ce97afdfd42a17c3028d15d71ca54d48a7cc8b423edf89d44e1d543db983"
+        },
+        {
+          "seed": 29,
+          "status": "OK",
+          "state_hash": "cb9668635cb624b0c83e865223b78e3cb1cf79ae31614ec0578f7cd6b62e3dcd"
+        },
+        {
+          "seed": 43,
+          "status": "OK",
+          "state_hash": "2c4f8096bab340f4da60b01ce4537f25a9c14bfbf4ddbb48e35633be5d8f95ab"
+        }
+      ],
+      "unique_successful_state_hashes": 3
+    },
+    {
+      "asset": "dragon",
+      "key": "mirror_unshared_final/512",
+      "attempts": [
+        {
+          "seed": 17,
+          "status": "OK",
+          "state_hash": "38f8044a9f856c67fc072970e67e420d83157c42ca93b1e5e6797cf4b11728a0"
+        },
+        {
+          "seed": 29,
+          "status": "OK",
+          "state_hash": "ccd9a19f833cffc35685c212a85d91effaae771e3ed8b0ffc65b4718396fec5e"
+        },
+        {
+          "seed": 43,
+          "status": "OK",
+          "state_hash": "14c7a04ebe6c321d074a9fb6ff7f7cea534ee9544303f8552d9285d28908df68"
+        }
+      ],
+      "unique_successful_state_hashes": 3
+    }
+  ],
+  "interpretation": "Three requested seeds do not imply three distinct layouts, especially for one chart."
+}

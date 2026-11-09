@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "state_hash": "337e157033811b215e4986d3af361c4998c18ccff901407ad4d9848572fb7bf5",
+  "asset_id": "7a12444fe2c5e0cd96e5060f6fe9b924ccfe0d4020c82e0179707c951c7751bc",
+  "source_snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\mirror_unshared_final\\64\\pack_17\\snapshot\\snapshot.json",
+  "source_snapshot_sha256": "902eaa22b78d561774d92be32a6ee6262924feeca2b4409c894624d8688ec2bd",
+  "geometry_report_object_sha256": "005b2b5dc0ace6eb02874ea5b6b4fbcfb3a482c953dc08a0f186bce3980c850b",
+  "resolution": 256,
+  "metrics_verified": true,
+  "verification_reason": "FULL_MODEL_HARD_GEOMETRY_PASSED",
+  "full_geometry_passed": true,
+  "hard_geometry_passed": true,
+  "quality_constraints_checked": false,
+  "strict_hard_geometry_passed": true,
+  "geometry_acceptance_scope": "strict_hard_geometry",
+  "preserved_source_conflict_count": 0,
+  "uv_connected_charts": 2,
+  "packing_owners": 2,
+  "actual_independent_tiles": 2,
+  "authorized_positive_overlap_cells": 0,
+  "global": {
+    "face_count": 590,
+    "surface_area": 0.45671284005520596,
+    "actual_shared_surface_area": 0.0,
+    "actual_shared_surface_fraction": 0.0
+  },
+  "selection": {
+    "face_count": 590,
+    "face_ids_sha256": "0d6c3cd32c45476db55f6bb9fd91f3c20afad908c391ec06deff69107eb5e419",
+    "surface_area": 0.45671284005520596,
+    "actual_shared_surface_area": 0.0,
+    "actual_shared_surface_fraction": 0.0
+  },
+  "measurement_method": "All UV charts form DSU nodes; join only authorized compatible strict-positive intersection cells after full hard validation. Per-face intersection UNION / UV face area times original3D face area; both members count. Selection never limits global geometry or tile count.",
+  "positive_overlap_area_floor": 0.0,
+  "material_validated": false,
+  "global_metrics_scope": "all_original_faces",
+  "inspection_report": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\mirror_unshared_final\\64\\inspect_17\\inspect\\inspection.json",
+  "inspection_report_sha256": "33d21a5a5956b1625878098427a59f9dcc44ce6a5b79e194a93b9ea609c02ef2",
+  "geometry_report_json_pointer": "/geometry"
+}

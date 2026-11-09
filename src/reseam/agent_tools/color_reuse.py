@@ -35,6 +35,7 @@ from ..budget_texture import (
 from ..mesh import chart_labels
 from ..types import FloatArray, IntArray, MeshState
 from .geometry import _DEFAULT_PROFILE, geometry_report
+from .projected_source import ProjectedSource
 from .state import (
     Snapshot,
     check_deadline,
@@ -98,11 +99,12 @@ def _record_geometry_profile(record: dict[str, object]) -> dict[str, object]:
     return profile
 
 
-def _geometry_metadata(profile: dict[str, object]) -> dict[str, object]:
+def _geometry_metadata(profile: dict[str, object], visual: bool = False) -> dict[str, object]:
     strict = _geometry_contract(profile) == _geometry_contract(_DEFAULT_PROFILE)
     return {"geometry_profile": profile, "geometry_profile_hash": object_hash(profile),
-            "geometry_policy": "strict_default" if strict else "explicit_custom",
-            "strict_geometry_profile_applied": strict, "artist_reviewed": False}
+            "geometry_policy": "visual_advisory" if visual else "strict_default" if strict else "explicit_custom",
+            "strict_geometry_profile_applied": strict and not visual, "artist_reviewed": False,
+            "acceptance_policy": "visual" if visual else "numeric"}
 
 
 def _prerequisite_profile(profile: dict[str, object], request: dict[str, object]) -> dict[str, object]:
@@ -125,10 +127,21 @@ def _geometry_hash(snapshot: Snapshot) -> str:
     return hashlib.sha256(mesh.vertices.tobytes() + mesh.faces.tobytes()).hexdigest()
 
 
-def _source(snapshot: Snapshot) -> tuple[ReferenceSurface, Path, dict[str, object]]:
+def _source(snapshot: Snapshot, source_mode: str = "original_face_corner",
+            source_path: Path | None = None, *, allow_projected: bool = False,
+            ) -> tuple[ReferenceSurface, Path, dict[str, object]]:
     from .material import _source_document, _wraps
 
-    value = snapshot.metadata.get("reference_glb")
+    if allow_projected:
+        source_mode = "projected_high"
+    if source_mode not in ("original_face_corner", "projected_high"):
+        raise ValueError("INVALID_BASECOLOR_SOURCE_MODE")
+    projected = snapshot.metadata.get("projected_source", {})
+    value = (projected.get("reference_glb", snapshot.metadata.get("reference_glb"))
+             if source_mode == "projected_high" and isinstance(projected, dict)
+             else snapshot.metadata.get("reference_glb"))
+    if source_path is not None:
+        value = str(source_path)
     if not isinstance(value, str):
         raise TypeError("REFERENCE_GLB_REQUIRED")
     path = Path(value)
@@ -161,9 +174,9 @@ def _source(snapshot: Snapshot) -> tuple[ReferenceSurface, Path, dict[str, objec
     triangles = snapshot.state.surface.mesh.vertices[snapshot.state.surface.mesh.faces]
     # Same-face ancestry is required here. A different high mesh needs an explicit
     # separate source projection map, not an unrecorded nearest-point fallback.
-    if triangles.shape != reference.triangles.shape or not np.allclose(
+    if source_mode != "projected_high" and (triangles.shape != reference.triangles.shape or not np.allclose(
         triangles, reference.triangles, rtol=0, atol=max(1e-12, reference.diagonal * 1e-10),
-    ):
+    )):
         raise ValueError("BASECOLOR_REUSE_REQUIRES_ORIGINAL_FACE_CORNER_SOURCE_IDENTITY")
     return reference, path, material
 
@@ -223,9 +236,22 @@ class ColorTarget:
         _record_geometry_profile(self.record)
         if record.get("asset_id") != snapshot.asset_id or record.get("geometry_hash") != _geometry_hash(snapshot):
             raise ValueError("TARGET_ASSET_OR_GEOMETRY_MISMATCH")
-        self.reference, source, _ = _source(snapshot)
+        self.source_mode = str(record.get("source_mode", "original_face_corner"))
+        self.reference, source, _ = _source(snapshot, self.source_mode,
+            Path(str(record["source"])) if self.source_mode == "projected_high" else None)
         if record.get("source_sha256") != file_hash(source):
             raise ValueError("TARGET_SOURCE_CHANGED")
+        self.projected_source: ProjectedSource | None = None
+        if self.source_mode == "projected_high":
+            projection = record.get("source_projection")
+            if not isinstance(projection, dict):
+                raise ValueError("TARGET_PROJECTED_SOURCE_REQUIRED")
+            if projection.get("reference_sha256") != record["source_sha256"]:
+                raise ValueError("TARGET_PROJECTED_SOURCE_REFERENCE_MISMATCH")
+            self.projected_source = ProjectedSource.from_frozen(self.reference, projection,
+                self.path.parent / "projected_source.npz")
+            if len(self.projected_source.source_low_faces) != len(snapshot.state.surface.mesh.faces):
+                raise ValueError("TARGET_PROJECTED_SOURCE_FACE_COUNT_MISMATCH")
         data_path = self.path.parent / "target.npz"
         if file_hash(data_path) != record.get("arrays_sha256"):
             raise ValueError("TARGET_ARRAY_HASH_MISMATCH")
@@ -245,9 +271,20 @@ class ColorTarget:
             domain = _Domain(ids, triangles, self.source_uv[ids], STRtree([shapely.Polygon(t) for t in uv]))
             for face in cast(list[int], group["slave_faces"]):
                 self.slaves[face] = domain
+        from .artist import color_locked_faces
+        if set(color_locked_faces(snapshot)).intersection(self.slaves):
+            raise ValueError("ARTIST_COLOR_LOCK_CONFLICTS_WITH_FROZEN_TARGET")
 
     def original(self, face: int, bary: FloatArray) -> FloatArray:
+        if self.projected_source is not None:
+            return self.projected_source.sample_colors(face, bary)
         return self._source_color(bary @ self.source_uv[face])
+
+    def original_samples(self, faces: IntArray, bary: FloatArray) -> FloatArray:
+        """Batch original source queries, including exact high projection when explicit."""
+        if self.projected_source is not None:
+            return self.projected_source.sample_colors(faces, bary)
+        return self._source_color(np.einsum("nc,ncd->nd", bary, self.source_uv[faces]))
 
     def _source_color(self, uv: FloatArray) -> FloatArray:
         color = sample_rgba8(self.reference.image, uv,
@@ -277,6 +314,8 @@ class ColorTarget:
             # master domain. Center samples were authorized by geometry gates.
             ids[missing] = np.asarray(domain.tree.nearest(points[missing]), dtype=np.int64)
         coordinates = _project_uv_barycentric(domain.triangles[ids, :, :2], uv)
+        if self.projected_source is not None:
+            return self.original_samples(domain.faces[ids], coordinates)
         source_uv = np.einsum("nc,ncd->nd", coordinates, domain.source_uv[ids])
         return self._source_color(source_uv)
 
@@ -378,8 +417,25 @@ def _freeze_topology(request: dict[str, object], reference: ReferenceSurface,
 
 def freeze_target(request: dict[str, object], output: Path, deadline: float) -> dict[str, object]:
     snapshot = require_snapshot(request)
+    from .artist import visual_policy
+    visual = visual_policy(request, snapshot)
     profile = _geometry_profile(request)
-    reference, source, material = _source(snapshot)
+    default_source_mode = "projected_high" if "projected_source" in snapshot.metadata else "original_face_corner"
+    source_mode = str(request.get("source_mode", default_source_mode))
+    reference, source, material = _source(snapshot, source_mode)
+    projection: ProjectedSource | None = None
+    projection_record: dict[str, object] | None = None
+    if source_mode == "projected_high":
+        fraction = request.get("projection_max_fraction")
+        if fraction is not None and (isinstance(fraction, bool) or not isinstance(fraction, (int, float))
+                                     or not np.isfinite(fraction) or fraction <= 0):
+            raise ValueError("PROJECTED_SOURCE_POSITIVE_FINITE_MAX_FRACTION_REQUIRED")
+        projection = ProjectedSource.from_snapshot(snapshot, reference,
+            float(fraction) if isinstance(fraction, (int, float)) else None, deadline=deadline)
+        projection_record = projection.freeze(output / "projected_source.npz")
+        projection.attach_audit(output / "projection", "target_source_preflight")
+        if request.get("original_topology") is not None:
+            raise ValueError("ORIGINAL_TOPOLOGY_UNSUPPORTED_FOR_PROJECTED_HIGH")
     policy = request.get("policy", "symmetrize" if snapshot.state.groups else "source_original")
     if policy not in ("symmetrize", "source_original"):
         raise ValueError("INVALID_TARGET_POLICY")
@@ -389,6 +445,8 @@ def freeze_target(request: dict[str, object], output: Path, deadline: float) -> 
             or len(set(protected)) != len(protected)):
         raise ValueError("INVALID_PROTECTED_FACES")
     protected_set = set(protected)
+    from .artist import color_locked_faces
+    protected_set.update(color_locked_faces(snapshot))
     regions = snapshot.metadata.get("regions", [])
     if not isinstance(regions, list):
         raise TypeError("INVALID_REGION_METADATA")
@@ -407,41 +465,71 @@ def freeze_target(request: dict[str, object], output: Path, deadline: float) -> 
     if set(masters) - {g.group_id for g in snapshot.state.groups}:
         raise ValueError("UNKNOWN_MASTER_GROUP")
     groups: list[dict[str, object]] = []
+    selected_groups = request.get('symmetrize_group_ids')
+    if selected_groups is not None and (
+            policy != 'symmetrize' or not isinstance(selected_groups, list)
+            or any(not isinstance(value, str) for value in selected_groups)
+            or len(set(selected_groups)) != len(selected_groups)
+            or set(selected_groups) - {group.group_id for group in snapshot.state.groups}):
+        raise ValueError('INVALID_SYMMETRIZE_GROUP_IDS')
     if policy == "symmetrize":
         safety_profile = _prerequisite_profile(profile, request)
         safety = geometry_report(snapshot.state, safety_profile)
         write_json(output / "geometry.json", {"profile": safety_profile, "geometry": safety})
-        if safety.get("valid") is not True:
+        if safety.get("valid") is not True and not visual:
             raise ValueError("SYMMETRIC_TARGET_REQUIRES_LEGAL_SHARED_STATE")
         for group in snapshot.state.groups:
+            if selected_groups is not None and group.group_id not in selected_groups:
+                continue
             if set(protected).intersection(group.first_faces + group.second_faces):
                 raise ValueError("PROTECTED_FACE_IN_SHARED_TARGET:release its sharing first")
             side = masters.get(group.group_id, "first")
+            if group.member_maps and side != 'first':
+                raise ValueError('MULTI_MEMBER_TARGET_REQUIRES_FIRST_MASTER')
             first, second = (group.first_faces, group.second_faces) if side == "first" else (
                 group.second_faces, group.first_faces)
             groups.append({"group_id": group.group_id, "master_member": side,
                            "master_faces": list(first), "slave_faces": list(second)})
     check_deadline(deadline)
     edge_pairs, original_topology = _freeze_topology(request, reference, output)
-    np.savez_compressed(output / "target.npz", source_uv=reference.corner_uv,
+    source_uv = reference.corner_uv
+    if projection is not None:
+        # These corner UVs are diagnostics only. Every signal query projects its
+        # actual low barycentric point; interpolating high corner UVs is wrong
+        # across high-mesh triangle/material boundaries.
+        corner_samples = projection.sample(np.repeat(np.arange(nfaces, dtype=np.int64), 3),
+                                           np.tile(np.eye(3), (nfaces, 1)))
+        source_uv = np.einsum("nc,ncd->nd", corner_samples.barycentric,
+                             reference.corner_uv[corner_samples.target_faces]).reshape(nfaces, 3, 2)
+        probes = _stratified_barycentric(16)
+        for face in range(nfaces):
+            check_deadline(deadline)
+            projection.sample(face, probes)
+        projection.save_audit()
+    np.savez_compressed(output / "target.npz", source_uv=source_uv,
                         domain_uv=snapshot.state.surface.uv[snapshot.state.surface.uv_faces],
                         original_edge_pairs=edge_pairs)
     record: dict[str, object] = {
         "schema_version": 1, "scope": SCOPE, "asset_id": snapshot.asset_id,
         "geometry_hash": _geometry_hash(snapshot), "source": str(source.resolve()),
         "source_sha256": file_hash(source), "frozen_from_state_hash": snapshot.state_hash,
+        "source_mode": source_mode, "source_projection": projection_record,
         "arrays_sha256": file_hash(output / "target.npz"), "policy": policy,
         "groups": groups, "protected_faces": protected,
         "source_material_extensions_not_validated": material.get("extensions", {}),
         "source_double_sided": bool(material.get("doubleSided", False)),
         "original_topology": original_topology,
-        "signal": "original source texture sampled through frozen source face/corner and shared UV domain",
+        "signal": ("original high texture via frozen original-low lineage and exact nearest high surface; "
+                   "corner UVs diagnostic only" if projection is not None else
+                   "original source texture sampled through frozen source face/corner and shared UV domain"),
         "master_default": "first member; caller must record any semantic source-side decision",
-        **_geometry_metadata(profile),
+        **_geometry_metadata(profile, visual),
     }
     record["target_hash"] = object_hash(record)
     write_json(output / "target.json", record)
     target = ColorTarget(snapshot, output / "target.json")
+    if target.projected_source is not None:
+        target.projected_source.deadline = deadline
     bary = _stratified_barycentric(16)
     errors = np.zeros(nfaces)
     maximum = np.zeros(nfaces)
@@ -459,7 +547,7 @@ def freeze_target(request: dict[str, object], output: Path, deadline: float) -> 
             "target_hash": record["target_hash"], "policy": policy,
             "appearance_change": str((output / "appearance_change.json").resolve()),
             "modified_faces": len(target.slaves), "full_pbr_passed": False,
-            **_geometry_metadata(profile)}
+            **_geometry_metadata(profile, visual)}
 
 
 def _target(snapshot: Snapshot, request: dict[str, object], output: Path, deadline: float) -> ColorTarget:
@@ -470,6 +558,9 @@ def _target(snapshot: Snapshot, request: dict[str, object], output: Path, deadli
         target_request: dict[str, object] = {"snapshot": str(snapshot.root), "policy": "source_original"}
         if "geometry_profile" in request:
             target_request["geometry_profile"] = request["geometry_profile"]
+        for key in ("source_mode", "projection_max_fraction", "acceptance_policy"):
+            if key in request:
+                target_request[key] = request[key]
         frozen = freeze_target(target_request, folder, deadline)
         path = frozen["target"]
     if not isinstance(path, str):
@@ -584,12 +675,17 @@ def bake_color_reuse(request: dict[str, object], output: Path, deadline: float) 
     safety_profile = _prerequisite_profile(profile, request)
     safety = geometry_report(snapshot.state, safety_profile)
     write_json(output / "geometry.json", {"profile": safety_profile, "geometry": safety})
-    if safety.get("valid") is not True:
+    from .artist import visual_policy
+    visual = visual_policy(request, snapshot)
+    if safety.get("valid") is not True and not visual:
         return {"status": "REJECTED", "execution_success": True, "reason": "GEOMETRY_UNSAFE", "geometry": safety}
     base = np.zeros((resolution, resolution, 4), dtype=np.uint8)
     owner = np.full((resolution, resolution), -1, dtype=np.int32)
     surface = snapshot.state.surface
     signal = AtlasSignal(target, surface)
+    if target.projected_source is not None:
+        target.projected_source.deadline = deadline
+        target.projected_source.attach_audit(output / "projection", "actual_bake_source_queries")
     triangles = surface.uv[surface.uv_faces]
     subtexel_faces: list[int] = []
     subtexel_conflicts: list[int] = []
@@ -638,25 +734,31 @@ def bake_color_reuse(request: dict[str, object], output: Path, deadline: float) 
     folder.mkdir()
     paths = _mips(base, folder, deadline)
     np.save(output / "coverage.npy", coverage, allow_pickle=False)
+    source_map = target.projected_source.save_audit() if target.projected_source is not None else None
+    diagnostic_paths = ([output / "projection/source_map.npz", output / "projection/source_map.json"]
+                        if source_map is not None else [])
     manifest: dict[str, object] = {
         "schema_version": 1, "scope": SCOPE, "state_hash": snapshot.state_hash,
         "asset_id": snapshot.asset_id, "geometry_hash": _geometry_hash(snapshot),
         "snapshot": str((snapshot.root / "snapshot.json").resolve()),
         "target": str(target.path), "target_sha256": file_hash(target.path),
         "target_hash": target.record["target_hash"], "source_sha256": target.record["source_sha256"],
+        "source_mode": target.source_mode, "source_projection": target.record.get("source_projection"),
+        "source_map_diagnostics": source_map,
         "resolution": resolution, "padding_pixels": padding,
         "payload_bytes": sum(w * h * 4 for w, h in mip_dimensions(resolution, resolution)),
         "package_bytes": sum(p.stat().st_size for p in paths), "covered_pixels": int(coverage.sum()),
         "geometric_center_pixels": geometric_pixels, "support_radius_pixels": support_radius,
+        "numeric_geometry_passed": safety.get("valid"),
         "codec": "RGBA8_SRGB_RGB_LINEAR_ALPHA", "source_quadrature": "2x2 uniform per base texel",
         "footprint_boundary": "traverse current chart faces; nearest same-chart boundary extension",
         "mip_filter": "recursive linear 2x2 BOX with per-level RGBA8 quantization",
         "overlap_write_policy": "stable original face priority; shared-member agreement independently validated",
         "subtexel_faces": subtexel_faces, "subtexel_occupied_seed_faces": subtexel_conflicts,
         "coverage_definition": "source-sampled triangle buffer support; geometric_coverage.npy separately stores center rasterization; neither is continuous geometric occupancy",
-        "files": {str(p.relative_to(output)): file_hash(p) for p in [*paths, output / "coverage.npy", output / "geometric_coverage.npy"]},
+        "files": {str(p.relative_to(output)): file_hash(p) for p in [*paths, output / "coverage.npy", output / "geometric_coverage.npy", *diagnostic_paths]},
         "full_pbr_passed": False, "gpu_verified": False, "artist_reviewed": False,
-        **_geometry_metadata(profile),
+        **_geometry_metadata(profile, visual),
     }
     check_deadline(deadline)
     ColorTarget(require_snapshot(request), target.path)
@@ -664,7 +766,7 @@ def bake_color_reuse(request: dict[str, object], output: Path, deadline: float) 
     return {"status": "OK", "execution_success": True, "scope": SCOPE,
             "bake": str((output / "bake.json").resolve()), "target": str(target.path),
             "payload_bytes": manifest["payload_bytes"], "quality_accepted": False, "full_pbr_passed": False,
-            **_geometry_metadata(profile)}
+            **_geometry_metadata(profile, visual)}
 
 
 def _load(snapshot: Snapshot, path: Path) -> tuple[dict[str, object], ColorTarget, list[Uint8Array]]:
@@ -720,6 +822,9 @@ def validate_color_reuse(request: dict[str, object], output: Path, deadline: flo
     geometry = geometry_report(snapshot.state, profile)
     surface = snapshot.state.surface
     signal = AtlasSignal(target, surface, cache_filter=True)
+    if target.projected_source is not None:
+        target.projected_source.deadline = deadline
+        target.projected_source.attach_audit(output / "projection", "actual_evaluation_source_queries")
     triangles = surface.uv[surface.uv_faces]
     count = _int(request, "samples_per_face", 16, 4, 64)
     bary = _stratified_barycentric(count)
@@ -765,6 +870,7 @@ def validate_color_reuse(request: dict[str, object], output: Path, deadline: flo
     check_deadline(deadline)
     _load(require_snapshot(request), path)
     valid = all(item.get("valid") is True for item in (geometry, material, rendering, seams))
+    source_map = target.projected_source.save_audit() if target.projected_source is not None else None
     protocol: dict[str, object] = {
         "thresholds": limits, "geometry": {k: v for k, v in profile.items() if k != "resolution"},
         "mip_levels": mips, "samples_per_face": count, "render_size": render_size,
@@ -777,6 +883,8 @@ def validate_color_reuse(request: dict[str, object], output: Path, deadline: flo
         "schema_version": 1, "scope": SCOPE, "valid": valid, "quality_accepted": valid,
         "state_hash": snapshot.state_hash, "asset_id": snapshot.asset_id,
         "bake_sha256": file_hash(path), "target_hash": record["target_hash"], "source_sha256": record["source_sha256"],
+        "source_mode": target.source_mode, "source_projection": target.record.get("source_projection"),
+        "source_map_diagnostics": source_map,
         "geometry": geometry, "material": material, "render": rendering, "seams": seams,
         "profile": protocol, "profile_hash": object_hash(protocol), "payload_bytes": record["payload_bytes"],
         "full_pbr_passed": False, "gpu_verified": False, "artist_reviewed": False,
@@ -840,7 +948,8 @@ def _seams(target: AtlasSignal, surface: MeshState, levels: list[Uint8Array], mi
     for edge_a, edge_b, first, a0, a1, second, b0, b1 in target.target.edge_pairs:
         first, second = int(first), int(second)
         first_corners, second_corners = [int(a0), int(a1)], [int(b0), int(b1)]
-        if (np.array_equal(uv[first, first_corners], uv[second, second_corners])
+        if (target.target.projected_source is None
+                and np.array_equal(uv[first, first_corners], uv[second, second_corners])
                 and np.array_equal(target.target.source_uv[first, first_corners], target.target.source_uv[second, second_corners])
                 and first not in target.target.slaves and second not in target.target.slaves):
             continuous_pairs += 1
@@ -946,6 +1055,10 @@ def export_color_reuse(request: dict[str, object], output: Path, deadline: float
     (output / "target").mkdir()
     shutil.copy2(target.path, output / "target/target.json")
     shutil.copy2(target.path.parent / "target.npz", output / "target/target.npz")
+    if target.projected_source is not None:
+        shutil.copy2(target.path.parent / "projected_source.npz", output / "target/projected_source.npz")
+        if (target.path.parent / "projection").is_dir():
+            shutil.copytree(target.path.parent / "projection", output / "target/projection")
     if (target.path.parent / "original_topology.npz").is_file():
         shutil.copy2(target.path.parent / "original_topology.npz", output / "target/original_topology.npz")
     write_json(output / "bake.json", record)

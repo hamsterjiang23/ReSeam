@@ -1,0 +1,14 @@
+{
+  "selected_key": "mirror_shared_final/256",
+  "appearance_accepted": true,
+  "reviewer": "current Agent",
+  "human_accepted": false,
+  "scope": "static RGB preview only; numerical rejection remains",
+  "evidence": [
+    "source/color_views/oblique_original.png",
+    "mirror_shared_final/256/color_views/front.png",
+    "mirror_shared_final/256/color_views/oblique.png",
+    "mirror_shared_final/256/color_views/back.png"
+  ],
+  "notes": "Reviewed front, oblique and back actual color images. Red shell, dark cavity and tapered tips remain legible after X-plane mirror; paired red/dark motifs are intentionally symmetrized. This is a preview acceptance, not original opposite-side appearance identity, Unity dynamic material, PBR, or numerical pass."
+}

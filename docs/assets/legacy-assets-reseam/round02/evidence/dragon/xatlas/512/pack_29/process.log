@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "E:\ReSem\src\reseam\agent_tools\worker.py", line 16, in execute
+    result = handler(name)(request, output, deadline)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ReSem\src\reseam\agent_tools\geometry.py", line 870, in pack_uv
+    candidate, packing_record = compact_pack(source, _integer(profile, "resolution", 256, 1),
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ReSem\src\reseam\agent_tools\compact_packing.py", line 190, in compact_pack
+    fits[owner] = fit_similarity(before, after, tolerance=fit_tolerance_uv)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ReSem\src\reseam\agent_tools\compact_packing.py", line 40, in fit_similarity
+    raise ValueError("PACK_SIMILARITY_COLLAPSED_OWNER")
+ValueError: PACK_SIMILARITY_COLLAPSED_OWNER

@@ -1,0 +1,149 @@
+{
+  "asset": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\optcuts\\1024\\export\\asset.glb",
+  "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\optcuts\\1024\\pack_43\\snapshot\\snapshot.json",
+  "state_hash": "2aa0ca46e086de95d81879a688a7764b1f80141559be121bd89632a893c5f637",
+  "asset_sha256": "51c38e538b85840f0fc1fe16e66ddb262c001081195a0d963303bcca22038f4a",
+  "geometry_hash": "1f74f9dc786749e241a294fb8cd2257dd77e46af3551b5ade5129c52c36a6ec0",
+  "faces": 2000,
+  "positions_max_abs_error": 4.998626734753486e-09,
+  "corner_uv0_max_abs_error": 2.97843238961093e-08,
+  "geometry_passed": true,
+  "corner_uv0_passed": true,
+  "attributes": [
+    "POSITION",
+    "TEXCOORD_0"
+  ],
+  "extra_uv": [],
+  "required_texcoord_1": false,
+  "embedded_basecolor_size": [
+    1024,
+    1024
+  ],
+  "embedded_basecolor_pixel_equal_to_mip0": true,
+  "passed": true,
+  "scope": "raw GLB accessor bounds, ordered indexed face corners, float32 coordinates and UVs, hash-bound auxiliary UV sidecar, embedded BaseColor pixels; no engine/GPU/Shader test",
+  "mip_chain": [
+    {
+      "level": 0,
+      "size": [
+        1024,
+        1024
+      ],
+      "expected_side": 1024,
+      "size_passed": true,
+      "bytes": 868442,
+      "sha256": "84c1b5da85ce529f9fa260f689406cf2751a9627191a8daf7c5b750dec5eadef"
+    },
+    {
+      "level": 1,
+      "size": [
+        512,
+        512
+      ],
+      "expected_side": 512,
+      "size_passed": true,
+      "bytes": 254390,
+      "sha256": "f1a2a959b324aae23bd2cdb8bae1b8cb1115df64da423ab9b5a48d98be8780d3"
+    },
+    {
+      "level": 2,
+      "size": [
+        256,
+        256
+      ],
+      "expected_side": 256,
+      "size_passed": true,
+      "bytes": 74689,
+      "sha256": "20db69b7ac0a20c7aa67b9b8bf214d93be91bd7532f7b2fbd3b8f80ea22cc94a"
+    },
+    {
+      "level": 3,
+      "size": [
+        128,
+        128
+      ],
+      "expected_side": 128,
+      "size_passed": true,
+      "bytes": 22395,
+      "sha256": "e076db04918051f90452d06457ed35108e157f8fc3daf9122307cf619a25012d"
+    },
+    {
+      "level": 4,
+      "size": [
+        64,
+        64
+      ],
+      "expected_side": 64,
+      "size_passed": true,
+      "bytes": 6896,
+      "sha256": "46575159849ffe8173c73a8314e60740d99896f730e0bead594c579f8bbef090"
+    },
+    {
+      "level": 5,
+      "size": [
+        32,
+        32
+      ],
+      "expected_side": 32,
+      "size_passed": true,
+      "bytes": 2259,
+      "sha256": "0abcb4058f625adbfc651f00b9b2e47744dbd8c0959d385e1764a19e7cc4f442"
+    },
+    {
+      "level": 6,
+      "size": [
+        16,
+        16
+      ],
+      "expected_side": 16,
+      "size_passed": true,
+      "bytes": 779,
+      "sha256": "b5d5e71fbd20e97ae407ba3e59de70e5ccaacbb5cd15b5058d4638fa7030942a"
+    },
+    {
+      "level": 7,
+      "size": [
+        8,
+        8
+      ],
+      "expected_side": 8,
+      "size_passed": true,
+      "bytes": 284,
+      "sha256": "9360cee69292773de3ad45188cadbc4d0b3f5c8b769c5398e37178bf46092082"
+    },
+    {
+      "level": 8,
+      "size": [
+        4,
+        4
+      ],
+      "expected_side": 4,
+      "size_passed": true,
+      "bytes": 134,
+      "sha256": "ae3f3477b5515097659e9d179c21242e5a4abb2327704f3e01555340edd6aec4"
+    },
+    {
+      "level": 9,
+      "size": [
+        2,
+        2
+      ],
+      "expected_side": 2,
+      "size_passed": true,
+      "bytes": 83,
+      "sha256": "64807748664b9afe3f00bda7d937f28aaabdc4a3d4901e2b156688db85150ac3"
+    },
+    {
+      "level": 10,
+      "size": [
+        1,
+        1
+      ],
+      "expected_side": 1,
+      "size_passed": true,
+      "bytes": 70,
+      "sha256": "8d02df466ce2b213ee73f377a9bd66ad02dc7bd617553d424e910d72a94b51da"
+    }
+  ],
+  "mip_chain_complete": true
+}

@@ -1,0 +1,7 @@
+{
+  "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\mirror_unshared_final\\512\\pack_43\\snapshot\\snapshot.json",
+  "bake": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\mirror_unshared_final\\512\\bake\\bake.json",
+  "validation": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\mirror_unshared_final\\512\\quality\\validation.json",
+  "mode": "diagnostic",
+  "timeout_seconds": 300.0
+}

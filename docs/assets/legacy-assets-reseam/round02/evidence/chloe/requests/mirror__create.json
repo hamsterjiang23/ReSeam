@@ -1,0 +1,17 @@
+{
+  "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\optcuts\\native\\snapshot\\snapshot.json",
+  "allow_geometry_change": true,
+  "axis": "x",
+  "offset": 0.7814623713493347,
+  "keep_positive": true,
+  "reason": "transverse left/right plane preserves upper/lower crest arrangement; earlier lower point-cloud-residual Y mirror was rejected after actual color preview",
+  "profile": {
+    "quality_constraints": false,
+    "normal_angle_degrees": 180.0,
+    "correspondence_fraction": 0.08,
+    "resolution": 256,
+    "gap_pixels": 4,
+    "border_pixels": 4
+  },
+  "timeout_seconds": 300.0
+}

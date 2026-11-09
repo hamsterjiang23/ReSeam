@@ -1,0 +1,9 @@
+{
+  "status": "REJECTED",
+  "reason": "HARMONIC_REQUIRES_DISK_EULER_CHARACTERISTIC",
+  "execution_success": false,
+  "final_quality_passed": false,
+  "tool": "uv.reparameterize",
+  "wall_seconds": 0.9059999999590218,
+  "output": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\merge\\harmonic"
+}

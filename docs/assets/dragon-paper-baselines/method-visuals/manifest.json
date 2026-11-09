@@ -1,0 +1,264 @@
+{
+  "input_assets": [
+    {
+      "path": "baseline/sources.json",
+      "sha256": "92ec46add97638629216980baa62ee4ae8a54bdea8273a0941d062df3cfabde5"
+    },
+    {
+      "path": "docs/assets/dragon-paper-baselines/blender_smart/color.png",
+      "sha256": "af5f6c56ab45ac1d2591a6eb5c81235cb7851fad9196a64da1dbe29cc0fbf591"
+    },
+    {
+      "path": "docs/assets/dragon-paper-baselines/blender_smart/uv.png",
+      "sha256": "3ec7073c4051fdf5772bd768cbf35fa86485bdba1891a0ae79792397ba51075c"
+    },
+    {
+      "path": "docs/assets/dragon-paper-baselines/flatten_anything/front.png",
+      "sha256": "3dc6b735c37bc836a8990f5d18604aa50cc933939238fb8a518a0f4c80238123"
+    },
+    {
+      "path": "docs/assets/dragon-paper-baselines/flatten_anything/uv.png",
+      "sha256": "bc7a0fe64052c20237dec6b754b4f58b8aedef3dba3eb5f05713eecb5b7aa8cf"
+    },
+    {
+      "path": "docs/assets/dragon-paper-baselines/measurements.json",
+      "sha256": "217d54e4f68902c27269de62780641491f3fcf29163ff5763375ae3dae16d7d0"
+    },
+    {
+      "path": "docs/assets/dragon-paper-baselines/meshquery_project/color.png",
+      "sha256": "ae11d8744308e8d7a39fb9b30538eca92780093d1b8cc3f55b11c2697200eb83"
+    },
+    {
+      "path": "docs/assets/dragon-paper-baselines/meshquery_project/uv.png",
+      "sha256": "c51c729504a8fefd0dd9bdaa9f27a51b15227dbbc276be6833db73e79f9beb29"
+    },
+    {
+      "path": "docs/assets/dragon-paper-baselines/optcuts/color.png",
+      "sha256": "448e9e3cf3c1eca7828a566b280deaa2b153fed41b0daad21bbe8dd6b6811403"
+    },
+    {
+      "path": "docs/assets/dragon-paper-baselines/optcuts/uv.png",
+      "sha256": "d88d744a28e9cfcae5f557b05fe74d4ca18d7b06fc3cf74ee77d2bf81199a4ab"
+    },
+    {
+      "path": "docs/assets/dragon-paper-baselines/partuv/color.png",
+      "sha256": "5c4d859426d5a4826bdc92055efc0e09ebeea87bbd2044f4c65be916ef368800"
+    },
+    {
+      "path": "docs/assets/dragon-paper-baselines/partuv/uv.png",
+      "sha256": "a2c9614b50ca00f1027a1ea4b080dfa918ba3bfa42b1486ebdc8baee72a09b95"
+    },
+    {
+      "path": "docs/assets/dragon-paper-baselines/reseam_shared/color.png",
+      "sha256": "c480550a7856fb17edd9ef56fbe5cea04c54d9899529f0cbdcb77143e05e9758"
+    },
+    {
+      "path": "docs/assets/dragon-paper-baselines/reseam_shared/uv.png",
+      "sha256": "8cf0dd98df37ad6d2731bdbad7f88d59a12ad9038bc2289e515ebd9328a9be6e"
+    },
+    {
+      "path": "docs/assets/dragon-paper-baselines/reseam_unshared/color.png",
+      "sha256": "d80e81b78f28b5f3c7c395223a3db747ec8674594ec46c14e9809427fafbe6bd"
+    },
+    {
+      "path": "docs/assets/dragon-paper-baselines/reseam_unshared/uv.png",
+      "sha256": "1139beacfd6349f6e707eadc55b52fab02651d71d49d72ca8b766347451c65f0"
+    },
+    {
+      "path": "docs/assets/dragon-paper-baselines/xatlas/front.png",
+      "sha256": "353dec879d061ec3948ffbbcc593af756b61a9496db214d763585ed46432fc58"
+    },
+    {
+      "path": "docs/assets/dragon-paper-baselines/xatlas/uv.png",
+      "sha256": "fe647c1fc9fe0313865192a4437291177c9956671b2023c782ac361bc220b085"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "flatten_anything.png",
+      "sha256": "2a26a21a69daec78ed5f339feaef6b9992e7527dd12561ab4a7b9c440e9ac885",
+      "size": [
+        1800,
+        1520
+      ]
+    },
+    {
+      "path": "optcuts.png",
+      "sha256": "8f7ff3cff4fe06a2d3838d98b1a5fcf4a62d8772b633caed14018dcd5fbe757b",
+      "size": [
+        1800,
+        1520
+      ]
+    },
+    {
+      "path": "xatlas.png",
+      "sha256": "6419b56f516616f4c839cf1aa5495e060370179c4bb83cb19b2c564153ff2fc7",
+      "size": [
+        1800,
+        1520
+      ]
+    },
+    {
+      "path": "blender_smart.png",
+      "sha256": "380296fe2533163bc0b2238bfcc6cfbdefbbddc7c644727ea254c772f1a0ebf2",
+      "size": [
+        1800,
+        1520
+      ]
+    },
+    {
+      "path": "partuv.png",
+      "sha256": "be82db11d7e959a4c67e3db566f8c6db5df3471a2814417bdf568ac2476625d7",
+      "size": [
+        1800,
+        1520
+      ]
+    },
+    {
+      "path": "meshquery_project.png",
+      "sha256": "4e32d59c050a4f323a5f474821e545e421ff4ee39fc7a5b1ee887c19c7311ca0",
+      "size": [
+        1800,
+        1520
+      ]
+    },
+    {
+      "path": "reseam_shared.png",
+      "sha256": "aa0f7e920a293aecdbd1a2fab3b3c0ee6846de05750fd47ed490bf99ba19669c",
+      "size": [
+        1800,
+        1520
+      ]
+    },
+    {
+      "path": "reseam_unshared.png",
+      "sha256": "3fcbe67b2a49e07709a90e501e891364329b6b6e4a95ee993a9445c7f96e9cff",
+      "size": [
+        1800,
+        1520
+      ]
+    },
+    {
+      "path": "baseline-methods-overview.png",
+      "sha256": "cc40cf8c10e7864b6faaea0bb03e3fcaff0bbb876c100a3bf16c1e213cba7699",
+      "size": [
+        3776,
+        1890
+      ]
+    }
+  ],
+  "methods": [
+    "flatten_anything",
+    "optcuts",
+    "xatlas",
+    "blender_smart",
+    "partuv",
+    "meshquery_project",
+    "reseam_shared",
+    "reseam_unshared"
+  ],
+  "text_width_checks": "PASS",
+  "visual_review": {
+    "status": "PASS",
+    "overview_all_eight": "reviewed for layout, image aspect ratio and status presentation",
+    "detailed_cards": [
+      "reseam_shared",
+      "flatten_anything",
+      "meshquery_project"
+    ],
+    "text_width_assertions": "PASS",
+    "scope": "overview all eight; three standalone cards inspected at detail scale"
+  },
+  "new_geometry_or_bakes": false,
+  "verification": {
+    "inputs_hashed": 18,
+    "pngs_decoded_and_hashed": 9,
+    "frozen_baseline_files_unchanged": 117,
+    "local_links_checked": 52,
+    "metric_and_status_cases": 8,
+    "metric_fields": [
+      "charts",
+      "tiles",
+      "actual_shared_surface_fraction",
+      "material_valid",
+      "seams_valid",
+      "render_valid"
+    ],
+    "metrics": [
+      {
+        "method": "flatten_anything",
+        "charts": 80,
+        "tiles": null,
+        "actual_shared_surface_fraction": null,
+        "material_valid": null,
+        "seams_valid": null,
+        "render_valid": null
+      },
+      {
+        "method": "optcuts",
+        "charts": 80,
+        "tiles": 80,
+        "actual_shared_surface_fraction": 0.0,
+        "material_valid": true,
+        "seams_valid": true,
+        "render_valid": true
+      },
+      {
+        "method": "xatlas",
+        "charts": 643,
+        "tiles": null,
+        "actual_shared_surface_fraction": null,
+        "material_valid": null,
+        "seams_valid": null,
+        "render_valid": null
+      },
+      {
+        "method": "blender_smart",
+        "charts": 931,
+        "tiles": 931,
+        "actual_shared_surface_fraction": 0.0,
+        "material_valid": false,
+        "seams_valid": false,
+        "render_valid": true
+      },
+      {
+        "method": "partuv",
+        "charts": 1115,
+        "tiles": 1115,
+        "actual_shared_surface_fraction": 0.0,
+        "material_valid": false,
+        "seams_valid": false,
+        "render_valid": true
+      },
+      {
+        "method": "meshquery_project",
+        "charts": 80,
+        "tiles": 80,
+        "actual_shared_surface_fraction": 0.0,
+        "material_valid": true,
+        "seams_valid": true,
+        "render_valid": true
+      },
+      {
+        "method": "reseam_shared",
+        "charts": 80,
+        "tiles": 40,
+        "actual_shared_surface_fraction": 1.0,
+        "material_valid": true,
+        "seams_valid": true,
+        "render_valid": false
+      },
+      {
+        "method": "reseam_unshared",
+        "charts": 80,
+        "tiles": 80,
+        "actual_shared_surface_fraction": 0.0,
+        "material_valid": false,
+        "seams_valid": true,
+        "render_valid": false
+      }
+    ],
+    "intro_and_card_index_have_no_tables": true,
+    "generator_sha256": "cae40b1f5b3550da993882bce05aac7647b4a83a0c40fd6e4e3687c2a83c821f"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\optcuts\\128\\pack_17\\snapshot\\snapshot.json",
+  "state_hash": "e6521d051a154794376c559f6870ae4b3f12fa763f79a753041335344116db3d",
+  "asset_id": "39b42e9b723383da8c78a904a91505fa20584b0b9824ac1619609672507f5185",
+  "status": "OK",
+  "execution_success": true,
+  "geometry_passed": true,
+  "hard_geometry_passed": true,
+  "final_quality_passed": null,
+  "requires_rebake": true,
+  "packing_backend": "blender_concave",
+  "report": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\optcuts\\128\\pack_17\\geometry.json",
+  "tool": "uv.pack",
+  "wall_seconds": 1.8440000000409782,
+  "output": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\optcuts\\128\\pack_17"
+}

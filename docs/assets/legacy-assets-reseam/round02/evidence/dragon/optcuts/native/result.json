@@ -1,0 +1,30 @@
+{
+  "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\optcuts\\native\\snapshot\\snapshot.json",
+  "state_hash": "5322b15dbfda95a4b31f3537fff197d47e234e59458cde775abb0cb86239085e",
+  "asset_id": "2efdd0a9704a7243fcd375606e4d0d44f8bec6a991b86df5640e2b0a32414023",
+  "method": "optcuts",
+  "settings": {
+    "seed": 0,
+    "input_uv_omitted": true,
+    "automatic_geometry_repair": false,
+    "lambda": 0.999,
+    "distortion_bound": 4.1,
+    "binary_sha256": "29e6ec810d697919cc788aacdeeb5c7c597c744008fb91d202c7ddafeb5087a2",
+    "geometry_mapping": "existing original-face/corner importer; ambiguous identity rejects"
+  },
+  "seconds": 28.125,
+  "faces": 2000,
+  "chart_count": 9,
+  "input_geometry_sha256": "e49b3d90a8b2fa001275024605b83cbf2c53e72a27adc8b3b3e37d8749847e7b",
+  "geometry_unchanged": true,
+  "sharing_groups": 0,
+  "quality_accepted": null,
+  "python": "3.11.15 (main, Mar 24 2026, 22:57:51) [MSC v.1944 64 bit (AMD64)]",
+  "baseline": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\optcuts\\native\\baseline.json",
+  "execution_success": true,
+  "status": "OK",
+  "requires_rebake": true,
+  "tool": "uv.baseline",
+  "wall_seconds": 29.06299999996554,
+  "output": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\optcuts\\native"
+}

@@ -1,0 +1,12 @@
+{
+  "workflow": "OptCuts initial seams, Agent retained topology-separated charts and stacked compatible mirror pairs, then packed and rebaked",
+  "true_chart_merge": false,
+  "charts": 80,
+  "accepted_mirror_groups": 37,
+  "independent_tiles": 43,
+  "actual_shared_surface_fraction": 0.6704818409335321,
+  "previous_delivery_charts": 80,
+  "previous_delivery_tiles": 40,
+  "selected_production_delivery": "docs/assets/dragon-midplane-cleanup/dragon.glb",
+  "reason": "New simplified workflow exercised successfully but restores only 37/40 groups; old delivery retained. Existing 2048 and current 256 coverage/image metrics are not ranked together."
+}

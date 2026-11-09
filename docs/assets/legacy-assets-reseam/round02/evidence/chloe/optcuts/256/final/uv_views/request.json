@@ -1,0 +1,26 @@
+{
+  "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\optcuts\\256\\pack_43\\snapshot\\snapshot.json",
+  "size": 768,
+  "mode": "groups",
+  "uv_labels": "owners",
+  "annotate": false,
+  "seams": false,
+  "cameras": [
+    {
+      "name": "front",
+      "azimuth": 0,
+      "elevation": 0
+    },
+    {
+      "name": "oblique",
+      "azimuth": 35,
+      "elevation": 15
+    },
+    {
+      "name": "back",
+      "azimuth": 180,
+      "elevation": 0
+    }
+  ],
+  "timeout_seconds": 300.0
+}

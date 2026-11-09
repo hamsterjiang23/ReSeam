@@ -1,0 +1,20 @@
+{
+  "method": "optcuts",
+  "settings": {
+    "seed": 0,
+    "input_uv_omitted": true,
+    "automatic_geometry_repair": false,
+    "lambda": 0.999,
+    "distortion_bound": 4.1,
+    "binary_sha256": "29e6ec810d697919cc788aacdeeb5c7c597c744008fb91d202c7ddafeb5087a2",
+    "geometry_mapping": "existing original-face/corner importer; ambiguous identity rejects"
+  },
+  "seconds": 14.422000000020489,
+  "faces": 450,
+  "chart_count": 3,
+  "input_geometry_sha256": "6165ad0829ff6eb1fcafc7d6b487d725f98474dcd5a4ec59ad96d9819d145ea3",
+  "geometry_unchanged": true,
+  "sharing_groups": 0,
+  "quality_accepted": null,
+  "python": "3.11.15 (main, Mar 24 2026, 22:57:51) [MSC v.1944 64 bit (AMD64)]"
+}

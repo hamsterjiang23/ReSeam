@@ -1,0 +1,32 @@
+{
+  "status": "REJECTED",
+  "execution_success": true,
+  "scope": "basecolor_reuse",
+  "quality_accepted": false,
+  "full_pbr_passed": false,
+  "geometry_valid": true,
+  "material_valid": false,
+  "render_valid": false,
+  "seams_valid": true,
+  "validation": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\mirror_shared_final\\128\\quality\\validation.json",
+  "payload_bytes": 87380,
+  "geometry_profile": {
+    "resolution": 128,
+    "gap_pixels": 4.0,
+    "border_pixels": 4.0,
+    "correspondence_fraction": 0.08,
+    "normal_angle_degrees": 180.0,
+    "maximum_anisotropy": 2.0,
+    "mean_shape_limit": 0.025,
+    "tail_shape_limit": 0.1,
+    "maximum_density_ratio": 2.0,
+    "quality_constraints": false
+  },
+  "geometry_profile_hash": "96964c7f082ee687a08a7824cb5e3c3de6077a7322d9b292bf5f812ca6584eda",
+  "geometry_policy": "explicit_custom",
+  "strict_geometry_profile_applied": false,
+  "artist_reviewed": false,
+  "tool": "quality.validate",
+  "wall_seconds": 4.780999999959022,
+  "output": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\mirror_shared_final\\128\\quality"
+}

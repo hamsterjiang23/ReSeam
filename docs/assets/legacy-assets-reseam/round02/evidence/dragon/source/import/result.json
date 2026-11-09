@@ -1,0 +1,15 @@
+{
+  "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\source\\import\\snapshot\\snapshot.json",
+  "state_hash": "f0f1fa837341b5dc4f74ecc1d06014e602cca0635ec783f16e923ef179ec1e23",
+  "asset_id": "2efdd0a9704a7243fcd375606e4d0d44f8bec6a991b86df5640e2b0a32414023",
+  "faces": 2000,
+  "vertices": 996,
+  "source_uv_preserved": false,
+  "material_validation": "NOT_RUN",
+  "geometry_passed": null,
+  "status": "OK",
+  "execution_success": true,
+  "tool": "asset.import",
+  "wall_seconds": 1.062999999965541,
+  "output": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\source\\import"
+}

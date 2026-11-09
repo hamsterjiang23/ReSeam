@@ -1,0 +1,15 @@
+{
+  "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\source\\import\\snapshot\\snapshot.json",
+  "state_hash": "bccf7133975883b2e623a2a108e445ba6d26c76ecfb7f8713fe9b40cc56c04d1",
+  "asset_id": "aaa32cc5f2a8dd9934e54ddb20d28be1e56d5f22e38fbe1e22b927d4074f87e6",
+  "faces": 500,
+  "vertices": 252,
+  "source_uv_preserved": false,
+  "material_validation": "NOT_RUN",
+  "geometry_passed": null,
+  "status": "OK",
+  "execution_success": true,
+  "tool": "asset.import",
+  "wall_seconds": 0.9529999999795109,
+  "output": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\source\\import"
+}

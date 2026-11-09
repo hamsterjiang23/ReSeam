@@ -1,0 +1,16 @@
+{
+  "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\mirror_shared_final\\2048\\pack_29\\snapshot\\snapshot.json",
+  "state_hash": "1b9c14c517a8a8e6d59ef4a9b1e6b056aabd3703cf4d785e45e43bd974e58fe6",
+  "asset_id": "20eedfc34bd1958a3745bd43c67a96ffa9c33e07691f3a671c01b20273f31f5d",
+  "status": "OK",
+  "execution_success": true,
+  "geometry_passed": true,
+  "hard_geometry_passed": true,
+  "final_quality_passed": null,
+  "requires_rebake": true,
+  "packing_backend": "blender_concave",
+  "report": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\mirror_shared_final\\2048\\pack_29\\geometry.json",
+  "tool": "uv.pack",
+  "wall_seconds": 4.140999999945052,
+  "output": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\mirror_shared_final\\2048\\pack_29"
+}

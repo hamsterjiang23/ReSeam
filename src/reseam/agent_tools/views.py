@@ -113,7 +113,7 @@ def _annotation_instances(visible_labels: IntArray, face_ids: NDArray[np.int32],
 
 def _frozen_colors(target: "ColorTarget", faces: IntArray, bary: FloatArray,
                    deadline: float) -> tuple[FloatArray, FloatArray]:
-    original = target._source_color(np.einsum("nc,ncd->nd", bary, target.source_uv[faces]))
+    original = target.original_samples(faces, bary)
     frozen = original.copy()
     for face in np.unique(faces):
         if int(face) in target.slaves:
@@ -266,6 +266,12 @@ def render_views(request: dict[str, object], output: Path, deadline: float) -> d
         topology = target_field.record.get("original_topology")
         if isinstance(topology, dict):
             target_inputs[target_field.path.parent / "original_topology.npz"] = str(topology["sha256"])
+        projection = target_field.record.get("source_projection")
+        if isinstance(projection, dict):
+            target_inputs[target_field.path.parent / "projected_source.npz"] = str(projection["lineage_sha256"])
+            if target_field.projected_source is not None:
+                target_field.projected_source.deadline = deadline
+                target_field.projected_source.attach_audit(output / "source_projection", "view.render.target")
     selected = np.asarray(selected_faces(request, snapshot), dtype=np.int64)
     vertices, inverse = np.unique(surface.mesh.faces[selected], return_inverse=True)
     render_mesh = make_mesh(surface.mesh.vertices[vertices], inverse.reshape(-1, 3))
@@ -300,7 +306,21 @@ def render_views(request: dict[str, object], output: Path, deadline: float) -> d
         errors = face_selection(request.get("error_faces", []), len(colors), allow_empty=True)
         face_colors[:] = (160, 178, 190)
         face_colors[errors] = (235, 40, 45)
-    texture_data = _texture(request, snapshot) if mode == "basecolor" and target_field is None else None
+    projected_source = None
+    if (mode == "basecolor" and target_field is None and "texture" not in request
+            and (request.get("source_mode") == "projected_high" or "projected_source" in snapshot.metadata)):
+        from .color_reuse import _source
+        from .projected_source import ProjectedSource
+
+        reference, _, _ = _source(snapshot, allow_projected=True)
+        fraction = request.get("projection_max_fraction")
+        if fraction is not None and type(fraction) not in (int, float):
+            raise ValueError("PROJECTED_SOURCE_POSITIVE_FINITE_MAX_FRACTION_REQUIRED")
+        projected_source = ProjectedSource.from_snapshot(snapshot, reference,
+            None if fraction is None else float(str(fraction)), deadline=deadline)
+        projected_source.attach_audit(output / "source_projection", "view.render")
+    texture_data = (_texture(request, snapshot) if mode == "basecolor" and target_field is None
+                    and projected_source is None else None)
     images: dict[str, str] = {}
     picks: dict[str, str] = {}
     pixel_queries = request.get("pick_pixels", {})
@@ -341,6 +361,8 @@ def render_views(request: dict[str, object], output: Path, deadline: float) -> d
             appearance_views[name] = {"visible_samples": len(error),
                 "mean": float(error.mean()) if len(error) else None,
                 "max": float(error.max()) if len(error) else None}
+        elif projected_source is not None:
+            pixels[visible] = encode_rgba8(projected_source.sample_colors(ids, bary[visible]))[:, :3]
         elif texture_data is not None:
             image, corner_uv, factor, repeat, _ = texture_data
             uv = np.einsum("nk,nkj->nj", bary[visible], corner_uv[ids])
@@ -453,11 +475,15 @@ def render_views(request: dict[str, object], output: Path, deadline: float) -> d
             "policy": target_field.record.get("policy"), "input_sha256": {str(p): h for p, h in target_inputs.items()},
             "current_atlas_uv_used_for_signal": False, "candidate_bake_read": False}
         record["source"] = {"path": str(snapshot.metadata["reference_glb"]),
-                            "sha256": target_field.record["source_sha256"], "uv": "original_source_face_corner_uv"}
+                            "sha256": target_field.record["source_sha256"], "mode": target_field.source_mode}
+        if target_field.projected_source is not None:
+            record["source_projection"] = target_field.projected_source.save_audit()
         if require_snapshot(request).state_hash != snapshot.state_hash or any(
             file_hash(path) != digest for path, digest in target_inputs.items()
         ):
             raise ValueError("FROZEN_TARGET_VIEW_INPUT_CHANGED")
+    if projected_source is not None:
+        record["source"] = {"mode": "projected_high", "projection": projected_source.save_audit()}
     write_json(output / "views.json", record)
     return {"images": images, "face_rasters": picks, "state_hash": snapshot.state_hash,
             "picked_faces": picked_faces,

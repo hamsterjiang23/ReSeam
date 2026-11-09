@@ -36,8 +36,9 @@ def run_tool(name: str, request_path: Path, output: Path) -> dict[str, object]:
     package = Path(__file__).resolve().parents[1]
     sources = sorted(package.rglob("*.py"))
     scripts = package.parents[1] / "scripts"
-    sources.extend(p for p in (scripts / "bake_variant_worker.py", scripts / "agent_asset_worker.py",
-                              scripts / "agent_unwrap_worker.py", scripts / "agent_pack_worker.py") if p.is_file())
+    sources.extend(p for p in (scripts / "bake_variant_worker.py", scripts / "agent_asset_worker.py", scripts / "agent_fbx_uv.py",
+                              scripts / "agent_unwrap_worker.py", scripts / "agent_pack_worker.py",
+                              scripts / "artist_render_worker.py") if p.is_file())
     baseline_root = package.parents[1] / "baseline"
     sources.extend(sorted(baseline_root.glob("*.py")))
     sources.extend(sorted((baseline_root / "adapters").glob("*.py")))

@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "cases": 9,
+  "metrics": 69,
+  "frozen_benchmark_files_unchanged": 117,
+  "snapshot_and_array_hashes_checked": 18,
+  "recorded_code_hashes_checked": 4,
+  "ao_histograms_independently_recomputed": true,
+  "euler_fractions_independently_recomputed": true,
+  "shared_unshared_geometry_metric_invariance": true,
+  "quality_states_preserved": true,
+  "csv_rows": 70,
+  "csv_columns": 11,
+  "full_pytest": "786 passed in 73.94s",
+  "ruff": "PASS: src/reseam tests scripts and both new baseline evaluator modules",
+  "basedpyright": "PASS: 0 errors, 0 warnings, 0 notes (new modules, table builder and test)",
+  "independent_review": "CLEAN: paper_metrics_review",
+  "missing_values": "N/A cuts, absent bakes, and unavailable historical costs remain null",
+  "supplement_tool_seconds": 110.14000000001397
+}

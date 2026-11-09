@@ -1,0 +1,8 @@
+[
+  "E:\\ReSem\\.venv\\Scripts\\python.exe",
+  "-m",
+  "reseam.agent_tools.worker",
+  "uv.pack",
+  "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\optcuts\\1024\\pack_43",
+  "300.0"
+]

@@ -1,0 +1,15 @@
+{
+  "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\controls\\unshare_f62ae92119\\snapshot\\snapshot.json",
+  "backend": "blender_concave",
+  "density_normalize": false,
+  "packing_seed": 29,
+  "profile": {
+    "quality_constraints": false,
+    "normal_angle_degrees": 180.0,
+    "correspondence_fraction": 0.08,
+    "resolution": 2048,
+    "gap_pixels": 8,
+    "border_pixels": 8
+  },
+  "timeout_seconds": 300.0
+}

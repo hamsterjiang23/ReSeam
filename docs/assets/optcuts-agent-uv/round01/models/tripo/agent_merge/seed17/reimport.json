@@ -1,0 +1,25 @@
+{
+  "asset": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\tripo\\evaluate\\agent_merge\\seed17\\export\\asset.glb",
+  "snapshot": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\tripo\\evaluate\\agent_merge\\seed17\\pack\\snapshot\\snapshot.json",
+  "state_hash": "a364cbaf6b102f8272350314e9b3243792c1e62208b19f35c085fd939c1c5487",
+  "asset_sha256": "fec7db635aaa940fcee36da478901e12a70ecf8c7a25859eb6a320f815eb1089",
+  "geometry_hash": "38fc28ef73d985474d0c0cc02295d587a86f4e430a0be946a6b2eaba3dbb2a20",
+  "faces": 424,
+  "positions_max_abs_error": 0.0,
+  "corner_uv0_max_abs_error": 2.9721913485936113e-08,
+  "geometry_passed": true,
+  "corner_uv0_passed": true,
+  "attributes": [
+    "POSITION",
+    "TEXCOORD_0"
+  ],
+  "extra_uv": [],
+  "required_texcoord_1": false,
+  "embedded_basecolor_size": [
+    256,
+    256
+  ],
+  "embedded_basecolor_pixel_equal_to_mip0": true,
+  "passed": true,
+  "scope": "raw GLB accessor bounds, ordered indexed face corners, float32 coordinates and UVs, hash-bound auxiliary UV sidecar, embedded BaseColor pixels; no engine/GPU/Shader test"
+}

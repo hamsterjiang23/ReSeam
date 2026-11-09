@@ -1,0 +1,7 @@
+{
+  "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\mirror_unshared_final\\128\\pack_29\\snapshot\\snapshot.json",
+  "bake": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\mirror_unshared_final\\128\\bake\\bake.json",
+  "validation": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\mirror_unshared_final\\128\\quality\\validation.json",
+  "mode": "diagnostic",
+  "timeout_seconds": 300.0
+}

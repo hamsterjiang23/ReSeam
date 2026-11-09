@@ -1,0 +1,31 @@
+{
+  "model": "E:\\ReSem\\output\\dragon-wholebody-refine\\fewer-tiles-38\\model.glb",
+  "output": "E:\\ReSem\\output\\artist-tools\\dragon-38\\render",
+  "size": 512,
+  "lights": [
+    "studio",
+    "side"
+  ],
+  "distances": [
+    1.0,
+    2.0
+  ],
+  "cameras": [
+    [
+      "front",
+      0.0,
+      0.0
+    ],
+    [
+      "oblique",
+      35.0,
+      15.0
+    ]
+  ],
+  "expected_geometry": "E:\\ReSem\\output\\artist-tools\\dragon-38\\render\\expected_geometry.npz",
+  "channels": [
+    "material",
+    "basecolor",
+    "normal"
+  ]
+}

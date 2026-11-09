@@ -1,0 +1,1231 @@
+{
+  "calls": [
+    {
+      "asset": "tripo",
+      "label": "evaluate/optcuts/seed17/quality",
+      "tool": "quality.validate",
+      "seconds": 45.20299999997951,
+      "request": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\tripo\\requests\\evaluate__optcuts__seed17__quality.json",
+      "result": {
+        "status": "REJECTED",
+        "execution_success": true,
+        "scope": "basecolor_reuse",
+        "quality_accepted": false,
+        "full_pbr_passed": false,
+        "geometry_valid": true,
+        "material_valid": false,
+        "render_valid": false,
+        "seams_valid": false,
+        "validation": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\tripo\\evaluate\\optcuts\\seed17\\quality\\validation.json",
+        "payload_bytes": 349524,
+        "geometry_profile": {
+          "resolution": 256,
+          "gap_pixels": 4.0,
+          "border_pixels": 4.0,
+          "correspondence_fraction": 0.08,
+          "normal_angle_degrees": 180.0,
+          "maximum_anisotropy": 2.0,
+          "mean_shape_limit": 0.025,
+          "tail_shape_limit": 0.1,
+          "maximum_density_ratio": 2.0,
+          "quality_constraints": false
+        },
+        "geometry_profile_hash": "97bc17be7b69e50c697e654f43a32b1881cd6dea4b82ea5a38c521a5bc914a9d",
+        "geometry_policy": "explicit_custom",
+        "strict_geometry_profile_applied": false,
+        "artist_reviewed": false,
+        "tool": "quality.validate",
+        "wall_seconds": 45.10900000005495,
+        "output": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\tripo\\evaluate\\optcuts\\seed17\\quality"
+      }
+    },
+    {
+      "asset": "tripo",
+      "label": "evaluate/optcuts/seed29/quality",
+      "tool": "quality.validate",
+      "seconds": 40.813000000081956,
+      "request": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\tripo\\requests\\evaluate__optcuts__seed29__quality.json",
+      "result": {
+        "status": "REJECTED",
+        "execution_success": true,
+        "scope": "basecolor_reuse",
+        "quality_accepted": false,
+        "full_pbr_passed": false,
+        "geometry_valid": true,
+        "material_valid": false,
+        "render_valid": false,
+        "seams_valid": false,
+        "validation": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\tripo\\evaluate\\optcuts\\seed29\\quality\\validation.json",
+        "payload_bytes": 349524,
+        "geometry_profile": {
+          "resolution": 256,
+          "gap_pixels": 4.0,
+          "border_pixels": 4.0,
+          "correspondence_fraction": 0.08,
+          "normal_angle_degrees": 180.0,
+          "maximum_anisotropy": 2.0,
+          "mean_shape_limit": 0.025,
+          "tail_shape_limit": 0.1,
+          "maximum_density_ratio": 2.0,
+          "quality_constraints": false
+        },
+        "geometry_profile_hash": "97bc17be7b69e50c697e654f43a32b1881cd6dea4b82ea5a38c521a5bc914a9d",
+        "geometry_policy": "explicit_custom",
+        "strict_geometry_profile_applied": false,
+        "artist_reviewed": false,
+        "tool": "quality.validate",
+        "wall_seconds": 40.71799999999348,
+        "output": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\tripo\\evaluate\\optcuts\\seed29\\quality"
+      }
+    },
+    {
+      "asset": "tripo",
+      "label": "evaluate/optcuts/seed43/quality",
+      "tool": "quality.validate",
+      "seconds": 39.046999999904074,
+      "request": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\tripo\\requests\\evaluate__optcuts__seed43__quality.json",
+      "result": {
+        "status": "REJECTED",
+        "execution_success": true,
+        "scope": "basecolor_reuse",
+        "quality_accepted": false,
+        "full_pbr_passed": false,
+        "geometry_valid": true,
+        "material_valid": false,
+        "render_valid": false,
+        "seams_valid": false,
+        "validation": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\tripo\\evaluate\\optcuts\\seed43\\quality\\validation.json",
+        "payload_bytes": 349524,
+        "geometry_profile": {
+          "resolution": 256,
+          "gap_pixels": 4.0,
+          "border_pixels": 4.0,
+          "correspondence_fraction": 0.08,
+          "normal_angle_degrees": 180.0,
+          "maximum_anisotropy": 2.0,
+          "mean_shape_limit": 0.025,
+          "tail_shape_limit": 0.1,
+          "maximum_density_ratio": 2.0,
+          "quality_constraints": false
+        },
+        "geometry_profile_hash": "97bc17be7b69e50c697e654f43a32b1881cd6dea4b82ea5a38c521a5bc914a9d",
+        "geometry_policy": "explicit_custom",
+        "strict_geometry_profile_applied": false,
+        "artist_reviewed": false,
+        "tool": "quality.validate",
+        "wall_seconds": 38.96899999992456,
+        "output": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\tripo\\evaluate\\optcuts\\seed43\\quality"
+      }
+    },
+    {
+      "asset": "tripo",
+      "label": "evaluate/agent_merge/seed17/quality",
+      "tool": "quality.validate",
+      "seconds": 40.35900000005495,
+      "request": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\tripo\\requests\\evaluate__agent_merge__seed17__quality.json",
+      "result": {
+        "status": "REJECTED",
+        "execution_success": true,
+        "scope": "basecolor_reuse",
+        "quality_accepted": false,
+        "full_pbr_passed": false,
+        "geometry_valid": true,
+        "material_valid": false,
+        "render_valid": false,
+        "seams_valid": false,
+        "validation": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\tripo\\evaluate\\agent_merge\\seed17\\quality\\validation.json",
+        "payload_bytes": 349524,
+        "geometry_profile": {
+          "resolution": 256,
+          "gap_pixels": 4.0,
+          "border_pixels": 4.0,
+          "correspondence_fraction": 0.08,
+          "normal_angle_degrees": 180.0,
+          "maximum_anisotropy": 2.0,
+          "mean_shape_limit": 0.025,
+          "tail_shape_limit": 0.1,
+          "maximum_density_ratio": 2.0,
+          "quality_constraints": false
+        },
+        "geometry_profile_hash": "97bc17be7b69e50c697e654f43a32b1881cd6dea4b82ea5a38c521a5bc914a9d",
+        "geometry_policy": "explicit_custom",
+        "strict_geometry_profile_applied": false,
+        "artist_reviewed": false,
+        "tool": "quality.validate",
+        "wall_seconds": 40.29700000002049,
+        "output": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\tripo\\evaluate\\agent_merge\\seed17\\quality"
+      }
+    },
+    {
+      "asset": "tripo",
+      "label": "evaluate/agent_merge/seed29/quality",
+      "tool": "quality.validate",
+      "seconds": 42.686999999918044,
+      "request": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\tripo\\requests\\evaluate__agent_merge__seed29__quality.json",
+      "result": {
+        "status": "REJECTED",
+        "execution_success": true,
+        "scope": "basecolor_reuse",
+        "quality_accepted": false,
+        "full_pbr_passed": false,
+        "geometry_valid": true,
+        "material_valid": false,
+        "render_valid": false,
+        "seams_valid": false,
+        "validation": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\tripo\\evaluate\\agent_merge\\seed29\\quality\\validation.json",
+        "payload_bytes": 349524,
+        "geometry_profile": {
+          "resolution": 256,
+          "gap_pixels": 4.0,
+          "border_pixels": 4.0,
+          "correspondence_fraction": 0.08,
+          "normal_angle_degrees": 180.0,
+          "maximum_anisotropy": 2.0,
+          "mean_shape_limit": 0.025,
+          "tail_shape_limit": 0.1,
+          "maximum_density_ratio": 2.0,
+          "quality_constraints": false
+        },
+        "geometry_profile_hash": "97bc17be7b69e50c697e654f43a32b1881cd6dea4b82ea5a38c521a5bc914a9d",
+        "geometry_policy": "explicit_custom",
+        "strict_geometry_profile_applied": false,
+        "artist_reviewed": false,
+        "tool": "quality.validate",
+        "wall_seconds": 42.625,
+        "output": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\tripo\\evaluate\\agent_merge\\seed29\\quality"
+      }
+    },
+    {
+      "asset": "tripo",
+      "label": "evaluate/agent_merge/seed43/quality",
+      "tool": "quality.validate",
+      "seconds": 44.0,
+      "request": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\tripo\\requests\\evaluate__agent_merge__seed43__quality.json",
+      "result": {
+        "status": "REJECTED",
+        "execution_success": true,
+        "scope": "basecolor_reuse",
+        "quality_accepted": false,
+        "full_pbr_passed": false,
+        "geometry_valid": true,
+        "material_valid": false,
+        "render_valid": false,
+        "seams_valid": false,
+        "validation": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\tripo\\evaluate\\agent_merge\\seed43\\quality\\validation.json",
+        "payload_bytes": 349524,
+        "geometry_profile": {
+          "resolution": 256,
+          "gap_pixels": 4.0,
+          "border_pixels": 4.0,
+          "correspondence_fraction": 0.08,
+          "normal_angle_degrees": 180.0,
+          "maximum_anisotropy": 2.0,
+          "mean_shape_limit": 0.025,
+          "tail_shape_limit": 0.1,
+          "maximum_density_ratio": 2.0,
+          "quality_constraints": false
+        },
+        "geometry_profile_hash": "97bc17be7b69e50c697e654f43a32b1881cd6dea4b82ea5a38c521a5bc914a9d",
+        "geometry_policy": "explicit_custom",
+        "strict_geometry_profile_applied": false,
+        "artist_reviewed": false,
+        "tool": "quality.validate",
+        "wall_seconds": 43.936999999918044,
+        "output": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\tripo\\evaluate\\agent_merge\\seed43\\quality"
+      }
+    },
+    {
+      "asset": "dragon",
+      "label": "organize/group0_exact",
+      "tool": "reuse.check_pair",
+      "seconds": 1.077999999979511,
+      "request": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\requests\\organize__group0_exact.json",
+      "result": {
+        "status": "REJECTED",
+        "execution_success": true,
+        "geometry_passed": false,
+        "final_quality_passed": null,
+        "report": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group0_exact\\check.json",
+        "reason": "EXACT_TOPOLOGY_NOT_MATCHED",
+        "tool": "reuse.check_pair",
+        "wall_seconds": 1.015999999945052,
+        "output": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group0_exact"
+      }
+    },
+    {
+      "asset": "dragon",
+      "label": "organize/group1_exact",
+      "tool": "reuse.check_pair",
+      "seconds": 1.0310000000754371,
+      "request": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\requests\\organize__group1_exact.json",
+      "result": {
+        "status": "REJECTED",
+        "execution_success": true,
+        "geometry_passed": false,
+        "final_quality_passed": null,
+        "report": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group1_exact\\check.json",
+        "reason": "EXACT_TOPOLOGY_NOT_MATCHED",
+        "tool": "reuse.check_pair",
+        "wall_seconds": 0.9530000000959262,
+        "output": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group1_exact"
+      }
+    },
+    {
+      "asset": "dragon",
+      "label": "organize/group2_exact",
+      "tool": "reuse.check_pair",
+      "seconds": 1.0309999999590218,
+      "request": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\requests\\organize__group2_exact.json",
+      "result": {
+        "status": "REJECTED",
+        "execution_success": true,
+        "geometry_passed": false,
+        "final_quality_passed": null,
+        "report": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group2_exact\\check.json",
+        "reason": "EXACT_TOPOLOGY_NOT_MATCHED",
+        "tool": "reuse.check_pair",
+        "wall_seconds": 0.9529999999795109,
+        "output": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group2_exact"
+      }
+    },
+    {
+      "asset": "dragon",
+      "label": "organize/group3_exact",
+      "tool": "reuse.check_pair",
+      "seconds": 1.1089999999385327,
+      "request": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\requests\\organize__group3_exact.json",
+      "result": {
+        "status": "REJECTED",
+        "execution_success": true,
+        "geometry_passed": false,
+        "final_quality_passed": null,
+        "report": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group3_exact\\check.json",
+        "reason": "EXACT_TOPOLOGY_NOT_MATCHED",
+        "tool": "reuse.check_pair",
+        "wall_seconds": 1.0309999999590218,
+        "output": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group3_exact"
+      }
+    },
+    {
+      "asset": "dragon",
+      "label": "organize/group4_exact",
+      "tool": "reuse.check_pair",
+      "seconds": 1.047000000020489,
+      "request": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\requests\\organize__group4_exact.json",
+      "result": {
+        "status": "REJECTED",
+        "execution_success": true,
+        "geometry_passed": false,
+        "final_quality_passed": null,
+        "report": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group4_exact\\check.json",
+        "reason": "EXACT_TOPOLOGY_NOT_MATCHED",
+        "tool": "reuse.check_pair",
+        "wall_seconds": 0.9679999999934807,
+        "output": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group4_exact"
+      }
+    },
+    {
+      "asset": "dragon",
+      "label": "organize/group5_exact",
+      "tool": "reuse.check_pair",
+      "seconds": 1.015999999945052,
+      "request": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\requests\\organize__group5_exact.json",
+      "result": {
+        "status": "REJECTED",
+        "execution_success": true,
+        "geometry_passed": false,
+        "final_quality_passed": null,
+        "report": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group5_exact\\check.json",
+        "reason": "EXACT_TOPOLOGY_NOT_MATCHED",
+        "tool": "reuse.check_pair",
+        "wall_seconds": 0.9529999999795109,
+        "output": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group5_exact"
+      }
+    },
+    {
+      "asset": "dragon",
+      "label": "organize/group6_exact",
+      "tool": "reuse.check_pair",
+      "seconds": 1.0,
+      "request": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\requests\\organize__group6_exact.json",
+      "result": {
+        "status": "REJECTED",
+        "execution_success": true,
+        "geometry_passed": false,
+        "final_quality_passed": null,
+        "report": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group6_exact\\check.json",
+        "reason": "EXACT_TOPOLOGY_NOT_MATCHED",
+        "tool": "reuse.check_pair",
+        "wall_seconds": 0.9220000000204891,
+        "output": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group6_exact"
+      }
+    },
+    {
+      "asset": "dragon",
+      "label": "organize/group7_exact",
+      "tool": "reuse.check_pair",
+      "seconds": 1.062999999965541,
+      "request": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\requests\\organize__group7_exact.json",
+      "result": {
+        "status": "REJECTED",
+        "execution_success": true,
+        "geometry_passed": false,
+        "final_quality_passed": null,
+        "report": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group7_exact\\check.json",
+        "reason": "EXACT_TOPOLOGY_NOT_MATCHED",
+        "tool": "reuse.check_pair",
+        "wall_seconds": 0.9849999999860302,
+        "output": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group7_exact"
+      }
+    },
+    {
+      "asset": "dragon",
+      "label": "organize/group8_exact",
+      "tool": "reuse.check_pair",
+      "seconds": 1.2189999999245629,
+      "request": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\requests\\organize__group8_exact.json",
+      "result": {
+        "status": "REJECTED",
+        "execution_success": true,
+        "geometry_passed": false,
+        "final_quality_passed": null,
+        "report": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group8_exact\\check.json",
+        "reason": "EXACT_TOPOLOGY_NOT_MATCHED",
+        "tool": "reuse.check_pair",
+        "wall_seconds": 1.140999999945052,
+        "output": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group8_exact"
+      }
+    },
+    {
+      "asset": "dragon",
+      "label": "organize/group9_exact",
+      "tool": "reuse.check_pair",
+      "seconds": 1.0929999999934807,
+      "request": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\requests\\organize__group9_exact.json",
+      "result": {
+        "status": "REJECTED",
+        "execution_success": true,
+        "geometry_passed": false,
+        "final_quality_passed": null,
+        "report": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group9_exact\\check.json",
+        "reason": "EXACT_TOPOLOGY_NOT_MATCHED",
+        "tool": "reuse.check_pair",
+        "wall_seconds": 1.0150000000139698,
+        "output": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group9_exact"
+      }
+    },
+    {
+      "asset": "dragon",
+      "label": "organize/group10_exact",
+      "tool": "reuse.check_pair",
+      "seconds": 1.187000000034459,
+      "request": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\requests\\organize__group10_exact.json",
+      "result": {
+        "status": "REJECTED",
+        "execution_success": true,
+        "geometry_passed": false,
+        "final_quality_passed": null,
+        "report": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group10_exact\\check.json",
+        "reason": "EXACT_TOPOLOGY_NOT_MATCHED",
+        "tool": "reuse.check_pair",
+        "wall_seconds": 1.0940000000409782,
+        "output": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group10_exact"
+      }
+    },
+    {
+      "asset": "dragon",
+      "label": "organize/group11_exact",
+      "tool": "reuse.check_pair",
+      "seconds": 1.047000000020489,
+      "request": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\requests\\organize__group11_exact.json",
+      "result": {
+        "status": "REJECTED",
+        "execution_success": true,
+        "geometry_passed": false,
+        "final_quality_passed": null,
+        "report": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group11_exact\\check.json",
+        "reason": "EXACT_TOPOLOGY_NOT_MATCHED",
+        "tool": "reuse.check_pair",
+        "wall_seconds": 0.9849999999860302,
+        "output": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group11_exact"
+      }
+    },
+    {
+      "asset": "dragon",
+      "label": "organize/group12_exact",
+      "tool": "reuse.check_pair",
+      "seconds": 1.0309999999590218,
+      "request": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\requests\\organize__group12_exact.json",
+      "result": {
+        "status": "REJECTED",
+        "execution_success": true,
+        "geometry_passed": false,
+        "final_quality_passed": null,
+        "report": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group12_exact\\check.json",
+        "reason": "EXACT_TOPOLOGY_NOT_MATCHED",
+        "tool": "reuse.check_pair",
+        "wall_seconds": 0.9529999999795109,
+        "output": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group12_exact"
+      }
+    },
+    {
+      "asset": "dragon",
+      "label": "organize/group14_exact",
+      "tool": "reuse.check_pair",
+      "seconds": 1.1099999999860302,
+      "request": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\requests\\organize__group14_exact.json",
+      "result": {
+        "status": "REJECTED",
+        "execution_success": true,
+        "geometry_passed": false,
+        "final_quality_passed": null,
+        "report": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group14_exact\\check.json",
+        "reason": "EXACT_TOPOLOGY_NOT_MATCHED",
+        "tool": "reuse.check_pair",
+        "wall_seconds": 1.0309999999590218,
+        "output": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group14_exact"
+      }
+    },
+    {
+      "asset": "dragon",
+      "label": "organize/group15_exact",
+      "tool": "reuse.check_pair",
+      "seconds": 1.062000000034459,
+      "request": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\requests\\organize__group15_exact.json",
+      "result": {
+        "status": "REJECTED",
+        "execution_success": true,
+        "geometry_passed": false,
+        "final_quality_passed": null,
+        "report": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group15_exact\\check.json",
+        "reason": "EXACT_TOPOLOGY_NOT_MATCHED",
+        "tool": "reuse.check_pair",
+        "wall_seconds": 1.0,
+        "output": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group15_exact"
+      }
+    },
+    {
+      "asset": "dragon",
+      "label": "organize/group16_exact",
+      "tool": "reuse.check_pair",
+      "seconds": 1.1099999999860302,
+      "request": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\requests\\organize__group16_exact.json",
+      "result": {
+        "status": "REJECTED",
+        "execution_success": true,
+        "geometry_passed": false,
+        "final_quality_passed": null,
+        "report": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group16_exact\\check.json",
+        "reason": "EXACT_TOPOLOGY_NOT_MATCHED",
+        "tool": "reuse.check_pair",
+        "wall_seconds": 1.0320000000065193,
+        "output": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group16_exact"
+      }
+    },
+    {
+      "asset": "dragon",
+      "label": "organize/group17_exact",
+      "tool": "reuse.check_pair",
+      "seconds": 1.0940000000409782,
+      "request": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\requests\\organize__group17_exact.json",
+      "result": {
+        "status": "REJECTED",
+        "execution_success": true,
+        "geometry_passed": false,
+        "final_quality_passed": null,
+        "report": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group17_exact\\check.json",
+        "reason": "EXACT_TOPOLOGY_NOT_MATCHED",
+        "tool": "reuse.check_pair",
+        "wall_seconds": 1.0160000000614673,
+        "output": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group17_exact"
+      }
+    },
+    {
+      "asset": "dragon",
+      "label": "organize/group18_exact",
+      "tool": "reuse.check_pair",
+      "seconds": 1.1410000000614673,
+      "request": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\requests\\organize__group18_exact.json",
+      "result": {
+        "status": "REJECTED",
+        "execution_success": true,
+        "geometry_passed": false,
+        "final_quality_passed": null,
+        "report": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group18_exact\\check.json",
+        "reason": "EXACT_TOPOLOGY_NOT_MATCHED",
+        "tool": "reuse.check_pair",
+        "wall_seconds": 1.0630000000819564,
+        "output": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group18_exact"
+      }
+    },
+    {
+      "asset": "dragon",
+      "label": "organize/group19_exact",
+      "tool": "reuse.check_pair",
+      "seconds": 1.187999999965541,
+      "request": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\requests\\organize__group19_exact.json",
+      "result": {
+        "status": "REJECTED",
+        "execution_success": true,
+        "geometry_passed": false,
+        "final_quality_passed": null,
+        "report": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group19_exact\\check.json",
+        "reason": "EXACT_TOPOLOGY_NOT_MATCHED",
+        "tool": "reuse.check_pair",
+        "wall_seconds": 1.125,
+        "output": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group19_exact"
+      }
+    },
+    {
+      "asset": "dragon",
+      "label": "organize/group20_exact",
+      "tool": "reuse.check_pair",
+      "seconds": 1.1410000000614673,
+      "request": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\requests\\organize__group20_exact.json",
+      "result": {
+        "status": "REJECTED",
+        "execution_success": true,
+        "geometry_passed": false,
+        "final_quality_passed": null,
+        "report": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group20_exact\\check.json",
+        "reason": "EXACT_TOPOLOGY_NOT_MATCHED",
+        "tool": "reuse.check_pair",
+        "wall_seconds": 1.0459999999729916,
+        "output": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group20_exact"
+      }
+    },
+    {
+      "asset": "dragon",
+      "label": "organize/group21_exact",
+      "tool": "reuse.check_pair",
+      "seconds": 1.140999999945052,
+      "request": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\requests\\organize__group21_exact.json",
+      "result": {
+        "status": "REJECTED",
+        "execution_success": true,
+        "geometry_passed": false,
+        "final_quality_passed": null,
+        "report": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group21_exact\\check.json",
+        "reason": "EXACT_TOPOLOGY_NOT_MATCHED",
+        "tool": "reuse.check_pair",
+        "wall_seconds": 1.077999999979511,
+        "output": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group21_exact"
+      }
+    },
+    {
+      "asset": "dragon",
+      "label": "organize/group22_exact",
+      "tool": "reuse.check_pair",
+      "seconds": 1.2349999999860302,
+      "request": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\requests\\organize__group22_exact.json",
+      "result": {
+        "status": "REJECTED",
+        "execution_success": true,
+        "geometry_passed": false,
+        "final_quality_passed": null,
+        "report": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group22_exact\\check.json",
+        "reason": "EXACT_TOPOLOGY_NOT_MATCHED",
+        "tool": "reuse.check_pair",
+        "wall_seconds": 1.1570000000065193,
+        "output": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group22_exact"
+      }
+    },
+    {
+      "asset": "dragon",
+      "label": "organize/group23_exact",
+      "tool": "reuse.check_pair",
+      "seconds": 1.25,
+      "request": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\requests\\organize__group23_exact.json",
+      "result": {
+        "status": "REJECTED",
+        "execution_success": true,
+        "geometry_passed": false,
+        "final_quality_passed": null,
+        "report": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group23_exact\\check.json",
+        "reason": "EXACT_TOPOLOGY_NOT_MATCHED",
+        "tool": "reuse.check_pair",
+        "wall_seconds": 1.187000000034459,
+        "output": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group23_exact"
+      }
+    },
+    {
+      "asset": "dragon",
+      "label": "organize/group24_exact",
+      "tool": "reuse.check_pair",
+      "seconds": 1.2349999999860302,
+      "request": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\requests\\organize__group24_exact.json",
+      "result": {
+        "status": "REJECTED",
+        "execution_success": true,
+        "geometry_passed": false,
+        "final_quality_passed": null,
+        "report": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group24_exact\\check.json",
+        "reason": "EXACT_TOPOLOGY_NOT_MATCHED",
+        "tool": "reuse.check_pair",
+        "wall_seconds": 1.172000000020489,
+        "output": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group24_exact"
+      }
+    },
+    {
+      "asset": "dragon",
+      "label": "organize/group25_exact",
+      "tool": "reuse.check_pair",
+      "seconds": 1.2190000000409782,
+      "request": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\requests\\organize__group25_exact.json",
+      "result": {
+        "status": "REJECTED",
+        "execution_success": true,
+        "geometry_passed": false,
+        "final_quality_passed": null,
+        "report": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group25_exact\\check.json",
+        "reason": "EXACT_TOPOLOGY_NOT_MATCHED",
+        "tool": "reuse.check_pair",
+        "wall_seconds": 1.1560000000754371,
+        "output": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group25_exact"
+      }
+    },
+    {
+      "asset": "dragon",
+      "label": "organize/group26_exact",
+      "tool": "reuse.check_pair",
+      "seconds": 1.3589999999385327,
+      "request": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\requests\\organize__group26_exact.json",
+      "result": {
+        "status": "REJECTED",
+        "execution_success": true,
+        "geometry_passed": false,
+        "final_quality_passed": null,
+        "report": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group26_exact\\check.json",
+        "reason": "EXACT_TOPOLOGY_NOT_MATCHED",
+        "tool": "reuse.check_pair",
+        "wall_seconds": 1.2809999999590218,
+        "output": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group26_exact"
+      }
+    },
+    {
+      "asset": "dragon",
+      "label": "organize/group27_exact",
+      "tool": "reuse.check_pair",
+      "seconds": 1.2810000000754371,
+      "request": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\requests\\organize__group27_exact.json",
+      "result": {
+        "status": "REJECTED",
+        "execution_success": true,
+        "geometry_passed": false,
+        "final_quality_passed": null,
+        "report": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group27_exact\\check.json",
+        "reason": "EXACT_TOPOLOGY_NOT_MATCHED",
+        "tool": "reuse.check_pair",
+        "wall_seconds": 1.2190000000409782,
+        "output": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group27_exact"
+      }
+    },
+    {
+      "asset": "dragon",
+      "label": "organize/group28_exact",
+      "tool": "reuse.check_pair",
+      "seconds": 1.3440000000409782,
+      "request": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\requests\\organize__group28_exact.json",
+      "result": {
+        "status": "REJECTED",
+        "execution_success": true,
+        "geometry_passed": false,
+        "final_quality_passed": null,
+        "report": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group28_exact\\check.json",
+        "reason": "EXACT_TOPOLOGY_NOT_MATCHED",
+        "tool": "reuse.check_pair",
+        "wall_seconds": 1.2660000000614673,
+        "output": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group28_exact"
+      }
+    },
+    {
+      "asset": "dragon",
+      "label": "organize/group29_exact",
+      "tool": "reuse.check_pair",
+      "seconds": 1.375,
+      "request": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\requests\\organize__group29_exact.json",
+      "result": {
+        "status": "REJECTED",
+        "execution_success": true,
+        "geometry_passed": false,
+        "final_quality_passed": null,
+        "report": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group29_exact\\check.json",
+        "reason": "EXACT_TOPOLOGY_NOT_MATCHED",
+        "tool": "reuse.check_pair",
+        "wall_seconds": 1.312999999965541,
+        "output": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group29_exact"
+      }
+    },
+    {
+      "asset": "dragon",
+      "label": "organize/group30_exact",
+      "tool": "reuse.check_pair",
+      "seconds": 1.5,
+      "request": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\requests\\organize__group30_exact.json",
+      "result": {
+        "status": "REJECTED",
+        "execution_success": true,
+        "geometry_passed": false,
+        "final_quality_passed": null,
+        "report": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group30_exact\\check.json",
+        "reason": "EXACT_TOPOLOGY_NOT_MATCHED",
+        "tool": "reuse.check_pair",
+        "wall_seconds": 1.4369999999180436,
+        "output": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group30_exact"
+      }
+    },
+    {
+      "asset": "dragon",
+      "label": "organize/group31_exact",
+      "tool": "reuse.check_pair",
+      "seconds": 1.5469999999040738,
+      "request": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\requests\\organize__group31_exact.json",
+      "result": {
+        "status": "REJECTED",
+        "execution_success": true,
+        "geometry_passed": false,
+        "final_quality_passed": null,
+        "report": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group31_exact\\check.json",
+        "reason": "EXACT_TOPOLOGY_NOT_MATCHED",
+        "tool": "reuse.check_pair",
+        "wall_seconds": 1.4689999999245629,
+        "output": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group31_exact"
+      }
+    },
+    {
+      "asset": "dragon",
+      "label": "organize/group32_exact",
+      "tool": "reuse.check_pair",
+      "seconds": 1.6559999999590218,
+      "request": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\requests\\organize__group32_exact.json",
+      "result": {
+        "status": "REJECTED",
+        "execution_success": true,
+        "geometry_passed": false,
+        "final_quality_passed": null,
+        "report": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group32_exact\\check.json",
+        "reason": "EXACT_TOPOLOGY_NOT_MATCHED",
+        "tool": "reuse.check_pair",
+        "wall_seconds": 1.577999999979511,
+        "output": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group32_exact"
+      }
+    },
+    {
+      "asset": "dragon",
+      "label": "organize/group33_exact",
+      "tool": "reuse.check_pair",
+      "seconds": 1.8440000000409782,
+      "request": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\requests\\organize__group33_exact.json",
+      "result": {
+        "status": "REJECTED",
+        "execution_success": true,
+        "geometry_passed": false,
+        "final_quality_passed": null,
+        "report": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group33_exact\\check.json",
+        "reason": "EXACT_TOPOLOGY_NOT_MATCHED",
+        "tool": "reuse.check_pair",
+        "wall_seconds": 1.7810000000754371,
+        "output": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group33_exact"
+      }
+    },
+    {
+      "asset": "dragon",
+      "label": "organize/group34_exact",
+      "tool": "reuse.check_pair",
+      "seconds": 2.015999999945052,
+      "request": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\requests\\organize__group34_exact.json",
+      "result": {
+        "status": "REJECTED",
+        "execution_success": true,
+        "geometry_passed": false,
+        "final_quality_passed": null,
+        "report": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group34_exact\\check.json",
+        "reason": "EXACT_TOPOLOGY_NOT_MATCHED",
+        "tool": "reuse.check_pair",
+        "wall_seconds": 1.952999999979511,
+        "output": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group34_exact"
+      }
+    },
+    {
+      "asset": "dragon",
+      "label": "organize/group35_exact",
+      "tool": "reuse.check_pair",
+      "seconds": 2.297000000020489,
+      "request": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\requests\\organize__group35_exact.json",
+      "result": {
+        "status": "REJECTED",
+        "execution_success": true,
+        "geometry_passed": false,
+        "final_quality_passed": null,
+        "report": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group35_exact\\check.json",
+        "reason": "EXACT_TOPOLOGY_NOT_MATCHED",
+        "tool": "reuse.check_pair",
+        "wall_seconds": 2.219000000040978,
+        "output": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group35_exact"
+      }
+    },
+    {
+      "asset": "dragon",
+      "label": "organize/group36_exact",
+      "tool": "reuse.check_pair",
+      "seconds": 2.327999999979511,
+      "request": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\requests\\organize__group36_exact.json",
+      "result": {
+        "status": "REJECTED",
+        "execution_success": true,
+        "geometry_passed": false,
+        "final_quality_passed": null,
+        "report": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group36_exact\\check.json",
+        "reason": "EXACT_TOPOLOGY_NOT_MATCHED",
+        "tool": "reuse.check_pair",
+        "wall_seconds": 2.25,
+        "output": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group36_exact"
+      }
+    },
+    {
+      "asset": "dragon",
+      "label": "organize/group37_exact",
+      "tool": "reuse.check_pair",
+      "seconds": 4.047000000020489,
+      "request": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\requests\\organize__group37_exact.json",
+      "result": {
+        "status": "REJECTED",
+        "execution_success": true,
+        "geometry_passed": false,
+        "final_quality_passed": null,
+        "report": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group37_exact\\check.json",
+        "reason": "EXACT_TOPOLOGY_NOT_MATCHED",
+        "tool": "reuse.check_pair",
+        "wall_seconds": 3.968999999924563,
+        "output": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group37_exact"
+      }
+    },
+    {
+      "asset": "dragon",
+      "label": "organize/group37_topology",
+      "tool": "reuse.check_pair",
+      "seconds": 6.781000000075437,
+      "request": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\requests\\organize__group37_topology.json",
+      "result": {
+        "status": "REJECTED",
+        "execution_success": true,
+        "geometry_passed": false,
+        "final_quality_passed": null,
+        "report": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group37_topology\\check.json",
+        "reason": "AFFINE_UV_OR_PACKING_REJECTED",
+        "diagnostic_candidates": [],
+        "tool": "reuse.check_pair",
+        "wall_seconds": 6.703000000095926,
+        "output": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group37_topology"
+      }
+    },
+    {
+      "asset": "dragon",
+      "label": "organize/group38_exact",
+      "tool": "reuse.check_pair",
+      "seconds": 4.296999999904074,
+      "request": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\requests\\organize__group38_exact.json",
+      "result": {
+        "status": "REJECTED",
+        "execution_success": true,
+        "geometry_passed": false,
+        "final_quality_passed": null,
+        "report": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group38_exact\\check.json",
+        "reason": "EXACT_TOPOLOGY_NOT_MATCHED",
+        "tool": "reuse.check_pair",
+        "wall_seconds": 4.218999999924563,
+        "output": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group38_exact"
+      }
+    },
+    {
+      "asset": "dragon",
+      "label": "organize/group38_topology",
+      "tool": "reuse.check_pair",
+      "seconds": 7.25,
+      "request": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\requests\\organize__group38_topology.json",
+      "result": {
+        "status": "REJECTED",
+        "execution_success": true,
+        "geometry_passed": false,
+        "final_quality_passed": null,
+        "report": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group38_topology\\check.json",
+        "reason": "AFFINE_UV_OR_PACKING_REJECTED",
+        "diagnostic_candidates": [],
+        "tool": "reuse.check_pair",
+        "wall_seconds": 7.171999999904074,
+        "output": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group38_topology"
+      }
+    },
+    {
+      "asset": "dragon",
+      "label": "organize/group39_exact",
+      "tool": "reuse.check_pair",
+      "seconds": 9.109000000054948,
+      "request": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\requests\\organize__group39_exact.json",
+      "result": {
+        "status": "REJECTED",
+        "execution_success": true,
+        "geometry_passed": false,
+        "final_quality_passed": null,
+        "report": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group39_exact\\check.json",
+        "reason": "EXACT_TOPOLOGY_NOT_MATCHED",
+        "tool": "reuse.check_pair",
+        "wall_seconds": 9.030999999959022,
+        "output": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group39_exact"
+      }
+    },
+    {
+      "asset": "dragon",
+      "label": "organize/group39_topology",
+      "tool": "reuse.check_pair",
+      "seconds": 12.047000000020489,
+      "request": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\requests\\organize__group39_topology.json",
+      "result": {
+        "status": "REJECTED",
+        "execution_success": true,
+        "geometry_passed": false,
+        "final_quality_passed": null,
+        "report": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group39_topology\\check.json",
+        "reason": "AFFINE_UV_OR_PACKING_REJECTED",
+        "diagnostic_candidates": [],
+        "tool": "reuse.check_pair",
+        "wall_seconds": 11.98499999998603,
+        "output": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\organize\\group39_topology"
+      }
+    },
+    {
+      "asset": "dragon",
+      "label": "evaluate/optcuts/seed17/quality",
+      "tool": "quality.validate",
+      "seconds": 41.375,
+      "request": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\requests\\evaluate__optcuts__seed17__quality.json",
+      "result": {
+        "status": "REJECTED",
+        "execution_success": true,
+        "scope": "basecolor_reuse",
+        "quality_accepted": false,
+        "full_pbr_passed": false,
+        "geometry_valid": true,
+        "material_valid": false,
+        "render_valid": false,
+        "seams_valid": false,
+        "validation": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\evaluate\\optcuts\\seed17\\quality\\validation.json",
+        "payload_bytes": 349524,
+        "geometry_profile": {
+          "resolution": 256,
+          "gap_pixels": 4.0,
+          "border_pixels": 4.0,
+          "correspondence_fraction": 0.08,
+          "normal_angle_degrees": 180.0,
+          "maximum_anisotropy": 2.0,
+          "mean_shape_limit": 0.025,
+          "tail_shape_limit": 0.1,
+          "maximum_density_ratio": 2.0,
+          "quality_constraints": false
+        },
+        "geometry_profile_hash": "97bc17be7b69e50c697e654f43a32b1881cd6dea4b82ea5a38c521a5bc914a9d",
+        "geometry_policy": "explicit_custom",
+        "strict_geometry_profile_applied": false,
+        "artist_reviewed": false,
+        "tool": "quality.validate",
+        "wall_seconds": 41.29700000002049,
+        "output": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\evaluate\\optcuts\\seed17\\quality"
+      }
+    },
+    {
+      "asset": "dragon",
+      "label": "evaluate/optcuts/seed29/quality",
+      "tool": "quality.validate",
+      "seconds": 43.23499999998603,
+      "request": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\requests\\evaluate__optcuts__seed29__quality.json",
+      "result": {
+        "status": "REJECTED",
+        "execution_success": true,
+        "scope": "basecolor_reuse",
+        "quality_accepted": false,
+        "full_pbr_passed": false,
+        "geometry_valid": true,
+        "material_valid": false,
+        "render_valid": false,
+        "seams_valid": false,
+        "validation": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\evaluate\\optcuts\\seed29\\quality\\validation.json",
+        "payload_bytes": 349524,
+        "geometry_profile": {
+          "resolution": 256,
+          "gap_pixels": 4.0,
+          "border_pixels": 4.0,
+          "correspondence_fraction": 0.08,
+          "normal_angle_degrees": 180.0,
+          "maximum_anisotropy": 2.0,
+          "mean_shape_limit": 0.025,
+          "tail_shape_limit": 0.1,
+          "maximum_density_ratio": 2.0,
+          "quality_constraints": false
+        },
+        "geometry_profile_hash": "97bc17be7b69e50c697e654f43a32b1881cd6dea4b82ea5a38c521a5bc914a9d",
+        "geometry_policy": "explicit_custom",
+        "strict_geometry_profile_applied": false,
+        "artist_reviewed": false,
+        "tool": "quality.validate",
+        "wall_seconds": 43.10999999998603,
+        "output": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\evaluate\\optcuts\\seed29\\quality"
+      }
+    },
+    {
+      "asset": "dragon",
+      "label": "evaluate/optcuts/seed43/quality",
+      "tool": "quality.validate",
+      "seconds": 39.82799999997951,
+      "request": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\requests\\evaluate__optcuts__seed43__quality.json",
+      "result": {
+        "status": "REJECTED",
+        "execution_success": true,
+        "scope": "basecolor_reuse",
+        "quality_accepted": false,
+        "full_pbr_passed": false,
+        "geometry_valid": true,
+        "material_valid": false,
+        "render_valid": false,
+        "seams_valid": false,
+        "validation": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\evaluate\\optcuts\\seed43\\quality\\validation.json",
+        "payload_bytes": 349524,
+        "geometry_profile": {
+          "resolution": 256,
+          "gap_pixels": 4.0,
+          "border_pixels": 4.0,
+          "correspondence_fraction": 0.08,
+          "normal_angle_degrees": 180.0,
+          "maximum_anisotropy": 2.0,
+          "mean_shape_limit": 0.025,
+          "tail_shape_limit": 0.1,
+          "maximum_density_ratio": 2.0,
+          "quality_constraints": false
+        },
+        "geometry_profile_hash": "97bc17be7b69e50c697e654f43a32b1881cd6dea4b82ea5a38c521a5bc914a9d",
+        "geometry_policy": "explicit_custom",
+        "strict_geometry_profile_applied": false,
+        "artist_reviewed": false,
+        "tool": "quality.validate",
+        "wall_seconds": 39.76599999994505,
+        "output": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\evaluate\\optcuts\\seed43\\quality"
+      }
+    },
+    {
+      "asset": "dragon",
+      "label": "evaluate/agent_merge/seed17/quality",
+      "tool": "quality.validate",
+      "seconds": 49.15600000007544,
+      "request": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\requests\\evaluate__agent_merge__seed17__quality.json",
+      "result": {
+        "status": "REJECTED",
+        "execution_success": true,
+        "scope": "basecolor_reuse",
+        "quality_accepted": false,
+        "full_pbr_passed": false,
+        "geometry_valid": true,
+        "material_valid": false,
+        "render_valid": false,
+        "seams_valid": false,
+        "validation": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\evaluate\\agent_merge\\seed17\\quality\\validation.json",
+        "payload_bytes": 349524,
+        "geometry_profile": {
+          "resolution": 256,
+          "gap_pixels": 4.0,
+          "border_pixels": 4.0,
+          "correspondence_fraction": 0.08,
+          "normal_angle_degrees": 180.0,
+          "maximum_anisotropy": 2.0,
+          "mean_shape_limit": 0.025,
+          "tail_shape_limit": 0.1,
+          "maximum_density_ratio": 2.0,
+          "quality_constraints": false
+        },
+        "geometry_profile_hash": "97bc17be7b69e50c697e654f43a32b1881cd6dea4b82ea5a38c521a5bc914a9d",
+        "geometry_policy": "explicit_custom",
+        "strict_geometry_profile_applied": false,
+        "artist_reviewed": false,
+        "tool": "quality.validate",
+        "wall_seconds": 49.078000000095926,
+        "output": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\evaluate\\agent_merge\\seed17\\quality"
+      }
+    },
+    {
+      "asset": "dragon",
+      "label": "evaluate/agent_merge/seed29/quality",
+      "tool": "quality.validate",
+      "seconds": 45.35899999993853,
+      "request": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\requests\\evaluate__agent_merge__seed29__quality.json",
+      "result": {
+        "status": "REJECTED",
+        "execution_success": true,
+        "scope": "basecolor_reuse",
+        "quality_accepted": false,
+        "full_pbr_passed": false,
+        "geometry_valid": true,
+        "material_valid": false,
+        "render_valid": false,
+        "seams_valid": false,
+        "validation": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\evaluate\\agent_merge\\seed29\\quality\\validation.json",
+        "payload_bytes": 349524,
+        "geometry_profile": {
+          "resolution": 256,
+          "gap_pixels": 4.0,
+          "border_pixels": 4.0,
+          "correspondence_fraction": 0.08,
+          "normal_angle_degrees": 180.0,
+          "maximum_anisotropy": 2.0,
+          "mean_shape_limit": 0.025,
+          "tail_shape_limit": 0.1,
+          "maximum_density_ratio": 2.0,
+          "quality_constraints": false
+        },
+        "geometry_profile_hash": "97bc17be7b69e50c697e654f43a32b1881cd6dea4b82ea5a38c521a5bc914a9d",
+        "geometry_policy": "explicit_custom",
+        "strict_geometry_profile_applied": false,
+        "artist_reviewed": false,
+        "tool": "quality.validate",
+        "wall_seconds": 45.28099999995902,
+        "output": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\evaluate\\agent_merge\\seed29\\quality"
+      }
+    },
+    {
+      "asset": "dragon",
+      "label": "evaluate/agent_merge/seed43/quality",
+      "tool": "quality.validate",
+      "seconds": 46.84299999999348,
+      "request": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\requests\\evaluate__agent_merge__seed43__quality.json",
+      "result": {
+        "status": "REJECTED",
+        "execution_success": true,
+        "scope": "basecolor_reuse",
+        "quality_accepted": false,
+        "full_pbr_passed": false,
+        "geometry_valid": true,
+        "material_valid": false,
+        "render_valid": false,
+        "seams_valid": false,
+        "validation": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\evaluate\\agent_merge\\seed43\\quality\\validation.json",
+        "payload_bytes": 349524,
+        "geometry_profile": {
+          "resolution": 256,
+          "gap_pixels": 4.0,
+          "border_pixels": 4.0,
+          "correspondence_fraction": 0.08,
+          "normal_angle_degrees": 180.0,
+          "maximum_anisotropy": 2.0,
+          "mean_shape_limit": 0.025,
+          "tail_shape_limit": 0.1,
+          "maximum_density_ratio": 2.0,
+          "quality_constraints": false
+        },
+        "geometry_profile_hash": "97bc17be7b69e50c697e654f43a32b1881cd6dea4b82ea5a38c521a5bc914a9d",
+        "geometry_policy": "explicit_custom",
+        "strict_geometry_profile_applied": false,
+        "artist_reviewed": false,
+        "tool": "quality.validate",
+        "wall_seconds": 46.76500000001397,
+        "output": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\evaluate\\agent_merge\\seed43\\quality"
+      }
+    }
+  ]
+}

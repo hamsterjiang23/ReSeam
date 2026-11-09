@@ -1,0 +1,10 @@
+{
+  "selected_method": "optcuts",
+  "selected_seed": 17,
+  "reason": "Two adjacent-region merge candidates reduced 19 charts to 18, but neither improved best three-seed coverage; retain OptCuts as final Agent choice. All fully evaluated paths remain diagnostic.",
+  "merge1_best_coverage": 0.43865315587040876,
+  "merge0_best_coverage": 0.4384254754872566,
+  "baseline_best_coverage": 0.45172827450640557,
+  "merge0_bake_export": "not run: second candidate stopped after packing screen; original six exports retained",
+  "appearance_priority": "No visible repair justified lower atlas coverage in this trial; not a proof against other merges."
+}

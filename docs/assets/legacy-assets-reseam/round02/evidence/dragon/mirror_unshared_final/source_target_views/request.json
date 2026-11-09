@@ -1,0 +1,25 @@
+{
+  "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\controls\\unshare_f62ae92119\\snapshot\\snapshot.json",
+  "mode": "basecolor",
+  "target": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\mirror_shared_final\\frozen_target\\target.json",
+  "size": 512,
+  "cameras": [
+    {
+      "name": "front",
+      "azimuth": 0,
+      "elevation": 0
+    },
+    {
+      "name": "oblique",
+      "azimuth": 35,
+      "elevation": 15
+    },
+    {
+      "name": "back",
+      "azimuth": 180,
+      "elevation": 0
+    }
+  ],
+  "seams": false,
+  "timeout_seconds": 300.0
+}

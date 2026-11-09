@@ -1,0 +1,16 @@
+{
+  "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\mirror_unshared_final\\512\\pack_43\\snapshot\\snapshot.json",
+  "state_hash": "14c7a04ebe6c321d074a9fb6ff7f7cea534ee9544303f8552d9285d28908df68",
+  "asset_id": "ef10836fcf1c44e88e2455f350d368a459f2628d67a497ad79330ec6fcbe3f7c",
+  "status": "OK",
+  "execution_success": true,
+  "geometry_passed": true,
+  "hard_geometry_passed": true,
+  "final_quality_passed": null,
+  "requires_rebake": true,
+  "packing_backend": "blender_concave",
+  "report": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\mirror_unshared_final\\512\\pack_43\\geometry.json",
+  "tool": "uv.pack",
+  "wall_seconds": 4.702999999979511,
+  "output": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\mirror_unshared_final\\512\\pack_43"
+}

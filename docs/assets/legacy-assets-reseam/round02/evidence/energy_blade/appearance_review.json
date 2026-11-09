@@ -1,0 +1,14 @@
+{
+  "selected_key": "mirror_shared_final/2048",
+  "appearance_accepted": true,
+  "reviewer": "current Agent",
+  "human_accepted": false,
+  "scope": "static BaseColor preview; numerical render rejection retained",
+  "evidence": [
+    "source/color_views/oblique_original.png",
+    "mirror_shared_final/2048/color_views/front.png",
+    "mirror_shared_final/2048/color_views/oblique.png",
+    "mirror_shared_final/2048/color_views/back.png"
+  ],
+  "notes": "Reviewed front, oblique and back actual 2048 images. Long blade and unequal in-plane spikes stay recognizable; red/gold bands and the source speckled grey center remain. Front/back thickness was mirrored rather than the asymmetric in-plane outline. Surface color and seam probes passed; strict render tails reject. Preview acceptance only, not PBR or engine acceptance."
+}

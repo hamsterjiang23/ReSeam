@@ -1,0 +1,27 @@
+{
+  "images": {
+    "front": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\mirror_shared_final\\64\\color_views\\front.png",
+    "oblique": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\mirror_shared_final\\64\\color_views\\oblique.png",
+    "back": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\mirror_shared_final\\64\\color_views\\back.png",
+    "uv": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\mirror_shared_final\\64\\color_views\\uv.png"
+  },
+  "face_rasters": {
+    "front": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\mirror_shared_final\\64\\color_views\\front_faces.npz",
+    "oblique": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\mirror_shared_final\\64\\color_views\\oblique_faces.npz",
+    "back": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\mirror_shared_final\\64\\color_views\\back_faces.npz"
+  },
+  "state_hash": "c17e79a4519a39fa8a6027079175ff21bf682c9cd458932bf8b2e63f2b2dc127",
+  "picked_faces": {
+    "front": [],
+    "oblique": [],
+    "back": []
+  },
+  "report": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\mirror_shared_final\\64\\color_views\\views.json",
+  "quality_evidence": false,
+  "coordinate_convention": "Y-up; front +Z, back -Z, left +X, right -X; orthographic auto-fit",
+  "status": "OK",
+  "execution_success": true,
+  "tool": "view.render",
+  "wall_seconds": 1.9369999999180436,
+  "output": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\mirror_shared_final\\64\\color_views"
+}

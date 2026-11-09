@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "asset_id": "7a12444fe2c5e0cd96e5060f6fe9b924ccfe0d4020c82e0179707c951c7751bc",
+  "geometry_hash": "7a12444fe2c5e0cd96e5060f6fe9b924ccfe0d4020c82e0179707c951c7751bc",
+  "parent_hash": "73247b84163ddd8fc8a7708367e2636d3d87532b847d549a2cf3fa5784e763b2",
+  "arrays_sha256": "12701a1a070ddbd492bb33c48226c8c2df9ded93b636e57dcff2d5db357b2752",
+  "metadata": {
+    "reference_glb": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\mirror\\create\\mirrored_source.glb",
+    "source_uv_present": true,
+    "source_manifest": [
+      {
+        "path": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\mirror\\create\\mirrored_source.glb",
+        "sha256": "245f26516a0a477c769f918f04cbd93f2c934464f17d6f6ad5fcccdaf02a217d"
+      },
+      {
+        "path": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\mirror\\create\\source_correspondence.npz",
+        "sha256": "4701af32d9a6d3410931d4501b5abb1e5fc10e854d7764758e0ba5c97517b33a"
+      },
+      {
+        "path": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\mirror\\create\\attributes\\extra_uv.npz",
+        "sha256": "f38417a4d3897e4ba51322dc9fe530f9ca56fe13886ef3dc5e5ab8238b0749eb"
+      }
+    ],
+    "derived_from": {
+      "asset_id": "39b42e9b723383da8c78a904a91505fa20584b0b9824ac1619609672507f5185",
+      "state_hash": "3e37775764631c95db3d0b2bb5921e711d6f26d195eb3d3fe7d1855d2c9973a8",
+      "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\optcuts\\native\\snapshot\\snapshot.json"
+    },
+    "geometry_variant": "plane_clip_then_exact_mirror",
+    "basecolor_only": true,
+    "source_material_scope": {
+      "path": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\source\\import\\inputs\\material_reference.glb",
+      "sha256": "b8a9d811923948eb138d7ae567cbd7470fd792c9f380adf5f07116a550702d6e",
+      "uv": "source_face_corner_uv",
+      "filter": "bilinear",
+      "wrap": "repeat",
+      "ignored_material_extensions": {},
+      "scope": "BaseColor only; unlit diagnostic; no PBR, normal, or GPU verification"
+    },
+    "requires_rebake": true,
+    "source_correspondence": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\mirror\\create\\source_correspondence.npz",
+    "extra_uv": {
+      "path": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\mirror\\create\\attributes\\extra_uv.npz",
+      "sha256": "f38417a4d3897e4ba51322dc9fe530f9ca56fe13886ef3dc5e5ab8238b0749eb",
+      "layers": [
+        {
+          "name": "UVChannel_2",
+          "array": "layer_0",
+          "texcoord": 1
+        }
+      ],
+      "face_count": 590,
+      "mapping": "snapshot face/corner order; UV bottom-left"
+    },
+    "last_operation": "reuse.unshare",
+    "geometry_profile": {
+      "resolution": 256,
+      "gap_pixels": 4,
+      "border_pixels": 4,
+      "correspondence_fraction": 0.08,
+      "normal_angle_degrees": 180.0,
+      "maximum_anisotropy": 2.0,
+      "mean_shape_limit": 0.025,
+      "tail_shape_limit": 0.1,
+      "maximum_density_ratio": 2.0,
+      "quality_constraints": false
+    }
+  },
+  "seams": [],
+  "surface_version": 12,
+  "version": 12,
+  "groups": [],
+  "correspondences": [],
+  "correspondence_records": [],
+  "evidence": {},
+  "state_hash": "13a7b64180515852a4cd3a209c7e22e52222c37cc03113f13adf7ea9ab550549"
+}

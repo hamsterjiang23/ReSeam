@@ -1,0 +1,30 @@
+{
+  "execution_finished": true,
+  "matrix": {
+    "chloe": {
+      "evaluation_rows": 12,
+      "exports": 9,
+      "numeric_quality_passed": 0,
+      "pack_rejected": 3
+    },
+    "energy_blade": {
+      "evaluation_rows": 12,
+      "exports": 12,
+      "numeric_quality_passed": 0,
+      "pack_rejected": 0
+    },
+    "dragon": {
+      "evaluation_rows": 12,
+      "exports": 9,
+      "numeric_quality_passed": 0,
+      "pack_rejected": 3
+    }
+  },
+  "tool_calls": 515,
+  "total_tool_wall_seconds": 8653.770000000251,
+  "maximum_path_seconds": 1331.4369999994524,
+  "source_version": "code_freeze_audit.json and frozen_code/manifest.json",
+  "post_experiment_types": "post_experiment_code_check.json",
+  "scope": "static UV+BaseColor; numeric quality and Agent preview separate",
+  "measurement_revision": "measurement_resolution_audit.json"
+}

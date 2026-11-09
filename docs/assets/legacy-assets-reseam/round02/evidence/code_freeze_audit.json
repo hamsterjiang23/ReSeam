@@ -1,0 +1,10 @@
+{
+  "tool_provenance_records": 515,
+  "main_phase_records": 485,
+  "supplementary_metric_records": 30,
+  "sources_per_record": 117,
+  "all_recorded_sources_identical_after_path_normalization": true,
+  "all_frozen_files_hash_valid": true,
+  "supplemental_inspection_kernel": "same frozen kernel; source paths relocated to frozen_code",
+  "post_experiment_types": "post_experiment_code_check.json"
+}

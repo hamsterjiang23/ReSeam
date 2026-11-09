@@ -1,0 +1,6 @@
+{
+  "path": "E:\\ReSem\\assets\\v1\\energy_blade\\low.obj",
+  "reference": "E:\\ReSem\\assets\\v1\\energy_blade\\high.glb",
+  "initialize_uv": "xatlas",
+  "timeout_seconds": 300.0
+}

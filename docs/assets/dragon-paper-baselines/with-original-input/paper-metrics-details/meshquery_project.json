@@ -1,0 +1,1536 @@
+{
+  "method": "meshquery_project",
+  "state_hash": "7336a692f6beebb22a267dccc76759a551d3a64f972bb6563bbf83aa9731c110",
+  "geometry_hash": "a7b1bfc5d1fb43d487904a917624bbc05f8c89d32bf606a502198badb5ff7d31",
+  "snapshot": "artifacts\\dragon_paper_baselines\\round02\\evaluation\\meshquery_project_2048\\pack\\snapshot\\snapshot.json",
+  "source_sha256": {
+    "snapshot.json": "44f08d27b5ae2df2f1e5d8c9cdc4ac279ef3d66b54545c52d86d653ee22fe1ed",
+    "arrays.npz": "b1e8d83009b0b69b59d90831d51377b0f3899403c0640cbbbc8d69b3b1c3ef4e"
+  },
+  "base_metrics": {
+    "faces": 11338,
+    "vertices": 7120,
+    "charts": 80,
+    "seam_edge_count": 20,
+    "summed_uv_area": 0.6271601642869721,
+    "raw_uv_union_area": 0.6271601642869721,
+    "unit_square_coverage": 0.6271601642869722,
+    "uv_outside_unit_square_area": 0.0,
+    "all_overlap_fraction_not_validated_reuse": 0.0,
+    "zero_uv_area_faces": 0,
+    "mixed_orientation_faces": 0,
+    "aggregate_texel_density": 1326.8309626702433,
+    "distortion": {
+      "area_distortion_face_mean": 1.6215559238469117,
+      "area_distortion_included_faces": 11328,
+      "conformal_mean_all_nondegenerate": 4.175351812562028,
+      "conformal_mean_paper_positive_only": 4.175351812562028,
+      "conformal_paper_included_faces": 11328,
+      "texel_spread_octaves": 0.44640915361181494,
+      "new_seam_length_3d": 0.4300037231883661,
+      "new_seam_length_per_surface_area": 0.28778293750417566,
+      "uv_boundary_length": 30.015860306083137,
+      "scope": "A.6 area cap10/plain face mean; paper K positive-only plus all-sign K; excluded faces remain explicit failures"
+    }
+  },
+  "paper_metrics": {
+    "non_disk_fraction": 0.0,
+    "compactness": 0.5702675190681518,
+    "convexity": 0.8651933481280413,
+    "jaggedness": 0.000924399299061634,
+    "angular_quality": 0.7801434312637803,
+    "angular_quality_faces": 11338,
+    "chart_count": 80,
+    "shape_valid_charts": 80,
+    "convexity_valid_charts": 80,
+    "jaggedness_samples": 6038,
+    "invalid_boundary_components": 0,
+    "jaggedness_scope": "raw UV units; pooled resampled boundary points; no undocumented display multiplier",
+    "charts": [
+      {
+        "chart": 0,
+        "faces": 791,
+        "vertices": 489,
+        "edges": 1279,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.04174797598351552,
+        "perimeter": 1.58482712862852,
+        "compactness": 0.2088726109430577,
+        "convexity": 0.48055963110727196,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.0008367664348230177
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 1,
+        "faces": 387,
+        "vertices": 251,
+        "edges": 637,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.013824058102143716,
+        "perimeter": 0.9791930398204779,
+        "compactness": 0.18117938404763284,
+        "convexity": 0.6064465843453815,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.0019520408958592973
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 2,
+        "faces": 28,
+        "vertices": 26,
+        "edges": 53,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.0019753443884928737,
+        "perimeter": 0.19708664785486227,
+        "compactness": 0.6390550649375891,
+        "convexity": 0.9360638798455498,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.0013600091519669704
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 3,
+        "faces": 221,
+        "vertices": 143,
+        "edges": 363,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.008340406676951212,
+        "perimeter": 0.43242239765212714,
+        "compactness": 0.5605065994048379,
+        "convexity": 0.9017081734717968,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.0010683333566065209
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 4,
+        "faces": 13,
+        "vertices": 14,
+        "edges": 26,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.003076226622421853,
+        "perimeter": 0.24642017367858618,
+        "compactness": 0.6366132474003785,
+        "convexity": 0.9357733177111198,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.0008820372066126604
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 5,
+        "faces": 26,
+        "vertices": 25,
+        "edges": 50,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.00842753951405239,
+        "perimeter": 0.4547824518600787,
+        "compactness": 0.5120392632271658,
+        "convexity": 0.8197663230625327,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.0007442095129523373
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 6,
+        "faces": 96,
+        "vertices": 79,
+        "edges": 174,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.023386553323246725,
+        "perimeter": 0.93311298471435,
+        "compactness": 0.33752630033270836,
+        "convexity": 0.6253359522498725,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.0006675072208571877
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 7,
+        "faces": 12,
+        "vertices": 13,
+        "edges": 24,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.0005439788104158599,
+        "perimeter": 0.09198323399350855,
+        "compactness": 0.8079314195516779,
+        "convexity": 0.9710166338775469,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.0015747593921476685
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 8,
+        "faces": 45,
+        "vertices": 38,
+        "edges": 82,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.001828483081985604,
+        "perimeter": 0.1774985921111697,
+        "compactness": 0.7293080127722588,
+        "convexity": 0.9946592985010163,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.0008570842833076604
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 9,
+        "faces": 42,
+        "vertices": 36,
+        "edges": 77,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.001663461224630169,
+        "perimeter": 0.17276508920544847,
+        "compactness": 0.7003426391830795,
+        "convexity": 0.984906404480297,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.0009498450044836079
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 10,
+        "faces": 47,
+        "vertices": 40,
+        "edges": 86,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.0018460764487430348,
+        "perimeter": 0.17423555906686655,
+        "compactness": 0.7641629184839557,
+        "convexity": 0.9759830591442875,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.0009122644031495603
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 11,
+        "faces": 210,
+        "vertices": 158,
+        "edges": 367,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.019215058050539607,
+        "perimeter": 0.7571288366588723,
+        "compactness": 0.42122291575881343,
+        "convexity": 0.7200684646752401,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.0008334461599128911
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 12,
+        "faces": 52,
+        "vertices": 43,
+        "edges": 94,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.0018545753934666002,
+        "perimeter": 0.17818402772087977,
+        "compactness": 0.7340350773249594,
+        "convexity": 0.9831931163292604,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.0008696238844576205
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 13,
+        "faces": 25,
+        "vertices": 23,
+        "edges": 47,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.0010199738494643055,
+        "perimeter": 0.12657432303836466,
+        "compactness": 0.8000325825663954,
+        "convexity": 0.997060687697289,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.0010970463626723667
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 14,
+        "faces": 1198,
+        "vertices": 614,
+        "edges": 1811,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.031281254367926795,
+        "perimeter": 0.6594104706630034,
+        "compactness": 0.9040289659935248,
+        "convexity": 0.972327002167023,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.00035260672235067005
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 15,
+        "faces": 661,
+        "vertices": 366,
+        "edges": 1026,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.030301099947056542,
+        "perimeter": 0.7655746677424616,
+        "compactness": 0.6496705028767079,
+        "convexity": 0.8507266405959778,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.0005774853422965481
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 16,
+        "faces": 250,
+        "vertices": 150,
+        "edges": 399,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.01960004489862705,
+        "perimeter": 0.5689612374072129,
+        "compactness": 0.7608544259270128,
+        "convexity": 0.901810581660745,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.0007672604366813265
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 17,
+        "faces": 27,
+        "vertices": 21,
+        "edges": 47,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.0005960789590725178,
+        "perimeter": 0.15684650983374954,
+        "compactness": 0.3044836223642853,
+        "convexity": 0.661459259880849,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.0012216543368121899
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 18,
+        "faces": 1,
+        "vertices": 3,
+        "edges": 3,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 7.000270917707598e-05,
+        "perimeter": 0.04713084542478258,
+        "compactness": 0.3960173850537217,
+        "convexity": 1.0,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.0023125671963529198
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 19,
+        "faces": 77,
+        "vertices": 58,
+        "edges": 134,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.012024572254883188,
+        "perimeter": 0.5430318470054313,
+        "compactness": 0.5124233364152968,
+        "convexity": 0.7849515412486392,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.0006351557346693681
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 20,
+        "faces": 186,
+        "vertices": 113,
+        "edges": 298,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.011553763342625461,
+        "perimeter": 0.5744474399811113,
+        "compactness": 0.43997979689945627,
+        "convexity": 0.9406302203637007,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.0003023901908322276
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 21,
+        "faces": 162,
+        "vertices": 110,
+        "edges": 271,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.004496747346271248,
+        "perimeter": 0.6429812440079383,
+        "compactness": 0.13668213120706613,
+        "convexity": 0.3182332583384529,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.0010516529031145514
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 22,
+        "faces": 16,
+        "vertices": 18,
+        "edges": 33,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.004720261608195446,
+        "perimeter": 0.3473493111006383,
+        "compactness": 0.49163528983615246,
+        "convexity": 0.9992172645768954,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.0003897538341325487
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 23,
+        "faces": 38,
+        "vertices": 33,
+        "edges": 70,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.006640748195132664,
+        "perimeter": 0.44893413757266243,
+        "compactness": 0.41405841460004045,
+        "convexity": 0.9774783761799206,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.00035243671232193714
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 24,
+        "faces": 78,
+        "vertices": 51,
+        "edges": 128,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.0019318981216734092,
+        "perimeter": 0.23164705907366495,
+        "compactness": 0.4524186531048575,
+        "convexity": 0.8354147067519899,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.0009209822351578429
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 25,
+        "faces": 21,
+        "vertices": 17,
+        "edges": 37,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.0004619370353470287,
+        "perimeter": 0.08239563808216167,
+        "compactness": 0.855035613581719,
+        "convexity": 0.9608650142408258,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.0020446010531405484
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 26,
+        "faces": 49,
+        "vertices": 29,
+        "edges": 77,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.00015821735564538575,
+        "perimeter": 0.04744125136669541,
+        "compactness": 0.8833884440078285,
+        "convexity": 1.0,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.002775269244563001
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 27,
+        "faces": 26,
+        "vertices": 19,
+        "edges": 44,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.0002117621969903364,
+        "perimeter": 0.05600789946102192,
+        "compactness": 0.8483200427903419,
+        "convexity": 0.9838143241024276,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.002310679956166402
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 28,
+        "faces": 39,
+        "vertices": 29,
+        "edges": 67,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.0006734768533479274,
+        "perimeter": 0.11139114766850976,
+        "compactness": 0.682073507015291,
+        "convexity": 0.8832551847590768,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.0020335982154007933
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 29,
+        "faces": 98,
+        "vertices": 57,
+        "edges": 154,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.0008433742489950622,
+        "perimeter": 0.11473908120076867,
+        "compactness": 0.8050214728939493,
+        "convexity": 1.0,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.0013127957187224406
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 30,
+        "faces": 26,
+        "vertices": 26,
+        "edges": 51,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.001465578561537125,
+        "perimeter": 0.24908854768791355,
+        "compactness": 0.2968324977554916,
+        "convexity": 0.5617008331513575,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.0018758911453846281
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 31,
+        "faces": 15,
+        "vertices": 13,
+        "edges": 27,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.0003169479554493765,
+        "perimeter": 0.07643143303275168,
+        "compactness": 0.681795003019815,
+        "convexity": 0.9817008066424999,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.0019312385019384299
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 32,
+        "faces": 363,
+        "vertices": 211,
+        "edges": 573,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.039581398573338596,
+        "perimeter": 1.1367917988818803,
+        "compactness": 0.38489222296712144,
+        "convexity": 0.724484476782354,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.000833353934235972
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 33,
+        "faces": 87,
+        "vertices": 62,
+        "edges": 148,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.005701634895323852,
+        "perimeter": 0.32696206712288356,
+        "compactness": 0.6702155917903009,
+        "convexity": 0.8715373447368382,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.0014181583393362844
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 34,
+        "faces": 54,
+        "vertices": 44,
+        "edges": 97,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.003933414434007417,
+        "perimeter": 0.3276327275103535,
+        "compactness": 0.4604738973045821,
+        "convexity": 0.6815007062413635,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.0013802871684066265
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 35,
+        "faces": 77,
+        "vertices": 49,
+        "edges": 125,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.0028371976222635485,
+        "perimeter": 0.20924325816612982,
+        "compactness": 0.8143226289989514,
+        "convexity": 0.9758195257039681,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.0007954618308852983
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 36,
+        "faces": 5,
+        "vertices": 7,
+        "edges": 11,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.00037039917047066004,
+        "perimeter": 0.08870089311244692,
+        "compactness": 0.5915941680250789,
+        "convexity": 0.9863694571090624,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.0015057467943334387
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 37,
+        "faces": 36,
+        "vertices": 29,
+        "edges": 64,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.00034565110043610853,
+        "perimeter": 0.08292787415886231,
+        "compactness": 0.631606721323822,
+        "convexity": 0.9456271760213132,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.0016817187323747208
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 38,
+        "faces": 36,
+        "vertices": 30,
+        "edges": 65,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.002002984305850268,
+        "perimeter": 0.3439300673522699,
+        "compactness": 0.2127879942786738,
+        "convexity": 0.9266012306072767,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.0004671437489511598
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 39,
+        "faces": 48,
+        "vertices": 35,
+        "edges": 82,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.0027099226047722505,
+        "perimeter": 0.26155838135784487,
+        "compactness": 0.49777086055877867,
+        "convexity": 0.9448532545786227,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.0006148973011573224
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 40,
+        "faces": 791,
+        "vertices": 489,
+        "edges": 1279,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.041747975662101866,
+        "perimeter": 1.5845285510782126,
+        "compactness": 0.20895133375777689,
+        "convexity": 0.4805016602167199,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.0008279447751971396
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 41,
+        "faces": 387,
+        "vertices": 251,
+        "edges": 637,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.013824058036917105,
+        "perimeter": 0.9791900114122493,
+        "compactness": 0.18118050388635443,
+        "convexity": 0.6064673603800508,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.0019518454595175859
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 42,
+        "faces": 28,
+        "vertices": 26,
+        "edges": 53,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.001975344412366514,
+        "perimeter": 0.19708666650219686,
+        "compactness": 0.6390549517328347,
+        "convexity": 0.936064080864594,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.0013600078085543362
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 43,
+        "faces": 221,
+        "vertices": 143,
+        "edges": 363,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.008340406611095679,
+        "perimeter": 0.4323087118621833,
+        "compactness": 0.5608014306454874,
+        "convexity": 0.9017582136188305,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.0010635877738340363
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 44,
+        "faces": 13,
+        "vertices": 14,
+        "edges": 26,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.00307622660721061,
+        "perimeter": 0.24641878282028892,
+        "compactness": 0.6366204307282869,
+        "convexity": 0.9357882646829142,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.0008818248869586906
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 45,
+        "faces": 26,
+        "vertices": 25,
+        "edges": 50,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.008427539415135512,
+        "perimeter": 0.454979339537265,
+        "compactness": 0.5115961935522729,
+        "convexity": 0.8203756869412568,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.0007466475532737284
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 46,
+        "faces": 96,
+        "vertices": 79,
+        "edges": 174,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.023386553140008523,
+        "perimeter": 0.9328982183751862,
+        "compactness": 0.33768172221338655,
+        "convexity": 0.6253658880705292,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.0006724272437083471
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 47,
+        "faces": 12,
+        "vertices": 13,
+        "edges": 24,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.0005439788167561425,
+        "perimeter": 0.09197499250276012,
+        "compactness": 0.8080762261037969,
+        "convexity": 0.971255316404828,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.0015732908136331413
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 48,
+        "faces": 45,
+        "vertices": 38,
+        "edges": 82,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.0018284831010856408,
+        "perimeter": 0.1775479032949886,
+        "compactness": 0.7289029686033686,
+        "convexity": 0.9950071488236628,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.0008551702925539508
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 49,
+        "faces": 42,
+        "vertices": 36,
+        "edges": 77,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.001663461241532588,
+        "perimeter": 0.17275311552934036,
+        "compactness": 0.7004397324397318,
+        "convexity": 0.984902315720692,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.0009571592520293385
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 50,
+        "faces": 47,
+        "vertices": 40,
+        "edges": 86,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.0018460764649229585,
+        "perimeter": 0.17415955679319026,
+        "compactness": 0.7648300237125816,
+        "convexity": 0.9808658470795218,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.0008956244696820254
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 51,
+        "faces": 210,
+        "vertices": 158,
+        "edges": 367,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.019215058054693753,
+        "perimeter": 0.7578653030909825,
+        "compactness": 0.42040465485278894,
+        "convexity": 0.7242914963264357,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.0008354487039975454
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 52,
+        "faces": 52,
+        "vertices": 43,
+        "edges": 94,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.0018545754221837407,
+        "perimeter": 0.17818104727930534,
+        "compactness": 0.7340596453656427,
+        "convexity": 0.9831944482550671,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.0008718687652056145
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 53,
+        "faces": 25,
+        "vertices": 23,
+        "edges": 47,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.0010199738534216647,
+        "perimeter": 0.12663941521220573,
+        "compactness": 0.7992103696697855,
+        "convexity": 0.9963324953431296,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.0010985561738636217
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 54,
+        "faces": 1198,
+        "vertices": 614,
+        "edges": 1811,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.0312812553539014,
+        "perimeter": 0.6594103454681728,
+        "compactness": 0.904029337763894,
+        "convexity": 0.972327119433403,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.0003526050639604741
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 55,
+        "faces": 661,
+        "vertices": 366,
+        "edges": 1026,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.030301101461164423,
+        "perimeter": 0.7655744766512981,
+        "compactness": 0.6496708596619039,
+        "convexity": 0.8507267992473684,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.0005774837664864332
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 56,
+        "faces": 250,
+        "vertices": 150,
+        "edges": 399,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.019600045439012885,
+        "perimeter": 0.5689609908987973,
+        "compactness": 0.7608551062010044,
+        "convexity": 0.9018109613141104,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.0007672567259938403
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 57,
+        "faces": 27,
+        "vertices": 21,
+        "edges": 47,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.0005960789590725156,
+        "perimeter": 0.15684632465691073,
+        "compactness": 0.3044843413272317,
+        "convexity": 0.6614600778508722,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.0012216763753598175
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 58,
+        "faces": 1,
+        "vertices": 3,
+        "edges": 3,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 7.000270917707629e-05,
+        "perimeter": 0.0471308454247828,
+        "compactness": 0.39601738505371986,
+        "convexity": 1.0,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.0023125671963529306
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 59,
+        "faces": 77,
+        "vertices": 58,
+        "edges": 134,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.0120245723838004,
+        "perimeter": 0.5430319592487864,
+        "compactness": 0.5124231300758246,
+        "convexity": 0.7849513659818591,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.0006351567320104718
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 60,
+        "faces": 186,
+        "vertices": 113,
+        "edges": 298,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.01155376334262546,
+        "perimeter": 0.5744476344823647,
+        "compactness": 0.43997949895547545,
+        "convexity": 0.9406296929063349,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.00030238970764178634
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 61,
+        "faces": 162,
+        "vertices": 110,
+        "edges": 271,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.004496747346271254,
+        "perimeter": 0.6429816345201356,
+        "compactness": 0.13668196518047918,
+        "convexity": 0.31823310250146786,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.001051654163752818
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 62,
+        "faces": 16,
+        "vertices": 18,
+        "edges": 33,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.004720261608195444,
+        "perimeter": 0.34734926317023124,
+        "compactness": 0.4916354255167695,
+        "convexity": 0.9992170499940677,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.00038975593091374375
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 63,
+        "faces": 38,
+        "vertices": 33,
+        "edges": 70,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.00664074819513266,
+        "perimeter": 0.44893422544901285,
+        "compactness": 0.414058252500843,
+        "convexity": 0.9774779369536546,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.0003524353649574687
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 64,
+        "faces": 78,
+        "vertices": 51,
+        "edges": 128,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.0019318981216734147,
+        "perimeter": 0.231646889175827,
+        "compactness": 0.4524193167440683,
+        "convexity": 0.8354166208628311,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.0009209803500478315
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 65,
+        "faces": 21,
+        "vertices": 17,
+        "edges": 37,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.0004619370535174701,
+        "perimeter": 0.08239560695357752,
+        "compactness": 0.8550362932699938,
+        "convexity": 0.9608654211922179,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.0020445973976332527
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 66,
+        "faces": 49,
+        "vertices": 29,
+        "edges": 77,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.00015821735564538764,
+        "perimeter": 0.0474412796041779,
+        "compactness": 0.8833873924064274,
+        "convexity": 1.0,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.0027671531119975476
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 67,
+        "faces": 26,
+        "vertices": 19,
+        "edges": 44,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.0002117621969903382,
+        "perimeter": 0.05600786982122453,
+        "compactness": 0.8483209406656274,
+        "convexity": 0.9838141133546755,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.0023106792251321897
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 68,
+        "faces": 39,
+        "vertices": 29,
+        "edges": 67,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.0006734768533479231,
+        "perimeter": 0.11139135187087182,
+        "compactness": 0.6820710062665081,
+        "convexity": 0.8832533920772193,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.002033617826960618
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 69,
+        "faces": 98,
+        "vertices": 57,
+        "edges": 154,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.0008433742489950626,
+        "perimeter": 0.11473914819477529,
+        "compactness": 0.8050205328207665,
+        "convexity": 0.9999999999999999,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.001313715727180614
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 70,
+        "faces": 26,
+        "vertices": 26,
+        "edges": 51,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.001465578561537127,
+        "perimeter": 0.24908865095854862,
+        "compactness": 0.29683225162565774,
+        "convexity": 0.5617010601198547,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.0018758980178465892
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 71,
+        "faces": 15,
+        "vertices": 13,
+        "edges": 27,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.00031694795544937667,
+        "perimeter": 0.07643140744460401,
+        "compactness": 0.6817954595304233,
+        "convexity": 0.9817016041688019,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.0019312313907614551
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 72,
+        "faces": 363,
+        "vertices": 211,
+        "edges": 573,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.03958140003539585,
+        "perimeter": 1.136792020705214,
+        "compactness": 0.3848920869754869,
+        "convexity": 0.7244844079135963,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.0008333547563283278
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 73,
+        "faces": 87,
+        "vertices": 62,
+        "edges": 148,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.00570163489532385,
+        "perimeter": 0.326962180115683,
+        "compactness": 0.6702151285592147,
+        "convexity": 0.871537224750678,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.0014181625485335423
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 74,
+        "faces": 54,
+        "vertices": 44,
+        "edges": 97,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.003933414434007417,
+        "perimeter": 0.32763254498469035,
+        "compactness": 0.4604744103691611,
+        "convexity": 0.6815013102132919,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.0013802845455628012
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 75,
+        "faces": 77,
+        "vertices": 49,
+        "edges": 125,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.0028371976222635446,
+        "perimeter": 0.2092434030753674,
+        "compactness": 0.8143215010988233,
+        "convexity": 0.9758193711442531,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.000795462714630498
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 76,
+        "faces": 5,
+        "vertices": 7,
+        "edges": 11,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.0003703991704706547,
+        "perimeter": 0.08870103450192292,
+        "compactness": 0.5915922820240056,
+        "convexity": 0.9863674986875771,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.0015057537311403508
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 77,
+        "faces": 36,
+        "vertices": 29,
+        "edges": 64,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.0003456510994605011,
+        "perimeter": 0.08292782826490633,
+        "compactness": 0.6316074186294414,
+        "convexity": 0.9456293994680015,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.0016817177247318443
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 78,
+        "faces": 36,
+        "vertices": 30,
+        "edges": 65,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.002002984305850263,
+        "perimeter": 0.34393004811565037,
+        "compactness": 0.21278801808189615,
+        "convexity": 0.9265998111705049,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.0004669288092805334
+        ],
+        "nonmanifold_uv_edges": 0
+      },
+      {
+        "chart": 79,
+        "faces": 48,
+        "vertices": 35,
+        "edges": 82,
+        "euler_characteristic": 1,
+        "non_disk": false,
+        "uv_area_triangle_sum": 0.0027099226047722497,
+        "perimeter": 0.26155840505600136,
+        "compactness": 0.4977707703590297,
+        "convexity": 0.9448525732687877,
+        "boundary_loops": 1,
+        "invalid_boundary_components": 0,
+        "jaggedness_loop_means": [
+          0.0006109536759886506
+        ],
+        "nonmanifold_uv_edges": 0
+      }
+    ],
+    "seam_ao": 0.5462125,
+    "boundary_ao": 0.684591,
+    "seam_ao_status": "OK",
+    "boundary_ao_status": "OK",
+    "explicit_cut_edges": 20,
+    "all_boundary_physical_edges": 2770,
+    "reference_hit_histogram": [
+      271,
+      182,
+      152,
+      126,
+      100,
+      70,
+      40,
+      33,
+      26
+    ],
+    "seam_hit_histogram": [
+      284,
+      141,
+      84,
+      93,
+      105,
+      122,
+      79,
+      37,
+      55
+    ],
+    "boundary_hit_histogram": [
+      133,
+      106,
+      106,
+      113,
+      94,
+      100,
+      81,
+      51,
+      216
+    ],
+    "reference_mean_occlusion": 0.286625,
+    "seam_mean_occlusion": 0.348875
+  },
+  "seconds": 12.984000000054948,
+  "historical_quality_accepted": true,
+  "quality_status_changed": false
+}

@@ -1,0 +1,11 @@
+{
+  "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\source\\import\\snapshot\\snapshot.json",
+  "source_mode": "projected_high",
+  "policy": "source_original",
+  "geometry_profile": {
+    "quality_constraints": false,
+    "normal_angle_degrees": 180.0,
+    "correspondence_fraction": 0.08
+  },
+  "timeout_seconds": 300.0
+}

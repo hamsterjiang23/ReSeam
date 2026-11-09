@@ -1,0 +1,14 @@
+{
+  "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\merge\\optcuts\\snapshot\\snapshot.json",
+  "state_hash": "9315178db8b8628c1481f475bb6b77ca492de81adeb30743c495f96ff6c38ec5",
+  "asset_id": "ef10836fcf1c44e88e2455f350d368a459f2628d67a497ad79330ec6fcbe3f7c",
+  "status": "OK",
+  "execution_success": true,
+  "geometry_passed": true,
+  "hard_geometry_passed": true,
+  "requires_rebake": true,
+  "report": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\merge\\optcuts\\reparameterization.json",
+  "tool": "uv.reparameterize",
+  "wall_seconds": 17.95299999997951,
+  "output": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\merge\\optcuts"
+}

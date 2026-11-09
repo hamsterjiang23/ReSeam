@@ -1,0 +1,19 @@
+{
+  "role": "current Codex Agent provides visual decisions; no external model API or training",
+  "model_identifier": "not exposed by harness; not fabricated",
+  "token_usage": null,
+  "monetary_cost": null,
+  "user_steering_verbatim": "其实这种模型完全也是镜像对称的，都可以对称",
+  "authorized_assets": [
+    "historical dragon low2000",
+    "energy_blade low500",
+    "Chloe FBX450"
+  ],
+  "task_input_summary": "Retain originals, create independent exact mirror variants, reduce UV fragmentation and independent tiles, retain same-geometry shared/unshared controls, real BaseColor and full mip, static Chloe with UV1 preserved.",
+  "decision_evidence": "protocol.json decisions; per-asset fixed/agent_region_decision.json; per-asset appearance_review.json; history/round01/chloe/mirror_x/agent_decision.json",
+  "known_boundaries": [
+    "mirror source already uses retained-side colors; zero color-ball delta does not prove original opposite side unchanged",
+    "human/PBR/GPU/Unity dynamic shader not assessed",
+    "actual tool requests and responses retained; internal reasoning not part of artifact"
+  ]
+}

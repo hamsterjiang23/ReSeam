@@ -1,0 +1,398 @@
+{
+  "cases": [
+    {
+      "label": "保留原接缝",
+      "path": "formal/retained_islands",
+      "charts": 134,
+      "tiles": 67,
+      "groups": 67,
+      "coverage": 0.5913202797785906,
+      "shared_surface": 1.0,
+      "quality_accepted": true,
+      "material_valid": true,
+      "seams_valid": true,
+      "render_valid": true,
+      "worst_render_mean": 0.006160212812200202,
+      "worst_render_max": 0.1780860447527169,
+      "payload_bytes": 22369620,
+      "png_mip_bytes": 4547245,
+      "state_hash": "9816d8f62cf0a57bbafde1692c4e9398f256782511ef2fb2a4cee31cbd4086a7"
+    },
+    {
+      "label": "直接合岛",
+      "path": "formal/merged_islands",
+      "charts": 92,
+      "tiles": 46,
+      "groups": 46,
+      "coverage": 0.5610110397098154,
+      "shared_surface": 1.0,
+      "quality_accepted": false,
+      "material_valid": true,
+      "seams_valid": true,
+      "render_valid": false,
+      "worst_render_mean": 0.036666466398165475,
+      "worst_render_max": 1.0078410479965532,
+      "payload_bytes": 22369620,
+      "png_mip_bytes": 4138261,
+      "state_hash": "8f0dc1eaf4353d57adeb910943c167d7f30cabdea49277de9daf6303152f8e35"
+    },
+    {
+      "label": "合岛并修正脚底切口",
+      "path": "sole_formal/sole_repaired_islands",
+      "charts": 92,
+      "tiles": 46,
+      "groups": 46,
+      "coverage": 0.5726051881041325,
+      "shared_surface": 1.0,
+      "quality_accepted": false,
+      "material_valid": true,
+      "seams_valid": true,
+      "render_valid": false,
+      "worst_render_mean": 0.008121234942735154,
+      "worst_render_max": 0.46838320994839333,
+      "payload_bytes": 22369620,
+      "png_mip_bytes": 4299538,
+      "state_hash": "59d20f7ed753ab7b9132cfe477318217a295974630bbcfa4c61635fe6a999566"
+    }
+  ],
+  "tool_cost_seconds": 1030.9189999997616,
+  "calls": [
+    {
+      "result": "component18_blender_abf\\result.json",
+      "tool": "uv.reparameterize",
+      "status": "OK",
+      "wall_seconds": 13.48399999999674
+    },
+    {
+      "result": "component18_blender_abf_apply\\result.json",
+      "tool": "reuse.apply",
+      "status": "OK",
+      "wall_seconds": 14.452999999979511
+    },
+    {
+      "result": "component18_blender_abf_check\\result.json",
+      "tool": "reuse.check_pair",
+      "status": "OK",
+      "wall_seconds": 21.68699999997625
+    },
+    {
+      "result": "component18_blender_lscm\\result.json",
+      "tool": "uv.reparameterize",
+      "status": "REJECTED",
+      "wall_seconds": 7.952999999979511
+    },
+    {
+      "result": "component18_unshare\\result.json",
+      "tool": "reuse.apply",
+      "status": "OK",
+      "wall_seconds": 12.28100000001723
+    },
+    {
+      "result": "component36_blender_abf\\result.json",
+      "tool": "uv.reparameterize",
+      "status": "OK",
+      "wall_seconds": 13.063000000023749
+    },
+    {
+      "result": "component36_blender_abf_apply\\result.json",
+      "tool": "reuse.apply",
+      "status": "OK",
+      "wall_seconds": 12.811999999976251
+    },
+    {
+      "result": "component36_blender_abf_check\\result.json",
+      "tool": "reuse.check_pair",
+      "status": "OK",
+      "wall_seconds": 13.34399999998277
+    },
+    {
+      "result": "component36_blender_lscm\\result.json",
+      "tool": "uv.reparameterize",
+      "status": "REJECTED",
+      "wall_seconds": 7.8439999999827705
+    },
+    {
+      "result": "component36_unshare\\result.json",
+      "tool": "reuse.apply",
+      "status": "OK",
+      "wall_seconds": 13.75
+    },
+    {
+      "result": "foot_merged_islands\\result.json",
+      "tool": "view.render",
+      "status": "OK",
+      "wall_seconds": 2.5469999999622814
+    },
+    {
+      "result": "foot_repaired\\result.json",
+      "tool": "view.render",
+      "status": "OK",
+      "wall_seconds": 2.6089999999967404
+    },
+    {
+      "result": "foot_retained_islands\\result.json",
+      "tool": "view.render",
+      "status": "OK",
+      "wall_seconds": 2.375
+    },
+    {
+      "result": "formal\\merged_islands\\bake\\result.json",
+      "tool": "material.bake",
+      "status": "OK",
+      "wall_seconds": 47.79700000002049
+    },
+    {
+      "result": "formal\\merged_islands\\export\\result.json",
+      "tool": "asset.export",
+      "status": "OK",
+      "wall_seconds": 3.1089999999967404
+    },
+    {
+      "result": "formal\\merged_islands\\inspect\\result.json",
+      "tool": "uv.inspect",
+      "status": "OK",
+      "wall_seconds": 13.89100000000326
+    },
+    {
+      "result": "formal\\merged_islands\\pack\\result.json",
+      "tool": "uv.pack",
+      "status": "OK",
+      "wall_seconds": 35.25
+    },
+    {
+      "result": "formal\\merged_islands\\target\\result.json",
+      "tool": "material.target",
+      "status": "OK",
+      "wall_seconds": 3.25
+    },
+    {
+      "result": "formal\\merged_islands\\validate\\result.json",
+      "tool": "quality.validate",
+      "status": "REJECTED",
+      "wall_seconds": 159.81300000002375
+    },
+    {
+      "result": "formal\\merged_islands\\views\\result.json",
+      "tool": "view.render",
+      "status": "OK",
+      "wall_seconds": 4.85899999999674
+    },
+    {
+      "result": "formal\\retained_islands\\bake\\result.json",
+      "tool": "material.bake",
+      "status": "OK",
+      "wall_seconds": 49.89100000000326
+    },
+    {
+      "result": "formal\\retained_islands\\export\\result.json",
+      "tool": "asset.export",
+      "status": "OK",
+      "wall_seconds": 3.0619999999762513
+    },
+    {
+      "result": "formal\\retained_islands\\inspect\\result.json",
+      "tool": "uv.inspect",
+      "status": "OK",
+      "wall_seconds": 13.75
+    },
+    {
+      "result": "formal\\retained_islands\\pack\\result.json",
+      "tool": "uv.pack",
+      "status": "OK",
+      "wall_seconds": 32.53100000001723
+    },
+    {
+      "result": "formal\\retained_islands\\target\\result.json",
+      "tool": "material.target",
+      "status": "OK",
+      "wall_seconds": 2.9689999999827705
+    },
+    {
+      "result": "formal\\retained_islands\\validate\\result.json",
+      "tool": "quality.validate",
+      "status": "OK",
+      "wall_seconds": 168.68700000003446
+    },
+    {
+      "result": "formal\\retained_islands\\views\\result.json",
+      "tool": "view.render",
+      "status": "OK",
+      "wall_seconds": 4.9060000000172295
+    },
+    {
+      "result": "sole_apply\\result.json",
+      "tool": "reuse.apply",
+      "status": "OK",
+      "wall_seconds": 14.295999999972992
+    },
+    {
+      "result": "sole_check\\result.json",
+      "tool": "reuse.check_pair",
+      "status": "OK",
+      "wall_seconds": 20.780999999959022
+    },
+    {
+      "result": "sole_formal\\sole_repaired_islands\\bake\\result.json",
+      "tool": "material.bake",
+      "status": "OK",
+      "wall_seconds": 49.45299999997951
+    },
+    {
+      "result": "sole_formal\\sole_repaired_islands\\export\\result.json",
+      "tool": "asset.export",
+      "status": "OK",
+      "wall_seconds": 3.26500000001397
+    },
+    {
+      "result": "sole_formal\\sole_repaired_islands\\inspect\\result.json",
+      "tool": "uv.inspect",
+      "status": "OK",
+      "wall_seconds": 14.313000000023749
+    },
+    {
+      "result": "sole_formal\\sole_repaired_islands\\pack\\result.json",
+      "tool": "uv.pack",
+      "status": "OK",
+      "wall_seconds": 29.48499999998603
+    },
+    {
+      "result": "sole_formal\\sole_repaired_islands\\target\\result.json",
+      "tool": "material.target",
+      "status": "OK",
+      "wall_seconds": 3.280999999959022
+    },
+    {
+      "result": "sole_formal\\sole_repaired_islands\\validate\\result.json",
+      "tool": "quality.validate",
+      "status": "REJECTED",
+      "wall_seconds": 177.0470000000205
+    },
+    {
+      "result": "sole_formal\\sole_repaired_islands\\views\\result.json",
+      "tool": "view.render",
+      "status": "OK",
+      "wall_seconds": 4.85899999999674
+    },
+    {
+      "result": "sole_inner02\\result.json",
+      "tool": "seam.select",
+      "status": "OK",
+      "wall_seconds": 1.0
+    },
+    {
+      "result": "sole_middle02\\result.json",
+      "tool": "seam.select",
+      "status": "OK",
+      "wall_seconds": 1.0619999999762513
+    },
+    {
+      "result": "sole_reparameterize\\result.json",
+      "tool": "uv.reparameterize",
+      "status": "OK",
+      "wall_seconds": 13.202999999979511
+    },
+    {
+      "result": "sole_trunk02\\result.json",
+      "tool": "seam.select",
+      "status": "OK",
+      "wall_seconds": 1.0320000000065193
+    },
+    {
+      "result": "unshare\\result.json",
+      "tool": "reuse.apply",
+      "status": "OK",
+      "wall_seconds": 11.76600000000326
+    },
+    {
+      "result": "view_component18\\result.json",
+      "tool": "view.render",
+      "status": "OK",
+      "wall_seconds": 1.952999999979511
+    },
+    {
+      "result": "view_component36\\result.json",
+      "tool": "view.render",
+      "status": "OK",
+      "wall_seconds": 2.155999999959022
+    }
+  ],
+  "token_cost": null,
+  "fees": null,
+  "selected_case": "sole_repaired_islands",
+  "selection_scope": "AGENT_VISUAL_PREVIEW; formal render rejected",
+  "source_code_changed": false,
+  "reimport": {
+    "exports": [
+      {
+        "case": "retained_islands",
+        "label": "export",
+        "asset": "E:\\ReSem\\artifacts\\meshquery_v1\\island_merge01\\formal\\retained_islands\\export\\asset.glb",
+        "asset_sha256": "7747cee59cfe9866349351f1dfaf8de053c16d829190285368f31f1e05adc3e9",
+        "reimported_geometry_count": 1,
+        "face_count": 11450,
+        "expected_face_count": 11450,
+        "max_position_error": 0.0,
+        "max_corner_uv_error": 4.466114678081112e-08,
+        "uv_channels": [
+          "TEXCOORD_0"
+        ],
+        "embedded_texture_dimensions": [
+          2048,
+          2048,
+          4
+        ],
+        "embedded_texture_pixels_equal": true,
+        "geometry_uv_image_verified": true,
+        "verification_scope": "independent GLB parse + trimesh image/geometry/UV readback; not GPU/artist acceptance"
+      },
+      {
+        "case": "merged_islands",
+        "label": "export",
+        "asset": "E:\\ReSem\\artifacts\\meshquery_v1\\island_merge01\\formal\\merged_islands\\export\\asset.glb",
+        "asset_sha256": "c3ec21ca4281aea8978ec115965c5e0743c983c5d8f4ec243f5143b2611d2468",
+        "reimported_geometry_count": 1,
+        "face_count": 11450,
+        "expected_face_count": 11450,
+        "max_position_error": 0.0,
+        "max_corner_uv_error": 4.467508540884069e-08,
+        "uv_channels": [
+          "TEXCOORD_0"
+        ],
+        "embedded_texture_dimensions": [
+          2048,
+          2048,
+          4
+        ],
+        "embedded_texture_pixels_equal": true,
+        "geometry_uv_image_verified": true,
+        "verification_scope": "independent GLB parse + trimesh image/geometry/UV readback; not GPU/artist acceptance"
+      },
+      {
+        "case": "sole_repaired_islands",
+        "label": "export",
+        "asset": "E:\\ReSem\\artifacts\\meshquery_v1\\island_merge01\\sole_formal\\sole_repaired_islands\\export\\asset.glb",
+        "asset_sha256": "c9517fbff9cc9a60bf3861715ab58b4091bdc05b7dae93a5ad3ca08b874e8c6f",
+        "reimported_geometry_count": 1,
+        "face_count": 11450,
+        "expected_face_count": 11450,
+        "max_position_error": 0.0,
+        "max_corner_uv_error": 4.458647306915253e-08,
+        "uv_channels": [
+          "TEXCOORD_0"
+        ],
+        "embedded_texture_dimensions": [
+          2048,
+          2048,
+          4
+        ],
+        "embedded_texture_pixels_equal": true,
+        "geometry_uv_image_verified": true,
+        "verification_scope": "independent GLB parse + trimesh image/geometry/UV readback; not GPU/artist acceptance"
+      }
+    ],
+    "all_passed": true,
+    "full_pbr_passed": false,
+    "gpu_verified": false,
+    "human_accepted": false
+  }
+}

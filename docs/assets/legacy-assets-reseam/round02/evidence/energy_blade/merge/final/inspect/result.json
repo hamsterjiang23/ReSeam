@@ -1,0 +1,21 @@
+{
+  "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\merge\\harmonic_group0_apply\\snapshot\\snapshot.json",
+  "state_hash": "dffea30c8dda2db4b938576de4c76afd82e812d4acf3ffec36c7e1b208738869",
+  "asset_id": "20eedfc34bd1958a3745bd43c67a96ffa9c33e07691f3a671c01b20273f31f5d",
+  "status": "OK",
+  "execution_success": true,
+  "geometry_passed": true,
+  "final_quality_passed": null,
+  "report": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\merge\\final\\inspect\\inspection.json",
+  "chart_count": 2,
+  "shared_group_count": 1,
+  "unique_footprint": 0.7320529047528754,
+  "metrics_report": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\merge\\final\\inspect\\uv_metrics.json",
+  "metrics_verified": true,
+  "uv_connected_charts": 2,
+  "packing_owners": 1,
+  "actual_independent_tiles": 1,
+  "tool": "uv.inspect",
+  "wall_seconds": 1.4209999999729916,
+  "output": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\merge\\final\\inspect"
+}

@@ -1,0 +1,14 @@
+{
+  "blender_version": "4.5.11 LTS",
+  "available_methods": [
+    "ANGLE_BASED",
+    "CONFORMAL",
+    "MINIMUM_STRETCH"
+  ],
+  "requested_method": "ANGLE_BASED",
+  "threads": 1,
+  "device": "CPU",
+  "status": "OK",
+  "face_count": 350,
+  "geometry_modified": false
+}

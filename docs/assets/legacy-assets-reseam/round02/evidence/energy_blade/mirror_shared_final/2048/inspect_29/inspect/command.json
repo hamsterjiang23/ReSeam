@@ -1,0 +1,8 @@
+[
+  "E:\\ReSem\\.venv\\Scripts\\python.exe",
+  "-m",
+  "reseam.agent_tools.worker",
+  "uv.inspect",
+  "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\mirror_shared_final\\2048\\inspect_29\\inspect",
+  "300.0"
+]

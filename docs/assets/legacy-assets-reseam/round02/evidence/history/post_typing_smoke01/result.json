@@ -1,0 +1,15 @@
+{
+  "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\post_typing_smoke01\\snapshot\\snapshot.json",
+  "state_hash": "7dac16d128dfabed38034e9f96d23d551ce70745e6a5424c8650e72d1a162b7f",
+  "asset_id": "39b42e9b723383da8c78a904a91505fa20584b0b9824ac1619609672507f5185",
+  "faces": 450,
+  "vertices": 227,
+  "source_uv_preserved": true,
+  "material_validation": "NOT_RUN",
+  "geometry_passed": null,
+  "status": "OK",
+  "execution_success": true,
+  "tool": "asset.import",
+  "wall_seconds": 1.7650000000139698,
+  "output": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\post_typing_smoke01"
+}

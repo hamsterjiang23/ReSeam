@@ -1,0 +1,160 @@
+{
+  "asset": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\optcuts\\2048\\export\\asset.glb",
+  "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\optcuts\\2048\\pack_29\\snapshot\\snapshot.json",
+  "state_hash": "c1a2f95f59193f82d18ea048dc4bb0b4f1876dc7162384eee85f37b149a5c23b",
+  "asset_sha256": "49718e382258f02a1f315554cfda9f45e68bbca22ee2352b84ca425aa9428d2e",
+  "geometry_hash": "578e7e2b77bfc14f42065144ee7e0d5f89e9d01a0f0b1b1f3e04206ee71b257a",
+  "faces": 500,
+  "positions_max_abs_error": 4.980468759629986e-09,
+  "corner_uv0_max_abs_error": 2.9676291646296704e-08,
+  "geometry_passed": true,
+  "corner_uv0_passed": true,
+  "attributes": [
+    "POSITION",
+    "TEXCOORD_0"
+  ],
+  "extra_uv": [],
+  "required_texcoord_1": false,
+  "embedded_basecolor_size": [
+    2048,
+    2048
+  ],
+  "embedded_basecolor_pixel_equal_to_mip0": true,
+  "passed": true,
+  "scope": "raw GLB accessor bounds, ordered indexed face corners, float32 coordinates and UVs, hash-bound auxiliary UV sidecar, embedded BaseColor pixels; no engine/GPU/Shader test",
+  "mip_chain": [
+    {
+      "level": 0,
+      "size": [
+        2048,
+        2048
+      ],
+      "expected_side": 2048,
+      "size_passed": true,
+      "bytes": 4471561,
+      "sha256": "0a6fad59114b5e5161f3ce50369f1b9847d5381db36f04540c0d44d04cbc9bc8"
+    },
+    {
+      "level": 1,
+      "size": [
+        1024,
+        1024
+      ],
+      "expected_side": 1024,
+      "size_passed": true,
+      "bytes": 1344158,
+      "sha256": "f259d420ee84668f63b1f533394819d651ff19827dea4936ffddc219037cdaf0"
+    },
+    {
+      "level": 2,
+      "size": [
+        512,
+        512
+      ],
+      "expected_side": 512,
+      "size_passed": true,
+      "bytes": 389901,
+      "sha256": "9888b9309e52034d2157cae2a4ef018d511dc084b471ac2bf158d1b5b69cefa8"
+    },
+    {
+      "level": 3,
+      "size": [
+        256,
+        256
+      ],
+      "expected_side": 256,
+      "size_passed": true,
+      "bytes": 114519,
+      "sha256": "2888ed6d164be813e9617dae1d08aa2255ca077d18386aaa92e82d431af26867"
+    },
+    {
+      "level": 4,
+      "size": [
+        128,
+        128
+      ],
+      "expected_side": 128,
+      "size_passed": true,
+      "bytes": 34732,
+      "sha256": "0dd702e076802bcf9a525de482bf8ec19e7455240c570d282423e32aa5d5cf0e"
+    },
+    {
+      "level": 5,
+      "size": [
+        64,
+        64
+      ],
+      "expected_side": 64,
+      "size_passed": true,
+      "bytes": 10567,
+      "sha256": "f7c047b24780d0c77ad4f3c5e8a7c45aca653b8bccc690ff69b3a262f8540ccb"
+    },
+    {
+      "level": 6,
+      "size": [
+        32,
+        32
+      ],
+      "expected_side": 32,
+      "size_passed": true,
+      "bytes": 3219,
+      "sha256": "292192d5ec61afc4a69ca1558625e43bcf4d08b12172649de4ff8eaf412fee71"
+    },
+    {
+      "level": 7,
+      "size": [
+        16,
+        16
+      ],
+      "expected_side": 16,
+      "size_passed": true,
+      "bytes": 1026,
+      "sha256": "336fcd413901a07a00d81b9c75153d373057e769a2898319bc8384704dfb8411"
+    },
+    {
+      "level": 8,
+      "size": [
+        8,
+        8
+      ],
+      "expected_side": 8,
+      "size_passed": true,
+      "bytes": 332,
+      "sha256": "b67a923ab5eb649baad227aad71c842cdca6bf566a9fbe7ad4e083344860677e"
+    },
+    {
+      "level": 9,
+      "size": [
+        4,
+        4
+      ],
+      "expected_side": 4,
+      "size_passed": true,
+      "bytes": 136,
+      "sha256": "2027348c8fc9980323e93e0994a06764a2b243cc15bf7cf565bc77f2133ecb14"
+    },
+    {
+      "level": 10,
+      "size": [
+        2,
+        2
+      ],
+      "expected_side": 2,
+      "size_passed": true,
+      "bytes": 84,
+      "sha256": "719cc0d99a08bcb2c31f90eb52bf2da32811acff737a3c937492ac333eec9ba9"
+    },
+    {
+      "level": 11,
+      "size": [
+        1,
+        1
+      ],
+      "expected_side": 1,
+      "size_passed": true,
+      "bytes": 70,
+      "sha256": "b263b0d9c83484369bae4828ad3a25c7976acd37a0582253aec26a031678089c"
+    }
+  ],
+  "mip_chain_complete": true
+}

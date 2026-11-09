@@ -1,0 +1,58 @@
+{
+  "checks": [
+    {
+      "command": "uv run pytest tests/test_optcuts_agent_driver.py tests/test_optcuts_agent_report.py tests/test_chloe_hard_surface_driver.py -q",
+      "exit_code": 0,
+      "result": "7 passed in 0.77s"
+    },
+    {
+      "command": "uv run ruff check scripts/run_optcuts_agent_uv.py scripts/build_optcuts_agent_report.py tests/test_optcuts_agent_driver.py tests/test_optcuts_agent_report.py",
+      "chunk_id": "1689ad",
+      "wall_time_seconds": 0.203012,
+      "exit_code": 0,
+      "original_token_count": 5,
+      "output": "All checks passed!\n"
+    },
+    {
+      "command": "uv run basedpyright scripts/run_optcuts_agent_uv.py scripts/build_optcuts_agent_report.py tests/test_optcuts_agent_driver.py tests/test_optcuts_agent_report.py",
+      "chunk_id": "e4de74",
+      "wall_time_seconds": 1.4571038,
+      "exit_code": 0,
+      "original_token_count": 8,
+      "output": "0 errors, 0 warnings, 0 notes\n"
+    },
+    {
+      "command": "uv run --with pyyaml python -X utf8 C:/Users/admin/.codex/skills/.system/skill-creator/scripts/quick_validate.py E:/ReSem/skills/reseam-hard-surface",
+      "exit_code": 0,
+      "result": "Skill is valid!"
+    },
+    {
+      "command": "uv run --with pyyaml python -X utf8 C:/Users/admin/.codex/skills/.system/skill-creator/scripts/quick_validate.py C:/Users/admin/.codex/skills/reseam-hard-surface",
+      "exit_code": 0,
+      "result": "Skill is valid!"
+    },
+    {
+      "command": "uv run --with pyyaml python -X utf8 C:/Users/admin/.codex/skills/.system/skill-creator/scripts/quick_validate.py E:/ReSem/skills/reseam-uv",
+      "exit_code": 0,
+      "result": "Skill is valid!"
+    },
+    {
+      "command": "uv run --with pyyaml python -X utf8 C:/Users/admin/.codex/skills/.system/skill-creator/scripts/quick_validate.py C:/Users/admin/.codex/skills/reseam-uv",
+      "exit_code": 0,
+      "result": "Skill is valid!"
+    },
+    {
+      "operation": "Reload final portable GLBs using audit_glb; compare embedded BaseColor and corner UV against packed snapshot; verify 9 mip PNGs and equality with original export",
+      "chunk_id": "a58f91",
+      "wall_time_seconds": 7.9285929,
+      "exit_code": 0,
+      "original_token_count": 17,
+      "output": "{'final_glbs_reloaded': 12, 'all_passed': True, 'mip_files': 108}\r\n",
+      "details": "final_artifact_audit.json"
+    }
+  ],
+  "post_experiment_changes": "post_experiment_changes.json",
+  "results_recomputed_after_driver_fixes": false,
+  "review": "Independent read-only review of thin driver fixes and report: no remaining bugs found",
+  "scope": "UV + static BaseColor; all 12 numeric quality checks remain false; human/PBR/GPU not accepted"
+}

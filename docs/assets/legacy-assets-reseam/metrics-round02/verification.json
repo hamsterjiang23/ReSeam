@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "cases": 39,
+  "metric_fields": 45,
+  "csv_columns_including_metadata": 50,
+  "source_hashes_verified": 130,
+  "executed_modules_frozen": 5,
+  "working_code_ast_equals_executed_snapshot": true,
+  "corrected_label_run_numerically_identical_to_prior": true,
+  "historical_color_validations_checked": 30,
+  "original_low_without_uv": 2,
+  "native_pack_rejections_preserved": 6,
+  "same_geometry_pairs_checked": 3,
+  "sources_unchanged": true,
+  "new_bakes": 0,
+  "new_quality_scores": 0,
+  "actual_mip0_textures_dimension_and_hash_checked": 30,
+  "original_source_images": {
+    "chloe": {
+      "actual_source_size": [
+        256,
+        256
+      ],
+      "sha256_of_source_container": "7e01877f0633c18b4587641cd06140168a0f054d8de54b43e6ebecd347cc29ee"
+    },
+    "energy_blade": {
+      "actual_source_size": [
+        8192,
+        8192
+      ],
+      "sha256_of_source_container": "c60df75a9e3293caca0927507bfbf1619feebd96a184969e306ef0888ae41b9d"
+    },
+    "dragon": {
+      "actual_source_size": [
+        8192,
+        8192
+      ],
+      "sha256_of_source_container": "a5e0edbf7d13753d16d06f6aee1b2718d1199e6593a69eae9999fbe315334ace"
+    }
+  },
+  "report_local_links_checked": 17
+}

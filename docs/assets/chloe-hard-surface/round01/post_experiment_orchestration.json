@@ -1,0 +1,21 @@
+{
+  "change": "post-experiment per-geometry exclusive writer lock; UV/bake/acceptance logic unchanged",
+  "executed_script_sha256": "d2c0b4446ddcb209ebbf968389882246c733e547e5b132e3357a34f15512228a",
+  "current_script_sha256": "8730592629aa175eea4866daf13a07af2df83e83dab5915e8e1e323aeef227d0",
+  "original_call_body_equals_current_serial_body": true,
+  "all_other_trial_methods_ast_equal": true,
+  "unchanged_methods": [
+    "__init__",
+    "save",
+    "prepare",
+    "smoke",
+    "candidates",
+    "mirror_pairs",
+    "share",
+    "targets",
+    "evaluate"
+  ],
+  "tests": "67 passed in 3.92s; Ruff and basedpyright passed",
+  "requires_new_round_for_future_execution": true,
+  "past_artifacts_recomputed": false
+}

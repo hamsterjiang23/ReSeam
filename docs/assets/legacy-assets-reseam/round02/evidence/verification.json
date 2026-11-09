@@ -1,0 +1,39 @@
+{
+  "pytest": {
+    "passed": 116,
+    "seconds": 17.3,
+    "files": [
+      "test_agent_tools_projected_source.py",
+      "test_agent_tools_projected_mirror.py",
+      "test_agent_tools_uv_preservation.py",
+      "test_agent_tools_assets.py",
+      "test_agent_tools_material.py",
+      "test_agent_tools_color_reuse.py",
+      "test_agent_tools_color_reuse_audit.py",
+      "test_agent_tools_views.py",
+      "test_agent_tools_mirror_asset.py",
+      "test_agent_tools_symmetry_variant.py",
+      "test_agent_tools_compact_packing.py",
+      "test_legacy_report_ledger.py"
+    ]
+  },
+  "ruff": "All checks passed on changed Python files and new tests",
+  "basedpyright": "0 errors, 0 warnings on changed Python files and new tests",
+  "skill_validator": "repository and installed skills valid via uv run --with pyyaml python -X utf8 quick_validate.py",
+  "installed_skill_hashes_match": {
+    "SKILL.md": "b1ba8f2657bdbe1c2a15c1fa26267a8d7b97e66e6c0c52e9a004c8194742fbd5",
+    "references/meshquery.md": "1fa027ee649a7fbddace0a187a5b6af6dba7883488aea335fed199d553c7a9ed",
+    "references/projected-source-and-extra-uv.md": "5bbb9038e82d3e257488e7683134c0482fd056f3066811e93196bb1fb9176ba5",
+    "references/symmetry-reuse-and-merge.md": "b06f9aca48106d9f6419ae144accf4c0ce47a0bff4d2e7ddf9d1eab55a33ff4d"
+  },
+  "fresh_eye_review": "CLEAN after ledger reconciliation guard",
+  "post_typing_chloe_reimport": "post_experiment_code_check.json",
+  "geometry_quality_vs_file_integrity": "numerical quality remains separate; package performs independent raw GLB and full mip file checks",
+  "correct_resolution_inspections": {
+    "passed": 30,
+    "new_bakes": 0,
+    "new_quality_scores": 0,
+    "all_other_evaluation_fields_identical": true,
+    "frozen_kernel_source_files": 117
+  }
+}

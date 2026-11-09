@@ -1,0 +1,7 @@
+{
+  "status": "RETAINED_DEVELOPMENT_ROUND",
+  "reason": "projected-source spatial broad-phase revision; next comparison uses round02; no old/new evaluator mixing",
+  "terminated_orchestrator_pid": 164960,
+  "all_completed_outputs_retained": true,
+  "replacement_round": "round02"
+}

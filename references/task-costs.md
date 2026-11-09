@@ -1,17 +1,34 @@
-# 运行成本与资源边界
+# 本地CPU实验成本与读写范围
 
-- Agent工具集：两固定模型98次CLI调用合计278.971秒，12行256/128完整材质验证；串行CPU1、独立Blender1线程；同机存在测试进程，耗时只作诊断、不做速度排名。新龙10832面/8192²单色图的颜色烘焙+16采样/面验收，256/512/1024分别37.562/44/67秒，120秒/调用上限；启动可用RAM约23GiB，源图保持uint8，不转整图float64。只读model与旧资产，写artifacts/agent_tools_v1独立目录。`[verified: agent_tools_v1/verification.json；tripo_p2_smoke/color_baseline/result.json；tripo_p2_resolution_diagnostic/matrix.json；本轮Win32_OperatingSystem输出]`
+三模型本轮每条资产路径内部串行调用重工具，Blender／数值库限制单线程；两个历史资产在独立进程中并行，CPU忙时将本轮自有进程设为Idle优先级。启动时系统可用内存约20.8GiB；先保留256像素冒烟，再启动2048。`[verified: runner.py environment；本轮Get-Process PriorityClass=64及Win32_OperatingSystem FreePhysicalMemory=21828604KiB；opinion: 运行策略]`
 
-- 单元测试：小型合成网格，预计少于 1 分钟、低于 2 GB；仅写 pytest 缓存。
-- V2 固定岛对照：Blender 单提案实测 19.453 秒，xatlas 秒级；串行 CPU、Blender 4 线程，无 GPU，xatlas 内部线程数未另校验。只读 V1 round03，写独立 artifacts/v2/round；每运行 90 秒、全轮 3600 秒封顶，延续原 8 小时余额。
-- C++ 适配器编译：先复用已锁定 OptCuts 构建对象，单编译任务；写 artifacts/runtime。
-- UV 单模型：未知成本先冒烟，单进程、最多 4 CPU 线程、180 秒上限。
-- PartUV／可微贴图：串行占用 GPU，先测单模型；不得和另一个 GPU 任务重叠。
-- 实验矩阵：总 8 小时上限，状态和产物写独立 artifacts/v1/round 目录，输入及参考源码只读。
-- 初始资源快照：Windows 可用 RAM 41.7/63.8 GB；WSL 可用约 30 GB；RTX 4070 显存已用 892/12282 MiB，利用率 6%。后续启动前重新检查。
-- V2 联合：controller_smoke01 能量刀搜索132.7秒、下游43.1秒；龙搜索73.5秒（仅8候选）。正式24行各300秒上限，下游各270秒；串行CPU、Blender4线程，独立artifacts/v2_joint输出，资产/后端只读；启动时可用RAM约19GB、E盘空闲约1.2TB。
+|任务|成本|读|写|
+|---|---|---|---|
+|Chloe 450面静态颜色|round02镜像256：烘焙约2.2秒、验收约6.1秒；其它尺寸独立记录|原FBX、指定PNG、冻结源码|独立import_smoke和round目录|
+|高低模颜色投射、2048烘焙|round02能量刀xatlas：烘焙约307.5秒、验收约120.3秒；龙OptCuts：245.9／354.9秒；2K请求显式上限900秒，普通工具300秒，整路径2400秒|固定高低模、来源映射、冻结目标|独立工具目录、真实纹理和见证|
+|CPU几何/排布测试|小型先验；执行时保存实际耗时|构造案例、临时快照|pytest缓存/临时目录|
+|三模型45项只读补测|Chloe单案例64点AO探针0.594秒；正式39条目53.064秒，1000点、8射线、单线程，复用6份几何AO场景|round02已冻结快照、UV与颜色验收；旧指标协议|metrics-round01保留；标签修正的最终结果为metrics-round02，不改原数据|
 
-- 新求解器v1开发：CPU串行ROI，独立artifacts/budget_v1目录与每轮budget_account.json；首轮计划上限300秒，不扣历史V1/V2账户。ROI候选预探测实测4.33秒，单PBR高模加载0.47秒；8192² RGBA8约256MiB/颜色图，不展开全图float64，不使用GPU。启动可用RAM17.4/63.8GiB，E盘空闲1059GiB；正式首跑前再次检查。
-- 新求解器v1实测：development_round01/02分别4.265/7.437秒；resolution_diagnostic_round03为22.469秒；matched_raster_diagnostic_round04为2.000秒墙钟、1.921875秒CPU，未超各自账户上限。以上均为局部开发诊断，未训练神经网络。`[verified: artifacts/budget_v1/对应目录 result.json 与 budget_account.json]`
+无工具写入原资产；正式结果仅比较相同代码哈希的调用。若修正影响验收，创建新轮次保留旧结果。`[opinion]`
 
-- 新求解器完整模型探针：共同xatlas初始化约1秒/模型；多通道dragon36面冒烟2.360秒；全模型64²四项矩阵46.719秒（主要公共参考准备，排布阶段全部拒绝）。当前串行CPU，RAM可用约25GiB、E盘约1059GiB，不使用GPU；后续每target独立限时60秒，模型公共准备120秒，新轮独立budget_account，不扣旧账户。`[verified: full_mesh_probe02、material_multichannel_smoke02、budget_v1_complete_smoke_round01 结果；启动资源快照]`
+以上时间来自 `artifacts/legacy_assets_reseam/round02/calls.json` 对应 `material.bake`／`quality.validate` 调用，属于CPU实测，不代表数值质量通过。ROI探针加速只在独立的1万查询基准中成立，不能套作整轮加速比。`[verified: round02 calls.json；projection_roi_benchmark01/benchmark.json]`
+
+45项补测耗时单列，来源为`docs/assets/legacy-assets-reseam/metrics-round02/summary.json`的metric_seconds和unique_ao_geometries；这是逐案例测量时间之和，不含PDF排版和交付检查。`[verified: summary.json metric_seconds=53.06399999989662、unique_ao_geometries=6]`
+
+## 镜像龙全身整理 round02
+
+|任务|本轮已测成本|读|写|
+|---|---|---|---|
+|11338面局部展开与左右恢复|胸腹展开14.9秒、来源配对18.0秒、应用15.7秒；同一候选紧凑排布29.4秒。CPU忙时自有进程Idle导致部分调用约翻倍。|同一固定几何父快照、镜像创建来源、104份冻结源码|各候选独立工具目录与shape_trials.json|
+|2048同身份BaseColor|基线烘焙50.5秒、LOD0/1/2验收181.9秒；大腿53.3／184.1秒。检查范围96像素探针，数值渲染拒绝保留。|共同冻结source_original目标、候选UV|appearance独立目录及独立calls.json|
+
+几何批次与外观检查使用独立目录、独立调用账本，读取相同冻结输入；至多两个CPU工具并行。启动外观路径时空闲内存约20.7GiB、CPU55%，后续仍监控；不使用GPU。具体实测来自`artifacts/dragon_wholebody_refine/round02/`及`appearance/calls.json`。`[verified: 两份calls.json；本轮资源快照；opinion: 并行与监控规则]`
+
+## 镜像龙四成员共享 round03
+
+|任务|本轮已测成本|读|写|
+|---|---|---|---|
+|同一固定几何的四成员候选与三起点对照|19次公开调用合计478.283秒，包含3次真实四成员检查、3次应用和12次紧凑排布。|固定11338面父状态、镜像来源、107份冻结源码|round03各独立调用目录与measurements.json|
+|共同目标下的两份2048真实颜色对照|15次调用合计623.435秒，包含目标／视图、两次烘焙、LOD0/1/2验证及诊断导出。|相同冻结目标、候选与40份对照UV|appearance独立账本、真实GLB与完整mip|
+
+上述是调用墙钟时间之和，数值严格渲染均拒绝，Agent预览接受单列。阶段结束核对调用账本与实际顶层result.json一一对应，并独立重读两个导出；PDF排版与只读审核不计入几何调用账本。`[verified: round03/closure.json costs；appearance/summary.json；appearance/export_integrity.json]`

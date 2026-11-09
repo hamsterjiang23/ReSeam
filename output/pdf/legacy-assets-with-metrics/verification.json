@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "pages": 9,
+  "visual_pages": 6,
+  "metric_pages": 3,
+  "metrics_per_appendix_page": 45,
+  "all_nine_pages_rendered_and_decoded": true,
+  "original_visual_images_pixel_identical": true,
+  "source_pdf_unchanged": true,
+  "chinese_text_extractable": true,
+  "metric_pages_vector_text_no_raster": true,
+  "pdf_sha256": "3f94e0d58f01dfcf88f3ebcd7199d96f1945e79136e2ac7bacee6dad93d21c2f",
+  "preview": "preview.png"
+}

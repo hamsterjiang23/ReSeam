@@ -1,5 +1,7 @@
 # Agent UV 工具集 v1
 
+美术日常修整新增 [artist 工具](artist-tools.md)。七类能力与目视保留流程已接入相同 `tools list/describe/run`，`artist.compare` 输出可离线打开的点击对照工作台。`[verified: registry.py artist.*；artist_review.py compare]`
+
 颜色容忍度由 `reuse.check_color` 设置低／中／高球半径（默认中），检查原始颜色到冻结共享目标的Oklab距离；支持自定义半径与球外区域定位。调用前已有 `material.target`，具体参数见 `tools describe`，解释和真实三档结果见[颜色球](dragon-component-reuse.md#颜色球容忍度)。这是源外观变化检查，与烘焙重建验收分别报告。`[verified: color_tolerance.py check_color；opinion: 报告方式]`
 
 部件切缝、面角锚点和 `paired_domain` 的参数与流程见[部件重展开](dragon-component-reuse.md)。真实龙的部件范围为双翼、四肢和角刺；每组记录 OptCuts 实际切口和共同域回退，图块减少与外观结论分别报告。`[verified: 用户接受的部件计划；opinion: 报告方式]`
@@ -54,8 +56,10 @@ uv run reseam tools run asset.import --request import.json --output artifacts/my
 
 ## 输入、材料与验收边界
 
+不同高低模可显式调用 `material.target source_mode=projected_high`，冻结原低模到原高模的来源映射；该模式不读取候选贴图作为来源。镜像继承原低模面角重心映射，烘焙/验收输出有限见证及全体查询统计。FBX静态引用可传入 `basecolor_texture` 与 `uv_channel`，第二UV按来源继承并导出；[具体工作流](../skills/reseam-uv/references/projected-source-and-extra-uv.md)。`[verified: color_reuse.py freeze_target；projected_source.py；extra_uv.py]`
+
 - 几何输入为静态三角 GLB、三角 OBJ、经隔离 Blender 导入的 FBX。GLB 动画、骨骼、morph、非三角 primitive、混合有/无 UV 对象会明确拒绝。OBJ 完整材质由显式参考 GLB 提供。`[verified: assets.py _glb_arrays/import_asset]`
-- FBX 记录原对象/polygon/loop 到规范三角面的祖先关系及实际使用的 UV 层；Blender 不暴露原始 FBX UV 索引，因此保守保留 polygon 边界，不能声称恢复全部原始 UV 岛连接。额外 UV 层保存在原始冻结文件，不作为本轮共享与材质验收通道。`[verified: scripts/agent_asset_worker.py main；assets.py identity_policy]`
+- FBX 记录原对象/polygon/loop到规范三角面的祖先关系；原始控制点、polygon顺序及UV值核验一致时，恢复原FBX的UVIndex身份，否则保守保留loop边界并记录原因。额外UV以哈希绑定的逐角数组保存，镜像按来源重心坐标继承，导出为TEXCOORD_1及后续通道。`[verified: scripts/agent_fbx_uv.py restore_loop_uv_ids；agent_tools/extra_uv.py；material.py _preserve_export_uv]`
 - 极小三角形被 xatlas 返回全零 UV 时，`repair_degenerate_faces=true` 才会隔离这些原面、生成内禀等距三角 UV；随后必须排布，原面不删改。`[verified: assets.py uv_repair / repaired]`
 - 完整材质目前限单实例、单 primitive、单材质、单 UV 的标准不透明 PBR；保留源法线/切线、材质因子和采样环绕模式。非法/不支持的扩展、发光、顶点色等明确拒绝。缺贴图但有合法 glTF 常量时使用定义中的常量，不伪造高模纹理。`[verified: material.py _reference / _wraps]`
 - 目标导出使用显式逐面法线与 glTF TBN，源法线保持；Blender 正反镜像切线转换经过构造测试，输入自定义切线不能在 Blender 保持时拒绝。`[verified: material.py _blender_atlas；tests/test_bake_variant_bake.py 镜像测试]`

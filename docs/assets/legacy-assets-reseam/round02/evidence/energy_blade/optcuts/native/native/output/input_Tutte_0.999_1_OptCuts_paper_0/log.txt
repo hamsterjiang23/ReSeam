@@ -1,0 +1,335 @@
+71: 37.2404 0.731461 253
+measure = 37.2404, b = 4.1, updated lambda = 0.970711
+boundary op V 253
+boundary edge splitted
+160: 11.8058 3.51648 264
+measure = 11.8058, b = 4.1, updated lambda = 0.976104
+boundary op V 264
+boundary edge splitted
+273: 10.3515 4.25248 267
+measure = 10.3515, b = 4.1, updated lambda = 0.97921
+boundary op V 267
+boundary edge splitted
+317: 9.45113 5.08696 272
+measure = 9.45113, b = 4.1, updated lambda = 0.981292
+boundary op V 272
+boundary edge splitted
+338: 8.14785 6.0666 278
+measure = 8.14785, b = 4.1, updated lambda = 0.982609
+boundary op V 278
+boundary edge splitted
+345: 8.05765 6.25824 280
+measure = 8.05765, b = 4.1, updated lambda = 0.983729
+boundary op V 280
+boundary edge splitted
+394: 6.67782 7.40421 287
+measure = 6.67782, b = 4.1, updated lambda = 0.984384
+boundary op V 287
+boundary edge splitted
+399: 6.66471 7.50604 288
+measure = 6.66471, b = 4.1, updated lambda = 0.984985
+boundary op V 288
+boundary edge splitted
+407: 6.57366 7.73353 290
+measure = 6.57366, b = 4.1, updated lambda = 0.985523
+boundary op V 290
+edge merged
+408: 6.57366 7.60582 289
+measure = 6.57366, b = 4.1, updated lambda = 0.986024
+boundary op V 289
+boundary edge splitted
+444: 5.77452 8.59129 294
+measure = 5.77452, b = 4.1, updated lambda = 0.986343
+boundary op V 294
+boundary edge splitted
+454: 5.67733 8.89645 296
+measure = 5.67733, b = 4.1, updated lambda = 0.986632
+boundary op V 296
+edge merged
+458: 5.67798 8.7134 295
+measure = 5.67798, b = 4.1, updated lambda = 0.986908
+boundary op V 295
+boundary edge splitted
+473: 5.65625 8.9401 299
+measure = 5.65625, b = 4.1, updated lambda = 0.987169
+boundary op V 299
+boundary edge splitted
+485: 5.63356 9.43912 302
+measure = 5.63356, b = 4.1, updated lambda = 0.987417
+boundary op V 302
+boundary edge splitted
+518: 5.26536 9.96434 306
+measure = 5.26536, b = 4.1, updated lambda = 0.987599
+boundary op V 306
+edge merged
+520: 5.26512 9.78649 305
+measure = 5.26512, b = 4.1, updated lambda = 0.987776
+boundary op V 305
+interior edge splitted
+interior split 306
+575: 4.90099 11.0184 315
+measure = 4.90099, b = 4.1, updated lambda = 0.987894
+boundary op V 315
+boundary edge splitted
+605: 4.67389 11.4539 318
+measure = 4.67389, b = 4.1, updated lambda = 0.987978
+boundary op V 318
+boundary edge splitted
+640: 4.57034 12.4295 328
+measure = 4.57034, b = 4.1, updated lambda = 0.988046
+boundary op V 328
+boundary edge splitted
+644: 4.56699 12.5276 329
+measure = 4.56699, b = 4.1, updated lambda = 0.988112
+boundary op V 329
+interior edge splitted
+interior split 330
+671: 4.45573 13.0932 335
+measure = 4.45573, b = 4.1, updated lambda = 0.988162
+boundary op V 335
+interior edge splitted
+interior split 336
+685: 4.38215 13.5765 339
+measure = 4.38215, b = 4.1, updated lambda = 0.988202
+boundary op V 339
+interior edge splitted
+interior split 340
+714: 4.30986 14.1325 342
+measure = 4.30986, b = 4.1, updated lambda = 0.988231
+boundary op V 342
+interior edge splitted
+interior split 343
+723: 4.28321 14.367 345
+measure = 4.28321, b = 4.1, updated lambda = 0.988256
+boundary op V 345
+interior edge splitted
+interior split 346
+742: 4.2636 14.5958 348
+measure = 4.2636, b = 4.1, updated lambda = 0.988279
+boundary op V 348
+boundary edge splitted
+749: 4.25756 14.6682 349
+measure = 4.25756, b = 4.1, updated lambda = 0.9883
+boundary op V 349
+interior edge splitted
+interior split 350
+757: 4.20902 15.0129 353
+measure = 4.20902, b = 4.1, updated lambda = 0.988315
+boundary op V 353
+boundary edge splitted
+765: 4.20317 15.1091 355
+measure = 4.20317, b = 4.1, updated lambda = 0.98833
+boundary op V 355
+boundary edge splitted
+768: 4.20148 15.1684 356
+measure = 4.20148, b = 4.1, updated lambda = 0.988343
+boundary op V 356
+interior edge splitted
+interior split 357
+777: 4.18736 15.3733 359
+measure = 4.18736, b = 4.1, updated lambda = 0.988355
+boundary op V 359
+boundary edge splitted
+792: 4.17631 15.4776 361
+measure = 4.17631, b = 4.1, updated lambda = 0.988366
+boundary op V 361
+boundary edge splitted
+801: 4.16994 15.6111 363
+measure = 4.16994, b = 4.1, updated lambda = 0.988375
+boundary op V 363
+edge merged
+803: 4.16987 15.5387 362
+measure = 4.16987, b = 4.1, updated lambda = 0.988385
+boundary op V 362
+curUpdated = 0.988394, increase
+iterativelyUpdated = 0.995418, increased, current eDec = -1.50302e-07, 0.000185564; id: 59, 2
+measure = 4.16987, b = 4.1, updated lambda = 0.995418
+boundary edge splitted without querying again
+816: 4.16538 15.7977 366
+measure = 4.16538, b = 4.1, updated lambda = 0.995419
+boundary op V 366
+interior edge splitted
+interior split 367
+831: 4.15686 16.093 369
+measure = 4.15686, b = 4.1, updated lambda = 0.995421
+boundary op V 369
+interior edge splitted
+interior split 370
+840: 4.14787 16.568 373
+measure = 4.14787, b = 4.1, updated lambda = 0.995422
+boundary op V 373
+boundary edge splitted
+844: 4.14086 16.6815 375
+measure = 4.14086, b = 4.1, updated lambda = 0.995422
+boundary op V 375
+boundary edge splitted
+850: 4.13639 16.8509 378
+measure = 4.13639, b = 4.1, updated lambda = 0.995423
+boundary op V 378
+curUpdated = 0.995424, increase
+iterativelyUpdated = 0.99602, increased, current eDec = -6.80771e-09, 0.000554709; id: 44, 0
+measure = 4.13639, b = 4.1, updated lambda = 0.99602
+boundary edge splitted without querying again
+852: 4.13614 16.8998 379
+measure = 4.13614, b = 4.1, updated lambda = 0.99602
+boundary op V 379
+curUpdated = 0.996021, increase
+iterativelyUpdated = 0.996539, increased, current eDec = -3.68342e-08, 0.000492687; id: 48, 0
+measure = 4.13614, b = 4.1, updated lambda = 0.996539
+boundary edge splitted without querying again
+854: 4.13566 16.9887 380
+measure = 4.13566, b = 4.1, updated lambda = 0.99654
+boundary op V 380
+curUpdated = 0.99654, increase
+iterativelyUpdated = 0.998655, increased, current eDec = -3.7023e-09, 0.000239957; id: 36, 0
+measure = 4.13566, b = 4.1, updated lambda = 0.998655
+boundary edge splitted without querying again
+859: 4.13357 17.2162 383
+measure = 4.13357, b = 4.1, updated lambda = 0.998655
+boundary op V 383
+boundary edge splitted
+864: 4.13201 17.4149 385
+measure = 4.13201, b = 4.1, updated lambda = 0.998655
+boundary op V 385
+boundary edge splitted
+871: 4.12633 17.6418 387
+measure = 4.12633, b = 4.1, updated lambda = 0.998655
+boundary op V 387
+boundary edge splitted
+879: 4.12166 18.0714 391
+measure = 4.12166, b = 4.1, updated lambda = 0.998655
+boundary op V 391
+boundary edge splitted
+884: 4.12056 18.2638 393
+measure = 4.12056, b = 4.1, updated lambda = 0.998655
+boundary op V 393
+curUpdated = 0.998655, increase
+iterativelyUpdated = 0.998793, increased, current eDec = -2.98231e-09, 0.000237778; id: 35, 1
+measure = 4.12056, b = 4.1, updated lambda = 0.998793
+boundary edge splitted without querying again
+895: 4.11696 18.4717 396
+measure = 4.11696, b = 4.1, updated lambda = 0.998793
+boundary op V 396
+curUpdated = 0.998793, increase
+iterativelyUpdated = 0.999111, increased, current eDec = -6.21004e-10, 9.23427e-05; id: 45, 0
+measure = 4.11696, b = 4.1, updated lambda = 0.999111
+boundary edge splitted without querying again
+898: 4.11603 18.7359 397
+measure = 4.11603, b = 4.1, updated lambda = 0.999111
+boundary op V 397
+edge merged
+899: 4.116 18.6869 396
+measure = 4.116, b = 4.1, updated lambda = 0.999111
+boundary op V 396
+curUpdated = 0.999111, increase
+iterativelyUpdated = 0.999137, increased, current eDec = -9.99196e-10, 7.96361e-05; id: 33, 0
+measure = 4.116, b = 4.1, updated lambda = 0.999137
+boundary edge splitted without querying again
+905: 4.1077 18.9473 400
+measure = 4.1077, b = 4.1, updated lambda = 0.999137
+boundary op V 400
+curUpdated = 0.999137, increase
+iterativelyUpdated = 0.999236, increased, current eDec = -3.18793e-10, 2.927e-05; id: 57, 0
+measure = 4.1077, b = 4.1, updated lambda = 0.999236
+boundary edge splitted without querying again
+908: 4.10756 19.0314 401
+measure = 4.10756, b = 4.1, updated lambda = 0.999236
+boundary op V 401
+curUpdated = 0.999236, increase
+iterativelyUpdated = 0.999294, increased, current eDec = 1.15017e-05, -2.8403e-10; id: 73, 0
+measure = 4.10756, b = 4.1, updated lambda = 0.999294
+interior edge splitted without querying again
+922: 4.0954 19.6571 405
+measure = 4.0954, b = 4.1, updated lambda = 0.999294
+boundary op V 405
+boundary edge splitted
+926: 4.09434 19.7224 407
+measure = 4.09434, b = 4.1, updated lambda = 0.999294
+boundary op V 407
+boundary edge splitted
+943: 4.09206 19.9861 410
+measure = 4.09206, b = 4.1, updated lambda = 0.999294
+boundary op V 410
+boundary edge splitted
+945: 4.09171 20.1388 412
+measure = 4.09171, b = 4.1, updated lambda = 0.999294
+boundary op V 412
+boundary edge splitted
+949: 4.09124 20.2231 413
+measure = 4.09124, b = 4.1, updated lambda = 0.999294
+boundary op V 413
+curUpdated = 0.999294, decrease
+iterativelyUpdated = 0.996326, decrease for switch
+iterativelyUpdated = 0.994408, decreased, current eDec = -1.23562e-08
+measure = 4.09124, b = 4.1, updated lambda = 0.994408
+corner edge merged without querying again
+952: 4.09144 20.139 412
+measure = 4.09144, b = 4.1, updated lambda = 0.994408
+boundary op V 412
+curUpdated = 0.994407, decrease
+iterativelyUpdated = 0.992989, decreased, current eDec = -5.20066e-09
+measure = 4.09144, b = 4.1, updated lambda = 0.992989
+corner edge merged without querying again
+954: 4.09191 20.0548 411
+measure = 4.09191, b = 4.1, updated lambda = 0.992989
+boundary op V 411
+curUpdated = 0.992989, decrease
+iterativelyUpdated = 0.988366, decrease for switch
+iterativelyUpdated = 0.982177, decreased, current eDec = -1.3926e-07
+measure = 4.09191, b = 4.1, updated lambda = 0.982177
+corner edge merged without querying again
+edge merged
+959: 4.093 19.8625 409
+measure = 4.093, b = 4.1, updated lambda = 0.982175
+boundary op V 409
+curUpdated = 0.982173, decrease
+iterativelyUpdated = 0.981843, decreased, current eDec = -1.5221e-07
+measure = 4.093, b = 4.1, updated lambda = 0.981843
+corner edge merged without querying again
+edge merged
+edge merged
+964: 4.09454 19.5749 406
+measure = 4.09454, b = 4.1, updated lambda = 0.981841
+boundary op V 406
+curUpdated = 0.981839, decrease
+iterativelyUpdated = 0.967544, decrease for switch
+iterativelyUpdated = 0.960646, decreased, current eDec = -1.94242e-06
+measure = 4.09454, b = 4.1, updated lambda = 0.960646
+corner edge merged without querying again
+969: 4.09623 19.3108 405
+measure = 4.09623, b = 4.1, updated lambda = 0.960641
+boundary op V 405
+curUpdated = 0.960636, decrease
+iterativelyUpdated = 0.950385, decreased, current eDec = -1.3672e-07
+measure = 4.09623, b = 4.1, updated lambda = 0.950385
+corner edge merged without querying again
+973: 4.09782 19.2481 404
+measure = 4.09782, b = 4.1, updated lambda = 0.950381
+boundary op V 404
+curUpdated = 0.950377, decrease
+iterativelyUpdated = 0.931525, decreased, current eDec = -1.75396e-08
+measure = 4.09782, b = 4.1, updated lambda = 0.931525
+corner edge merged without querying again
+976: 4.10103 19.1901 403
+measure = 4.10103, b = 4.1, updated lambda = 0.931533
+boundary op V 403
+curUpdated = 0.93154, increase
+iterativelyUpdated = 0.934142, increase for switch
+iterativelyUpdated = 0.958643, increased, current eDec = -1.03321e-07, 0.00576799; id: 0, 2
+measure = 4.10103, b = 4.1, updated lambda = 0.958643
+boundary edge splitted without querying again
+979: 4.09782 19.2481 404
+measure = 4.09782, b = 4.1, updated lambda = 0.95864
+boundary op V 404
+curUpdated = 0.958637, decrease
+iterativelyUpdated = 0.951243, decrease for switch
+iterativelyUpdated = 0.931523, decreased, current eDec = -1.35019e-08
+measure = 4.09782, b = 4.1, updated lambda = 0.931523
+corner edge merged without querying again
+982: 4.10103 19.1901 403
+19.1901, 0.0684746, 4.10103
+19.1901, 0.0684772, 4.10103
+oscillation detected at measure = 4.10103, b = 4.1lambda = 0.931523
+979, 982
+rolled back to best feasible in iter 979
+optimization converged, with 8s.

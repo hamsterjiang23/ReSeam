@@ -1,0 +1,29 @@
+{
+  "status": "OK",
+  "execution_success": true,
+  "scope": "basecolor_reuse",
+  "bake": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\optcuts\\2048\\bake\\bake.json",
+  "target": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\optcuts\\frozen_target\\target.json",
+  "payload_bytes": 22369620,
+  "quality_accepted": false,
+  "full_pbr_passed": false,
+  "geometry_profile": {
+    "resolution": 2048,
+    "gap_pixels": 4.0,
+    "border_pixels": 4.0,
+    "correspondence_fraction": 0.08,
+    "normal_angle_degrees": 180.0,
+    "maximum_anisotropy": 2.0,
+    "mean_shape_limit": 0.025,
+    "tail_shape_limit": 0.1,
+    "maximum_density_ratio": 2.0,
+    "quality_constraints": false
+  },
+  "geometry_profile_hash": "bb7adcd086144b87f68d889c5192d02c4ed0389cdc4765dd7465f878f1e381ed",
+  "geometry_policy": "explicit_custom",
+  "strict_geometry_profile_applied": false,
+  "artist_reviewed": false,
+  "tool": "material.bake",
+  "wall_seconds": 322.5470000000205,
+  "output": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\optcuts\\2048\\bake"
+}

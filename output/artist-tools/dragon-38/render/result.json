@@ -1,0 +1,153 @@
+{
+  "preview": "E:\\ReSem\\output\\artist-tools\\dragon-38\\render\\preview.json",
+  "viewer": "E:\\ReSem\\output\\artist-tools\\dragon-38\\render\\preview.html",
+  "images": [
+    {
+      "path": "E:\\ReSem\\output\\artist-tools\\dragon-38\\render\\material-front-studio-1.png",
+      "channel": "material",
+      "camera": "front",
+      "light": "studio",
+      "distance": 1.0
+    },
+    {
+      "path": "E:\\ReSem\\output\\artist-tools\\dragon-38\\render\\material-front-studio-2.png",
+      "channel": "material",
+      "camera": "front",
+      "light": "studio",
+      "distance": 2.0
+    },
+    {
+      "path": "E:\\ReSem\\output\\artist-tools\\dragon-38\\render\\material-front-side-1.png",
+      "channel": "material",
+      "camera": "front",
+      "light": "side",
+      "distance": 1.0
+    },
+    {
+      "path": "E:\\ReSem\\output\\artist-tools\\dragon-38\\render\\material-front-side-2.png",
+      "channel": "material",
+      "camera": "front",
+      "light": "side",
+      "distance": 2.0
+    },
+    {
+      "path": "E:\\ReSem\\output\\artist-tools\\dragon-38\\render\\material-oblique-studio-1.png",
+      "channel": "material",
+      "camera": "oblique",
+      "light": "studio",
+      "distance": 1.0
+    },
+    {
+      "path": "E:\\ReSem\\output\\artist-tools\\dragon-38\\render\\material-oblique-studio-2.png",
+      "channel": "material",
+      "camera": "oblique",
+      "light": "studio",
+      "distance": 2.0
+    },
+    {
+      "path": "E:\\ReSem\\output\\artist-tools\\dragon-38\\render\\material-oblique-side-1.png",
+      "channel": "material",
+      "camera": "oblique",
+      "light": "side",
+      "distance": 1.0
+    },
+    {
+      "path": "E:\\ReSem\\output\\artist-tools\\dragon-38\\render\\material-oblique-side-2.png",
+      "channel": "material",
+      "camera": "oblique",
+      "light": "side",
+      "distance": 2.0
+    },
+    {
+      "path": "E:\\ReSem\\output\\artist-tools\\dragon-38\\render\\basecolor-front-studio-1.png",
+      "channel": "basecolor",
+      "camera": "front",
+      "light": "studio",
+      "distance": 1.0
+    },
+    {
+      "path": "E:\\ReSem\\output\\artist-tools\\dragon-38\\render\\basecolor-front-studio-2.png",
+      "channel": "basecolor",
+      "camera": "front",
+      "light": "studio",
+      "distance": 2.0
+    },
+    {
+      "path": "E:\\ReSem\\output\\artist-tools\\dragon-38\\render\\basecolor-front-side-1.png",
+      "channel": "basecolor",
+      "camera": "front",
+      "light": "side",
+      "distance": 1.0
+    },
+    {
+      "path": "E:\\ReSem\\output\\artist-tools\\dragon-38\\render\\basecolor-front-side-2.png",
+      "channel": "basecolor",
+      "camera": "front",
+      "light": "side",
+      "distance": 2.0
+    },
+    {
+      "path": "E:\\ReSem\\output\\artist-tools\\dragon-38\\render\\basecolor-oblique-studio-1.png",
+      "channel": "basecolor",
+      "camera": "oblique",
+      "light": "studio",
+      "distance": 1.0
+    },
+    {
+      "path": "E:\\ReSem\\output\\artist-tools\\dragon-38\\render\\basecolor-oblique-studio-2.png",
+      "channel": "basecolor",
+      "camera": "oblique",
+      "light": "studio",
+      "distance": 2.0
+    },
+    {
+      "path": "E:\\ReSem\\output\\artist-tools\\dragon-38\\render\\basecolor-oblique-side-1.png",
+      "channel": "basecolor",
+      "camera": "oblique",
+      "light": "side",
+      "distance": 1.0
+    },
+    {
+      "path": "E:\\ReSem\\output\\artist-tools\\dragon-38\\render\\basecolor-oblique-side-2.png",
+      "channel": "basecolor",
+      "camera": "oblique",
+      "light": "side",
+      "distance": 2.0
+    }
+  ],
+  "unavailable": [
+    {
+      "channel": "normal",
+      "reason": "NORMAL_TEXTURE_NOT_PRESENT"
+    }
+  ],
+  "materials": [
+    {
+      "object": "geometry_0",
+      "materials": [
+        {
+          "name": "Material_0",
+          "image_textures": [
+            "Image_0"
+          ]
+        }
+      ]
+    }
+  ],
+  "blender_version": "4.5.11 LTS",
+  "geometry_and_uv_reimport_match": true,
+  "comparison_tolerance": 0.0001,
+  "distance_mode": "orthographic relative screen size; not explicit mip-level validation",
+  "state_hash": "8ebd51855f3cc614408abfefb5505656eea721a24ca3e02c80970a344f7aa813",
+  "model_sha256": "32df4061fac460b75d6393ebfb3735db0cc1087891e839ad5dad9c64e5599a12",
+  "model": "E:\\ReSem\\output\\dragon-wholebody-refine\\fewer-tiles-38\\model.glb",
+  "renderer": "Blender Cycles CPU",
+  "worker_sha256": "cb4637bb4a1e0296b383a2005f326d4c8778b3713f509408ce33ec1ef9709cfa",
+  "numerical_acceptance": "not_used",
+  "visual_decision": "pending",
+  "status": "OK",
+  "execution_success": true,
+  "tool": "artist.preview",
+  "wall_seconds": 10.812999999849126,
+  "output": "E:\\ReSem\\output\\artist-tools\\dragon-38\\render"
+}

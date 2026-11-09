@@ -1,0 +1,21 @@
+{
+  "images": {
+    "front": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\with_original_input01\\checker\\front.png",
+    "uv": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\with_original_input01\\checker\\uv.png"
+  },
+  "face_rasters": {
+    "front": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\with_original_input01\\checker\\front_faces.npz"
+  },
+  "state_hash": "093a37ec01937cdf70a9923028855d3d8f84e04960504d2b742ff00e6cca16ce",
+  "picked_faces": {
+    "front": []
+  },
+  "report": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\with_original_input01\\checker\\views.json",
+  "quality_evidence": false,
+  "coordinate_convention": "Y-up; front +Z, back -Z, left +X, right -X; orthographic auto-fit",
+  "status": "OK",
+  "execution_success": true,
+  "tool": "view.render",
+  "wall_seconds": 2.077999999979511,
+  "output": "E:\\ReSem\\artifacts\\dragon_paper_baselines\\with_original_input01\\checker"
+}

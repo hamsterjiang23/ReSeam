@@ -1,0 +1,12 @@
+{
+  "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\mirror_shared_final\\64\\pack_17\\snapshot\\snapshot.json",
+  "profile": {
+    "quality_constraints": false,
+    "normal_angle_degrees": 180.0,
+    "correspondence_fraction": 0.08,
+    "resolution": 64,
+    "gap_pixels": 1,
+    "border_pixels": 1
+  },
+  "timeout_seconds": 300
+}

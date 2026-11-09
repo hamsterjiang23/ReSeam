@@ -1,0 +1,18 @@
+{
+  "snapshot": "E:\\ReSem\\artifacts\\dragon_reuse_development\\topology_restore_preflight01\\semantic_patches\\snapshot\\snapshot.json",
+  "state_hash": "093a37ec01937cdf70a9923028855d3d8f84e04960504d2b742ff00e6cca16ce",
+  "size": 1024,
+  "uv_labels": "owners",
+  "timeout_seconds": 300,
+  "mode": "basecolor",
+  "seams": false,
+  "annotate": false,
+  "texture": "E:\\ReSem\\model\\dragon\\tripo_p2\\blue dragon 3d model\\blue_dragon_3d_model.fbm\\blue_dragon_3d_model_basecolor.jpg",
+  "cameras": [
+    {
+      "name": "oblique",
+      "azimuth": 35,
+      "elevation": 15
+    }
+  ]
+}

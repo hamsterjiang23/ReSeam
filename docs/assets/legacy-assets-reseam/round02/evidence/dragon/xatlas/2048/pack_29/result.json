@@ -1,0 +1,9 @@
+{
+  "status": "REJECTED",
+  "reason": "PACK_SIMILARITY_COLLAPSED_OWNER",
+  "execution_success": false,
+  "final_quality_passed": false,
+  "tool": "uv.pack",
+  "wall_seconds": 18.484000000054948,
+  "output": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\xatlas\\2048\\pack_29"
+}

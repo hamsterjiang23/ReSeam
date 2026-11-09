@@ -1,0 +1,30 @@
+{
+  "rows": 21,
+  "all_21_reimported": true,
+  "all_21_numerical_rejections": true,
+  "full_mips_written": true,
+  "rgba8_full_mip_bytes": [
+    349524
+  ],
+  "tool_provenance_audits": 329,
+  "all_code_provenance_matches": true,
+  "frozen_source_files": 120,
+  "figure_files": [
+    {
+      "path": "docs\\assets\\chloe-hard-surface\\round01\\mirror_comparison.png",
+      "size": [
+        1600,
+        1080
+      ],
+      "sha256": "9d62d32c67ecf442c17ff2316a2e9e585366d4e675506a3bf9b4fc28f67b6827"
+    },
+    {
+      "path": "docs\\assets\\chloe-hard-surface\\round01\\original_comparison.png",
+      "size": [
+        1280,
+        1080
+      ],
+      "sha256": "31f9eaadd28bcfa4b6588041dc2fbae7fde4212404372ecb60d5b302b57f471e"
+    }
+  ]
+}

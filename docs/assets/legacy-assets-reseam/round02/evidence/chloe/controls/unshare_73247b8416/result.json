@@ -1,0 +1,15 @@
+{
+  "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\controls\\unshare_73247b8416\\snapshot\\snapshot.json",
+  "state_hash": "13a7b64180515852a4cd3a209c7e22e52222c37cc03113f13adf7ea9ab550549",
+  "asset_id": "7a12444fe2c5e0cd96e5060f6fe9b924ccfe0d4020c82e0179707c951c7751bc",
+  "status": "OK",
+  "execution_success": true,
+  "geometry_passed": true,
+  "hard_geometry_passed": true,
+  "final_quality_passed": null,
+  "requires_rebake": true,
+  "report": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\controls\\unshare_73247b8416\\geometry.json",
+  "tool": "reuse.apply",
+  "wall_seconds": 1.187999999965541,
+  "output": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\controls\\unshare_73247b8416"
+}

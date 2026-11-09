@@ -1,0 +1,15 @@
+{
+  "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\source\\import\\snapshot\\snapshot.json",
+  "state_hash": "73fc4bac4e3d1246cab01c79973dddc34343b6555e78593de932f3c7f9182b46",
+  "asset_id": "39b42e9b723383da8c78a904a91505fa20584b0b9824ac1619609672507f5185",
+  "faces": 450,
+  "vertices": 227,
+  "source_uv_preserved": true,
+  "material_validation": "NOT_RUN",
+  "geometry_passed": null,
+  "status": "OK",
+  "execution_success": true,
+  "tool": "asset.import",
+  "wall_seconds": 1.734000000054948,
+  "output": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\source\\import"
+}

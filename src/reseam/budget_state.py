@@ -4,13 +4,13 @@ import copy
 import hashlib
 import logging
 import math
-from dataclasses import dataclass, field
+from dataclasses import dataclass, field, replace
 
 import numpy as np
 from shapely import GeometryCollection, LineString, MultiPolygon, Point, Polygon, STRtree, union_all
 from shapely.geometry.base import BaseGeometry
 
-from .joint_types import Correspondence, ReuseGroup
+from .joint_types import Correspondence, ReuseGroup, SimilarityTransform
 from .joint_validation import uv_barycentric
 from .mesh import chart_labels, state_from_corner_uv
 from .reuse_transform import mapped_normals, mapped_points, similarity_transform, transform_parity
@@ -115,6 +115,8 @@ def orientations(state: BudgetState) -> IntArray:
     for group in state.groups:
         result[list(group.first_faces)] = group.first_orientation
         result[list(group.second_faces)] = group.second_orientation
+        for member in group.member_maps:
+            result[list(member.faces)] = member.orientation
     return result
 
 
@@ -246,6 +248,7 @@ def validate_budget_safety(
         orientation = independent_orientations.copy()
     assigned: set[int] = set()
     group_by_owner: dict[int, ReuseGroup] = {}
+    composed_maps: dict[int, dict[tuple[int, int], SimilarityTransform]] = {}
     next_owner = int(labels.max()) + 1
     ids: set[str] = set()
     for group in state.groups:
@@ -276,6 +279,16 @@ def validate_budget_safety(
             member[list(faces)] = side
             orientation[list(faces)] = sign
         group_by_owner[next_owner] = group
+        if group.member_maps:
+            from .reuse_members import member_transforms
+
+            try:
+                composed_maps[next_owner] = member_transforms(group, labels)
+            except (ValueError, TypeError) as error:
+                return invalid([str(error)])
+            for side, extra in enumerate(group.member_maps, start=1):
+                member[list(extra.faces)] = side
+                orientation[list(extra.faces)] = extra.orientation
         next_owner += 1
     jac = jacobians(surface)
     determinant = np.linalg.det(jac) * orientation
@@ -319,20 +332,24 @@ def validate_budget_safety(
         point_a = uv_barycentric(corners[first], uv) @ triangles[first]
         point_b = uv_barycentric(corners[second], uv) @ triangles[second]
         normal = np.asarray(group.plane_normal)
+        transform = group.first_to_second
         inverse = member[first] == 1
+        if group.member_maps:
+            transform = composed_maps[int(owner[first])][int(member[first]), int(member[second])]
+            inverse = False
         error = float(np.linalg.norm(mapped_points(point_a, normal, group.plane_offset,
-            group.first_to_second, inverse=bool(inverse)) - point_b, axis=1).max())
+            transform, inverse=bool(inverse)) - point_b, axis=1).max())
         reverse_error = error
-        if group.first_to_second is not None:
+        if transform is not None:
             reverse_error = float(np.linalg.norm(mapped_points(point_b, normal, group.plane_offset,
-                group.first_to_second, inverse=not bool(inverse)) - point_a, axis=1).max())
+                transform, inverse=not bool(inverse)) - point_a, axis=1).max())
         forward_error, inverse_error = (reverse_error, error) if inverse else (error, reverse_error)
         max_forward_error = max(max_forward_error, forward_error / diagonal)
         max_inverse_error = max(max_inverse_error, inverse_error / diagonal)
         error = max(error, reverse_error)
         error /= diagonal
         angle = float(np.degrees(np.arccos(np.clip(
-            mapped_normals(normals[first], normal, group.first_to_second,
+            mapped_normals(normals[first], normal, transform,
                            inverse=bool(inverse)) @ normals[second], -1, 1))))
         max_error, max_angle = max(max_error, error), max(max_angle, angle)
         if error > correspondence_fraction + 1e-10 or angle > normal_angle_degrees + 1e-8:
@@ -480,6 +497,9 @@ def embed_region(
 def exclusive_faces(state: BudgetState, face_ids: tuple[int, ...]) -> BudgetState:
     """Original whole-face exceptions; no original face is removed or added."""
     released = set(face_ids)
+    if any(group.member_maps and released.intersection(group.first_faces + group.second_faces)
+           for group in state.groups):
+        raise ValueError('MULTI_MEMBER_RELEASE_REQUIRES_UNSHARE')
     if not released or min(released) < 0 or max(released) >= len(state.surface.mesh.faces):
         raise ValueError("INVALID_EXCLUSIVE_FACE_IDS")
     result = state.copy()
@@ -503,9 +523,7 @@ def exclusive_faces(state: BudgetState, face_ids: tuple[int, ...]) -> BudgetStat
         first = tuple(f for f in group.first_faces if f not in released)
         second = tuple(f for f in group.second_faces if f not in released)
         if first and second:
-            groups.append(ReuseGroup(group.group_id, first, second, group.plane_normal,
-                                     group.plane_offset, group.first_orientation, group.second_orientation,
-                                     group.first_to_second))
+            groups.append(replace(group, first_faces=first, second_faces=second))
         else:
             removed_group_faces.update(first + second)
     # Dissolved mirrored members become independent, positive-orientation charts.

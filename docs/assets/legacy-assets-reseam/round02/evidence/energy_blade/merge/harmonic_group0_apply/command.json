@@ -1,0 +1,8 @@
+[
+  "E:\\ReSem\\.venv\\Scripts\\python.exe",
+  "-m",
+  "reseam.agent_tools.worker",
+  "reuse.apply",
+  "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\merge\\harmonic_group0_apply",
+  "300.0"
+]

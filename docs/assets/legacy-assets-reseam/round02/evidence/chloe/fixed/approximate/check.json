@@ -1,0 +1,3086 @@
+{
+  "reason": "SURFACE_CORRESPONDENCE_REJECTED",
+  "failed_samples": [
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 184,
+      "source_sample": 0,
+      "source_vertex_id": 140,
+      "source_barycentric": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.08600711926410812,
+      "round_trip_error_fraction": 0.08524247387655895,
+      "normal_angle_degrees": 76.6107036494744,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 185,
+      "source_sample": 0,
+      "source_vertex_id": 140,
+      "source_barycentric": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.08600711926410812,
+      "round_trip_error_fraction": 0.08524247387655895,
+      "normal_angle_degrees": 72.0126757671937,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 185,
+      "source_sample": 2,
+      "source_vertex_id": 139,
+      "source_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.08530258102341375,
+      "round_trip_error_fraction": 0.08446071119442328,
+      "normal_angle_degrees": 72.0126757671937,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 185,
+      "source_sample": 6,
+      "source_vertex_id": null,
+      "source_barycentric": [
+        0.5,
+        0.0,
+        0.5
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.08557579211636629,
+      "round_trip_error_fraction": 0.08477195464121405,
+      "normal_angle_degrees": 72.0126757671937,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 188,
+      "source_sample": 0,
+      "source_vertex_id": 143,
+      "source_barycentric": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.09453264470084212,
+      "round_trip_error_fraction": 0.09371342552543979,
+      "normal_angle_degrees": 66.29774319070192,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 188,
+      "source_sample": 1,
+      "source_vertex_id": 144,
+      "source_barycentric": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.0952192899613534,
+      "round_trip_error_fraction": 0.09445936104322451,
+      "normal_angle_degrees": 66.29774319070192,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 188,
+      "source_sample": 2,
+      "source_vertex_id": 140,
+      "source_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.08600711926410812,
+      "round_trip_error_fraction": 0.08524247387655895,
+      "normal_angle_degrees": 66.29774319070192,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 188,
+      "source_sample": 3,
+      "source_vertex_id": null,
+      "source_barycentric": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.09185370499519682,
+      "round_trip_error_fraction": 0.09107141349886856,
+      "normal_angle_degrees": 66.29774319070192,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 188,
+      "source_sample": 4,
+      "source_vertex_id": null,
+      "source_barycentric": [
+        0.5,
+        0.5,
+        0.0
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.09481992132619696,
+      "round_trip_error_fraction": 0.09402998957284531,
+      "normal_angle_degrees": 66.29774319070192,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 188,
+      "source_sample": 5,
+      "source_vertex_id": null,
+      "source_barycentric": [
+        0.0,
+        0.5,
+        0.5
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.09060065689167282,
+      "round_trip_error_fraction": 0.08983838420975887,
+      "normal_angle_degrees": 66.29774319070192,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 188,
+      "source_sample": 6,
+      "source_vertex_id": null,
+      "source_barycentric": [
+        0.5,
+        0.0,
+        0.5
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.09019021664384817,
+      "round_trip_error_fraction": 0.08939628167488387,
+      "normal_angle_degrees": 66.29774319070192,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 189,
+      "source_sample": 0,
+      "source_vertex_id": 143,
+      "source_barycentric": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.09453264470084212,
+      "round_trip_error_fraction": 0.09371342552543979,
+      "normal_angle_degrees": 71.66682137371134,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 189,
+      "source_sample": 1,
+      "source_vertex_id": 140,
+      "source_barycentric": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.08600711926410812,
+      "round_trip_error_fraction": 0.08524247387655895,
+      "normal_angle_degrees": 71.66682137371134,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 189,
+      "source_sample": 2,
+      "source_vertex_id": 139,
+      "source_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.08530258102341375,
+      "round_trip_error_fraction": 0.08446071119442328,
+      "normal_angle_degrees": 71.66682137371134,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 189,
+      "source_sample": 3,
+      "source_vertex_id": null,
+      "source_barycentric": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.08853548912260371,
+      "round_trip_error_fraction": 0.08772593669455186,
+      "normal_angle_degrees": 71.66682137371134,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 189,
+      "source_sample": 4,
+      "source_vertex_id": null,
+      "source_barycentric": [
+        0.5,
+        0.5,
+        0.0
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.09019021664384817,
+      "round_trip_error_fraction": 0.08939628167488387,
+      "normal_angle_degrees": 71.66682137371134,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 189,
+      "source_sample": 5,
+      "source_vertex_id": null,
+      "source_barycentric": [
+        0.0,
+        0.5,
+        0.5
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.08557579211636629,
+      "round_trip_error_fraction": 0.08477195464121405,
+      "normal_angle_degrees": 71.66682137371134,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 189,
+      "source_sample": 6,
+      "source_vertex_id": null,
+      "source_barycentric": [
+        0.5,
+        0.0,
+        0.5
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.08989856202503904,
+      "round_trip_error_fraction": 0.08906842741434191,
+      "normal_angle_degrees": 71.66682137371134,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 192,
+      "source_sample": 0,
+      "source_vertex_id": 147,
+      "source_barycentric": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.1333975060669549,
+      "round_trip_error_fraction": 0.13257435589736727,
+      "normal_angle_degrees": 66.93075210008931,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 192,
+      "source_sample": 1,
+      "source_vertex_id": 144,
+      "source_barycentric": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.0952192899613534,
+      "round_trip_error_fraction": 0.09445936104322451,
+      "normal_angle_degrees": 66.93075210008931,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 192,
+      "source_sample": 2,
+      "source_vertex_id": 143,
+      "source_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.09453264470084212,
+      "round_trip_error_fraction": 0.09371342552543979,
+      "normal_angle_degrees": 66.93075210008931,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 192,
+      "source_sample": 3,
+      "source_vertex_id": null,
+      "source_barycentric": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.1076639043222017,
+      "round_trip_error_fraction": 0.10686012199123607,
+      "normal_angle_degrees": 66.93075210008931,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 192,
+      "source_sample": 4,
+      "source_vertex_id": null,
+      "source_barycentric": [
+        0.5,
+        0.5,
+        0.0
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.11424990418900262,
+      "round_trip_error_fraction": 0.11345264240876239,
+      "normal_angle_degrees": 66.93075210008931,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 192,
+      "source_sample": 5,
+      "source_vertex_id": null,
+      "source_barycentric": [
+        0.0,
+        0.5,
+        0.5
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.09481992132619696,
+      "round_trip_error_fraction": 0.09402998957284531,
+      "normal_angle_degrees": 66.93075210008931,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 192,
+      "source_sample": 6,
+      "source_vertex_id": null,
+      "source_barycentric": [
+        0.5,
+        0.0,
+        0.5
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.11395859227681703,
+      "round_trip_error_fraction": 0.11313702297153362,
+      "normal_angle_degrees": 66.93075210008931,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 193,
+      "source_sample": 0,
+      "source_vertex_id": 147,
+      "source_barycentric": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.1333975060669549,
+      "round_trip_error_fraction": 0.13257435589736727,
+      "normal_angle_degrees": 64.39077482575786,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 193,
+      "source_sample": 1,
+      "source_vertex_id": 143,
+      "source_barycentric": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.09453264470084212,
+      "round_trip_error_fraction": 0.09371342552543979,
+      "normal_angle_degrees": 64.39077482575786,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 193,
+      "source_sample": 2,
+      "source_vertex_id": 146,
+      "source_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.13338321555395818,
+      "round_trip_error_fraction": 0.1325402454271034,
+      "normal_angle_degrees": 64.39077482575786,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 193,
+      "source_sample": 3,
+      "source_vertex_id": null,
+      "source_barycentric": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.12042624023688943,
+      "round_trip_error_fraction": 0.11959671526347364,
+      "normal_angle_degrees": 64.39077482575786,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 193,
+      "source_sample": 4,
+      "source_vertex_id": null,
+      "source_barycentric": [
+        0.5,
+        0.5,
+        0.0
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.11395859227681703,
+      "round_trip_error_fraction": 0.11313702297153362,
+      "normal_angle_degrees": 64.39077482575786,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 193,
+      "source_sample": 5,
+      "source_vertex_id": null,
+      "source_barycentric": [
+        0.0,
+        0.5,
+        0.5
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.11394857992047687,
+      "round_trip_error_fraction": 0.11311537783989901,
+      "normal_angle_degrees": 64.39077482575786,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 193,
+      "source_sample": 6,
+      "source_vertex_id": null,
+      "source_barycentric": [
+        0.5,
+        0.0,
+        0.5
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.1333804270596339,
+      "round_trip_error_fraction": 0.13254730538246012,
+      "normal_angle_degrees": 64.39077482575786,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 195,
+      "source_sample": 0,
+      "source_vertex_id": 148,
+      "source_barycentric": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.13357696118756662,
+      "round_trip_error_fraction": 0.13277323759297527,
+      "normal_angle_degrees": 155.8233682190681,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 195,
+      "source_sample": 1,
+      "source_vertex_id": 144,
+      "source_barycentric": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.0952192899613534,
+      "round_trip_error_fraction": 0.09445936104322451,
+      "normal_angle_degrees": 155.8233682190681,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 195,
+      "source_sample": 2,
+      "source_vertex_id": 147,
+      "source_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.1333975060669549,
+      "round_trip_error_fraction": 0.13257435589736727,
+      "normal_angle_degrees": 155.8233682190681,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 195,
+      "source_sample": 3,
+      "source_vertex_id": null,
+      "source_barycentric": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.1206615941894486,
+      "round_trip_error_fraction": 0.11986174246814811,
+      "normal_angle_degrees": 155.8233682190681,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 195,
+      "source_sample": 4,
+      "source_vertex_id": null,
+      "source_barycentric": [
+        0.5,
+        0.5,
+        0.0
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.11433411970588786,
+      "round_trip_error_fraction": 0.11354815636241415,
+      "normal_angle_degrees": 155.8233682190681,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 195,
+      "source_sample": 5,
+      "source_vertex_id": null,
+      "source_barycentric": [
+        0.0,
+        0.5,
+        0.5
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.11424990418900262,
+      "round_trip_error_fraction": 0.11345264240876239,
+      "normal_angle_degrees": 155.8233682190681,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 195,
+      "source_sample": 6,
+      "source_vertex_id": null,
+      "source_barycentric": [
+        0.5,
+        0.0,
+        0.5
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.13345042996588527,
+      "round_trip_error_fraction": 0.13263677430051932,
+      "normal_angle_degrees": 155.8233682190681,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 196,
+      "source_sample": 0,
+      "source_vertex_id": 147,
+      "source_barycentric": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.1333975060669549,
+      "round_trip_error_fraction": 0.13257435589736727,
+      "normal_angle_degrees": 64.25322250667124,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 196,
+      "source_sample": 1,
+      "source_vertex_id": 146,
+      "source_barycentric": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.13338321555395818,
+      "round_trip_error_fraction": 0.1325402454271034,
+      "normal_angle_degrees": 64.25322250667124,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 196,
+      "source_sample": 2,
+      "source_vertex_id": 149,
+      "source_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.1717190087851938,
+      "round_trip_error_fraction": 0.17088167158448783,
+      "normal_angle_degrees": 64.25322250667124,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 196,
+      "source_sample": 3,
+      "source_vertex_id": null,
+      "source_barycentric": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.146149406251811,
+      "round_trip_error_fraction": 0.1453145716846635,
+      "normal_angle_degrees": 64.25322250667124,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 196,
+      "source_sample": 4,
+      "source_vertex_id": null,
+      "source_barycentric": [
+        0.5,
+        0.5,
+        0.0
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.1333804270596339,
+      "round_trip_error_fraction": 0.13254730538246012,
+      "normal_angle_degrees": 64.25322250667124,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 196,
+      "source_sample": 5,
+      "source_vertex_id": null,
+      "source_barycentric": [
+        0.0,
+        0.5,
+        0.5
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.15254390936286819,
+      "round_trip_error_fraction": 0.15170407169736136,
+      "normal_angle_degrees": 64.25322250667124,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 196,
+      "source_sample": 6,
+      "source_vertex_id": null,
+      "source_barycentric": [
+        0.5,
+        0.0,
+        0.5
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.15253713064292698,
+      "round_trip_error_fraction": 0.15170587558102777,
+      "normal_angle_degrees": 64.25322250667124,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 197,
+      "source_sample": 0,
+      "source_vertex_id": 148,
+      "source_barycentric": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.13357696118756662,
+      "round_trip_error_fraction": 0.13277323759297527,
+      "normal_angle_degrees": 156.49762028961948,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 197,
+      "source_sample": 1,
+      "source_vertex_id": 147,
+      "source_barycentric": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.1333975060669549,
+      "round_trip_error_fraction": 0.13257435589736727,
+      "normal_angle_degrees": 156.49762028961948,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 197,
+      "source_sample": 2,
+      "source_vertex_id": 149,
+      "source_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.1717190087851938,
+      "round_trip_error_fraction": 0.17088167158448783,
+      "normal_angle_degrees": 156.49762028961948,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 197,
+      "source_sample": 3,
+      "source_vertex_id": null,
+      "source_barycentric": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.14619453582355688,
+      "round_trip_error_fraction": 0.14537153308777426,
+      "normal_angle_degrees": 156.49762028961948,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 197,
+      "source_sample": 4,
+      "source_vertex_id": null,
+      "source_barycentric": [
+        0.5,
+        0.5,
+        0.0
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.13345042996588527,
+      "round_trip_error_fraction": 0.13263677430051932,
+      "normal_angle_degrees": 156.49762028961948,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 197,
+      "source_sample": 5,
+      "source_vertex_id": null,
+      "source_barycentric": [
+        0.0,
+        0.5,
+        0.5
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.15253713064292698,
+      "round_trip_error_fraction": 0.15170587558102777,
+      "normal_angle_degrees": 156.49762028961948,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 197,
+      "source_sample": 6,
+      "source_vertex_id": null,
+      "source_barycentric": [
+        0.5,
+        0.0,
+        0.5
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.15262234762127455,
+      "round_trip_error_fraction": 0.15179956810382172,
+      "normal_angle_degrees": 156.49762028961948,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 300,
+      "source_sample": 2,
+      "source_vertex_id": 206,
+      "source_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.0857479798408777,
+      "round_trip_error_fraction": 0.08490238019675549,
+      "normal_angle_degrees": 2.8839203202121584,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 301,
+      "source_sample": 1,
+      "source_vertex_id": 206,
+      "source_barycentric": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.0857479798408777,
+      "round_trip_error_fraction": 0.08490238019675549,
+      "normal_angle_degrees": 7.094965967243305,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 301,
+      "source_sample": 2,
+      "source_vertex_id": 139,
+      "source_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.08530258102341375,
+      "round_trip_error_fraction": 0.08446071119442328,
+      "normal_angle_degrees": 7.094965967243305,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 301,
+      "source_sample": 5,
+      "source_vertex_id": null,
+      "source_barycentric": [
+        0.0,
+        0.5,
+        0.5
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.08544565993904452,
+      "round_trip_error_fraction": 0.08460112625530536,
+      "normal_angle_degrees": 7.094965967243305,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 304,
+      "source_sample": 0,
+      "source_vertex_id": 143,
+      "source_barycentric": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.09453264470084212,
+      "round_trip_error_fraction": 0.09371342552543979,
+      "normal_angle_degrees": 15.745385730516986,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 304,
+      "source_sample": 1,
+      "source_vertex_id": 139,
+      "source_barycentric": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.08530258102341375,
+      "round_trip_error_fraction": 0.08446071119442328,
+      "normal_angle_degrees": 15.745385730516986,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 304,
+      "source_sample": 2,
+      "source_vertex_id": 206,
+      "source_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.0857479798408777,
+      "round_trip_error_fraction": 0.08490238019675549,
+      "normal_angle_degrees": 15.745385730516986,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 304,
+      "source_sample": 3,
+      "source_vertex_id": null,
+      "source_barycentric": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.08846560955068913,
+      "round_trip_error_fraction": 0.08763001189013575,
+      "normal_angle_degrees": 15.745385730516986,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 304,
+      "source_sample": 4,
+      "source_vertex_id": null,
+      "source_barycentric": [
+        0.5,
+        0.5,
+        0.0
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.08989856202503904,
+      "round_trip_error_fraction": 0.08906842741434191,
+      "normal_angle_degrees": 15.745385730516986,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 304,
+      "source_sample": 5,
+      "source_vertex_id": null,
+      "source_barycentric": [
+        0.0,
+        0.5,
+        0.5
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.08544565993904452,
+      "round_trip_error_fraction": 0.08460112625530536,
+      "normal_angle_degrees": 15.745385730516986,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 304,
+      "source_sample": 6,
+      "source_vertex_id": null,
+      "source_barycentric": [
+        0.5,
+        0.0,
+        0.5
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.0900975789386203,
+      "round_trip_error_fraction": 0.08926542104045995,
+      "normal_angle_degrees": 15.745385730516986,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 305,
+      "source_sample": 0,
+      "source_vertex_id": 143,
+      "source_barycentric": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.09453264470084212,
+      "round_trip_error_fraction": 0.09371342552543979,
+      "normal_angle_degrees": 16.99954302020456,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 305,
+      "source_sample": 1,
+      "source_vertex_id": 206,
+      "source_barycentric": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.0857479798408777,
+      "round_trip_error_fraction": 0.08490238019675549,
+      "normal_angle_degrees": 16.99954302020456,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 305,
+      "source_sample": 2,
+      "source_vertex_id": 207,
+      "source_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.09510988088469081,
+      "round_trip_error_fraction": 0.09428280180887183,
+      "normal_angle_degrees": 16.99954302020456,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 305,
+      "source_sample": 3,
+      "source_vertex_id": null,
+      "source_barycentric": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.09174939951463482,
+      "round_trip_error_fraction": 0.09091882374730126,
+      "normal_angle_degrees": 16.99954302020456,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 305,
+      "source_sample": 4,
+      "source_vertex_id": null,
+      "source_barycentric": [
+        0.5,
+        0.5,
+        0.0
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.0900975789386203,
+      "round_trip_error_fraction": 0.08926542104045995,
+      "normal_angle_degrees": 16.99954302020456,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 305,
+      "source_sample": 5,
+      "source_vertex_id": null,
+      "source_barycentric": [
+        0.0,
+        0.5,
+        0.5
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.09042217043798176,
+      "round_trip_error_fraction": 0.08958625230677032,
+      "normal_angle_degrees": 16.99954302020456,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 305,
+      "source_sample": 6,
+      "source_vertex_id": null,
+      "source_barycentric": [
+        0.5,
+        0.0,
+        0.5
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.09476500759144513,
+      "round_trip_error_fraction": 0.093941353546297,
+      "normal_angle_degrees": 16.99954302020456,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 308,
+      "source_sample": 0,
+      "source_vertex_id": 143,
+      "source_barycentric": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.09453264470084212,
+      "round_trip_error_fraction": 0.09371342552543979,
+      "normal_angle_degrees": 13.36306844110346,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 308,
+      "source_sample": 1,
+      "source_vertex_id": 207,
+      "source_barycentric": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.09510988088469081,
+      "round_trip_error_fraction": 0.09428280180887183,
+      "normal_angle_degrees": 13.36306844110346,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 308,
+      "source_sample": 2,
+      "source_vertex_id": 208,
+      "source_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.13337998613189578,
+      "round_trip_error_fraction": 0.13253281329730737,
+      "normal_angle_degrees": 13.36306844110346,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 308,
+      "source_sample": 3,
+      "source_vertex_id": null,
+      "source_barycentric": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.1076243466820158,
+      "round_trip_error_fraction": 0.10679086786917352,
+      "normal_angle_degrees": 13.36306844110346,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 308,
+      "source_sample": 4,
+      "source_vertex_id": null,
+      "source_barycentric": [
+        0.5,
+        0.5,
+        0.0
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.09476500759144513,
+      "round_trip_error_fraction": 0.093941353546297,
+      "normal_angle_degrees": 13.36306844110346,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 308,
+      "source_sample": 5,
+      "source_vertex_id": null,
+      "source_barycentric": [
+        0.0,
+        0.5,
+        0.5
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.11420037301067162,
+      "round_trip_error_fraction": 0.11336122257310527,
+      "normal_angle_degrees": 13.36306844110346,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 308,
+      "source_sample": 6,
+      "source_vertex_id": null,
+      "source_barycentric": [
+        0.5,
+        0.0,
+        0.5
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.11394187510176428,
+      "round_trip_error_fraction": 0.11310617337913706,
+      "normal_angle_degrees": 13.36306844110346,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 309,
+      "source_sample": 0,
+      "source_vertex_id": 143,
+      "source_barycentric": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.09453264470084212,
+      "round_trip_error_fraction": 0.09371342552543979,
+      "normal_angle_degrees": 15.680937190322078,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 309,
+      "source_sample": 1,
+      "source_vertex_id": 208,
+      "source_barycentric": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.13337998613189578,
+      "round_trip_error_fraction": 0.13253281329730737,
+      "normal_angle_degrees": 15.680937190322078,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 309,
+      "source_sample": 2,
+      "source_vertex_id": 146,
+      "source_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.13338321555395818,
+      "round_trip_error_fraction": 0.1325402454271034,
+      "normal_angle_degrees": 15.680937190322078,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 309,
+      "source_sample": 3,
+      "source_vertex_id": null,
+      "source_barycentric": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.12041705586839287,
+      "round_trip_error_fraction": 0.11957863188146504,
+      "normal_angle_degrees": 15.680937190322078,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 309,
+      "source_sample": 4,
+      "source_vertex_id": null,
+      "source_barycentric": [
+        0.5,
+        0.5,
+        0.0
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.11394187510176428,
+      "round_trip_error_fraction": 0.11310617337913706,
+      "normal_angle_degrees": 15.680937190322078,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 309,
+      "source_sample": 5,
+      "source_vertex_id": null,
+      "source_barycentric": [
+        0.0,
+        0.5,
+        0.5
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.13337167130982266,
+      "round_trip_error_fraction": 0.1325265365545107,
+      "normal_angle_degrees": 15.680937190322078,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 309,
+      "source_sample": 6,
+      "source_vertex_id": null,
+      "source_barycentric": [
+        0.5,
+        0.0,
+        0.5
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.11394857992047687,
+      "round_trip_error_fraction": 0.11311537783989901,
+      "normal_angle_degrees": 15.680937190322078,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 311,
+      "source_sample": 0,
+      "source_vertex_id": 207,
+      "source_barycentric": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.09510988088469081,
+      "round_trip_error_fraction": 0.09428280180887183,
+      "normal_angle_degrees": 78.45266942635872,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 311,
+      "source_sample": 1,
+      "source_vertex_id": 148,
+      "source_barycentric": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.13357696118756662,
+      "round_trip_error_fraction": 0.13277323759297527,
+      "normal_angle_degrees": 78.45266942635872,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 311,
+      "source_sample": 2,
+      "source_vertex_id": 208,
+      "source_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.13337998613189578,
+      "round_trip_error_fraction": 0.13253281329730737,
+      "normal_angle_degrees": 78.45266942635872,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 311,
+      "source_sample": 3,
+      "source_vertex_id": null,
+      "source_barycentric": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.12063436779850827,
+      "round_trip_error_fraction": 0.11980812899276136,
+      "normal_angle_degrees": 78.45266942635872,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 311,
+      "source_sample": 4,
+      "source_vertex_id": null,
+      "source_barycentric": [
+        0.5,
+        0.5,
+        0.0
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.11430129836818839,
+      "round_trip_error_fraction": 0.11348757410649449,
+      "normal_angle_degrees": 78.45266942635872,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 311,
+      "source_sample": 5,
+      "source_vertex_id": null,
+      "source_barycentric": [
+        0.0,
+        0.5,
+        0.5
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.13344167539803742,
+      "round_trip_error_fraction": 0.13261601605168316,
+      "normal_angle_degrees": 78.45266942635872,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 311,
+      "source_sample": 6,
+      "source_vertex_id": null,
+      "source_barycentric": [
+        0.5,
+        0.0,
+        0.5
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.11420037301067162,
+      "round_trip_error_fraction": 0.11336122257310527,
+      "normal_angle_degrees": 78.45266942635872,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 312,
+      "source_sample": 0,
+      "source_vertex_id": 208,
+      "source_barycentric": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.13337998613189578,
+      "round_trip_error_fraction": 0.13253281329730737,
+      "normal_angle_degrees": 14.680126185033293,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 312,
+      "source_sample": 1,
+      "source_vertex_id": 149,
+      "source_barycentric": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.1717190087851938,
+      "round_trip_error_fraction": 0.17088167158448783,
+      "normal_angle_degrees": 14.680126185033293,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 312,
+      "source_sample": 2,
+      "source_vertex_id": 146,
+      "source_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.13338321555395818,
+      "round_trip_error_fraction": 0.1325402454271034,
+      "normal_angle_degrees": 14.680126185033293,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 312,
+      "source_sample": 3,
+      "source_vertex_id": null,
+      "source_barycentric": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.14615192936775068,
+      "round_trip_error_fraction": 0.14530983844347292,
+      "normal_angle_degrees": 14.680126185033293,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 312,
+      "source_sample": 4,
+      "source_vertex_id": null,
+      "source_barycentric": [
+        0.5,
+        0.5,
+        0.0
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.15254639542180476,
+      "round_trip_error_fraction": 0.151704744681346,
+      "normal_angle_degrees": 14.680126185033293,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 312,
+      "source_sample": 5,
+      "source_vertex_id": null,
+      "source_barycentric": [
+        0.0,
+        0.5,
+        0.5
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.15254390936286819,
+      "round_trip_error_fraction": 0.15170407169736136,
+      "normal_angle_degrees": 14.680126185033293,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 312,
+      "source_sample": 6,
+      "source_vertex_id": null,
+      "source_barycentric": [
+        0.5,
+        0.0,
+        0.5
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.13337167130982266,
+      "round_trip_error_fraction": 0.1325265365545107,
+      "normal_angle_degrees": 14.680126185033293,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 313,
+      "source_sample": 0,
+      "source_vertex_id": 148,
+      "source_barycentric": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.13357696118756662,
+      "round_trip_error_fraction": 0.13277323759297527,
+      "normal_angle_degrees": 78.61353429582023,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 313,
+      "source_sample": 1,
+      "source_vertex_id": 149,
+      "source_barycentric": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.1717190087851938,
+      "round_trip_error_fraction": 0.17088167158448783,
+      "normal_angle_degrees": 78.61353429582023,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 313,
+      "source_sample": 2,
+      "source_vertex_id": 208,
+      "source_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.13337998613189578,
+      "round_trip_error_fraction": 0.13253281329730737,
+      "normal_angle_degrees": 78.61353429582023,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 313,
+      "source_sample": 3,
+      "source_vertex_id": null,
+      "source_barycentric": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.14619705677679662,
+      "round_trip_error_fraction": 0.14536680030954244,
+      "normal_angle_degrees": 78.61353429582023,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 313,
+      "source_sample": 4,
+      "source_vertex_id": null,
+      "source_barycentric": [
+        0.5,
+        0.5,
+        0.0
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.15262234762127455,
+      "round_trip_error_fraction": 0.15179956810382172,
+      "normal_angle_degrees": 78.61353429582023,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 313,
+      "source_sample": 5,
+      "source_vertex_id": null,
+      "source_barycentric": [
+        0.0,
+        0.5,
+        0.5
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.15254639542180476,
+      "round_trip_error_fraction": 0.151704744681346,
+      "normal_angle_degrees": 78.61353429582023,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 313,
+      "source_sample": 6,
+      "source_vertex_id": null,
+      "source_barycentric": [
+        0.5,
+        0.0,
+        0.5
+      ],
+      "target_face": 333,
+      "target_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "surface_error_fraction": 0.13344167539803742,
+      "round_trip_error_fraction": 0.13261601605168316,
+      "normal_angle_degrees": 78.61353429582023,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 184,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "forward",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 102,
+      "source_sample": 2,
+      "source_vertex_id": 89,
+      "source_barycentric": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "target_face": 204,
+      "target_barycentric": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "surface_error_fraction": 0.24214528861503748,
+      "round_trip_error_fraction": 0.24455952966781744,
+      "normal_angle_degrees": 7.182597724146181,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 191,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "inverse",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 102,
+      "source_sample": 3,
+      "source_vertex_id": null,
+      "source_barycentric": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "target_face": 204,
+      "target_barycentric": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "surface_error_fraction": 0.1203672484772768,
+      "round_trip_error_fraction": 0.12329508273532074,
+      "normal_angle_degrees": 7.182597724146181,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 191,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "inverse",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 102,
+      "source_sample": 5,
+      "source_vertex_id": null,
+      "source_barycentric": [
+        0.0,
+        0.5,
+        0.5
+      ],
+      "target_face": 204,
+      "target_barycentric": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "surface_error_fraction": 0.15060132219034425,
+      "round_trip_error_fraction": 0.1531286733690764,
+      "normal_angle_degrees": 7.182597724146181,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 191,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "inverse",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 102,
+      "source_sample": 6,
+      "source_vertex_id": null,
+      "source_barycentric": [
+        0.5,
+        0.0,
+        0.5
+      ],
+      "target_face": 204,
+      "target_barycentric": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "surface_error_fraction": 0.1510382995352313,
+      "round_trip_error_fraction": 0.1539563292681454,
+      "normal_angle_degrees": 7.182597724146181,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 191,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "inverse",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 220,
+      "source_sample": 1,
+      "source_vertex_id": 89,
+      "source_barycentric": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "target_face": 204,
+      "target_barycentric": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "surface_error_fraction": 0.24214528861503748,
+      "round_trip_error_fraction": 0.24455952966781744,
+      "normal_angle_degrees": 55.478560104607304,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 191,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "inverse",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 220,
+      "source_sample": 3,
+      "source_vertex_id": null,
+      "source_barycentric": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "target_face": 204,
+      "target_barycentric": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "surface_error_fraction": 0.12042445788359386,
+      "round_trip_error_fraction": 0.12300149463673157,
+      "normal_angle_degrees": 55.478560104607304,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 191,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "inverse",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 220,
+      "source_sample": 4,
+      "source_vertex_id": null,
+      "source_barycentric": [
+        0.5,
+        0.5,
+        0.0
+      ],
+      "target_face": 204,
+      "target_barycentric": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "surface_error_fraction": 0.15117243706947536,
+      "round_trip_error_fraction": 0.15366834801982435,
+      "normal_angle_degrees": 55.478560104607304,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 191,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "inverse",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    },
+    {
+      "group_id": "reuse:3c3d31c73d3cfeab",
+      "source_face": 220,
+      "source_sample": 5,
+      "source_vertex_id": null,
+      "source_barycentric": [
+        0.0,
+        0.5,
+        0.5
+      ],
+      "target_face": 204,
+      "target_barycentric": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "surface_error_fraction": 0.15060132219034425,
+      "round_trip_error_fraction": 0.1531286733690764,
+      "normal_angle_degrees": 55.478560104607304,
+      "normal_angle_limit_degrees": 180.0,
+      "compatible_target_face_count": 191,
+      "target_selection": "nearest_surface_within_reflected_face_normal_gate",
+      "first_to_second": null,
+      "transform_direction": "inverse",
+      "normalization": "original_mesh_bounding_box_diagonal",
+      "normalization_scale": 1.6261740653470098
+    }
+  ],
+  "sample_count": 2625,
+  "alignment": null,
+  "conclusion": "this selected pair and explicit map only"
+}

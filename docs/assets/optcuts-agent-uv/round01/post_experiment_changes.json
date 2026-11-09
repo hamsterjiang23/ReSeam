@@ -1,0 +1,22 @@
+{
+  "changed_frozen_inputs": [
+    {
+      "path": "E:\\ReSem\\skills\\reseam-hard-surface\\SKILL.md",
+      "frozen_sha256": "766ea104d53ba326a894a71a5bcde2a6112b32cbcd20a22eac615854d12bfea3",
+      "current_sha256": "242b95177ec48a88ce111c21fc14a8f1a3f68665afcc23d641d037308f85410a"
+    },
+    {
+      "path": "E:\\ReSem\\scripts\\run_optcuts_agent_uv.py",
+      "frozen_sha256": "68646051cd69a3b6841d5d6f2045c38432992d7ddbaca78700dbdd52fb19ca64",
+      "current_sha256": "a96866445f964a9756d967fbaabe4815c796cf542fcfde148b9aa8dcbafe7a9e"
+    }
+  ],
+  "unchanged_functions": {
+    "prepare": true,
+    "evaluate": true,
+    "main": true
+  },
+  "uv_bake_kernel_unchanged": true,
+  "results_recomputed": false,
+  "scope": "Post-experiment driver guards and Skill route documentation; executed sources remain archived."
+}

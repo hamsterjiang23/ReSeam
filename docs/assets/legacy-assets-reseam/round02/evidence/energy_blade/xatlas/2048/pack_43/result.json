@@ -1,0 +1,16 @@
+{
+  "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\xatlas\\2048\\pack_43\\snapshot\\snapshot.json",
+  "state_hash": "efcd08f7ac6799e58bdb582da1088a612222db9603e70aab6692de529285b30b",
+  "asset_id": "aaa32cc5f2a8dd9934e54ddb20d28be1e56d5f22e38fbe1e22b927d4074f87e6",
+  "status": "OK",
+  "execution_success": true,
+  "geometry_passed": true,
+  "hard_geometry_passed": true,
+  "final_quality_passed": null,
+  "requires_rebake": true,
+  "packing_backend": "blender_concave",
+  "report": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\xatlas\\2048\\pack_43\\geometry.json",
+  "tool": "uv.pack",
+  "wall_seconds": 14.687999999965541,
+  "output": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\xatlas\\2048\\pack_43"
+}

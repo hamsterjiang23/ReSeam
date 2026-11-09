@@ -1,0 +1,21 @@
+{
+  "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\optcuts\\2048\\pack_43\\snapshot\\snapshot.json",
+  "state_hash": "d7d23fc91501fe9c94ad5f81d6a23d28f6896a2c4d0b8a256e975da08a135f5f",
+  "asset_id": "2efdd0a9704a7243fcd375606e4d0d44f8bec6a991b86df5640e2b0a32414023",
+  "status": "OK",
+  "execution_success": true,
+  "geometry_passed": false,
+  "final_quality_passed": null,
+  "report": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\optcuts\\2048\\inspect_43\\inspect\\inspection.json",
+  "chart_count": 9,
+  "shared_group_count": 0,
+  "unique_footprint": 0.2854759870089005,
+  "metrics_report": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\optcuts\\2048\\inspect_43\\inspect\\uv_metrics.json",
+  "metrics_verified": false,
+  "uv_connected_charts": 9,
+  "packing_owners": 9,
+  "actual_independent_tiles": null,
+  "tool": "uv.inspect",
+  "wall_seconds": 3.218999999924563,
+  "output": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\optcuts\\2048\\inspect_43\\inspect"
+}

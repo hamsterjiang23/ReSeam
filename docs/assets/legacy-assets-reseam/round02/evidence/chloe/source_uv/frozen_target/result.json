@@ -1,0 +1,33 @@
+{
+  "status": "OK",
+  "execution_success": true,
+  "target": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\source_uv\\frozen_target\\target.json",
+  "target_hash": "7a087fd38bee085292ee588fa2b02ca9a56a69b0cd0e1bc1cefbd0441096a730",
+  "policy": "source_original",
+  "appearance_change": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\source_uv\\frozen_target\\appearance_change.json",
+  "modified_faces": 0,
+  "full_pbr_passed": false,
+  "geometry_profile": {
+    "resolution": 256,
+    "gap_pixels": 4.0,
+    "border_pixels": 4.0,
+    "correspondence_fraction": 0.08,
+    "normal_angle_degrees": 180.0,
+    "maximum_anisotropy": 2.0,
+    "mean_shape_limit": 0.025,
+    "tail_shape_limit": 0.1,
+    "maximum_density_ratio": 2.0,
+    "quality_constraints": false,
+    "preserve_source_uv": {
+      "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\source\\import\\snapshot\\snapshot.json",
+      "state_hash": "73fc4bac4e3d1246cab01c79973dddc34343b6555e78593de932f3c7f9182b46"
+    }
+  },
+  "geometry_profile_hash": "39a8d94cb34105934ea01d3a3895e62ff02893c854a6e488713e76b58c96f072",
+  "geometry_policy": "explicit_custom",
+  "strict_geometry_profile_applied": false,
+  "artist_reviewed": false,
+  "tool": "material.target",
+  "wall_seconds": 0.8900000000139698,
+  "output": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\source_uv\\frozen_target"
+}

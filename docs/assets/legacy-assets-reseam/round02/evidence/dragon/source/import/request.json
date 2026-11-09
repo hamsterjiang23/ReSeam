@@ -1,0 +1,6 @@
+{
+  "path": "E:\\ReSem\\assets\\v1\\dragon\\low.obj",
+  "reference": "E:\\ReSem\\assets\\v1\\dragon\\high.glb",
+  "initialize_uv": "xatlas",
+  "timeout_seconds": 300.0
+}

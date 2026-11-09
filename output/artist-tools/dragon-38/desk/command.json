@@ -1,0 +1,8 @@
+[
+  "E:\\ReSem\\.venv\\Scripts\\python.exe",
+  "-m",
+  "reseam.agent_tools.worker",
+  "artist.compare",
+  "E:\\ReSem\\output\\artist-tools\\dragon-38\\desk",
+  "300.0"
+]

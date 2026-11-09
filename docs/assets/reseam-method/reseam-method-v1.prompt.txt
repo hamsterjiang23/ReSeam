@@ -1,0 +1,30 @@
+Create a polished academic computer graphics / vision paper METHOD FRAMEWORK FIGURE for the project ReSeam. This is an explanatory illustration of the current implemented Agent/tool workflow, not a claimed new trained neural architecture or an experimental result. Landscape, roughly 2.3:1 aspect ratio, very high resolution, white background, crisp vector-like diagrams, readable large English typography, generous whitespace, restrained navy, blue, teal, and amber accents. No decorative robot, no sci-fi glow, no gradients in UI boxes, no screenshots or code. Designed to embed in a research paper.
+
+Title at top left: "ReSeam"
+Subtitle: "Agent-guided UV Restructuring and Reuse"
+
+Read left to right with four clearly aligned stage groups:
+1. "Input & Initialization" (left, about 20% width)
+Show a small stylized blue spiky dragon-like 3D mesh with clear wireframe, a small blue/white source texture swatch, and a fragmented UV atlas. Below, a compact initialization choice box, exact labels "Keep source UV" and "OptCuts initialization", with a clear OR between them. Input captions "Mesh + source material". Fixed geometry is retained downstream.
+
+2. "Agent-guided Restructuring" (large center, about 42% width)
+At top of this group, an elegant navy decision box "Visual Agent", with three short lines: "Inspect appearance", "Protect features", "Choose edits". Include three tiny visual evidence thumbnails, a textured model, checkerboard surface and stretch heatmap. To its upper side, a SMALL dashed-outline optional input badge "Optional cues" with exact subtext "Hard edges / AO / normal / height". These are observational evidence only, no automatic cutting or new geometry.
+
+Below Visual Agent are TWO distinct tool modules side by side, connected from the agent with arrows labeled "Tool calls":
+A. "Seam Editing & Unwrapping"
+Miniature before/after diagrams of TWO edge-adjacent UV patches becoming ONE continuous patch by removing their shared seam and re-unwrapping; show colored seam boundaries and a deliberate preserved opening. Subtext exactly: "Keep / add / remove cuts", "Local reparameterization". Caption under miniature: "True island merge".
+B. "Compatible UV Reuse"
+Miniature before/after diagrams of two separate corresponding surface regions mapped to the SAME stacked UV footprint; two differently colored outlines visibly overlap exactly, small correspondence lines between 3D paired regions. Subtext exactly: "Surface correspondence", "Shared or exclusive regions". Caption under miniature: "Shared texture footprint".
+Visually make it unmistakable that seam merging and UV stacking are different operations. No claims of universal similarity or 100% reuse. Tiny gray text along bottom of these two modules: "Geometry and original face IDs are preserved".
+Show arrows returning numeric/geometric feedback from these tool modules to Visual Agent inside center group (clear noncrossing small loop).
+
+3. "Packing & Rebaking" (about 18% width)
+Show a neatly packed UV atlas with repeated groups represented by one owner footprint, then a small blue/white real-looking atlas texture and a few smaller mip thumbnails. Short labels "Pack shared groups", "Rebake BaseColor", "Generate mips". No special shader decoder.
+
+4. "Validation & Export" (right, about 20% width)
+A clean validation card with three rows: "Appearance & protected features", "Stretch, overlap & seams", "Reconstruction & mip checks". Use neutral checkbox outlines, not all green checks. Below show output icons of textured blue spiky dragon mesh and UV atlas. Output caption "UV + BaseColor + Mips". Add small status label "Accepted or diagnostic" to avoid implying every candidate passes.
+
+Strong solid navy arrows connect 1 → 2 → 3 → 4.
+A prominent dashed AMBER feedback arrow runs BELOW the main pipeline from Validation back to Visual Agent, routed cleanly around boxes and labeled "Failure localization + visual feedback". Keep arrowhead pointing back to Agent, not to input.
+Along the very bottom, small legend: "Illustrative workflow • Fixed-geometry UV editing • Optional cues are not hard constraints".
+Keep all requested text correctly spelled, avoid extra text. Final image must read as one cohesive, publication-quality method figure with consistent line widths and rounded rectangles, large enough labels to read at paper-column width.

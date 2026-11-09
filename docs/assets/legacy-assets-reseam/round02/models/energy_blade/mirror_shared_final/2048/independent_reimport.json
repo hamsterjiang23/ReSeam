@@ -1,0 +1,160 @@
+{
+  "asset": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\mirror_shared_final\\2048\\export\\asset.glb",
+  "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\mirror_shared_final\\2048\\pack_17\\snapshot\\snapshot.json",
+  "state_hash": "631d180f431f45e679391573444f9ec143ae063386ba0ea809510532db601458",
+  "asset_sha256": "1ff080f942d15289a854f8620e69064d9a6040d18edd55890ffd4809f91d9ee0",
+  "geometry_hash": "20eedfc34bd1958a3745bd43c67a96ffa9c33e07691f3a671c01b20273f31f5d",
+  "faces": 700,
+  "positions_max_abs_error": 0.0,
+  "corner_uv0_max_abs_error": 2.9706173187982188e-08,
+  "geometry_passed": true,
+  "corner_uv0_passed": true,
+  "attributes": [
+    "POSITION",
+    "TEXCOORD_0"
+  ],
+  "extra_uv": [],
+  "required_texcoord_1": false,
+  "embedded_basecolor_size": [
+    2048,
+    2048
+  ],
+  "embedded_basecolor_pixel_equal_to_mip0": true,
+  "passed": true,
+  "scope": "raw GLB accessor bounds, ordered indexed face corners, float32 coordinates and UVs, hash-bound auxiliary UV sidecar, embedded BaseColor pixels; no engine/GPU/Shader test",
+  "mip_chain": [
+    {
+      "level": 0,
+      "size": [
+        2048,
+        2048
+      ],
+      "expected_side": 2048,
+      "size_passed": true,
+      "bytes": 4537899,
+      "sha256": "b1217b7f3e9546aa72132221d1d9f372a7308a93158b8f47a78ba79443d2ead0"
+    },
+    {
+      "level": 1,
+      "size": [
+        1024,
+        1024
+      ],
+      "expected_side": 1024,
+      "size_passed": true,
+      "bytes": 1359893,
+      "sha256": "edc91320497c64a771b6db9dd01b86ab9281d65e208c2010936c81db979d35cb"
+    },
+    {
+      "level": 2,
+      "size": [
+        512,
+        512
+      ],
+      "expected_side": 512,
+      "size_passed": true,
+      "bytes": 386021,
+      "sha256": "84ddc80067fa5083d8591e1cf502cf52efe0e3174fe7d11ce27d47e81de6c7f4"
+    },
+    {
+      "level": 3,
+      "size": [
+        256,
+        256
+      ],
+      "expected_side": 256,
+      "size_passed": true,
+      "bytes": 106672,
+      "sha256": "f7e39fd9f626ae047b034d8045837abd54d67e4a8495d082f58b36169b0f49ab"
+    },
+    {
+      "level": 4,
+      "size": [
+        128,
+        128
+      ],
+      "expected_side": 128,
+      "size_passed": true,
+      "bytes": 30352,
+      "sha256": "0982bef8b50818f4e87e542d55b358039761ecf1a0942b1a075a007441a6c2cb"
+    },
+    {
+      "level": 5,
+      "size": [
+        64,
+        64
+      ],
+      "expected_side": 64,
+      "size_passed": true,
+      "bytes": 8933,
+      "sha256": "2108143ed00ca44fa3ccbca881b099313d7ddee0521a284aac8af19f3b4fa606"
+    },
+    {
+      "level": 6,
+      "size": [
+        32,
+        32
+      ],
+      "expected_side": 32,
+      "size_passed": true,
+      "bytes": 2711,
+      "sha256": "ad6fda19adf23fd3f8b8c3684773c4b05490db0348e36f4a71f25c3e929f8790"
+    },
+    {
+      "level": 7,
+      "size": [
+        16,
+        16
+      ],
+      "expected_side": 16,
+      "size_passed": true,
+      "bytes": 889,
+      "sha256": "df1bdc155d350f52efcc300565ba93e08676a568bb52d410f262353f84f95d8d"
+    },
+    {
+      "level": 8,
+      "size": [
+        8,
+        8
+      ],
+      "expected_side": 8,
+      "size_passed": true,
+      "bytes": 329,
+      "sha256": "ff9fa63c56b011c5a3dc4bef38d21e80e7ce8d4298591f8e96073b8c6dea2b5b"
+    },
+    {
+      "level": 9,
+      "size": [
+        4,
+        4
+      ],
+      "expected_side": 4,
+      "size_passed": true,
+      "bytes": 136,
+      "sha256": "a91326a6f142936c907fe03bf3273682b675e2eaba3c22386a5e0f2e009c67f2"
+    },
+    {
+      "level": 10,
+      "size": [
+        2,
+        2
+      ],
+      "expected_side": 2,
+      "size_passed": true,
+      "bytes": 83,
+      "sha256": "be8b69feb31c249fe2cc30c9cb1403f0149628c4847e0019f7d21c876cc649d3"
+    },
+    {
+      "level": 11,
+      "size": [
+        1,
+        1
+      ],
+      "expected_side": 1,
+      "size_passed": true,
+      "bytes": 70,
+      "sha256": "bc1112d82e63d7b38b3a438e0e169eae6bdca2e76d623be1426e0a3783cf7212"
+    }
+  ],
+  "mip_chain_complete": true
+}

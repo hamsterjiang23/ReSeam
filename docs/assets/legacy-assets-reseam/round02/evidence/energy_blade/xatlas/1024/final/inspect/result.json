@@ -1,0 +1,21 @@
+{
+  "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\xatlas\\1024\\pack_43\\snapshot\\snapshot.json",
+  "state_hash": "4da8f76f9cb9bda71b307f7cfbdde23c13047783769fa0c1cf5d00aef4d84c4d",
+  "asset_id": "aaa32cc5f2a8dd9934e54ddb20d28be1e56d5f22e38fbe1e22b927d4074f87e6",
+  "status": "OK",
+  "execution_success": true,
+  "geometry_passed": false,
+  "final_quality_passed": null,
+  "report": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\xatlas\\1024\\final\\inspect\\inspection.json",
+  "chart_count": 68,
+  "shared_group_count": 0,
+  "unique_footprint": 0.5497038428261167,
+  "metrics_report": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\xatlas\\1024\\final\\inspect\\uv_metrics.json",
+  "metrics_verified": false,
+  "uv_connected_charts": 68,
+  "packing_owners": 68,
+  "actual_independent_tiles": null,
+  "tool": "uv.inspect",
+  "wall_seconds": 1.702999999979511,
+  "output": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\xatlas\\1024\\final\\inspect"
+}

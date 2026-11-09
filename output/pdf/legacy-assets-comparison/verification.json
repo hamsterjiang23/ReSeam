@@ -1,0 +1,23 @@
+{
+  "pdf_sha256": "fdd7ead3b6c2a7906d47662c62f328da2ad82d380457b484d72035594d56b2ae",
+  "page_count": 6,
+  "rendered_pages": [
+    "page-1.png",
+    "page-2.png",
+    "page-3.png",
+    "page-4.png",
+    "page-5.png",
+    "page-6.png"
+  ],
+  "all_six_images_embedded_pixel_exact": true,
+  "sources_unchanged": true,
+  "chinese_footer_text_extraction": true,
+  "embedded_fonts": [
+    "/AAAAAA+MicrosoftYaHei-0"
+  ],
+  "bookmarks": 6,
+  "preview": "preview.png",
+  "ruff": "passed",
+  "basedpyright": "0 errors, 0 warnings",
+  "render_engine": "Poppler pdftoppm -png -scale-to 1600"
+}

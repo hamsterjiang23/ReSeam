@@ -1,0 +1,29 @@
+{
+  "status": "OK",
+  "execution_success": true,
+  "scope": "basecolor_reuse",
+  "bake": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\mirror_shared_final\\256\\bake\\bake.json",
+  "target": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\mirror_shared_final\\frozen_target\\target.json",
+  "payload_bytes": 349524,
+  "quality_accepted": false,
+  "full_pbr_passed": false,
+  "geometry_profile": {
+    "resolution": 256,
+    "gap_pixels": 4.0,
+    "border_pixels": 4.0,
+    "correspondence_fraction": 0.08,
+    "normal_angle_degrees": 180.0,
+    "maximum_anisotropy": 2.0,
+    "mean_shape_limit": 0.025,
+    "tail_shape_limit": 0.1,
+    "maximum_density_ratio": 2.0,
+    "quality_constraints": false
+  },
+  "geometry_profile_hash": "97bc17be7b69e50c697e654f43a32b1881cd6dea4b82ea5a38c521a5bc914a9d",
+  "geometry_policy": "explicit_custom",
+  "strict_geometry_profile_applied": false,
+  "artist_reviewed": false,
+  "tool": "material.bake",
+  "wall_seconds": 2.093999999924563,
+  "output": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\mirror_shared_final\\256\\bake"
+}

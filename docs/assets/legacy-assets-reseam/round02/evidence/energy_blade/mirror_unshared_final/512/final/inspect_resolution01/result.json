@@ -1,0 +1,21 @@
+{
+  "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\mirror_unshared_final\\512\\pack_43\\snapshot\\snapshot.json",
+  "state_hash": "9d571df183b8c7a841b4b633425169f843c506bfb5e2cb96a35e47ee655a164f",
+  "asset_id": "20eedfc34bd1958a3745bd43c67a96ffa9c33e07691f3a671c01b20273f31f5d",
+  "status": "OK",
+  "execution_success": true,
+  "geometry_passed": true,
+  "final_quality_passed": null,
+  "report": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\mirror_unshared_final\\512\\final\\inspect_resolution01\\inspection.json",
+  "chart_count": 2,
+  "shared_group_count": 0,
+  "unique_footprint": 0.5166584899464378,
+  "metrics_report": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\mirror_unshared_final\\512\\final\\inspect_resolution01\\uv_metrics.json",
+  "metrics_verified": true,
+  "uv_connected_charts": 2,
+  "packing_owners": 2,
+  "actual_independent_tiles": 2,
+  "tool": "uv.inspect",
+  "wall_seconds": 1.1570000000065193,
+  "output": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\mirror_unshared_final\\512\\final\\inspect_resolution01"
+}

@@ -1,0 +1,25 @@
+{
+  "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\mirror_shared_final\\2048\\pack_43\\snapshot\\snapshot.json",
+  "mode": "basecolor",
+  "texture": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\mirror_shared_final\\2048\\bake\\texture\\BaseColor_mip0.png",
+  "size": 768,
+  "cameras": [
+    {
+      "name": "front",
+      "azimuth": 0,
+      "elevation": 0
+    },
+    {
+      "name": "oblique",
+      "azimuth": 35,
+      "elevation": 15
+    },
+    {
+      "name": "back",
+      "azimuth": 180,
+      "elevation": 0
+    }
+  ],
+  "seams": false,
+  "timeout_seconds": 300.0
+}

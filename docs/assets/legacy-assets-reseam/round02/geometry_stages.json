@@ -1,0 +1,236 @@
+{
+  "chloe": {
+    "import": {
+      "faces": 450,
+      "vertices": 227,
+      "geometry_hash": "c9b1f8c196896b45bcabf4298483391e937a06981a4ff13f02c9d04ec523b716",
+      "state_hash": "73fc4bac4e3d1246cab01c79973dddc34343b6555e78593de932f3c7f9182b46",
+      "bounds": [
+        [
+          0.6237664818763733,
+          -0.09121516346931458,
+          -0.7304652333259583
+        ],
+        [
+          0.9516278505325317,
+          0.15149185061454773,
+          0.8437146544456482
+        ]
+      ],
+      "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\source\\import\\snapshot\\snapshot.json"
+    },
+    "optcuts": {
+      "faces": 450,
+      "vertices": 227,
+      "geometry_hash": "c9b1f8c196896b45bcabf4298483391e937a06981a4ff13f02c9d04ec523b716",
+      "state_hash": "3e37775764631c95db3d0b2bb5921e711d6f26d195eb3d3fe7d1855d2c9973a8",
+      "bounds": [
+        [
+          0.6237664818763733,
+          -0.09121516346931458,
+          -0.7304652333259583
+        ],
+        [
+          0.9516278505325317,
+          0.15149185061454773,
+          0.8437146544456482
+        ]
+      ],
+      "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\optcuts\\native\\snapshot\\snapshot.json"
+    },
+    "mirror": {
+      "faces": 590,
+      "vertices": 368,
+      "geometry_hash": "7a12444fe2c5e0cd96e5060f6fe9b924ccfe0d4020c82e0179707c951c7751bc",
+      "state_hash": "187289b10f482bcd8408c65979245909dfec8345511cd9b5712c43f971dd42c8",
+      "bounds": [
+        [
+          0.6112968921661377,
+          -0.08879481256008148,
+          -0.7304652333259583
+        ],
+        [
+          0.9516278505325317,
+          0.15149185061454773,
+          0.6416904330253601
+        ]
+      ],
+      "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\mirror\\create\\shared\\snapshot.json"
+    },
+    "merge": {
+      "faces": 590,
+      "vertices": 368,
+      "geometry_hash": "7a12444fe2c5e0cd96e5060f6fe9b924ccfe0d4020c82e0179707c951c7751bc",
+      "state_hash": "73247b84163ddd8fc8a7708367e2636d3d87532b847d549a2cf3fa5784e763b2",
+      "bounds": [
+        [
+          0.6112968921661377,
+          -0.08879481256008148,
+          -0.7304652333259583
+        ],
+        [
+          0.9516278505325317,
+          0.15149185061454773,
+          0.6416904330253601
+        ]
+      ],
+      "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\merge\\harmonic_group0_apply\\snapshot\\snapshot.json"
+    }
+  },
+  "energy_blade": {
+    "import": {
+      "faces": 500,
+      "vertices": 252,
+      "geometry_hash": "578e7e2b77bfc14f42065144ee7e0d5f89e9d01a0f0b1b1f3e04206ee71b257a",
+      "state_hash": "bccf7133975883b2e623a2a108e445ba6d26c76ecfb7f8713fe9b40cc56c04d1",
+      "bounds": [
+        [
+          -0.49163818,
+          0.0,
+          -0.23090363
+        ],
+        [
+          0.49163818,
+          0.51376343,
+          0.23090363
+        ]
+      ],
+      "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\source\\import\\snapshot\\snapshot.json"
+    },
+    "optcuts": {
+      "faces": 500,
+      "vertices": 252,
+      "geometry_hash": "578e7e2b77bfc14f42065144ee7e0d5f89e9d01a0f0b1b1f3e04206ee71b257a",
+      "state_hash": "74b6fbd8b0cb24bb11bcd6eb734facce0d64640366135df06073848f5b97b0bb",
+      "bounds": [
+        [
+          -0.49163818,
+          0.0,
+          -0.23090363
+        ],
+        [
+          0.49163818,
+          0.51376343,
+          0.23090363
+        ]
+      ],
+      "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\optcuts\\native\\snapshot\\snapshot.json"
+    },
+    "mirror": {
+      "faces": 700,
+      "vertices": 434,
+      "geometry_hash": "20eedfc34bd1958a3745bd43c67a96ffa9c33e07691f3a671c01b20273f31f5d",
+      "state_hash": "f2dd08f50c4f907c2f6d6e20a326fbeedcf0a081a6a9dd65d8f16ec0b958064f",
+      "bounds": [
+        [
+          -0.48222893476486206,
+          0.0,
+          -0.23090362548828125
+        ],
+        [
+          0.49163818359375,
+          0.513763427734375,
+          0.23090362548828125
+        ]
+      ],
+      "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\mirror\\create\\shared\\snapshot.json"
+    },
+    "merge": {
+      "faces": 700,
+      "vertices": 434,
+      "geometry_hash": "20eedfc34bd1958a3745bd43c67a96ffa9c33e07691f3a671c01b20273f31f5d",
+      "state_hash": "dffea30c8dda2db4b938576de4c76afd82e812d4acf3ffec36c7e1b208738869",
+      "bounds": [
+        [
+          -0.48222893476486206,
+          0.0,
+          -0.23090362548828125
+        ],
+        [
+          0.49163818359375,
+          0.513763427734375,
+          0.23090362548828125
+        ]
+      ],
+      "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\merge\\harmonic_group0_apply\\snapshot\\snapshot.json"
+    }
+  },
+  "dragon": {
+    "import": {
+      "faces": 2000,
+      "vertices": 996,
+      "geometry_hash": "1f74f9dc786749e241a294fb8cd2257dd77e46af3551b5ade5129c52c36a6ec0",
+      "state_hash": "f0f1fa837341b5dc4f74ecc1d06014e602cca0635ec783f16e923ef179ec1e23",
+      "bounds": [
+        [
+          -0.49105835,
+          -0.00067603,
+          -0.23141539
+        ],
+        [
+          0.49105835,
+          0.60034645,
+          0.23141539
+        ]
+      ],
+      "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\source\\import\\snapshot\\snapshot.json"
+    },
+    "optcuts": {
+      "faces": 2000,
+      "vertices": 996,
+      "geometry_hash": "1f74f9dc786749e241a294fb8cd2257dd77e46af3551b5ade5129c52c36a6ec0",
+      "state_hash": "5322b15dbfda95a4b31f3537fff197d47e234e59458cde775abb0cb86239085e",
+      "bounds": [
+        [
+          -0.49105835,
+          -0.00067603,
+          -0.23141539
+        ],
+        [
+          0.49105835,
+          0.60034645,
+          0.23141539
+        ]
+      ],
+      "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\optcuts\\native\\snapshot\\snapshot.json"
+    },
+    "mirror": {
+      "faces": 2062,
+      "vertices": 1092,
+      "geometry_hash": "ef10836fcf1c44e88e2455f350d368a459f2628d67a497ad79330ec6fcbe3f7c",
+      "state_hash": "c76f310d31118928f14e4074d2a002474bb26049d5ebbbbe19ea741ee6ac1dda",
+      "bounds": [
+        [
+          -0.491058349609375,
+          -0.00033515511313453317,
+          -0.23141539096832275
+        ],
+        [
+          0.491058349609375,
+          0.6003464460372925,
+          0.22957168519496918
+        ]
+      ],
+      "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\mirror\\create\\shared\\snapshot.json"
+    },
+    "merge": {
+      "faces": 2062,
+      "vertices": 1092,
+      "geometry_hash": "ef10836fcf1c44e88e2455f350d368a459f2628d67a497ad79330ec6fcbe3f7c",
+      "state_hash": "f62ae92119649423332cfc3370a718cc5c872e02b2a73fe51bffd319789329e0",
+      "bounds": [
+        [
+          -0.491058349609375,
+          -0.00033515511313453317,
+          -0.23141539096832275
+        ],
+        [
+          0.491058349609375,
+          0.6003464460372925,
+          0.22957168519496918
+        ]
+      ],
+      "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\merge\\optcuts_group2_apply\\snapshot\\snapshot.json"
+    }
+  }
+}

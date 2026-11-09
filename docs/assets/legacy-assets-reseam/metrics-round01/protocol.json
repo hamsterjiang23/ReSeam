@@ -1,0 +1,310 @@
+{
+  "paper": "https://arxiv.org/html/2610.02507v1#A1.SS6",
+  "scope": "three legacy assets, retained snapshots only; 45 fields; no new bake or quality",
+  "seed": 17,
+  "ao_samples_per_population": 1000,
+  "ao_cosine_rays_per_point": 8,
+  "ao_arc_sampling": "equal-length strata centers on stable edge-ID order",
+  "ao_ray_sequence": "NumPy default_rng seed17; shared local cosine directions for equal sample indices",
+  "ao_reference": "all original physical mesh edges; same reference cached per exact geometry hash",
+  "ao_primary_scope": "explicit state.seams, physical edges counted once; empty set is N/A",
+  "ao_additional_scope": "explicit seams UNION original one-face boundary edges, counted once",
+  "ao_origin_offset_bbox_diagonal": 1e-06,
+  "ao_min_hit_distance_bbox_diagonal": 1e-09,
+  "ao_max_hit_distance_bbox_diagonal": 2,
+  "ao_distance_reason": "covers entire finite mesh from a surface-origin sample, not A.3 local .3d attribute",
+  "ao_edge_normal": "mean unit incident face normals, normalized; first incident normal if cancellation",
+  "ao_hit_test": "existing ReSeam NumPy BVH, two-sided triangles; no geometry repair",
+  "non_disk": "per-chart Euler V-E+F != 1 on actual UV vertex identities",
+  "chart_shape": "sum absolute triangle UV areas; topological boundary length; arithmetic mean over charts",
+  "jaggedness_spacing": 0.005,
+  "jaggedness_count": "ceil(perimeter/.005), clamped 8..4096",
+  "jaggedness_aggregation": "all resampled boundary-point second differences pooled; raw UV units",
+  "jaggedness_unpublished_scale": "no multiplier to force agreement with paper Table1 values",
+  "invalid_boundaries": "skip non-cycle boundary components and report counts; no quality upgrade",
+  "distortion": "reuse frozen baseline.report.distortion_metrics; angular orthogonality added per A.6",
+  "original_reference": "different original geometry; no cross-geometry color or timing imputation",
+  "timeout_per_case_seconds": 300,
+  "code_sha256": {
+    "baseline/evaluate_legacy_metrics.py": "52e9566a39cb0852061177c688e6a4b716bc309f2631211f54741884cca6f319",
+    "baseline/evaluate_paper_metrics.py": "c79ae61febdcd7fa7efc0cc91dc4f69420bfaf0bfeb3974a8223cdb8416d9f3c",
+    "baseline/paper_metrics.py": "e4046d8458306a4fdc2d722055aa1b26bd9d1f63a6b9a006bbc4c16aabfea7b1",
+    "baseline/report.py": "9e87de2e1232d30c5bcc712753c720b6c3af3854e08479d8b3ca96010860f224",
+    "scripts/build_baseline_metrics_table.py": "b467ba0c4676906e425f725afcdf214f63e0436125fa499e078a1491f5aad605"
+  },
+  "project_choices": "formula-based project implementation; official evaluation code was not available",
+  "previous_protocol": "docs/assets/dragon-paper-baselines/with-original-input/paper-metrics-protocol.json",
+  "previous_protocol_sha256": "876200cae1ce8ed7c137631deb9be5230ed7f8c6dcd0edbe9c383d1367388ee2",
+  "case_ids": [
+    "chloe/original",
+    "chloe/source_uv/256",
+    "chloe/source_uv/128",
+    "chloe/source_uv/64",
+    "chloe/optcuts/256",
+    "chloe/optcuts/128",
+    "chloe/optcuts/64",
+    "chloe/mirror_shared_final/256",
+    "chloe/mirror_shared_final/128",
+    "chloe/mirror_shared_final/64",
+    "chloe/mirror_unshared_final/256",
+    "chloe/mirror_unshared_final/128",
+    "chloe/mirror_unshared_final/64",
+    "energy_blade/original",
+    "energy_blade/xatlas/2048",
+    "energy_blade/xatlas/1024",
+    "energy_blade/xatlas/512",
+    "energy_blade/optcuts/2048",
+    "energy_blade/optcuts/1024",
+    "energy_blade/optcuts/512",
+    "energy_blade/mirror_shared_final/2048",
+    "energy_blade/mirror_shared_final/1024",
+    "energy_blade/mirror_shared_final/512",
+    "energy_blade/mirror_unshared_final/2048",
+    "energy_blade/mirror_unshared_final/1024",
+    "energy_blade/mirror_unshared_final/512",
+    "dragon/original",
+    "dragon/xatlas/2048",
+    "dragon/xatlas/1024",
+    "dragon/xatlas/512",
+    "dragon/optcuts/2048",
+    "dragon/optcuts/1024",
+    "dragon/optcuts/512",
+    "dragon/mirror_shared_final/2048",
+    "dragon/mirror_shared_final/1024",
+    "dragon/mirror_shared_final/512",
+    "dragon/mirror_unshared_final/2048",
+    "dragon/mirror_unshared_final/1024",
+    "dragon/mirror_unshared_final/512"
+  ],
+  "fields": [
+    [
+      "faces",
+      "三角面数",
+      "int"
+    ],
+    [
+      "vertices",
+      "顶点数",
+      "int"
+    ],
+    [
+      "resolution",
+      "输入／目标贴图边长 px",
+      "int"
+    ],
+    [
+      "charts",
+      "UV连通岛数 ↓",
+      "int"
+    ],
+    [
+      "tiles",
+      "独立图块数 ↓",
+      "int"
+    ],
+    [
+      "declared_groups",
+      "声明共享组数",
+      "int"
+    ],
+    [
+      "declared_shared_surface_fraction",
+      "声明参与共享表面 ↑",
+      "percent"
+    ],
+    [
+      "sharing_geometry_verified",
+      "复用几何核验完成",
+      "bool"
+    ],
+    [
+      "actual_shared_surface_fraction",
+      "实际参与共享表面 ↑",
+      "percent"
+    ],
+    [
+      "valid_duplicate_uv_area_saved_fraction",
+      "有效重复UV占位节省 ↑",
+      "percent"
+    ],
+    [
+      "coverage",
+      "排布覆盖率／原始覆盖率 ↑",
+      "percent"
+    ],
+    [
+      "unit_square_coverage",
+      "原生／最终单位方格覆盖 ↑",
+      "percent"
+    ],
+    [
+      "summed_uv_area",
+      "UV三角面积之和",
+      "float"
+    ],
+    [
+      "raw_uv_union_area",
+      "UV面积并集",
+      "float"
+    ],
+    [
+      "uv_outside_unit_square_area",
+      "单位方格外UV面积",
+      "float"
+    ],
+    [
+      "all_overlap_fraction_not_validated_reuse",
+      "全部重叠率（含未许可）",
+      "percent"
+    ],
+    [
+      "zero_uv_area_faces",
+      "零UV面积面数",
+      "int"
+    ],
+    [
+      "mixed_orientation_faces",
+      "岛内混合方向面数",
+      "int"
+    ],
+    [
+      "seam_edge_count",
+      "记录切缝边数",
+      "int"
+    ],
+    [
+      "aggregate_texel_density",
+      "总面积口径密度 px/模型单位",
+      "float"
+    ],
+    [
+      "paper.seam_ao",
+      "AO显式切缝 ↑",
+      "float"
+    ],
+    [
+      "paper.boundary_ao",
+      "AO含原边界 ↑（附加范围）",
+      "float"
+    ],
+    [
+      "paper.non_disk_fraction",
+      "Non-disk非圆盘岛比例 ↓",
+      "percent"
+    ],
+    [
+      "paper.compactness",
+      "Compactness紧凑度 ↑",
+      "float"
+    ],
+    [
+      "paper.convexity",
+      "Convexity凸性 ↑",
+      "float"
+    ],
+    [
+      "paper.jaggedness",
+      "Jaggedness边界二阶差分 ↓",
+      "float"
+    ],
+    [
+      "paper.angular_quality",
+      "Angular orthogonality正交度 ↑",
+      "float"
+    ],
+    [
+      "paper.shape_valid_charts",
+      "形状指标计入岛数",
+      "int"
+    ],
+    [
+      "paper.convexity_valid_charts",
+      "凸性指标计入岛数",
+      "int"
+    ],
+    [
+      "paper.jaggedness_samples",
+      "边界二阶差分采样点数",
+      "int"
+    ],
+    [
+      "paper.angular_quality_faces",
+      "正交度计入面数",
+      "int"
+    ],
+    [
+      "distortion.area_distortion_face_mean",
+      "面积畸变D_area ↓",
+      "float"
+    ],
+    [
+      "distortion.area_distortion_included_faces",
+      "面积畸变计入面数",
+      "int"
+    ],
+    [
+      "distortion.conformal_mean_all_nondegenerate",
+      "保角K（所有非退化方向）↓",
+      "float"
+    ],
+    [
+      "distortion.conformal_mean_paper_positive_only",
+      "论文保角K（仅正向）↓",
+      "float"
+    ],
+    [
+      "distortion.conformal_paper_included_faces",
+      "论文保角K计入面数",
+      "int"
+    ],
+    [
+      "distortion.texel_spread_octaves",
+      "纹素分配离散度 octave ↓",
+      "float"
+    ],
+    [
+      "distortion.new_seam_length_3d",
+      "新增3D切缝长度",
+      "float"
+    ],
+    [
+      "distortion.new_seam_length_per_surface_area",
+      "新增切缝长/表面积",
+      "float"
+    ],
+    [
+      "distortion.uv_boundary_length",
+      "UV边界长度",
+      "float"
+    ],
+    [
+      "color_mean",
+      "颜色均值误差 ↓",
+      "float"
+    ],
+    [
+      "color_p95",
+      "颜色P95误差 ↓",
+      "float"
+    ],
+    [
+      "color_max",
+      "颜色最大误差 ↓",
+      "float"
+    ],
+    [
+      "worst_render_mean",
+      "最差视图均值误差 ↓",
+      "float"
+    ],
+    [
+      "worst_render_max",
+      "最差视图最大误差 ↓",
+      "float"
+    ]
+  ],
+  "new_seam_scope": "existing state.seams measured from uncut mesh, NOT net addition relative to authored UV",
+  "absent_low_uv": "geometry counts and source image size only; UV quantities remain N/A",
+  "failed_pack_scope": "measure retained native UV; coverage final and color errors remain unavailable",
+  "ranking": "none across geometry variants or failed quality; raw metrics remain visible"
+}

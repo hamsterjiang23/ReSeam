@@ -1,0 +1,72 @@
+{
+  "source_faces": 500,
+  "retained_source_faces": 311,
+  "discarded_source_faces": 189,
+  "clipped_source_faces": 82,
+  "split_source_faces": 39,
+  "coplanar_source_faces": 0,
+  "retained_faces": 350,
+  "reflected_faces": 350,
+  "output_faces": 700,
+  "retained_vertices": 217,
+  "output_vertices": 434,
+  "retained_uv_vertices": 309,
+  "output_uv_vertices": 618,
+  "plane_axis": 2,
+  "plane_offset": 0.0,
+  "keep_positive": true,
+  "midplane_geometry": "disconnected_explicit_source_identities",
+  "mirrored_corner_permutation": [
+    0,
+    2,
+    1
+  ],
+  "coordinate_welding": false,
+  "retained_area": 0.18995699365734436,
+  "output_area": 0.37991398731468873,
+  "midplane_strip_candidates": [],
+  "midplane_review_required": false,
+  "midplane_strip_band_fraction": 0.001,
+  "midplane_strip_policy": "diagnostic candidates, not deletion authorization; inspect plane and source geometry",
+  "parent_asset_id": "aaa32cc5f2a8dd9934e54ddb20d28be1e56d5f22e38fbe1e22b927d4074f87e6",
+  "variant_asset_id": "20eedfc34bd1958a3745bd43c67a96ffa9c33e07691f3a671c01b20273f31f5d",
+  "parent_state_hash": "74b6fbd8b0cb24bb11bcd6eb734facce0d64640366135df06073848f5b97b0bb",
+  "float32_position_max_abs_error": 1.4801449677026568e-08,
+  "source_uv_interpolation": "projected original-low lineage then original high",
+  "shared_groups": 14,
+  "geometry_changed": true,
+  "original_asset_modified": false,
+  "geometry_validated": false,
+  "quality_accepted": null,
+  "full_pbr_passed": false,
+  "shared_snapshot": {
+    "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\mirror\\create\\shared\\snapshot.json",
+    "state_hash": "f2dd08f50c4f907c2f6d6e20a326fbeedcf0a081a6a9dd65d8f16ec0b958064f",
+    "asset_id": "20eedfc34bd1958a3745bd43c67a96ffa9c33e07691f3a671c01b20273f31f5d"
+  },
+  "unshared_snapshot": {
+    "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\mirror\\create\\unshared\\snapshot.json",
+    "state_hash": "3f1d28fdcd1028436f889d128ce3825f1eeb3062c1e4ba707f3dee67ff5f4139",
+    "asset_id": "20eedfc34bd1958a3745bd43c67a96ffa9c33e07691f3a671c01b20273f31f5d"
+  },
+  "variant_root": {
+    "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\mirror\\create\\variant_root\\snapshot.json",
+    "state_hash": "50f402b74d078b0985a71a271a1c219ab3c1c892006e8e46fab3d73a20dd7aed",
+    "asset_id": "20eedfc34bd1958a3745bd43c67a96ffa9c33e07691f3a671c01b20273f31f5d"
+  },
+  "source_reference_glb": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\source\\import\\inputs\\material_reference.glb",
+  "source_correspondence": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\mirror\\create\\source_correspondence.npz",
+  "profile": {
+    "resolution": 256,
+    "gap_pixels": 4,
+    "border_pixels": 4,
+    "correspondence_fraction": 0.08,
+    "normal_angle_degrees": 180.0,
+    "maximum_anisotropy": 2.0,
+    "mean_shape_limit": 0.025,
+    "tail_shape_limit": 0.1,
+    "maximum_density_ratio": 2.0,
+    "quality_constraints": false
+  },
+  "scope": "explicit upstream geometry variant, not fixed-geometry UV improvement"
+}

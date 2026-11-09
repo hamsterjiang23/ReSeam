@@ -1,0 +1,21 @@
+[
+  "wsl",
+  "-d",
+  "Ubuntu-22.04",
+  "--cd",
+  "/mnt/e/ReSem/artifacts/legacy_assets_reseam/round02/dragon/optcuts/native/native",
+  "--",
+  "timeout",
+  "--kill-after=2",
+  "297.9530000000959",
+  "/mnt/f/Aseet_Production_WorkFlow/artifacts/uv_methods_comparison/runtime/optcuts-build/OptCuts_bin",
+  "100",
+  "/mnt/e/ReSem/artifacts/legacy_assets_reseam/round02/dragon/optcuts/native/native/input.obj",
+  "0.999",
+  "1",
+  "0",
+  "4.1",
+  "1",
+  "0",
+  "paper_0"
+]

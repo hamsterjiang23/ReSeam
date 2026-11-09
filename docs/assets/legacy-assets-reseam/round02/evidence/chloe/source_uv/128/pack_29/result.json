@@ -1,0 +1,11 @@
+{
+  "status": "REJECTED",
+  "execution_success": true,
+  "geometry_passed": false,
+  "final_quality_passed": null,
+  "report": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\source_uv\\128\\pack_29\\check.json",
+  "reason": "PACKED_GEOMETRY_REJECTED",
+  "tool": "uv.pack",
+  "wall_seconds": 25.14000000001397,
+  "output": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\source_uv\\128\\pack_29"
+}

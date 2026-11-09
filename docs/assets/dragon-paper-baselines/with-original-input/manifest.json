@@ -1,0 +1,144 @@
+{
+  "files": [
+    {
+      "path": "all-metrics-verification.json",
+      "bytes": 583,
+      "sha256": "4898fc26cb7224e92bf0726bc0ca1a6c5dbe7e32e76112fd0258dba4529c53f9"
+    },
+    {
+      "path": "all-metrics.csv",
+      "bytes": 10145,
+      "sha256": "30fec688eda9a1f26a041acc2909088f514c9e01e8243519008eae1474b6ae27"
+    },
+    {
+      "path": "all-metrics.json",
+      "bytes": 45099,
+      "sha256": "b7b7d9344109114fe6636c180f789392d1d930fe3af506ca198bbea64ccd1cb8"
+    },
+    {
+      "path": "all-metrics.md",
+      "bytes": 13634,
+      "sha256": "2cdcdd638b78ff94d8d525db3b6826b8839aa735a45f2523a5ce45b21c7dd3ad"
+    },
+    {
+      "path": "basecolor-comparison.png",
+      "bytes": 3192727,
+      "sha256": "ff5c9f0603461594f40d82da3455e6dfb6dd628b272a3d92c5176780fde84013"
+    },
+    {
+      "path": "comparison-evidence.json",
+      "bytes": 3047,
+      "sha256": "fd6cfe216e15f73b47f843ee242fbc004d0fcd5694baee117165a1071d9140da"
+    },
+    {
+      "path": "original/checker_request.json",
+      "bytes": 423,
+      "sha256": "f0c72d8c7bf0449a7adcfafdebd13931d5a3a95204deebcc28baf1e6a7e0c064"
+    },
+    {
+      "path": "original/checker_result.json",
+      "bytes": 933,
+      "sha256": "ee3c2aac253c40fee207c6b3dd534c27d91c30595e44030a7982c05df66829e3"
+    },
+    {
+      "path": "original/color.png",
+      "bytes": 493322,
+      "sha256": "403758ac1a88fbb7d6c1bd789803314f48fa8d21da814d0725f03f92c5c1f764"
+    },
+    {
+      "path": "original/color_request.json",
+      "bytes": 606,
+      "sha256": "9cad06e5dc93b1bf778931a7619e7d25595b3d65d2a0243095cde755bb124660"
+    },
+    {
+      "path": "original/color_result.json",
+      "bytes": 932,
+      "sha256": "ba601d9e70bc88d679abb88af6af552bdec381a904f05fc34f9a21a10c487152"
+    },
+    {
+      "path": "original/front.png",
+      "bytes": 34097,
+      "sha256": "5e68024b7d34bc5101a27e985eb5350731031f143ae2c2101520aaf8bf31b808"
+    },
+    {
+      "path": "original/texture.jpg",
+      "bytes": 7197146,
+      "sha256": "f54bf1b717a7d73739d7ebe560c9c0425743a089cf264a6b2a6164e89f5fb317"
+    },
+    {
+      "path": "original/uv.png",
+      "bytes": 230590,
+      "sha256": "e6bae10eb53f1088ee4d6e823cb1188eb529328de6b50c970dbd3323c173ddf5"
+    },
+    {
+      "path": "paper-metrics-details/blender_smart.json",
+      "bytes": 507029,
+      "sha256": "0f55ff08c6b11b58b419eb3f7a7ad5c44101698879e067f4eb83e930b5b8bedd"
+    },
+    {
+      "path": "paper-metrics-details/flatten_anything.json",
+      "bytes": 46308,
+      "sha256": "c27c30b71a6d41a34141916b7338f1fc24d3e4bf2fd76a2b6c1ae058009ecf21"
+    },
+    {
+      "path": "paper-metrics-details/meshquery_project.json",
+      "bytes": 46759,
+      "sha256": "bc7ad6b86c9751077a1dbecae5f2ca3c9747185e0594bde247234faf9203604c"
+    },
+    {
+      "path": "paper-metrics-details/optcuts.json",
+      "bytes": 46805,
+      "sha256": "59b4c719b690410a7c3707fa98c619f5387a741a4bfb9641fe7bc2ae51557d88"
+    },
+    {
+      "path": "paper-metrics-details/original_tripo.json",
+      "bytes": 69297,
+      "sha256": "cba7d916e95c5e7e2f5af8c648818f080e504a30aa02946433fb9547c8f8f21d"
+    },
+    {
+      "path": "paper-metrics-details/partuv.json",
+      "bytes": 604145,
+      "sha256": "b6a272e5b53876c1b11b483e507672f95e5ad1bae584ed400cfa6d762fa0bc3d"
+    },
+    {
+      "path": "paper-metrics-details/reseam_shared.json",
+      "bytes": 46861,
+      "sha256": "ca04931fba015510d3743ba359b69b0b2edc16acfded3f0e5c78cba35fe46463"
+    },
+    {
+      "path": "paper-metrics-details/reseam_unshared.json",
+      "bytes": 46900,
+      "sha256": "101a1048a81c50c419395925f9185105cef76508d52e458bc5f3b0dd812e59bd"
+    },
+    {
+      "path": "paper-metrics-details/xatlas.json",
+      "bytes": 340485,
+      "sha256": "373650be3472eca362793c8f69b854bfa43c548ba735706c9244b306f153f0a6"
+    },
+    {
+      "path": "paper-metrics-protocol.json",
+      "bytes": 2682,
+      "sha256": "876200cae1ce8ed7c137631deb9be5230ed7f8c6dcd0edbe9c383d1367388ee2"
+    },
+    {
+      "path": "paper-metrics-validation.json",
+      "bytes": 844,
+      "sha256": "1a5f6cd7ab610e81604872849ed5f2586a05b0dc3bbb13100c613b09dd949d59"
+    },
+    {
+      "path": "paper-metrics.json",
+      "bytes": 33433,
+      "sha256": "9e8df29bc41c9bffcef63fc11954058655cc4699f8d1480e1aa5f7da94af3ffb"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3346,
+      "sha256": "6423dfd66dfd07831eec274391d91c43d6a317cbc70a71c330d347af6524b977"
+    },
+    {
+      "path": "uv-and-checker-comparison.png",
+      "bytes": 4465830,
+      "sha256": "0aeb6ecfcc5a5fd7bba9e1f89784ce6193af396a54ae6762dbdfd172790b8032"
+    }
+  ]
+}

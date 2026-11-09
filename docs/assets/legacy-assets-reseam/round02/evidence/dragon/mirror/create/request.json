@@ -1,0 +1,18 @@
+{
+  "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\optcuts\\native\\snapshot\\snapshot.json",
+  "allow_geometry_change": true,
+  "axis": "x",
+  "offset": 0.0,
+  "keep_positive": true,
+  "reason": "left/right wing and body correspondence; bounds-centered X plane has lowest measured residual",
+  "profile": {
+    "quality_constraints": false,
+    "normal_angle_degrees": 180.0,
+    "correspondence_fraction": 0.08,
+    "resolution": 256,
+    "gap_pixels": 4,
+    "border_pixels": 4
+  },
+  "source_mode": "projected_high",
+  "timeout_seconds": 300.0
+}

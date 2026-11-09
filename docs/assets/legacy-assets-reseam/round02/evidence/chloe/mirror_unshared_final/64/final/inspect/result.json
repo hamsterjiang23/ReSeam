@@ -1,0 +1,21 @@
+{
+  "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\mirror_unshared_final\\64\\pack_29\\snapshot\\snapshot.json",
+  "state_hash": "ee9a00c9b4159914f822ca1dcdd9e5db079ce6b2b340cc059af3e8bb8c9128db",
+  "asset_id": "7a12444fe2c5e0cd96e5060f6fe9b924ccfe0d4020c82e0179707c951c7751bc",
+  "status": "OK",
+  "execution_success": true,
+  "geometry_passed": true,
+  "final_quality_passed": null,
+  "report": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\mirror_unshared_final\\64\\final\\inspect\\inspection.json",
+  "chart_count": 2,
+  "shared_group_count": 0,
+  "unique_footprint": 0.398377618306361,
+  "metrics_report": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\mirror_unshared_final\\64\\final\\inspect\\uv_metrics.json",
+  "metrics_verified": true,
+  "uv_connected_charts": 2,
+  "packing_owners": 2,
+  "actual_independent_tiles": 2,
+  "tool": "uv.inspect",
+  "wall_seconds": 1.1089999999385327,
+  "output": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\mirror_unshared_final\\64\\final\\inspect"
+}

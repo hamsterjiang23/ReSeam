@@ -1,0 +1,89 @@
+{
+  "columns": [
+    "original_tripo",
+    "flatten_anything",
+    "optcuts",
+    "xatlas",
+    "blender_smart",
+    "partuv",
+    "meshquery_project",
+    "reseam_shared",
+    "reseam_unshared"
+  ],
+  "original": {
+    "name": "original",
+    "snapshot": "E:\\ReSem\\artifacts\\dragon_reuse_development\\topology_restore_preflight01\\semantic_patches\\snapshot\\snapshot.json",
+    "texture": "E:\\ReSem\\model\\dragon\\tripo_p2\\blue dragon 3d model\\blue_dragon_3d_model.fbm\\blue_dragon_3d_model_basecolor.jpg",
+    "state_hash": "093a37ec01937cdf70a9923028855d3d8f84e04960504d2b742ff00e6cca16ce",
+    "faces": 10832,
+    "charts": 121,
+    "groups": 0,
+    "coverage": 0.7254857184191058,
+    "uv_bounds": [
+      [
+        0.0011599957942962646,
+        0.0011600255966186523
+      ],
+      [
+        0.9984869360923767,
+        0.997647225856781
+      ]
+    ],
+    "independent_tiles": 121,
+    "authorized_shared_surface_fraction": 0.0
+  },
+  "texture_size": [
+    8192,
+    8192
+  ],
+  "original_quality_scope": "reference only; original geometry and 8K texture; not part of fixed-geometry ranking",
+  "checker_camera": {
+    "azimuth": 0,
+    "elevation": 0
+  },
+  "basecolor_camera": {
+    "azimuth": 35,
+    "elevation": 15
+  },
+  "baseline_measurements_sha256": "217d54e4f68902c27269de62780641491f3fcf29163ff5763375ae3dae16d7d0",
+  "original_measurements_sha256": "82c2ffa50cda94b3f940cd7bd7cf3d264c74062f9ab075e350a7e41db1096238",
+  "new_reference_images": [
+    {
+      "kind": "front",
+      "source": "artifacts\\dragon_paper_baselines\\with_original_input01\\checker\\front.png",
+      "file": "original/front.png",
+      "sha256": "5e68024b7d34bc5101a27e985eb5350731031f143ae2c2101520aaf8bf31b808"
+    },
+    {
+      "kind": "uv",
+      "source": "artifacts\\dragon_paper_baselines\\with_original_input01\\checker\\uv.png",
+      "file": "original/uv.png",
+      "sha256": "e6bae10eb53f1088ee4d6e823cb1188eb529328de6b50c970dbd3323c173ddf5"
+    },
+    {
+      "kind": "color",
+      "source": "artifacts\\dragon_paper_baselines\\with_original_input01\\color\\oblique.png",
+      "file": "original/color.png",
+      "sha256": "403758ac1a88fbb7d6c1bd789803314f48fa8d21da814d0725f03f92c5c1f764"
+    },
+    {
+      "kind": "texture",
+      "source": "model\\dragon\\tripo_p2\\blue dragon 3d model\\blue_dragon_3d_model.fbm\\blue_dragon_3d_model_basecolor.jpg",
+      "file": "original/texture.jpg",
+      "sha256": "f54bf1b717a7d73739d7ebe560c9c0425743a089cf264a6b2a6164e89f5fb317"
+    }
+  ],
+  "baseline_frozen_files_unchanged": 117,
+  "algorithms_rerun": false,
+  "new_bakes": false,
+  "layout_text_width_assertions": "PASS",
+  "visual_review": "PASS: both nine-column figures inspected; no observed clipping or stretching",
+  "figure_size": [
+    4496,
+    1400
+  ],
+  "original_arrays_hash_matches_snapshot": true,
+  "original_and_baseline_cameras_checked": true,
+  "ruff": "PASS",
+  "basedpyright": "PASS: 0 errors, 0 warnings, 0 notes"
+}

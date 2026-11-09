@@ -1,0 +1,9 @@
+{
+  "status": "REJECTED",
+  "execution_success": true,
+  "reason": "REPARAMETERIZATION_GEOMETRY_REJECTED",
+  "report": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\merge\\blender_lscm\\reparameterization.json",
+  "tool": "uv.reparameterize",
+  "wall_seconds": 1.640999999945052,
+  "output": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\merge\\blender_lscm"
+}

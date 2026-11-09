@@ -1,5 +1,7 @@
 """Snapshot-bound UV sharing measurements after complete hard-geometry validation."""
 
+from itertools import combinations
+
 import numpy as np
 from shapely import Polygon, STRtree, union_all
 from shapely.geometry.base import BaseGeometry
@@ -76,22 +78,25 @@ def measure_uv_metrics(
     positive_cells = 0
     for group in state.groups:
         check_deadline(deadline)
-        second = list(group.second_faces)
-        tree = STRtree([polygons[face] for face in second])
-        for index, first in enumerate(group.first_faces):
-            if index % 64 == 0:
-                check_deadline(deadline)
-            for target_index in tree.query(polygons[first]):
-                other = second[int(target_index)]
-                # Match the independent validator's stable face order, including GEOS rounding.
-                low, high = sorted((first, other))
-                cell = polygons[low].intersection(polygons[high])
-                if cell.area <= 0:
-                    continue
-                positive_cells += 1
-                parents[find(int(labels[other]))] = find(int(labels[first]))
-                pieces.setdefault(first, []).append(cell)
-                pieces.setdefault(other, []).append(cell)
+        domains = ((group.first_faces, *(member.faces for member in group.member_maps))
+                   if group.member_maps else (group.first_faces, group.second_faces))
+        for first_domain, second_domain in combinations(domains, 2):
+            second = list(second_domain)
+            tree = STRtree([polygons[face] for face in second])
+            for index, first in enumerate(first_domain):
+                if index % 64 == 0:
+                    check_deadline(deadline)
+                for target_index in tree.query(polygons[first]):
+                    other = second[int(target_index)]
+                    # Match the independent validator's stable face order, including GEOS rounding.
+                    low, high = sorted((first, other))
+                    cell = polygons[low].intersection(polygons[high])
+                    if cell.area <= 0:
+                        continue
+                    positive_cells += 1
+                    parents[find(int(labels[other]))] = find(int(labels[first]))
+                    pieces.setdefault(first, []).append(cell)
+                    pieces.setdefault(other, []).append(cell)
     if positive_cells != geometry.get("overlap_cells"):
         result["verification_reason"] = "INTERSECTION_CELL_COUNT_MISMATCH"
         return result

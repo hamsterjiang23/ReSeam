@@ -1,0 +1,21 @@
+{
+  "package": "E:\\ReSem\\output\\skills\\reseam-skills-v1.1.0.zip",
+  "bytes": 33991,
+  "sha256": "4e2689aee7fd132b805bc33841d1f6be5babc43a0fe6b9f229bb67bdb389e8ed",
+  "zip_crc_passed": true,
+  "source_installed_extracted_hashes_match": true,
+  "skill_files": 6,
+  "archive_files": 8,
+  "extracted": "E:\\ReSem\\artifacts\\skill_packages\\reseam-skills-v1.1.0\\unpacked",
+  "clean_machine_install_verified": false,
+  "markdown_links_verified": 7,
+  "skill_validator_passes": 6,
+  "core_imports_passed": true,
+  "tool_descriptions_passed": [
+    "uv.baseline",
+    "material.encode"
+  ],
+  "review_fixes": [
+    "Explicit blender request path for FBX/polygon OBJ import and Blender bake"
+  ]
+}

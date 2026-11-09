@@ -1,0 +1,66 @@
+{
+  "tools": [
+    "artist.select",
+    "artist.protect",
+    "artist.checkpoint",
+    "artist.relax",
+    "artist.groups",
+    "artist.trials",
+    "artist.compare",
+    "artist.review",
+    "artist.export",
+    "artist.preview"
+  ],
+  "unit_and_regression_tests": {
+    "command": "uv run pytest tests/test_artist_tools.py tests/test_agent_tools_state.py tests/test_agent_tools_color_reuse.py tests/test_agent_tools_color_reuse_audit.py tests/test_agent_tools_multi_member.py tests/test_agent_tools_parameterization.py tests/test_agent_tools_views.py tests/test_agent_tools_compact_packing.py -q",
+    "passed": 107
+  },
+  "ruff": "passed",
+  "basedpyright": "0 errors, 0 warnings, 0 notes",
+  "git_diff_check": "passed",
+  "fresh_review": {
+    "status": "CLEAN within requested scope",
+    "findings_fixed": 6
+  },
+  "real_smoke": {
+    "report": "E:\\ReSem\\artifacts\\artist_tools\\real-smoke01\\summary.json",
+    "calls": 11,
+    "all_ok": true,
+    "original_hash_unchanged": true
+  },
+  "blender_preview": {
+    "images": 16,
+    "geometry_and_uv_reimport_match": true,
+    "missing_channels": [
+      {
+        "channel": "normal",
+        "reason": "NORMAL_TEXTURE_NOT_PRESENT"
+      }
+    ],
+    "version": "4.5.11 LTS"
+  },
+  "channel_smoke": {
+    "images": 5,
+    "unavailable": []
+  },
+  "browser": {
+    "model_pick_selected_faces": 221,
+    "model_pick_with_partners": 442,
+    "four_member_selection": {
+      "members": 4,
+      "selected_faces": 45,
+      "with_partners": 174
+    },
+    "shift_pin_count": 1,
+    "generated_request_pin_count": 1,
+    "zoom_scroll_works": true,
+    "blink_works": true,
+    "copy_request": "已复制",
+    "javascript_errors": [],
+    "delivery_transfer": "copyable request text; early automated downloads canceled, download UI removed"
+  },
+  "workbench": "E:\\ReSem\\output\\artist-tools\\dragon-38\\desk\\review.html",
+  "workbench_sha256": "5c5ca54dceda47a6c021f42ac652d0462f1e0c1896f5dc7ad399bdca60f96a2e",
+  "render_viewer": "E:\\ReSem\\output\\artist-tools\\dragon-38\\render\\preview.html",
+  "acceptance_policy": "visual decisions explicit, numerical quality advisory; old numerical receipts unchanged"
+}

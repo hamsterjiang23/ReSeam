@@ -1,0 +1,57 @@
+{
+  "package": "E:\\ReSem\\output\\skills\\reseam-uv-v1.2.0.zip",
+  "bytes": 31734,
+  "sha256": "d1c015639f1bd090c5c8d47dc460417d5e05a268602cfbadcbde438116235773",
+  "single_top_level_folder": "reseam-uv",
+  "skill_md_directly_in_top_folder": true,
+  "single_skill_md": true,
+  "file_count": 6,
+  "skill_md_bytes": 16076,
+  "largest_file_bytes": 17449,
+  "local_markdown_links_verified": 10,
+  "zip_crc_passed": true,
+  "extracted_hashes_match": true,
+  "hard_surface_embedded": true,
+  "external_sibling_skill_required": false,
+  "dependency_setup_included": true,
+  "upload_limits": {
+    "max_files": 200,
+    "skill_md_bytes": 512000,
+    "individual_file_bytes": 10485760,
+    "zip_bytes": 20971520
+  },
+  "files": [
+    {
+      "path": "reseam-uv/references/environment-setup.md",
+      "bytes": 10561,
+      "sha256": "6c48f61c41b12c6ad1b5727d1e0fd5d90247e57ef63ef52f2158f5d98eb080d0"
+    },
+    {
+      "path": "reseam-uv/references/hard-surface.md",
+      "bytes": 5498,
+      "sha256": "ba554a6608cf249254a1ea54604549fe4409860c92d4b500f4397f8fcb6414f0"
+    },
+    {
+      "path": "reseam-uv/references/meshquery.md",
+      "bytes": 6238,
+      "sha256": "1fa027ee649a7fbddace0a187a5b6af6dba7883488aea335fed199d553c7a9ed"
+    },
+    {
+      "path": "reseam-uv/references/projected-source-and-extra-uv.md",
+      "bytes": 3962,
+      "sha256": "5bbb9038e82d3e257488e7683134c0482fd056f3066811e93196bb1fb9176ba5"
+    },
+    {
+      "path": "reseam-uv/references/symmetry-reuse-and-merge.md",
+      "bytes": 17449,
+      "sha256": "b06f9aca48106d9f6419ae144accf4c0ce47a0bff4d2e7ddf9d1eab55a33ff4d"
+    },
+    {
+      "path": "reseam-uv/SKILL.md",
+      "bytes": 16076,
+      "sha256": "cbbc6fdeceabd75086271c36052f4dbefd3cc93b9612ab272e7eb708f0558da0"
+    }
+  ],
+  "scope": "Single-upload Skill instructions and references. ReSeam project code and selected runtime backends still required. Existing modular Skill sources unchanged.",
+  "platform_upload_tested": false
+}

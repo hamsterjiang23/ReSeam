@@ -1,0 +1,32 @@
+{
+  "measured_at_utc": "2026-11-05T10:38:03.792835+00:00",
+  "before_sha256": "4e47498485878f9d7cb7eca999c470d0858b4db9b8b12817a424e6dad694b583",
+  "added_records": [
+    {
+      "asset": "chloe",
+      "label": "mirror_shared_final/256/inspect_17/inspect",
+      "seconds": 1.390999999945052,
+      "cost_scope": "tool_wall_seconds; outer orchestration overhead unavailable"
+    }
+  ],
+  "preserved_existing_outer_times": 484,
+  "verification": {
+    "valid": true,
+    "executed_result_directories": 485,
+    "ledger_entries": 485,
+    "missing_ledger_records": [],
+    "pending_tool_directories": [],
+    "duplicate_entries": 0,
+    "invalid_cost_records": []
+  },
+  "supplemental_measurement_calls": 30,
+  "final_verification": {
+    "valid": true,
+    "executed_result_directories": 515,
+    "ledger_entries": 515,
+    "missing_ledger_records": [],
+    "pending_tool_directories": [],
+    "duplicate_entries": 0,
+    "invalid_cost_records": []
+  }
+}

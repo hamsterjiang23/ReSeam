@@ -1,0 +1,21 @@
+{
+  "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\merge\\optcuts_group2_apply\\snapshot\\snapshot.json",
+  "state_hash": "f62ae92119649423332cfc3370a718cc5c872e02b2a73fe51bffd319789329e0",
+  "asset_id": "ef10836fcf1c44e88e2455f350d368a459f2628d67a497ad79330ec6fcbe3f7c",
+  "status": "OK",
+  "execution_success": true,
+  "geometry_passed": true,
+  "final_quality_passed": null,
+  "report": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\merge\\final\\inspect\\inspection.json",
+  "chart_count": 6,
+  "shared_group_count": 3,
+  "unique_footprint": 0.17758702333725648,
+  "metrics_report": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\merge\\final\\inspect\\uv_metrics.json",
+  "metrics_verified": true,
+  "uv_connected_charts": 6,
+  "packing_owners": 3,
+  "actual_independent_tiles": 3,
+  "tool": "uv.inspect",
+  "wall_seconds": 2.562000000034459,
+  "output": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\merge\\final\\inspect"
+}

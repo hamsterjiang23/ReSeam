@@ -1,5 +1,15 @@
 # ReSeam 项目约束
 
+最新美术工具授权见 [artist-tools](docs/artist-tools.md)：七类能力全部补充，新增流程以实际前后图的目视判断为主，`acceptance_policy=visual` 的数值检查仅作参考。保留不能正常计算/显示/导出的错误和显式保护，记录 Agent/人工观察者、实际看过的视角；禁止把目视保留写成旧严格数值通过。新操作沿用 JSON CLI 与不可变快照，旧实验不回写。`[verified: 用户“全部补充工具……只需要肉眼判断没有什么差别”；opinion: 执行规则]`
+
+最新简化流程以 [OptCuts→Agent→UV整理](docs/results/optcuts-agent-uv.md)为准：由OptCuts给初始切缝，Agent看图决定保留、删减或补缝，合并完整相邻岛后局部重展开，再排布/烘焙验收；沿用现有入口，不再为策略新增工具。80岛镜像龙在固定原边身份下有80个连通部件，左右堆叠只减少图块、不冒充真实合岛；Tripo的19→18岛是删除实际共同边界的局部冒烟。`[verified: 用户最新要求；round01/dragon/initial/component_audit.json；round01/tripo/state.json chosen_merge；opinion: 工作流]`
+
+硬表面／尖刺展开走 [reseam-hard-surface](skills/reseam-hard-surface/SKILL.md)，优先保留特征并控制拉伸，不以岛数最少为目标。导入自定义法线、sharp标记、几何折角、AO和normal/height贴图线索必须区分来源；缺图不推造，三角化内部对角线仅按保留的原多边形身份排除。当前 [Chloe对照](docs/results/chloe-hard-surface.md)与[Tripo独立对照](docs/results/tripo-spike-hard-surface.md)分别固定父几何，外观优先但数值拒绝如实保留；Tripo的1061面非流形导入失败保留，用户已选择已有424面重拓扑，未授权把它另改镜像。`[verified: 用户接受计划、材质线索补充与424面选择；opinion: 工作流与比较口径]`
+
+三模型任务已授权为历史 dragon、energy_blade 和 Chloe 红刺分别创建独立镜像变体；按实际轮廓选择对称平面，不把某一资产的平面或偏移复制给其它资产。原件及固定几何对照保留，同镜像几何共享／解除共享绑定相同颜色目标。早期无 UV 低模的 xatlas 岛数属于初始化结果；Chloe 的静态 RGB 绑定不代表 Unity 动态 Shader，非活动 UV 须经导出后重新读取核对。接口和失败处理见 [高低模与多 UV workflow](skills/reseam-uv/references/projected-source-and-extra-uv.md)。`[verified: 用户三模型计划及“都可以对称”；opinion: 执行与比较口径]`
+
+三模型[实际交付](docs/results/legacy-assets-reseam.md)为Chloe 2岛／1图块、能量刀2岛／1图块、历史龙6岛／3图块；三者实测共享表面均100%。36个条目含30份真实GLB，综合数值质量均拒绝，Agent预览接受与人工／PBR／GPU状态独立。统计工具须使用候选实际分辨率及留边合同；本轮误用256像素的旧统计已保留，30项补测使用原冻结内核，模型、烘焙和数值验收均未改写。`[verified: round02 report.json；measurement_resolution_audit.json；post_experiment_code_check.json；opinion: 后续统计规则]`
+
 当前新增[完成龙模型的论文全基线目标](goal/dragon-paper-baselines.md)：使用最新80岛镜像龙的同一固定几何与完成BaseColor参考，对比FlattenAnything、OptCuts、xatlas、Blender Smart UV、PartUV、MeshQuery及ReSeam共享/解除共享。源码优先官方并统一保存在baseline/；未找到MeshQuery官方代码时明确标为项目实现。逐方法必须报告有效UV复用率，不能把未许可交叠计为复用；失败和开发轮历史保留。`[verified: 用户本轮及追加请求；opinion: 统一比较合同]`
 
 最新用户要求见[原始UV保留实验](docs/results/dragon-raw-uv-reuse.md)：从原始121岛起步，禁止先逐面隔离异常面来换取严格门禁通过。显式 `profile.preserve_source_uv={snapshot,state_hash}` 仅保留原有冲突面对未改变的共同相似布局；严格结果单列，原始交叠不算新增复用。新冲突、明显错贴或特征破坏仍须记录和修正，优先整块调整。旧203岛路径保留，不充当本轮原始基线。`[verified: 用户最新“不要先拆碎裂”；opinion: 工具与比较口径]`

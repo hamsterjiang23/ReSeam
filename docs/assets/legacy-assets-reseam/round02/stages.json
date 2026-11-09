@@ -1,0 +1,148 @@
+{
+  "rows": [
+    {
+      "asset": "chloe",
+      "stage": "source",
+      "state_hash": "73fc4bac4e3d1246cab01c79973dddc34343b6555e78593de932f3c7f9182b46",
+      "charts": 21,
+      "independent_tiles": null,
+      "shared_groups": 0,
+      "shared_surface_fraction": null,
+      "coverage": null,
+      "metrics_verified": false,
+      "source_uv_kind": "authored"
+    },
+    {
+      "asset": "chloe",
+      "stage": "optcuts",
+      "state_hash": "3e37775764631c95db3d0b2bb5921e711d6f26d195eb3d3fe7d1855d2c9973a8",
+      "charts": 3,
+      "independent_tiles": null,
+      "shared_groups": 0,
+      "shared_surface_fraction": null,
+      "coverage": 0.49075191935602913,
+      "metrics_verified": false,
+      "source_uv_kind": "authored"
+    },
+    {
+      "asset": "chloe",
+      "stage": "mirror",
+      "state_hash": "187289b10f482bcd8408c65979245909dfec8345511cd9b5712c43f971dd42c8",
+      "charts": 6,
+      "independent_tiles": 3,
+      "shared_groups": 3,
+      "shared_surface_fraction": 1.0,
+      "coverage": 0.15617015976214263,
+      "metrics_verified": true,
+      "source_uv_kind": "authored"
+    },
+    {
+      "asset": "chloe",
+      "stage": "merge/final",
+      "state_hash": "73247b84163ddd8fc8a7708367e2636d3d87532b847d549a2cf3fa5784e763b2",
+      "charts": 2,
+      "independent_tiles": 1,
+      "shared_groups": 1,
+      "shared_surface_fraction": 1.0,
+      "coverage": 0.7324690775679029,
+      "metrics_verified": true,
+      "source_uv_kind": "authored"
+    },
+    {
+      "asset": "energy_blade",
+      "stage": "source",
+      "state_hash": "bccf7133975883b2e623a2a108e445ba6d26c76ecfb7f8713fe9b40cc56c04d1",
+      "charts": 68,
+      "independent_tiles": null,
+      "shared_groups": 0,
+      "shared_surface_fraction": null,
+      "coverage": 0.5257118303209214,
+      "metrics_verified": false,
+      "source_uv_kind": "new_xatlas_initialization"
+    },
+    {
+      "asset": "energy_blade",
+      "stage": "optcuts",
+      "state_hash": "74b6fbd8b0cb24bb11bcd6eb734facce0d64640366135df06073848f5b97b0bb",
+      "charts": 16,
+      "independent_tiles": null,
+      "shared_groups": 0,
+      "shared_surface_fraction": null,
+      "coverage": 0.3749829903347503,
+      "metrics_verified": false,
+      "source_uv_kind": "new_xatlas_initialization"
+    },
+    {
+      "asset": "energy_blade",
+      "stage": "mirror",
+      "state_hash": "f2dd08f50c4f907c2f6d6e20a326fbeedcf0a081a6a9dd65d8f16ec0b958064f",
+      "charts": 28,
+      "independent_tiles": 14,
+      "shared_groups": 14,
+      "shared_surface_fraction": 1.0,
+      "coverage": 0.24030408593888233,
+      "metrics_verified": true,
+      "source_uv_kind": "new_xatlas_initialization"
+    },
+    {
+      "asset": "energy_blade",
+      "stage": "merge/final",
+      "state_hash": "dffea30c8dda2db4b938576de4c76afd82e812d4acf3ffec36c7e1b208738869",
+      "charts": 2,
+      "independent_tiles": 1,
+      "shared_groups": 1,
+      "shared_surface_fraction": 1.0,
+      "coverage": 0.7320529047528754,
+      "metrics_verified": true,
+      "source_uv_kind": "new_xatlas_initialization"
+    },
+    {
+      "asset": "dragon",
+      "stage": "source",
+      "state_hash": "f0f1fa837341b5dc4f74ecc1d06014e602cca0635ec783f16e923ef179ec1e23",
+      "charts": 177,
+      "independent_tiles": null,
+      "shared_groups": 0,
+      "shared_surface_fraction": null,
+      "coverage": null,
+      "metrics_verified": false,
+      "source_uv_kind": "new_xatlas_initialization"
+    },
+    {
+      "asset": "dragon",
+      "stage": "optcuts",
+      "state_hash": "5322b15dbfda95a4b31f3537fff197d47e234e59458cde775abb0cb86239085e",
+      "charts": 9,
+      "independent_tiles": null,
+      "shared_groups": 0,
+      "shared_surface_fraction": null,
+      "coverage": 0.5204631294778491,
+      "metrics_verified": false,
+      "source_uv_kind": "new_xatlas_initialization"
+    },
+    {
+      "asset": "dragon",
+      "stage": "mirror",
+      "state_hash": "c76f310d31118928f14e4074d2a002474bb26049d5ebbbbe19ea741ee6ac1dda",
+      "charts": 14,
+      "independent_tiles": 7,
+      "shared_groups": 7,
+      "shared_surface_fraction": 1.0,
+      "coverage": 0.1345910899444393,
+      "metrics_verified": true,
+      "source_uv_kind": "new_xatlas_initialization"
+    },
+    {
+      "asset": "dragon",
+      "stage": "merge/final",
+      "state_hash": "f62ae92119649423332cfc3370a718cc5c872e02b2a73fe51bffd319789329e0",
+      "charts": 6,
+      "independent_tiles": 3,
+      "shared_groups": 3,
+      "shared_surface_fraction": 1.0,
+      "coverage": 0.17758702333725648,
+      "metrics_verified": true,
+      "source_uv_kind": "new_xatlas_initialization"
+    }
+  ]
+}

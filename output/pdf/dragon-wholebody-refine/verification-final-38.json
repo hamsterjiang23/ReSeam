@@ -1,0 +1,54 @@
+{
+  "status": "PASS",
+  "pdf": "E:\\ReSem\\output\\pdf\\dragon-wholebody-refine\\镜像龙制作流程图解_最终38份对照.pdf",
+  "pdf_sha256": "f618052d9fc0620235db9b3d588ec157710c59e8a1901513ca2f2916c33cb151",
+  "pages": 42,
+  "rendered_pages": 42,
+  "unchanged_first_pages": 40,
+  "first_40_page_streams_and_pixels_equal": true,
+  "visually_reviewed_added_pages": [
+    41,
+    42
+  ],
+  "last_column_visually_reviewed_at_native_resolution": true,
+  "comparison_columns": 10,
+  "last_column": "ReSeam 进一步优化",
+  "charts": 80,
+  "tiles": 38,
+  "coverage": 0.6304700083849542,
+  "candidate_state_hash": "8ebd51855f3cc614408abfefb5505656eea721a24ca3e02c80970a344f7aa813",
+  "all_faces_covered": 11338,
+  "nine_original_card_pixels_equal": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "comparison_pixels": [
+    4992,
+    1460
+  ],
+  "embedded_comparison_pixels": [
+    [
+      4992,
+      1460
+    ]
+  ],
+  "embedded_attachments": 5,
+  "fonts_embedded_with_unicode_mapping": [
+    "/AAAAAA+MicrosoftYaHei-0",
+    "/AAAAAA+MicrosoftYaHei-Bold-0",
+    "/AAAAAB+MicrosoftYaHei-0",
+    "/AAAAAB+MicrosoftYaHei-Bold-0",
+    "/AAAAAC+MicrosoftYaHei-0"
+  ],
+  "source_hashes_checked": 39,
+  "ruff": "PASS",
+  "basedpyright": "0 errors, 0 warnings, 0 notes",
+  "save_decision": "Saved a separate updated PDF after Windows rejected replacement of the original path with WinError 5."
+}

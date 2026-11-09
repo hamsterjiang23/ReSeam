@@ -1,0 +1,15 @@
+{
+  "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\controls\\unshare_f62ae92119\\snapshot\\snapshot.json",
+  "state_hash": "2dfac898c54b57812a233a07d69ce95791809baf7873db715ca613c1ae84951c",
+  "asset_id": "ef10836fcf1c44e88e2455f350d368a459f2628d67a497ad79330ec6fcbe3f7c",
+  "status": "OK",
+  "execution_success": true,
+  "geometry_passed": true,
+  "hard_geometry_passed": true,
+  "final_quality_passed": null,
+  "requires_rebake": true,
+  "report": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\controls\\unshare_f62ae92119\\geometry.json",
+  "tool": "reuse.apply",
+  "wall_seconds": 2.0,
+  "output": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\controls\\unshare_f62ae92119"
+}

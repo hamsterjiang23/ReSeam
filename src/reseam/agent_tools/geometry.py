@@ -547,6 +547,9 @@ def _check_pair(
     mode = request.get("mode", "auto")
     if mode not in ("auto", "exact", "approximate", "topology", "common_domain", "normal_corner", "similarity", "chart_aware"):
         raise ValueError("INVALID_CORRESPONDENCE_MODE")
+    mirror_source = request.get("mirror_source")
+    if mirror_source is not None and (mode not in ("auto", "exact") or transform is not None):
+        raise ValueError("MIRROR_SOURCE_REQUIRES_REFLECTION_EXACT_OR_AUTO")
     preserve = request.get("preserve_rejected_candidate", False)
     if not isinstance(preserve, bool):
         raise TypeError("BOOLEAN_REQUIRED:preserve_rejected_candidate")
@@ -561,8 +564,13 @@ def _check_pair(
         return _rejected(output, {"reason": "SURFACE_CORRESPONDENCE_REJECTED", "failed_samples": failed,
                                   "sample_count": len(records), "alignment": alignment,
                                   "conclusion": "this selected pair and explicit map only"})
-    copied = (_exact_copy(base.surface, first, second, normal, offset, transform)
-              if mode in ("auto", "exact", "similarity") else None)
+    identity_record: dict[str, object] | None = None
+    if mirror_source is not None:
+        from .mirror_identity import copy_mirror_identity
+        copied, identity_record = copy_mirror_identity(snapshot, first, second, normal, offset, mirror_source)
+    else:
+        copied = (_exact_copy(base.surface, first, second, normal, offset, transform)
+                  if mode in ("auto", "exact", "similarity") else None)
     if copied is None and mode == "exact":
         return _rejected(output, {"reason": "EXACT_TOPOLOGY_NOT_MATCHED",
                                   "conclusion": "approximate surface sharing remains unevaluated"})
@@ -571,10 +579,13 @@ def _check_pair(
     iterations = _integer(request, "refine_iterations", 0)
     diagnostics: dict[str, object] = {"query_count": len(records), "failed_samples": [],
                                     "exceptions_applied_before_mapping": list(exceptions), "alignment": alignment}
+    if identity_record is not None:
+        diagnostics["mirror_identity"] = identity_record
     choices: list[tuple[float, BudgetState, dict[str, object], str]] = []
     attempt_reports: list[dict[str, object]] = []
     diagnostic_candidates: list[dict[str, object]] = []
-    exact_name = "exact_similarity_copy" if transform is not None else "exact_reflection_copy"
+    exact_name = ("source_identity_reflection_copy" if identity_record is not None else
+                  "exact_similarity_copy" if transform is not None else "exact_reflection_copy")
     names = ([exact_name] if copied is not None else
              ["surface_barycentric_transfer", "topology_copy", "normal_corner_transfer", "face_corner_assignment"]
              + (["common_harmonic_domain"] if mode == "similarity" else [])
@@ -668,6 +679,8 @@ def _check_pair(
     _, candidate, report, selected = min(choices, key=lambda choice: choice[0])
     check_deadline(deadline)
     metadata = _edited_metadata(snapshot, "reuse.check_pair", profile)
+    if identity_record is not None:
+        metadata["mirror_identity"] = identity_record
     if "chart_grouping" in diagnostics:
         metadata["semantic_chart_groups"] = diagnostics["chart_grouping"]
     checked_snapshot = save_snapshot(candidate, output / "checked_snapshot", metadata, snapshot)
@@ -693,6 +706,12 @@ def _check_pair(
 
 def check_pair(request: dict[str, object], output: Path, deadline: float) -> dict[str, object]:
     """Legacy reflection modes or bounded explicit similarity hypotheses."""
+    if request.get('combine_mirror_groups') is not None:
+        from .multi_member import combine_mirror_groups
+
+        return combine_mirror_groups(request, output, deadline)
+    if request.get("mirror_source") is not None and request.get("mode", "auto") not in ("auto", "exact"):
+        raise ValueError("MIRROR_SOURCE_REQUIRES_REFLECTION_EXACT_OR_AUTO")
     if request.get("mode") == "paired_domain":
         from .paired_domain import check_paired_domain
         return check_paired_domain(request, output, deadline)
@@ -881,11 +900,16 @@ def pack_uv(request: dict[str, object], output: Path, deadline: float) -> dict[s
         from .release import repair_packing_roundoff
         candidate, report, repair_record = repair_packing_roundoff(source, candidate, profile, deadline, geometry_report)
         write_json(output/"packing_roundoff.json", repair_record)
-    if not report["hard_valid"]:
+    from .artist import basic_check
+    visual = request.get("acceptance_policy", snapshot.metadata.get("artist_acceptance_policy")) == "visual"
+    if visual and basic_check(Snapshot(candidate, {}, output, "", snapshot.asset_id))["zero_area_faces"]:
+        raise ValueError("UNRENDERABLE_UV_REPAIR_ZERO_AREA")
+    if not report["hard_valid"] and not visual:
         return _rejected(output, {"reason": "PACKED_GEOMETRY_REJECTED", "geometry": report,
                                   "packing_roundoff": repair_record, "packing_backend": backend})
     check_deadline(deadline)
     metadata = _edited_metadata(snapshot, "uv.pack", profile)
+    metadata["requires_pack"] = False
     metadata["packing_backend"] = backend
     if packing_record is not None:
         metadata["packing_record"] = packing_record
@@ -894,6 +918,6 @@ def pack_uv(request: dict[str, object], output: Path, deadline: float) -> dict[s
     result = save_snapshot(candidate, output / "snapshot", metadata, snapshot)
     write_json(output / "geometry.json", report)
     return {**snapshot_result(result), "status": "OK", "execution_success": True,
-            "geometry_passed": report["valid"], "hard_geometry_passed": True, "final_quality_passed": None,
+            "geometry_passed": report["valid"], "hard_geometry_passed": report["hard_valid"], "final_quality_passed": None,
             "requires_rebake": True, "packing_backend": backend,
             "report": str((output / "geometry.json").resolve())}

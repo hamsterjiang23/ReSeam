@@ -1,0 +1,11 @@
+{
+  "prior_round": "round01",
+  "prior_round_policy": "preserved development outputs, not pooled with new source-rule-v2 comparisons",
+  "reason": "global high projection at2048 exceeded300s; fixed-original-low-face ROI broadphase validated against full queries before new round",
+  "benchmark": "history/projection_roi_benchmark01/benchmark.json",
+  "chloe_revision": "Rejected Y mirror after color preview, selected X mirror preserving upper/lower arrangement; old candidate and revision images retained",
+  "call_index": "history/round01/call_index.json",
+  "known_prior_tool_seconds": 2238.0960000013,
+  "unknown_prior_duration_calls": 1,
+  "mirrored_geometry_and_uv_cost_not_isolated_from_whole_workflow": true
+}

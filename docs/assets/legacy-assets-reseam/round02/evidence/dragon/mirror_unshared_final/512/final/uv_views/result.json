@@ -1,0 +1,27 @@
+{
+  "images": {
+    "front": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\mirror_unshared_final\\512\\final\\uv_views\\front.png",
+    "oblique": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\mirror_unshared_final\\512\\final\\uv_views\\oblique.png",
+    "back": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\mirror_unshared_final\\512\\final\\uv_views\\back.png",
+    "uv": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\mirror_unshared_final\\512\\final\\uv_views\\uv.png"
+  },
+  "face_rasters": {
+    "front": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\mirror_unshared_final\\512\\final\\uv_views\\front_faces.npz",
+    "oblique": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\mirror_unshared_final\\512\\final\\uv_views\\oblique_faces.npz",
+    "back": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\mirror_unshared_final\\512\\final\\uv_views\\back_faces.npz"
+  },
+  "state_hash": "14c7a04ebe6c321d074a9fb6ff7f7cea534ee9544303f8552d9285d28908df68",
+  "picked_faces": {
+    "front": [],
+    "oblique": [],
+    "back": []
+  },
+  "report": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\mirror_unshared_final\\512\\final\\uv_views\\views.json",
+  "quality_evidence": false,
+  "coordinate_convention": "Y-up; front +Z, back -Z, left +X, right -X; orthographic auto-fit",
+  "status": "OK",
+  "execution_success": true,
+  "tool": "view.render",
+  "wall_seconds": 2.984000000054948,
+  "output": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\mirror_unshared_final\\512\\final\\uv_views"
+}

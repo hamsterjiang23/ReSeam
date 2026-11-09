@@ -60,17 +60,46 @@ def mirror_asset(request: dict[str, object], output: Path, deadline: float) -> d
     if (isinstance(offset, bool) or not isinstance(offset, (int, float))
             or not np.isfinite(offset) or not isinstance(positive, bool)):
         raise ValueError("MIRROR_FINITE_OFFSET_AND_BOOLEAN_SIDE_REQUIRED")
-    pixels, source_uv, factor, repeat, source_record = _texture({}, parent)
+    projected = request.get("source_mode") == "projected_high" or "projected_source" in parent.metadata
+    if request.get("source_mode", "same_surface") not in ("same_surface", "projected_high"):
+        raise ValueError("UNKNOWN_SOURCE_MODE")
+    if projected:
+        from .projected_source import projected_source_metadata
+
+        inherited_projection = parent.metadata.get("projected_source", {})
+        if not isinstance(inherited_projection, dict):
+            raise ValueError("INVALID_PROJECTED_SOURCE_METADATA")
+        fraction = request.get("projection_max_fraction", inherited_projection.get("projection_max_fraction", .02))
+        if type(fraction) not in (int, float):
+            raise ValueError("PROJECTED_SOURCE_POSITIVE_FINITE_MAX_FRACTION_REQUIRED")
+        projected_record = projected_source_metadata(parent, output / "parent_lineage.npz", float(str(fraction)))
+        source_record: dict[str, object] = {"scope": "original high BaseColor through frozen original-low lineage",
+                                          "projected_source": projected_record}
+    else:
+        pixels, source_uv, factor, repeat, source_record = _texture({}, parent)
     variant = build_symmetry_variant(parent.state.surface, plane_axis=("x", "y", "z").index(str(axis)),
                                     plane_offset=float(offset), keep_positive=positive, deadline=deadline)
     surface = variant.surface.copy()
     positions = surface.mesh.vertices.astype(np.float32).astype(float)
     quantization_error = float(np.abs(positions-surface.mesh.vertices).max())
     surface.mesh = make_mesh(positions, surface.mesh.faces)
-    reference_uv = np.einsum("fck,fkj->fcj", variant.source_barycentric, source_uv[variant.source_face_ids])
-    reference = output / "mirrored_source.glb"
     check_deadline(deadline)
-    _reference_glb(surface, reference_uv, Image.fromarray(pixels), factor, repeat, reference)
+    if projected:
+        with np.load(str(projected_record["lineage_npz"]), allow_pickle=False) as data:
+            parent_faces = data["source_low_faces"][variant.source_face_ids]
+            parent_bary = data["source_low_corner_barycentric"][variant.source_face_ids]
+            lineage = output / "projected_lineage.npz"
+            np.savez_compressed(lineage, original_low_triangles=data["original_low_triangles"],
+                                source_low_faces=parent_faces,
+                                source_low_corner_barycentric=np.einsum(
+                                    "fck,fkj->fcj", variant.source_barycentric, parent_bary))
+        projected_record = {**projected_record, "lineage_npz": str(lineage.resolve()),
+                            "lineage_sha256": file_hash(lineage)}
+        reference = Path(str(projected_record["reference_glb"]))
+    else:
+        reference_uv = np.einsum("fck,fkj->fcj", variant.source_barycentric, source_uv[variant.source_face_ids])
+        reference = output / "mirrored_source.glb"
+        _reference_glb(surface, reference_uv, Image.fromarray(pixels), factor, repeat, reference)
     check_deadline(deadline)
     provenance = output / "source_correspondence.npz"
     np.savez_compressed(provenance, source_face_ids=variant.source_face_ids,
@@ -98,6 +127,20 @@ def mirror_asset(request: dict[str, object], output: Path, deadline: float) -> d
         "geometry_variant": "plane_clip_then_exact_mirror", "basecolor_only": True,
         "source_material_scope": source_record, "requires_rebake": True,
         "source_correspondence": str(provenance.resolve())}
+    if projected:
+        metadata["projected_source"] = projected_record
+        manifest = cast(list[dict[str, object]], metadata["source_manifest"])
+        manifest.append({"path": projected_record["lineage_npz"],
+                         "sha256": projected_record["lineage_sha256"]})
+    if "extra_uv" in parent.metadata:
+        from .extra_uv import append_extra_uv_glb, inherit_extra_uv
+
+        metadata["extra_uv"] = parent.metadata["extra_uv"]
+        metadata = inherit_extra_uv(metadata, output / "attributes", variant.source_face_ids,
+                                   variant.source_barycentric, len(parent.state.surface.mesh.faces))
+        if not projected:
+            append_extra_uv_glb(reference, metadata, len(surface.mesh.faces))
+            cast(list[dict[str, object]], metadata["source_manifest"])[0]["sha256"] = file_hash(reference)
     # No parent= argument: this is intentionally a new geometry/asset identity.
     root = save_snapshot(state, output / "variant_root", metadata)
     profile = _profile(request)
@@ -108,7 +151,8 @@ def mirror_asset(request: dict[str, object], output: Path, deadline: float) -> d
     unshared_snapshot = save_snapshot(unshared, output / "unshared", metadata, root)
     report = {**variant.report, "parent_asset_id": parent.asset_id, "variant_asset_id": root.asset_id,
         "parent_state_hash": parent.state_hash, "float32_position_max_abs_error": quantization_error,
-        "source_uv_interpolation": "source triangle barycentric; reflected members use retained-side source",
+        "source_uv_interpolation": ("projected original-low lineage then original high" if projected else
+                                    "source triangle barycentric; reflected members use retained-side source"),
         "shared_groups": len(groups), "geometry_changed": True, "original_asset_modified": False,
         "geometry_validated": False, "quality_accepted": None, "full_pbr_passed": False,
         "shared_snapshot": snapshot_result(shared_snapshot), "unshared_snapshot": snapshot_result(unshared_snapshot),

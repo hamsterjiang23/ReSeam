@@ -1,0 +1,30 @@
+{
+  "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\optcuts\\native\\snapshot\\snapshot.json",
+  "state_hash": "3e37775764631c95db3d0b2bb5921e711d6f26d195eb3d3fe7d1855d2c9973a8",
+  "asset_id": "39b42e9b723383da8c78a904a91505fa20584b0b9824ac1619609672507f5185",
+  "method": "optcuts",
+  "settings": {
+    "seed": 0,
+    "input_uv_omitted": true,
+    "automatic_geometry_repair": false,
+    "lambda": 0.999,
+    "distortion_bound": 4.1,
+    "binary_sha256": "29e6ec810d697919cc788aacdeeb5c7c597c744008fb91d202c7ddafeb5087a2",
+    "geometry_mapping": "existing original-face/corner importer; ambiguous identity rejects"
+  },
+  "seconds": 14.422000000020489,
+  "faces": 450,
+  "chart_count": 3,
+  "input_geometry_sha256": "6165ad0829ff6eb1fcafc7d6b487d725f98474dcd5a4ec59ad96d9819d145ea3",
+  "geometry_unchanged": true,
+  "sharing_groups": 0,
+  "quality_accepted": null,
+  "python": "3.11.15 (main, Mar 24 2026, 22:57:51) [MSC v.1944 64 bit (AMD64)]",
+  "baseline": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\optcuts\\native\\baseline.json",
+  "execution_success": true,
+  "status": "OK",
+  "requires_rebake": true,
+  "tool": "uv.baseline",
+  "wall_seconds": 15.312999999965541,
+  "output": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\optcuts\\native"
+}

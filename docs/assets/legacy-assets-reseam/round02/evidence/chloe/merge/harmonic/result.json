@@ -1,0 +1,14 @@
+{
+  "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\merge\\harmonic\\snapshot\\snapshot.json",
+  "state_hash": "16e8ecce70591ff5a32f7e30e4e771d53356403de680d8e81efa01685bffd93c",
+  "asset_id": "7a12444fe2c5e0cd96e5060f6fe9b924ccfe0d4020c82e0179707c951c7751bc",
+  "status": "OK",
+  "execution_success": true,
+  "geometry_passed": true,
+  "hard_geometry_passed": true,
+  "requires_rebake": true,
+  "report": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\merge\\harmonic\\reparameterization.json",
+  "tool": "uv.reparameterize",
+  "wall_seconds": 1.1410000000614673,
+  "output": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\merge\\harmonic"
+}

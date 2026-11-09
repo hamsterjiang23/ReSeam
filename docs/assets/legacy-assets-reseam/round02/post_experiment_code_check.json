@@ -1,0 +1,49 @@
+{
+  "experiment_kernel_sources": 117,
+  "frozen_sources": "frozen_code/manifest.json",
+  "post_experiment_changes": [
+    {
+      "file": "scripts\\agent_asset_worker.py",
+      "frozen_sha256": "5c374e390b148bc125928712c3ec7a285b5c20af0aee823f523978eff61a2ba3",
+      "current_sha256": "f3caa155d8d8fd970cf469cfe566e5a631b52ee4da3a6cd66e8c0db6e6b6f52a",
+      "ast_equal_after_erasing_runtime_noop_typing_casts": true
+    },
+    {
+      "file": "scripts\\agent_fbx_uv.py",
+      "frozen_sha256": "954609ba4340488cc3d47d035dd527e8170bafa889670b019c6485d3e464bb41",
+      "current_sha256": "9fc2f9f2d28d4edf660eca95ad0233d64b3b06ba8225a0200907475b39d74419",
+      "ast_equal_after_erasing_runtime_noop_typing_casts": true
+    }
+  ],
+  "real_chloe_reimport": "history/post_typing_smoke01/result.json",
+  "real_chloe_array_parity": [
+    {
+      "archive": "inputs/imported.npz",
+      "exact_arrays": {
+        "vertices": true,
+        "faces": true,
+        "corner_uv": true,
+        "corner_ids": true,
+        "extra_uv_0": true
+      }
+    },
+    {
+      "archive": "inputs/extra_uv.npz",
+      "exact_arrays": {
+        "layer_0": true
+      }
+    },
+    {
+      "archive": "snapshot/arrays.npz",
+      "exact_arrays": {
+        "vertices": true,
+        "faces": true,
+        "uv": true,
+        "uv_faces": true,
+        "texture": true
+      }
+    }
+  ],
+  "quality_scores_recomputed": false,
+  "reason": "Type-only external FBX/NumPy casts; executed round02 kernel remains frozen. Future experiments must use a new round initialized from current code."
+}

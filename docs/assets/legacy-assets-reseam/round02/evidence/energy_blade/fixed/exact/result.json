@@ -1,0 +1,11 @@
+{
+  "status": "REJECTED",
+  "execution_success": true,
+  "geometry_passed": false,
+  "final_quality_passed": null,
+  "report": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\fixed\\exact\\check.json",
+  "reason": "EXACT_TOPOLOGY_NOT_MATCHED",
+  "tool": "reuse.check_pair",
+  "wall_seconds": 1.1559999999590218,
+  "output": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\fixed\\exact"
+}

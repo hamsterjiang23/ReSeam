@@ -10,7 +10,7 @@ from typing import Any, cast
 import numpy as np
 
 from ..budget_state import BudgetState
-from ..joint_types import Correspondence, ReuseGroup
+from ..joint_types import Correspondence, ReuseGroup, ReuseMember
 from ..mesh import make_mesh
 from ..reuse_transform import similarity_transform
 from ..types import MeshState
@@ -58,6 +58,9 @@ class Snapshot:
 def save_snapshot(
     state: BudgetState, output: Path, metadata: dict[str, object], parent: Snapshot | None = None,
 ) -> Snapshot:
+    if parent is not None and parent.metadata.get("artist_locks"):
+        from .artist import enforce_locks
+        enforce_locks(state, parent)
     output = output.resolve()
     output.mkdir(parents=True, exist_ok=False)
     surface = state.surface
@@ -118,6 +121,9 @@ def load_snapshot(path: Path) -> Snapshot:
         tuple(g["plane_normal"]), float(g["plane_offset"]),
         int(g["first_orientation"]), int(g["second_orientation"]),
         None if g.get("first_to_second") is None else similarity_transform(g["first_to_second"]),
+        tuple(ReuseMember(tuple(member["faces"]), int(member["orientation"]),
+                          similarity_transform(member["first_to_member"]))
+              for member in g.get("member_maps", [])),
     ) for g in record["groups"])
     correspondences = tuple(Correspondence(
         int(c["source_face"]), tuple(c["source_barycentric"]), int(c["target_face"]),

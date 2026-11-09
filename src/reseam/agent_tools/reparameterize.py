@@ -266,10 +266,15 @@ def reparameterize(request: dict[str, object], output: Path, deadline: float) ->
     report = geometry_report(proposed,profile)
     record["geometry"] = report
     write_json(output/"reparameterization.json",record)
-    if not report["hard_valid"]:
+    from .artist import basic_check
+    from .state import Snapshot
+    visual = request.get("acceptance_policy", snapshot.metadata.get("artist_acceptance_policy")) == "visual"
+    if visual and basic_check(Snapshot(proposed, {}, output, "", snapshot.asset_id))["zero_area_faces"]:
+        raise ValueError("UNRENDERABLE_UV_REPAIR_ZERO_AREA")
+    if not report["hard_valid"] and not visual:
         return {"status":"REJECTED","execution_success":True,"reason":"REPARAMETERIZATION_GEOMETRY_REJECTED",
                 "report":str(output/"reparameterization.json")}
     result = save_snapshot(proposed,output/"snapshot",_edited_metadata(snapshot,"uv.reparameterize",profile),snapshot)
     return {**snapshot_result(result),"status":"OK","execution_success":True,
-            "geometry_passed":report["valid"],"hard_geometry_passed":True,"requires_rebake":True,
+            "geometry_passed":report["valid"],"hard_geometry_passed":report["hard_valid"],"requires_rebake":True,
             "report":str(output/"reparameterization.json")}

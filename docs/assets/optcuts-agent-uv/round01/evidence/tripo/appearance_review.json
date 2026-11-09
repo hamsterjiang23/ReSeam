@@ -1,0 +1,13 @@
+{
+  "reviewer": "Agent",
+  "human_accepted": false,
+  "evidence": [
+    "artifacts\\optcuts_agent_uv\\round01\\tripo\\evaluate\\optcuts\\seed17\\basecolor\\oblique.png",
+    "artifacts\\optcuts_agent_uv\\round01\\tripo\\evaluate\\agent_merge\\seed17\\basecolor\\oblique.png",
+    "artifacts\\optcuts_agent_uv\\round01\\tripo\\merge1\\blender_lscm_checker\\oblique.png",
+    "artifacts\\optcuts_agent_uv\\round01\\tripo\\merge0\\blender_lscm_checker\\oblique.png"
+  ],
+  "conclusion": "The seed17 oblique BaseColor views retain the same red/black pattern and silhouette. No clear local appearance gain from merge1 is visible at this size; central folds and blade retain coarse directional patterning in both. Keep OptCuts rather than adopting a merge solely to remove one island. This is Agent preview judgment, not numerical or human approval.",
+  "selected": "optcuts/seed17",
+  "candidate_status": "merge1 valid true merge but not adopted; merge0 stopped after packing screen"
+}

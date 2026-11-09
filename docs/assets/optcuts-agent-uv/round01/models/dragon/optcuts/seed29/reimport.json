@@ -1,0 +1,25 @@
+{
+  "asset": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\evaluate\\optcuts\\seed29\\export\\asset.glb",
+  "snapshot": "E:\\ReSem\\artifacts\\optcuts_agent_uv\\round01\\dragon\\evaluate\\optcuts\\seed29\\pack\\snapshot\\snapshot.json",
+  "state_hash": "9e4043226c61c01aaff9ae85ce1c9498918456b50097cb854e46f0951090c03e",
+  "asset_sha256": "3a6e311343aaf8cb050aafc59b04d122861ba92855cb97c2cf26d7afe5a3dc3f",
+  "geometry_hash": "a7b1bfc5d1fb43d487904a917624bbc05f8c89d32bf606a502198badb5ff7d31",
+  "faces": 11338,
+  "positions_max_abs_error": 0.0,
+  "corner_uv0_max_abs_error": 2.9800639178567678e-08,
+  "geometry_passed": true,
+  "corner_uv0_passed": true,
+  "attributes": [
+    "POSITION",
+    "TEXCOORD_0"
+  ],
+  "extra_uv": [],
+  "required_texcoord_1": false,
+  "embedded_basecolor_size": [
+    256,
+    256
+  ],
+  "embedded_basecolor_pixel_equal_to_mip0": true,
+  "passed": true,
+  "scope": "raw GLB accessor bounds, ordered indexed face corners, float32 coordinates and UVs, hash-bound auxiliary UV sidecar, embedded BaseColor pixels; no engine/GPU/Shader test"
+}

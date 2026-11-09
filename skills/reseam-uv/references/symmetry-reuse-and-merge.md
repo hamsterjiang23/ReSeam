@@ -39,6 +39,8 @@
 
 镜像变体已生成精确共享时不重复应用同一组。重新展开主侧之后，旧提案已过期，须以新状态重新 `reuse.check_pair mode=exact`，再复制到对侧。精确反射只适用于真实对应，不能用于强迫一般资产改成对称。`[opinion]`
 
+存在重合坐标的不同顶点、或非零平面镜像经过float32保存时，可在 `mode=exact|auto` 显式提供 `mirror_source={snapshot,state_hash}`，引用同一索引几何的镜像创建快照。工具只读取该快照已绑定哈希的 `source_correspondence.npz` 面角对应，核对完整面配对、顶点一一对应、反射关系及保存精度，再执行完整重叠检查。源快照不可用或几何不同则拒绝；不能把任意坐标近邻当来源身份。`[verified: mirror_identity.py copy_mirror_identity；opinion: 使用范围]`
+
 镜像后先读 `mirror_variant.json` 的 `midplane_review_required/midplane_strip_candidates`，并看编号UV。该诊断按来源模型尺度标出紧贴裁切平面的整岛薄条，只提示复核，不自动删面。默认 `offset=0` 不是对真实对称中线的估计；发现细线岛时检查来源坐标与近中线顶点带，在当前资产授权的新变体中调整平面后比较轮廓和颜色，不能靠隐藏轮廓线或放宽门限宣布修复。真实薄翼/鳍可能应保留，必须看图。`[verified: symmetry_variant.py report.midplane_strip_candidates；opinion: 制作流程]`
 
 ### 细线岛诊断与中线修复

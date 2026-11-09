@@ -1,0 +1,29 @@
+{
+  "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\mirror\\create\\shared\\snapshot.json",
+  "action": "unshare",
+  "group_ids": [
+    "mirror:0",
+    "mirror:1",
+    "mirror:2",
+    "mirror:3",
+    "mirror:4",
+    "mirror:5",
+    "mirror:6",
+    "mirror:7",
+    "mirror:8",
+    "mirror:9",
+    "mirror:10",
+    "mirror:11",
+    "mirror:12",
+    "mirror:13"
+  ],
+  "profile": {
+    "quality_constraints": false,
+    "normal_angle_degrees": 180.0,
+    "correspondence_fraction": 0.08,
+    "resolution": 256,
+    "gap_pixels": 4,
+    "border_pixels": 4
+  },
+  "timeout_seconds": 300.0
+}

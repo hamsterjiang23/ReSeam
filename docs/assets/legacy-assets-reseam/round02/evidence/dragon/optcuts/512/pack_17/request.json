@@ -1,0 +1,15 @@
+{
+  "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\optcuts\\native\\snapshot\\snapshot.json",
+  "backend": "blender_concave",
+  "density_normalize": false,
+  "packing_seed": 17,
+  "profile": {
+    "quality_constraints": false,
+    "normal_angle_degrees": 180.0,
+    "correspondence_fraction": 0.08,
+    "resolution": 512,
+    "gap_pixels": 2,
+    "border_pixels": 2
+  },
+  "timeout_seconds": 300.0
+}

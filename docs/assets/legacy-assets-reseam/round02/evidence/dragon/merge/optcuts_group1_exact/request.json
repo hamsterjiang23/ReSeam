@@ -1,0 +1,43 @@
+{
+  "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\merge\\optcuts_group0_apply\\snapshot\\snapshot.json",
+  "first_faces": [
+    297,
+    313,
+    314,
+    315,
+    316,
+    338,
+    353,
+    372,
+    393,
+    395
+  ],
+  "second_faces": [
+    1328,
+    1344,
+    1345,
+    1346,
+    1347,
+    1369,
+    1384,
+    1403,
+    1424,
+    1426
+  ],
+  "mode": "exact",
+  "plane_normal": [
+    1.0,
+    0.0,
+    0.0
+  ],
+  "plane_offset": 0.0,
+  "profile": {
+    "quality_constraints": false,
+    "normal_angle_degrees": 180.0,
+    "correspondence_fraction": 0.08,
+    "resolution": 256,
+    "gap_pixels": 4,
+    "border_pixels": 4
+  },
+  "timeout_seconds": 300.0
+}

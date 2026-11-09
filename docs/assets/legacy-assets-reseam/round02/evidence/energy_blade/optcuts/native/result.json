@@ -1,0 +1,30 @@
+{
+  "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\optcuts\\native\\snapshot\\snapshot.json",
+  "state_hash": "74b6fbd8b0cb24bb11bcd6eb734facce0d64640366135df06073848f5b97b0bb",
+  "asset_id": "aaa32cc5f2a8dd9934e54ddb20d28be1e56d5f22e38fbe1e22b927d4074f87e6",
+  "method": "optcuts",
+  "settings": {
+    "seed": 0,
+    "input_uv_omitted": true,
+    "automatic_geometry_repair": false,
+    "lambda": 0.999,
+    "distortion_bound": 4.1,
+    "binary_sha256": "29e6ec810d697919cc788aacdeeb5c7c597c744008fb91d202c7ddafeb5087a2",
+    "geometry_mapping": "existing original-face/corner importer; ambiguous identity rejects"
+  },
+  "seconds": 8.48499999998603,
+  "faces": 500,
+  "chart_count": 16,
+  "input_geometry_sha256": "079920804ec5391961b33219a46bccc054fcd8a7d89c3b3d39440c15cafcfbc3",
+  "geometry_unchanged": true,
+  "sharing_groups": 0,
+  "quality_accepted": null,
+  "python": "3.11.15 (main, Mar 24 2026, 22:57:51) [MSC v.1944 64 bit (AMD64)]",
+  "baseline": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\optcuts\\native\\baseline.json",
+  "execution_success": true,
+  "status": "OK",
+  "requires_rebake": true,
+  "tool": "uv.baseline",
+  "wall_seconds": 9.34299999999348,
+  "output": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\optcuts\\native"
+}

@@ -1,0 +1,352 @@
+PAGE 1
+ReSeam  /  AI 生成资产 UV 重构
+从 AI 生成资产，到可复用 UV 的龙模型
+原始输入与最新输出  |  真实模型、真实 UV、真实 BaseColor
+[verified: docs/assets/dragon-uv-final/measurements.json; dragon-midplane-cleanup/summary.json, validation.json]
+01 / 10
+输入 · 原始 Tripo
+实际 UV 布局
+10,832 面  /  原生 UV
+输出 · 中线修复版
+实际 UV 布局
+11,338 面  /  新镜像变体
+连通 UV 岛
+121 → 80
+跨版本减少 41 岛
+独立排布图块
+121 → 40
+左右共享后减少重复占位
+BaseColor 尺寸
+8192 → 2048
+尺寸变化不是同质量节省证明
+图集覆盖率
+72.55% → 65.08%
+如实保留覆盖率下降
+当前状态：外观预览
+包含授权镜像改模；颜色/接缝通过，严格渲染仍拒绝。
+
+
+PAGE 2
+ReSeam  /  AI 生成资产 UV 重构
+完整工作流：视觉决策与几何工具协同
+Training-Free：当前 Agent 负责观察和操作决策，确定性工具执行网格与 UV 修改。
+[verified: skills/reseam-uv/SKILL.md; references/symmetry-reuse-and-merge.md]
+02 / 10
+01  导入与冻结
+模型、UV、真实材质
+来源哈希与父快照
+→
+02  多视图观察
+原色、线框、编号
+保护区与错误定位
+→
+03  区域与路线
+Agent 定义整块区域
+固定几何 / 授权镜像
+→
+04  对应与展开
+切口、锚点、参数化
+失败证据与整块修正
+05  共享与合岛
+先堆叠，再删多余缝
+两类收益分开统计
+→
+06  排布与烘焙
+共享组只排主图块
+冻结目标、生成真实贴图
+→
+07  外观与数值反馈
+检查特征、接缝与 mip
+接受、修正或回退
+→
+08  导出与沉淀
+模型、贴图、对照报告
+Skill 与可追溯证据
+反馈原则
+修改一个主要机制，生成新快照；重新烘焙后再判断，失败回到父状态。
+
+
+PAGE 3
+ReSeam  /  AI 生成资产 UV 重构
+先共享，再合岛：两种收益分别统计
+镜像UV堆叠减少重复占位；重新设计切缝与展开，才会减少同一表面上的连通岛。
+[verified: dragon-whole-half-reuse.md; dragon-uv-island-merge.md; source-assets/regions.json]
+03 / 10
+整半镜像 · 实际共享
+无共享
+左右堆叠
+134 岛保持不变
+独立图块 134 → 67
+在已授权的新变体中复制半侧几何和UV；原模型保
+留。两片表面仍各自是一岛。
+头冠：每侧 16 → 1 岛
+旧接缝
+重展开
+LSCM 拒绝 → ABF++
+删除选区内的多余接缝，展开主侧，再精确复制到镜像侧。
+整龙134 → 104岛。
+脚部：每侧 7 → 1 岛
+旧接缝
+重展开
+补脚底切口，修正白爪
+直接合岛曾使白爪模糊；补52条原边组成的脚底开口后
+，单脚仍为1岛。整龙降至92岛。
+这是历史固定镜像几何上的操作；区域面ID与切口数量不作为其它资产的通用参数。
+
+
+PAGE 4
+ReSeam  /  AI 生成资产 UV 重构
+排布与中线修复：保留真实改进，也保留限制
+先寻找完整图块之间的空隙，再追溯异常细条的三维来源；不靠隐藏线条修饰结果。
+[verified: dragon-packing-search/summary.json; dragon-midplane-cleanup/summary.json, independent_audit.json]
+04 / 10
+轮廓排布：固定 92 岛 / 46 图块
+57.26%
+59.93%
+中线修复：消除 12 个已定位薄条岛
+92 岛 / 46 图块
+80 岛 / 40 图块
+排布实测
+9次间距/起点搜索；1024缩图未通过同质量检查。
+几何来源
+调整授权镜像变体的中线；继承已有好UV，重烘焙。
+最终预览
+覆盖率65.08%；颜色/接缝过，严格渲染仍拒绝。
+
+
+PAGE 5
+ReSeam  /  AI 生成资产 UV 重构
+基线实验：同一几何、同一冻结外观参考
+六项方法实际运行，另设ReSeam共享/解除共享对照；不混用历史2000面龙的指标。
+[verified: docs/assets/dragon-paper-baselines/protocol.json, measurements.json; baseline/sources.json]
+05 / 10
+固定输入
+11,338 面
+最新已完成镜像龙；所有方法几何一致
+共同输出
+2048 BaseColor
+8px间距/边界/烘焙留边；LOD 0/1/2
+比较口径
+6 方法 + 2 对照
+保留失败；共享与质量分别记录
+FlattenAnything
+官方模型/训练循环；10,000点、10,000迭代；seed17
+OptCuts
+固定官方源码及二进制哈希；λ=0.999、畸变上限4.1；seed0
+xatlas
+官方Python绑定0.0.11；默认chart options
+Blender Smart UV
+原生Smart UV；角度66°、原生island margin=0.03
+PartUV
+官方0.1.2与PartField权重；阈值1.25；seed42
+MeshQuery 项目实现
+查询/预览/计划/反馈；4个环带补测地切口；Minimum Stretch
+范围差异：本机Blender4.5.11，论文为5.1.2；共同排布8px留边区别于论文0.001间距。MeshQuery未找到官方代码，采用项目实现及几何分区，未使用作者的PartField语义预处理。
+首页65.08%为历史精调布局；本轮共同排布seed0的ReSeam覆盖率为62.93%。ReSeam沿用既有制作布局，历史成本另列，不作等预算从零排名。
+
+
+PAGE 6
+ReSeam  /  AI 生成资产 UV 重构
+UV 与棋盘格对照 · 前四条路径
+相同正视镜头；完成项采用共同排布，拒绝项显示原生UV并明确标记。红线为切缝叠加。
+[verified: docs/assets/dragon-paper-baselines/measurements.json; individual UV/checker PNGs]
+06 / 10
+FlattenAnything
+岛 80 / 图块 未核验
+共享 未核验
+110个零面积面；方向检查拒绝。
+OptCuts
+岛 80 / 图块 80
+共享 0.00%
+颜色、接缝和渲染均通过。
+xatlas
+岛 643 / 图块 未核验
+共享 未核验
+112个零UV面积面；排布拒绝。
+Blender Smart UV
+岛 931 / 图块 931
+共享 0.00%
+颜色/接缝拒绝；渲染通过。
+
+
+PAGE 7
+ReSeam  /  AI 生成资产 UV 重构
+UV 与棋盘格对照 · 后四条路径
+相同正视镜头；完成项采用共同排布，拒绝项显示原生UV并明确标记。红线为切缝叠加。
+[verified: docs/assets/dragon-paper-baselines/measurements.json; individual UV/checker PNGs]
+07 / 10
+PartUV
+岛 1115 / 图块 1115
+共享 0.00%
+颜色/接缝拒绝；渲染通过。
+MeshQuery 项目实现
+岛 80 / 图块 80
+共享 0.00%
+项目实现；本轮三项均通过。
+ReSeam 共享
+岛 80 / 图块 40
+共享 100.00%
+颜色/接缝通过；渲染拒绝。
+ReSeam 解除共享
+岛 80 / 图块 80
+共享 0.00%
+接缝通过；颜色/渲染拒绝。
+
+
+PAGE 8
+ReSeam  /  AI 生成资产 UV 重构
+真实外观与贴图：三条代表路径的同镜头对照
+模型图关闭切缝叠加；下方为各自产生的真实BaseColor。完整六份模型/贴图均在交付目录。
+[verified: docs/assets/dragon-paper-baselines/{optcuts,meshquery_project,reseam_shared}/color.png, texture.png]
+08 / 10
+OptCuts
+共享0.00% / 80图块
+RGBA8完整mip：22,369,620字节
+MeshQuery 项目实现
+共享0.00% / 80图块
+RGBA8完整mip：22,369,620字节
+ReSeam 共享
+共享100.00% / 40图块
+RGBA8完整mip：22,369,620字节
+
+
+PAGE 9
+ReSeam  /  AI 生成资产 UV 重构
+UV 复用率：共享表面、节省占位与复用倍数
+基线使用原生流程，未追加ReSeam共享后处理；0%不代表不能与共享组合。共享与质量分别验收。
+[verified: docs/assets/dragon-paper-baselines/measurements.json rows and reuse_metric_scope]
+09 / 10
+方法
+连通岛
+独立图块
+共享表面
+重复占位节省
+复用倍数
+覆盖率
+FlattenAnything
+80
+未核验
+未核验
+未核验
+未核验
+未核验
+OptCuts
+80
+80
+0.00%
+0.00%
+1.00×
+63.30%
+xatlas
+643
+未核验
+未核验
+未核验
+未核验
+未核验
+Blender Smart UV
+931
+931
+0.00%
+0.00%
+1.00×
+38.44%
+PartUV
+1115
+1115
+0.00%
+0.00%
+1.00×
+40.09%
+MeshQuery 项目实现
+80
+80
+0.00%
+0.00%
+1.00×
+62.72%
+ReSeam 共享
+80
+40
+100.00%
+50.00%
+2.00×
+62.93%
+ReSeam 解除共享
+80
+80
+0.00%
+0.00%
+1.00×
+62.10%
+全部表面参与左右共享
+100%
+两侧均计入参与共享的表面积
+消除成对重复占位
+50%
+是重复UV面积；本轮未做同质量缩图
+同一图块服务两侧
+2.00×
+80岛仍存在，实际只排40图块
+
+
+PAGE 10
+ReSeam  /  AI 生成资产 UV 重构
+最终结论：共享成立，质量状态逐项保留
+四项基线产出2048模型/贴图，另有两份ReSeam对照；失败、拒绝与未知成本均保留。
+[verified: dragon-paper-baselines/measurements.json, verification.json, cost-summary.json; baseline/sources.json]
+10 / 10
+方法
+颜色
+接缝
+渲染
+综合状态
+FlattenAnything
+未评估
+未评估
+未评估
+流程拒绝
+OptCuts
+通过
+通过
+通过
+通过
+xatlas
+未评估
+未评估
+未评估
+流程拒绝
+Blender Smart UV
+拒绝
+拒绝
+通过
+质量拒绝
+PartUV
+拒绝
+拒绝
+通过
+质量拒绝
+MeshQuery 项目实现
+通过
+通过
+通过
+通过
+ReSeam 共享
+通过
+通过
+拒绝
+质量拒绝
+ReSeam 解除共享
+拒绝
+通过
+拒绝
+质量拒绝
+代码与复现
+官方源码按固定提交保存在baseline/，适配器与实验请求可
+追溯。MeshQuery一栏是项目实现，不能写成作者原版实验。
+FlattenAnything约18分钟完成10,000次迭代；原生UV方向
+检查拒绝。xatlas默认输出112个零面积面，保留拒绝，不逐
+面拆岛补洞。
+6份GLB独立回读、完整mip及图像核验通过；LLM token/费用未
+知。
+ReSeam共享版颜色/接缝通过，严格渲染拒绝。共享率不替代最终质量；本轮仍为UV＋BaseColor范围，人工艺术认可、完整PBR和GPU材质验收未完成。

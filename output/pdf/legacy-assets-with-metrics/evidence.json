@@ -1,0 +1,17 @@
+{
+  "pdf": "reseam-three-assets-with-45-metrics.pdf",
+  "pages": 9,
+  "visual_pages": 6,
+  "metric_pages": 3,
+  "metric_fields": 45,
+  "all_cases": 39,
+  "sources_unchanged": true,
+  "source_sha256": {
+    "E:\\ReSem\\docs\\assets\\legacy-assets-reseam\\metrics-round02\\summary.json": "79a6106ffd3778a754fc5763ba18601508963426b17a8ecbdf4c5019f23373b6",
+    "E:\\ReSem\\output\\pdf\\legacy-assets-comparison\\reseam-three-assets-uv-model-comparison.pdf": "fdd7ead3b6c2a7906d47662c62f328da2ad82d380457b484d72035594d56b2ae"
+  },
+  "metric_source": "docs/assets/legacy-assets-reseam/metrics-round02/summary.json",
+  "pdf_sha256": "3f94e0d58f01dfcf88f3ebcd7199d96f1945e79136e2ac7bacee6dad93d21c2f",
+  "historical_quality_changed": false,
+  "bold_scope": "numerical extrema only within the same-geometry shared/unshared pair; no quality ranking"
+}

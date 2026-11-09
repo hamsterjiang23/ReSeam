@@ -1,0 +1,13 @@
+{
+  "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\mirror_shared_final\\512\\pack_43\\snapshot\\snapshot.json",
+  "target": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\mirror_shared_final\\frozen_target\\target.json",
+  "mode": "basecolor_reuse",
+  "resolution": 512,
+  "timeout_seconds": 300.0,
+  "padding_pixels": 2,
+  "geometry_profile": {
+    "quality_constraints": false,
+    "normal_angle_degrees": 180.0,
+    "correspondence_fraction": 0.08
+  }
+}

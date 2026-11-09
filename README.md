@@ -1,5 +1,19 @@
 # ReSeam
 
+新增[美术工具与目视验收](docs/artist-tools.md)：点图定位、保护、同视角对照、试做/退回、固定点放松、共享组编辑、实际 GLB 渲染。按最新用户要求，新的美术流程以肉眼没有明显差别为保留依据，数值只作参考；旧数值验收结果保持独立。`[verified: 用户本轮要求；src/reseam/agent_tools/registry.py artist.*]`
+
+当前硬表面主线简化为 **OptCuts 初始切缝 → Agent 保留/删减/补充切缝并局部合岛 → UV排布与烘焙验收**，复用现有 [Skill](skills/reseam-hard-surface/SKILL.md)，不新增工具入口。本轮[Tripo刺与80岛镜像龙验证](docs/results/optcuts-agent-uv.md)分别记录真实合岛和左右堆叠；固定原边不相邻的部件不为降低岛数强行焊接。旧角度切分实验保留作对照。`[verified: 用户最新流程与龙模型要求；opinion: 执行口径]`
+
+硬表面专项使用 [reseam-hard-surface Skill](skills/reseam-hard-surface/SKILL.md)：先按硬边、凹槽与材质线索控制拉伸，再研究复用，允许增加UV岛。[Chloe原始／镜像对照](docs/results/chloe-hard-surface.md)已保留21项256像素真实烘焙、三种子和GLB回读；综合数值仍拒绝，原始模型近似共享的局部高拉伸单列。[Tripo带刺匕首](docs/results/tripo-spike-hard-surface.md)按用户选择使用已有424面重拓扑，绑定原材质及真实normal map线索，与Chloe分别比较。`[verified: 用户接受计划与追加选择；chloe-hard-surface/round01/summary.json；opinion: 专项工作流]`
+
+三模型新增[45项UV指标补测](docs/results/legacy-assets-45-metrics.md)：共39个原始／方法／尺寸条目，包含形状、AO、畸变、密度、实际复用与既有颜色误差；[完整CSV及缺失原因](docs/assets/legacy-assets-reseam/metrics-round02/README.md)和[9页图像＋指标PDF](output/pdf/legacy-assets-with-metrics/reseam-three-assets-with-45-metrics.pdf)均保留。原低模无UV、排布失败和旧数值拒绝不改写成通过。`[verified: metrics-round02/summary.json row_count/new_bakes；legacy-assets-with-metrics/evidence.json pages]`
+
+三模型实测见 [幻想龙、能量刀与 Chloe 红刺报告](docs/results/legacy-assets-reseam.md)及[交付包](docs/assets/legacy-assets-reseam/round02/README.md)：Chloe 作者21岛→镜像版2岛／1图块；无原UV的历史能量刀、龙分别由xatlas初始化68／177岛得到镜像版2岛／1图块、6岛／3图块。三者实测全部表面参与成对共享，但包含独立镜像改模；同几何解除共享对照和所有失败均保留。当前为Agent外观预览，数值综合验收均拒绝；龙的排布覆盖仅20.40%，不能宣称所有排布指标改善或同质量缩图。`[verified: legacy-assets-reseam/round02 report.json selected；stages.json；matched_controls.json；opinion: 外观判断与结论边界]`
+
+交付文件核验见 [完整检查记录](docs/assets/legacy-assets-reseam/verification-round02.json)：8533个文件哈希、66条本地链接及9张展示图均通过核对；30份导出GLB和原始静态参考共31次独立读取通过，原资产未改。`[verified: verification-round02.json manifest_files/local_links_checked/decoded_figures/raw_reimport_audits/originals_unchanged]`
+
+三模型扩展使用历史幻想龙、能量刀及 Chloe 红刺。高低模颜色通过显式 `material.target source_mode=projected_high` 冻结原高模来源；FBX 可指定静态颜色图片与活动 UV，并将额外 UV 保留到 GLB。操作合同见 [高低模颜色与多 UV workflow](skills/reseam-uv/references/projected-source-and-extra-uv.md)，可复现入口为 `scripts/run_legacy_reseam.py`。原件保留，镜像分支从同一新几何建立共享／解除共享对照，静态预览不代表 Unity 动态材质或完整 PBR 验收。`[verified: registry.py material.target／asset.import 参数；extra_uv.py append_extra_uv_glb；run_legacy_reseam.py evaluate；opinion: 验收范围]`
+
 最新独立实验：[完成龙模型的 MeshQuery 全基线对照目标](goal/dragon-paper-baselines.md)。官方源码与项目适配器统一位于 [baseline](baseline/README.md)，逐项比较UV岛、有效复用率、真实贴图与外观；运行和质量通过分别记录。`[verified: 本轮用户要求；opinion: 实验范围]`
 
 龙模型最新预览见[80岛中线修复交付包](docs/assets/dragon-midplane-cleanup/README.md)，包含修正版GLB、真实BaseColor完整mip、UV／模型前后图和来源核验；历史[92岛交付包](docs/assets/dragon-uv-final/README.md)保留。最新版本颜色/接缝通过、严格渲染拒绝。`[verified: dragon-midplane-cleanup/summary.json quality/audit；两份交付README]`

@@ -1,0 +1,223 @@
+{
+  "rows": 9,
+  "all_nine_reimported": true,
+  "all_nine_quality_rejected": true,
+  "all_full_mips_present": true,
+  "code_provenance_checks": 80,
+  "all_code_provenance_matches": true,
+  "ledger_labels_unique": true,
+  "ledger_actual_complete": true,
+  "ledger_calls": 80,
+  "source_integrity": [
+    {
+      "path": "F:\\MLBB_Test\\haijiangli1_HAMSTERMLBB\\Assets\\Art\\Prefabs\\TempPrefabs\\waipai\\Effect\\Hero\\112_Chloe\\skin07\\Mesh\\Temp_FX_Mod_112_chloe_YM_95.FBX",
+      "expected_sha256": "27337eb3f7e40cd01b3cca10027c951d4f7b437f0ff7e8b451c131df0ceb8ce1",
+      "actual_sha256": "27337eb3f7e40cd01b3cca10027c951d4f7b437f0ff7e8b451c131df0ceb8ce1",
+      "passed": true
+    },
+    {
+      "path": "F:\\MLBB_Test\\haijiangli1_HAMSTERMLBB\\Assets\\Art\\Prefabs\\TempPrefabs\\waipai\\Effect\\Hero\\112_Chloe\\skin07\\Tex\\Temp_FX_Tex_112_chloe_WWW_12_1.png",
+      "expected_sha256": "7e01877f0633c18b4587641cd06140168a0f054d8de54b43e6ebecd347cc29ee",
+      "actual_sha256": "7e01877f0633c18b4587641cd06140168a0f054d8de54b43e6ebecd347cc29ee",
+      "passed": true
+    },
+    {
+      "path": "F:\\Aseet_Production_WorkFlow\\MODEL_TEST\\processed\\spiked_dagger_lowpoly\\spiked_dagger_retopology_final.glb",
+      "expected_sha256": "00c64547fb94e058741b5e5ebd4dacde35f316f5886d1a3411d17bb8ef579035",
+      "actual_sha256": "00c64547fb94e058741b5e5ebd4dacde35f316f5886d1a3411d17bb8ef579035",
+      "passed": true
+    },
+    {
+      "path": "F:\\Model\\简单\\模型\\2_超高模重拓扑1000\\spiked dagger 3d model.glb",
+      "expected_sha256": "6fdda4037e0fc9fd88498cf99653d49db0f97078c7d5d72c2e50870bca475307",
+      "actual_sha256": "6fdda4037e0fc9fd88498cf99653d49db0f97078c7d5d72c2e50870bca475307",
+      "passed": true
+    }
+  ],
+  "generated_intermediates": [
+    {
+      "path": "E:\\ReSem\\artifacts\\chloe_hard_surface\\round01\\original\\prepare\\import\\inputs\\explicit_reference.glb",
+      "scope": "generated pre-export intermediate; destination source_manifest hash is validated by load_snapshot; auxiliary UV augmentation may differ"
+    }
+  ],
+  "local_links": [
+    {
+      "source": "E:\\ReSem\\docs\\results\\chloe-hard-surface.md",
+      "target": "../assets/chloe-hard-surface/round01/original_comparison.png",
+      "exists": true
+    },
+    {
+      "source": "E:\\ReSem\\docs\\results\\chloe-hard-surface.md",
+      "target": "E:/ReSem/artifacts/chloe_hard_surface/round01/original/evaluate/optcuts_unshared/seed17",
+      "exists": true
+    },
+    {
+      "source": "E:\\ReSem\\docs\\results\\chloe-hard-surface.md",
+      "target": "E:/ReSem/artifacts/chloe_hard_surface/round01/original/evaluate/optcuts_unshared/seed29",
+      "exists": true
+    },
+    {
+      "source": "E:\\ReSem\\docs\\results\\chloe-hard-surface.md",
+      "target": "E:/ReSem/artifacts/chloe_hard_surface/round01/original/evaluate/optcuts_unshared/seed43",
+      "exists": true
+    },
+    {
+      "source": "E:\\ReSem\\docs\\results\\chloe-hard-surface.md",
+      "target": "E:/ReSem/artifacts/chloe_hard_surface/round01/original/evaluate/hard_unshared/seed17",
+      "exists": true
+    },
+    {
+      "source": "E:\\ReSem\\docs\\results\\chloe-hard-surface.md",
+      "target": "E:/ReSem/artifacts/chloe_hard_surface/round01/original/evaluate/hard_unshared/seed29",
+      "exists": true
+    },
+    {
+      "source": "E:\\ReSem\\docs\\results\\chloe-hard-surface.md",
+      "target": "E:/ReSem/artifacts/chloe_hard_surface/round01/original/evaluate/hard_unshared/seed43",
+      "exists": true
+    },
+    {
+      "source": "E:\\ReSem\\docs\\results\\chloe-hard-surface.md",
+      "target": "E:/ReSem/artifacts/chloe_hard_surface/round01/original/evaluate/hard_shared/seed17",
+      "exists": true
+    },
+    {
+      "source": "E:\\ReSem\\docs\\results\\chloe-hard-surface.md",
+      "target": "E:/ReSem/artifacts/chloe_hard_surface/round01/original/evaluate/hard_shared/seed29",
+      "exists": true
+    },
+    {
+      "source": "E:\\ReSem\\docs\\results\\chloe-hard-surface.md",
+      "target": "E:/ReSem/artifacts/chloe_hard_surface/round01/original/evaluate/hard_shared/seed43",
+      "exists": true
+    },
+    {
+      "source": "E:\\ReSem\\docs\\results\\chloe-hard-surface.md",
+      "target": "../assets/chloe-hard-surface/round01/mirror_comparison.png",
+      "exists": true
+    },
+    {
+      "source": "E:\\ReSem\\docs\\results\\chloe-hard-surface.md",
+      "target": "E:/ReSem/artifacts/chloe_hard_surface/round01/mirror/evaluate/optcuts_unshared/seed17",
+      "exists": true
+    },
+    {
+      "source": "E:\\ReSem\\docs\\results\\chloe-hard-surface.md",
+      "target": "E:/ReSem/artifacts/chloe_hard_surface/round01/mirror/evaluate/optcuts_unshared/seed29",
+      "exists": true
+    },
+    {
+      "source": "E:\\ReSem\\docs\\results\\chloe-hard-surface.md",
+      "target": "E:/ReSem/artifacts/chloe_hard_surface/round01/mirror/evaluate/optcuts_unshared/seed43",
+      "exists": true
+    },
+    {
+      "source": "E:\\ReSem\\docs\\results\\chloe-hard-surface.md",
+      "target": "E:/ReSem/artifacts/chloe_hard_surface/round01/mirror/evaluate/hard_unshared/seed17",
+      "exists": true
+    },
+    {
+      "source": "E:\\ReSem\\docs\\results\\chloe-hard-surface.md",
+      "target": "E:/ReSem/artifacts/chloe_hard_surface/round01/mirror/evaluate/hard_unshared/seed29",
+      "exists": true
+    },
+    {
+      "source": "E:\\ReSem\\docs\\results\\chloe-hard-surface.md",
+      "target": "E:/ReSem/artifacts/chloe_hard_surface/round01/mirror/evaluate/hard_unshared/seed43",
+      "exists": true
+    },
+    {
+      "source": "E:\\ReSem\\docs\\results\\chloe-hard-surface.md",
+      "target": "E:/ReSem/artifacts/chloe_hard_surface/round01/mirror/evaluate/hard_shared/seed17",
+      "exists": true
+    },
+    {
+      "source": "E:\\ReSem\\docs\\results\\chloe-hard-surface.md",
+      "target": "E:/ReSem/artifacts/chloe_hard_surface/round01/mirror/evaluate/hard_shared/seed29",
+      "exists": true
+    },
+    {
+      "source": "E:\\ReSem\\docs\\results\\chloe-hard-surface.md",
+      "target": "E:/ReSem/artifacts/chloe_hard_surface/round01/mirror/evaluate/hard_shared/seed43",
+      "exists": true
+    },
+    {
+      "source": "E:\\ReSem\\docs\\results\\chloe-hard-surface.md",
+      "target": "E:/ReSem/artifacts/chloe_hard_surface/round01/mirror/evaluate/harmonic_shared/seed17",
+      "exists": true
+    },
+    {
+      "source": "E:\\ReSem\\docs\\results\\chloe-hard-surface.md",
+      "target": "E:/ReSem/artifacts/chloe_hard_surface/round01/mirror/evaluate/harmonic_shared/seed29",
+      "exists": true
+    },
+    {
+      "source": "E:\\ReSem\\docs\\results\\chloe-hard-surface.md",
+      "target": "E:/ReSem/artifacts/chloe_hard_surface/round01/mirror/evaluate/harmonic_shared/seed43",
+      "exists": true
+    },
+    {
+      "source": "E:\\ReSem\\docs\\results\\chloe-hard-surface.md",
+      "target": "../assets/chloe-hard-surface/round01/summary.json",
+      "exists": true
+    },
+    {
+      "source": "E:\\ReSem\\docs\\results\\chloe-hard-surface.md",
+      "target": "../assets/chloe-hard-surface/round01/measurements.csv",
+      "exists": true
+    },
+    {
+      "source": "E:\\ReSem\\docs\\results\\chloe-hard-surface.md",
+      "target": "../assets/chloe-hard-surface/round01/failures.json",
+      "exists": true
+    },
+    {
+      "source": "E:\\ReSem\\docs\\results\\chloe-hard-surface.md",
+      "target": "E:/ReSem/artifacts/chloe_hard_surface/round01",
+      "exists": true
+    },
+    {
+      "source": "E:\\ReSem\\docs\\results\\tripo-spike-hard-surface.md",
+      "target": "../assets/tripo-spike-hard-surface/round03/comparison.png",
+      "exists": true
+    },
+    {
+      "source": "E:\\ReSem\\docs\\results\\tripo-spike-hard-surface.md",
+      "target": "../assets/tripo-spike-hard-surface/round03/summary.json",
+      "exists": true
+    },
+    {
+      "source": "E:\\ReSem\\docs\\results\\tripo-spike-hard-surface.md",
+      "target": "E:/ReSem/artifacts/tripo_spike_hard_surface/round03",
+      "exists": true
+    }
+  ],
+  "figures": [
+    {
+      "path": "E:\\ReSem\\docs\\assets\\chloe-hard-surface\\round01\\mirror_comparison.png",
+      "size": [
+        1600,
+        1080
+      ],
+      "sha256": "9d62d32c67ecf442c17ff2316a2e9e585366d4e675506a3bf9b4fc28f67b6827"
+    },
+    {
+      "path": "E:\\ReSem\\docs\\assets\\chloe-hard-surface\\round01\\original_comparison.png",
+      "size": [
+        1280,
+        1080
+      ],
+      "sha256": "31f9eaadd28bcfa4b6588041dc2fbae7fde4212404372ecb60d5b302b57f471e"
+    },
+    {
+      "path": "E:\\ReSem\\docs\\assets\\tripo-spike-hard-surface\\round03\\comparison.png",
+      "size": [
+        1280,
+        1080
+      ],
+      "sha256": "61fcd7839842a9ac758bbfadf774f6a3668f9d4309a465d82853a63bc5ce5e40"
+    }
+  ],
+  "skill_source_sha256": "a1b059af85745481f001821cf542b7737f932f86cc6a405d2ddeab7d06aef6cf",
+  "skill_installed_sha256": "a1b059af85745481f001821cf542b7737f932f86cc6a405d2ddeab7d06aef6cf"
+}

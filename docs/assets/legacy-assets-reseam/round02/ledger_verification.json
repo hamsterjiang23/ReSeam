@@ -1,0 +1,9 @@
+{
+  "valid": true,
+  "executed_result_directories": 515,
+  "ledger_entries": 515,
+  "missing_ledger_records": [],
+  "pending_tool_directories": [],
+  "duplicate_entries": 0,
+  "invalid_cost_records": []
+}

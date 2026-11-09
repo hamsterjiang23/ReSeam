@@ -1,0 +1,19 @@
+{
+  "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\source\\import\\snapshot\\snapshot.json",
+  "backend": "blender_concave",
+  "density_normalize": false,
+  "packing_seed": 17,
+  "profile": {
+    "quality_constraints": false,
+    "normal_angle_degrees": 180.0,
+    "correspondence_fraction": 0.08,
+    "resolution": 128,
+    "gap_pixels": 2,
+    "border_pixels": 2,
+    "preserve_source_uv": {
+      "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\source\\import\\snapshot\\snapshot.json",
+      "state_hash": "73fc4bac4e3d1246cab01c79973dddc34343b6555e78593de932f3c7f9182b46"
+    }
+  },
+  "timeout_seconds": 300.0
+}

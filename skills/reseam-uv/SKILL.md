@@ -5,6 +5,23 @@ description: 在 ReSeam 仓库通过 JSON CLI 分析静态网格，完成同模�
 
 # ReSeam UV 复用
 
+## 美术操作与目视保留
+
+用户要求美术局部修整、稳定试做或肉眼验收时，使用仓库 `docs/artist-tools.md` 的 `artist.*` 入口。`artist.select/protect/compare/checkpoint/trials/relax/groups/preview` 覆盖定位、保护、对照、回退和实际导出渲染。每项参数仍查 `tools describe`。
+
+本轮用户已选择目视外观判断，新的美术路径用 `acceptance_policy=visual`，或由美术编辑产生的快照继承该模式。重新展开/排布/颜色目标/烘焙的数值证据仅参考，实际看图后调用 `artist.review`，再用 `artist.export` 形成目视交付。不要调用严格数字门禁代替这次用户授权的外观判断，也不要把目视通过写成数值通过。选区、固定点、状态哈希、文件完整性、零面积和保护冲突仍保留基本检查。
+
+查看实际准备的前后角度再记录意见，`reviewer=agent` 不能写成 `human`。模型已经没有的法线等通道不补造。`artist.preview` 用 Blender 读入实际 GLB，不代表 Unity 或用户 GPU 验收。工作台按钮输出可复制的请求 JSON，由 CLI/Agent 执行。
+
+## 首次使用与依赖缺失
+
+首次到一台机器、找不到 `reseam` 命令、运行时配置缺失或后端启动失败时，先读
+[环境预检与按需安装](references/environment-setup.md)，由当前Agent定位仓库、检查并安装
+所选路径缺少的依赖，配置本机运行时，再做小型冒烟后继续用户任务。
+普通本地依赖安装在任务授权范围内时直接执行，不把整份安装清单交回用户；需要仓库地址、
+管理员权限、重启或受限权重访问时，只请求实际缺少的那一项。不要默认安装全部研究后端，
+也不要因 `doctor` 的无关可选依赖为false就中止可运行路径。
+
 在 ReSeam 仓库运行 `uv run reseam tools list`，随后对需要的操作运行
 `uv run reseam tools describe <工具名>`。参数以当前 CLI 说明为准。此 Skill 的 LLM 就是调用工具的 Agent，无需另接模型 API。
 
@@ -17,6 +34,13 @@ uv run reseam tools run <工具名> --request <request.json> --output <从未存
 文件引用使用绝对路径。标准输出是结果 JSON；读取输出目录的 `result.json`、`process.log` 及返回的证据文件。默认每项操作 300 秒，可在请求中设置 `timeout_seconds`。不另写几何或烘焙辅助脚本绕过工具门禁。
 
 ## 执行路线
+
+用户只需给模型和外观/复用目标，由Agent选择已有工具，不要求用户逐个挑后端。
+需要重新规划切缝时，默认收敛为 **OptCuts 初始切缝 → Agent 局部合岛/兼容区域复用 → 排布与烘焙验收**；
+原UV可用且要求保留时继续保留。AO、normal和其它后端按已定位问题调用，不默认全跑。
+
+硬表面、尖刺、明显折角或凹槽需要控制拉伸时，使用同级 `reseam-hard-surface/SKILL.md`；
+按硬边规划切缝，先无共享展开和烘焙，再研究复用，不以连通岛最少作为目标。
 
 用户要求对称部件复用、整半共享、复用后减少连通岛或紧凑排布时，先读
 [对称复用与真实合岛 workflow](references/symmetry-reuse-and-merge.md)。默认保持当前资产几何；
@@ -50,8 +74,9 @@ UV出现孤立细线或近乎空白的图块时，先走专项workflow的“细�
 6. 对新快照重新 `material.bake`、`quality.validate`；旧贴图或旧验收不能用于改过 UV 的状态。比较完整实际通道和 mip，不以岛少、填充率或 BaseColor 预览代替质量验收。
 7. `asset.export` 导出已验收结果。没有通过结果时可用明确的 `mode: "diagnostic"` 导出失败证据，并保留最好已通过快照。最终报告链接真实贴图、原始/修改 UV、渲染、最低已验收字节数及所有拒绝/超时成本。工具完成、节省存储、艺术验收分别报告。
 
-`material.target` / `basecolor_reuse` 要求源材质参考与导入网格具有相同原面角身份和对应位置。
-不同高模到低模的 OBJ＋reference 输入不能直接走此路线；使用显式投射烘焙，保留投射误差。
+默认 `material.target` / `basecolor_reuse` 要求源材质与导入网格有相同面角身份；
+不同高低模须显式使用 `source_mode=projected_high`，参见[投射来源与多UV](references/projected-source-and-extra-uv.md)。
+同页说明FBX显式颜色/UV绑定、原UVIndex恢复和第二UV导出；先检查来源与通道，再开展共享。
 `basecolor_diagnostic` 只返回颜色报告、真实贴图和预览 GLB，不产生可传入 `quality.validate` / `asset.export` 的 `bake.json`。
 其结果可独立重新导入检查，但不能升级成正式材质验收；需要这两个接口时使用支持的 PBR 或同身份颜色路径。
 观察模型时读取返回的坐标约定：固定镜头下某一视角为空可能是开放薄片侧视，继续检查其它视角。

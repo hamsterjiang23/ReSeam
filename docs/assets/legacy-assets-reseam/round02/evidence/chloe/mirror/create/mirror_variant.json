@@ -1,0 +1,72 @@
+{
+  "source_faces": 450,
+  "retained_source_faces": 264,
+  "discarded_source_faces": 186,
+  "clipped_source_faces": 71,
+  "split_source_faces": 31,
+  "coplanar_source_faces": 0,
+  "retained_faces": 295,
+  "reflected_faces": 295,
+  "output_faces": 590,
+  "retained_vertices": 184,
+  "output_vertices": 368,
+  "retained_uv_vertices": 214,
+  "output_uv_vertices": 428,
+  "plane_axis": 0,
+  "plane_offset": 0.7814623713493347,
+  "keep_positive": true,
+  "midplane_geometry": "disconnected_explicit_source_identities",
+  "mirrored_corner_permutation": [
+    0,
+    2,
+    1
+  ],
+  "coordinate_welding": false,
+  "retained_area": 0.22835642080684143,
+  "output_area": 0.45671284161368275,
+  "midplane_strip_candidates": [],
+  "midplane_review_required": false,
+  "midplane_strip_band_fraction": 0.001,
+  "midplane_strip_policy": "diagnostic candidates, not deletion authorization; inspect plane and source geometry",
+  "parent_asset_id": "39b42e9b723383da8c78a904a91505fa20584b0b9824ac1619609672507f5185",
+  "variant_asset_id": "7a12444fe2c5e0cd96e5060f6fe9b924ccfe0d4020c82e0179707c951c7751bc",
+  "parent_state_hash": "3e37775764631c95db3d0b2bb5921e711d6f26d195eb3d3fe7d1855d2c9973a8",
+  "float32_position_max_abs_error": 2.9504050647055635e-08,
+  "source_uv_interpolation": "source triangle barycentric; reflected members use retained-side source",
+  "shared_groups": 3,
+  "geometry_changed": true,
+  "original_asset_modified": false,
+  "geometry_validated": false,
+  "quality_accepted": null,
+  "full_pbr_passed": false,
+  "shared_snapshot": {
+    "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\mirror\\create\\shared\\snapshot.json",
+    "state_hash": "187289b10f482bcd8408c65979245909dfec8345511cd9b5712c43f971dd42c8",
+    "asset_id": "7a12444fe2c5e0cd96e5060f6fe9b924ccfe0d4020c82e0179707c951c7751bc"
+  },
+  "unshared_snapshot": {
+    "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\mirror\\create\\unshared\\snapshot.json",
+    "state_hash": "476b867133088d6b93dfdc91b698209cfee922043a6a791cb9b8b2d3c30cfc0c",
+    "asset_id": "7a12444fe2c5e0cd96e5060f6fe9b924ccfe0d4020c82e0179707c951c7751bc"
+  },
+  "variant_root": {
+    "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\mirror\\create\\variant_root\\snapshot.json",
+    "state_hash": "7bdb503c70f3ba33ee30edacd905b7ce94d2d9c95920ffdfa1700af7ecb7098e",
+    "asset_id": "7a12444fe2c5e0cd96e5060f6fe9b924ccfe0d4020c82e0179707c951c7751bc"
+  },
+  "source_reference_glb": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\mirror\\create\\mirrored_source.glb",
+  "source_correspondence": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\chloe\\mirror\\create\\source_correspondence.npz",
+  "profile": {
+    "resolution": 256,
+    "gap_pixels": 4,
+    "border_pixels": 4,
+    "correspondence_fraction": 0.08,
+    "normal_angle_degrees": 180.0,
+    "maximum_anisotropy": 2.0,
+    "mean_shape_limit": 0.025,
+    "tail_shape_limit": 0.1,
+    "maximum_density_ratio": 2.0,
+    "quality_constraints": false
+  },
+  "scope": "explicit upstream geometry variant, not fixed-geometry UV improvement"
+}

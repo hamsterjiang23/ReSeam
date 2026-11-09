@@ -13,5 +13,14 @@ docs/assets/dragon-uv-final/** -text whitespace=cr-at-eol,-blank-at-eof
 docs/assets/dragon-midplane-cleanup/** -text whitespace=cr-at-eol,-blank-at-eof
 docs/assets/dragon-packing-search/** -text whitespace=cr-at-eol,-blank-at-eof
 docs/assets/dragon-paper-baselines/** -text whitespace=cr-at-eol,-blank-at-eof
-output/pdf/** -text whitespace=cr-at-eol,-blank-at-eof
+output/pdf/** -text whitespace=cr-at-eol,-blank-at-eof,-blank-at-eol
 baseline/MeshQuery/project_source_snapshot/** -text whitespace=cr-at-eol,-blank-at-eof
+# Keep newly delivered frozen sources, textures and manifests byte-identical.
+docs/assets/chloe-hard-surface/** -text whitespace=cr-at-eol,-blank-at-eof
+docs/assets/legacy-assets-reseam/** -text whitespace=cr-at-eol,-blank-at-eof
+docs/assets/optcuts-agent-uv/** -text whitespace=cr-at-eol,-blank-at-eof
+docs/assets/reseam-method/** -text whitespace=cr-at-eol,-blank-at-eof
+docs/assets/tripo-spike-hard-surface/** -text whitespace=cr-at-eol,-blank-at-eof
+output/artist-tools/** -text whitespace=cr-at-eol,-blank-at-eof
+output/dragon-wholebody-refine/** -text whitespace=cr-at-eol,-blank-at-eof
+output/skills/** -text whitespace=cr-at-eol,-blank-at-eof

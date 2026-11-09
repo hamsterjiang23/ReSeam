@@ -1,0 +1,27 @@
+{
+  "images": {
+    "front": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\xatlas\\1024\\final\\uv_views\\front.png",
+    "oblique": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\xatlas\\1024\\final\\uv_views\\oblique.png",
+    "back": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\xatlas\\1024\\final\\uv_views\\back.png",
+    "uv": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\xatlas\\1024\\final\\uv_views\\uv.png"
+  },
+  "face_rasters": {
+    "front": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\xatlas\\1024\\final\\uv_views\\front_faces.npz",
+    "oblique": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\xatlas\\1024\\final\\uv_views\\oblique_faces.npz",
+    "back": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\xatlas\\1024\\final\\uv_views\\back_faces.npz"
+  },
+  "state_hash": "4da8f76f9cb9bda71b307f7cfbdde23c13047783769fa0c1cf5d00aef4d84c4d",
+  "picked_faces": {
+    "front": [],
+    "oblique": [],
+    "back": []
+  },
+  "report": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\xatlas\\1024\\final\\uv_views\\views.json",
+  "quality_evidence": false,
+  "coordinate_convention": "Y-up; front +Z, back -Z, left +X, right -X; orthographic auto-fit",
+  "status": "OK",
+  "execution_success": true,
+  "tool": "view.render",
+  "wall_seconds": 2.125,
+  "output": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\xatlas\\1024\\final\\uv_views"
+}

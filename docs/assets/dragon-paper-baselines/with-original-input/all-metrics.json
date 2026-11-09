@@ -1,0 +1,1475 @@
+{
+  "methods": [
+    "original_tripo",
+    "flatten_anything",
+    "optcuts",
+    "xatlas",
+    "blender_smart",
+    "partuv",
+    "meshquery_project",
+    "reseam_shared",
+    "reseam_unshared"
+  ],
+  "metrics": [
+    {
+      "id": "faces",
+      "metric": "三角面数",
+      "format": "int",
+      "values": {
+        "original_tripo": 10832,
+        "flatten_anything": 11338,
+        "optcuts": 11338,
+        "xatlas": 11338,
+        "blender_smart": 11338,
+        "partuv": 11338,
+        "meshquery_project": 11338,
+        "reseam_shared": 11338,
+        "reseam_unshared": 11338
+      },
+      "source": "M.rows.faces; O.original.faces",
+      "best_direction": null,
+      "best_methods": []
+    },
+    {
+      "id": "vertices",
+      "metric": "顶点数",
+      "format": "int",
+      "values": {
+        "original_tripo": 6552,
+        "flatten_anything": 7120,
+        "optcuts": 7120,
+        "xatlas": 7120,
+        "blender_smart": 7120,
+        "partuv": 7120,
+        "meshquery_project": 7120,
+        "reseam_shared": 7120,
+        "reseam_unshared": 7120
+      },
+      "source": "M.rows.vertices; P.rows.original_tripo.base_metrics.vertices",
+      "best_direction": null,
+      "best_methods": []
+    },
+    {
+      "id": "resolution",
+      "metric": "输入/目标边长 px",
+      "format": "int",
+      "values": {
+        "original_tripo": 8192,
+        "flatten_anything": 2048,
+        "optcuts": 2048,
+        "xatlas": 2048,
+        "blender_smart": 2048,
+        "partuv": 2048,
+        "meshquery_project": 2048,
+        "reseam_shared": 2048,
+        "reseam_unshared": 2048
+      },
+      "source": "M.rows.resolution; O.texture_size[0]",
+      "best_direction": null,
+      "best_methods": []
+    },
+    {
+      "id": "charts",
+      "metric": "UV连通岛数",
+      "format": "int",
+      "values": {
+        "original_tripo": 121,
+        "flatten_anything": 80,
+        "optcuts": 80,
+        "xatlas": 643,
+        "blender_smart": 931,
+        "partuv": 1115,
+        "meshquery_project": 80,
+        "reseam_shared": 80,
+        "reseam_unshared": 80
+      },
+      "source": "M.rows.charts; O.original.charts",
+      "best_direction": "min",
+      "best_methods": [
+        "flatten_anything",
+        "optcuts",
+        "meshquery_project",
+        "reseam_shared",
+        "reseam_unshared"
+      ]
+    },
+    {
+      "id": "tiles",
+      "metric": "独立图块数",
+      "format": "int",
+      "values": {
+        "original_tripo": 121,
+        "flatten_anything": null,
+        "optcuts": 80,
+        "xatlas": null,
+        "blender_smart": 931,
+        "partuv": 1115,
+        "meshquery_project": 80,
+        "reseam_shared": 40,
+        "reseam_unshared": 80
+      },
+      "source": "M.rows.tiles; O.original.independent_tiles",
+      "best_direction": "min",
+      "best_methods": [
+        "reseam_shared"
+      ]
+    },
+    {
+      "id": "declared_groups",
+      "metric": "声明共享组数",
+      "format": "int",
+      "values": {
+        "original_tripo": 0,
+        "flatten_anything": 0,
+        "optcuts": 0,
+        "xatlas": 0,
+        "blender_smart": 0,
+        "partuv": 0,
+        "meshquery_project": 0,
+        "reseam_shared": 40,
+        "reseam_unshared": 0
+      },
+      "source": "M.rows.declared_groups; O.original.groups",
+      "best_direction": null,
+      "best_methods": []
+    },
+    {
+      "id": "declared_shared_surface_fraction",
+      "metric": "声明参与共享表面",
+      "format": "percent",
+      "values": {
+        "original_tripo": 0.0,
+        "flatten_anything": 0.0,
+        "optcuts": 0.0,
+        "xatlas": 0.0,
+        "blender_smart": 0.0,
+        "partuv": 0.0,
+        "meshquery_project": 0.0,
+        "reseam_shared": 1.0,
+        "reseam_unshared": 0.0
+      },
+      "source": "M.rows.declared_shared_surface_fraction; O.original.authorized_shared_surface_fraction",
+      "best_direction": "max",
+      "best_methods": [
+        "reseam_shared"
+      ]
+    },
+    {
+      "id": "sharing_geometry_verified",
+      "metric": "复用几何核验完成",
+      "format": "bool",
+      "values": {
+        "original_tripo": null,
+        "flatten_anything": false,
+        "optcuts": true,
+        "xatlas": false,
+        "blender_smart": true,
+        "partuv": true,
+        "meshquery_project": true,
+        "reseam_shared": true,
+        "reseam_unshared": true
+      },
+      "source": "M.rows.sharing_geometry_verified",
+      "best_direction": "max",
+      "best_methods": [
+        "optcuts",
+        "blender_smart",
+        "partuv",
+        "meshquery_project",
+        "reseam_shared",
+        "reseam_unshared"
+      ]
+    },
+    {
+      "id": "actual_shared_surface_fraction",
+      "metric": "实际参与共享表面",
+      "format": "percent",
+      "values": {
+        "original_tripo": null,
+        "flatten_anything": null,
+        "optcuts": 0.0,
+        "xatlas": null,
+        "blender_smart": 0.0,
+        "partuv": 0.0,
+        "meshquery_project": 0.0,
+        "reseam_shared": 1.0,
+        "reseam_unshared": 0.0
+      },
+      "source": "M.rows.actual_shared_surface_fraction",
+      "best_direction": "max",
+      "best_methods": [
+        "reseam_shared"
+      ]
+    },
+    {
+      "id": "valid_duplicate_uv_area_saved_fraction",
+      "metric": "有效重复UV占位节省",
+      "format": "percent",
+      "values": {
+        "original_tripo": null,
+        "flatten_anything": null,
+        "optcuts": 0.0,
+        "xatlas": null,
+        "blender_smart": 0.0,
+        "partuv": 0.0,
+        "meshquery_project": 0.0,
+        "reseam_shared": 0.5000000000000001,
+        "reseam_unshared": 0.0
+      },
+      "source": "M.rows.valid_duplicate_uv_area_saved_fraction",
+      "best_direction": "max",
+      "best_methods": [
+        "reseam_shared"
+      ]
+    },
+    {
+      "id": "valid_uv_reuse_factor",
+      "metric": "有效复用倍数",
+      "format": "float",
+      "values": {
+        "original_tripo": null,
+        "flatten_anything": null,
+        "optcuts": 1.0,
+        "xatlas": null,
+        "blender_smart": 1.0,
+        "partuv": 1.0,
+        "meshquery_project": 1.0,
+        "reseam_shared": 2.0000000000000004,
+        "reseam_unshared": 1.0
+      },
+      "source": "M.rows.valid_uv_reuse_factor",
+      "best_direction": "max",
+      "best_methods": [
+        "reseam_shared"
+      ]
+    },
+    {
+      "id": "coverage",
+      "metric": "正式排布覆盖率",
+      "format": "percent",
+      "values": {
+        "original_tripo": 0.7254857184191058,
+        "flatten_anything": null,
+        "optcuts": 0.6330177682622005,
+        "xatlas": null,
+        "blender_smart": 0.3843879755179457,
+        "partuv": 0.40088786100192003,
+        "meshquery_project": 0.6271601642869722,
+        "reseam_shared": 0.6293083808958327,
+        "reseam_unshared": 0.6209534801542553
+      },
+      "source": "M.rows.coverage; O.original.coverage",
+      "best_direction": "max",
+      "best_methods": [
+        "original_tripo"
+      ]
+    },
+    {
+      "id": "unit_square_coverage",
+      "metric": "原生/最终单位方格覆盖",
+      "format": "percent",
+      "values": {
+        "original_tripo": 0.7254857184191058,
+        "flatten_anything": 0.5084496930768214,
+        "optcuts": 0.6330177682622005,
+        "xatlas": 0.5583240981307424,
+        "blender_smart": 0.3843879755179457,
+        "partuv": 0.40088786100192003,
+        "meshquery_project": 0.6271601642869722,
+        "reseam_shared": 0.6293083808958327,
+        "reseam_unshared": 0.6209534801542553
+      },
+      "source": "M.rows.unit_square_coverage; O.original.coverage",
+      "best_direction": "max",
+      "best_methods": [
+        "original_tripo"
+      ]
+    },
+    {
+      "id": "summed_uv_area",
+      "metric": "UV三角面积之和",
+      "format": "float",
+      "values": {
+        "original_tripo": 0.7255745704551405,
+        "flatten_anything": 4.645332197289656,
+        "optcuts": 0.6330177682622005,
+        "xatlas": 0.5583244992107719,
+        "blender_smart": 0.38441352207288404,
+        "partuv": 0.4008878610019196,
+        "meshquery_project": 0.6271601642869721,
+        "reseam_shared": 1.2587338481343433,
+        "reseam_unshared": 0.6210112460875965
+      },
+      "source": "M.rows.summed_uv_area; P.rows.original_tripo.base_metrics.summed_uv_area",
+      "best_direction": null,
+      "best_methods": []
+    },
+    {
+      "id": "raw_uv_union_area",
+      "metric": "UV面积并集",
+      "format": "float",
+      "values": {
+        "original_tripo": 0.7254857184191058,
+        "flatten_anything": 1.7505770508410037,
+        "optcuts": 0.6330177682622005,
+        "xatlas": 0.5583240981307424,
+        "blender_smart": 0.3843879755179457,
+        "partuv": 0.40088786100192003,
+        "meshquery_project": 0.6271601642869721,
+        "reseam_shared": 0.6293083808958327,
+        "reseam_unshared": 0.6209534801542552
+      },
+      "source": "M.rows.raw_uv_union_area; P.rows.original_tripo.base_metrics.raw_uv_union_area",
+      "best_direction": null,
+      "best_methods": []
+    },
+    {
+      "id": "uv_outside_unit_square_area",
+      "metric": "单位方格外UV面积",
+      "format": "float",
+      "values": {
+        "original_tripo": 0.0,
+        "flatten_anything": 1.2421273577641823,
+        "optcuts": 0.0,
+        "xatlas": 0.0,
+        "blender_smart": 0.0,
+        "partuv": 0.0,
+        "meshquery_project": 0.0,
+        "reseam_shared": 0.0,
+        "reseam_unshared": 0.0
+      },
+      "source": "M.rows.uv_outside_unit_square_area; P.rows.original_tripo.base_metrics.uv_outside_unit_square_area",
+      "best_direction": "min",
+      "best_methods": [
+        "original_tripo",
+        "optcuts",
+        "xatlas",
+        "blender_smart",
+        "partuv",
+        "meshquery_project",
+        "reseam_shared",
+        "reseam_unshared"
+      ]
+    },
+    {
+      "id": "all_overlap_fraction_not_validated_reuse",
+      "metric": "全部重叠率（含未许可）",
+      "format": "percent",
+      "values": {
+        "original_tripo": 0.00012245748356221053,
+        "flatten_anything": 0.62315352777948,
+        "optcuts": 0.0,
+        "xatlas": 7.183636578922403e-07,
+        "blender_smart": 6.645592173915027e-05,
+        "partuv": 0.0,
+        "meshquery_project": 0.0,
+        "reseam_shared": 0.5000465095710469,
+        "reseam_unshared": 9.301914209314255e-05
+      },
+      "source": "M.rows.all_overlap_fraction_not_validated_reuse; P.rows.original_tripo.base_metrics.all_overlap_fraction_not_validated_reuse",
+      "best_direction": null,
+      "best_methods": []
+    },
+    {
+      "id": "zero_uv_area_faces",
+      "metric": "零UV面积面数",
+      "format": "int",
+      "values": {
+        "original_tripo": 0,
+        "flatten_anything": 110,
+        "optcuts": 0,
+        "xatlas": 112,
+        "blender_smart": 0,
+        "partuv": 0,
+        "meshquery_project": 0,
+        "reseam_shared": 0,
+        "reseam_unshared": 0
+      },
+      "source": "M.rows.zero_uv_area_faces; P.rows.original_tripo.base_metrics.zero_uv_area_faces",
+      "best_direction": "min",
+      "best_methods": [
+        "original_tripo",
+        "optcuts",
+        "blender_smart",
+        "partuv",
+        "meshquery_project",
+        "reseam_shared",
+        "reseam_unshared"
+      ]
+    },
+    {
+      "id": "mixed_orientation_faces",
+      "metric": "岛内混合方向面数",
+      "format": "int",
+      "values": {
+        "original_tripo": 0,
+        "flatten_anything": 3208,
+        "optcuts": 0,
+        "xatlas": 0,
+        "blender_smart": 0,
+        "partuv": 0,
+        "meshquery_project": 0,
+        "reseam_shared": 0,
+        "reseam_unshared": 0
+      },
+      "source": "M.rows.mixed_orientation_faces; P.rows.original_tripo.base_metrics.mixed_orientation_faces",
+      "best_direction": "min",
+      "best_methods": [
+        "original_tripo",
+        "optcuts",
+        "xatlas",
+        "blender_smart",
+        "partuv",
+        "meshquery_project",
+        "reseam_shared",
+        "reseam_unshared"
+      ]
+    },
+    {
+      "id": "seam_edge_count",
+      "metric": "记录切缝边数",
+      "format": "int",
+      "values": {
+        "original_tripo": 410,
+        "flatten_anything": 0,
+        "optcuts": 147,
+        "xatlas": 2300,
+        "blender_smart": 3065,
+        "partuv": 2503,
+        "meshquery_project": 20,
+        "reseam_shared": 102,
+        "reseam_unshared": 102
+      },
+      "source": "M.rows.seam_edge_count; P.rows.original_tripo.base_metrics.seam_edge_count",
+      "best_direction": "min",
+      "best_methods": [
+        "flatten_anything"
+      ]
+    },
+    {
+      "id": "aggregate_texel_density",
+      "metric": "总面积口径密度 px/模型单位",
+      "format": "float",
+      "values": {
+        "original_tripo": 5703.75052862287,
+        "flatten_anything": 3611.060405620333,
+        "optcuts": 1333.0127863133318,
+        "xatlas": 1251.9001962242905,
+        "blender_smart": 1038.785055331149,
+        "partuv": 1060.8105199086845,
+        "meshquery_project": 1326.8309626702433,
+        "reseam_shared": 1879.7206842304224,
+        "reseam_unshared": 1320.3105619786986
+      },
+      "source": "M.rows.aggregate_texel_density; P.rows.original_tripo.base_metrics.aggregate_texel_density",
+      "best_direction": null,
+      "best_methods": []
+    },
+    {
+      "id": "paper.seam_ao",
+      "metric": "AO显式切缝 ↑",
+      "format": "float",
+      "values": {
+        "original_tripo": 0.592949,
+        "flatten_anything": null,
+        "optcuts": 0.6672415,
+        "xatlas": 0.4805235,
+        "blender_smart": 0.49184,
+        "partuv": 0.444804,
+        "meshquery_project": 0.5462125,
+        "reseam_shared": 0.293837,
+        "reseam_unshared": 0.293837
+      },
+      "source": "P.rows.paper_metrics.seam_ao",
+      "best_direction": "max",
+      "best_methods": [
+        "optcuts"
+      ]
+    },
+    {
+      "id": "paper.boundary_ao",
+      "metric": "AO含原边界 ↑（附加范围）",
+      "format": "float",
+      "values": {
+        "original_tripo": 0.6736495,
+        "flatten_anything": 0.692708,
+        "optcuts": 0.6835395,
+        "xatlas": 0.58199,
+        "blender_smart": 0.5860395,
+        "partuv": 0.5514235,
+        "meshquery_project": 0.684591,
+        "reseam_shared": 0.676314,
+        "reseam_unshared": 0.676314
+      },
+      "source": "P.rows.paper_metrics.boundary_ao",
+      "best_direction": "max",
+      "best_methods": [
+        "flatten_anything"
+      ]
+    },
+    {
+      "id": "paper.non_disk_fraction",
+      "metric": "Non-disk非圆盘岛比例 ↓",
+      "format": "percent",
+      "values": {
+        "original_tripo": 0.024793388429752067,
+        "flatten_anything": 0.05,
+        "optcuts": 0.025,
+        "xatlas": 0.004665629860031105,
+        "blender_smart": 0.0053705692803437165,
+        "partuv": 0.0008968609865470852,
+        "meshquery_project": 0.0,
+        "reseam_shared": 0.05,
+        "reseam_unshared": 0.05
+      },
+      "source": "P.rows.paper_metrics.non_disk_fraction",
+      "best_direction": "min",
+      "best_methods": [
+        "meshquery_project"
+      ]
+    },
+    {
+      "id": "paper.compactness",
+      "metric": "Compactness紧凑度 ↑",
+      "format": "float",
+      "values": {
+        "original_tripo": 0.5953867561471093,
+        "flatten_anything": 0.6382361272017514,
+        "optcuts": 0.5545089838954128,
+        "xatlas": 0.43919912527143923,
+        "blender_smart": 0.414399039424606,
+        "partuv": 0.373413533230156,
+        "meshquery_project": 0.5702675190681518,
+        "reseam_shared": 0.5523636992649618,
+        "reseam_unshared": 0.5523636992649619
+      },
+      "source": "P.rows.paper_metrics.compactness",
+      "best_direction": "max",
+      "best_methods": [
+        "flatten_anything"
+      ]
+    },
+    {
+      "id": "paper.convexity",
+      "metric": "Convexity凸性 ↑",
+      "format": "float",
+      "values": {
+        "original_tripo": 0.8909066133718709,
+        "flatten_anything": 0.9174312501870819,
+        "optcuts": 0.8806442946853096,
+        "xatlas": 0.887093358237576,
+        "blender_smart": 0.9016660376109451,
+        "partuv": 0.9518743845068672,
+        "meshquery_project": 0.8651933481280413,
+        "reseam_shared": 0.8863844099747554,
+        "reseam_unshared": 0.8863844099747554
+      },
+      "source": "P.rows.paper_metrics.convexity",
+      "best_direction": "max",
+      "best_methods": [
+        "partuv"
+      ]
+    },
+    {
+      "id": "paper.jaggedness",
+      "metric": "Jaggedness边界二阶差分 ↓",
+      "format": "float",
+      "values": {
+        "original_tripo": 0.0008933324878560352,
+        "flatten_anything": 0.0005127690579327951,
+        "optcuts": 0.0009797385979896244,
+        "xatlas": 0.0013626404213173337,
+        "blender_smart": 0.0016774541875330007,
+        "partuv": 0.00157928921756492,
+        "meshquery_project": 0.000924399299061634,
+        "reseam_shared": 0.0006966587536304604,
+        "reseam_unshared": 0.0009627871034759163
+      },
+      "source": "P.rows.paper_metrics.jaggedness",
+      "best_direction": "min",
+      "best_methods": [
+        "flatten_anything"
+      ]
+    },
+    {
+      "id": "paper.angular_quality",
+      "metric": "Angular orthogonality正交度 ↑",
+      "format": "float",
+      "values": {
+        "original_tripo": 0.9521236325592499,
+        "flatten_anything": 0.4993811825675346,
+        "optcuts": 0.9082366365050383,
+        "xatlas": 0.9735907103460951,
+        "blender_smart": 0.8809214368053615,
+        "partuv": 0.9450975494920199,
+        "meshquery_project": 0.7801434312637803,
+        "reseam_shared": 0.9294928652633463,
+        "reseam_unshared": 0.9294928652057676
+      },
+      "source": "P.rows.paper_metrics.angular_quality",
+      "best_direction": "max",
+      "best_methods": [
+        "xatlas"
+      ]
+    },
+    {
+      "id": "paper.shape_valid_charts",
+      "metric": "形状指标计入岛数",
+      "format": "int",
+      "values": {
+        "original_tripo": 121,
+        "flatten_anything": 80,
+        "optcuts": 80,
+        "xatlas": 531,
+        "blender_smart": 931,
+        "partuv": 1115,
+        "meshquery_project": 80,
+        "reseam_shared": 80,
+        "reseam_unshared": 80
+      },
+      "source": "P.rows.paper_metrics.shape_valid_charts",
+      "best_direction": null,
+      "best_methods": []
+    },
+    {
+      "id": "paper.convexity_valid_charts",
+      "metric": "凸性指标计入岛数",
+      "format": "int",
+      "values": {
+        "original_tripo": 121,
+        "flatten_anything": 80,
+        "optcuts": 80,
+        "xatlas": 531,
+        "blender_smart": 931,
+        "partuv": 1115,
+        "meshquery_project": 80,
+        "reseam_shared": 80,
+        "reseam_unshared": 80
+      },
+      "source": "P.rows.paper_metrics.convexity_valid_charts",
+      "best_direction": null,
+      "best_methods": []
+    },
+    {
+      "id": "paper.invalid_boundary_components",
+      "metric": "无法闭合为环的边界分量",
+      "format": "int",
+      "values": {
+        "original_tripo": 0,
+        "flatten_anything": 0,
+        "optcuts": 0,
+        "xatlas": 0,
+        "blender_smart": 0,
+        "partuv": 0,
+        "meshquery_project": 0,
+        "reseam_shared": 0,
+        "reseam_unshared": 0
+      },
+      "source": "P.rows.paper_metrics.invalid_boundary_components",
+      "best_direction": "min",
+      "best_methods": [
+        "original_tripo",
+        "flatten_anything",
+        "optcuts",
+        "xatlas",
+        "blender_smart",
+        "partuv",
+        "meshquery_project",
+        "reseam_shared",
+        "reseam_unshared"
+      ]
+    },
+    {
+      "id": "paper.jaggedness_samples",
+      "metric": "边界二阶差分采样点数",
+      "format": "int",
+      "values": {
+        "original_tripo": 7799,
+        "flatten_anything": 14073,
+        "optcuts": 6342,
+        "xatlas": 16011,
+        "blender_smart": 17585,
+        "partuv": 17249,
+        "meshquery_project": 6038,
+        "reseam_shared": 8744,
+        "reseam_unshared": 6154
+      },
+      "source": "P.rows.paper_metrics.jaggedness_samples",
+      "best_direction": null,
+      "best_methods": []
+    },
+    {
+      "id": "paper.angular_quality_faces",
+      "metric": "正交度计入面数",
+      "format": "int",
+      "values": {
+        "original_tripo": 10832,
+        "flatten_anything": 11228,
+        "optcuts": 11338,
+        "xatlas": 11226,
+        "blender_smart": 11338,
+        "partuv": 11338,
+        "meshquery_project": 11338,
+        "reseam_shared": 11338,
+        "reseam_unshared": 11338
+      },
+      "source": "P.rows.paper_metrics.angular_quality_faces",
+      "best_direction": null,
+      "best_methods": []
+    },
+    {
+      "id": "distortion.area_distortion_face_mean",
+      "metric": "面积畸变D_area ↓",
+      "format": "float",
+      "values": {
+        "original_tripo": 1.3493331984400037,
+        "flatten_anything": 4.290940599199033,
+        "optcuts": 1.1902959544981666,
+        "xatlas": 1.1120437433090835,
+        "blender_smart": 1.0954247842513276,
+        "partuv": 1.0947794200597716,
+        "meshquery_project": 1.6215559238469117,
+        "reseam_shared": 1.7090344274801974,
+        "reseam_unshared": 1.7090344274803564
+      },
+      "source": "M.rows.distortion.area_distortion_face_mean; P.rows.original_tripo.base_metrics.distortion.area_distortion_face_mean",
+      "best_direction": "min",
+      "best_methods": [
+        "partuv"
+      ]
+    },
+    {
+      "id": "distortion.area_distortion_included_faces",
+      "metric": "面积畸变计入面数",
+      "format": "int",
+      "values": {
+        "original_tripo": 10832,
+        "flatten_anything": 11228,
+        "optcuts": 11328,
+        "xatlas": 11226,
+        "blender_smart": 11328,
+        "partuv": 11328,
+        "meshquery_project": 11328,
+        "reseam_shared": 11328,
+        "reseam_unshared": 11328
+      },
+      "source": "M.rows.distortion.area_distortion_included_faces; P.rows.original_tripo.base_metrics.distortion.area_distortion_included_faces",
+      "best_direction": null,
+      "best_methods": []
+    },
+    {
+      "id": "distortion.conformal_mean_all_nondegenerate",
+      "metric": "保角K（所有非退化方向）↓",
+      "format": "float",
+      "values": {
+        "original_tripo": 1.0845965757207119,
+        "flatten_anything": 16.299797911080713,
+        "optcuts": 1.4969088267557977,
+        "xatlas": 1.529786498302627,
+        "blender_smart": 1.2313575338378162,
+        "partuv": 3.8525269141037404,
+        "meshquery_project": 4.175351812562028,
+        "reseam_shared": 1.1520503711142425,
+        "reseam_unshared": 1.152050371114254
+      },
+      "source": "M.rows.distortion.conformal_mean_all_nondegenerate; P.rows.original_tripo.base_metrics.distortion.conformal_mean_all_nondegenerate",
+      "best_direction": "min",
+      "best_methods": [
+        "original_tripo"
+      ]
+    },
+    {
+      "id": "distortion.conformal_mean_paper_positive_only",
+      "metric": "论文保角K（仅正向）↓",
+      "format": "float",
+      "values": {
+        "original_tripo": 1.0846043861197192,
+        "flatten_anything": 64.86630467122346,
+        "optcuts": 1.4969088267557977,
+        "xatlas": 1.566585508843202,
+        "blender_smart": 1.2313575338378162,
+        "partuv": 3.8525269141037404,
+        "meshquery_project": 4.175351812562028,
+        "reseam_shared": 1.152050371036496,
+        "reseam_unshared": 1.1520503710365224
+      },
+      "source": "M.rows.distortion.conformal_mean_paper_positive_only; P.rows.original_tripo.base_metrics.distortion.conformal_mean_paper_positive_only",
+      "best_direction": "min",
+      "best_methods": [
+        "original_tripo"
+      ]
+    },
+    {
+      "id": "distortion.conformal_paper_included_faces",
+      "metric": "论文保角K计入面数",
+      "format": "int",
+      "values": {
+        "original_tripo": 10831,
+        "flatten_anything": 1410,
+        "optcuts": 11328,
+        "xatlas": 6084,
+        "blender_smart": 11328,
+        "partuv": 11328,
+        "meshquery_project": 11328,
+        "reseam_shared": 5664,
+        "reseam_unshared": 5664
+      },
+      "source": "M.rows.distortion.conformal_paper_included_faces; P.rows.original_tripo.base_metrics.distortion.conformal_paper_included_faces",
+      "best_direction": null,
+      "best_methods": []
+    },
+    {
+      "id": "distortion.texel_spread_octaves",
+      "metric": "纹素分配离散度 octave ↓",
+      "format": "float",
+      "values": {
+        "original_tripo": 0.5168738766239963,
+        "flatten_anything": 1.786069345393091,
+        "optcuts": 0.16368122942815747,
+        "xatlas": 0.17873748662318004,
+        "blender_smart": 0.1526715442636029,
+        "partuv": 0.15426811000497034,
+        "meshquery_project": 0.44640915361181494,
+        "reseam_shared": 1.1135433729522028,
+        "reseam_unshared": 1.1135433729522168
+      },
+      "source": "M.rows.distortion.texel_spread_octaves; P.rows.original_tripo.base_metrics.distortion.texel_spread_octaves",
+      "best_direction": "min",
+      "best_methods": [
+        "blender_smart"
+      ]
+    },
+    {
+      "id": "distortion.new_seam_length_3d",
+      "metric": "新增3D切缝长度",
+      "format": "float",
+      "values": {
+        "original_tripo": 6.885698449041489,
+        "flatten_anything": 0.0,
+        "optcuts": 2.5956435363017345,
+        "xatlas": 43.839351319841285,
+        "blender_smart": 57.70717519263964,
+        "partuv": 55.5797518681021,
+        "meshquery_project": 0.4300037231883661,
+        "reseam_shared": 1.3878767974319752,
+        "reseam_unshared": 1.3878767974319752
+      },
+      "source": "M.rows.distortion.new_seam_length_3d; P.rows.original_tripo.base_metrics.distortion.new_seam_length_3d",
+      "best_direction": "min",
+      "best_methods": [
+        "flatten_anything"
+      ]
+    },
+    {
+      "id": "distortion.new_seam_length_per_surface_area",
+      "metric": "新增切缝长/表面积",
+      "format": "float",
+      "values": {
+        "original_tripo": 4.600521903662169,
+        "flatten_anything": 0.0,
+        "optcuts": 1.7371522182458383,
+        "xatlas": 29.339786194304335,
+        "blender_smart": 38.620922323342434,
+        "partuv": 37.19712968938397,
+        "meshquery_project": 0.28778293750417566,
+        "reseam_shared": 0.9288460543954372,
+        "reseam_unshared": 0.9288460543954372
+      },
+      "source": "M.rows.distortion.new_seam_length_per_surface_area; P.rows.original_tripo.base_metrics.distortion.new_seam_length_per_surface_area",
+      "best_direction": "min",
+      "best_methods": [
+        "flatten_anything"
+      ]
+    },
+    {
+      "id": "distortion.uv_boundary_length",
+      "metric": "UV边界长度",
+      "format": "float",
+      "values": {
+        "original_tripo": 38.66424074932084,
+        "flatten_anything": 70.18075650696942,
+        "optcuts": 31.512819699896,
+        "xatlas": 77.22151153684545,
+        "blender_smart": 80.24956861495019,
+        "partuv": 73.15485171095368,
+        "meshquery_project": 30.015860306083137,
+        "reseam_shared": 43.47392427616411,
+        "reseam_unshared": 30.535963068354203
+      },
+      "source": "M.rows.distortion.uv_boundary_length; P.rows.original_tripo.base_metrics.distortion.uv_boundary_length",
+      "best_direction": "min",
+      "best_methods": [
+        "meshquery_project"
+      ]
+    },
+    {
+      "id": "color_mean",
+      "metric": "颜色均值误差 ↓",
+      "format": "float",
+      "values": {
+        "original_tripo": null,
+        "flatten_anything": null,
+        "optcuts": 0.0019483377346902176,
+        "xatlas": null,
+        "blender_smart": 0.0020875551424551545,
+        "partuv": 0.0023580665895137393,
+        "meshquery_project": 0.001942825316209135,
+        "reseam_shared": 0.0019598296891070992,
+        "reseam_unshared": 0.0019397706914830236
+      },
+      "source": "M.rows.color_mean",
+      "best_direction": "min",
+      "best_methods": [
+        "reseam_unshared"
+      ]
+    },
+    {
+      "id": "color_p95",
+      "metric": "颜色P95误差 ↓",
+      "format": "float",
+      "values": {
+        "original_tripo": null,
+        "flatten_anything": null,
+        "optcuts": 0.004398199276181022,
+        "xatlas": null,
+        "blender_smart": 0.004449221222418464,
+        "partuv": 0.0045439532658517615,
+        "meshquery_project": 0.004364567813896014,
+        "reseam_shared": 0.004484484613041918,
+        "reseam_unshared": 0.00434281879685693
+      },
+      "source": "M.rows.color_p95",
+      "best_direction": "min",
+      "best_methods": [
+        "reseam_unshared"
+      ]
+    },
+    {
+      "id": "color_max",
+      "metric": "颜色最大误差 ↓",
+      "format": "float",
+      "values": {
+        "original_tripo": null,
+        "flatten_anything": null,
+        "optcuts": 0.09840248776014174,
+        "xatlas": null,
+        "blender_smart": 0.34408842507765036,
+        "partuv": 0.41047992447472614,
+        "meshquery_project": 0.05032553232145291,
+        "reseam_shared": 0.030273686840669584,
+        "reseam_unshared": 0.10619160259455473
+      },
+      "source": "M.rows.color_max",
+      "best_direction": "min",
+      "best_methods": [
+        "reseam_shared"
+      ]
+    },
+    {
+      "id": "worst_render_mean",
+      "metric": "最差视图均值误差 ↓",
+      "format": "float",
+      "values": {
+        "original_tripo": null,
+        "flatten_anything": null,
+        "optcuts": 0.006442383965241606,
+        "xatlas": null,
+        "blender_smart": 0.007536237327985132,
+        "partuv": 0.007493490458213942,
+        "meshquery_project": 0.006633035631076706,
+        "reseam_shared": 0.006326801350870787,
+        "reseam_unshared": 0.008198085287179665
+      },
+      "source": "M.rows.worst_render_mean",
+      "best_direction": "min",
+      "best_methods": [
+        "reseam_shared"
+      ]
+    },
+    {
+      "id": "worst_render_max",
+      "metric": "最差视图最大误差 ↓",
+      "format": "float",
+      "values": {
+        "original_tripo": null,
+        "flatten_anything": null,
+        "optcuts": 0.1660278085258941,
+        "xatlas": null,
+        "blender_smart": 0.19247659884960747,
+        "partuv": 0.19968491328539062,
+        "meshquery_project": 0.16673361710549922,
+        "reseam_shared": 0.3621780396867358,
+        "reseam_unshared": 0.410022605425107
+      },
+      "source": "M.rows.worst_render_max",
+      "best_direction": "min",
+      "best_methods": [
+        "optcuts"
+      ]
+    },
+    {
+      "id": "strict_geometry_valid",
+      "metric": "严格几何通过",
+      "format": "bool",
+      "values": {
+        "original_tripo": null,
+        "flatten_anything": null,
+        "optcuts": true,
+        "xatlas": null,
+        "blender_smart": false,
+        "partuv": false,
+        "meshquery_project": true,
+        "reseam_shared": false,
+        "reseam_unshared": false
+      },
+      "source": "M.rows.strict_geometry_valid",
+      "best_direction": "max",
+      "best_methods": [
+        "optcuts",
+        "meshquery_project"
+      ]
+    },
+    {
+      "id": "material_valid",
+      "metric": "颜色通过",
+      "format": "bool",
+      "values": {
+        "original_tripo": null,
+        "flatten_anything": null,
+        "optcuts": true,
+        "xatlas": null,
+        "blender_smart": false,
+        "partuv": false,
+        "meshquery_project": true,
+        "reseam_shared": true,
+        "reseam_unshared": false
+      },
+      "source": "M.rows.material_valid",
+      "best_direction": "max",
+      "best_methods": [
+        "optcuts",
+        "meshquery_project",
+        "reseam_shared"
+      ]
+    },
+    {
+      "id": "seams_valid",
+      "metric": "接缝通过",
+      "format": "bool",
+      "values": {
+        "original_tripo": null,
+        "flatten_anything": null,
+        "optcuts": true,
+        "xatlas": null,
+        "blender_smart": false,
+        "partuv": false,
+        "meshquery_project": true,
+        "reseam_shared": true,
+        "reseam_unshared": true
+      },
+      "source": "M.rows.seams_valid",
+      "best_direction": "max",
+      "best_methods": [
+        "optcuts",
+        "meshquery_project",
+        "reseam_shared",
+        "reseam_unshared"
+      ]
+    },
+    {
+      "id": "render_valid",
+      "metric": "渲染通过",
+      "format": "bool",
+      "values": {
+        "original_tripo": null,
+        "flatten_anything": null,
+        "optcuts": true,
+        "xatlas": null,
+        "blender_smart": true,
+        "partuv": true,
+        "meshquery_project": true,
+        "reseam_shared": false,
+        "reseam_unshared": false
+      },
+      "source": "M.rows.render_valid",
+      "best_direction": "max",
+      "best_methods": [
+        "optcuts",
+        "blender_smart",
+        "partuv",
+        "meshquery_project"
+      ]
+    },
+    {
+      "id": "quality_accepted",
+      "metric": "综合质量通过",
+      "format": "bool",
+      "values": {
+        "original_tripo": null,
+        "flatten_anything": null,
+        "optcuts": true,
+        "xatlas": null,
+        "blender_smart": false,
+        "partuv": false,
+        "meshquery_project": true,
+        "reseam_shared": false,
+        "reseam_unshared": false
+      },
+      "source": "M.rows.quality_accepted",
+      "best_direction": "max",
+      "best_methods": [
+        "optcuts",
+        "meshquery_project"
+      ]
+    },
+    {
+      "id": "full_mips",
+      "metric": "已写出完整mip层数",
+      "format": "int",
+      "values": {
+        "original_tripo": null,
+        "flatten_anything": null,
+        "optcuts": 12,
+        "xatlas": null,
+        "blender_smart": 12,
+        "partuv": 12,
+        "meshquery_project": 12,
+        "reseam_shared": 12,
+        "reseam_unshared": 12
+      },
+      "source": "V.models_reimported.full_mips",
+      "best_direction": null,
+      "best_methods": []
+    },
+    {
+      "id": "payload_bytes",
+      "metric": "RGBA8完整mip字节",
+      "format": "int",
+      "values": {
+        "original_tripo": null,
+        "flatten_anything": null,
+        "optcuts": 22369620,
+        "xatlas": null,
+        "blender_smart": 22369620,
+        "partuv": 22369620,
+        "meshquery_project": 22369620,
+        "reseam_shared": 22369620,
+        "reseam_unshared": 22369620
+      },
+      "source": "M.rows.payload_bytes",
+      "best_direction": "min",
+      "best_methods": [
+        "optcuts",
+        "blender_smart",
+        "partuv",
+        "meshquery_project",
+        "reseam_shared",
+        "reseam_unshared"
+      ]
+    },
+    {
+      "id": "png_mip_bytes",
+      "metric": "PNG完整mip文件字节",
+      "format": "int",
+      "values": {
+        "original_tripo": null,
+        "flatten_anything": null,
+        "optcuts": 4978856,
+        "xatlas": null,
+        "blender_smart": 5066952,
+        "partuv": 4979961,
+        "meshquery_project": 4936130,
+        "reseam_shared": 4139630,
+        "reseam_unshared": 4866471
+      },
+      "source": "M.rows.png_mip_bytes",
+      "best_direction": "min",
+      "best_methods": [
+        "reseam_shared"
+      ]
+    },
+    {
+      "id": "glb_bytes",
+      "metric": "导出GLB文件字节",
+      "format": "int",
+      "values": {
+        "original_tripo": null,
+        "flatten_anything": null,
+        "optcuts": 4083832,
+        "xatlas": null,
+        "blender_smart": 3925604,
+        "partuv": 3888412,
+        "meshquery_project": 4058992,
+        "reseam_shared": 3519784,
+        "reseam_unshared": 4016996
+      },
+      "source": "M.rows.glb_bytes",
+      "best_direction": "min",
+      "best_methods": [
+        "reseam_shared"
+      ]
+    },
+    {
+      "id": "native_cost_seconds",
+      "metric": "原生算法工具耗时 s",
+      "format": "float",
+      "values": {
+        "original_tripo": null,
+        "flatten_anything": 1083.140000000014,
+        "optcuts": 196.1720000000205,
+        "xatlas": 1.562999999965541,
+        "blender_smart": 1.8599999999860302,
+        "partuv": 52.60999999998603,
+        "meshquery_project": null,
+        "reseam_shared": null,
+        "reseam_unshared": null
+      },
+      "source": "M.rows.native_cost_seconds",
+      "best_direction": "min",
+      "best_methods": [
+        "xatlas"
+      ]
+    },
+    {
+      "id": "planner_tool_cost_seconds",
+      "metric": "独立规划工具耗时 s",
+      "format": "float",
+      "values": {
+        "original_tripo": null,
+        "flatten_anything": null,
+        "optcuts": null,
+        "xatlas": null,
+        "blender_smart": null,
+        "partuv": null,
+        "meshquery_project": 146.9220000000205,
+        "reseam_shared": null,
+        "reseam_unshared": null
+      },
+      "source": "M.rows.planner_tool_cost_seconds",
+      "best_direction": "min",
+      "best_methods": []
+    },
+    {
+      "id": "evaluation_cost_seconds",
+      "metric": "共同评估工具耗时 s",
+      "format": "float",
+      "values": {
+        "original_tripo": null,
+        "flatten_anything": 108.73499999998603,
+        "optcuts": 279.5789999999106,
+        "xatlas": 5.577999999979511,
+        "blender_smart": 297.1720000000205,
+        "partuv": 436.375,
+        "meshquery_project": 302.75,
+        "reseam_shared": 289.204000000027,
+        "reseam_unshared": 283.920999999973
+      },
+      "source": "M.rows.evaluation_cost_seconds",
+      "best_direction": "min",
+      "best_methods": [
+        "xatlas"
+      ]
+    },
+    {
+      "id": "llm_reasoning_seconds",
+      "metric": "LLM思考耗时 s",
+      "format": "float",
+      "values": {
+        "original_tripo": null,
+        "flatten_anything": null,
+        "optcuts": null,
+        "xatlas": null,
+        "blender_smart": null,
+        "partuv": null,
+        "meshquery_project": null,
+        "reseam_shared": null,
+        "reseam_unshared": null
+      },
+      "source": "C.llm_reasoning_seconds",
+      "best_direction": "min",
+      "best_methods": []
+    },
+    {
+      "id": "llm_tokens",
+      "metric": "LLM token数",
+      "format": "int",
+      "values": {
+        "original_tripo": null,
+        "flatten_anything": null,
+        "optcuts": null,
+        "xatlas": null,
+        "blender_smart": null,
+        "partuv": null,
+        "meshquery_project": null,
+        "reseam_shared": null,
+        "reseam_unshared": null
+      },
+      "source": "C.llm_tokens",
+      "best_direction": "min",
+      "best_methods": []
+    },
+    {
+      "id": "llm_fee",
+      "metric": "LLM费用",
+      "format": "float",
+      "values": {
+        "original_tripo": null,
+        "flatten_anything": null,
+        "optcuts": null,
+        "xatlas": null,
+        "blender_smart": null,
+        "partuv": null,
+        "meshquery_project": null,
+        "reseam_shared": null,
+        "reseam_unshared": null
+      },
+      "source": "C.llm_fee",
+      "best_direction": "min",
+      "best_methods": []
+    },
+    {
+      "id": "metric_evaluation_seconds",
+      "metric": "本轮附加指标评估耗时 s",
+      "format": "float",
+      "values": {
+        "original_tripo": 20.405999999959022,
+        "flatten_anything": 13.75,
+        "optcuts": 13.85999999998603,
+        "xatlas": 13.109000000054948,
+        "blender_smart": 13.390999999945052,
+        "partuv": 12.203000000095926,
+        "meshquery_project": 12.984000000054948,
+        "reseam_shared": 9.968999999924563,
+        "reseam_unshared": 0.46799999999348074
+      },
+      "source": "P.rows.seconds",
+      "best_direction": "min",
+      "best_methods": [
+        "reseam_unshared"
+      ]
+    },
+    {
+      "id": "paper.seam_ao_status",
+      "metric": "显式切缝AO状态",
+      "format": "status",
+      "values": {
+        "original_tripo": "OK",
+        "flatten_anything": "NOT_APPLICABLE_NO_EXPLICIT_CUTS",
+        "optcuts": "OK",
+        "xatlas": "OK",
+        "blender_smart": "OK",
+        "partuv": "OK",
+        "meshquery_project": "OK",
+        "reseam_shared": "OK",
+        "reseam_unshared": "OK"
+      },
+      "source": "P.rows.paper_metrics.seam_ao_status",
+      "best_direction": null,
+      "best_methods": []
+    },
+    {
+      "id": "paper.boundary_ao_status",
+      "metric": "含原边界AO状态",
+      "format": "status",
+      "values": {
+        "original_tripo": "OK",
+        "flatten_anything": "OK",
+        "optcuts": "OK",
+        "xatlas": "OK",
+        "blender_smart": "OK",
+        "partuv": "OK",
+        "meshquery_project": "OK",
+        "reseam_shared": "OK",
+        "reseam_unshared": "OK"
+      },
+      "source": "P.rows.paper_metrics.boundary_ao_status",
+      "best_direction": null,
+      "best_methods": []
+    },
+    {
+      "id": "algorithm_status",
+      "metric": "原生算法状态",
+      "format": "status",
+      "values": {
+        "original_tripo": null,
+        "flatten_anything": "OK",
+        "optcuts": "OK",
+        "xatlas": "OK",
+        "blender_smart": "OK",
+        "partuv": "OK",
+        "meshquery_project": "PLANNED",
+        "reseam_shared": "PRECOMPUTED",
+        "reseam_unshared": "PRECOMPUTED"
+      },
+      "source": "M.rows.algorithm_status",
+      "best_direction": null,
+      "best_methods": []
+    },
+    {
+      "id": "pack_status",
+      "metric": "共同排布状态",
+      "format": "status",
+      "values": {
+        "original_tripo": null,
+        "flatten_anything": "REJECTED",
+        "optcuts": "OK",
+        "xatlas": "REJECTED",
+        "blender_smart": "OK",
+        "partuv": "OK",
+        "meshquery_project": "OK",
+        "reseam_shared": "OK",
+        "reseam_unshared": "OK"
+      },
+      "source": "M.rows.pack_status",
+      "best_direction": null,
+      "best_methods": []
+    },
+    {
+      "id": "pack_reason",
+      "metric": "排布拒绝原因",
+      "format": "status",
+      "values": {
+        "original_tripo": null,
+        "flatten_anything": "PACKED_GEOMETRY_REJECTED",
+        "optcuts": null,
+        "xatlas": "DEGENERATE_PACKING_GROUP",
+        "blender_smart": null,
+        "partuv": null,
+        "meshquery_project": null,
+        "reseam_shared": null,
+        "reseam_unshared": null
+      },
+      "source": "M.rows.pack_reason",
+      "best_direction": null,
+      "best_methods": []
+    },
+    {
+      "id": "export_status",
+      "metric": "导出执行状态",
+      "format": "status",
+      "values": {
+        "original_tripo": null,
+        "flatten_anything": "NOT_RUN",
+        "optcuts": "OK",
+        "xatlas": "NOT_RUN",
+        "blender_smart": "OK",
+        "partuv": "OK",
+        "meshquery_project": "OK",
+        "reseam_shared": "OK",
+        "reseam_unshared": "OK"
+      },
+      "source": "M.rows.export_status",
+      "best_direction": null,
+      "best_methods": []
+    }
+  ],
+  "source_sha256": {
+    "docs/assets/dragon-paper-baselines/measurements.json": "217d54e4f68902c27269de62780641491f3fcf29163ff5763375ae3dae16d7d0",
+    "docs/assets/dragon-paper-baselines/verification.json": "39f9c5db6a186aefad5d7c7470c7f6053b72229f0a4e0063797c9cf26cc7584b",
+    "docs/assets/dragon-paper-baselines/with-original-input/comparison-evidence.json": "fd6cfe216e15f73b47f843ee242fbc004d0fcd5694baee117165a1071d9140da",
+    "docs/assets/dragon-paper-baselines/cost-summary.json": "d04b124a452328373e0322cb7c81eb3e984125874a8031f972e1b860e172a90e",
+    "docs/assets/dragon-paper-baselines/with-original-input/paper-metrics.json": "9e8df29bc41c9bffcef63fc11954058655cc4699f8d1480e1aa5f7da94af3ffb"
+  },
+  "source_rows_untouched": true,
+  "best_scope": "reported numerical values including original reference and failures; ties at displayed precision"
+}

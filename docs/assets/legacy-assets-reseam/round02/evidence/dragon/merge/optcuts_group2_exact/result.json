@@ -1,0 +1,17 @@
+{
+  "status": "OK",
+  "execution_success": true,
+  "proposal": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\merge\\optcuts_group2_exact\\proposal.json",
+  "geometry_passed": true,
+  "hard_geometry_passed": true,
+  "final_quality_passed": null,
+  "selected_method": "exact_reflection_copy",
+  "shared_group_id": "reuse:b9efbf165016e054",
+  "shared_group_ids": [
+    "reuse:b9efbf165016e054"
+  ],
+  "report": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\merge\\optcuts_group2_exact\\proposal.json",
+  "tool": "reuse.check_pair",
+  "wall_seconds": 3.218999999924563,
+  "output": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\merge\\optcuts_group2_exact"
+}

@@ -1,0 +1,13 @@
+{
+  "reviewer": "Agent",
+  "human_accepted": false,
+  "evidence": [
+    "artifacts\\optcuts_agent_uv\\round01\\dragon\\target\\views\\oblique.png",
+    "artifacts\\optcuts_agent_uv\\round01\\dragon\\evaluate\\optcuts\\seed17\\basecolor\\oblique.png",
+    "artifacts\\optcuts_agent_uv\\round01\\dragon\\evaluate\\agent_merge\\seed17\\basecolor\\oblique.png"
+  ],
+  "conclusion": "The reviewed oblique view preserves blue body, white belly and claws, dark eye, and silhouette. Both 256px baked paths visibly soften eye detail relative to the frozen target. No large new color patch or missing claw is visible in the organized candidate at this view. Accept as a diagnostic workflow preview only; do not replace the existing 2048px delivery or claim human/PBR approval.",
+  "selected_for_workflow_preview": "agent_merge/seed17",
+  "production_delivery": "retain docs/assets/dragon-midplane-cleanup/dragon.glb",
+  "not_reviewed": "full PBR, tangent normal, GPU, human artist, all camera/LOD appearance"
+}

@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "state_hash": "859117083fc44eaea730848ad9900cfab2ded2f6e92c36e5b5341a734e92c3c0",
+  "asset_id": "aaa32cc5f2a8dd9934e54ddb20d28be1e56d5f22e38fbe1e22b927d4074f87e6",
+  "source_snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\xatlas\\512\\pack_43\\snapshot\\snapshot.json",
+  "source_snapshot_sha256": "15898a9d5020c3f195488e9723e9a1b2f19ba86db72ae3dfda0e152145bf3eba",
+  "geometry_report_object_sha256": "cd7a5247418318eaeaade39881a4c23ed3c576b980b57f8b39359715e5528aeb",
+  "resolution": 256,
+  "metrics_verified": false,
+  "verification_reason": "FULL_MODEL_HARD_VALIDATION_REQUIRED",
+  "full_geometry_passed": false,
+  "hard_geometry_passed": false,
+  "quality_constraints_checked": false,
+  "strict_hard_geometry_passed": false,
+  "geometry_acceptance_scope": "strict_hard_geometry",
+  "preserved_source_conflict_count": 0,
+  "uv_connected_charts": 68,
+  "packing_owners": 68,
+  "actual_independent_tiles": null,
+  "authorized_positive_overlap_cells": null,
+  "global": {
+    "face_count": 500,
+    "surface_area": 0.3736282903619946,
+    "actual_shared_surface_area": null,
+    "actual_shared_surface_fraction": null
+  },
+  "selection": {
+    "face_count": 500,
+    "face_ids_sha256": "5a97a9b5d813c39d121c81830f566f3ef04776fa9ac13eb78a19dc18977041ea",
+    "surface_area": 0.3736282903619946,
+    "actual_shared_surface_area": null,
+    "actual_shared_surface_fraction": null
+  },
+  "measurement_method": "All UV charts form DSU nodes; join only authorized compatible strict-positive intersection cells after full hard validation. Per-face intersection UNION / UV face area times original3D face area; both members count. Selection never limits global geometry or tile count.",
+  "positive_overlap_area_floor": 0.0,
+  "material_validated": false,
+  "inspection_report": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\xatlas\\512\\inspect_43\\inspect\\inspection.json",
+  "inspection_report_sha256": "13911f34b57698310d03931b67fb17d46252931626c23ffd271644ef39545615",
+  "geometry_report_json_pointer": "/geometry"
+}

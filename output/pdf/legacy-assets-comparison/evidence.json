@@ -1,0 +1,131 @@
+{
+  "pdf": "reseam-three-assets-uv-model-comparison.pdf",
+  "pdf_sha256": "fdd7ead3b6c2a7906d47662c62f328da2ad82d380457b484d72035594d56b2ae",
+  "pages": [
+    {
+      "page": 1,
+      "source": "docs/assets/legacy-assets-reseam/round02/figures/chloe_uv.png",
+      "source_sha256": "97ee0f26776b23cd325f2cbe83f631758fd3f228c278d2aff86495c8ab350643",
+      "source_size_pixels": [
+        1580,
+        940
+      ],
+      "page_size_points": [
+        1440.0,
+        892.9113924050633
+      ],
+      "image_box_points": [
+        20.0,
+        40.0,
+        1400.0,
+        832.9113924050633
+      ],
+      "title": "Chloe 红刺 | UV 与指标"
+    },
+    {
+      "page": 2,
+      "source": "docs/assets/legacy-assets-reseam/round02/figures/chloe_models.png",
+      "source_sha256": "2e602e034bd90825b2cc7bb337e4cce36ac1fde862b5a5aa62d6b39f63a4715d",
+      "source_size_pixels": [
+        1580,
+        1420
+      ],
+      "page_size_points": [
+        1440.0,
+        1318.2278481012659
+      ],
+      "image_box_points": [
+        20.0,
+        40.0,
+        1400.0,
+        1258.2278481012659
+      ],
+      "title": "Chloe 红刺 | 模型渲染对照"
+    },
+    {
+      "page": 3,
+      "source": "docs/assets/legacy-assets-reseam/round02/figures/energy_blade_uv.png",
+      "source_sha256": "558b1b85c4fa4f855e47c499e0e9ba221e58887dc72b4254d58be1421d400b8d",
+      "source_size_pixels": [
+        1966,
+        940
+      ],
+      "page_size_points": [
+        1440.0,
+        729.3794506612411
+      ],
+      "image_box_points": [
+        20.0,
+        40.0,
+        1400.0,
+        669.3794506612411
+      ],
+      "title": "历史能量刀 | UV 与指标"
+    },
+    {
+      "page": 4,
+      "source": "docs/assets/legacy-assets-reseam/round02/figures/energy_blade_models.png",
+      "source_sha256": "f49b76e7da95a180cdd474cf9b09813aa668b331435727689112a5b2697f2b89",
+      "source_size_pixels": [
+        1966,
+        1420
+      ],
+      "page_size_points": [
+        1440.0,
+        1071.1902339776195
+      ],
+      "image_box_points": [
+        20.0,
+        40.0,
+        1400.0,
+        1011.1902339776195
+      ],
+      "title": "历史能量刀 | 模型渲染对照"
+    },
+    {
+      "page": 5,
+      "source": "docs/assets/legacy-assets-reseam/round02/figures/dragon_uv.png",
+      "source_sha256": "31becaf08a565177c4aa10c84d8b3072643f40129f9a4ef833d64a716b1ae0a6",
+      "source_size_pixels": [
+        1966,
+        940
+      ],
+      "page_size_points": [
+        1440.0,
+        729.3794506612411
+      ],
+      "image_box_points": [
+        20.0,
+        40.0,
+        1400.0,
+        669.3794506612411
+      ],
+      "title": "历史幻想龙 | UV 与指标"
+    },
+    {
+      "page": 6,
+      "source": "docs/assets/legacy-assets-reseam/round02/figures/dragon_models.png",
+      "source_sha256": "85dc7a51622d71a599775c9490d3114eeffbe7fe95912766c92149a4d285b5da",
+      "source_size_pixels": [
+        1966,
+        1420
+      ],
+      "page_size_points": [
+        1440.0,
+        1071.1902339776195
+      ],
+      "image_box_points": [
+        20.0,
+        40.0,
+        1400.0,
+        1011.1902339776195
+      ],
+      "title": "历史幻想龙 | 模型渲染对照"
+    }
+  ],
+  "page_count": 6,
+  "original_images_unchanged": true,
+  "embedded_pixels_exact": true,
+  "preserved_aspect_ratio": true,
+  "scope": "Presentation only: six existing images; no UV, model, bake or metric changes."
+}

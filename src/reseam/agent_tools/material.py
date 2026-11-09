@@ -507,7 +507,7 @@ def bake_material_tool(request: dict[str, object], output: Path, deadline: float
         raise ValueError("UNSUPPORTED_MATERIAL_MODE")
     check_deadline(deadline)
     snapshot = require_snapshot(request)
-    if any(group.first_to_second is not None for group in snapshot.state.groups):
+    if any(group.first_to_second is not None or group.member_maps for group in snapshot.state.groups):
         raise ValueError("SIMILARITY_PBR_UNSUPPORTED: use the independent basecolor_reuse scope")
     resolution = _integer(request, "resolution", 256)
     if not 8 <= resolution <= 2048:
@@ -672,7 +672,27 @@ def export_asset(request: dict[str, object], output: Path, deadline: float) -> d
     if isinstance(candidate_bake, str) and read_object(Path(candidate_bake)).get("scope") == "basecolor_reuse":
         from .color_reuse import export_color_reuse
 
-        return export_color_reuse(request, output, deadline)
+        result = export_color_reuse(request, output, deadline)
+        if result.get("status") == "OK":
+            snapshot = require_snapshot(request)
+            extra = _preserve_export_uv(snapshot, output)
+            if extra.get("extra_uv_layers"):
+                manifest = read_object(output / "export.json")
+                manifest["auxiliary_uv"] = extra
+                files = manifest.get("files")
+                if isinstance(files, dict):
+                    files["asset.glb"] = _hash(output / "asset.glb")
+                    files["extra_uv.npz"] = _hash(output / "extra_uv.npz")
+                write_json(output / "export.json", manifest)
+                for _ in range(5):
+                    delivered = sum(p.stat().st_size for p in output.rglob("*") if p.is_file())
+                    if manifest.get("delivered_artifact_bytes") == delivered:
+                        break
+                    manifest["delivered_artifact_bytes"] = delivered
+                    write_json(output / "export.json", manifest)
+                result["delivered_artifact_bytes"] = manifest["delivered_artifact_bytes"]
+                result["auxiliary_uv"] = extra
+        return result
     check_deadline(deadline)
     snapshot = require_snapshot(request)
     bake = request.get("bake")
@@ -738,6 +758,7 @@ def export_asset(request: dict[str, object], output: Path, deadline: float) -> d
             "saved_payload_bytes": baseline_atlas.payload_bytes - atlas.payload_bytes if comparable else None,
         }
     mesh_info = export_material_glb(snapshot.state.surface, atlas, output / "asset.glb")
+    mesh_info.update(_preserve_export_uv(snapshot, output))
     shutil.copytree(path.parent / "texture", output / "texture")
     (output / "snapshot").mkdir()
     for name in ("snapshot.json", "arrays.npz"):
@@ -794,6 +815,8 @@ def export_asset(request: dict[str, object], output: Path, deadline: float) -> d
     deliverables = [output / name for name in ("asset.glb", "coverage.npy", "bake.json", "report.md")]
     deliverables += sorted((output / "texture").iterdir())
     deliverables += sorted((output / "snapshot").iterdir())
+    if (output / "extra_uv.npz").is_file():
+        deliverables.append(output / "extra_uv.npz")
     if evidence is not None:
         deliverables.append(output / "validation.json")
     artifacts = {p.relative_to(output).as_posix(): _hash(p) for p in deliverables if p.is_file()}
@@ -823,6 +846,19 @@ def export_asset(request: dict[str, object], output: Path, deadline: float) -> d
         "quality_accepted": mode == "accepted",
         "payload_bytes": atlas.payload_bytes,
     }
+
+
+def _preserve_export_uv(snapshot: Snapshot, output: Path) -> dict[str, object]:
+    from .extra_uv import append_extra_uv_glb
+
+    report = append_extra_uv_glb(output / "asset.glb", snapshot.metadata,
+                                 len(snapshot.state.surface.mesh.faces))
+    if report.get("extra_uv_layers"):
+        record = snapshot.metadata.get("extra_uv")
+        if not isinstance(record, dict):
+            raise ValueError("INVALID_EXTRA_UV_METADATA")
+        shutil.copy2(Path(str(record["path"])), output / "extra_uv.npz")
+    return report
 
 
 def _accepted_evidence(evidence: dict[str, object] | None) -> bool:

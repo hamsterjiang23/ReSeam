@@ -1,0 +1,92 @@
+{
+  "package": "E:\\ReSem\\docs\\assets\\legacy-assets-reseam\\round02",
+  "manifest_files": 8533,
+  "verified_file_bytes": 1276585565,
+  "all_hashes_match": true,
+  "local_links_checked": 66,
+  "all_local_links_exist": true,
+  "decoded_figures": [
+    {
+      "file": "chloe_models.png",
+      "size": [
+        1580,
+        1420
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "chloe_textures.png",
+      "size": [
+        1580,
+        850
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "chloe_uv.png",
+      "size": [
+        1580,
+        940
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "dragon_models.png",
+      "size": [
+        1966,
+        1420
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "dragon_textures.png",
+      "size": [
+        1966,
+        850
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "dragon_uv.png",
+      "size": [
+        1966,
+        940
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "energy_blade_models.png",
+      "size": [
+        1966,
+        1420
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "energy_blade_textures.png",
+      "size": [
+        1966,
+        850
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "energy_blade_uv.png",
+      "size": [
+        1966,
+        940
+      ],
+      "mode": "RGB"
+    }
+  ],
+  "visual_review": "all nine figures reviewed; three Chloe figures byte-identical to reviewed smoke figures",
+  "raw_reimport_audits": 31,
+  "originals_unchanged": true,
+  "same_geometry_target_resolution_controls": true,
+  "selected_shared_surface_fraction": {
+    "chloe": 1.0,
+    "energy_blade": 1.0,
+    "dragon": 1.0
+  },
+  "scope": "file/data/visual QA; numerical quality remains rejected"
+}

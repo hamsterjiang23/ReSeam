@@ -1,0 +1,15 @@
+{
+  "file": "E:\\ReSem\\docs\\assets\\reseam-method\\reseam-method-v1.png",
+  "width": 1902,
+  "height": 827,
+  "mode": "RGB",
+  "sha256": "11dabd1a71929475a061e9b667a97387faa6d26867996baf795951ebfdbdcc50",
+  "generation": "built-in image_gen",
+  "scope": "Illustrative current Agent-guided fixed-geometry UV workflow; not actual experimental render or performance evidence",
+  "visual_review": "English labels, stage order, optional cues, true merge vs stacking and feedback loop reviewed by Agent",
+  "sources": [
+    "skills/reseam-uv/SKILL.md: Execution route",
+    "skills/reseam-hard-surface/SKILL.md: Decision evidence"
+  ],
+  "prompt_file": "reseam-method-v1.prompt.txt"
+}

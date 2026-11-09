@@ -1,0 +1,12 @@
+{
+  "status": "REJECTED",
+  "execution_success": true,
+  "geometry_passed": false,
+  "final_quality_passed": null,
+  "report": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\fixed\\approximate\\check.json",
+  "reason": "AFFINE_UV_OR_PACKING_REJECTED",
+  "diagnostic_candidates": [],
+  "tool": "reuse.check_pair",
+  "wall_seconds": 5.563000000081956,
+  "output": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\dragon\\fixed\\approximate"
+}

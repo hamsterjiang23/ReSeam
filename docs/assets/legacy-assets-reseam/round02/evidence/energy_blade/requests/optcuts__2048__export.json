@@ -1,0 +1,7 @@
+{
+  "snapshot": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\optcuts\\2048\\pack_29\\snapshot\\snapshot.json",
+  "bake": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\optcuts\\2048\\bake\\bake.json",
+  "validation": "E:\\ReSem\\artifacts\\legacy_assets_reseam\\round02\\energy_blade\\optcuts\\2048\\quality\\validation.json",
+  "mode": "diagnostic",
+  "timeout_seconds": 300.0
+}

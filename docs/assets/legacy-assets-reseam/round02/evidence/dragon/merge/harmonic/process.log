@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "E:\ReSem\src\reseam\agent_tools\worker.py", line 16, in execute
+    result = handler(name)(request, output, deadline)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ReSem\src\reseam\agent_tools\reparameterize.py", line 211, in reparameterize
+    corners, ids, loop = harmonic_uv(local, tuple(range(len(faces))))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ReSem\src\reseam\agent_tools\reparameterize.py", line 112, in harmonic_uv
+    loop = boundary_loop(selected)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ReSem\src\reseam\agent_tools\reparameterize.py", line 101, in boundary_loop
+    raise ValueError("HARMONIC_REQUIRES_DISK_EULER_CHARACTERISTIC")
+ValueError: HARMONIC_REQUIRES_DISK_EULER_CHARACTERISTIC
