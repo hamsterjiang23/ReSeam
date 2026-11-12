@@ -1,0 +1,1370 @@
+{
+  "round": "examples05",
+  "date": "2026-11-11",
+  "cases": {
+    "toolbox_high": {
+      "preflight_status": "warn",
+      "complete": true,
+      "checks": {
+        "geometry": "pass",
+        "normal_uv": "pass",
+        "projection": "pass",
+        "uv_sampling": "warn"
+      },
+      "source_missing_seams": 0,
+      "target_missing_seams": 0,
+      "counts": {
+        "hit": 768,
+        "backface_hit": 0,
+        "out_of_range": 0,
+        "miss": 0,
+        "invalid_direction": 0
+      },
+      "samples_completed": 768,
+      "ray_records_sha256": "2a54375c8202ac720dd1bf2da553ef0e50a0aefb61cda9ab889824074e62dde8",
+      "input_hash": "0edac316b98b1f33ac9ecd7c2abb96b6e86fd42e398648eb84eb3be114f81118",
+      "backend": "4.5.11 LTS"
+    },
+    "toolbox_shifted_high": {
+      "preflight_status": "fail",
+      "complete": true,
+      "checks": {
+        "geometry": "pass",
+        "normal_uv": "pass",
+        "projection": "fail",
+        "uv_sampling": "warn"
+      },
+      "source_missing_seams": 0,
+      "target_missing_seams": 0,
+      "counts": {
+        "hit": 170,
+        "backface_hit": 20,
+        "out_of_range": 128,
+        "miss": 450,
+        "invalid_direction": 0
+      },
+      "samples_completed": 768,
+      "ray_records_sha256": "e9cdba8cb743a0032469e304bf7c1d9ef1ce9d76e6a650deb62acee869aa1303",
+      "input_hash": "0edac316b98b1f33ac9ecd7c2abb96b6e86fd42e398648eb84eb3be114f81118",
+      "backend": "4.5.11 LTS"
+    },
+    "cylinder": {
+      "preflight_status": "fail",
+      "complete": true,
+      "checks": {
+        "geometry": "pass",
+        "normal_uv": "fail",
+        "projection": "pass",
+        "uv_sampling": "pass"
+      },
+      "source_missing_seams": 0,
+      "target_missing_seams": 15,
+      "counts": {
+        "hit": 1024,
+        "backface_hit": 0,
+        "out_of_range": 0,
+        "miss": 0,
+        "invalid_direction": 0
+      },
+      "samples_completed": 1024,
+      "ray_records_sha256": "50bacc26eee076ed6a9bc1b1b62ec7078ea0241a5d66dc55560faea7ee6cf8cf",
+      "input_hash": "3b85d41a9276bd5f7fe016a174c4a4a291eaaab3984d88d4261b88ca69150cb3",
+      "backend": "4.5.11 LTS"
+    }
+  },
+  "blue_imports": {
+    "high": {
+      "status": "REJECTED",
+      "reason": "Nonmanifold edge (7, 8)",
+      "input": "model\\dragon\\pbr_bake_test\\high\\source_pbr\\tripo_convert_46c1f05d-c694-43a4-8bc3-48066bf4f53a.fbx",
+      "input_sha256": "703c9bfd11275066e0cab2ccc04ac9d0e1f886ec5b837338dcc741780f8c5d8f",
+      "frozen_copy_sha256": "703c9bfd11275066e0cab2ccc04ac9d0e1f886ec5b837338dcc741780f8c5d8f",
+      "original_matches_frozen": true,
+      "triangles": 10832,
+      "nonmanifold_edges": [
+        {
+          "vertices": [
+            7,
+            8
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            8,
+            2295
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            12,
+            13
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            12,
+            2295
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            13,
+            2311
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            15,
+            16
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            16,
+            2318
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            17,
+            18
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            17,
+            2311
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            18,
+            23
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            21,
+            22
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            21,
+            2329
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            22,
+            2318
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            23,
+            2332
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            31,
+            32
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            31,
+            2374
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            32,
+            2368
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            33,
+            2359
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            33,
+            2370
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            42,
+            43
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            42,
+            48
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            43,
+            46
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            44,
+            46
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            44,
+            2435
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            48,
+            51
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            341,
+            342
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            341,
+            345
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            341,
+            398
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            341,
+            399
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            342,
+            398
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            342,
+            399
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            345,
+            389
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            387,
+            389
+          ],
+          "incident_faces": 4
+        },
+        {
+          "vertices": [
+            389,
+            394
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            487,
+            489
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            487,
+            497
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            489,
+            2332
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            490,
+            491
+          ],
+          "incident_faces": 4
+        },
+        {
+          "vertices": [
+            490,
+            2389
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            491,
+            495
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            492,
+            2402
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            493,
+            494
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            494,
+            520
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            495,
+            504
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            497,
+            500
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            500,
+            501
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            501,
+            3461
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            504,
+            520
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            526,
+            530
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            526,
+            544
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            529,
+            530
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            544,
+            3512
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            1586,
+            1589
+          ],
+          "incident_faces": 4
+        },
+        {
+          "vertices": [
+            1589,
+            1593
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            1589,
+            1595
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            1595,
+            1596
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            1596,
+            1606
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            1703,
+            1704
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            1703,
+            1706
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            1705,
+            1706
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            1705,
+            1708
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            1707,
+            1708
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            1707,
+            4862
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            1710,
+            1711
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            1710,
+            4856
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            1711,
+            4887
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            1712,
+            4901
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            1712,
+            4902
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            1714,
+            1715
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            1714,
+            4924
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            1719,
+            1720
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            1719,
+            4958
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            1720,
+            4924
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            1721,
+            1722
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            1722,
+            4959
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            1724,
+            1726
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            1724,
+            1729
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            1726,
+            4958
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            1727,
+            1728
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            1727,
+            4959
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            1728,
+            4845
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            1729,
+            4962
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            2190,
+            2222
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            2190,
+            2224
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            2212,
+            2213
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            2212,
+            2216
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            2213,
+            4862
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            2214,
+            2215
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            2215,
+            2216
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            2222,
+            2230
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            2224,
+            2233
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            2226,
+            2227
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            2226,
+            2243
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            2227,
+            2250
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            2230,
+            2234
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            2233,
+            2245
+          ],
+          "incident_faces": 4
+        },
+        {
+          "vertices": [
+            2243,
+            5311
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            2245,
+            4848
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            2246,
+            4878
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            2248,
+            2250
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            2248,
+            4962
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            2329,
+            2334
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            2334,
+            3460
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            2370,
+            2379
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            2374,
+            2380
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            2379,
+            2382
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            2380,
+            2384
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            2382,
+            2385
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            2384,
+            2388
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            2385,
+            2389
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            2388,
+            2402
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            2435,
+            3512
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            3460,
+            3461
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            4842,
+            4843
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            4842,
+            4848
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            4843,
+            4889
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            4845,
+            4846
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            4846,
+            5328
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            4871,
+            4872
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            4871,
+            4878
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            4872,
+            4874
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            4874,
+            4887
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            4889,
+            4902
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            5311,
+            5328
+          ],
+          "incident_faces": 3
+        }
+      ],
+      "normal_uv": "NOT_RUN_IMPORT_REJECTED",
+      "projection": "NOT_RUN_IMPORT_REJECTED"
+    },
+    "low": {
+      "status": "REJECTED",
+      "reason": "Nonmanifold edge (305, 312)",
+      "input": "model\\dragon\\pbr_bake_test\\low\\pbr_tri_3113\\tripo_convert_a1645f84-d4d2-4f8d-bb62-78111f52c3de.fbx",
+      "input_sha256": "0c8599a8be046906d5007aaebf73382108360111b4004c7075f4c14468dea14e",
+      "frozen_copy_sha256": "0c8599a8be046906d5007aaebf73382108360111b4004c7075f4c14468dea14e",
+      "original_matches_frozen": true,
+      "triangles": 3113,
+      "nonmanifold_edges": [
+        {
+          "vertices": [
+            289,
+            294
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            290,
+            293
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            293,
+            854
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            294,
+            295
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            295,
+            868
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            298,
+            853
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            299,
+            852
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            305,
+            312
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            312,
+            317
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            317,
+            870
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            355,
+            356
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            355,
+            909
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            356,
+            421
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            375,
+            430
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            421,
+            432
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            430,
+            432
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            675,
+            738
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            690,
+            691
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            690,
+            752
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            691,
+            1208
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            737,
+            738
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            737,
+            752
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            760,
+            773
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            761,
+            772
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            766,
+            1343
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            768,
+            1342
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            772,
+            1344
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            773,
+            774
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            774,
+            1353
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            775,
+            779
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            779,
+            788
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            852,
+            857
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            853,
+            855
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            854,
+            877
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            855,
+            859
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            857,
+            878
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            868,
+            879
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            870,
+            873
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            873,
+            879
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            877,
+            878
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            1125,
+            1153
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            1153,
+            1155
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            1155,
+            1166
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            1180,
+            1189
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            1339,
+            1343
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            1339,
+            1346
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            1342,
+            1349
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            1344,
+            1359
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            1349,
+            1360
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            1353,
+            1361
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            1359,
+            1360
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            1361,
+            1368
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            1480,
+            1511
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            1511,
+            1514
+          ],
+          "incident_faces": 3
+        },
+        {
+          "vertices": [
+            1514,
+            1538
+          ],
+          "incident_faces": 3
+        }
+      ],
+      "normal_uv": "NOT_RUN_IMPORT_REJECTED",
+      "projection": "NOT_RUN_IMPORT_REJECTED"
+    }
+  },
+  "scope": "finite geometric probes and two 128-square normal bakes; no artist/GPU/mip acceptance",
+  "history": {
+    "examples01": "render failed: absent World; evidence retained",
+    "examples02": "successful intermediate bake and previews",
+    "examples03": "added normal vector diagnostics; evidence retained",
+    "examples04": "successful full run before mirrored-source vector suppression; retained"
+  },
+  "code_sha256": {
+    "src/reseam/agent_tools/preflight.py": "b4e2904d39503715f26580a5f37d4e4da54b41535e9fb6b305f93347995aba00",
+    "src/reseam/agent_tools/preflight_projection.py": "0a0c2b1dcf5c94ddafb80ad77de1e614db68f85a83b10f8e64b2e5f92f315a87",
+    "scripts/preflight_projection_worker.py": "2405eb335a1ed3ab04972e083e50d34106505f73d3c3ab12fc376deda7e50ff2",
+    "scripts/preflight_examples.py": "1420d787abfcd17d0b30baa90dc92565cfa327b12b846260bb1e8699eeab1fc4",
+    "scripts/preflight_example_worker.py": "00eba8fc2b7e234f5bb0e2fe20824267c606756d9f0fdc24baf04a6e56a2aebe"
+  }
+}

@@ -1,0 +1,185 @@
+{
+  "output": "E:\\ReSem\\output\\pdf\\blue-dragon-pbr-progress-2026-11-11.pdf",
+  "pdf_sha256": "c3cfb6063be6e05d6b791fa63b2605c3702c246fd90a8f1199134b340fc53965",
+  "page_count": 8,
+  "scope": "Current progress summary only; no experiment rerun or asset modification.",
+  "sources": [
+    {
+      "id": "S01",
+      "path": "E:\\ReSem\\artifacts\\dragon-pbr-reuse\\status.json",
+      "location": "status; full_plan_completed; unmet_conditions",
+      "sha256": "9e3eb555e2f6ed53d3b697bfb84a29a42939da8f9917417fe4d90692dd612cc5"
+    },
+    {
+      "id": "S02",
+      "path": "E:\\ReSem\\artifacts\\dragon-pbr-reuse\\round07\\final_matrix.json",
+      "location": "rows; channels; target_contract; evidence_boundaries",
+      "sha256": "323428c784cda3a4e59c1c4012821ec5be401bf93a1938a436052616dd07a707"
+    },
+    {
+      "id": "S03",
+      "path": "E:\\ReSem\\artifacts\\dragon-pbr-reuse\\round07\\main_appearance_review.json",
+      "location": "findings; whole_model_acceptance",
+      "sha256": "1c0144ee3fb7317377788c8cf514757a58a92d36576cb3330863009581a6a140"
+    },
+    {
+      "id": "S04",
+      "path": "E:\\ReSem\\artifacts\\dragon-pbr-reuse\\round07\\comparison2048\\scene_audit.json",
+      "location": "models_bound; image_count; reopened",
+      "sha256": "ff7e63c6612799c040c89e3cb219276ef5513d3f6039421dc366dbffa8cfdc2d"
+    },
+    {
+      "id": "S05",
+      "path": "E:\\ReSem\\artifacts\\dragon-pbr-reuse\\round07\\original_integrity_final.json",
+      "location": "all_match; files; source_archives",
+      "sha256": "7236d1a229c08518e867da7cd3a4442787305c574aa7c7a24f6a10a925197cb5"
+    },
+    {
+      "id": "S06",
+      "path": "E:\\ReSem\\artifacts\\dragon-pbr-reuse\\round08\\implementation_verification.json",
+      "location": "checks; final_model_hash_checks; scope",
+      "sha256": "dc9def89e5b3de762a7eecb00ff6a09032ea1e0a94db2bbc770ccf73b84b0df6"
+    },
+    {
+      "id": "S07",
+      "path": "E:\\ReSem\\docs\\results\\dragon-pbr-reuse.md",
+      "location": "来源、几何与法线版本；未满足的计划验收条件；有限射线补充诊断",
+      "sha256": "21f62f1513e6c1dc11643f7d590e9da9870fafb52995932e011056c2132c0e50"
+    },
+    {
+      "id": "S08",
+      "path": "E:\\ReSem\\artifacts\\dragon-pbr-reuse\\round08\\review2048\\review.json",
+      "location": "status; visual_accepted; restore_scope",
+      "sha256": "829489f112961f036242c1ff45068b3d13580e81cf8f0c3643b70e291739259f"
+    },
+    {
+      "id": "S09",
+      "path": "E:\\ReSem\\artifacts\\dragon-pbr-reuse\\round07\\source-bake-closeup-comparison.json",
+      "location": "composition; inputs; image_sha256",
+      "sha256": "a92bbf126e316aba962bc312af7b1fdf71848aaa1e1536755cf7522b9d1bb8ac"
+    },
+    {
+      "id": "S10",
+      "path": "E:\\ReSem\\artifacts\\dragon-pbr-reuse\\round07\\mixed_supplemental_summary.json",
+      "location": "sharing_attempts; final_conclusion",
+      "sha256": "8e5f02ee0eb68766fba3f54861b19dcffd40c9aeb192351c5ca8c5bf3c536f7c"
+    },
+    {
+      "id": "S11",
+      "path": "E:\\ReSem\\artifacts\\dragon-pbr-reuse\\round07\\post_experiment_public_reference_fix.json",
+      "location": "checks; tested_points; formal_rebake_needed",
+      "sha256": "1106a3313ac6102d194de7e2f7f9299531c4335a2fc53209ea71162aa20163c0"
+    }
+  ],
+  "images": [
+    {
+      "path": "E:\\ReSem\\artifacts\\dragon-pbr-reuse\\round04\\source_high_preview\\material-front-soft-1.png",
+      "sha256": "ca745bcfc77e402dafac50c286eeb7cddb140a5808d79dbfa9cd299582e6ca43"
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\dragon-pbr-reuse\\round07\\source-bake-closeup-comparison.png",
+      "sha256": "e10f7d93f95d75eb5dccc6abe145962b6a693a1c5b2e3346b244fce06f76d69a"
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\dragon-pbr-reuse\\round07\\original_uv\\uv.png",
+      "sha256": "05d05234e2f4f3d14b90ad6b67daa139a2c00615e0cd2d4c9aeb994228e9e43b"
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\dragon-pbr-reuse\\round07\\noshare_uv\\uv.png",
+      "sha256": "900b806ea9eb21589a594d913ac0e6114f0adea04bc5b6106f46a5f6730bade4"
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\dragon-pbr-reuse\\round07\\shared_uv\\uv.png",
+      "sha256": "347c798192487f4a90393609728e1f7e7a7e3d5a2a3151b7fe3b6efe4065c2e1"
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\dragon-pbr-reuse\\round07\\mixed_uv\\uv.png",
+      "sha256": "05ca2f5b0f6f181d81759b5972e333fe2fa046b71567512e776484a34b8fd938"
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\dragon-pbr-reuse\\round07\\tri_agent2048\\export\\texture\\BaseColor_mip0.png",
+      "sha256": "82fa70c47b2fee14c9d47ad9268bc96d109d47c3b06684c58d4e7ba4b16c9725"
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\dragon-pbr-reuse\\round07\\tri_agent2048\\export\\texture\\Normal_mip0.png",
+      "sha256": "5e94c095b9f2e9323c072a6a0bb0e7035dfdeaf9511b3df46851ac03ee87211c"
+    },
+    {
+      "path": "E:\\ReSem\\artifacts\\dragon-pbr-reuse\\round07\\tri_agent2048\\export\\texture\\ORM_mip0.png",
+      "sha256": "369af5393877a79ed2469c466ec6b733e960a9258f1d2c648296669d2fafaf75"
+    }
+  ],
+  "text_checks": "required status and metric tokens present; 8 pages",
+  "visual_review": {
+    "observer": "root Agent",
+    "render_engine": "Poppler pdftoppm",
+    "dpi": 120,
+    "pages_observed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "result": "PASS",
+    "observations": "All eight pages inspected as rendered PNGs: Chinese text legible, tables and images in bounds, no overlaps or clipped text observed. Actual experimental visual quality remains unaccepted.",
+    "renders": [
+      {
+        "page": 1,
+        "sha256": "5e27b38ad341e26b3b02fea9bf820d7ded802d1a2a6484eb12d41ac1f7edaf19"
+      },
+      {
+        "page": 2,
+        "sha256": "256de8443cb860a3e3ef0b3b590c469431390b886d6cf67e7e1af16c9f0c1f37"
+      },
+      {
+        "page": 3,
+        "sha256": "5f39528cbc494d0df315a20126d30736818a4ed1b84605b77922683bf3666981"
+      },
+      {
+        "page": 4,
+        "sha256": "074c7ff7d678c069887abb4dea3acf049b7c0851ff03546a0237c5c5f55b8bae"
+      },
+      {
+        "page": 5,
+        "sha256": "345d3cfe868d9a2c5f32aa1b843e6053b36e112f2df9f65162edf37575e50550"
+      },
+      {
+        "page": 6,
+        "sha256": "addeb6fb2df8e47c34740908e6dc25a8bf75ee14910d5d4ba1cf7b2acd7aa36f"
+      },
+      {
+        "page": 7,
+        "sha256": "b4e756dcff47c521b09493fd8681a4e929ed6fac9e116940ee742b1a3e7efd4d"
+      },
+      {
+        "page": 8,
+        "sha256": "fe00ccb05c9d5b9f4781bcd1eb66ba8f1d1c133b03a8117dd2900669377ca18c"
+      }
+    ]
+  },
+  "embedded_fonts": {
+    "/AAAAAA+MicrosoftYaHei-Bold-0": true,
+    "/AAAAAB+MicrosoftYaHei-Bold-0": true,
+    "/AAAAAA+MicrosoftYaHei-0": true,
+    "/AAAAAB+MicrosoftYaHei-0": true
+  },
+  "pdf_links": [
+    {
+      "uri": "file:///E:/ReSem/artifacts/dragon-pbr-reuse/index.html",
+      "target_exists": true
+    },
+    {
+      "uri": "file:///E:/ReSem/artifacts/dragon-pbr-reuse/round07/comparison2048/comparison.blend",
+      "target_exists": true
+    },
+    {
+      "uri": "file:///E:/ReSem/docs/results/dragon-pbr-reuse.md",
+      "target_exists": true
+    }
+  ],
+  "output_sha256_verified": true
+}

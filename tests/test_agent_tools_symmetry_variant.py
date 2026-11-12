@@ -49,6 +49,8 @@ def test_cross_plane_quad_split_interpolation_and_exact_reflection() -> None:
     assert np.all(normals[:, 2] > 0)
     assert len(set(chart_labels(out))) == 2  # One connected original chart in each half.
     assert set(out.uv_faces[:2].ravel()).isdisjoint(out.uv_faces[2:].ravel())
+    assert out.corner_normals is None
+    assert result.report["corner_normal_policy"] == "legacy_none"
 
 
 @pytest.mark.parametrize("split_uv", [False, True])
@@ -147,3 +149,73 @@ def test_near_plane_strip_is_reported_and_corrected_plane_removes_it() -> None:
     assert corrected.report["retained_source_faces"] == 1
     assert corrected.source_face_ids.tolist() == [1, 1]
     np.testing.assert_array_equal(source.mesh.vertices, before)
+
+
+@pytest.mark.parametrize("axis", [0, 1, 2])
+@pytest.mark.parametrize("positive", [False, True])
+def test_clipped_smooth_normals_follow_original_corner_barycentrics_and_reflection(axis: int, positive: bool) -> None:
+    vertices = np.asarray([[-1., 0., 0.], [1., 0., 0.], [1., 2., 0.]])
+    vertices[:, [0, axis]] = vertices[:, [axis, 0]]
+    vertices[:, axis] += 4.
+    source = _surface(vertices.tolist(), [[0, 1, 2]])
+    normals = np.asarray([[[.1, .2, 1.], [.6, .1, 1.], [.2, .7, 1.]]])
+    normals /= np.linalg.norm(normals, axis=-1, keepdims=True)
+    normals[..., [0, axis]] = normals[..., [axis, 0]]
+    source.corner_normals = normals.copy()
+    result = build_symmetry_variant(source, plane_axis=axis, plane_offset=4., keep_positive=positive,
+                                    deadline=_deadline())
+    actual = result.surface.corner_normals
+    assert actual is not None
+    expected = np.einsum("fci,fij->fcj", result.source_barycentric, normals[result.source_face_ids])
+    expected /= np.linalg.norm(expected, axis=-1, keepdims=True)
+    expected[result.reflected_faces, :, axis] *= -1
+    np.testing.assert_allclose(actual, expected, atol=1e-15)
+    np.testing.assert_allclose(np.linalg.norm(actual, axis=-1), 1., atol=1e-15)
+    np.testing.assert_array_equal(source.corner_normals, normals)
+    assert result.report["source_corner_normals_present"] is True
+    assert result.report["normal_smoothing_across_source_faces"] is False
+    for first, second in result.face_pairs:
+        mirrored = actual[first, [0, 2, 1]].copy()
+        mirrored[:, axis] *= -1
+        np.testing.assert_allclose(actual[second], mirrored, atol=1e-15)
+
+
+def test_shared_geometry_intersection_keeps_distinct_hard_edge_corner_normals() -> None:
+    source = _surface([[-1., 0., 0.], [1., 0., 0.], [1., 2., 0.], [-1., 2., 1.]],
+                      [[0, 1, 2], [0, 2, 3]])
+    triangles = source.mesh.vertices[source.mesh.faces]
+    flat = np.cross(triangles[:, 1]-triangles[:, 0], triangles[:, 2]-triangles[:, 0])
+    flat /= np.linalg.norm(flat, axis=-1, keepdims=True)
+    source.corner_normals = np.repeat(flat[:, None, :], 3, axis=1)
+    result = build_symmetry_variant(source, deadline=_deadline())
+    actual = result.surface.corner_normals
+    assert actual is not None
+    intersection = result.retained_vertex_sources.index((1, 0, 2))
+    count = len(result.face_pairs)
+    corners = np.argwhere(result.surface.mesh.faces[:count] == intersection)
+    source_ids = {int(result.source_face_ids[face]) for face, _ in corners}
+    assert source_ids == {0, 1}
+    for face, corner in corners:
+        np.testing.assert_allclose(actual[face, corner], flat[result.source_face_ids[face]], atol=1e-15)
+    out_triangles = result.surface.mesh.vertices[result.surface.mesh.faces]
+    geometric = np.cross(out_triangles[:, 1]-out_triangles[:, 0], out_triangles[:, 2]-out_triangles[:, 0])
+    geometric /= np.linalg.norm(geometric, axis=-1, keepdims=True)
+    np.testing.assert_allclose(actual, np.repeat(geometric[:, None, :], 3, axis=1), atol=1e-15)
+
+
+@pytest.mark.parametrize("invalid", ["wrong_shape", "nan", "zero", "cancel_at_cut"])
+def test_invalid_source_or_interpolated_normals_reject_without_mutating_parent(invalid: str) -> None:
+    source = _surface([[-1., 0., 0.], [1., 0., 0.], [1., 2., 0.]], [[0, 1, 2]])
+    source.corner_normals = np.tile([0., 0., 1.], (1, 3, 1))
+    if invalid == "wrong_shape":
+        source.corner_normals = source.corner_normals[:, :2]
+    elif invalid == "nan":
+        source.corner_normals[0, 0, 0] = np.nan
+    elif invalid == "zero":
+        source.corner_normals[0, 0] = 0
+    else:
+        source.corner_normals[0, 0] *= -1
+    before = source.corner_normals.copy()
+    with pytest.raises(ValueError, match="SYMMETRY_.*CORNER_NORMAL"):
+        build_symmetry_variant(source, deadline=_deadline())
+    np.testing.assert_array_equal(source.corner_normals, before)

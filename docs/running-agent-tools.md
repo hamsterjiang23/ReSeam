@@ -1,5 +1,11 @@
 # Agent UV 工具集 v1
 
+完整 PBR 新路径使用 `material.target mode=pbr_reuse` 冻结来源和法线框架，再通过相同模式烘焙、`quality.validate` 取得诊断，`asset.export mode=diagnostic` 导出真实通道。FBX 可显式指定四张 `pbr_textures`；导入法线用 `target_normal_policy=imported`，异常切线可显式 `asset.repair_normals` 建局部修正副本。`artist.compare mode=pbr` 使用 `before.model` 与当前 `model` 的实际 GLB；不会生成 BaseColor 的目视通过收据。参数及现有限制以 `tools describe` 和[蓝龙结果](results/dragon-pbr-reuse.md)为准。`[opinion]`
+
+PBR 目视流程的前后两侧均需显式绑定 `snapshot`、`state_hash`、`model`、`bake`、`export_manifest`。`artist.compare mode=pbr` 生成逐图片哈希和配对视图 ID；也可用 `existing_comparison` 为历史实际预览创建新的证据冻结记录，原文件不改写。`artist.review mode=pbr` 记录实际观察者、`reviewed_views`、`keep/revert` 和理由，至少包含 `material` 与 `normal_lit`；`artist.export mode=pbr` 仅在全部准备好的整模型视图已观察并保留时复制原 GLB 和完整 mip，诊断数值身份不升级。`revert` 会拒绝该导出并记录父状态，不自动修改任何快照。`[verified: pbr_review.py _export_binding、_preview_evidence、review_pbr、export_pbr_visual]`
+
+蓝龙实际 2K 对照已通过新证据冻结，并实际记录 `VISUAL_REVERT`；验收导出返回 `PBR_VISUAL_REVERT`，没有生成模型。该结果验证拒绝路径，不代表蓝龙已经获得完整 PBR 外观接受。`[verified: ../artifacts/dragon-pbr-reuse/round08/comparison2048_frozen/result.json；round08/review2048/review.json；round08/refused_visual_export/result.json]`
+
 美术日常修整新增 [artist 工具](artist-tools.md)。七类能力与目视保留流程已接入相同 `tools list/describe/run`，`artist.compare` 输出可离线打开的点击对照工作台。`[verified: registry.py artist.*；artist_review.py compare]`
 
 颜色容忍度由 `reuse.check_color` 设置低／中／高球半径（默认中），检查原始颜色到冻结共享目标的Oklab距离；支持自定义半径与球外区域定位。调用前已有 `material.target`，具体参数见 `tools describe`，解释和真实三档结果见[颜色球](dragon-component-reuse.md#颜色球容忍度)。这是源外观变化检查，与烘焙重建验收分别报告。`[verified: color_tolerance.py check_color；opinion: 报告方式]`
@@ -32,6 +38,7 @@ uv run reseam tools run asset.import --request import.json --output artifacts/my
 
 |工具|职责|
 |---|---|
+|material.preflight|只读法线/UV、像素间距与 Blender 有限射线/Cage 预检；源与目标法线分列，结果不替代质量验收。[流程与 JSON 示例](uv-normal-baking-workflow.md)。`[verified: preflight.py preflight；preflight_projection.py projection_audit]`|
 |asset.import|冻结输入与哈希，保留面/面角身份；缺失 UV 显式初始化。`[verified: assets.py import_asset]`|
 |uv.inspect / view.render|编号岛、邻接、密度、真实三角覆盖/交叠；z-buffer 四视图、真实源颜色或当前贴图、棋盘格、组色、接缝和错误面。`pick_pixels` 返回原面 ID／chart ID／重心坐标，`selected_faces` 或 `region_id` 查看局部；预览不是质量渲染。`[verified: geometry.py inspect_uv；views.py render_views/_texture]`|
 |region.define|从原面 ID 或 chart ID 定义可跨旧岛的语义区域，保存保护面、角色、理由和证据；不修改几何与 UV。`[verified: regions.py define_region]`|

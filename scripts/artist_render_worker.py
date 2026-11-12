@@ -10,14 +10,8 @@ import bpy  # type: ignore[import-not-found]
 import numpy as np
 from mathutils import Vector  # type: ignore[import-not-found]
 
-
-def canonical(triangles: np.ndarray) -> np.ndarray:
-    result = []
-    for triangle in triangles:
-        rounded = np.round(triangle, 4)
-        result.append(rounded[np.lexsort(rounded.T[::-1])].ravel())
-    rows = np.asarray(result)
-    return rows[np.lexsort(rows.T[::-1])]
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from triangle_identity_match import triangle_bijection
 
 
 def channel_material(source: Any, channel: str) -> Any:
@@ -28,6 +22,13 @@ def channel_material(source: Any, channel: str) -> Any:
     principled = next((n for n in nodes if n.type == "BSDF_PRINCIPLED"), None)
     if principled is None:
         raise ValueError("CHANNEL_REQUIRES_PRINCIPLED_MATERIAL")
+    if channel == "normal_lit":
+        for name, value in (("Base Color", (.5, .5, .5, 1.)), ("Metallic", 0.), ("Roughness", .35)):
+            socket = principled.inputs[name]
+            for link in list(socket.links):
+                material.node_tree.links.remove(link)
+            socket.default_value = value
+        return material
     socket = principled.inputs[{"basecolor": "Base Color", "roughness": "Roughness", "metallic": "Metallic",
                                "normal": "Normal"}[channel]]
     if channel == "normal":
@@ -69,9 +70,11 @@ def main() -> None:
         expected_positions = original[..., [0, 2, 1]] * [1, -1, 1]
         expected = np.concatenate((expected_positions, data["corner_uv"]), axis=2)
     actual = np.concatenate((np.asarray(positions), np.asarray(texcoords)), axis=2)
-    if actual.shape != expected.shape or not np.allclose(canonical(actual), canonical(expected), atol=1e-4, rtol=0):
+    if not triangle_bijection(actual, expected, tolerance=1e-4):
         raise ValueError("EXPORTED_MODEL_GEOMETRY_OR_UV_DIFFERS_FROM_SNAPSHOT")
     points = np.asarray(positions).reshape(-1, 3)
+    if config.get("focus_points"):
+        points = np.asarray(config["focus_points"])[..., [0, 2, 1]] * [1, -1, 1]
     center = Vector(tuple((points.min(axis=0) + points.max(axis=0))*.5))
     radius = float(np.linalg.norm(points.max(axis=0) - points.min(axis=0))*.5)
     scene = bpy.context.scene
@@ -84,6 +87,8 @@ def main() -> None:
     scene.render.image_settings.file_format = "PNG"
     scene.view_settings.view_transform = "Standard"
     scene.render.film_transparent = False
+    if scene.world is None:
+        scene.world = bpy.data.worlds.new("PBR review world")
     scene.world.use_nodes = True
     scene.world.node_tree.nodes["Background"].inputs[0].default_value = (.65, .7, .8, 1)
     scene.world.node_tree.nodes["Background"].inputs[1].default_value = .3
@@ -132,6 +137,12 @@ def main() -> None:
                     bpy.ops.render.render(write_still=True)
                     images.append({"path": str(path), "channel": channel, "camera": name,
                                    "light": lighting, "distance": distance})
+    for obj in objects:
+        obj.data.materials.clear()
+        for material in original_materials[obj.name]:
+            obj.data.materials.append(material)
+    if config.get("save_blend"):
+        bpy.ops.wm.save_as_mainfile(filepath=str(output / "review.blend"))
     (output / "rendered.json").write_text(json.dumps({"images": images, "unavailable": unavailable,
         "materials": materials, "blender_version": bpy.app.version_string,
         "geometry_and_uv_reimport_match": True, "comparison_tolerance": 1e-4,

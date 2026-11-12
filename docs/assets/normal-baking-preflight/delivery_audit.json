@@ -1,0 +1,240 @@
+{
+  "status": "PASS",
+  "checked_link_count": 42,
+  "links": [
+    {
+      "document": "docs/uv-normal-baking-workflow.md",
+      "target": "assets/uv-normal-baking-reference/README.md"
+    },
+    {
+      "document": "docs/uv-normal-baking-workflow.md",
+      "target": "results/normal-baking-preflight.md"
+    },
+    {
+      "document": "docs/uv-normal-baking-workflow.md",
+      "target": "results/normal-baking-preflight.md"
+    },
+    {
+      "document": "docs/results/normal-baking-preflight.md",
+      "target": "../uv-normal-baking-workflow.md"
+    },
+    {
+      "document": "docs/results/normal-baking-preflight.md",
+      "target": "../assets/normal-baking-preflight/summary.json"
+    },
+    {
+      "document": "docs/results/normal-baking-preflight.md",
+      "target": "../assets/normal-baking-preflight/toolbox_aligned.json"
+    },
+    {
+      "document": "docs/results/normal-baking-preflight.md",
+      "target": "../assets/normal-baking-preflight/toolbox_shifted.json"
+    },
+    {
+      "document": "docs/results/normal-baking-preflight.md",
+      "target": "../assets/normal-baking-preflight/cylinder.json"
+    },
+    {
+      "document": "docs/results/normal-baking-preflight.md",
+      "target": "../assets/normal-baking-preflight/toolbox_uv.png"
+    },
+    {
+      "document": "docs/results/normal-baking-preflight.md",
+      "target": "../assets/normal-baking-preflight/cylinder_uv.png"
+    },
+    {
+      "document": "docs/results/normal-baking-preflight.md",
+      "target": "../assets/normal-baking-preflight/cylinder_normals.png"
+    },
+    {
+      "document": "docs/results/normal-baking-preflight.md",
+      "target": "../assets/normal-baking-preflight/toolbox_aligned_bake.json"
+    },
+    {
+      "document": "docs/results/normal-baking-preflight.md",
+      "target": "../assets/normal-baking-preflight/toolbox_shifted_bake.json"
+    },
+    {
+      "document": "docs/results/normal-baking-preflight.md",
+      "target": "../assets/normal-baking-preflight/preview_contract.json"
+    },
+    {
+      "document": "docs/results/normal-baking-preflight.md",
+      "target": "../assets/normal-baking-preflight/toolbox_aligned.png"
+    },
+    {
+      "document": "docs/results/normal-baking-preflight.md",
+      "target": "../assets/normal-baking-preflight/toolbox_shifted.png"
+    },
+    {
+      "document": "docs/results/normal-baking-preflight.md",
+      "target": "../assets/normal-baking-preflight/toolbox_aligned_normal.png"
+    },
+    {
+      "document": "docs/results/normal-baking-preflight.md",
+      "target": "../assets/normal-baking-preflight/toolbox_aligned.glb"
+    },
+    {
+      "document": "docs/results/normal-baking-preflight.md",
+      "target": "../assets/normal-baking-preflight/toolbox_shifted_normal.png"
+    },
+    {
+      "document": "docs/results/normal-baking-preflight.md",
+      "target": "../assets/normal-baking-preflight/toolbox_shifted.glb"
+    },
+    {
+      "document": "docs/results/normal-baking-preflight.md",
+      "target": "../assets/normal-baking-preflight/toolbox_aligned_samples.jsonl"
+    },
+    {
+      "document": "docs/results/normal-baking-preflight.md",
+      "target": "../assets/normal-baking-preflight/toolbox_shifted_samples.jsonl"
+    },
+    {
+      "document": "docs/results/normal-baking-preflight.md",
+      "target": "../assets/normal-baking-preflight/cylinder_samples.jsonl"
+    },
+    {
+      "document": "docs/results/normal-baking-preflight.md",
+      "target": "../assets/normal-baking-preflight/blue_high_import.json"
+    },
+    {
+      "document": "docs/results/normal-baking-preflight.md",
+      "target": "../assets/normal-baking-preflight/blue_high_import.log"
+    },
+    {
+      "document": "docs/results/normal-baking-preflight.md",
+      "target": "../assets/normal-baking-preflight/blue_low_import.json"
+    },
+    {
+      "document": "docs/results/normal-baking-preflight.md",
+      "target": "../assets/normal-baking-preflight/blue_low_import.log"
+    },
+    {
+      "document": "docs/results/normal-baking-preflight.md",
+      "target": "../assets/normal-baking-preflight/verification.json"
+    },
+    {
+      "document": "docs/results/normal-baking-preflight.md",
+      "target": "../assets/normal-baking-preflight/delivery_audit.json"
+    },
+    {
+      "document": "docs/assets/uv-normal-baking-reference/README.md",
+      "target": "05.png"
+    },
+    {
+      "document": "docs/assets/uv-normal-baking-reference/README.md",
+      "target": "19.png"
+    },
+    {
+      "document": "docs/assets/uv-normal-baking-reference/README.md",
+      "target": "21.png"
+    },
+    {
+      "document": "docs/assets/uv-normal-baking-reference/README.md",
+      "target": "22.png"
+    },
+    {
+      "document": "docs/assets/uv-normal-baking-reference/README.md",
+      "target": "25.png"
+    },
+    {
+      "document": "docs/assets/uv-normal-baking-reference/README.md",
+      "target": "../../uv-normal-baking-workflow.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/uv-normal-baking-workflow.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/results/normal-baking-preflight.md"
+    },
+    {
+      "document": "AGENTS.md",
+      "target": "docs/uv-normal-baking-workflow.md"
+    },
+    {
+      "document": "AGENTS.md",
+      "target": "docs/results/normal-baking-preflight.md"
+    },
+    {
+      "document": "docs/running-agent-tools.md",
+      "target": "uv-normal-baking-workflow.md"
+    },
+    {
+      "document": "skills/reseam-uv/SKILL.md",
+      "target": "../../docs/uv-normal-baking-workflow.md"
+    },
+    {
+      "document": "skills/reseam-hard-surface/SKILL.md",
+      "target": "../../docs/uv-normal-baking-workflow.md"
+    }
+  ],
+  "archive_hashes_verified": 31,
+  "archives": [
+    "docs\\assets\\normal-baking-preflight\\toolbox_aligned.png",
+    "docs\\assets\\normal-baking-preflight\\toolbox_shifted.png",
+    "docs\\assets\\normal-baking-preflight\\toolbox_aligned_normal.png",
+    "docs\\assets\\normal-baking-preflight\\toolbox_shifted_normal.png",
+    "docs\\assets\\normal-baking-preflight\\toolbox_uv.png",
+    "docs\\assets\\normal-baking-preflight\\toolbox_normals.png",
+    "docs\\assets\\normal-baking-preflight\\cylinder_uv.png",
+    "docs\\assets\\normal-baking-preflight\\cylinder_normals.png",
+    "docs\\assets\\normal-baking-preflight\\toolbox_shifted_rays.png",
+    "docs\\assets\\normal-baking-preflight\\toolbox_aligned.json",
+    "docs\\assets\\normal-baking-preflight\\toolbox_shifted.json",
+    "docs\\assets\\normal-baking-preflight\\cylinder.json",
+    "docs\\assets\\normal-baking-preflight\\preview_contract.json",
+    "docs\\assets\\normal-baking-preflight\\toolbox_aligned_bake.json",
+    "docs\\assets\\normal-baking-preflight\\toolbox_shifted_bake.json",
+    "docs\\assets\\normal-baking-preflight\\toolbox_high.glb",
+    "docs\\assets\\normal-baking-preflight\\toolbox_shifted_high.glb",
+    "docs\\assets\\normal-baking-preflight\\toolbox_aligned.glb",
+    "docs\\assets\\normal-baking-preflight\\toolbox_shifted.glb",
+    "docs\\assets\\normal-baking-preflight\\toolbox_aligned_samples.jsonl",
+    "docs\\assets\\normal-baking-preflight\\toolbox_shifted_samples.jsonl",
+    "docs\\assets\\normal-baking-preflight\\cylinder_samples.jsonl",
+    "docs\\assets\\normal-baking-preflight\\blue_high_import.json",
+    "docs\\assets\\normal-baking-preflight\\blue_low_import.json",
+    "docs\\assets\\normal-baking-preflight\\blue_high_import.log",
+    "docs\\assets\\normal-baking-preflight\\blue_low_import.log",
+    "docs\\assets\\uv-normal-baking-reference\\05.png",
+    "docs\\assets\\uv-normal-baking-reference\\19.png",
+    "docs\\assets\\uv-normal-baking-reference\\21.png",
+    "docs\\assets\\uv-normal-baking-reference\\22.png",
+    "docs\\assets\\uv-normal-baking-reference\\25.png"
+  ],
+  "code_hashes_verified": 5,
+  "samples": {
+    "toolbox_high": {
+      "samples": 768,
+      "inputs_unchanged": true,
+      "counts_match": true
+    },
+    "toolbox_shifted_high": {
+      "samples": 768,
+      "inputs_unchanged": true,
+      "counts_match": true
+    },
+    "cylinder": {
+      "samples": 1024,
+      "inputs_unchanged": true,
+      "counts_match": true
+    }
+  },
+  "glb": {
+    "toolbox_aligned.glb": {
+      "portable_references": true
+    },
+    "toolbox_shifted.glb": {
+      "portable_references": true
+    }
+  },
+  "blue_inputs_unchanged": true,
+  "bake_inputs_unchanged": true,
+  "diff_check": {
+    "command": "git diff --check",
+    "exit_code": 0
+  }
+}

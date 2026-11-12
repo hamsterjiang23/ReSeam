@@ -1,0 +1,75 @@
+{
+  "date": "2026-11-11",
+  "checks": [
+    {
+      "command": "uv run --no-sync ruff check src/reseam/agent_tools/preflight.py src/reseam/agent_tools/preflight_projection.py src/reseam/agent_tools/assets.py src/reseam/agent_tools/registry.py src/reseam/agent_tools/runner.py scripts/preflight_projection_worker.py scripts/preflight_examples.py scripts/preflight_example_worker.py tests/test_material_preflight.py",
+      "exit_code": 0,
+      "output": "All checks passed!\n"
+    },
+    {
+      "command": "uv run --no-sync pytest tests/test_material_preflight.py tests/test_agent_tools_hard_edges.py tests/test_agent_tools_assets.py tests/test_agent_tools_material.py tests/test_agent_tools_views.py tests/test_agent_tools_state.py -q",
+      "exit_code": 0,
+      "output": "........................................................................ [ 90%]\r\n........                                                                 [100%]\r\n80 passed in 17.56s\r\n"
+    },
+    {
+      "command": "uv run --no-sync basedpyright",
+      "exit_code": 0,
+      "output": "0 errors, 0 warnings, 0 notes\n"
+    }
+  ],
+  "cli_and_delivery": {
+  "describe": {
+    "command": "uv run --no-sync reseam tools describe material.preflight",
+    "exit_code": 0,
+    "output": {
+      "name": "material.preflight",
+      "description": "Read-only normal/UV, atlas and finite Blender ray diagnostics.",
+      "entrypoint": "preflight.preflight",
+      "request": {
+        "timeout_seconds": "300; positive wall-clock deadline",
+        "snapshot": "required snapshot.json path or snapshot directory",
+        "state_hash": "optional expected immutable snapshot hash",
+        "checks": "default [geometry,normal_uv,uv_sampling,projection]; nonempty subset",
+        "source_snapshot": "optional same-index enriched normal evidence snapshot",
+        "normal_epsilon_degrees": ".1; discontinuity threshold in (0,180]",
+        "bake_config": "explicit {resolution:4..8192,gap_pixels,border_pixels,padding_pixels,mip_levels:[0,1,...]}; absent => UV sampling not_checked",
+        "high_snapshot": "required for projection; imported world-space geometry; high_state_hash optionally pins it",
+        "cage_snapshot": "optional same-index snapshot with metadata.cage_for_state_hash equal to low state_hash; cage_state_hash optionally pins it",
+        "projection": "{front_fraction:.02,back_fraction:.02,timeout_seconds:240}; normalized by LOW bounding-box diagonal; 16 deterministic samples/face",
+        "part_pairings": "optional [{low_faces:[ids],high_objects:[names]}]; names from high snapshot objects; remaining low faces query all high geometry",
+        "blender": "optional executable; isolated background process",
+        "views": "true; existing error/seam view and orthographic ray overlay",
+        "note": "preflight.json/report.md; pass/warn/fail/not_checked separate from execution and final quality; no edits/acceptance; single active 0-1 atlas only"
+      },
+      "outputs": "result.json, process.log and named artifacts",
+      "contract": "New output directory only. Execution status is separate from quality acceptance."
+    }
+  },
+  "run": {
+    "command": "uv run --no-sync reseam tools run material.preflight --request artifacts/normal-preflight/examples05/toolbox_high_check_request.json --output artifacts/normal-preflight/cli_smoke01",
+    "exit_code": 0,
+    "output": {
+      "status": "OK",
+      "execution_success": true,
+      "report": "E:\\ReSem\\artifacts\\normal-preflight\\cli_smoke01\\preflight.json",
+      "markdown": "E:\\ReSem\\artifacts\\normal-preflight\\cli_smoke01\\report.md",
+      "preflight_status": "warn",
+      "snapshot_modified": false,
+      "final_quality_passed": null,
+      "tool": "material.preflight",
+      "wall_seconds": 1.6720000000000255,
+      "output": "E:\\ReSem\\artifacts\\normal-preflight\\cli_smoke01"
+    }
+  },
+  "delivery": {
+    "command": "uv run --no-sync python artifacts/normal-preflight/verify_delivery.py",
+    "record": "delivery_audit.json",
+    "exit_code": 0
+  }
+},
+  "examples": {
+    "command": "uv run --no-sync python scripts/preflight_examples.py --output artifacts/normal-preflight/examples05 --bake",
+    "exit_code": 0,
+    "output": "{'toolbox_high': 'warn', 'toolbox_shifted_high': 'fail', 'cylinder': 'fail', 'toolbox_high_bake': 'BAKED_THREE_CHANNELS', 'toolbox_shifted_high_bake': 'BAKED_THREE_CHANNELS'}\r\n"
+  }
+}

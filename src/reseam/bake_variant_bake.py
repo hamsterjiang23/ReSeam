@@ -33,6 +33,7 @@ class BakeVariantRequest:
     resolution: int = 256
     cage_extrusion: float = .01
     margin_pixels: int = 4
+    corner_normals: FloatArray | None = None
 
 
 def _sha256(path: Path) -> str:
@@ -99,7 +100,12 @@ def read_source_materials(path: Path) -> dict[str, object]:
             "source_definition": material})
     if len({item["name"] for item in declarations}) != len(declarations):
         raise ValueError("AMBIGUOUS_SOURCE_MATERIAL_NAMES")
+    extras = _mapping(document.get("extras", {}), "extras")
+    reseam = _mapping(extras.get("reseam", {}), "reseam extras")
+    legacy_top_v = bool(reseam.get("tangent_contract") == "matches frame_arrays exactly"
+                        and reseam.get("tangent_basis") != "blender_bottom_v")
     return {"materials": declarations, "alpha_contract": "OPAQUE_ONLY",
+            "legacy_top_v_normal_basis": legacy_top_v,
             "omitted_alpha_mode": "glTF2 OPAQUE default", "source": str(path.resolve())}
 
 
@@ -113,6 +119,11 @@ def _validate_request(request: BakeVariantRequest) -> None:
             or faces.min() < 0 or faces.max() >= len(vertices)):
         raise ValueError("INVALID_VARIANT_GEOMETRY_OR_UV")
     triangles = vertices[faces]
+    if request.corner_normals is not None:
+        normals = request.corner_normals
+        if (normals.shape != (len(faces), 3, 3) or not np.isfinite(normals).all()
+                or np.any(np.linalg.norm(normals, axis=-1) < 1e-12)):
+            raise ValueError("INVALID_VARIANT_CORNER_NORMALS")
     if np.any(np.linalg.norm(np.cross(triangles[:, 1] - triangles[:, 0],
                                      triangles[:, 2] - triangles[:, 0]), axis=1) <= 0):
         raise ValueError("DEGENERATE_VARIANT_GEOMETRY")
@@ -138,6 +149,9 @@ def _inputs_hashes(request: BakeVariantRequest, worker: Path, serialized: Path) 
     for array in (request.vertices, request.faces, request.corner_uv):
         arrays.update(str((array.shape, array.dtype.str)).encode("ascii"))
         arrays.update(array.tobytes())
+    if request.corner_normals is not None:
+        arrays.update(b"imported_corner_normals")
+        arrays.update(request.corner_normals.tobytes())
     return {"high_glb": _sha256(request.high_path), "worker": _sha256(worker),
             "request": _sha256(serialized), "geometry_arrays": arrays.hexdigest()}
 
@@ -197,6 +211,10 @@ def _validate_outputs(report: dict[str, object], request: BakeVariantRequest, ou
             or not np.allclose(np.sum(normals * tangents[..., :3], axis=2), 0, atol=1e-3)
             or not np.allclose(np.abs(tangents[..., 3]), 1, atol=1e-6)):
         raise ValueError("VARIANT_GEOMETRY_UV_OR_FRAME_MISMATCH")
+    if request.corner_normals is not None:
+        expected = request.corner_normals / np.linalg.norm(request.corner_normals, axis=-1, keepdims=True)
+        if not np.allclose(normals, expected, atol=1e-6):
+            raise ValueError("VARIANT_IMPORTED_NORMALS_CHANGED")
     for name in ("asset.glb", "preview.blend"):
         if not (output / name).is_file() or (output / name).stat().st_size == 0:
             raise ValueError("MISSING_VARIANT_PREVIEW:" + name)
@@ -222,6 +240,14 @@ def bake_variant(
         "resolution": request.resolution, "cage_extrusion": request.cage_extrusion,
         "margin_pixels": request.margin_pixels, "source": source, "folder": str(output.resolve()),
         "output": str((output / "worker_result.json").resolve())}
+    if request.corner_normals is not None:
+        from .budget_material import mikktspace_frames
+
+        normals = request.corner_normals / np.linalg.norm(request.corner_normals, axis=-1, keepdims=True)
+        tangents, signs, provenance = mikktspace_frames(request.vertices[request.faces], normals, request.corner_uv)
+        payload["corner_normals"] = normals.tolist()
+        payload["corner_tangents_gltf"] = np.concatenate((tangents, signs[..., None]), axis=-1).tolist()
+        payload["target_mikktspace"] = provenance
     _write(serialized, payload)
     before = _inputs_hashes(request, worker, serialized)
     _write(output / "input_hashes_before.json", before)

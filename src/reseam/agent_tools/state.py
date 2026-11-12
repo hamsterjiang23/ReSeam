@@ -13,7 +13,7 @@ from ..budget_state import BudgetState
 from ..joint_types import Correspondence, ReuseGroup, ReuseMember
 from ..mesh import make_mesh
 from ..reuse_transform import similarity_transform
-from ..types import MeshState
+from ..types import FloatArray, MeshState
 
 
 def write_json(path: Path, value: object) -> None:
@@ -64,10 +64,24 @@ def save_snapshot(
     output = output.resolve()
     output.mkdir(parents=True, exist_ok=False)
     surface = state.surface
+    # UV-only tools can rebuild a MeshState from corner UVs. Carry the frozen
+    # parent shading contract across those operations, never infer it by position.
+    if (parent is not None and surface.corner_normals is None
+            and parent.state.surface.corner_normals is not None):
+        if not np.array_equal(surface.mesh.faces, parent.state.surface.mesh.faces):
+            raise ValueError("SNAPSHOT_NORMAL_IDENTITY_CHANGED")
+        surface.corner_normals = parent.state.surface.corner_normals.copy()
+    normal_arrays: dict[str, FloatArray] = {}
+    if surface.corner_normals is not None:
+        normals = np.asarray(surface.corner_normals, dtype=np.float64)
+        if (normals.shape != (*surface.mesh.faces.shape, 3) or not np.isfinite(normals).all()
+                or np.any(np.linalg.norm(normals, axis=-1) < 1e-12)):
+            raise ValueError("SNAPSHOT_CORNER_NORMALS_INVALID")
+        normal_arrays["corner_normals"] = normals
     arrays = output / "arrays.npz"
-    np.savez_compressed(arrays, vertices=surface.mesh.vertices, faces=surface.mesh.faces,
+    np.savez_compressed(arrays, allow_pickle=False, vertices=surface.mesh.vertices, faces=surface.mesh.faces,
                         uv=surface.uv, uv_faces=surface.uv_faces,
-                        texture=np.empty(0) if state.texture is None else state.texture)
+                        texture=np.empty(0) if state.texture is None else state.texture, **normal_arrays)
     meta = json.loads(json.dumps(metadata, allow_nan=False))
     geometry_hash = hashlib.sha256(surface.mesh.vertices.tobytes() + surface.mesh.faces.tobytes()).hexdigest()
     asset_id = parent.asset_id if parent else str(meta.get("asset_id", geometry_hash))
@@ -115,6 +129,12 @@ def load_snapshot(path: Path) -> Snapshot:
                 or not np.isfinite(uv).all() or faces.min() < 0 or faces.max() >= len(uv)):
             raise ValueError("SNAPSHOT_UV_INVALID")
         surface = MeshState(mesh, frozenset(record["seams"]), uv, faces, int(record["surface_version"]))
+        if "corner_normals" in data:
+            normals = np.asarray(data["corner_normals"], dtype=np.float64)
+            if (normals.shape != (*mesh.faces.shape, 3) or not np.isfinite(normals).all()
+                    or np.any(np.linalg.norm(normals, axis=-1) < 1e-12)):
+                raise ValueError("SNAPSHOT_CORNER_NORMALS_INVALID")
+            surface.corner_normals = normals.copy()
         texture = data["texture"].copy() if data["texture"].size else None
     groups = tuple(ReuseGroup(
         str(g["group_id"]), tuple(g["first_faces"]), tuple(g["second_faces"]),

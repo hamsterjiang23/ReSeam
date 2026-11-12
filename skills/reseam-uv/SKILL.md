@@ -35,6 +35,8 @@ uv run reseam tools run <工具名> --request <request.json> --output <从未存
 
 ## 执行路线
 
+准备法线烘焙或解释硬边/UV问题时，先读 [UV 与法线烘焙流程](../../docs/uv-normal-baking-workflow.md)，调用 `material.preflight`。分别读取源法线与实际导出目标法线、UV采样和投射状态；`pass/warn/fail/not_checked` 不授权自动改模或验收。显式提供实际分辨率/留边/mip；缺高模不补造射线命中。当前平面目标法线可能与光滑源模型不同，先解释差异再决定现有工具的修正动作。`[verified: preflight.py preflight、normal_uv_audit；opinion: 调用顺序]`
+
 用户只需给模型和外观/复用目标，由Agent选择已有工具，不要求用户逐个挑后端。
 需要重新规划切缝时，默认收敛为 **OptCuts 初始切缝 → Agent 局部合岛/兼容区域复用 → 排布与烘焙验收**；
 原UV可用且要求保留时继续保留。AO、normal和其它后端按已定位问题调用，不默认全跑。

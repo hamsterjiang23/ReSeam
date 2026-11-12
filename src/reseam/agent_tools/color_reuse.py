@@ -416,6 +416,10 @@ def _freeze_topology(request: dict[str, object], reference: ReferenceSurface,
 
 
 def freeze_target(request: dict[str, object], output: Path, deadline: float) -> dict[str, object]:
+    if request.get("mode") == "pbr_reuse":
+        from .pbr_reuse import freeze_target as freeze_pbr_target
+
+        return freeze_pbr_target(request, output, deadline)
     snapshot = require_snapshot(request)
     from .artist import visual_policy
     visual = visual_policy(request, snapshot)

@@ -1,5 +1,11 @@
 # ReSeam
 
+按用户要求新增[历史 40 图块方法复刻](docs/results/dragon-legacy-method-replay.md)：当前低模另建半边镜像变体，完整 PBR 使用自身材质与同面角采样，分别交付同几何 60 图块无共享和 30 图块共享。历史 40 图块成品实际为 80 连通岛、BaseColor 预览；新结果的目视、数值及人工状态见报告，不改写此前高低模投射失败。`[verified: round09_legacy_method/mirror_pbr_clean/mirror_variant.json；pbr_control_pack17/packing.json；pbr_pack17/packing.json；opinion: 验收边界]`
+
+蓝龙新增[完整 PBR 与 UV 共享实验](docs/results/dragon-pbr-reuse.md)，按[执行合同](docs/dragon-pbr-reuse-plan.md)记录导入修复、实际材质和失败对照。显式 `pbr_reuse` 支持完整通道的诊断输出，完整外观验收以该报告实际结果为准，不能由工具成功或 BaseColor 预览推定。`[opinion]`
+
+[UV 与法线烘焙流程](docs/uv-normal-baking-workflow.md)整理教程纠错、工具映射和调用示例；新增只读 `material.preflight`，分别检查源/目标法线与 UV、像素留边、实际有限射线和 Cage。[验证报告](docs/results/normal-baking-preflight.md)保留工具箱烘焙对照、光滑圆柱的目标法线差异，以及蓝龙非流形导入失败。`[verified: preflight.py preflight；normal-baking-preflight.md 验证结果]`
+
 新增[美术工具与目视验收](docs/artist-tools.md)：点图定位、保护、同视角对照、试做/退回、固定点放松、共享组编辑、实际 GLB 渲染。按最新用户要求，新的美术流程以肉眼没有明显差别为保留依据，数值只作参考；旧数值验收结果保持独立。`[verified: 用户本轮要求；src/reseam/agent_tools/registry.py artist.*]`
 
 当前硬表面主线简化为 **OptCuts 初始切缝 → Agent 保留/删减/补充切缝并局部合岛 → UV排布与烘焙验收**，复用现有 [Skill](skills/reseam-hard-surface/SKILL.md)，不新增工具入口。本轮[Tripo刺与80岛镜像龙验证](docs/results/optcuts-agent-uv.md)分别记录真实合岛和左右堆叠；固定原边不相邻的部件不为降低岛数强行焊接。旧角度切分实验保留作对照。`[verified: 用户最新流程与龙模型要求；opinion: 执行口径]`

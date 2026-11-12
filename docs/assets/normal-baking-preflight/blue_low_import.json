@@ -1,0 +1,9 @@
+{
+  "status": "REJECTED",
+  "reason": "Nonmanifold edge (305, 312)",
+  "execution_success": false,
+  "final_quality_passed": false,
+  "tool": "asset.import",
+  "wall_seconds": 3.4370000000001255,
+  "output": "E:\\ReSem\\artifacts\\normal-preflight\\blue01\\low"
+}

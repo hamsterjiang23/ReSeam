@@ -1,0 +1,37 @@
+[
+  {
+    "sha256": "7e070d2979192728b498cafd2ac62a2f8bb53b587a77ad6b1473bbc5b7d0030b",
+    "original_name": "codex-clipboard-7d009a21-570a-4f02-9caf-eb0e26bae260.png",
+    "bytes": 318052,
+    "path": "05.png",
+    "step": "05"
+  },
+  {
+    "sha256": "5137c5c3bc0f89f0811b7ebf8eaa94938d6ae7a155dece628f0331d73a3c5098",
+    "original_name": "codex-clipboard-3a5c3d5e-d8e7-41cc-85d8-ebfea30fb574.png",
+    "bytes": 220356,
+    "path": "19.png",
+    "step": "19"
+  },
+  {
+    "sha256": "f756b082b258fd02e98d5e42c10afb927bd8f6165261c6a217298fe166ed7663",
+    "original_name": "codex-clipboard-1ca78d6d-668d-4b20-8c32-ff847f36116b.png",
+    "bytes": 1184186,
+    "path": "21.png",
+    "step": "21"
+  },
+  {
+    "sha256": "a44c1234ac834b4452d5af129af4426bb1ec9a1a9725f2e8501ae44860a43c07",
+    "original_name": "codex-clipboard-80c715f6-6ff7-43c4-98a4-55a56eab4891.png",
+    "bytes": 587048,
+    "path": "22.png",
+    "step": "22"
+  },
+  {
+    "sha256": "58f7f9e35c33795f77bceb4a3bc11a7f4aaa6024e9e25bc38d27fb352fbb1d77",
+    "original_name": "codex-clipboard-ba5026a3-6be4-4d3c-8cce-38929d3c2044.png",
+    "bytes": 365601,
+    "path": "25.png",
+    "step": "25"
+  }
+]

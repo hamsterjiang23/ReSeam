@@ -124,7 +124,8 @@ def main() -> None:
         except (ValueError, OSError) as error:
             tool_result = {"status": "ERROR", "reason": str(error), "execution_success": False}
         print(json.dumps(tool_result, ensure_ascii=False, indent=2, allow_nan=False))
-        if tool_result.get("status", "OK") != "OK":
+        execution_success = tool_result.get("execution_success", tool_result.get("status", "OK") == "OK")
+        if execution_success is not True:
             raise SystemExit(1)
         return
     if args.command == "doctor":

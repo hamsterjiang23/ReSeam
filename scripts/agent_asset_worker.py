@@ -10,12 +10,13 @@ import numpy as np
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from agent_fbx_uv import read_fbx_uv, restore_loop_uv_ids
+from agent_pbr_binding import bind_pbr
 
 
 def main() -> None:
     request = json.loads(Path(sys.argv[sys.argv.index("--") + 1]).read_text(encoding="utf-8"))
     folder = Path(request["output"])
-    explicit_binding = bool(request.get("basecolor_texture"))
+    explicit_binding = bool(request.get("basecolor_texture") or request.get("pbr_textures"))
     bpy.ops.wm.read_factory_settings(use_empty=True)
     if Path(request["source"]).suffix.lower() == ".obj":
         bpy.ops.wm.obj_import(filepath=request["source"])
@@ -149,6 +150,10 @@ def main() -> None:
         raise ValueError("UNSUPPORTED_MIXED_UV_PRESENCE")
     if not faces:
         raise ValueError("NO_MESH_IN_FBX")
+    pbr_record: dict[str, object] = {}
+    if request.get("pbr_textures"):
+        pbr_record["explicit_pbr_binding"] = bind_pbr(
+            meshes, request["pbr_textures"], request.get("normal_convention", "opengl"), folder)
     np.savez_compressed(folder / "imported.npz", vertices=np.asarray(vertices), faces=np.asarray(faces),
                         corner_uv=np.asarray(uv), corner_ids=np.asarray(identities),
                         **cast(Any, {f"extra_uv_{index}": np.asarray(extra_uv[name])
@@ -161,6 +166,7 @@ def main() -> None:
             "scope": "read-only diagnostic; exported BaseColor shading is unchanged"}
     (folder / "identity.json").write_text(json.dumps({"objects": objects, "ancestry": ancestry,
         **normal_record,
+        **pbr_record,
         "polygon_topology": {"polygons": polygons, "triangle_to_polygon": triangle_to_polygon,
                              "source": "Blender original polygons and loop_triangles; snapshot vertex indices"},
         "source_uv_present": has_uv, "images": image_sources, "extra_uv_names": extra_names or [],
@@ -168,9 +174,9 @@ def main() -> None:
                             else "dynamic scene rejected",
         "coordinates": "glTF Y-up", "triangulation": "Blender loop_triangles"},
         ensure_ascii=False, indent=2), encoding="utf-8")
-    if not explicit_binding:
+    if not explicit_binding or request.get("pbr_textures"):
         bpy.ops.export_scene.gltf(filepath=str(folder / "reference.glb"), export_format="GLB",
-                                  export_yup=True, export_animations=False)
+                                  export_yup=True, export_animations=False, export_tangents=True)
 
 
 if __name__ == "__main__":

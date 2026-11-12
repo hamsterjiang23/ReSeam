@@ -115,6 +115,12 @@ def build_symmetry_variant(
             or source.uv.shape[1] != 2 or not np.isfinite(source.uv).all()
             or np.min(source.uv_faces) < 0 or np.max(source.uv_faces) >= len(source.uv)):
         raise ValueError("SYMMETRY_VALID_SOURCE_UV_REQUIRED")
+    source_normals = source.corner_normals
+    if source_normals is not None and (
+            source_normals.shape != (len(source.mesh.faces), 3, 3)
+            or not np.isfinite(source_normals).all()
+            or np.any(np.linalg.norm(source_normals, axis=-1) <= 1e-10)):
+        raise ValueError("SYMMETRY_VALID_SOURCE_CORNER_NORMALS_REQUIRED")
     positions: list[FloatArray] = []
     uvs: list[FloatArray] = []
     faces: list[list[int]] = []
@@ -159,6 +165,7 @@ def build_symmetry_variant(
     retained_faces = np.asarray(faces, dtype=np.int64)
     retained_uv = np.asarray(uvs, dtype=np.float64)
     retained_uv_faces = np.asarray(uv_faces, dtype=np.int64)
+    bary = np.asarray(barycentrics, dtype=np.float64)
     mirrored_vertices = retained_vertices.copy()
     mirrored_vertices[:, plane_axis] = 2.0 * plane_offset - mirrored_vertices[:, plane_axis]
     corner_order = [0, 2, 1]
@@ -179,7 +186,19 @@ def build_symmetry_variant(
             if all_uv_faces[first, a] != all_uv_faces[second, b]:
                 seams.add(edge_id)
                 break
-    surface = MeshState(mesh, frozenset(seams), np.concatenate((retained_uv, retained_uv)), all_uv_faces)
+    corner_normals = None
+    if source_normals is not None:
+        retained_normals = np.einsum("fci,fij->fcj", bary, source_normals[np.asarray(source_faces)])
+        lengths = np.linalg.norm(retained_normals, axis=-1, keepdims=True)
+        if not np.isfinite(lengths).all() or np.any(lengths <= 1e-10):
+            invalid = np.argwhere(~np.isfinite(lengths[..., 0]) | (lengths[..., 0] <= 1e-10))
+            raise ValueError(f"SYMMETRY_INTERPOLATED_CORNER_NORMAL_INVALID:{invalid.tolist()}")
+        retained_normals /= lengths
+        reflected_normals = retained_normals[:, corner_order].copy()
+        reflected_normals[..., plane_axis] *= -1
+        corner_normals = np.concatenate((retained_normals, reflected_normals))
+    surface = MeshState(mesh, frozenset(seams), np.concatenate((retained_uv, retained_uv)), all_uv_faces,
+                        corner_normals=corner_normals)
     count = len(faces)
     labels = chart_labels(surface)
     strip_candidates: list[dict[str, object]] = []
@@ -193,7 +212,6 @@ def build_symmetry_variant(
         if depth < band:
             strip_candidates.append({"chart_id": int(label), "retained_face_ids": selected.tolist(),
                 "maximum_plane_distance": depth, "distance_fraction": depth / source.mesh.scale})
-    bary = np.asarray(barycentrics, dtype=np.float64)
     pairs = np.column_stack((np.arange(count, dtype=np.int64), np.arange(count, dtype=np.int64) + count))
     report: dict[str, object] = {
         "source_faces": len(source.mesh.faces), "retained_source_faces": len(set(source_faces)),
@@ -206,6 +224,10 @@ def build_symmetry_variant(
         "plane_axis": plane_axis, "plane_offset": plane_offset, "keep_positive": keep_positive,
         "midplane_geometry": "disconnected_explicit_source_identities",
         "mirrored_corner_permutation": corner_order, "coordinate_welding": False,
+        "source_corner_normals_present": source_normals is not None,
+        "corner_normal_policy": ("source_barycentric_interpolation_normalized_then_plane_reflection"
+                                 if source_normals is not None else "legacy_none"),
+        "normal_smoothing_across_source_faces": False,
         "retained_area": float(mesh.areas[:count].sum()), "output_area": float(mesh.areas.sum()),
         "midplane_strip_candidates": strip_candidates,
         "midplane_review_required": bool(strip_candidates),

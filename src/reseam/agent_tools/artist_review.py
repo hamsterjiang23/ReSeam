@@ -39,6 +39,9 @@ def _bound_bake(snapshot: Snapshot, value: object) -> tuple[Path, dict[str, obje
 
 
 def compare(request: dict[str, object], output: Path, deadline: float) -> dict[str, object]:
+    if request.get("mode") == "pbr":
+        from .pbr_review import compare_pbr
+        return compare_pbr(request, output, deadline)
     after = require_snapshot(request)
     before_raw = request.get("before")
     if not isinstance(before_raw, dict):
@@ -112,6 +115,9 @@ def compare(request: dict[str, object], output: Path, deadline: float) -> dict[s
 
 
 def review(request: dict[str, object], output: Path, deadline: float) -> dict[str, object]:
+    if request.get("mode") == "pbr":
+        from .pbr_review import review_pbr
+        return review_pbr(request, output, deadline)
     check_deadline(deadline)
     snapshot = require_snapshot(request)
     comparison_path = Path(str(request["comparison"])).resolve()
@@ -156,6 +162,9 @@ def review(request: dict[str, object], output: Path, deadline: float) -> dict[st
 
 
 def export_visual(request: dict[str, object], output: Path, deadline: float) -> dict[str, object]:
+    if request.get("mode") == "pbr":
+        from .pbr_review import export_pbr_visual
+        return export_pbr_visual(request, output, deadline)
     snapshot = require_snapshot(request)
     path = Path(str(request["review"]))
     receipt = read_object(path)
@@ -205,7 +214,7 @@ def preview(request: dict[str, object], output: Path, deadline: float) -> dict[s
     cameras = _cameras(request)
     channels = request.get("channels", ["material"])
     if not isinstance(channels, list) or not channels or any(
-            c not in ("material", "basecolor", "roughness", "metallic", "normal") for c in channels):
+            c not in ("material", "basecolor", "roughness", "metallic", "normal", "normal_lit") for c in channels):
         raise ValueError("UNKNOWN_PREVIEW_CHANNEL")
     if len(cameras)*len(lights)*len(distances)*len(channels) > 48:
         raise ValueError("PREVIEW_MAXIMUM_48_IMAGES")
@@ -217,15 +226,21 @@ def preview(request: dict[str, object], output: Path, deadline: float) -> dict[s
     np.savez_compressed(binding, vertices=snapshot.state.surface.mesh.vertices,
                         faces=snapshot.state.surface.mesh.faces,
                         corner_uv=snapshot.state.surface.uv[snapshot.state.surface.uv_faces])
+    focus_faces = request.get("focus_faces", [])
+    if not isinstance(focus_faces, list) or any(type(v) is not int or not 0 <= v < len(snapshot.state.surface.mesh.faces) for v in focus_faces):
+        raise ValueError("FOCUS_FACES_REQUIRE_VALID_FACE_IDS")
+    focus_points = snapshot.state.surface.mesh.vertices[snapshot.state.surface.mesh.faces[focus_faces]].reshape(-1, 3)
     config = {"model": str(path), "output": str(output.resolve()), "size": size,
               "lights": lights, "distances": distances, "cameras": cameras, "expected_geometry": str(binding),
-              "channels": channels}
+              "channels": channels, "save_blend": bool(request.get("save_blend", False)),
+              "focus_points": focus_points.tolist()}
     write_json(output / "render-request.json", config)
-    run_process([str(blender), "--background", "--factory-startup", "--python", str(worker), "--",
+    run_process([str(blender), "--background", "--factory-startup", "--threads", "4", "--python-exit-code", "1", "--python", str(worker), "--",
                  str((output / "render-request.json").resolve())], output / "blender", deadline - time.monotonic())
     report = read_object(output / "rendered.json")
     report.update(state_hash=snapshot.state_hash, model_sha256=file_hash(path), model=str(path),
                   renderer="Blender Cycles CPU", worker_sha256=file_hash(worker),
+                  triangle_matcher_sha256=file_hash(root / "scripts/triangle_identity_match.py"),
                   numerical_acceptance="not_used", visual_decision="pending")
     write_json(output / "preview.json", report)
     items = cast(list[dict[str, object]], report["images"])

@@ -1,0 +1,158 @@
+[
+  {
+    "path": "toolbox_aligned.png",
+    "source": "artifacts\\normal-preflight\\examples05\\toolbox_high_normal_preview.png",
+    "sha256": "dec570b363be08343da4b4c5e6ab85c4e06a107507f95e89e9fa33605612bb68",
+    "bytes": 94309
+  },
+  {
+    "path": "toolbox_shifted.png",
+    "source": "artifacts\\normal-preflight\\examples05\\toolbox_shifted_high_normal_preview.png",
+    "sha256": "c78f53152b50a16bdd34b16f56b6c7e45355d56622d1e058064906246701f71f",
+    "bytes": 97231
+  },
+  {
+    "path": "toolbox_aligned_normal.png",
+    "source": "artifacts\\normal-preflight\\examples05\\toolbox_high_bake\\Normal.png",
+    "sha256": "1166509c3f3b84edaaedd6e9bbf3d2940ccb82bb8ebd4dd2a9492f86aa349232",
+    "bytes": 3343
+  },
+  {
+    "path": "toolbox_shifted_normal.png",
+    "source": "artifacts\\normal-preflight\\examples05\\toolbox_shifted_high_bake\\Normal.png",
+    "sha256": "140ee521f24e6f7586b9b71d0c45efc9edaecbcb43a18ea4ead3bcf2de54334c",
+    "bytes": 4021
+  },
+  {
+    "path": "toolbox_uv.png",
+    "source": "artifacts\\normal-preflight\\examples05\\toolbox_high_check\\views\\uv.png",
+    "sha256": "9f3738155126156e83ead88de77c6413dab673ef3a0c1b29c604be3d8441fbdb",
+    "bytes": 10354
+  },
+  {
+    "path": "toolbox_normals.png",
+    "source": "artifacts\\normal-preflight\\examples05\\toolbox_high_check\\normal_vectors.png",
+    "sha256": "dca4fc403f6c281414446ff06a372b28f7455f1372abb3b16930740737262f13",
+    "bytes": 16143
+  },
+  {
+    "path": "cylinder_uv.png",
+    "source": "artifacts\\normal-preflight\\examples05\\cylinder_check\\views\\uv.png",
+    "sha256": "bf07c45db438625d6ddcc4dc2eb4d0463a35c85bb7adad47936bba1848fbc424",
+    "bytes": 3726
+  },
+  {
+    "path": "cylinder_normals.png",
+    "source": "artifacts\\normal-preflight\\examples05\\cylinder_check\\normal_vectors.png",
+    "sha256": "809ba529cfc8874fb0cf550498aa8d70a3aa3fbfa2c38c378a2aead7d999846f",
+    "bytes": 16937
+  },
+  {
+    "path": "toolbox_shifted_rays.png",
+    "source": "artifacts\\normal-preflight\\examples05\\toolbox_shifted_high_check\\projection\\rays.png",
+    "sha256": "eb0af4e0efb8c5b3c050383d1c952262ba599c6e19618fd194b5cf4f4758b088",
+    "bytes": 14161
+  },
+  {
+    "path": "toolbox_aligned.json",
+    "source": "artifacts\\normal-preflight\\examples05\\toolbox_high_check\\preflight.json",
+    "sha256": "386afa06f5d87843ccf0e6fdc69ecdabafd2b0491bb6e2acaeb4e9efdea6e46a",
+    "bytes": 55925
+  },
+  {
+    "path": "toolbox_shifted.json",
+    "source": "artifacts\\normal-preflight\\examples05\\toolbox_shifted_high_check\\preflight.json",
+    "sha256": "77ffea58e605e3e1021b2793608d3c03840b0a417200acf80eafe2b040c63478",
+    "bytes": 56619
+  },
+  {
+    "path": "cylinder.json",
+    "source": "artifacts\\normal-preflight\\examples05\\cylinder_check\\preflight.json",
+    "sha256": "d8f1bea9f858bf5290ed173b6dcdcc16c25233e7b9564c46b1a33cc03c4508ed",
+    "bytes": 63287
+  },
+  {
+    "path": "preview_contract.json",
+    "source": "artifacts\\normal-preflight\\examples05\\preview_contract.json",
+    "sha256": "0d8c5305593a03a6313bc122c6bd0792706a283dbc02ea82912ec48149633a71",
+    "bytes": 186
+  },
+  {
+    "path": "toolbox_aligned_bake.json",
+    "source": "artifacts\\normal-preflight\\examples05\\toolbox_high_bake\\record.json",
+    "sha256": "c19298fa452764002bb56e8cf4617f0791ef8fc6e2a5165a7f7014a5943829d9",
+    "bytes": 5304
+  },
+  {
+    "path": "toolbox_shifted_bake.json",
+    "source": "artifacts\\normal-preflight\\examples05\\toolbox_shifted_high_bake\\record.json",
+    "sha256": "9b9910a88e8c026330e5d2e293daa58b802436c715f695f492dc0fdd4b419e14",
+    "bytes": 5387
+  },
+  {
+    "path": "toolbox_high.glb",
+    "source": "artifacts\\normal-preflight\\examples05\\toolbox_high.glb",
+    "sha256": "7e58a6948d0620af6fed4044248f001d426d1b0cd90f9b49f9f5fe45f2fcbd9b",
+    "bytes": 53636
+  },
+  {
+    "path": "toolbox_shifted_high.glb",
+    "source": "artifacts\\normal-preflight\\examples05\\toolbox_shifted_high.glb",
+    "sha256": "2a57952835e05af6e7e1288120b0833886646b98a484db7db75318374b92d48c",
+    "bytes": 53676
+  },
+  {
+    "path": "toolbox_aligned.glb",
+    "source": "artifacts\\normal-preflight\\examples05\\toolbox_high_bake\\asset.glb",
+    "sha256": "fc83e59f85440e7e5e9457a4be944c330f56f269f8eaa9f3da6c36c7119c8f01",
+    "bytes": 14568
+  },
+  {
+    "path": "toolbox_shifted.glb",
+    "source": "artifacts\\normal-preflight\\examples05\\toolbox_shifted_high_bake\\asset.glb",
+    "sha256": "e381edb4c28376bda99398e8d65be5d158e33d3010929829ead0ffa21b217a52",
+    "bytes": 16224
+  },
+  {
+    "path": "toolbox_aligned_samples.jsonl",
+    "source": "artifacts\\normal-preflight\\examples05\\toolbox_high_check\\projection\\samples.jsonl",
+    "sha256": "2a54375c8202ac720dd1bf2da553ef0e50a0aefb61cda9ab889824074e62dde8",
+    "bytes": 530428
+  },
+  {
+    "path": "toolbox_shifted_samples.jsonl",
+    "source": "artifacts\\normal-preflight\\examples05\\toolbox_shifted_high_check\\projection\\samples.jsonl",
+    "sha256": "e9cdba8cb743a0032469e304bf7c1d9ef1ce9d76e6a650deb62acee869aa1303",
+    "bytes": 435624
+  },
+  {
+    "path": "cylinder_samples.jsonl",
+    "source": "artifacts\\normal-preflight\\examples05\\cylinder_check\\projection\\samples.jsonl",
+    "sha256": "50bacc26eee076ed6a9bc1b1b62ec7078ea0241a5d66dc55560faea7ee6cf8cf",
+    "bytes": 701528
+  },
+  {
+    "path": "blue_high_import.json",
+    "source": "artifacts\\normal-preflight\\blue01\\high\\result.json",
+    "sha256": "9e430da60504652ecc6684a8f081cf0b57436a26a0c8964a31f22cca8fea5a56",
+    "bytes": 269
+  },
+  {
+    "path": "blue_low_import.json",
+    "source": "artifacts\\normal-preflight\\blue01\\low\\result.json",
+    "sha256": "a5e962d37d1c17b41f7a95fcbc0733e6fad80dea3bdfb75cfe7538aa653131e4",
+    "bytes": 273
+  },
+  {
+    "path": "blue_high_import.log",
+    "source": "artifacts\\normal-preflight\\blue01\\high\\process.log",
+    "sha256": "ae37265c684f0a7fd701dac2962ec45927f69c34ffda99f19b3b1a02a1e91c84",
+    "bytes": 524
+  },
+  {
+    "path": "blue_low_import.log",
+    "source": "artifacts\\normal-preflight\\blue01\\low\\process.log",
+    "sha256": "cd25552e5b1aa3a9dc8041d30a2af3027932718d6cdbd6918ceb4a3a5bcdac18",
+    "bytes": 528
+  }
+]

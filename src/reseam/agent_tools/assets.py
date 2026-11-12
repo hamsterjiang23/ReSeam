@@ -124,6 +124,26 @@ def import_asset(request: dict[str, object], output: Path, deadline: float) -> d
         raise TypeError("ASSET_PATH_REQUIRED")
     source = Path(raw).resolve()
     suffix = source.suffix.lower()
+    pbr = request.get("pbr_textures")
+    if pbr is not None:
+        if (not isinstance(pbr, dict) or set(pbr) != {"basecolor", "normal", "roughness", "metallic"}
+                or suffix != ".fbx" or request.get("uv_channel") is None
+                or request.get("basecolor_texture") is not None or request.get("reference") is not None):
+            raise ValueError("PBR_BINDING_REQUIRES_FBX_FOUR_TEXTURES_UV_CHANNEL_AND_NO_OTHER_REFERENCE")
+        if any(not isinstance(p, str) or not Path(p).is_absolute() or not Path(p).is_file()
+               for p in pbr.values()):
+            raise ValueError("PBR_TEXTURE_ABSOLUTE_FILE_REQUIRED")
+    convention = request.get("normal_convention", "opengl")
+    if convention not in ("opengl", "directx"):
+        raise ValueError("NORMAL_CONVENTION_INVALID")
+    split = request.get("repair_nonmanifold")
+    if split not in (None, "split_fans"):
+        raise ValueError("NONMANIFOLD_REPAIR_MUST_BE_SPLIT_FANS")
+    target_normal_policy = request.get("target_normal_policy", "flat")
+    if target_normal_policy not in ("flat", "imported"):
+        raise ValueError("TARGET_NORMAL_POLICY_INVALID")
+    if target_normal_policy == "imported" and not request.get("collect_normal_evidence"):
+        raise ValueError("IMPORTED_NORMAL_POLICY_REQUIRES_NORMAL_EVIDENCE")
     uv_channel = request.get("uv_channel")
     if (uv_channel is not None and (type(uv_channel) not in (int, str)
             or isinstance(uv_channel, int) and uv_channel < 0
@@ -159,6 +179,19 @@ def import_asset(request: dict[str, object], output: Path, deadline: float) -> d
     sources: list[dict[str, object]] = [
         {"path": str(copied), "original_path": str(source), "sha256": file_hash(copied)}
     ]
+    frozen_pbr: dict[str, str] | None = None
+    if isinstance(pbr, dict):
+        frozen_pbr = {}
+        for channel, original in pbr.items():
+            original_path = Path(str(original)).resolve()
+            target = frozen / "pbr" / str(channel) / original_path.name
+            target.parent.mkdir(parents=True)
+            with Image.open(original_path) as image:
+                image.verify()
+            shutil.copy2(original_path, target)
+            frozen_pbr[str(channel)] = str(target.resolve())
+            sources.append({"path": str(target.resolve()), "original_path": str(original_path),
+                            "sha256": file_hash(target)})
     frozen_texture: Path | None = None
     if texture_source is not None:
         (frozen / "basecolor").mkdir()
@@ -217,6 +250,7 @@ def import_asset(request: dict[str, object], output: Path, deadline: float) -> d
         worker_input = output / "import_request.json"
         write_json(worker_input, {"source": str(copied), "output": str(frozen), "uv_channel": selected_uv,
                                   "collect_normal_evidence": request.get("collect_normal_evidence", False),
+                                  "pbr_textures": frozen_pbr, "normal_convention": convention,
                                   "basecolor_texture": str(frozen_texture) if frozen_texture else None})
         argv = [str(blender), "--background", "--factory-startup", "--threads", "1",
                 "--python-exit-code", "1", "--python", str(worker), "--", str(worker_input)]
@@ -242,6 +276,22 @@ def import_asset(request: dict[str, object], output: Path, deadline: float) -> d
         metadata["polygon_topology"] = {"polygons": faces.tolist(),
             "triangle_to_polygon": list(range(len(faces))),
             "source": "input explicit triangles; no inferred quads"}
+    if split == "split_fans":
+        from .manifold_variant import split_manifold_fans
+        vertices, faces, repair_record = split_manifold_fans(vertices, faces)
+        write_json(output / "connectivity_variant.json", repair_record)
+        metadata["connectivity_variant"] = repair_record
+        # Polygon IDs survive; control point IDs now belong to the frozen original.
+        topology = cast(dict[str, object], metadata["polygon_topology"])
+        topology["original_polygons"] = topology["polygons"]
+        topology["original_vertex_for_new_vertex"] = repair_record["original_vertex_for_new_vertex"]
+        topology["vertex_namespace"] = "original imported indices; use connectivity_variant lineage"
+        record = metadata.get("hard_surface_source")
+        if isinstance(record, dict):
+            old_sharp = {tuple(sorted(edge)) for edge in record.get("sharp_vertex_edges", [])}
+            origins = cast(list[int], repair_record["original_vertex_for_new_vertex"])
+            record["sharp_vertex_edges"] = [list(edge) for edge in make_mesh(vertices, faces).edges
+                if tuple(sorted((origins[edge[0]], origins[edge[1]]))) in old_sharp]
     mesh = make_mesh(vertices, faces)
     if not metadata["source_uv_present"]:
         if request.get("initialize_uv") != "xatlas":
@@ -271,6 +321,15 @@ def import_asset(request: dict[str, object], output: Path, deadline: float) -> d
         metadata["uv_repair"] = {"faces": repaired, "method": "explicit intrinsic whole-face isolation",
                                   "requires_pack": bool(repaired)}
     surface = state_from_corner_uv(mesh, corners, corner_ids=ids)
+    if target_normal_policy == "imported":
+        source_normal_record = metadata.get("hard_surface_source")
+        if not isinstance(source_normal_record, dict):
+            raise ValueError("IMPORTED_CORNER_NORMALS_UNAVAILABLE")
+        normals = np.asarray(source_normal_record.get("corner_normals"), dtype=float)
+        if (normals.shape != (*faces.shape, 3) or not np.isfinite(normals).all()
+                or np.any(np.linalg.norm(normals, axis=2) < 1e-12)):
+            raise ValueError("IMPORTED_CORNER_NORMALS_INVALID")
+        surface.corner_normals = normals / np.linalg.norm(normals, axis=2)[:, :, None]
     if frozen_texture is not None:
         # One explicit static material with exact imported face/corner ancestry.
         # Source Unity shader transforms, blending, and animation are not inferred.
@@ -318,6 +377,8 @@ def import_asset(request: dict[str, object], output: Path, deadline: float) -> d
                          "per-object active layer in metadata" if suffix == ".fbx" else 0)})
     if frozen_texture is not None:
         metadata["normal_policy"] = "explicit static BaseColor reference; source normals not reproduced"
+    if target_normal_policy == "imported":
+        metadata["normal_policy"] = "imported_corner_normals_mikktspace"
     write_extra_uv(metadata, frozen, extra_layers)
     if frozen_texture is not None:
         append_extra_uv_glb(Path(str(metadata["reference_glb"])), metadata, len(faces))
@@ -337,6 +398,16 @@ def import_asset(request: dict[str, object], output: Path, deadline: float) -> d
             "original_topology_sha256": restoration["original_topology_sha256"],
         })
         metadata["identity_policy"] = "verified original vertex IDs within selected regions; exact face corners"
+    if "cage_for_snapshot" in request:
+        from .state import load_snapshot
+        cage_low = load_snapshot(Path(str(request["cage_for_snapshot"])))
+        if request.get("cage_for_state_hash") != cage_low.state_hash:
+            raise ValueError("CAGE_LOW_STATE_HASH_REQUIRED_OR_STALE")
+        if (not np.array_equal(surface.mesh.faces, cage_low.state.surface.mesh.faces)
+                or len(surface.mesh.vertices) != len(cage_low.state.surface.mesh.vertices)):
+            raise ValueError("CAGE_INDEXED_TOPOLOGY_MISMATCH")
+        metadata["cage_for_state_hash"] = cage_low.state_hash
+        metadata["cage_identity"] = "caller-declared original vertex order; exact indexed face order checked"
     check_deadline(deadline)
     snapshot = save_snapshot(BudgetState(surface), output / "snapshot", metadata)
     if restoration is not None:

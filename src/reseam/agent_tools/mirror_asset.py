@@ -63,6 +63,12 @@ def mirror_asset(request: dict[str, object], output: Path, deadline: float) -> d
     projected = request.get("source_mode") == "projected_high" or "projected_source" in parent.metadata
     if request.get("source_mode", "same_surface") not in ("same_surface", "projected_high"):
         raise ValueError("UNKNOWN_SOURCE_MODE")
+    material_scope = request.get("material_scope", "basecolor")
+    if material_scope not in ("basecolor", "preserve_pbr"):
+        raise ValueError("MIRROR_MATERIAL_SCOPE_BASECOLOR_OR_PRESERVE_PBR_REQUIRED")
+    preserve_pbr = material_scope == "preserve_pbr"
+    if preserve_pbr and projected:
+        raise ValueError("PBR_MIRROR_SAME_SURFACE_REQUIRED")
     if projected:
         from .projected_source import projected_source_metadata
 
@@ -75,7 +81,7 @@ def mirror_asset(request: dict[str, object], output: Path, deadline: float) -> d
         projected_record = projected_source_metadata(parent, output / "parent_lineage.npz", float(str(fraction)))
         source_record: dict[str, object] = {"scope": "original high BaseColor through frozen original-low lineage",
                                           "projected_source": projected_record}
-    else:
+    elif not preserve_pbr:
         pixels, source_uv, factor, repeat, source_record = _texture({}, parent)
     variant = build_symmetry_variant(parent.state.surface, plane_axis=("x", "y", "z").index(str(axis)),
                                     plane_offset=float(offset), keep_positive=positive, deadline=deadline)
@@ -96,6 +102,12 @@ def mirror_asset(request: dict[str, object], output: Path, deadline: float) -> d
         projected_record = {**projected_record, "lineage_npz": str(lineage.resolve()),
                             "lineage_sha256": file_hash(lineage)}
         reference = Path(str(projected_record["reference_glb"]))
+    elif preserve_pbr:
+        from .mirror_pbr_reference import mirror_pbr_reference
+
+        reference = output / "mirrored_source.glb"
+        source_record = mirror_pbr_reference(parent, surface, variant, ("x", "y", "z").index(str(axis)),
+                                             reference, deadline)
     else:
         reference_uv = np.einsum("fck,fkj->fcj", variant.source_barycentric, source_uv[variant.source_face_ids])
         reference = output / "mirrored_source.glb"
@@ -103,7 +115,8 @@ def mirror_asset(request: dict[str, object], output: Path, deadline: float) -> d
     check_deadline(deadline)
     provenance = output / "source_correspondence.npz"
     np.savez_compressed(provenance, source_face_ids=variant.source_face_ids,
-                        source_barycentric=variant.source_barycentric, face_pairs=variant.face_pairs)
+                        source_barycentric=variant.source_barycentric, face_pairs=variant.face_pairs,
+                        reflected_faces=variant.reflected_faces)
     labels = chart_labels(surface)
     signs = np.sign(np.linalg.det(jacobians(surface))).astype(int)
     normal = [0., 0., 0.]
@@ -124,7 +137,8 @@ def mirror_asset(request: dict[str, object], output: Path, deadline: float) -> d
                             {"path": str(provenance.resolve()), "sha256": file_hash(provenance)}],
         "derived_from": {"asset_id": parent.asset_id, "state_hash": parent.state_hash,
                          "snapshot": str(parent.root / "snapshot.json")},
-        "geometry_variant": "plane_clip_then_exact_mirror", "basecolor_only": True,
+        "geometry_variant": "plane_clip_then_exact_mirror", "basecolor_only": not preserve_pbr,
+        "material_scope": material_scope,
         "source_material_scope": source_record, "requires_rebake": True,
         "source_correspondence": str(provenance.resolve())}
     if projected:
@@ -155,6 +169,7 @@ def mirror_asset(request: dict[str, object], output: Path, deadline: float) -> d
                                     "source triangle barycentric; reflected members use retained-side source"),
         "shared_groups": len(groups), "geometry_changed": True, "original_asset_modified": False,
         "geometry_validated": False, "quality_accepted": None, "full_pbr_passed": False,
+        "material_scope": material_scope, "source_material_scope": source_record,
         "shared_snapshot": snapshot_result(shared_snapshot), "unshared_snapshot": snapshot_result(unshared_snapshot),
         "variant_root": snapshot_result(root), "source_reference_glb": str(reference.resolve()),
         "source_correspondence": str(provenance.resolve()), "profile": profile,

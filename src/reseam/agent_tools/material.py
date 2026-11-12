@@ -30,8 +30,15 @@ from ..budget_material import (
 )
 from ..budget_render import evaluate_render, prepare_render_reference
 from ..budget_state import owners_and_members
-from ..budget_texture import ReferenceSurface, _face_pixels, decode_rgba8, mip_dimensions, sample_rgba8
-from ..types import FloatArray
+from ..budget_texture import (
+    BoolArray,
+    ReferenceSurface,
+    _face_pixels,
+    decode_rgba8,
+    mip_dimensions,
+    sample_rgba8,
+)
+from ..types import FloatArray, IntArray
 from .state import (
     Snapshot,
     check_deadline,
@@ -72,25 +79,34 @@ class _SamplerReference(MaterialReference):
         self, points: FloatArray, max_distance: float, *, deadline: float | None = None
     ) -> MaterialSamples:
         hit = self.geometry.sample(points, max_distance, deadline=deadline)
-        ids, bary = hit.target_faces, hit.barycentric
+        return self.sample_at(hit.target_faces, hit.barycentric, hit.distances, hit.valid)
+
+    def sample_at(self, high_face_ids: IntArray, bary: FloatArray, distances: FloatArray,
+                  valid: BoolArray) -> MaterialSamples:
+        """Evaluate an already established high hit, without nearest re-query."""
+        if (bary.shape != (len(high_face_ids), 3) or distances.shape != high_face_ids.shape
+                or valid.shape != high_face_ids.shape):
+            raise ValueError("INVALID_EXACT_MATERIAL_HITS")
+        in_range = (high_face_ids >= 0) & (high_face_ids < len(self.normals))
+        ids = np.clip(high_face_ids, 0, len(self.normals) - 1)
         uv = np.einsum("nk,nkj->nj", bary, self.metadata_corner_uv(ids))
         color = sample_rgba8(self.geometry.image, uv, repeat=self.wrap[0]) * self.geometry.base_factor
         color[:, 3] = 1  # OPAQUE contract ignores source alpha, including factors.
         normal = sample_linear_rgba8(self.normal_image, uv, repeat=self.wrap[1])[:, :3] * 2 - 1
         normal[:, :2] *= self.normal_scale
         lengths = np.linalg.norm(normal, axis=1, keepdims=True)
-        matrix, valid = interpolated_frames(self.normals, self.tangents, self.signs, ids, bary)
+        matrix, frame_valid = interpolated_frames(self.normals, self.tangents, self.signs, ids, bary)
         world = np.einsum("nij,nj->ni", matrix, normal / np.maximum(lengths, 1e-30))
         world /= np.maximum(np.linalg.norm(world, axis=1, keepdims=True), 1e-30)
         mr = sample_linear_rgba8(self.orm_image, uv, repeat=self.wrap[2])
         orm = np.column_stack(
-            (np.ones(len(points)), mr[:, 1] * self.roughness_factor, mr[:, 2] * self.metallic_factor)
+            (np.ones(len(ids)), mr[:, 1] * self.roughness_factor, mr[:, 2] * self.metallic_factor)
         )
         if self.occlusion_image is not None:
             ao = sample_linear_rgba8(self.occlusion_image, uv, repeat=self.wrap[3])[:, 0]
             orm[:, 0] = 1 + self.occlusion_strength * (ao - 1)
         return MaterialSamples(
-            color, world, orm, hit.valid & valid & (lengths[:, 0] > 1e-10), hit.distances, ids, bary
+            color, world, orm, valid & in_range & frame_valid & (lengths[:, 0] > 1e-10), distances, high_face_ids, bary
         )
 
 
@@ -150,7 +166,7 @@ def _wraps(document: dict[str, object], definitions: tuple[object, ...]) -> tupl
     return modes[0], modes[1], modes[2], modes[3]
 
 
-def _reference(snapshot: Snapshot, request: dict[str, object]) -> tuple[MaterialReference, Path]:
+def _reference(snapshot: Snapshot, request: dict[str, object]) -> tuple[_SamplerReference, Path]:
     source = snapshot.metadata.get("reference_glb")
     if not isinstance(source, str) or not source:
         raise ValueError("MATERIAL_REFERENCE_REQUIRED")
@@ -220,23 +236,42 @@ def _reference(snapshot: Snapshot, request: dict[str, object]) -> tuple[Material
         flat = np.cross(triangle[:, 1] - triangle[:, 0], triangle[:, 2] - triangle[:, 0])
         flat /= np.maximum(np.linalg.norm(flat, axis=1, keepdims=True), 1e-30)
         normals = np.repeat(flat[:, None, :], 3, axis=1)
-    uv_gltf = corner_uv.copy()
-    uv_gltf[..., 1] = 1 - uv_gltf[..., 1]
+    extras = document.get("extras", {})
+    reseam = extras.get("reseam", {}) if isinstance(extras, dict) else {}
+    if not isinstance(reseam, dict):
+        raise TypeError("INVALID_REFERENCE_FRAME_METADATA")
+    legacy_top_v = (reseam.get("tangent_basis") == "gltf_top_v_legacy"
+                    or (reseam.get("tangent_contract") == "matches frame_arrays exactly"
+                        and reseam.get("tangent_basis") != "blender_bottom_v"))
+    frame_uv = corner_uv.copy()
+    if legacy_top_v:
+        frame_uv[..., 1] = 1 - frame_uv[..., 1]
     library = request.get("mikk_library")
     if library is not None and not isinstance(library, str):
         raise ValueError("INVALID_MIKK_LIBRARY")
-    tangents, signs, hashes = mikktspace_frames(
-        vertices[faces], normals, uv_gltf, None if library is None else Path(library)
-    )
-    custom_tangents = False
+    declared_only = (request.get("declared_tangents_only") is True
+                     or (isinstance(extras, dict) and isinstance(extras.get("mirror_pbr"), dict)))
+    if declared_only and "TANGENT" not in attributes:
+        raise ValueError("UNSUPPORTED_REFERENCE:DECLARED_TANGENT_REQUIRED")
+    if declared_only:
+        # A clipped reference transports its authored frame; an unrelated Mikk
+        # recomputation must not veto it before the declared attributes are read.
+        tangents, signs = np.zeros_like(normals), np.ones(normals.shape[:2])
+        hashes: dict[str, object] = {"status": "NOT_RUN", "reason": "explicit declared tangent contract"}
+    else:
+        tangents, signs, hashes = mikktspace_frames(
+            vertices[faces], normals, frame_uv, None if library is None else Path(library)
+        )
+    custom_tangents: bool | None = None if declared_only else False
     if "TANGENT" in attributes:
         original = _accessor(document, binary, attributes["TANGENT"])
         original_tangents = original[:, :3] @ linear.T
         original_tangents /= np.maximum(np.linalg.norm(original_tangents, axis=1, keepdims=True), 1e-30)
         actual_tangents, actual_signs = original_tangents[faces], original[faces, 3]
-        custom_tangents = not (
-            np.allclose(tangents, actual_tangents, atol=1e-4) and np.allclose(signs, actual_signs, atol=1e-4)
-        )
+        if not declared_only:
+            custom_tangents = not (
+                np.allclose(tangents, actual_tangents, atol=1e-4) and np.allclose(signs, actual_signs, atol=1e-4)
+            )
         tangents, signs = actual_tangents, actual_signs
     factor = np.asarray(pbr.get("baseColorFactor", [1, 1, 1, 1]), dtype=float)
     color = (
@@ -286,9 +321,13 @@ def _reference(snapshot: Snapshot, request: dict[str, object]) -> tuple[Material
         float(occlusion_definition.get("strength", 1)),
         {
             "source": str(path),
-            "source_frame": "declared_glTF_tangents_or_official_MikkTSpace_top_V",
+            "source_frame": ("declared_glTF_TANGENT_preserved" if "TANGENT" in attributes else
+                             "official_MikkTSpace_top_V_legacy" if legacy_top_v else
+                             "official_MikkTSpace_Blender_bottom_V"),
+            "regenerated_tangent_basis": "gltf_top_v_legacy" if legacy_top_v else "blender_bottom_v",
             "source_mikk": hashes,
             "custom_source_tangents": custom_tangents,
+            "source_double_sided": definition.get("doubleSided", False) is True,
             "constant_channels": "Only glTF-declared scalar factors/defaults; no invented source textures",
         },
         corner_uv,
@@ -359,6 +398,16 @@ def _save_bake(
 
 def _load_bake(snapshot: Snapshot, path: Path) -> tuple[MaterialAtlas, dict[str, object]]:
     record = read_object(path)
+    if record.get("scope") == "pbr_reuse":
+        from ..budget_material import frame_arrays
+        from .pbr_reuse import PBRTarget, frame_hash
+
+        target = record.get("target")
+        if not isinstance(target, str) or _hash(Path(target)) != record.get("target_sha256"):
+            raise ValueError("PBR_BAKE_TARGET_CHANGED")
+        if record.get("baked_frame_hash") != frame_hash(frame_arrays(snapshot.state.surface)):
+            raise ValueError("PBR_BAKED_FRAME_CONTRACT_CHANGED")
+        PBRTarget(snapshot, Path(target), float("inf"))
     if record.get("status") == "BASE_COLOR_DIAGNOSTIC":
         raise ValueError("DIAGNOSTIC_REPORT_IS_NOT_BAKE_MANIFEST: use its preview GLB; quality.validate/asset.export require bake.json")
     if record.get("state_hash") != snapshot.state_hash or record.get("asset_id") != snapshot.asset_id:
@@ -411,8 +460,10 @@ def _blender_atlas(
     output: Path,
     deadline: float,
 ) -> MaterialAtlas:
-    if reference.metadata.get("custom_source_tangents") is True:
-        raise ValueError("UNSUPPORTED_BLENDER_REFERENCE:CUSTOM_SOURCE_TANGENTS")
+    source_tangent_status = reference.metadata.get("custom_source_tangents")
+    if source_tangent_status is not False:
+        reason = "CUSTOM_SOURCE_TANGENTS" if source_tangent_status is True else "UNVERIFIED_SOURCE_TANGENTS"
+        raise ValueError("UNSUPPORTED_BLENDER_REFERENCE:" + reason)
     surface = snapshot.state.surface
     resolution = _integer(request, "resolution", 256)
     # All independent regions plus the first sheet of each reuse pair can be
@@ -439,6 +490,7 @@ def _blender_atlas(
                 resolution,
                 _number(request, "cage_extrusion", reference.diagonal * 0.02),
                 _integer(request, "padding_pixels", 4),
+                corner_normals=None if surface.corner_normals is None else surface.corner_normals[ids],
             ),
             folder,
             deadline=deadline,
@@ -495,6 +547,10 @@ def _blender_atlas(
 
 
 def bake_material_tool(request: dict[str, object], output: Path, deadline: float) -> dict[str, object]:
+    if request.get("mode") == "pbr_reuse":
+        from .pbr_reuse import bake_pbr_reuse
+
+        return bake_pbr_reuse(request, output, deadline)
     if request.get("mode") == "basecolor_reuse":
         from .color_reuse import bake_color_reuse
 
@@ -560,6 +616,10 @@ def bake_material_tool(request: dict[str, object], output: Path, deadline: float
 
 def validate_quality(request: dict[str, object], output: Path, deadline: float) -> dict[str, object]:
     candidate_bake = request.get("bake")
+    if isinstance(candidate_bake, str) and read_object(Path(candidate_bake)).get("scope") == "pbr_reuse":
+        from .pbr_reuse import validate_pbr_reuse
+
+        return validate_pbr_reuse(request, output, deadline)
     if isinstance(candidate_bake, str) and read_object(Path(candidate_bake)).get("scope") == "basecolor_reuse":
         from .color_reuse import validate_color_reuse
 

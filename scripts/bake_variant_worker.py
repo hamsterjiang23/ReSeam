@@ -1,7 +1,7 @@
 """Isolated Blender 4.5 CPU three-channel baker; invoked only by its adapter.
 
 Input is one non-overlapping target sheet. The caller separates shared members.
-The exported target uses flat, explicit glTF tangent frames. Imported source
+The exported target uses flat or imported, explicit glTF tangent frames. Imported source
 materials and source shading normals are preserved for the normal bake.
 """
 
@@ -19,7 +19,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from blender_worker import import_high, make_low, scene_settings
 
 
-def _source_materials(high: list[Any], declarations: list[dict[str, Any]]) -> list[dict[str, Any]]:
+def _source_materials(high: list[Any], declarations: list[dict[str, Any]], legacy_top_v: bool) -> list[dict[str, Any]]:
     materials = {material.name: material for obj in high for material in obj.data.materials if material}
     result: list[dict[str, Any]] = []
     for declaration in declarations:
@@ -39,7 +39,7 @@ def _source_materials(high: list[Any], declarations: list[dict[str, Any]]) -> li
         # The reference contract uses the glTF top-V derivative basis. Blender
         # imports UVs into bottom-V and regenerates its normal-map frame, so
         # convert the encoded Y component before evaluating source normals.
-        for normal_map in tuple(node for node in nodes if node.type == "NORMAL_MAP"):
+        for normal_map in tuple(node for node in nodes if node.type == "NORMAL_MAP" and legacy_top_v):
             color = normal_map.inputs["Color"]
             separate = nodes.new("ShaderNodeSeparateXYZ")
             _link_or_value(material.node_tree, color, separate.inputs[0])
@@ -111,6 +111,8 @@ def _restore_source(records: list[dict[str, Any]]) -> None:
 
 
 def _target_frames(request: dict[str, Any]) -> tuple[Any, Any]:
+    if "corner_normals" in request:
+        return np.asarray(request["corner_normals"], dtype=float), np.asarray(request["corner_tangents_gltf"], dtype=float)
     positions = np.asarray(request["vertices"], dtype=float)[np.asarray(request["faces"])]
     uv = np.asarray(request["corner_uv"], dtype=float).copy()
     uv[..., 1] = 1 - uv[..., 1]
@@ -182,6 +184,7 @@ def _write_glb(request: dict[str, Any], channels: dict[str, str], normals: Any, 
             {
                 "name": "ReSeam_baked",
                 "alphaMode": "OPAQUE",
+                "doubleSided": True,
                 "pbrMetallicRoughness": {
                     "baseColorTexture": {"index": 0},
                     "metallicRoughnessTexture": {"index": 2},
@@ -198,6 +201,8 @@ def _write_glb(request: dict[str, Any], channels: dict[str, str], normals: Any, 
         "accessors": accessors,
         "bufferViews": views,
         "buffers": [{"byteLength": len(blob)}],
+        "extras": {"reseam": {"tangent_contract": "matches frame_arrays exactly",
+            "tangent_basis": "blender_bottom_v" if "corner_normals" in request else "gltf_top_v_legacy"}},
     }
     encoded = json.dumps(document, separators=(",", ":")).encode("utf-8")
     encoded += b" " * (-len(encoded) % 4)
@@ -208,7 +213,7 @@ def _write_glb(request: dict[str, Any], channels: dict[str, str], normals: Any, 
     (Path(request["folder"]) / "asset.glb").write_bytes(data)
 
 
-def _preview_material(low: Any, channels: dict[str, str]) -> None:
+def _preview_material(low: Any, channels: dict[str, str], legacy_top_v: bool) -> None:
     material = low.data.materials[0]
     tree = material.node_tree
     shader = next(node for node in tree.nodes if node.type == "BSDF_PRINCIPLED")
@@ -223,7 +228,7 @@ def _preview_material(low: Any, channels: dict[str, str]) -> None:
             tree.links.new(texture.outputs["Color"], separate.inputs[0])
             tree.links.new(separate.outputs["Y"], shader.inputs["Roughness"])
             tree.links.new(separate.outputs["Z"], shader.inputs["Metallic"])
-        else:
+        elif legacy_top_v:
             # Restore bottom-V Blender basis for the preview only. Saved PNG
             # and explicit GLB use top-V glTF tangent coordinates.
             separate = tree.nodes.new("ShaderNodeSeparateXYZ")
@@ -239,17 +244,36 @@ def _preview_material(low: Any, channels: dict[str, str]) -> None:
             normal = tree.nodes.new("ShaderNodeNormalMap")
             tree.links.new(combine.outputs[0], normal.inputs["Color"])
             tree.links.new(normal.outputs[0], shader.inputs["Normal"])
+        else:
+            normal = tree.nodes.new("ShaderNodeNormalMap")
+            tree.links.new(texture.outputs["Color"], normal.inputs["Color"])
+            tree.links.new(normal.outputs[0], shader.inputs["Normal"])
 
 
 def main(request_path: Path) -> None:
     request = json.loads(request_path.read_text(encoding="utf-8"))
     bpy.ops.wm.read_factory_settings(use_empty=True)
     high = import_high(request["high"])
-    records = _source_materials(high, request["source"]["materials"])
+    records = _source_materials(high, request["source"]["materials"], request["source"].get("legacy_top_v_normal_basis", False))
     low = make_low(request)
     for polygon in low.data.polygons:
-        polygon.use_smooth = False
+        polygon.use_smooth = "corner_normals" in request
+    if "corner_normals" in request:
+        normals = np.asarray(request["corner_normals"], dtype=float).reshape(-1, 3)
+        low.data.normals_split_custom_set([(v[0], -v[2], v[1]) for v in normals])
     low.data.update()
+    if "corner_normals" in request:
+        # Baking uses Blender's actual loop frame. Verify it agrees with the
+        # emitted frame in Blender's native bottom-V convention.
+        low.data.calc_tangents(uvmap="UVMap")
+        actual_n = np.asarray([tuple(n.vector) for n in low.data.corner_normals])
+        actual_t = np.asarray([tuple(loop.tangent) for loop in low.data.loops])
+        expected_t = np.asarray(request["corner_tangents_gltf"], dtype=float).reshape(-1, 4)
+        actual_s = np.asarray([loop.bitangent_sign for loop in low.data.loops])
+        if (not np.allclose(actual_n[:, [0, 2, 1]] * [1, 1, -1], normals, atol=5e-4)
+                or not np.allclose(actual_t[:, [0, 2, 1]] * [1, 1, -1], expected_t[:, :3], atol=5e-4)
+                or not np.array_equal(actual_s, expected_t[:, 3])):
+            raise ValueError("BLENDER_TARGET_FRAME_DIFFERS_FROM_EXPORTED_MIKKTSPACE")
     material = bpy.data.materials.new("ReSeam_bake_target")
     material.use_nodes = True
     low.data.materials.append(material)
@@ -283,7 +307,7 @@ def main(request_path: Path) -> None:
         target.image = image
         material.node_tree.nodes.active = target
         bpy.ops.object.bake(type="NORMAL" if label == "Normal" else "EMIT")
-        if label == "Normal":
+        if label == "Normal" and "corner_normals" not in request:
             pixels = np.asarray(image.pixels[:], dtype=np.float32).reshape(-1, 4)
             pixels[:, 1] = 1 - pixels[:, 1]
             image.pixels.foreach_set(pixels.ravel())
@@ -299,11 +323,12 @@ def main(request_path: Path) -> None:
     frames.update(
         corner_normals_gltf=normals.tolist(),
         corner_tangents_gltf=tangents.tolist(),
-        target_shading="flat explicit glTF top-V frames; source shading unchanged",
+        target_shading=("imported normals; verified native Blender bottom-V MikkTSpace frames" if "corner_normals" in request
+                        else "flat explicit glTF top-V frames; source shading unchanged"),
     )
     (Path(request["folder"]) / "mesh_frames.json").write_text(json.dumps(frames), encoding="utf-8")
     _write_glb(request, channels, normals, tangents)
-    _preview_material(low, channels)
+    _preview_material(low, channels, legacy_top_v="corner_normals" not in request)
     for obj in high:
         obj.hide_render = True
         obj.hide_set(True)
@@ -319,7 +344,9 @@ def main(request_path: Path) -> None:
             for record in records
         ],
         "backend": {"Blender": bpy.app.version_string, "device": "CPU", "threads": 1},
-        "normal_contract": "source Cycles shading; target flat; baked green inverted into explicit glTF top-V TBN",
+        "normal_contract": ("source Cycles shading; target imported normals; native Blender bottom-V MikkTSpace; green unchanged"
+                            if "corner_normals" in request else
+                            "source Cycles shading; target flat; baked green inverted into explicit glTF top-V TBN"),
         "projection": {
             "selected_to_active": True,
             "cage_extrusion": request["cage_extrusion"],

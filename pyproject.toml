@@ -7,7 +7,15 @@ name = "reseam"
 version = "0.1.0"
 description = "Reversible seam restructuring experiments for fixed meshes"
 requires-python = ">=3.11"
-dependencies = ["numpy>=2.2,<3", "scipy>=1.15,<2", "trimesh>=4.9,<5", "pillow>=11,<13", "shapely>=2.1,<3", "xatlas==0.0.11"]
+dependencies = [
+    "numpy>=2.2,<3",
+    "scipy>=1.15,<2",
+    "trimesh>=4.9,<5",
+    "pillow>=11,<13",
+    "shapely>=2.1,<3",
+    "xatlas==0.0.11",
+    "rtree>=1.4.1",
+]
 
 [project.scripts]
 reseam = "reseam.cli:main"

@@ -2,7 +2,7 @@
 
 Source normals use official MikkTSpace when the input omits tangents. Internal
 UV has bottom V=0; glTF UV and the corresponding tangent basis have top V=0.
-The target has explicit flat corner normals and tangent/sign attributes. This
+The target has explicit flat or imported corner normals and tangent/sign attributes. This
 is a finite-sample CPU acceptance contract, not a GPU or artist certification.
 """
 
@@ -15,7 +15,7 @@ import struct
 import time
 from dataclasses import dataclass, field
 from pathlib import Path
-from typing import TYPE_CHECKING, TypeAlias
+from typing import TYPE_CHECKING, TypeAlias, cast
 
 import numpy as np
 import trimesh
@@ -44,6 +44,15 @@ _MIKK_SOURCE_SHA256 = "de87e74107df766ce68108801262bd8d53899414236b59810509a8fc2
 _MIKK_HEADER_SHA256 = "17fc433894f24c73753d548086cc4d8c5c0379f4a6edfb98b5da243e4f0bc3d0"
 
 
+class MikkFrameError(ValueError):
+    """A failed native tangent generation with exact original face/corner IDs."""
+
+    def __init__(self, invalid_corners: IntArray, tangents: FloatArray, signs: FloatArray) -> None:
+        self.invalid_corners = invalid_corners.copy()
+        super().__init__("MIKKTSPACE_INVALID_FRAMES: face_corners=" + str(invalid_corners.tolist())
+                         + "; tangents=" + str(tangents.tolist()) + "; signs=" + str(signs.tolist()))
+
+
 def _check_deadline(deadline: float | None) -> None:
     if deadline is not None and time.monotonic() >= deadline:
         raise TimeoutError("MATERIAL_DEADLINE")
@@ -56,6 +65,9 @@ def _support_fingerprint(state: MeshState) -> str:
         digest.update(str((array.shape, array.dtype.str)).encode("ascii"))
         digest.update(array.tobytes())
     digest.update(np.asarray(sorted(state.seams), dtype=np.int64).tobytes())
+    if state.corner_normals is not None:
+        digest.update(b"imported_corner_normals")
+        digest.update(np.asarray(state.corner_normals, dtype=np.float64).tobytes())
     return digest.hexdigest()
 
 
@@ -92,7 +104,14 @@ def sample_linear_rgba8(image: Uint8Array, uv: FloatArray, *, repeat: bool = Fal
 
 
 def frame_arrays(state: MeshState) -> tuple[FloatArray, FloatArray, FloatArray]:
-    """Flat explicit target corner normals, tangents and signs, in glTF UV basis."""
+    """Explicit target frame, retaining the selected normal policy and basis.
+
+    Imported normals are never averaged across hard edges. Tangents are generated
+    from the current bottom-V UV using the locked official MikkTSpace implementation, so
+    reparameterization and mirrored UVs cannot retain stale tangent directions.
+    This agrees with native Blender glTF export/import; legacy flat frames retain
+    their historical top-V contract and are explicitly identified on export.
+    """
     xyz = state.mesh.vertices[state.mesh.faces]
     uv = state.uv[state.uv_faces].copy()
     uv[..., 1] = 1 - uv[..., 1]
@@ -101,6 +120,18 @@ def frame_arrays(state: MeshState) -> tuple[FloatArray, FloatArray, FloatArray]:
     det = a[:, 0] * b[:, 1] - a[:, 1] * b[:, 0]
     if np.any(np.abs(det) <= 1e-20):
         raise ValueError("FRAME_INVALID: degenerate target UV")
+    if state.corner_normals is not None:
+        normals = np.asarray(state.corner_normals, dtype=np.float64)
+        if (normals.shape != xyz.shape or not np.isfinite(normals).all()
+                or np.any(np.linalg.norm(normals, axis=-1) < 1e-12)):
+            raise ValueError("FRAME_INVALID: invalid imported corner normals")
+        normals = _unit(normals)
+        tangents, signs, _ = mikktspace_frames(xyz, normals, state.uv[state.uv_faces])
+        if (not np.isfinite(tangents).all() or not np.isfinite(signs).all()
+                or np.any(np.linalg.norm(tangents, axis=-1) < 0.99)
+                or not np.all(np.isin(signs, [-1., 1.]))):
+            raise ValueError("FRAME_INVALID: invalid imported MikkTSpace frame")
+        return normals, tangents, signs
     normal = _unit(np.cross(p, q))
     tangent = (p * b[:, 1, None] - q * a[:, 1, None]) / det[:, None]
     tangent = _unit(tangent - np.sum(tangent * normal, axis=1)[:, None] * normal)
@@ -210,8 +241,9 @@ def mikktspace_frames(
     lib.genTangSpaceDefault.restype = ctypes.c_int
     if lib.genTangSpaceDefault(ctypes.byref(context)) != 1:
         raise ValueError("MIKKTSPACE_INITIALIZATION_FAILED")
-    if np.any(np.linalg.norm(tangents, axis=2) < 0.9) or np.any(np.abs(signs) != 1):
-        raise ValueError("MIKKTSPACE_INVALID_FRAMES")
+    invalid = (np.linalg.norm(tangents, axis=2) < 0.9) | (np.abs(signs) != 1)
+    if np.any(invalid):
+        raise MikkFrameError(np.argwhere(invalid), tangents[invalid], signs[invalid])
     return tangents, signs, hashes
 
 
@@ -318,6 +350,33 @@ def _glb_document(path: Path) -> dict[str, object]:
     return document
 
 
+def _explicit_source_attribute(path: Path, document: dict[str, object], name: str) -> FloatArray | None:
+    """Read a core float vertex attribute without importer tangent regeneration."""
+    meshes = cast(list[dict[str, object]], document["meshes"])
+    if len(meshes) != 1:
+        raise ValueError("UNSUPPORTED_REFERENCE: exactly one source mesh required")
+    primitives = cast(list[dict[str, object]], meshes[0]["primitives"])
+    if len(primitives) != 1:
+        raise ValueError("UNSUPPORTED_REFERENCE: exactly one source primitive required")
+    attributes = cast(dict[str, int], primitives[0]["attributes"])
+    if name not in attributes:
+        return None
+    accessor = cast(list[dict[str, object]], document["accessors"])[attributes[name]]
+    width = {"VEC3": 3, "VEC4": 4}.get(str(accessor["type"]))
+    if width is None or accessor.get("componentType") != 5126 or "sparse" in accessor:
+        raise ValueError("UNSUPPORTED_REFERENCE: invalid explicit " + name)
+    view = cast(list[dict[str, object]], document["bufferViews"])[cast(int, accessor["bufferView"])]
+    raw = path.read_bytes()
+    json_size = struct.unpack_from("<I", raw, 12)[0]
+    binary = raw[20 + json_size + 8:]
+    offset = cast(int, view.get("byteOffset", 0)) + cast(int, accessor.get("byteOffset", 0))
+    value = np.ndarray((cast(int, accessor["count"]), width), dtype="<f4", buffer=binary,
+        offset=offset, strides=(cast(int, view.get("byteStride", 4*width)), 4))
+    if not np.isfinite(value).all():
+        raise ValueError("NONFINITE_SOURCE_ATTRIBUTE:" + name)
+    return np.asarray(value, dtype=np.float64).copy()
+
+
 def load_material_reference(path: Path, *, mikk_library: Path | None = None) -> MaterialReference:
     """Load a single fixed PBR source, preserving real smooth source normals."""
     scene = trimesh.load_scene(path, process=False)
@@ -360,9 +419,32 @@ def load_material_reference(path: Path, *, mikk_library: Path | None = None) -> 
     corner_uv = np.asarray(uv, dtype=float)[faces]
     vertex_normals = _unit(np.asarray(mesh.vertex_normals, dtype=float) @ np.linalg.inv(linear_transform))
     normals = vertex_normals[faces]
-    uv_gltf = corner_uv.copy()
-    uv_gltf[..., 1] = 1 - uv_gltf[..., 1]
-    tangents, signs, hashes = mikktspace_frames(vertices[faces], normals, uv_gltf, mikk_library)
+    extras = document.get("extras", {})
+    reseam = extras.get("reseam", {}) if isinstance(extras, dict) else {}
+    if not isinstance(reseam, dict):
+        raise TypeError("INVALID_REFERENCE_FRAME_METADATA")
+    legacy_top_v = (reseam.get("tangent_basis") == "gltf_top_v_legacy"
+                    or (reseam.get("tangent_contract") == "matches frame_arrays exactly"
+                        and reseam.get("tangent_basis") != "blender_bottom_v"))
+    frame_uv = corner_uv.copy()
+    if legacy_top_v:
+        frame_uv[..., 1] = 1 - frame_uv[..., 1]
+    tangents, signs, hashes = mikktspace_frames(vertices[faces], normals, frame_uv, mikk_library)
+    declared_tangents = _explicit_source_attribute(path, document, "TANGENT")
+    source_frame = ("official_MikkTSpace_glTF_top_V_legacy" if legacy_top_v
+                    else "official_MikkTSpace_Blender_bottom_V")
+    if declared_tangents is not None:
+        positions = _explicit_source_attribute(path, document, "POSITION")
+        if (positions is None or positions.shape != mesh.vertices.shape
+                or not np.allclose(positions, mesh.vertices) or len(declared_tangents) != len(vertices)):
+            raise ValueError("SOURCE_VERTEX_ORDER_CHANGED")
+        tangents = _unit(declared_tangents[:, :3] @ linear_transform.T)[faces]
+        signs = declared_tangents[faces, 3]
+        if np.linalg.det(linear_transform) < 0:
+            signs = -signs
+        if not np.all(np.isin(signs, [-1., 1.])):
+            raise ValueError("INVALID_DECLARED_SOURCE_TANGENT_SIGN")
+        source_frame = "explicit_source_TANGENT_preserved"
     factor = np.ones(4)
     if material.baseColorFactor is not None:
         raw_factor = np.asarray(material.baseColorFactor)
@@ -379,7 +461,7 @@ def load_material_reference(path: Path, *, mikk_library: Path | None = None) -> 
         (np.asarray(material.occlusionTexture.convert("RGBA"), dtype=np.uint8)
          if material.occlusionTexture is not None else None),
         occlusion_strength,
-        {"source": str(path), "source_frame": "official_MikkTSpace_glTF_top_V",
+        {"source": str(path), "source_frame": source_frame,
          "source_mikk": hashes,
          "source_sampling": "bilinear_repeat_mip0; RGB decoded sRGB before filter"},
         corner_uv,
@@ -432,9 +514,9 @@ def atlas_from_arrays(
     normal = np.concatenate((0.5 + 0.5 * _unit(normal_tangent), alpha), axis=-1)
     orm_rgba = np.concatenate((orm, alpha), axis=-1)
     record = dict(metadata or {})
+    record.setdefault("target_frame", "caller-supplied tangent frame; see bound target/export metadata")
     record.update({"codec": "RGBA8", "channels": ["BaseColor_sRGB", "Normal_linear", "ORM_linear"],
                    "mip_policy": "complete floor-halved BOX; normal renormalized at each mip",
-                   "target_frame": "flat NORMAL and glTF UV-derivative TANGENT explicitly exported",
                    "sampling": "CPU bilinear/clamp; V=0 internal bottom; independent requested integer LOD",
                    "gpu_validated": False, "artist_reviewed": False})
     atlas = MaterialAtlas(build_rgba8_mips(encode_rgba8(base_color_linear)),
@@ -458,7 +540,7 @@ def save_material(atlas: MaterialAtlas, output: Path) -> dict[str, int]:
 
 
 def export_material_glb(state: MeshState, atlas: MaterialAtlas, path: Path) -> dict[str, object]:
-    """Export the exact flat NORMAL/TANGENT frame and all actual PBR channels.
+    """Export the exact selected NORMAL/TANGENT frame and all actual PBR channels.
 
     glTF core embeds base PNGs, not author-provided mip chains. This preview
     deliberately has a LOD0 sampler; save_material exports the separately
@@ -526,6 +608,8 @@ def export_material_glb(state: MeshState, atlas: MaterialAtlas, path: Path) -> d
         "accessors": accessors, "bufferViews": views, "buffers": [{"byteLength": len(buffers)}],
         "extras": {"reseam": {"original_faces": len(state.mesh.faces), "vertex_policy": "explicit_per_corner",
                                "tangent_contract": "matches frame_arrays exactly",
+                               "normal_policy": ("flat" if state.corner_normals is None else "imported"),
+                               "tangent_basis": ("gltf_top_v_legacy" if state.corner_normals is None else "blender_bottom_v"),
                                "sampler": "LOD0 preview; validated complete mip PNGs are separate sidecars",
                                "gpu_validated": False, "artist_reviewed": False}},
     }
@@ -613,6 +697,9 @@ def bake_material(
                                "padding_pixels": padding_pixels, "reference_diagonal": reference.diagonal,
                                "source_frame": reference.metadata.get("source_frame", "explicit_test_frames"),
                                "source_mikk": reference.metadata.get("source_mikk", {}),
+                               "target_frame": ("flat NORMAL and glTF UV-derivative TANGENT explicitly exported"
+                                   if state.corner_normals is None else
+                                   "imported corner NORMAL and native Blender bottom-V MikkTSpace TANGENT explicitly exported"),
                                "support_state_sha256": _support_fingerprint(state),
                                "support_resolution": resolution,
                                "support_projection_fraction": max_projection_fraction,

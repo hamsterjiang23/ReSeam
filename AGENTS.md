@@ -1,5 +1,9 @@
 # ReSeam 项目约束
 
+最新用户要求复刻历史“40岛”龙方法，按[复刻记录](docs/results/dragon-legacy-method-replay.md)在当前低模另建半边镜像变体。历史为 80 连通岛／40 图块的 BaseColor 成品；当前完整 PBR 另用自身材质、保留逐角法线与镜像切线符号，显式 `same_surface_face_corner` 采样。原高低模投射失败不因换来源而改写；共享／无共享必须绑定同一新几何，同尺寸图块减半不代表纹理字节减半。`[verified: 用户最新要求；round09_legacy_method/mirror_pbr_clean/mirror_variant.json；opinion: 执行边界]`
+
+新增只读 [UV/法线烘焙预检](docs/uv-normal-baking-workflow.md)：`material.preflight` 区分导入逐角法线与当前 flat 目标法线、UV 拆点与像素间距、最近点与真实有限射线。预检状态不改变现有目视/数值验收；Cage、部件过滤、采样配置与失败身份均保留。[验证报告](docs/results/normal-baking-preflight.md)记录构造模型和真实蓝龙导入拒绝。`[verified: preflight.py preflight；preflight_projection_worker.py run；opinion: 验收边界]`
+
 最新美术工具授权见 [artist-tools](docs/artist-tools.md)：七类能力全部补充，新增流程以实际前后图的目视判断为主，`acceptance_policy=visual` 的数值检查仅作参考。保留不能正常计算/显示/导出的错误和显式保护，记录 Agent/人工观察者、实际看过的视角；禁止把目视保留写成旧严格数值通过。新操作沿用 JSON CLI 与不可变快照，旧实验不回写。`[verified: 用户“全部补充工具……只需要肉眼判断没有什么差别”；opinion: 执行规则]`
 
 最新简化流程以 [OptCuts→Agent→UV整理](docs/results/optcuts-agent-uv.md)为准：由OptCuts给初始切缝，Agent看图决定保留、删减或补缝，合并完整相邻岛后局部重展开，再排布/烘焙验收；沿用现有入口，不再为策略新增工具。80岛镜像龙在固定原边身份下有80个连通部件，左右堆叠只减少图块、不冒充真实合岛；Tripo的19→18岛是删除实际共同边界的局部冒烟。`[verified: 用户最新要求；round01/dragon/initial/component_audit.json；round01/tripo/state.json chosen_merge；opinion: 工作流]`

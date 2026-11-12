@@ -28,9 +28,12 @@ class MeshState:
     uv: FloatArray
     uv_faces: IntArray
     version: int = 0
+    # Optional explicit shading contract; None preserves the historical flat frame.
+    corner_normals: FloatArray | None = None
 
     def copy(self) -> "MeshState":
-        return MeshState(self.mesh, self.seams, self.uv.copy(), self.uv_faces.copy(), self.version)
+        return MeshState(self.mesh, self.seams, self.uv.copy(), self.uv_faces.copy(), self.version,
+                         None if self.corner_normals is None else self.corner_normals.copy())
 
 
 @dataclass

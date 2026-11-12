@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "E:\ReSem\src\reseam\agent_tools\worker.py", line 16, in execute
+    result = handler(name)(request, output, deadline)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ReSem\src\reseam\agent_tools\assets.py", line 245, in import_asset
+    mesh = make_mesh(vertices, faces)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ReSem\src\reseam\mesh.py", line 51, in make_mesh
+    raise ValueError(f"Nonmanifold edge {edge}")
+ValueError: Nonmanifold edge (305, 312)

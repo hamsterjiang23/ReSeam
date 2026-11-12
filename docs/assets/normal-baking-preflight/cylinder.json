@@ -1,0 +1,2151 @@
+{
+  "schema_version": 1,
+  "state_hash": "3b85d41a9276bd5f7fe016a174c4a4a291eaaab3984d88d4261b88ca69150cb3",
+  "snapshot": "E:\\ReSem\\artifacts\\normal-preflight\\examples05\\cylinder",
+  "config": {
+    "snapshot": "E:\\ReSem\\artifacts\\normal-preflight\\examples05\\cylinder",
+    "state_hash": "3b85d41a9276bd5f7fe016a174c4a4a291eaaab3984d88d4261b88ca69150cb3",
+    "high_snapshot": "E:\\ReSem\\artifacts\\normal-preflight\\examples05\\cylinder",
+    "blender": "E:\\Blender 4.5.11\\blender.exe",
+    "bake_config": {
+      "resolution": 128,
+      "gap_pixels": 2.0,
+      "border_pixels": 2.0,
+      "padding_pixels": 1.0,
+      "mip_levels": [
+        0,
+        1,
+        2
+      ]
+    }
+  },
+  "config_hash": "22f9fb9ddcecb44af791f8baf6a18ef953cc0d0116d479f9df2cbb06615cb30b",
+  "complete": true,
+  "preflight_status": "fail",
+  "checks": {
+    "geometry": {
+      "status": "pass",
+      "errors": [],
+      "scope": "snapshot structural topology and finite coordinates"
+    },
+    "normal_uv": {
+      "status": "fail",
+      "source": {
+        "status": "pass",
+        "checked_edges": 96,
+        "missing_uv_seam_edges": [],
+        "evidence": {
+          "source_snapshot": "E:\\ReSem\\artifacts\\normal-preflight\\examples05\\cylinder\\snapshot.json",
+          "source_state_hash": "3b85d41a9276bd5f7fe016a174c4a4a291eaaab3984d88d4261b88ca69150cb3",
+          "custom_normal_faces": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "imported_sharp_vertex_edges": [],
+          "lineage": [],
+          "normal_source": "Blender imported custom split normals where has_custom_normals=true"
+        }
+      },
+      "target": {
+        "status": "fail",
+        "missing_uv_seam_edges": [
+          6,
+          10,
+          14,
+          18,
+          22,
+          26,
+          30,
+          34,
+          38,
+          42,
+          46,
+          50,
+          54,
+          58,
+          62
+        ],
+        "error": null,
+        "contract": "budget_material.frame_arrays explicit flat target; not arbitrary engine normals"
+      },
+      "split_coincident_edges": [],
+      "edges": [
+        {
+          "edge_id": 0,
+          "vertices": [
+            0,
+            1
+          ],
+          "faces": [
+            1,
+            2
+          ],
+          "uv_split": true,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 90.0,
+          "target_angle_degrees": 90.0,
+          "geometric_dihedral_degrees": 90.0,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": false
+        },
+        {
+          "edge_id": 1,
+          "vertices": [
+            0,
+            15
+          ],
+          "faces": [
+            61,
+            62
+          ],
+          "uv_split": true,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 90.0,
+          "target_angle_degrees": 90.0,
+          "geometric_dihedral_degrees": 90.0,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": false
+        },
+        {
+          "edge_id": 2,
+          "vertices": [
+            0,
+            16
+          ],
+          "faces": [
+            0,
+            61
+          ],
+          "uv_split": true,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 0.0,
+          "target_angle_degrees": 22.500000000000018,
+          "geometric_dihedral_degrees": 22.500000000000018,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": false
+        },
+        {
+          "edge_id": 3,
+          "vertices": [
+            0,
+            17
+          ],
+          "faces": [
+            0,
+            1
+          ],
+          "uv_split": false,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 0.0,
+          "target_angle_degrees": 0.0,
+          "geometric_dihedral_degrees": 0.0,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": true
+        },
+        {
+          "edge_id": 4,
+          "vertices": [
+            0,
+            32
+          ],
+          "faces": [
+            2,
+            62
+          ],
+          "uv_split": false,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 0.0,
+          "target_angle_degrees": 0.0,
+          "geometric_dihedral_degrees": 0.0,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": true
+        },
+        {
+          "edge_id": 5,
+          "vertices": [
+            1,
+            2
+          ],
+          "faces": [
+            5,
+            6
+          ],
+          "uv_split": true,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 90.0,
+          "target_angle_degrees": 90.0,
+          "geometric_dihedral_degrees": 90.0,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": false
+        },
+        {
+          "edge_id": 6,
+          "vertices": [
+            1,
+            17
+          ],
+          "faces": [
+            1,
+            4
+          ],
+          "uv_split": false,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 0.0,
+          "target_angle_degrees": 22.500000000000004,
+          "geometric_dihedral_degrees": 22.500000000000004,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": false
+        },
+        {
+          "edge_id": 7,
+          "vertices": [
+            1,
+            18
+          ],
+          "faces": [
+            4,
+            5
+          ],
+          "uv_split": false,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 0.0,
+          "target_angle_degrees": 1.2074182697257333e-06,
+          "geometric_dihedral_degrees": 1.2074182697257333e-06,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": true
+        },
+        {
+          "edge_id": 8,
+          "vertices": [
+            1,
+            32
+          ],
+          "faces": [
+            2,
+            6
+          ],
+          "uv_split": false,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 0.0,
+          "target_angle_degrees": 0.0,
+          "geometric_dihedral_degrees": 0.0,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": true
+        },
+        {
+          "edge_id": 9,
+          "vertices": [
+            2,
+            3
+          ],
+          "faces": [
+            9,
+            10
+          ],
+          "uv_split": true,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 90.0,
+          "target_angle_degrees": 90.0,
+          "geometric_dihedral_degrees": 90.0,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": false
+        },
+        {
+          "edge_id": 10,
+          "vertices": [
+            2,
+            18
+          ],
+          "faces": [
+            5,
+            8
+          ],
+          "uv_split": false,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 0.0,
+          "target_angle_degrees": 22.50000000000004,
+          "geometric_dihedral_degrees": 22.50000000000004,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": false
+        },
+        {
+          "edge_id": 11,
+          "vertices": [
+            2,
+            19
+          ],
+          "faces": [
+            8,
+            9
+          ],
+          "uv_split": false,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 0.0,
+          "target_angle_degrees": 1.2074182697257333e-06,
+          "geometric_dihedral_degrees": 1.2074182697257333e-06,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": true
+        },
+        {
+          "edge_id": 12,
+          "vertices": [
+            2,
+            32
+          ],
+          "faces": [
+            6,
+            10
+          ],
+          "uv_split": false,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 0.0,
+          "target_angle_degrees": 0.0,
+          "geometric_dihedral_degrees": 0.0,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": true
+        },
+        {
+          "edge_id": 13,
+          "vertices": [
+            3,
+            4
+          ],
+          "faces": [
+            13,
+            14
+          ],
+          "uv_split": true,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 90.0,
+          "target_angle_degrees": 90.0,
+          "geometric_dihedral_degrees": 90.0,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": false
+        },
+        {
+          "edge_id": 14,
+          "vertices": [
+            3,
+            19
+          ],
+          "faces": [
+            9,
+            12
+          ],
+          "uv_split": false,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 0.0,
+          "target_angle_degrees": 22.500000000000018,
+          "geometric_dihedral_degrees": 22.500000000000018,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": false
+        },
+        {
+          "edge_id": 15,
+          "vertices": [
+            3,
+            20
+          ],
+          "faces": [
+            12,
+            13
+          ],
+          "uv_split": false,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 0.0,
+          "target_angle_degrees": 0.0,
+          "geometric_dihedral_degrees": 0.0,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": true
+        },
+        {
+          "edge_id": 16,
+          "vertices": [
+            3,
+            32
+          ],
+          "faces": [
+            10,
+            14
+          ],
+          "uv_split": false,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 0.0,
+          "target_angle_degrees": 0.0,
+          "geometric_dihedral_degrees": 0.0,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": true
+        },
+        {
+          "edge_id": 17,
+          "vertices": [
+            4,
+            5
+          ],
+          "faces": [
+            17,
+            18
+          ],
+          "uv_split": true,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 90.0,
+          "target_angle_degrees": 90.0,
+          "geometric_dihedral_degrees": 90.0,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": false
+        },
+        {
+          "edge_id": 18,
+          "vertices": [
+            4,
+            20
+          ],
+          "faces": [
+            13,
+            16
+          ],
+          "uv_split": false,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 0.0,
+          "target_angle_degrees": 22.500000000000004,
+          "geometric_dihedral_degrees": 22.500000000000004,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": false
+        },
+        {
+          "edge_id": 19,
+          "vertices": [
+            4,
+            21
+          ],
+          "faces": [
+            16,
+            17
+          ],
+          "uv_split": false,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 0.0,
+          "target_angle_degrees": 0.0,
+          "geometric_dihedral_degrees": 0.0,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": true
+        },
+        {
+          "edge_id": 20,
+          "vertices": [
+            4,
+            32
+          ],
+          "faces": [
+            14,
+            18
+          ],
+          "uv_split": false,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 0.0,
+          "target_angle_degrees": 0.0,
+          "geometric_dihedral_degrees": 0.0,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": true
+        },
+        {
+          "edge_id": 21,
+          "vertices": [
+            5,
+            6
+          ],
+          "faces": [
+            21,
+            22
+          ],
+          "uv_split": true,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 90.0,
+          "target_angle_degrees": 90.0,
+          "geometric_dihedral_degrees": 90.0,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": false
+        },
+        {
+          "edge_id": 22,
+          "vertices": [
+            5,
+            21
+          ],
+          "faces": [
+            17,
+            20
+          ],
+          "uv_split": false,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 0.0,
+          "target_angle_degrees": 22.500000000000018,
+          "geometric_dihedral_degrees": 22.500000000000018,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": false
+        },
+        {
+          "edge_id": 23,
+          "vertices": [
+            5,
+            22
+          ],
+          "faces": [
+            20,
+            21
+          ],
+          "uv_split": false,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 0.0,
+          "target_angle_degrees": 1.2074182697257333e-06,
+          "geometric_dihedral_degrees": 1.2074182697257333e-06,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": true
+        },
+        {
+          "edge_id": 24,
+          "vertices": [
+            5,
+            32
+          ],
+          "faces": [
+            18,
+            22
+          ],
+          "uv_split": false,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 0.0,
+          "target_angle_degrees": 0.0,
+          "geometric_dihedral_degrees": 0.0,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": true
+        },
+        {
+          "edge_id": 25,
+          "vertices": [
+            6,
+            7
+          ],
+          "faces": [
+            25,
+            26
+          ],
+          "uv_split": true,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 90.0,
+          "target_angle_degrees": 90.0,
+          "geometric_dihedral_degrees": 90.0,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": false
+        },
+        {
+          "edge_id": 26,
+          "vertices": [
+            6,
+            22
+          ],
+          "faces": [
+            21,
+            24
+          ],
+          "uv_split": false,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 0.0,
+          "target_angle_degrees": 22.500000000000018,
+          "geometric_dihedral_degrees": 22.500000000000018,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": false
+        },
+        {
+          "edge_id": 27,
+          "vertices": [
+            6,
+            23
+          ],
+          "faces": [
+            24,
+            25
+          ],
+          "uv_split": false,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 0.0,
+          "target_angle_degrees": 8.537736462515939e-07,
+          "geometric_dihedral_degrees": 8.537736462515939e-07,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": true
+        },
+        {
+          "edge_id": 28,
+          "vertices": [
+            6,
+            32
+          ],
+          "faces": [
+            22,
+            26
+          ],
+          "uv_split": false,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 0.0,
+          "target_angle_degrees": 0.0,
+          "geometric_dihedral_degrees": 0.0,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": true
+        },
+        {
+          "edge_id": 29,
+          "vertices": [
+            7,
+            8
+          ],
+          "faces": [
+            29,
+            30
+          ],
+          "uv_split": true,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 90.0,
+          "target_angle_degrees": 90.0,
+          "geometric_dihedral_degrees": 90.0,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": false
+        },
+        {
+          "edge_id": 30,
+          "vertices": [
+            7,
+            23
+          ],
+          "faces": [
+            25,
+            28
+          ],
+          "uv_split": false,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 0.0,
+          "target_angle_degrees": 22.500000000000018,
+          "geometric_dihedral_degrees": 22.500000000000018,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": false
+        },
+        {
+          "edge_id": 31,
+          "vertices": [
+            7,
+            24
+          ],
+          "faces": [
+            28,
+            29
+          ],
+          "uv_split": false,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 0.0,
+          "target_angle_degrees": 0.0,
+          "geometric_dihedral_degrees": 0.0,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": true
+        },
+        {
+          "edge_id": 32,
+          "vertices": [
+            7,
+            32
+          ],
+          "faces": [
+            26,
+            30
+          ],
+          "uv_split": false,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 0.0,
+          "target_angle_degrees": 0.0,
+          "geometric_dihedral_degrees": 0.0,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": true
+        },
+        {
+          "edge_id": 33,
+          "vertices": [
+            8,
+            9
+          ],
+          "faces": [
+            33,
+            34
+          ],
+          "uv_split": true,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 90.0,
+          "target_angle_degrees": 90.0,
+          "geometric_dihedral_degrees": 90.0,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": false
+        },
+        {
+          "edge_id": 34,
+          "vertices": [
+            8,
+            24
+          ],
+          "faces": [
+            29,
+            32
+          ],
+          "uv_split": false,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 0.0,
+          "target_angle_degrees": 22.499999999999986,
+          "geometric_dihedral_degrees": 22.499999999999986,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": false
+        },
+        {
+          "edge_id": 35,
+          "vertices": [
+            8,
+            25
+          ],
+          "faces": [
+            32,
+            33
+          ],
+          "uv_split": false,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 0.0,
+          "target_angle_degrees": 1.2074182697257333e-06,
+          "geometric_dihedral_degrees": 1.2074182697257333e-06,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": true
+        },
+        {
+          "edge_id": 36,
+          "vertices": [
+            8,
+            32
+          ],
+          "faces": [
+            30,
+            34
+          ],
+          "uv_split": false,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 0.0,
+          "target_angle_degrees": 0.0,
+          "geometric_dihedral_degrees": 0.0,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": true
+        },
+        {
+          "edge_id": 37,
+          "vertices": [
+            9,
+            10
+          ],
+          "faces": [
+            37,
+            38
+          ],
+          "uv_split": true,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 90.0,
+          "target_angle_degrees": 90.0,
+          "geometric_dihedral_degrees": 90.0,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": false
+        },
+        {
+          "edge_id": 38,
+          "vertices": [
+            9,
+            25
+          ],
+          "faces": [
+            33,
+            36
+          ],
+          "uv_split": false,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 0.0,
+          "target_angle_degrees": 22.500000000000053,
+          "geometric_dihedral_degrees": 22.500000000000053,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": false
+        },
+        {
+          "edge_id": 39,
+          "vertices": [
+            9,
+            26
+          ],
+          "faces": [
+            36,
+            37
+          ],
+          "uv_split": false,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 0.0,
+          "target_angle_degrees": 1.2074182697257333e-06,
+          "geometric_dihedral_degrees": 1.2074182697257333e-06,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": true
+        },
+        {
+          "edge_id": 40,
+          "vertices": [
+            9,
+            32
+          ],
+          "faces": [
+            34,
+            38
+          ],
+          "uv_split": false,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 0.0,
+          "target_angle_degrees": 0.0,
+          "geometric_dihedral_degrees": 0.0,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": true
+        },
+        {
+          "edge_id": 41,
+          "vertices": [
+            10,
+            11
+          ],
+          "faces": [
+            41,
+            42
+          ],
+          "uv_split": true,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 90.0,
+          "target_angle_degrees": 90.0,
+          "geometric_dihedral_degrees": 90.0,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": false
+        },
+        {
+          "edge_id": 42,
+          "vertices": [
+            10,
+            26
+          ],
+          "faces": [
+            37,
+            40
+          ],
+          "uv_split": false,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 0.0,
+          "target_angle_degrees": 22.500000000000004,
+          "geometric_dihedral_degrees": 22.500000000000004,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": false
+        },
+        {
+          "edge_id": 43,
+          "vertices": [
+            10,
+            27
+          ],
+          "faces": [
+            40,
+            41
+          ],
+          "uv_split": false,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 0.0,
+          "target_angle_degrees": 0.0,
+          "geometric_dihedral_degrees": 0.0,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": true
+        },
+        {
+          "edge_id": 44,
+          "vertices": [
+            10,
+            32
+          ],
+          "faces": [
+            38,
+            42
+          ],
+          "uv_split": false,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 0.0,
+          "target_angle_degrees": 0.0,
+          "geometric_dihedral_degrees": 0.0,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": true
+        },
+        {
+          "edge_id": 45,
+          "vertices": [
+            11,
+            12
+          ],
+          "faces": [
+            45,
+            46
+          ],
+          "uv_split": true,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 90.0,
+          "target_angle_degrees": 90.0,
+          "geometric_dihedral_degrees": 90.0,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": false
+        },
+        {
+          "edge_id": 46,
+          "vertices": [
+            11,
+            27
+          ],
+          "faces": [
+            41,
+            44
+          ],
+          "uv_split": false,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 0.0,
+          "target_angle_degrees": 22.500000000000004,
+          "geometric_dihedral_degrees": 22.500000000000004,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": false
+        },
+        {
+          "edge_id": 47,
+          "vertices": [
+            11,
+            28
+          ],
+          "faces": [
+            44,
+            45
+          ],
+          "uv_split": false,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 0.0,
+          "target_angle_degrees": 0.0,
+          "geometric_dihedral_degrees": 0.0,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": true
+        },
+        {
+          "edge_id": 48,
+          "vertices": [
+            11,
+            32
+          ],
+          "faces": [
+            42,
+            46
+          ],
+          "uv_split": false,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 0.0,
+          "target_angle_degrees": 0.0,
+          "geometric_dihedral_degrees": 0.0,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": true
+        },
+        {
+          "edge_id": 49,
+          "vertices": [
+            12,
+            13
+          ],
+          "faces": [
+            49,
+            50
+          ],
+          "uv_split": true,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 90.0,
+          "target_angle_degrees": 90.0,
+          "geometric_dihedral_degrees": 90.0,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": false
+        },
+        {
+          "edge_id": 50,
+          "vertices": [
+            12,
+            28
+          ],
+          "faces": [
+            45,
+            48
+          ],
+          "uv_split": false,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 0.0,
+          "target_angle_degrees": 22.50000000000004,
+          "geometric_dihedral_degrees": 22.50000000000004,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": false
+        },
+        {
+          "edge_id": 51,
+          "vertices": [
+            12,
+            29
+          ],
+          "faces": [
+            48,
+            49
+          ],
+          "uv_split": false,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 0.0,
+          "target_angle_degrees": 0.0,
+          "geometric_dihedral_degrees": 0.0,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": true
+        },
+        {
+          "edge_id": 52,
+          "vertices": [
+            12,
+            32
+          ],
+          "faces": [
+            46,
+            50
+          ],
+          "uv_split": false,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 0.0,
+          "target_angle_degrees": 0.0,
+          "geometric_dihedral_degrees": 0.0,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": true
+        },
+        {
+          "edge_id": 53,
+          "vertices": [
+            13,
+            14
+          ],
+          "faces": [
+            53,
+            54
+          ],
+          "uv_split": true,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 90.0,
+          "target_angle_degrees": 90.0,
+          "geometric_dihedral_degrees": 90.0,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": false
+        },
+        {
+          "edge_id": 54,
+          "vertices": [
+            13,
+            29
+          ],
+          "faces": [
+            49,
+            52
+          ],
+          "uv_split": false,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 0.0,
+          "target_angle_degrees": 22.500000000000018,
+          "geometric_dihedral_degrees": 22.500000000000018,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": false
+        },
+        {
+          "edge_id": 55,
+          "vertices": [
+            13,
+            30
+          ],
+          "faces": [
+            52,
+            53
+          ],
+          "uv_split": false,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 0.0,
+          "target_angle_degrees": 8.537736462515939e-07,
+          "geometric_dihedral_degrees": 8.537736462515939e-07,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": true
+        },
+        {
+          "edge_id": 56,
+          "vertices": [
+            13,
+            32
+          ],
+          "faces": [
+            50,
+            54
+          ],
+          "uv_split": false,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 0.0,
+          "target_angle_degrees": 0.0,
+          "geometric_dihedral_degrees": 0.0,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": true
+        },
+        {
+          "edge_id": 57,
+          "vertices": [
+            14,
+            15
+          ],
+          "faces": [
+            57,
+            58
+          ],
+          "uv_split": true,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 90.0,
+          "target_angle_degrees": 90.0,
+          "geometric_dihedral_degrees": 90.0,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": false
+        },
+        {
+          "edge_id": 58,
+          "vertices": [
+            14,
+            30
+          ],
+          "faces": [
+            53,
+            56
+          ],
+          "uv_split": false,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 0.0,
+          "target_angle_degrees": 22.49999999999997,
+          "geometric_dihedral_degrees": 22.49999999999997,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": false
+        },
+        {
+          "edge_id": 59,
+          "vertices": [
+            14,
+            31
+          ],
+          "faces": [
+            56,
+            57
+          ],
+          "uv_split": false,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 0.0,
+          "target_angle_degrees": 0.0,
+          "geometric_dihedral_degrees": 0.0,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": true
+        },
+        {
+          "edge_id": 60,
+          "vertices": [
+            14,
+            32
+          ],
+          "faces": [
+            54,
+            58
+          ],
+          "uv_split": false,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 0.0,
+          "target_angle_degrees": 0.0,
+          "geometric_dihedral_degrees": 0.0,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": true
+        },
+        {
+          "edge_id": 61,
+          "vertices": [
+            15,
+            16
+          ],
+          "faces": [
+            60,
+            61
+          ],
+          "uv_split": false,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 0.0,
+          "target_angle_degrees": 8.537736462515939e-07,
+          "geometric_dihedral_degrees": 8.537736462515939e-07,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": true
+        },
+        {
+          "edge_id": 62,
+          "vertices": [
+            15,
+            31
+          ],
+          "faces": [
+            57,
+            60
+          ],
+          "uv_split": false,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 0.0,
+          "target_angle_degrees": 22.50000000000004,
+          "geometric_dihedral_degrees": 22.50000000000004,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": false
+        },
+        {
+          "edge_id": 63,
+          "vertices": [
+            15,
+            32
+          ],
+          "faces": [
+            58,
+            62
+          ],
+          "uv_split": false,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 0.0,
+          "target_angle_degrees": 0.0,
+          "geometric_dihedral_degrees": 0.0,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": true
+        },
+        {
+          "edge_id": 64,
+          "vertices": [
+            16,
+            17
+          ],
+          "faces": [
+            0,
+            3
+          ],
+          "uv_split": true,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 90.0,
+          "target_angle_degrees": 90.0,
+          "geometric_dihedral_degrees": 90.0,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": false
+        },
+        {
+          "edge_id": 65,
+          "vertices": [
+            16,
+            31
+          ],
+          "faces": [
+            60,
+            63
+          ],
+          "uv_split": true,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 90.0,
+          "target_angle_degrees": 90.0,
+          "geometric_dihedral_degrees": 90.0,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": false
+        },
+        {
+          "edge_id": 66,
+          "vertices": [
+            16,
+            33
+          ],
+          "faces": [
+            3,
+            63
+          ],
+          "uv_split": false,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 0.0,
+          "target_angle_degrees": 0.0,
+          "geometric_dihedral_degrees": 0.0,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": true
+        },
+        {
+          "edge_id": 67,
+          "vertices": [
+            17,
+            18
+          ],
+          "faces": [
+            4,
+            7
+          ],
+          "uv_split": true,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 90.0,
+          "target_angle_degrees": 90.0,
+          "geometric_dihedral_degrees": 90.0,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": false
+        },
+        {
+          "edge_id": 68,
+          "vertices": [
+            17,
+            33
+          ],
+          "faces": [
+            3,
+            7
+          ],
+          "uv_split": false,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 0.0,
+          "target_angle_degrees": 0.0,
+          "geometric_dihedral_degrees": 0.0,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": true
+        },
+        {
+          "edge_id": 69,
+          "vertices": [
+            18,
+            19
+          ],
+          "faces": [
+            8,
+            11
+          ],
+          "uv_split": true,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 90.0,
+          "target_angle_degrees": 90.0,
+          "geometric_dihedral_degrees": 90.0,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": false
+        },
+        {
+          "edge_id": 70,
+          "vertices": [
+            18,
+            33
+          ],
+          "faces": [
+            7,
+            11
+          ],
+          "uv_split": false,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 0.0,
+          "target_angle_degrees": 0.0,
+          "geometric_dihedral_degrees": 0.0,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": true
+        },
+        {
+          "edge_id": 71,
+          "vertices": [
+            19,
+            20
+          ],
+          "faces": [
+            12,
+            15
+          ],
+          "uv_split": true,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 90.0,
+          "target_angle_degrees": 90.0,
+          "geometric_dihedral_degrees": 90.0,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": false
+        },
+        {
+          "edge_id": 72,
+          "vertices": [
+            19,
+            33
+          ],
+          "faces": [
+            11,
+            15
+          ],
+          "uv_split": false,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 0.0,
+          "target_angle_degrees": 0.0,
+          "geometric_dihedral_degrees": 0.0,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": true
+        },
+        {
+          "edge_id": 73,
+          "vertices": [
+            20,
+            21
+          ],
+          "faces": [
+            16,
+            19
+          ],
+          "uv_split": true,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 90.0,
+          "target_angle_degrees": 90.0,
+          "geometric_dihedral_degrees": 90.0,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": false
+        },
+        {
+          "edge_id": 74,
+          "vertices": [
+            20,
+            33
+          ],
+          "faces": [
+            15,
+            19
+          ],
+          "uv_split": false,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 0.0,
+          "target_angle_degrees": 0.0,
+          "geometric_dihedral_degrees": 0.0,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": true
+        },
+        {
+          "edge_id": 75,
+          "vertices": [
+            21,
+            22
+          ],
+          "faces": [
+            20,
+            23
+          ],
+          "uv_split": true,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 90.0,
+          "target_angle_degrees": 90.0,
+          "geometric_dihedral_degrees": 90.0,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": false
+        },
+        {
+          "edge_id": 76,
+          "vertices": [
+            21,
+            33
+          ],
+          "faces": [
+            19,
+            23
+          ],
+          "uv_split": false,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 0.0,
+          "target_angle_degrees": 0.0,
+          "geometric_dihedral_degrees": 0.0,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": true
+        },
+        {
+          "edge_id": 77,
+          "vertices": [
+            22,
+            23
+          ],
+          "faces": [
+            24,
+            27
+          ],
+          "uv_split": true,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 90.0,
+          "target_angle_degrees": 90.0,
+          "geometric_dihedral_degrees": 90.0,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": false
+        },
+        {
+          "edge_id": 78,
+          "vertices": [
+            22,
+            33
+          ],
+          "faces": [
+            23,
+            27
+          ],
+          "uv_split": false,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 0.0,
+          "target_angle_degrees": 0.0,
+          "geometric_dihedral_degrees": 0.0,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": true
+        },
+        {
+          "edge_id": 79,
+          "vertices": [
+            23,
+            24
+          ],
+          "faces": [
+            28,
+            31
+          ],
+          "uv_split": true,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 90.0,
+          "target_angle_degrees": 90.0,
+          "geometric_dihedral_degrees": 90.0,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": false
+        },
+        {
+          "edge_id": 80,
+          "vertices": [
+            23,
+            33
+          ],
+          "faces": [
+            27,
+            31
+          ],
+          "uv_split": false,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 0.0,
+          "target_angle_degrees": 0.0,
+          "geometric_dihedral_degrees": 0.0,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": true
+        },
+        {
+          "edge_id": 81,
+          "vertices": [
+            24,
+            25
+          ],
+          "faces": [
+            32,
+            35
+          ],
+          "uv_split": true,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 90.0,
+          "target_angle_degrees": 90.0,
+          "geometric_dihedral_degrees": 90.0,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": false
+        },
+        {
+          "edge_id": 82,
+          "vertices": [
+            24,
+            33
+          ],
+          "faces": [
+            31,
+            35
+          ],
+          "uv_split": false,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 0.0,
+          "target_angle_degrees": 0.0,
+          "geometric_dihedral_degrees": 0.0,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": true
+        },
+        {
+          "edge_id": 83,
+          "vertices": [
+            25,
+            26
+          ],
+          "faces": [
+            36,
+            39
+          ],
+          "uv_split": true,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 90.0,
+          "target_angle_degrees": 90.0,
+          "geometric_dihedral_degrees": 90.0,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": false
+        },
+        {
+          "edge_id": 84,
+          "vertices": [
+            25,
+            33
+          ],
+          "faces": [
+            35,
+            39
+          ],
+          "uv_split": false,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 0.0,
+          "target_angle_degrees": 0.0,
+          "geometric_dihedral_degrees": 0.0,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": true
+        },
+        {
+          "edge_id": 85,
+          "vertices": [
+            26,
+            27
+          ],
+          "faces": [
+            40,
+            43
+          ],
+          "uv_split": true,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 90.0,
+          "target_angle_degrees": 90.0,
+          "geometric_dihedral_degrees": 90.0,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": false
+        },
+        {
+          "edge_id": 86,
+          "vertices": [
+            26,
+            33
+          ],
+          "faces": [
+            39,
+            43
+          ],
+          "uv_split": false,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 0.0,
+          "target_angle_degrees": 0.0,
+          "geometric_dihedral_degrees": 0.0,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": true
+        },
+        {
+          "edge_id": 87,
+          "vertices": [
+            27,
+            28
+          ],
+          "faces": [
+            44,
+            47
+          ],
+          "uv_split": true,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 90.0,
+          "target_angle_degrees": 90.0,
+          "geometric_dihedral_degrees": 90.0,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": false
+        },
+        {
+          "edge_id": 88,
+          "vertices": [
+            27,
+            33
+          ],
+          "faces": [
+            43,
+            47
+          ],
+          "uv_split": false,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 0.0,
+          "target_angle_degrees": 0.0,
+          "geometric_dihedral_degrees": 0.0,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": true
+        },
+        {
+          "edge_id": 89,
+          "vertices": [
+            28,
+            29
+          ],
+          "faces": [
+            48,
+            51
+          ],
+          "uv_split": true,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 90.0,
+          "target_angle_degrees": 90.0,
+          "geometric_dihedral_degrees": 90.0,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": false
+        },
+        {
+          "edge_id": 90,
+          "vertices": [
+            28,
+            33
+          ],
+          "faces": [
+            47,
+            51
+          ],
+          "uv_split": false,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 0.0,
+          "target_angle_degrees": 0.0,
+          "geometric_dihedral_degrees": 0.0,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": true
+        },
+        {
+          "edge_id": 91,
+          "vertices": [
+            29,
+            30
+          ],
+          "faces": [
+            52,
+            55
+          ],
+          "uv_split": true,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 90.0,
+          "target_angle_degrees": 90.0,
+          "geometric_dihedral_degrees": 90.0,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": false
+        },
+        {
+          "edge_id": 92,
+          "vertices": [
+            29,
+            33
+          ],
+          "faces": [
+            51,
+            55
+          ],
+          "uv_split": false,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 0.0,
+          "target_angle_degrees": 0.0,
+          "geometric_dihedral_degrees": 0.0,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": true
+        },
+        {
+          "edge_id": 93,
+          "vertices": [
+            30,
+            31
+          ],
+          "faces": [
+            56,
+            59
+          ],
+          "uv_split": true,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 90.0,
+          "target_angle_degrees": 90.0,
+          "geometric_dihedral_degrees": 90.0,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": false
+        },
+        {
+          "edge_id": 94,
+          "vertices": [
+            30,
+            33
+          ],
+          "faces": [
+            55,
+            59
+          ],
+          "uv_split": false,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 0.0,
+          "target_angle_degrees": 0.0,
+          "geometric_dihedral_degrees": 0.0,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": true
+        },
+        {
+          "edge_id": 95,
+          "vertices": [
+            31,
+            33
+          ],
+          "faces": [
+            59,
+            63
+          ],
+          "uv_split": false,
+          "split_with_coincident_coordinates": false,
+          "source_angle_degrees": 0.0,
+          "target_angle_degrees": 0.0,
+          "geometric_dihedral_degrees": 0.0,
+          "geometric_angle_is_proxy": true,
+          "imported_sharp_flag": false,
+          "original_polygon_diagonal": true
+        }
+      ],
+      "normal_epsilon_degrees": 0.1,
+      "diagonals_suppressed": false,
+      "scope": "original indexed edges only; no position welding; imported evaluated corner normals",
+      "smoothing_groups": "not inferred from IDs; imported evaluated normals include membership effects"
+    },
+    "projection": {
+      "status": "pass",
+      "complete": true,
+      "blender_version": "4.5.11 LTS",
+      "blender_build_hash": "4db51e9d1e1e",
+      "samples_expected": 1024,
+      "samples_completed": 1024,
+      "problem_faces": [],
+      "counts": {
+        "hit": 1024,
+        "backface_hit": 0,
+        "out_of_range": 0,
+        "miss": 0,
+        "invalid_direction": 0
+      },
+      "cage": {
+        "degenerate_faces": [],
+        "direction_reversal_faces": [],
+        "nonadjacent_intersections": [],
+        "isolated_by_disjoint_part_filters": [],
+        "intersection_check_complete": true,
+        "scope": "exclude pairs sharing original vertices; local reversal is relative to low face normal"
+      },
+      "limits": "16 deterministic interior samples per low triangle; first hit; no continuous/Cycles certificate",
+      "low_state_hash": "3b85d41a9276bd5f7fe016a174c4a4a291eaaab3984d88d4261b88ca69150cb3",
+      "high_state_hash": "3b85d41a9276bd5f7fe016a174c4a4a291eaaab3984d88d4261b88ca69150cb3",
+      "cage_state_hash": null,
+      "cage_mode": "area_weighted_original_vertex_normals",
+      "settings": {
+        "arrays": "E:\\ReSem\\artifacts\\normal-preflight\\examples05\\cylinder_check\\projection\\geometry.npz",
+        "output": "E:\\ReSem\\artifacts\\normal-preflight\\examples05\\cylinder_check\\projection",
+        "back_distance": 0.030199337741083,
+        "diagonal": 1.50996688705415,
+        "high_objects": [
+          {
+            "name": "all",
+            "face_start": 0,
+            "face_count": 64
+          }
+        ],
+        "part_pairings": [],
+        "samples_per_face": 16,
+        "seconds": 240.0
+      },
+      "front_fraction": 0.02,
+      "front_distance": 0.030199337741083,
+      "back_fraction": 0.02,
+      "back_distance": 0.030199337741083,
+      "arrays_sha256": "ce6a8dab4582fa470b8cb68f165290796bbf130da398a46c935829ade68ae18b",
+      "worker_sha256": "2405eb335a1ed3ab04972e083e50d34106505f73d3c3ab12fc376deda7e50ff2",
+      "coordinates": "imported snapshot world coordinates; no normalization or transform reapplied",
+      "part_assignment": "NOT_CHECKED",
+      "samples": "E:\\ReSem\\artifacts\\normal-preflight\\examples05\\cylinder_check\\projection\\samples.jsonl",
+      "ray_image": "E:\\ReSem\\artifacts\\normal-preflight\\examples05\\cylinder_check\\projection\\rays.png",
+      "incomplete": false
+    },
+    "uv_sampling": {
+      "status": "pass",
+      "config": {
+        "resolution": 128,
+        "gap_pixels": 2.0,
+        "border_pixels": 2.0,
+        "padding_pixels": 1.0,
+        "mip_levels": [
+          0,
+          1,
+          2
+        ]
+      },
+      "geometry": {
+        "valid": true,
+        "errors": [],
+        "geometry_protocol": {
+          "contract": "budget_geometry_exact_positive_area_cvar95_v1",
+          "determinant_floor": 1e-12,
+          "determinant_units": "UV squared per original area normalized by mesh.scale squared",
+          "positive_overlap_area_floor": 0.0,
+          "overlap_area_units": "normalized atlas UV squared",
+          "contact_coordinate_tolerance": 0.0,
+          "contact_coordinate_units": "normalized atlas UV; exact original identity required",
+          "group_normal_length_tolerance": 1e-08,
+          "correspondence_additive_tolerance": 1e-10,
+          "correspondence_normalization": "original all-vertex bounding-box diagonal",
+          "normal_angle_additive_tolerance_degrees": 1e-08,
+          "packing_additive_tolerance_pixels": 1e-05,
+          "quality_additive_tolerance": 1e-09,
+          "quality_units": "dimensionless",
+          "shape_definition": "0.5 * (kappa + 1 / kappa) - 1",
+          "shape_weights": "original 3D face area / total original 3D face area",
+          "shape_p95_definition": "left weighted quantile at cumulative original area 0.95",
+          "shape_tail_definition": "area-weighted worst 0.05 mass; fractional boundary face",
+          "shape_tail_mass": 0.05,
+          "density_scope": "all_original_adjacency",
+          "density_definition": "sqrt(abs(det J)); pairwise larger / smaller",
+          "intersection_arithmetic": "GEOS floating precision; no snapping or area cutoff",
+          "guarantee_scope": "checked finite-precision state; no exact-arithmetic or global bijection proof",
+          "resolution": 128,
+          "required_gap_pixels": 2.0,
+          "required_border_pixels": 2.0,
+          "correspondence_fraction_limit": 0.005,
+          "normal_angle_limit_degrees": 45.0
+        },
+        "quality_constraints_checked": false,
+        "geometric_scope": "all_original_faces",
+        "unique_coverage": 0.4612293491784144,
+        "summed_uv_area": 0.46122934917841435,
+        "reuse_factor": 0.9999999999999999,
+        "authorized_overlap_area": 0.0,
+        "overlap_cells": 0,
+        "positive_overlap_cells": 0,
+        "has_authorized_shared_overlap": false,
+        "nominal_reuse_groups": 0,
+        "active_reuse_groups": 0,
+        "active_reuse_group_ids": [],
+        "group_authorized_overlap_area": {},
+        "max_overlap_geometry_error": 0.0,
+        "maximum_overlap_normal_angle_degrees": 0.0,
+        "maximum_forward_overlap_error_fraction": 0.0,
+        "maximum_inverse_overlap_error_fraction": 0.0,
+        "minimum_oriented_determinant": 0.21730160679131663,
+        "minimum_gap_pixels": 12.800000000000011,
+        "minimum_border_pixels": 12.799999999999997,
+        "packing_groups": 3,
+        "hard_valid": true,
+        "hard_errors": [],
+        "quality_valid": null,
+        "quality_errors": [],
+        "chart_count": 3,
+        "shared_group_count": 0,
+        "independent_orientation_policy": "constant signed chart; declared group orientation enforced",
+        "mirrored_chart_ids": [
+          0,
+          2
+        ],
+        "material_validated": false,
+        "density_balance": null
+      },
+      "mips": [
+        {
+          "level": 0,
+          "resolution": 128,
+          "effective_gap_pixels": 12.800000000000011,
+          "effective_border_pixels": 12.799999999999997,
+          "effective_padding_pixels": 1.0
+        },
+        {
+          "level": 1,
+          "resolution": 64,
+          "effective_gap_pixels": 6.400000000000006,
+          "effective_border_pixels": 6.399999999999999,
+          "effective_padding_pixels": 0.5
+        },
+        {
+          "level": 2,
+          "resolution": 32,
+          "effective_gap_pixels": 3.200000000000003,
+          "effective_border_pixels": 3.1999999999999993,
+          "effective_padding_pixels": 0.25
+        }
+      ],
+      "warnings": [],
+      "authorized_groups": [],
+      "scope": "active UV atlas geometry; not shader/material routing or filter/compression acceptance",
+      "filtering_validated": false
+    }
+  },
+  "snapshot_modified": false,
+  "final_quality_passed": null,
+  "appearance_acceptance": "NOT_RUN",
+  "views": {
+    "images": {
+      "oblique": "E:\\ReSem\\artifacts\\normal-preflight\\examples05\\cylinder_check\\views\\oblique.png",
+      "uv": "E:\\ReSem\\artifacts\\normal-preflight\\examples05\\cylinder_check\\views\\uv.png"
+    },
+    "face_rasters": {
+      "oblique": "E:\\ReSem\\artifacts\\normal-preflight\\examples05\\cylinder_check\\views\\oblique_faces.npz"
+    },
+    "state_hash": "3b85d41a9276bd5f7fe016a174c4a4a291eaaab3984d88d4261b88ca69150cb3",
+    "picked_faces": {
+      "oblique": []
+    },
+    "report": "E:\\ReSem\\artifacts\\normal-preflight\\examples05\\cylinder_check\\views\\views.json",
+    "quality_evidence": false,
+    "coordinate_convention": "Y-up; front +Z, back -Z, left +X, right -X; orthographic auto-fit"
+  },
+  "normal_vectors": "E:\\ReSem\\artifacts\\normal-preflight\\examples05\\cylinder_check\\normal_vectors.png"
+}

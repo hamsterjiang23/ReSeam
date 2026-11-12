@@ -1,0 +1,177 @@
+{
+  "status": "BAKED_THREE_CHANNELS",
+  "worker": {
+    "status": "BAKED_THREE_CHANNELS",
+    "channels": {
+      "BaseColor": "E:\\ReSem\\artifacts\\normal-preflight\\examples05\\toolbox_high_bake\\BaseColor.png",
+      "ORM": "E:\\ReSem\\artifacts\\normal-preflight\\examples05\\toolbox_high_bake\\ORM.png",
+      "Normal": "E:\\ReSem\\artifacts\\normal-preflight\\examples05\\toolbox_high_bake\\Normal.png"
+    },
+    "source_materials": [
+      {
+        "index": 0,
+        "name": "Metal",
+        "alpha_mode": "OPAQUE",
+        "alpha_mode_declared": false,
+        "base_color_texture": false,
+        "normal_texture": false,
+        "metallic_roughness_texture": false,
+        "occlusion_texture": false,
+        "source_definition": {
+          "doubleSided": true,
+          "name": "Metal",
+          "pbrMetallicRoughness": {
+            "baseColorFactor": [
+              0.20999999344348907,
+              0.3199999928474426,
+              0.4000000059604645,
+              1
+            ],
+            "metallicFactor": 0.699999988079071,
+            "roughnessFactor": 0.30000001192092896
+          }
+        },
+        "occlusion_socket_linked": false
+      }
+    ],
+    "backend": {
+      "Blender": "4.5.11 LTS",
+      "device": "CPU",
+      "threads": 1
+    },
+    "normal_contract": "source Cycles shading; target flat; baked green inverted into explicit glTF top-V TBN",
+    "projection": {
+      "selected_to_active": true,
+      "cage_extrusion": 0.06,
+      "exact_coverage_verified": false
+    },
+    "claims": {
+      "material_channels_baked": true,
+      "quality_validated": false,
+      "gpu_verified": false
+    }
+  },
+  "channels": {
+    "BaseColor": {
+      "path": "E:\\ReSem\\artifacts\\normal-preflight\\examples05\\toolbox_high_bake\\BaseColor.png",
+      "sha256": "db3e1b5b3e1a8094945caf93ac403021d0cc6556a1431ac31c2d4997cc66bbb3",
+      "bytes": 1278,
+      "minimum_rgba8": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "maximum_rgba8": [
+        126,
+        153,
+        170,
+        255
+      ],
+      "mean_rgba8": [
+        94.869140625,
+        115.1982421875,
+        127.998046875,
+        255.0
+      ],
+      "alpha_nonzero_pixels": 16384,
+      "alpha_scope": "image alpha only; not a source projection coverage certificate"
+    },
+    "ORM": {
+      "path": "E:\\ReSem\\artifacts\\normal-preflight\\examples05\\toolbox_high_bake\\ORM.png",
+      "sha256": "f121b02e65a81dd3659a7efc061d19bfcade6c4659c73c131f90aa5120ccc8dc",
+      "bytes": 1254,
+      "minimum_rgba8": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "maximum_rgba8": [
+        255,
+        77,
+        178,
+        255
+      ],
+      "mean_rgba8": [
+        191.9970703125,
+        57.9755859375,
+        134.021484375,
+        235.389404296875
+      ],
+      "alpha_nonzero_pixels": 15124,
+      "alpha_scope": "image alpha only; not a source projection coverage certificate"
+    },
+    "Normal": {
+      "path": "E:\\ReSem\\artifacts\\normal-preflight\\examples05\\toolbox_high_bake\\Normal.png",
+      "sha256": "1166509c3f3b84edaaedd6e9bbf3d2940ccb82bb8ebd4dd2a9492f86aa349232",
+      "bytes": 3343,
+      "minimum_rgba8": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "maximum_rgba8": [
+        255,
+        255,
+        255,
+        255
+      ],
+      "mean_rgba8": [
+        129.43341064453125,
+        125.13128662109375,
+        226.27587890625,
+        255.0
+      ],
+      "alpha_nonzero_pixels": 16384,
+      "alpha_scope": "image alpha only; not a source projection coverage certificate"
+    }
+  },
+  "source": {
+    "materials": [
+      {
+        "index": 0,
+        "name": "Metal",
+        "alpha_mode": "OPAQUE",
+        "alpha_mode_declared": false,
+        "base_color_texture": false,
+        "normal_texture": false,
+        "metallic_roughness_texture": false,
+        "occlusion_texture": false,
+        "source_definition": {
+          "doubleSided": true,
+          "name": "Metal",
+          "pbrMetallicRoughness": {
+            "baseColorFactor": [
+              0.20999999344348907,
+              0.3199999928474426,
+              0.4000000059604645,
+              1
+            ],
+            "metallicFactor": 0.699999988079071,
+            "roughnessFactor": 0.30000001192092896
+          }
+        }
+      }
+    ],
+    "alpha_contract": "OPAQUE_ONLY",
+    "omitted_alpha_mode": "glTF2 OPAQUE default",
+    "source": "E:\\ReSem\\artifacts\\normal-preflight\\examples05\\toolbox_high.glb"
+  },
+  "input_hashes": {
+    "high_glb": "7e58a6948d0620af6fed4044248f001d426d1b0cd90f9b49f9f5fe45f2fcbd9b",
+    "worker": "fbafcc50b37d0318803172c57dc6deaadf898b084b12d03ca7f7b6e550e35d68",
+    "request": "0c0aa1417be5840264f53c9f4eaed75d745938cdf6acad4ca6e0611c26e695a6",
+    "geometry_arrays": "133b66a3a69da916bb95ed3281f242f21eaca62fdd612d482501dd1261a9e0f4"
+  },
+  "wall_seconds": 0.8910000000000764,
+  "claims": {
+    "numeric_images_verified": true,
+    "exact_bake_coverage_verified": false,
+    "appearance_quality_verified": false,
+    "mip_safety_verified": false,
+    "gpu_verified": false,
+    "artist_reviewed": false
+  }
+}
