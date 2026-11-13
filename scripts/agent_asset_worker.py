@@ -153,7 +153,46 @@ def main() -> None:
     pbr_record: dict[str, object] = {}
     if request.get("pbr_textures"):
         pbr_record["explicit_pbr_binding"] = bind_pbr(
-            meshes, request["pbr_textures"], request.get("normal_convention", "opengl"), folder)
+            meshes, request["pbr_textures"], request.get("normal_convention", "opengl"), folder,
+            request.get("pbr_factors"))
+    if request.get("remove_zero_area_faces", False):
+        xyz = np.asarray(vertices)[np.asarray(faces)]
+        area = np.linalg.norm(np.cross(xyz[:, 1] - xyz[:, 0], xyz[:, 2] - xyz[:, 0]), axis=1)
+        keep = np.flatnonzero(area > 0).tolist()
+        pbr_record["zero_area_repair"] = {
+            "removed_original_triangles": np.flatnonzero(area == 0).tolist(),
+            "original_triangle_for_new_triangle": keep, "positions_changed": False}
+        faces = [faces[i] for i in keep]
+        uv = [uv[i] for i in keep]
+        identities = [identities[i] for i in keep]
+        ancestry = [ancestry[i] for i in keep]
+        triangle_to_polygon = [triangle_to_polygon[i] for i in keep]
+        normal_corners = [normal_corners[i] for i in keep] if normal_corners else []
+        extra_uv = {name: [values[i] for i in keep] for name, values in extra_uv.items()}
+        for record in objects:
+            start, count = int(str(record["face_start"])), int(str(record["face_count"]))
+            record["face_start"] = sum(i < start for i in keep)
+            record["face_count"] = sum(start <= i < start + count for i in keep)
+        if len(meshes) != 1:
+            raise ValueError("ZERO_AREA_REPAIR_CURRENTLY_REQUIRES_SINGLE_MESH")
+        material = meshes[0].data.materials[0]
+        name = meshes[0].name
+        bpy.data.objects.remove(meshes[0], do_unlink=True)
+        rebuilt = bpy.data.meshes.new(name)
+        # Keep coincident source triangles distinct during Blender validation.
+        # The canonical arrays above retain their original connectivity.
+        rebuilt.from_pydata([(vertices[i][0], -vertices[i][2], vertices[i][1])
+                             for face in faces for i in face], [],
+                            np.arange(len(faces) * 3).reshape(-1, 3).tolist())
+        rebuilt.uv_layers.new(name="PreservedSourceUV")
+        for polygon, values in zip(rebuilt.polygons, uv, strict=True):
+            for loop, value in zip(polygon.loop_indices, values, strict=True):
+                rebuilt.uv_layers.active.data[loop].uv = value
+        if normal_corners:
+            rebuilt.normals_split_custom_set([(n[0], -n[2], n[1]) for tri in normal_corners for n in tri])
+        rebuilt.materials.append(material)
+        replacement = bpy.data.objects.new(name, rebuilt)
+        bpy.context.scene.collection.objects.link(replacement)
     np.savez_compressed(folder / "imported.npz", vertices=np.asarray(vertices), faces=np.asarray(faces),
                         corner_uv=np.asarray(uv), corner_ids=np.asarray(identities),
                         **cast(Any, {f"extra_uv_{index}": np.asarray(extra_uv[name])

@@ -1,0 +1,14 @@
+{
+  "archive_part_count": 54,
+  "archive_parts_sha256_match": true,
+  "concatenated_archive_sha256_match": true,
+  "archive_member_sha256_matches": 6539,
+  "archive_safe_relative_paths": true,
+  "credential_signature_scan_text_files": 3230,
+  "credential_signature_findings": [],
+  "secret_scan_tool": "credential-signature fallback, not gitleaks",
+  "relocated_html_links_checked": 42,
+  "pytest": "35 passed",
+  "ruff": "passed on all changed/new tower Python files",
+  "basedpyright": "core/experiment and PDF script checked separately with their respective Python environments; both 0 errors, 0 warnings"
+}

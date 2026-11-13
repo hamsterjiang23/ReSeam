@@ -124,16 +124,25 @@ def import_asset(request: dict[str, object], output: Path, deadline: float) -> d
         raise TypeError("ASSET_PATH_REQUIRED")
     source = Path(raw).resolve()
     suffix = source.suffix.lower()
+    if type(request.get("remove_zero_area_faces", False)) is not bool:
+        raise ValueError("REMOVE_ZERO_AREA_FACES_BOOLEAN_REQUIRED")
+    if request.get("remove_zero_area_faces") and suffix != ".fbx":
+        raise ValueError("ZERO_AREA_REPAIR_REQUIRES_FBX")
     pbr = request.get("pbr_textures")
     if pbr is not None:
-        if (not isinstance(pbr, dict) or set(pbr) != {"basecolor", "normal", "roughness", "metallic"}
+        if (not isinstance(pbr, dict) or "basecolor" not in pbr
+                or not set(pbr) <= {"basecolor", "normal", "roughness", "metallic"}
                 or suffix != ".fbx" or request.get("uv_channel") is None
                 or request.get("basecolor_texture") is not None or request.get("reference") is not None):
-            raise ValueError("PBR_BINDING_REQUIRES_FBX_FOUR_TEXTURES_UV_CHANNEL_AND_NO_OTHER_REFERENCE")
+            raise ValueError("PBR_BINDING_REQUIRES_FBX_BASECOLOR_UV_CHANNEL_AND_NO_OTHER_REFERENCE")
         if any(not isinstance(p, str) or not Path(p).is_absolute() or not Path(p).is_file()
                for p in pbr.values()):
             raise ValueError("PBR_TEXTURE_ABSOLUTE_FILE_REQUIRED")
     convention = request.get("normal_convention", "opengl")
+    factors = request.get("pbr_factors", {})
+    if (not isinstance(factors, dict) or not set(factors) <= {"roughness", "metallic"}
+            or any(type(value) not in (float, int) or not 0 <= value <= 1 for value in factors.values())):
+        raise ValueError("PBR_FACTORS_MUST_BE_UNIT_ROUGHNESS_METALLIC")
     if convention not in ("opengl", "directx"):
         raise ValueError("NORMAL_CONVENTION_INVALID")
     split = request.get("repair_nonmanifold")
@@ -249,8 +258,9 @@ def import_asset(request: dict[str, object], output: Path, deadline: float) -> d
             raise FileNotFoundError("BLENDER_MISSING")
         worker_input = output / "import_request.json"
         write_json(worker_input, {"source": str(copied), "output": str(frozen), "uv_channel": selected_uv,
+                                  "remove_zero_area_faces": request.get("remove_zero_area_faces", False),
                                   "collect_normal_evidence": request.get("collect_normal_evidence", False),
-                                  "pbr_textures": frozen_pbr, "normal_convention": convention,
+                                  "pbr_textures": frozen_pbr, "pbr_factors": factors, "normal_convention": convention,
                                   "basecolor_texture": str(frozen_texture) if frozen_texture else None})
         argv = [str(blender), "--background", "--factory-startup", "--threads", "1",
                 "--python-exit-code", "1", "--python", str(worker), "--", str(worker_input)]

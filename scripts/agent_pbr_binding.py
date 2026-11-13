@@ -7,16 +7,22 @@ import bpy  # pyright: ignore[reportMissingImports]
 import numpy as np
 
 
-def bind_pbr(meshes: list[Any], textures: dict[str, str], convention: str, folder: Path) -> dict[str, object]:
+def bind_pbr(meshes: list[Any], textures: dict[str, str], convention: str, folder: Path,
+             factors: dict[str, float] | None = None) -> dict[str, object]:
     material = bpy.data.materials.new("ReSeam_Explicit_PBR")
     material.use_nodes = True
     nodes, links = material.node_tree.nodes, material.node_tree.links
     nodes.clear()
     shader, output = nodes.new("ShaderNodeBsdfPrincipled"), nodes.new("ShaderNodeOutputMaterial")
+    factors = factors or {}
+    shader.inputs["Roughness"].default_value = factors.get("roughness", .5)
+    shader.inputs["Metallic"].default_value = factors.get("metallic", 0.)
     links.new(shader.outputs["BSDF"], output.inputs["Surface"])
     bound: dict[str, object] = {}
     for channel, socket in (("basecolor", "Base Color"), ("roughness", "Roughness"),
                             ("metallic", "Metallic"), ("normal", "Normal")):
+        if channel not in textures:
+            continue
         image = bpy.data.images.load(textures[channel], check_existing=False)
         image.colorspace_settings.name = "sRGB" if channel == "basecolor" else "Non-Color"
         if image.size[0] <= 0:
@@ -45,6 +51,6 @@ def bind_pbr(meshes: list[Any], textures: dict[str, str], convention: str, folde
         obj.data.materials.append(material)
         for polygon in obj.data.polygons:
             polygon.material_index = 0
-    return {"channels": bound, "normal_convention": convention,
+    return {"channels": bound, "constant_factors": factors, "normal_convention": convention,
             "normal_convention_verification": "declared; directional visual verification pending",
             "source_phong_reproduced": False, "shader": "explicit Blender Principled core PBR"}

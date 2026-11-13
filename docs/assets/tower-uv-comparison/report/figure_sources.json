@@ -1,0 +1,148 @@
+{
+  "rows": [
+    {
+      "method": "source_uv",
+      "checker": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\source_uv_2048\\uv_views\\front.png",
+      "uv": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\source_uv_2048\\uv_views\\uv.png",
+      "snapshot": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\normal_repair\\snapshot\\snapshot.json"
+    },
+    {
+      "method": "flatten_anything",
+      "checker": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\flatten_anything_2048\\uv_views\\front.png",
+      "uv": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\flatten_anything_2048\\uv_views\\uv.png",
+      "snapshot": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\flatten_anything_2048\\pack43\\snapshot\\snapshot.json"
+    },
+    {
+      "method": "optcuts",
+      "checker": null,
+      "uv": null,
+      "snapshot": null
+    },
+    {
+      "method": "xatlas",
+      "checker": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\xatlas_2048\\uv_views\\front.png",
+      "uv": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\xatlas_2048\\uv_views\\uv.png",
+      "snapshot": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\xatlas_2048\\pack29\\snapshot\\snapshot.json"
+    },
+    {
+      "method": "blender_smart",
+      "checker": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\blender_smart_2048\\uv_views\\front.png",
+      "uv": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\blender_smart_2048\\uv_views\\uv.png",
+      "snapshot": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\blender_smart_2048\\pack43\\snapshot\\snapshot.json"
+    },
+    {
+      "method": "partuv",
+      "checker": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\partuv_2048\\uv_views\\front.png",
+      "uv": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\partuv_2048\\uv_views\\uv.png",
+      "snapshot": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\partuv_2048\\pack17\\snapshot\\snapshot.json"
+    },
+    {
+      "method": "meshquery_project",
+      "checker": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\meshquery_repaired_2048\\uv_views\\front.png",
+      "uv": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\meshquery_repaired_2048\\uv_views\\uv.png",
+      "snapshot": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\meshquery_repaired_2048\\pack17\\snapshot\\snapshot.json"
+    },
+    {
+      "method": "reseam_unshared",
+      "checker": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_unshared_2048\\uv_views\\front.png",
+      "uv": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_unshared_2048\\uv_views\\uv.png",
+      "snapshot": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_unshared_2048\\pack17\\snapshot\\snapshot.json"
+    },
+    {
+      "method": "reseam_shared",
+      "checker": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_shared_boundary_2048\\uv_views\\front.png",
+      "uv": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_shared_boundary_2048\\uv_views\\uv.png",
+      "snapshot": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_shared_boundary_2048\\pack29\\snapshot\\snapshot.json"
+    },
+    {
+      "method": "reseam_optimized",
+      "checker": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_optimized_2048\\uv_views\\front.png",
+      "uv": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_optimized_2048\\uv_views\\uv.png",
+      "snapshot": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_optimized_2048\\pack43\\snapshot\\snapshot.json"
+    },
+    {
+      "method": "mirror_negative_unshared",
+      "checker": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_unshared_2048\\uv_views\\front.png",
+      "uv": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_unshared_2048\\uv_views\\uv.png",
+      "snapshot": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_unshared_2048\\pack17\\snapshot\\snapshot.json"
+    },
+    {
+      "method": "mirror_negative_shared",
+      "checker": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_shared_2048\\uv_views\\front.png",
+      "uv": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_shared_2048\\uv_views\\uv.png",
+      "snapshot": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_shared_2048\\pack29\\snapshot\\snapshot.json"
+    },
+    {
+      "method": "mirror_negative_optimized_minimum_shared",
+      "checker": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_optimized_minimum_shared_2048\\uv_views\\front.png",
+      "uv": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_optimized_minimum_shared_2048\\uv_views\\uv.png",
+      "snapshot": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_optimized_minimum_shared_2048\\pack17\\snapshot\\snapshot.json"
+    },
+    {
+      "method": "mirror_negative_optimized_minimum_unshared",
+      "checker": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_optimized_minimum_unshared_2048\\uv_views\\front.png",
+      "uv": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_optimized_minimum_unshared_2048\\uv_views\\uv.png",
+      "snapshot": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_optimized_minimum_unshared_2048\\pack43\\snapshot\\snapshot.json"
+    },
+    {
+      "method": "mirror_negative_aggressive_minimum_shared",
+      "checker": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_aggressive_minimum_shared_2048\\uv_views\\front.png",
+      "uv": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_aggressive_minimum_shared_2048\\uv_views\\uv.png",
+      "snapshot": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_aggressive_minimum_shared_2048\\pack17\\snapshot\\snapshot.json"
+    },
+    {
+      "method": "mirror_negative_aggressive_minimum_unshared",
+      "checker": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_aggressive_minimum_unshared_2048\\uv_views\\front.png",
+      "uv": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_aggressive_minimum_unshared_2048\\uv_views\\uv.png",
+      "snapshot": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_aggressive_minimum_unshared_2048\\pack17\\snapshot\\snapshot.json"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_shared",
+      "checker": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\uv_views\\front.png",
+      "uv": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\uv_views\\uv.png",
+      "snapshot": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\pack29\\snapshot\\snapshot.json"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_unshared",
+      "checker": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\uv_views\\front.png",
+      "uv": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\uv_views\\uv.png",
+      "snapshot": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\pack29\\snapshot\\snapshot.json"
+    },
+    {
+      "method": "reseam_shared_boundary_control",
+      "checker": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_shared_boundary_control_2048\\uv_views\\front.png",
+      "uv": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_shared_boundary_control_2048\\uv_views\\uv.png",
+      "snapshot": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_shared_boundary_control_2048\\pack43\\snapshot\\snapshot.json"
+    },
+    {
+      "method": "reseam_shared_repaired",
+      "checker": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_shared_repaired_2048\\uv_views\\front.png",
+      "uv": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_shared_repaired_2048\\uv_views\\uv.png",
+      "snapshot": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_shared_repaired_2048\\pack17\\snapshot\\snapshot.json"
+    }
+  ],
+  "figures": {
+    "blender_smart_contact.png": "3c72474207859bbe7cd75e4b4b83ec52a99675d2b96a3ea0c1e36578ea811e0c",
+    "meshquery_project_contact.png": "dbee99601fdfee86e349d9b884611d143976e47434f6036546ba564bd12fe331",
+    "mirror_negative_aggressive_minimum_shared_contact.png": "fcf83101b89a39bbc727c009e509713fa1c90d86396135f72243906f5d93cb7e",
+    "mirror_negative_aggressive_minimum_unshared_contact.png": "46a1b5f5cbd51d6b6bfe6e7b8bd18d151b90aa609e18672748b4613de818657e",
+    "mirror_negative_exhaustive_minimum_shared_contact.png": "ce99d79b993669b3c24dbca5621226dd8335080221817b070faa0df2b5324340",
+    "mirror_negative_exhaustive_minimum_unshared_contact.png": "14c770eb995676e64d5764d6a481f9f0568af67b1458a02c19ec7354a6c977ce",
+    "mirror_negative_optimized_minimum_shared_contact.png": "948e9b80a7afd09bee0e3f0fc868ba9aeaafd5dc088332f013c17d01a90db1b1",
+    "mirror_negative_optimized_minimum_unshared_contact.png": "677b946fd475d010a08fd73be0d00b2bd8fd923dbf007951cba2f26803029a00",
+    "mirror_negative_shared_contact.png": "4e133c2304de4c8d65010837568c52298fd3bced1e2f59bdb457f42501cad090",
+    "mirror_negative_unshared_contact.png": "2ab33e328e9ad14766238d24d0c3104aec33745f2bd47bdde9409e693c8f8b87",
+    "partuv_contact.png": "8c26baf3b94b5a33bc6f2459369cc74a4320d7c57e5ec98fb1f3bd9dcea870d9",
+    "reseam_optimized_contact.png": "47239c15f7db45f4ea832d2634f70e31dc98793dab7431f326a2a3f5097fc3bb",
+    "reseam_shared_boundary_contact.png": "7cd361f3353c1e25b84467efaa38df6937325a1793e6c9ad7d09c08314509ac5",
+    "reseam_shared_boundary_control_contact.png": "997e46301d724697066bf974f85f8224d240485533d620ddc75157df7eb94194",
+    "reseam_shared_contact.png": "9825c18cbeae1f292c11f6e7ce332e949340a2f60d8770b98961d4835b83c8b3",
+    "reseam_shared_repaired_contact.png": "fea9456f5492a8f8d15ca289a5faa11a2f1e2b2af4d3f2a04c386ada4e7457c5",
+    "reseam_unshared_contact.png": "cde89a8e87a05f649d45d8af2250c54de0e88f2de38ea24e25e5adb95b34ab6c",
+    "source_uv_contact.png": "588abc247d9da1a0b4eae335f52307df5489b5783590cb0867073d58c5801ea8",
+    "UV全方法对照.png": "38939fc04cea02bfa7278339063a77cde8ac5984459921a9fda648b98f286b4d",
+    "xatlas_contact.png": "9150426aa4f8f0253b67bcf53365341f04acaf17992cd9837012bb5a733ae737",
+    "关键部位近景对照.png": "6578612e868ae7e11bf9d38b9082018488368be1994934c71c5dfeb7ea56bccd",
+    "颜色与法线对照.png": "278b39b4f1538d096c2dfdd1dfc855a06b3edc892164d8433428bdddeeec9792"
+  }
+}

@@ -1,0 +1,158 @@
+[
+  {
+    "version": "high",
+    "source": "F:\\MLBB_Test\\haijiangli1_HAMSTERMLBB\\Assets\\Art\\Monster\\ta_home_Tower_gongjian_new\\fbx_high_tower_gongjian_049.fbx",
+    "sha256": "fe02064fac5c16eeac54b38874acc41ad5c6693a81b557485aebea9b7f0ce441",
+    "objects": [
+      {
+        "name": " ML_049_S4_tower_high_add_01",
+        "vertices": 1878,
+        "polygons": 2472,
+        "triangles": 3645,
+        "polygon_sides": {
+          "3": 1299,
+          "4": 1173
+        },
+        "effect_geometry": false
+      },
+      {
+        "name": "effect_UV2",
+        "vertices": 12,
+        "polygons": 2,
+        "triangles": 8,
+        "polygon_sides": {
+          "6": 2
+        },
+        "effect_geometry": true
+      },
+      {
+        "name": " ML_049_S4_tower_high_add_02",
+        "vertices": 124,
+        "polygons": 182,
+        "triangles": 208,
+        "polygon_sides": {
+          "3": 156,
+          "4": 26
+        },
+        "effect_geometry": false
+      },
+      {
+        "name": "effect_UV",
+        "vertices": 12,
+        "polygons": 2,
+        "triangles": 8,
+        "polygon_sides": {
+          "6": 2
+        },
+        "effect_geometry": true
+      }
+    ],
+    "total_triangles": 3869,
+    "tower_triangles_excluding_effect": 3853,
+    "tower_polygons_excluding_effect": 2654
+  },
+  {
+    "version": "standard",
+    "source": "F:\\MLBB_Test\\haijiangli1_HAMSTERMLBB\\Assets\\Art\\Monster\\ta_home_Tower_gongjian_new\\fbx_tower_gongjian_049.fbx",
+    "sha256": "a36b03cff41f52383f82471e5da3ab3ddf9d4f52da66feaf58bb5d88a92be36d",
+    "objects": [
+      {
+        "name": "effect_UV2",
+        "vertices": 12,
+        "polygons": 2,
+        "triangles": 8,
+        "polygon_sides": {
+          "6": 2
+        },
+        "effect_geometry": true
+      },
+      {
+        "name": " ML_049_S4_tower_high_add_01",
+        "vertices": 1878,
+        "polygons": 2472,
+        "triangles": 3645,
+        "polygon_sides": {
+          "3": 1299,
+          "4": 1173
+        },
+        "effect_geometry": false
+      },
+      {
+        "name": " ML_049_S4_tower_high_add_02",
+        "vertices": 124,
+        "polygons": 182,
+        "triangles": 208,
+        "polygon_sides": {
+          "3": 156,
+          "4": 26
+        },
+        "effect_geometry": false
+      },
+      {
+        "name": "effect_UV",
+        "vertices": 12,
+        "polygons": 2,
+        "triangles": 8,
+        "polygon_sides": {
+          "6": 2
+        },
+        "effect_geometry": true
+      }
+    ],
+    "total_triangles": 3869,
+    "tower_triangles_excluding_effect": 3853,
+    "tower_polygons_excluding_effect": 2654
+  },
+  {
+    "version": "low",
+    "source": "F:\\MLBB_Test\\haijiangli1_HAMSTERMLBB\\Assets\\Art\\Monster\\ta_home_Tower_gongjian_new\\fbx_low_tower_gongjian_049.fbx",
+    "sha256": "0e7ae71da9548c64e95fb2e052be9aa6a7fd5069c957d0e793e8adf8ca359dd7",
+    "objects": [
+      {
+        "name": "ML_049_S2_tower_low_add_01",
+        "vertices": 1209,
+        "polygons": 1583,
+        "triangles": 2319,
+        "polygon_sides": {
+          "4": 736,
+          "3": 847
+        },
+        "effect_geometry": false
+      },
+      {
+        "name": "effect_UV",
+        "vertices": 12,
+        "polygons": 2,
+        "triangles": 8,
+        "polygon_sides": {
+          "6": 2
+        },
+        "effect_geometry": true
+      },
+      {
+        "name": "ML_049_S2_tower_low_add_02",
+        "vertices": 88,
+        "polygons": 136,
+        "triangles": 148,
+        "polygon_sides": {
+          "3": 124,
+          "4": 12
+        },
+        "effect_geometry": false
+      },
+      {
+        "name": "effect_UV2",
+        "vertices": 12,
+        "polygons": 2,
+        "triangles": 8,
+        "polygon_sides": {
+          "6": 2
+        },
+        "effect_geometry": true
+      }
+    ],
+    "total_triangles": 2483,
+    "tower_triangles_excluding_effect": 2467,
+    "tower_polygons_excluding_effect": 1719
+  }
+]

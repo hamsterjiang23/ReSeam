@@ -68,8 +68,8 @@ def mirror_pbr_reference(parent: Snapshot, surface: MeshState, variant: Symmetry
         raise ValueError("PBR_MIRROR_STATIC_SOURCE_REQUIRED")
     materials = cast(list[dict[str, object]], document["materials"])
     pbr = cast(dict[str, object], materials[0]["pbrMetallicRoughness"])
-    if not all(key in pbr for key in ("baseColorTexture", "metallicRoughnessTexture")) or "normalTexture" not in materials[0]:
-        raise ValueError("PBR_MIRROR_BASECOLOR_NORMAL_METALLIC_ROUGHNESS_TEXTURES_REQUIRED")
+    if "baseColorTexture" not in pbr or "normalTexture" not in materials[0]:
+        raise ValueError("PBR_MIRROR_BASECOLOR_NORMAL_TEXTURES_REQUIRED")
     mesh = cast(list[dict[str, object]], document["meshes"])[0]
     primitive = cast(list[dict[str, object]], mesh["primitives"])[0]
     attributes = cast(dict[str, object], primitive["attributes"])

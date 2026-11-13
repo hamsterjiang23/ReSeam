@@ -1,5 +1,7 @@
 # ReSeam 十页项目汇报
 
+新增[防御塔制作过程图解](tower-making-process/防御塔制作过程图解.pdf)，共6页，展示输入与基线、原形合岛、半边镜像、62→24图块整理及颜色／法线近景。完整实验与还原方法见[防御塔交付包](../../docs/assets/tower-uv-comparison/README.md)，来源哈希和逐页检查见[tower-making-process/verification.json](tower-making-process/verification.json)。`[verified: tower-making-process/evidence.json pages；verification.json pages/source_hashes_match]`
+
 新增[三模型 UV、模型与45项指标 PDF](legacy-assets-with-metrics/reseam-three-assets-with-45-metrics.pdf)：共9页，前6页保留原有真实图像，后3页分别列Chloe红刺、历史能量刀和幻想龙的完整指标。全部尺寸39条数据另见[补测报告](../../docs/results/legacy-assets-45-metrics.md)。`[verified: legacy-assets-with-metrics/evidence.json pages/metric_fields/all_cases]`
 
 九页版的[总览](legacy-assets-with-metrics/preview.png)、[来源与哈希](legacy-assets-with-metrics/evidence.json)及[检查记录](legacy-assets-with-metrics/verification.json)一并保留。已检查9页渲染、中文文本提取、原6页图像像素一致和旧PDF未改；粗体只表示同镜像几何的共享／解除共享两列数值比较，不代表跨几何或质量排名。`[verified: legacy-assets-with-metrics/verification.json；evidence.json bold_scope]`

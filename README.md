@@ -1,5 +1,7 @@
 # ReSeam
 
+防御塔新增[制作过程与全方法对照交付包](docs/assets/tower-uv-comparison/README.md)，包含[6页制作过程 PDF](output/pdf/tower-making-process/防御塔制作过程图解.pdf)、UV／颜色／法线展示图，以及两个实验轮次的完整分卷归档。最终镜像候选为7,650个三角形、48个连通岛／24个独立图块，数值状态为DIAGNOSTIC，Agent观察结论为VISUAL_KEEP。`[verified: tower-uv-comparison/report/results.json method=mirror_negative_exhaustive_minimum_shared；report/appearance_review.json decision；tower-making-process/verification.json pages]`
+
 按用户要求新增[历史 40 图块方法复刻](docs/results/dragon-legacy-method-replay.md)：当前低模另建半边镜像变体，完整 PBR 使用自身材质与同面角采样，分别交付同几何 60 图块无共享和 30 图块共享。历史 40 图块成品实际为 80 连通岛、BaseColor 预览；新结果的目视、数值及人工状态见报告，不改写此前高低模投射失败。`[verified: round09_legacy_method/mirror_pbr_clean/mirror_variant.json；pbr_control_pack17/packing.json；pbr_pack17/packing.json；opinion: 验收边界]`
 
 蓝龙新增[完整 PBR 与 UV 共享实验](docs/results/dragon-pbr-reuse.md)，按[执行合同](docs/dragon-pbr-reuse-plan.md)记录导入修复、实际材质和失败对照。显式 `pbr_reuse` 支持完整通道的诊断输出，完整外观验收以该报告实际结果为准，不能由工具成功或 BaseColor 预览推定。`[opinion]`

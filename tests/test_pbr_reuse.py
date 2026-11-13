@@ -45,6 +45,26 @@ def folder(root: Path, name: str) -> Path:
     return path
 
 
+def test_master_boundary_extension_is_explicit_bounded_and_audited(tmp_path: Path) -> None:
+    parent = asset(tmp_path, shared=True)
+    state = parent.state.copy()
+    state.surface.uv[3:, 0] -= .003
+    snapshot = save_snapshot(state, tmp_path / "shifted", parent.metadata, parent)
+    for pixels, expected in ((0., False), (.1, False), (.5, True)):
+        destination = folder(tmp_path, "target_" + str(pixels))
+        result = freeze_target({"snapshot": str(snapshot.root), "mode": "pbr_reuse", "policy": "master",
+            "projection_method": "same_surface_face_corner", "acceptance_policy": "visual",
+            "master_boundary_tolerance_pixels": pixels,
+            "geometry_profile": {"resolution": 128, "quality_constraints": False}},
+            destination, time.monotonic() + 30)
+        target = PBRTarget(snapshot, Path(str(result["target"])), time.monotonic() + 30)
+        samples = target.sample(1, np.asarray([[1., 0., 0.]]))
+        assert bool(samples.valid[0]) is expected
+        assert target.boundary_projection_count == int(expected)
+        if expected:
+            assert target.boundary_projection_max_uv == pytest.approx(.003)
+
+
 def test_full_pbr_roundtrip_mips_and_diagnostic_validation(tmp_path: Path) -> None:
     snapshot = asset(tmp_path)
     deadline = time.monotonic() + 60

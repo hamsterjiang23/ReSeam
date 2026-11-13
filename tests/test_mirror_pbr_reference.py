@@ -135,7 +135,7 @@ def test_parent_repaired_normals_are_not_confused_with_source_normals(tmp_path: 
     assert source.normals[..., 1].min() > .1
 
 
-@pytest.mark.parametrize("missing", ["normalTexture", "metallicRoughnessTexture", "TANGENT"])
+@pytest.mark.parametrize("missing", ["normalTexture", "TANGENT"])
 def test_missing_declared_pbr_is_not_invented(tmp_path: Path, missing: str) -> None:
     parent = source_asset(tmp_path)
     source = Path(str(parent.metadata["reference_glb"]))
@@ -151,6 +151,21 @@ def test_missing_declared_pbr_is_not_invented(tmp_path: Path, missing: str) -> N
     _write_glb(source, document, bytearray(binary))
     with pytest.raises(ValueError, match="(PBR_MIRROR_.*REQUIRED|DECLARED_TANGENT_REQUIRED)"):
         mirror(parent, tmp_path / "mirror")
+
+
+def test_mirror_preserves_constant_roughness_metallic(tmp_path: Path) -> None:
+    parent = source_asset(tmp_path)
+    source = Path(str(parent.metadata["reference_glb"]))
+    document, binary = _source_document(source)
+    material = cast(list[dict[str, object]], document["materials"])[0]
+    pbr = cast(dict[str, object], material["pbrMetallicRoughness"])
+    pbr.pop("metallicRoughnessTexture")
+    pbr.update(roughnessFactor=.6, metallicFactor=0)
+    _write_glb(source, document, bytearray(binary))
+    result = mirror(parent, tmp_path / "mirror")
+    actual, _ = _source_document(Path(str(result["reference_glb"])))
+    definition = cast(list[dict[str, object]], actual["materials"])[0]
+    assert definition["pbrMetallicRoughness"] == pbr
 
 
 def test_pbr_mirror_does_not_silently_project_to_high(tmp_path: Path) -> None:

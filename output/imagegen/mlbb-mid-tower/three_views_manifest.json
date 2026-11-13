@@ -1,0 +1,18 @@
+{
+  "image": "E:\\ReSem\\output\\imagegen\\mlbb-mid-tower\\solid-tower-three-views.png",
+  "dimensions": [
+    1774,
+    887
+  ],
+  "sha256": "f7707764deb5c5182f9629269f63bc17b5741ad15b1f9d3f7565a74f27d05cf3",
+  "views": [
+    "front",
+    "right_side",
+    "back"
+  ],
+  "visual_review": "Root inspected generated image: upper bow attached to tower by matching gold support in all three views; complete full-height silhouettes and common baseline",
+  "design_adjustment": "Bow-to-column gold support was added for user-requested solid assembled reference. FBX face counts describe the original assets.",
+  "selected_asset": "ML_049_bluetower_add blue standard archer tower",
+  "source_prefab_mapping_verified": true,
+  "exact_live_Junei_mid_lane_instance_verified": false
+}

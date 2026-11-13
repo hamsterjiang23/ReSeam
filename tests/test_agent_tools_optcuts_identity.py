@@ -24,3 +24,17 @@ def test_optcuts_original_indices_survive_scientific_rounding(tmp_path: Path) ->
     path.write_text(path.read_text().replace("1.234568e-01", "9.234568e-01"), encoding="utf-8")
     with pytest.raises(ValueError, match="IDENTITY_AMBIGUOUS"):
         _import_optcuts(source, path)
+
+
+def test_reordered_coincident_opposite_faces_use_winding(tmp_path: Path) -> None:
+    vertices = np.tile(np.array([[0., 0., 0.], [1., 0., 0.], [0., 1., 0.]]), (2, 1))
+    faces = np.array([[0, 1, 2], [3, 5, 4]])
+    source = state_from_corner_uv(make_mesh(vertices, faces), np.zeros((2, 3, 2)), corner_ids=faces)
+    path = tmp_path / "opposite.obj"
+    path.write_text("v 0 0 0\nv 1 0 0\nv 0 1 0\n"
+                    "vt 0 0\nvt 1 0\nvt 0 1\n"
+                    "f 1/1 3/3 2/2\nf 1/1 2/2 3/3\n", encoding="utf-8")
+    imported = _import_optcuts(source, path)
+    np.testing.assert_array_equal(imported.mesh.faces, faces)
+    np.testing.assert_allclose(imported.uv[imported.uv_faces],
+        [[[0, 0], [1, 0], [0, 1]], [[0, 0], [0, 1], [1, 0]]])

@@ -1,0 +1,132 @@
+制作档案  /  防御塔  /  UV 整理与镜像复用
+这座防御塔，是怎样整理成24份共用图案的？
+沿用龙案例的观察、展开、共享、烘焙与看图流程，根据塔的结构继续调整。
+[verified: S1 results / protocol; S3 negative mirror; S4 appearance_review]
+来源编号 S1-S5 见第6页。图像均取自已保存的模型、UV 与实际渲染。
+01 / 06
+输入模型 · 源贴图外观
+成品 · 2K颜色与法线
+成品 · 24个共享图块
+统一实验输入
+7,278 三角形
+[verified: S1]
+裁切镜像后的几何
+7,650 三角形
+[verified: S1]
+左右两侧共用图案
+48 岛 / 24 图块
+[verified: S1]
+最终UV覆盖率
+56.82%
+[verified: S1]
+制作顺序  输入检查 → 多方法展开 → 连续部件整理 → 半边镜像 → 继续合岛 → 重烘焙与看图
+
+制作档案  /  防御塔  /  UV 整理与镜像复用
+先跑各个方法，取得这座塔的真实对照
+同一份7,278三角形输入，逐方法保存原生UV、排布、贴图和运行日志。
+[verified: S1 rows; S5 native results / native_repaired; each evaluation folder]
+来源编号 S1-S5 见第6页。图像均取自已保存的模型、UV 与实际渲染。
+02 / 06
+FlattenAnything
+4岛，UV重叠，烘焙失败
+OptCuts
+程序运行记录
+原生运行退出后，增加已保存切缝再试，达到时
+间上限。
+[verified: S5]
+原生退出，修复重试2400秒超时
+xatlas
+363岛，完成颜色与法线烘焙
+Blender Smart UV
+836岛，完成颜色与法线烘焙
+PartUV
+120岛，完成颜色与法线烘焙
+MeshQuery 项目实现
+108岛，采用Minimum Stretch修正
+本次ReSeam从查询、接缝重建与Blender展开结果继续制作。[verified: S2 craft / optimization]
+
+制作档案  /  防御塔  /  UV 整理与镜像复用
+原形先接起连续部件，再尝试合岛与共享
+统一副本移除3个零面积三角形，并拆分异常连接，保留其余面角位置与原UV。
+[verified: S1 integrity.zero_area_repair; S2 seam_decision / merge_plan; S1 rows]
+来源编号 S1-S5 见第6页。图像均取自已保存的模型、UV 与实际渲染。
+03 / 06
+原始索引 · 3,998岛
+保留原UV作为起点
+[verified: S1 / S2]
+连续部件重展开 · 108岛
+用真实原边记录开口并重新展开
+[verified: S1 / S2]
+继续删缝合岛 · 82岛
+合并26组相邻区域，再用Minimum Stretch展开
+[verified: S1 / S2]
+3,998按原始UV索引邻接统计，后续沿真实原边重建连续UV。[verified: S1 / S2]
+原形部件共享也完成了
+13组共享，108岛 / 95图块，实测共享表面约33.98%。采用最多4像素的显式边界延拓目标。[verified: S1 / S4]
+
+制作档案  /  防御塔  /  UV 整理与镜像复用
+沿中线保留一侧，镜像出完整的塔
+选用负X侧作为来源，保存裁切、三角化和逐面对应，再建立共享与无共享版本。
+[verified: S3 negative_clean / positive_clean mirror_variant; S1 mirror_negative rows]
+来源编号 S1-S5 见第6页。图像均取自已保存的模型、UV 与实际渲染。
+04 / 06
+中线示意 · 保留负X侧
+x = 0 裁切平面
+镜像后无共享 · 124岛 / 124图块
+两侧共用 · 124岛 / 62图块
+源侧选择依据
+负侧未检出中线薄条，正侧检出14个候选。
+[verified: S3]
+两版均为7,650三角形，几何来自相同镜像来源。[verified:
+S1 / S3]
+每对表面共享一份图案，保存同几何无共享对照。[verified:
+S3]
+镜像会把来源侧的小装饰与纹理带到另一侧，中央装饰与宝石在近景中继续检查。[verified: S4]
+
+制作档案  /  防御塔  /  UV 整理与镜像复用
+继续处理整块接缝，把共享图块从62份做到24份
+在来源侧逐步删去相邻区域的共同边界，重展开后重新生成镜像版本，逐版烘焙与看图。
+[verified: S2 merge_plan / aggressive_merge_plan / exhaustive_merge_plan; S1 mirror rows]
+来源编号 S1-S5 见第6页。图像均取自已保存的模型、UV 与实际渲染。
+05 / 06
+两侧共享
+124 岛 / 62 图块
+覆盖率 60.23%
+局部合岛
+102 岛 / 51 图块
+覆盖率 56.44%
+扩大合岛
+50 岛 / 25 图块
+覆盖率 56.71%
+本轮保留
+48 岛 / 24 图块
+覆盖率 56.82%
+最终同几何对照
+同为48个UV岛，解除共享后摆48份，共享版摆24份。两版均完成颜色与法线烘焙。[verified: S1]
+共享版覆盖56.82%，无共享版57.11%。两版2K解码贴图与完整mip均为67,108,860字节。[verified: S1]
+
+制作档案  /  防御塔  /  UV 整理与镜像复用
+把颜色与法线烘回去，再看实物与近景
+最终使用2048²颜色和法线，保留导入逐角法线，按新UV重算切线并处理镜像方向。
+[verified: S1 protocol / final row; S4 member_audit / appearance_review / integrity]
+来源编号 S1-S5 见第6页。图像均取自已保存的模型、UV 与实际渲染。
+06 / 06
+源贴图颜色
+24图块颜色
+源法线侧光
+24图块法线侧光
+ 保留的交付与验收状态
+最终48岛 / 24图块，八个全身视角和弓臂、装饰、
+底座近景已由Agent查看并保留。[verified: S4]
+21份导出模型已重读核对，完整mip哈希与尺寸通过
+检查。[verified: S4 integrity]
+UV采样预检有失败项，数值结果保持诊断状态。人工
+美术与游戏Shader待验收。[verified: S4 preflight /
+protocol]
+打开完整图文报告
+打开Blender对照场景
+打开最终24图块模型
+资料索引  artifacts/tower_uv_comparison/round02/
+S1  report/results.json、protocol.json     S2  craft/、optimization/*merge_plan.json     S3  mirror/*/mirror_variant.json
+S4  report/appearance_review.json、integrity.json、final_preflight/     S5  ../round01/native_retry/、native_repaired/
+逐图来源、文件哈希与模型路径随PDF保存于evidence.json。预览粗糙度固定0.6、金属度固定0。[verified: S1 / S4]

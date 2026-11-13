@@ -1,0 +1,2274 @@
+<!doctype html><meta charset="utf-8"><title>防御塔 UV 全方法实验</title><style>body{font-family:Microsoft YaHei,sans-serif;background:#eff4f8;color:#173651;margin:25px}img{width:100%;height:auto}section{background:white;padding:20px;margin:20px 0}pre{white-space:pre-wrap;word-break:break-all}a{color:#0866a2}</style><h1>防御塔 UV 全方法实验</h1><p><a href="metrics.csv">CSV 指标</a> · <a href="results.json">完整来源清单</a> · <a href="../../../../artifacts/tower_uv_comparison/round02/comparison.blend">Blender 对照场景</a></p><img src="UV全方法对照.png"><img src="颜色与法线对照.png"><img src="关键部位近景对照.png"><section><h2>原 UV · 统一 2K</h2><p>已烘焙／已导出 · <a href="../../../../artifacts/tower_uv_comparison/round02/evaluation/source_uv_2048/export/asset.glb">GLB 模型</a></p><img src="source_uv_contact.png" loading="lazy"><details><summary>来源、指标、数值与状态</summary><pre>{
+  &quot;method&quot;: &quot;source_uv&quot;,
+  &quot;title&quot;: &quot;原 UV · 统一 2K&quot;,
+  &quot;snapshot&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\normal_repair\\snapshot\\snapshot.json&quot;,
+  &quot;folder&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\source_uv_2048&quot;,
+  &quot;status&quot;: &quot;已烘焙／已导出&quot;,
+  &quot;human&quot;: &quot;未验收&quot;,
+  &quot;game&quot;: &quot;未验收&quot;,
+  &quot;faces&quot;: 7278,
+  &quot;charts&quot;: 3998,
+  &quot;owners&quot;: 3998,
+  &quot;groups&quot;: 0,
+  &quot;declared_shared_surface_fraction&quot;: 0.0,
+  &quot;anisotropy_p50&quot;: 1.0764274275708865,
+  &quot;anisotropy_p95&quot;: 1.446097693679755,
+  &quot;state_hash&quot;: &quot;7c47a5f924e370af1deef3ba5994341f5ac4c50cb181d6d02652db61753fc972&quot;,
+  &quot;coverage&quot;: 0.7031867893233339,
+  &quot;minimum_gap&quot;: 0.0,
+  &quot;minimum_border&quot;: 2.37567138671875,
+  &quot;hard_geometry&quot;: false,
+  &quot;measured_shared_surface_fraction&quot;: null,
+  &quot;model&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\source_uv_2048\\export\\asset.glb&quot;,
+  &quot;texture_file_bytes&quot;: 16768094,
+  &quot;decoded_mip_bytes&quot;: 67108860,
+  &quot;mip_count&quot;: 12,
+  &quot;numerical_status&quot;: &quot;DIAGNOSTIC&quot;,
+  &quot;mips&quot;: [
+    {
+      &quot;mip&quot;: 0,
+      &quot;mean&quot;: [
+        0.004621187750332369,
+        0.5105645283230015,
+        2.2107594372602475e-17,
+        2.3841857932395032e-08,
+        0.0
+      ],
+      &quot;p95&quot;: [
+        0.012378735746507361,
+        2.0949530694511953,
+        2.220446049250313e-16,
+        2.3841858043383013e-08,
+        0.0
+      ],
+      &quot;maximum&quot;: [
+        0.2976734655291558,
+        54.96655215319291,
+        2.220446049250313e-16,
+        2.3841858154405315e-08,
+        0.0
+      ],
+      &quot;invalid&quot;: 0,
+      &quot;samples&quot;: 29112
+    },
+    {
+      &quot;mip&quot;: 1,
+      &quot;mean&quot;: [
+        0.009645292129341903,
+        2.026061836191756,
+        2.184064049886051e-17,
+        2.3841857932692496e-08,
+        0.0
+      ],
+      &quot;p95&quot;: [
+        0.031527578646107786,
+        7.048883571457173,
+        2.220446049250313e-16,
+        2.3841858043383013e-08,
+        0.0
+      ],
+      &quot;maximum&quot;: [
+        0.4007648829470226,
+        49.88951834321142,
+        2.220446049250313e-16,
+        2.3841858154405315e-08,
+        0.0
+      ],
+      &quot;invalid&quot;: 0,
+      &quot;samples&quot;: 29112
+    },
+    {
+      &quot;mip&quot;: 2,
+      &quot;mean&quot;: [
+        0.01903396087059465,
+        5.000598286288668,
+        2.139063254026691e-17,
+        2.3841857932429357e-08,
+        0.0
+      ],
+      &quot;p95&quot;: [
+        0.07184172201472681,
+        15.695278132980542,
+        2.220446049250313e-16,
+        2.3841858043383013e-08,
+        0.0
+      ],
+      &quot;maximum&quot;: [
+        0.6351357198922417,
+        69.89179868698432,
+        2.220446049250313e-16,
+        2.3841858154405315e-08,
+        0.0
+      ],
+      &quot;invalid&quot;: 0,
+      &quot;samples&quot;: 29112
+    }
+  ],
+  &quot;reimport_match&quot;: true,
+  &quot;checker&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\source_uv_2048\\uv_views\\front.png&quot;,
+  &quot;uv&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\source_uv_2048\\uv_views\\uv.png&quot;
+}</pre></details></section><section><h2>FlattenAnything</h2><p>UV 重叠，烘焙未完成 · 保留失败证据</p><details><summary>来源、指标、数值与状态</summary><pre>{
+  &quot;method&quot;: &quot;flatten_anything&quot;,
+  &quot;title&quot;: &quot;FlattenAnything&quot;,
+  &quot;snapshot&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\flatten_anything_2048\\pack43\\snapshot\\snapshot.json&quot;,
+  &quot;folder&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\flatten_anything_2048&quot;,
+  &quot;status&quot;: &quot;UV 重叠，烘焙未完成&quot;,
+  &quot;human&quot;: &quot;未验收&quot;,
+  &quot;game&quot;: &quot;未验收&quot;,
+  &quot;faces&quot;: 7278,
+  &quot;charts&quot;: 4,
+  &quot;owners&quot;: 4,
+  &quot;groups&quot;: 0,
+  &quot;declared_shared_surface_fraction&quot;: 0.0,
+  &quot;anisotropy_p50&quot;: 2.365874216773073,
+  &quot;anisotropy_p95&quot;: 50.40021638146248,
+  &quot;state_hash&quot;: &quot;713732cda34df4b40639728e0ab5a35d45b9e7872dceed3ad38ef0722e40cf2c&quot;,
+  &quot;coverage&quot;: null,
+  &quot;minimum_gap&quot;: null,
+  &quot;minimum_border&quot;: null,
+  &quot;hard_geometry&quot;: false,
+  &quot;measured_shared_surface_fraction&quot;: null,
+  &quot;model&quot;: null,
+  &quot;texture_file_bytes&quot;: null,
+  &quot;decoded_mip_bytes&quot;: null,
+  &quot;mip_count&quot;: null,
+  &quot;numerical_status&quot;: null,
+  &quot;mips&quot;: [],
+  &quot;reimport_match&quot;: null,
+  &quot;checker&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\flatten_anything_2048\\uv_views\\front.png&quot;,
+  &quot;uv&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\flatten_anything_2048\\uv_views\\uv.png&quot;,
+  &quot;reason&quot;: &quot;UNAUTHORIZED_PBR_RASTER_OVERLAP:33&quot;
+}</pre></details></section><section><h2>OptCuts</h2><p>原生失败；切缝修复后超时 · 保留失败证据</p><details><summary>来源、指标、数值与状态</summary><pre>{
+  &quot;method&quot;: &quot;optcuts&quot;,
+  &quot;title&quot;: &quot;OptCuts&quot;,
+  &quot;snapshot&quot;: null,
+  &quot;folder&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\optcuts_2048&quot;,
+  &quot;status&quot;: &quot;原生失败；切缝修复后超时&quot;,
+  &quot;human&quot;: &quot;未验收&quot;,
+  &quot;game&quot;: &quot;未验收&quot;,
+  &quot;faces&quot;: 7278,
+  &quot;coverage&quot;: null,
+  &quot;minimum_gap&quot;: null,
+  &quot;minimum_border&quot;: null,
+  &quot;hard_geometry&quot;: null,
+  &quot;measured_shared_surface_fraction&quot;: null,
+  &quot;model&quot;: null,
+  &quot;texture_file_bytes&quot;: null,
+  &quot;decoded_mip_bytes&quot;: null,
+  &quot;mip_count&quot;: null,
+  &quot;numerical_status&quot;: null,
+  &quot;mips&quot;: [],
+  &quot;reimport_match&quot;: null,
+  &quot;checker&quot;: null,
+  &quot;uv&quot;: null
+}</pre></details></section><section><h2>xatlas</h2><p>已烘焙／已导出 · <a href="../../../../artifacts/tower_uv_comparison/round02/evaluation/xatlas_2048/export/asset.glb">GLB 模型</a></p><img src="xatlas_contact.png" loading="lazy"><details><summary>来源、指标、数值与状态</summary><pre>{
+  &quot;method&quot;: &quot;xatlas&quot;,
+  &quot;title&quot;: &quot;xatlas&quot;,
+  &quot;snapshot&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\xatlas_2048\\pack29\\snapshot\\snapshot.json&quot;,
+  &quot;folder&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\xatlas_2048&quot;,
+  &quot;status&quot;: &quot;已烘焙／已导出&quot;,
+  &quot;human&quot;: &quot;未验收&quot;,
+  &quot;game&quot;: &quot;未验收&quot;,
+  &quot;faces&quot;: 7278,
+  &quot;charts&quot;: 363,
+  &quot;owners&quot;: 363,
+  &quot;groups&quot;: 0,
+  &quot;declared_shared_surface_fraction&quot;: 0.0,
+  &quot;anisotropy_p50&quot;: 1.0253451093388035,
+  &quot;anisotropy_p95&quot;: 1.2297767740523606,
+  &quot;state_hash&quot;: &quot;df11032f53a59511e992060d2b4560dfb5dde4f3cbdb011e0e8948a0d312d0c9&quot;,
+  &quot;coverage&quot;: 0.35034378296412355,
+  &quot;minimum_gap&quot;: 17.703850198815626,
+  &quot;minimum_border&quot;: 9.999999999999886,
+  &quot;hard_geometry&quot;: true,
+  &quot;measured_shared_surface_fraction&quot;: 0.0,
+  &quot;model&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\xatlas_2048\\export\\asset.glb&quot;,
+  &quot;texture_file_bytes&quot;: 13522691,
+  &quot;decoded_mip_bytes&quot;: 67108860,
+  &quot;mip_count&quot;: 12,
+  &quot;numerical_status&quot;: &quot;DIAGNOSTIC&quot;,
+  &quot;mips&quot;: [
+    {
+      &quot;mip&quot;: 0,
+      &quot;mean&quot;: [
+        0.006807856897283594,
+        1.51885904322043,
+        2.1882590393305675e-17,
+        2.3841857932585714e-08,
+        0.0
+      ],
+      &quot;p95&quot;: [
+        0.020176479892168673,
+        5.694331953908304,
+        2.220446049250313e-16,
+        2.3841858043383013e-08,
+        0.0
+      ],
+      &quot;maximum&quot;: [
+        0.7041580076417504,
+        71.97626454318814,
+        2.220446049250313e-16,
+        2.3841858154405315e-08,
+        0.0
+      ],
+      &quot;invalid&quot;: 0,
+      &quot;samples&quot;: 29112
+    },
+    {
+      &quot;mip&quot;: 1,
+      &quot;mean&quot;: [
+        0.013267003274701327,
+        3.549918890241796,
+        2.0883420180157176e-17,
+        2.384185793237978e-08,
+        0.0
+      ],
+      &quot;p95&quot;: [
+        0.04673781160832684,
+        11.677935912107966,
+        2.220446049250313e-16,
+        2.3841858043383013e-08,
+        0.0
+      ],
+      &quot;maximum&quot;: [
+        0.6235338633887924,
+        59.67632195967007,
+        2.220446049250313e-16,
+        2.3841858154405315e-08,
+        0.0
+      ],
+      &quot;invalid&quot;: 0,
+      &quot;samples&quot;: 29112
+    },
+    {
+      &quot;mip&quot;: 2,
+      &quot;mean&quot;: [
+        0.02409040505919504,
+        6.880083557028054,
+        2.1272410110466897e-17,
+        2.3841857932661986e-08,
+        0.0
+      ],
+      &quot;p95&quot;: [
+        0.09209731073732201,
+        20.61760704633055,
+        2.220446049250313e-16,
+        2.3841858043383013e-08,
+        0.0
+      ],
+      &quot;maximum&quot;: [
+        0.6867424692821017,
+        55.30541949572828,
+        2.220446049250313e-16,
+        2.3841858154405315e-08,
+        0.0
+      ],
+      &quot;invalid&quot;: 0,
+      &quot;samples&quot;: 29112
+    }
+  ],
+  &quot;reimport_match&quot;: true,
+  &quot;checker&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\xatlas_2048\\uv_views\\front.png&quot;,
+  &quot;uv&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\xatlas_2048\\uv_views\\uv.png&quot;
+}</pre></details></section><section><h2>Blender Smart UV</h2><p>已烘焙／已导出 · <a href="../../../../artifacts/tower_uv_comparison/round02/evaluation/blender_smart_2048/export/asset.glb">GLB 模型</a></p><img src="blender_smart_contact.png" loading="lazy"><details><summary>来源、指标、数值与状态</summary><pre>{
+  &quot;method&quot;: &quot;blender_smart&quot;,
+  &quot;title&quot;: &quot;Blender Smart UV&quot;,
+  &quot;snapshot&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\blender_smart_2048\\pack43\\snapshot\\snapshot.json&quot;,
+  &quot;folder&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\blender_smart_2048&quot;,
+  &quot;status&quot;: &quot;已烘焙／已导出&quot;,
+  &quot;human&quot;: &quot;未验收&quot;,
+  &quot;game&quot;: &quot;未验收&quot;,
+  &quot;faces&quot;: 7278,
+  &quot;charts&quot;: 836,
+  &quot;owners&quot;: 836,
+  &quot;groups&quot;: 0,
+  &quot;declared_shared_surface_fraction&quot;: 0.0,
+  &quot;anisotropy_p50&quot;: 1.1315413838857635,
+  &quot;anisotropy_p95&quot;: 1.4875624367163935,
+  &quot;state_hash&quot;: &quot;8328bb0f13655c78b08ee67c977660cf1eb7ea056a9b4b6b743c377466f42dbd&quot;,
+  &quot;coverage&quot;: 0.28084670589475946,
+  &quot;minimum_gap&quot;: 18.258561782000445,
+  &quot;minimum_border&quot;: 9.999999999999886,
+  &quot;hard_geometry&quot;: true,
+  &quot;measured_shared_surface_fraction&quot;: 0.0,
+  &quot;model&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\blender_smart_2048\\export\\asset.glb&quot;,
+  &quot;texture_file_bytes&quot;: 13247298,
+  &quot;decoded_mip_bytes&quot;: 67108860,
+  &quot;mip_count&quot;: 12,
+  &quot;numerical_status&quot;: &quot;DIAGNOSTIC&quot;,
+  &quot;mips&quot;: [
+    {
+      &quot;mip&quot;: 0,
+      &quot;mean&quot;: [
+        0.00871757340349473,
+        1.9489073838797182,
+        2.127622373723464e-17,
+        8.447073449522284e-05,
+        0.0
+      ],
+      &quot;p95&quot;: [
+        0.026763437843672983,
+        7.2973330543570825,
+        2.220446049250313e-16,
+        2.3841858043383013e-08,
+        0.0
+      ],
+      &quot;maximum&quot;: [
+        0.9171736171388055,
+        63.679593340042494,
+        2.220446049250313e-16,
+        0.3999999761581421,
+        0.0
+      ],
+      &quot;invalid&quot;: 7,
+      &quot;samples&quot;: 29112
+    },
+    {
+      &quot;mip&quot;: 1,
+      &quot;mean&quot;: [
+        0.015815639048383633,
+        4.044348010921696,
+        2.1463091448854017e-17,
+        8.825426465951484e-05,
+        0.0
+      ],
+      &quot;p95&quot;: [
+        0.056979023262834376,
+        13.24274797862035,
+        2.220446049250313e-16,
+        2.3841858043383013e-08,
+        0.0
+      ],
+      &quot;maximum&quot;: [
+        0.9171736171388055,
+        62.385447502384984,
+        2.220446049250313e-16,
+        0.3999999761581421,
+        0.0
+      ],
+      &quot;invalid&quot;: 9,
+      &quot;samples&quot;: 29112
+    },
+    {
+      &quot;mip&quot;: 2,
+      &quot;mean&quot;: [
+        0.02640673502808431,
+        7.202173387168665,
+        2.1424955181176593e-17,
+        9.363219800411157e-05,
+        0.0
+      ],
+      &quot;p95&quot;: [
+        0.10012157700269264,
+        21.375869737144267,
+        2.220446049250313e-16,
+        2.3841858043383013e-08,
+        0.0
+      ],
+      &quot;maximum&quot;: [
+        0.9171736171388055,
+        65.96667313883648,
+        2.220446049250313e-16,
+        0.3999999761581421,
+        0.0
+      ],
+      &quot;invalid&quot;: 10,
+      &quot;samples&quot;: 29112
+    }
+  ],
+  &quot;reimport_match&quot;: true,
+  &quot;checker&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\blender_smart_2048\\uv_views\\front.png&quot;,
+  &quot;uv&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\blender_smart_2048\\uv_views\\uv.png&quot;
+}</pre></details></section><section><h2>PartUV</h2><p>已烘焙／已导出 · <a href="../../../../artifacts/tower_uv_comparison/round02/evaluation/partuv_2048/export/asset.glb">GLB 模型</a></p><img src="partuv_contact.png" loading="lazy"><details><summary>来源、指标、数值与状态</summary><pre>{
+  &quot;method&quot;: &quot;partuv&quot;,
+  &quot;title&quot;: &quot;PartUV&quot;,
+  &quot;snapshot&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\partuv_2048\\pack17\\snapshot\\snapshot.json&quot;,
+  &quot;folder&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\partuv_2048&quot;,
+  &quot;status&quot;: &quot;已烘焙／已导出&quot;,
+  &quot;human&quot;: &quot;未验收&quot;,
+  &quot;game&quot;: &quot;未验收&quot;,
+  &quot;faces&quot;: 7278,
+  &quot;charts&quot;: 120,
+  &quot;owners&quot;: 120,
+  &quot;groups&quot;: 0,
+  &quot;declared_shared_surface_fraction&quot;: 0.0,
+  &quot;anisotropy_p50&quot;: 1.0683418938956,
+  &quot;anisotropy_p95&quot;: 1.4079860919642675,
+  &quot;state_hash&quot;: &quot;6cfc60b4a11faa2b41ec87f5f3aa5a95447a08d8e9bfe273bc9e79f4b027104f&quot;,
+  &quot;coverage&quot;: 0.4575269306087374,
+  &quot;minimum_gap&quot;: 18.189653492101844,
+  &quot;minimum_border&quot;: 10.0,
+  &quot;hard_geometry&quot;: true,
+  &quot;measured_shared_surface_fraction&quot;: 0.0,
+  &quot;model&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\partuv_2048\\export\\asset.glb&quot;,
+  &quot;texture_file_bytes&quot;: 14493408,
+  &quot;decoded_mip_bytes&quot;: 67108860,
+  &quot;mip_count&quot;: 12,
+  &quot;numerical_status&quot;: &quot;DIAGNOSTIC&quot;,
+  &quot;mips&quot;: [
+    {
+      &quot;mip&quot;: 0,
+      &quot;mean&quot;: [
+        0.00570857676085964,
+        1.3347505104612007,
+        2.143639606147982e-17,
+        2.3841857932681054e-08,
+        0.0
+      ],
+      &quot;p95&quot;: [
+        0.016059446096233193,
+        5.049566852143912,
+        2.220446049250313e-16,
+        2.3841858043383013e-08,
+        0.0
+      ],
+      &quot;maximum&quot;: [
+        0.40687271033668354,
+        71.65823815277571,
+        2.220446049250313e-16,
+        2.3841858154405315e-08,
+        0.0
+      ],
+      &quot;invalid&quot;: 0,
+      &quot;samples&quot;: 29112
+    },
+    {
+      &quot;mip&quot;: 1,
+      &quot;mean&quot;: [
+        0.011711957083445662,
+        3.1873494074106414,
+        2.1207578455415276e-17,
+        2.3841857932459866e-08,
+        0.0
+      ],
+      &quot;p95&quot;: [
+        0.041625221287241554,
+        10.603672757882064,
+        2.220446049250313e-16,
+        2.3841858043383013e-08,
+        0.0
+      ],
+      &quot;maximum&quot;: [
+        0.5927100302748397,
+        52.25726162421178,
+        2.220446049250313e-16,
+        2.3841858154405315e-08,
+        0.0
+      ],
+      &quot;invalid&quot;: 0,
+      &quot;samples&quot;: 29112
+    },
+    {
+      &quot;mip&quot;: 2,
+      &quot;mean&quot;: [
+        0.022622564510834917,
+        6.552542081396053,
+        2.185970863269922e-17,
+        2.384185793258953e-08,
+        0.0
+      ],
+      &quot;p95&quot;: [
+        0.0865724454423658,
+        19.92453616473196,
+        2.220446049250313e-16,
+        2.3841858043383013e-08,
+        0.0
+      ],
+      &quot;maximum&quot;: [
+        0.6621722814065774,
+        67.79256487867089,
+        2.220446049250313e-16,
+        2.3841858154405315e-08,
+        0.0
+      ],
+      &quot;invalid&quot;: 0,
+      &quot;samples&quot;: 29112
+    }
+  ],
+  &quot;reimport_match&quot;: true,
+  &quot;checker&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\partuv_2048\\uv_views\\front.png&quot;,
+  &quot;uv&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\partuv_2048\\uv_views\\uv.png&quot;
+}</pre></details></section><section><h2>MeshQuery 项目实现</h2><p>已烘焙／已导出 · <a href="../../../../artifacts/tower_uv_comparison/round02/evaluation/meshquery_repaired_2048/export/asset.glb">GLB 模型</a></p><img src="meshquery_project_contact.png" loading="lazy"><details><summary>来源、指标、数值与状态</summary><pre>{
+  &quot;method&quot;: &quot;meshquery_project&quot;,
+  &quot;title&quot;: &quot;MeshQuery 项目实现&quot;,
+  &quot;snapshot&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\meshquery_repaired_2048\\pack17\\snapshot\\snapshot.json&quot;,
+  &quot;folder&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\meshquery_repaired_2048&quot;,
+  &quot;status&quot;: &quot;已烘焙／已导出&quot;,
+  &quot;human&quot;: &quot;未验收&quot;,
+  &quot;game&quot;: &quot;未验收&quot;,
+  &quot;retained_prior_attempt&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\meshquery_project_2048&quot;,
+  &quot;variant_method&quot;: &quot;meshquery_repaired&quot;,
+  &quot;faces&quot;: 7278,
+  &quot;charts&quot;: 108,
+  &quot;owners&quot;: 108,
+  &quot;groups&quot;: 0,
+  &quot;declared_shared_surface_fraction&quot;: 0.0,
+  &quot;anisotropy_p50&quot;: 1.0988306050602668,
+  &quot;anisotropy_p95&quot;: 1.4985564143776475,
+  &quot;state_hash&quot;: &quot;81770882e3c6844d59a6baa015570082f3d25831c6d8ec8e8b2c37c53a1f14aa&quot;,
+  &quot;coverage&quot;: 0.5092612701947757,
+  &quot;minimum_gap&quot;: 18.240066657116714,
+  &quot;minimum_border&quot;: 9.999999999999886,
+  &quot;hard_geometry&quot;: true,
+  &quot;measured_shared_surface_fraction&quot;: 0.0,
+  &quot;model&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\meshquery_repaired_2048\\export\\asset.glb&quot;,
+  &quot;texture_file_bytes&quot;: 14585033,
+  &quot;decoded_mip_bytes&quot;: 67108860,
+  &quot;mip_count&quot;: 12,
+  &quot;numerical_status&quot;: &quot;DIAGNOSTIC&quot;,
+  &quot;mips&quot;: [
+    {
+      &quot;mip&quot;: 0,
+      &quot;mean&quot;: [
+        0.005420067857338981,
+        1.0737621226730576,
+        2.0753756870053937e-17,
+        2.384185793230732e-08,
+        0.0
+      ],
+      &quot;p95&quot;: [
+        0.014985741463626443,
+        3.99277880058637,
+        2.220446049250313e-16,
+        2.3841858043383013e-08,
+        0.0
+      ],
+      &quot;maximum&quot;: [
+        0.3209775019336264,
+        56.24300785272372,
+        2.220446049250313e-16,
+        2.3841858154405315e-08,
+        0.0
+      ],
+      &quot;invalid&quot;: 0,
+      &quot;samples&quot;: 29112
+    },
+    {
+      &quot;mip&quot;: 1,
+      &quot;mean&quot;: [
+        0.011069022311255656,
+        2.753880351437466,
+        2.1524109477137894e-17,
+        2.3841857932402662e-08,
+        0.0
+      ],
+      &quot;p95&quot;: [
+        0.03791050526896817,
+        9.218578855204553,
+        2.220446049250313e-16,
+        2.3841858043383013e-08,
+        0.0
+      ],
+      &quot;maximum&quot;: [
+        0.4949198358172973,
+        52.075792409381734,
+        2.220446049250313e-16,
+        2.3841858154405315e-08,
+        0.0
+      ],
+      &quot;invalid&quot;: 0,
+      &quot;samples&quot;: 29112
+    },
+    {
+      &quot;mip&quot;: 2,
+      &quot;mean&quot;: [
+        0.021307566578659513,
+        5.878937767648967,
+        2.1710977188757268e-17,
+        2.384185793253995e-08,
+        0.0
+      ],
+      &quot;p95&quot;: [
+        0.081069446202616,
+        17.8929043828784,
+        2.220446049250313e-16,
+        2.3841858043383013e-08,
+        0.0
+      ],
+      &quot;maximum&quot;: [
+        0.6123172457912094,
+        59.638358688197364,
+        2.220446049250313e-16,
+        2.3841858154405315e-08,
+        0.0
+      ],
+      &quot;invalid&quot;: 0,
+      &quot;samples&quot;: 29112
+    }
+  ],
+  &quot;reimport_match&quot;: true,
+  &quot;checker&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\meshquery_repaired_2048\\uv_views\\front.png&quot;,
+  &quot;uv&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\meshquery_repaired_2048\\uv_views\\uv.png&quot;
+}</pre></details></section><section><h2>ReSeam 原形无共享</h2><p>已烘焙／已导出 · <a href="../../../../artifacts/tower_uv_comparison/round02/evaluation/reseam_unshared_2048/export/asset.glb">GLB 模型</a></p><img src="reseam_unshared_contact.png" loading="lazy"><details><summary>来源、指标、数值与状态</summary><pre>{
+  &quot;method&quot;: &quot;reseam_unshared&quot;,
+  &quot;title&quot;: &quot;ReSeam 原形无共享&quot;,
+  &quot;snapshot&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_unshared_2048\\pack17\\snapshot\\snapshot.json&quot;,
+  &quot;folder&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_unshared_2048&quot;,
+  &quot;status&quot;: &quot;已烘焙／已导出&quot;,
+  &quot;human&quot;: &quot;未验收&quot;,
+  &quot;game&quot;: &quot;未验收&quot;,
+  &quot;faces&quot;: 7278,
+  &quot;charts&quot;: 108,
+  &quot;owners&quot;: 108,
+  &quot;groups&quot;: 0,
+  &quot;declared_shared_surface_fraction&quot;: 0.0,
+  &quot;anisotropy_p50&quot;: 1.0988306050602668,
+  &quot;anisotropy_p95&quot;: 1.4985564143776475,
+  &quot;state_hash&quot;: &quot;e94d0eadf83ef595a83ef81005c17aa61c702cc5438ed1b0175f4bd82a658cc2&quot;,
+  &quot;coverage&quot;: 0.5092612701947757,
+  &quot;minimum_gap&quot;: 18.240066657116714,
+  &quot;minimum_border&quot;: 9.999999999999886,
+  &quot;hard_geometry&quot;: true,
+  &quot;measured_shared_surface_fraction&quot;: 0.0,
+  &quot;model&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_unshared_2048\\export\\asset.glb&quot;,
+  &quot;texture_file_bytes&quot;: 14584670,
+  &quot;decoded_mip_bytes&quot;: 67108860,
+  &quot;mip_count&quot;: 12,
+  &quot;numerical_status&quot;: &quot;DIAGNOSTIC&quot;,
+  &quot;mips&quot;: [
+    {
+      &quot;mip&quot;: 0,
+      &quot;mean&quot;: [
+        0.005420067857338981,
+        1.0737621226730576,
+        2.0753756870053937e-17,
+        2.384185793230732e-08,
+        0.0
+      ],
+      &quot;p95&quot;: [
+        0.014985741463626443,
+        3.99277880058637,
+        2.220446049250313e-16,
+        2.3841858043383013e-08,
+        0.0
+      ],
+      &quot;maximum&quot;: [
+        0.3209775019336264,
+        56.24300785272372,
+        2.220446049250313e-16,
+        2.3841858154405315e-08,
+        0.0
+      ],
+      &quot;invalid&quot;: 0,
+      &quot;samples&quot;: 29112
+    },
+    {
+      &quot;mip&quot;: 1,
+      &quot;mean&quot;: [
+        0.011069022311255656,
+        2.753880351437466,
+        2.1524109477137894e-17,
+        2.3841857932402662e-08,
+        0.0
+      ],
+      &quot;p95&quot;: [
+        0.03791050526896817,
+        9.218578855204553,
+        2.220446049250313e-16,
+        2.3841858043383013e-08,
+        0.0
+      ],
+      &quot;maximum&quot;: [
+        0.4949198358172973,
+        52.075792409381734,
+        2.220446049250313e-16,
+        2.3841858154405315e-08,
+        0.0
+      ],
+      &quot;invalid&quot;: 0,
+      &quot;samples&quot;: 29112
+    },
+    {
+      &quot;mip&quot;: 2,
+      &quot;mean&quot;: [
+        0.021307566578659513,
+        5.878937767648967,
+        2.1710977188757268e-17,
+        2.384185793253995e-08,
+        0.0
+      ],
+      &quot;p95&quot;: [
+        0.081069446202616,
+        17.8929043828784,
+        2.220446049250313e-16,
+        2.3841858043383013e-08,
+        0.0
+      ],
+      &quot;maximum&quot;: [
+        0.6123172457912094,
+        59.638358688197364,
+        2.220446049250313e-16,
+        2.3841858154405315e-08,
+        0.0
+      ],
+      &quot;invalid&quot;: 0,
+      &quot;samples&quot;: 29112
+    }
+  ],
+  &quot;reimport_match&quot;: true,
+  &quot;checker&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_unshared_2048\\uv_views\\front.png&quot;,
+  &quot;uv&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_unshared_2048\\uv_views\\uv.png&quot;
+}</pre></details></section><section><h2>ReSeam 原形共享</h2><p>已烘焙／已导出 · <a href="../../../../artifacts/tower_uv_comparison/round02/evaluation/reseam_shared_boundary_2048/export/asset.glb">GLB 模型</a></p><img src="reseam_shared_contact.png" loading="lazy"><details><summary>来源、指标、数值与状态</summary><pre>{
+  &quot;method&quot;: &quot;reseam_shared&quot;,
+  &quot;title&quot;: &quot;ReSeam 原形共享&quot;,
+  &quot;snapshot&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_shared_boundary_2048\\pack29\\snapshot\\snapshot.json&quot;,
+  &quot;folder&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_shared_boundary_2048&quot;,
+  &quot;status&quot;: &quot;已烘焙／已导出&quot;,
+  &quot;human&quot;: &quot;未验收&quot;,
+  &quot;game&quot;: &quot;未验收&quot;,
+  &quot;retained_prior_attempt&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_shared_2048&quot;,
+  &quot;variant_method&quot;: &quot;reseam_shared_boundary&quot;,
+  &quot;faces&quot;: 7278,
+  &quot;charts&quot;: 108,
+  &quot;owners&quot;: 95,
+  &quot;groups&quot;: 13,
+  &quot;declared_shared_surface_fraction&quot;: 0.3409842420423603,
+  &quot;anisotropy_p50&quot;: 1.0998022798725393,
+  &quot;anisotropy_p95&quot;: 1.5166863277088747,
+  &quot;state_hash&quot;: &quot;c46c612232f47aec84386f759e255d6eca4641ffaba392e64bb5a2895547afc3&quot;,
+  &quot;coverage&quot;: 0.528164542508863,
+  &quot;minimum_gap&quot;: 18.387401381499295,
+  &quot;minimum_border&quot;: 10.0,
+  &quot;hard_geometry&quot;: true,
+  &quot;measured_shared_surface_fraction&quot;: 0.33978111761639557,
+  &quot;model&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_shared_boundary_2048\\export\\asset.glb&quot;,
+  &quot;texture_file_bytes&quot;: 14179550,
+  &quot;decoded_mip_bytes&quot;: 67108860,
+  &quot;mip_count&quot;: 12,
+  &quot;numerical_status&quot;: &quot;DIAGNOSTIC&quot;,
+  &quot;mips&quot;: [
+    {
+      &quot;mip&quot;: 0,
+      &quot;mean&quot;: [
+        0.0047929850559201076,
+        0.9376819410700764,
+        2.1604195639260484e-17,
+        2.3841857932986145e-08,
+        0.0
+      ],
+      &quot;p95&quot;: [
+        0.012884472292781795,
+        3.506538157717389,
+        2.220446049250313e-16,
+        2.3841858043383013e-08,
+        0.0
+      ],
+      &quot;maximum&quot;: [
+        0.44608557270453286,
+        40.55467989325479,
+        2.220446049250313e-16,
+        2.3841858154405315e-08,
+        0.0
+      ],
+      &quot;invalid&quot;: 0,
+      &quot;samples&quot;: 29112
+    },
+    {
+      &quot;mip&quot;: 1,
+      &quot;mean&quot;: [
+        0.009705061518284916,
+        2.399919095091852,
+        2.1527923103905634e-17,
+        2.3841857932806905e-08,
+        0.0
+      ],
+      &quot;p95&quot;: [
+        0.0314186930297939,
+        8.117968887077195,
+        2.220446049250313e-16,
+        2.3841858043383013e-08,
+        0.0
+      ],
+      &quot;maximum&quot;: [
+        0.40405627284948786,
+        47.70145134261497,
+        2.220446049250313e-16,
+        2.3841858154405315e-08,
+        0.0
+      ],
+      &quot;invalid&quot;: 0,
+      &quot;samples&quot;: 29112
+    },
+    {
+      &quot;mip&quot;: 2,
+      &quot;mean&quot;: [
+        0.019082595435587324,
+        5.2955266440682935,
+        2.1398259793802396e-17,
+        2.3841857932974704e-08,
+        0.0
+      ],
+      &quot;p95&quot;: [
+        0.07220713770761027,
+        16.441978074197984,
+        2.220446049250313e-16,
+        2.3841858043383013e-08,
+        0.0
+      ],
+      &quot;maximum&quot;: [
+        0.6549173186800181,
+        63.891747063532236,
+        2.220446049250313e-16,
+        2.3841858154405315e-08,
+        0.0
+      ],
+      &quot;invalid&quot;: 0,
+      &quot;samples&quot;: 29112
+    }
+  ],
+  &quot;reimport_match&quot;: true,
+  &quot;checker&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_shared_boundary_2048\\uv_views\\front.png&quot;,
+  &quot;uv&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_shared_boundary_2048\\uv_views\\uv.png&quot;
+}</pre></details></section><section><h2>ReSeam 原形再整理</h2><p>已烘焙／已导出 · <a href="../../../../artifacts/tower_uv_comparison/round02/evaluation/reseam_optimized_2048/export/asset.glb">GLB 模型</a></p><img src="reseam_optimized_contact.png" loading="lazy"><details><summary>来源、指标、数值与状态</summary><pre>{
+  &quot;method&quot;: &quot;reseam_optimized&quot;,
+  &quot;title&quot;: &quot;ReSeam 原形再整理&quot;,
+  &quot;snapshot&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_optimized_2048\\pack43\\snapshot\\snapshot.json&quot;,
+  &quot;folder&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_optimized_2048&quot;,
+  &quot;status&quot;: &quot;已烘焙／已导出&quot;,
+  &quot;human&quot;: &quot;未验收&quot;,
+  &quot;game&quot;: &quot;未验收&quot;,
+  &quot;faces&quot;: 7278,
+  &quot;charts&quot;: 82,
+  &quot;owners&quot;: 82,
+  &quot;groups&quot;: 0,
+  &quot;declared_shared_surface_fraction&quot;: 0.0,
+  &quot;anisotropy_p50&quot;: 1.1115286579609642,
+  &quot;anisotropy_p95&quot;: 1.5376922639966117,
+  &quot;state_hash&quot;: &quot;61e94a68c23ab380bb0010ca8b1d8e53e6e916c4fb59f8ccdcbe979ea81b72fa&quot;,
+  &quot;coverage&quot;: 0.5171129748261644,
+  &quot;minimum_gap&quot;: 18.359602236286136,
+  &quot;minimum_border&quot;: 10.0,
+  &quot;hard_geometry&quot;: true,
+  &quot;measured_shared_surface_fraction&quot;: 0.0,
+  &quot;model&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_optimized_2048\\export\\asset.glb&quot;,
+  &quot;texture_file_bytes&quot;: 14732183,
+  &quot;decoded_mip_bytes&quot;: 67108860,
+  &quot;mip_count&quot;: 12,
+  &quot;numerical_status&quot;: &quot;DIAGNOSTIC&quot;,
+  &quot;mips&quot;: [
+    {
+      &quot;mip&quot;: 0,
+      &quot;mean&quot;: [
+        0.0053688093003912835,
+        1.0634907191651832,
+        2.203894909078311e-17,
+        2.384185793258953e-08,
+        0.0
+      ],
+      &quot;p95&quot;: [
+        0.014697620234667658,
+        3.872421433504527,
+        2.220446049250313e-16,
+        2.3841858043383013e-08,
+        0.0
+      ],
+      &quot;maximum&quot;: [
+        0.3630936236897781,
+        38.680475548326974,
+        2.220446049250313e-16,
+        2.3841858154405315e-08,
+        0.0
+      ],
+      &quot;invalid&quot;: 0,
+      &quot;samples&quot;: 29112
+    },
+    {
+      &quot;mip&quot;: 1,
+      &quot;mean&quot;: [
+        0.010937921013622955,
+        2.723378471471103,
+        2.1337241765518518e-17,
+        2.3841857932825973e-08,
+        0.0
+      ],
+      &quot;p95&quot;: [
+        0.03710657830118698,
+        9.010133472742517,
+        2.220446049250313e-16,
+        2.3841858043383013e-08,
+        0.0
+      ],
+      &quot;maximum&quot;: [
+        0.4990182913721006,
+        51.232418123778885,
+        2.220446049250313e-16,
+        2.3841858154405315e-08,
+        0.0
+      ],
+      &quot;invalid&quot;: 0,
+      &quot;samples&quot;: 29112
+    },
+    {
+      &quot;mip&quot;: 2,
+      &quot;mean&quot;: [
+        0.021169356555017938,
+        5.86040367235707,
+        2.1996999196337945e-17,
+        2.384185793248656e-08,
+        0.0
+      ],
+      &quot;p95&quot;: [
+        0.08044734167862405,
+        17.87235558256302,
+        2.220446049250313e-16,
+        2.3841858043383013e-08,
+        0.0
+      ],
+      &quot;maximum&quot;: [
+        0.6218711609857592,
+        64.5930918158035,
+        2.220446049250313e-16,
+        2.3841858154405315e-08,
+        0.0
+      ],
+      &quot;invalid&quot;: 0,
+      &quot;samples&quot;: 29112
+    }
+  ],
+  &quot;reimport_match&quot;: true,
+  &quot;checker&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_optimized_2048\\uv_views\\front.png&quot;,
+  &quot;uv&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_optimized_2048\\uv_views\\uv.png&quot;
+}</pre></details></section><section><h2>镜像塔 · 无共享</h2><p>已烘焙／已导出 · <a href="../../../../artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_unshared_2048/export/asset.glb">GLB 模型</a></p><img src="mirror_negative_unshared_contact.png" loading="lazy"><details><summary>来源、指标、数值与状态</summary><pre>{
+  &quot;method&quot;: &quot;mirror_negative_unshared&quot;,
+  &quot;title&quot;: &quot;镜像塔 · 无共享&quot;,
+  &quot;snapshot&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_unshared_2048\\pack17\\snapshot\\snapshot.json&quot;,
+  &quot;folder&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_unshared_2048&quot;,
+  &quot;status&quot;: &quot;已烘焙／已导出&quot;,
+  &quot;human&quot;: &quot;未验收&quot;,
+  &quot;game&quot;: &quot;未验收&quot;,
+  &quot;faces&quot;: 7650,
+  &quot;charts&quot;: 124,
+  &quot;owners&quot;: 124,
+  &quot;groups&quot;: 0,
+  &quot;declared_shared_surface_fraction&quot;: 0.0,
+  &quot;anisotropy_p50&quot;: 1.0976426767688603,
+  &quot;anisotropy_p95&quot;: 1.5010741366321392,
+  &quot;state_hash&quot;: &quot;bc69112266db25737c8301ac2f5e21a6d8e813bd33e64e8f3a9d7fa9d798b61c&quot;,
+  &quot;coverage&quot;: 0.5030143869620416,
+  &quot;minimum_gap&quot;: 18.176159052046366,
+  &quot;minimum_border&quot;: 10.0,
+  &quot;hard_geometry&quot;: true,
+  &quot;measured_shared_surface_fraction&quot;: 0.0,
+  &quot;model&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_unshared_2048\\export\\asset.glb&quot;,
+  &quot;texture_file_bytes&quot;: 14618808,
+  &quot;decoded_mip_bytes&quot;: 67108860,
+  &quot;mip_count&quot;: 12,
+  &quot;numerical_status&quot;: &quot;DIAGNOSTIC&quot;,
+  &quot;mips&quot;: [
+    {
+      &quot;mip&quot;: 0,
+      &quot;mean&quot;: [
+        0.005436830747305269,
+        1.0897049978279418,
+        2.1845270690418523e-17,
+        2.3841857931889045e-08,
+        0.0
+      ],
+      &quot;p95&quot;: [
+        0.0145802642426778,
+        4.0523093677975055,
+        2.220446049250313e-16,
+        2.3841858043383013e-08,
+        0.0
+      ],
+      &quot;maximum&quot;: [
+        0.33900076078513985,
+        59.78277559313905,
+        2.220446049250313e-16,
+        2.3841858154405315e-08,
+        0.0
+      ],
+      &quot;invalid&quot;: 0,
+      &quot;samples&quot;: 30600
+    },
+    {
+      &quot;mip&quot;: 1,
+      &quot;mean&quot;: [
+        0.011114814460827259,
+        2.8045768343096724,
+        2.1841642510599484e-17,
+        2.3841857932211954e-08,
+        0.0
+      ],
+      &quot;p95&quot;: [
+        0.03717537594354019,
+        9.240211711238773,
+        2.220446049250313e-16,
+        2.3841858043383013e-08,
+        0.0
+      ],
+      &quot;maximum&quot;: [
+        0.5048237122948195,
+        62.06464018840098,
+        2.220446049250313e-16,
+        2.3841858154405315e-08,
+        0.0
+      ],
+      &quot;invalid&quot;: 0,
+      &quot;samples&quot;: 30600
+    },
+    {
+      &quot;mip&quot;: 2,
+      &quot;mean&quot;: [
+        0.02132758388176289,
+        5.921712771327679,
+        2.17436816554855e-17,
+        2.3841857932462298e-08,
+        0.0
+      ],
+      &quot;p95&quot;: [
+        0.07952071232881447,
+        17.92520874578497,
+        2.220446049250313e-16,
+        2.3841858043383013e-08,
+        0.0
+      ],
+      &quot;maximum&quot;: [
+        0.5450024552983621,
+        72.7552979015115,
+        2.220446049250313e-16,
+        2.3841858154405315e-08,
+        0.0
+      ],
+      &quot;invalid&quot;: 0,
+      &quot;samples&quot;: 30600
+    }
+  ],
+  &quot;reimport_match&quot;: true,
+  &quot;checker&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_unshared_2048\\uv_views\\front.png&quot;,
+  &quot;uv&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_unshared_2048\\uv_views\\uv.png&quot;
+}</pre></details></section><section><h2>镜像塔 · 共享</h2><p>已烘焙／已导出 · <a href="../../../../artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_shared_2048/export/asset.glb">GLB 模型</a></p><img src="mirror_negative_shared_contact.png" loading="lazy"><details><summary>来源、指标、数值与状态</summary><pre>{
+  &quot;method&quot;: &quot;mirror_negative_shared&quot;,
+  &quot;title&quot;: &quot;镜像塔 · 共享&quot;,
+  &quot;snapshot&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_shared_2048\\pack29\\snapshot\\snapshot.json&quot;,
+  &quot;folder&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_shared_2048&quot;,
+  &quot;status&quot;: &quot;已烘焙／已导出&quot;,
+  &quot;human&quot;: &quot;未验收&quot;,
+  &quot;game&quot;: &quot;未验收&quot;,
+  &quot;faces&quot;: 7650,
+  &quot;charts&quot;: 124,
+  &quot;owners&quot;: 62,
+  &quot;groups&quot;: 62,
+  &quot;declared_shared_surface_fraction&quot;: 1.0,
+  &quot;anisotropy_p50&quot;: 1.0976426767688343,
+  &quot;anisotropy_p95&quot;: 1.5010741366319649,
+  &quot;state_hash&quot;: &quot;368009e78709518cb86740e4e511d2130bdd8ee77a2dad8f4cffd662048107a5&quot;,
+  &quot;coverage&quot;: 0.6022578139913042,
+  &quot;minimum_gap&quot;: 17.934858019156067,
+  &quot;minimum_border&quot;: 10.0,
+  &quot;hard_geometry&quot;: true,
+  &quot;measured_shared_surface_fraction&quot;: 1.0,
+  &quot;model&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_shared_2048\\export\\asset.glb&quot;,
+  &quot;texture_file_bytes&quot;: 14131716,
+  &quot;decoded_mip_bytes&quot;: 67108860,
+  &quot;mip_count&quot;: 12,
+  &quot;numerical_status&quot;: &quot;DIAGNOSTIC&quot;,
+  &quot;mips&quot;: [
+    {
+      &quot;mip&quot;: 0,
+      &quot;mean&quot;: [
+        0.003547779369676669,
+        0.6610047769412165,
+        2.160943900218115e-17,
+        2.384185793193984e-08,
+        0.0
+      ],
+      &quot;p95&quot;: [
+        0.00948495345013941,
+        2.4381109634741662,
+        2.220446049250313e-16,
+        2.3841858043383013e-08,
+        0.0
+      ],
+      &quot;maximum&quot;: [
+        0.3031221047459565,
+        50.40885162073848,
+        2.220446049250313e-16,
+        2.3841858154405315e-08,
+        0.0
+      ],
+      &quot;invalid&quot;: 0,
+      &quot;samples&quot;: 30600
+    },
+    {
+      &quot;mip&quot;: 1,
+      &quot;mean&quot;: [
+        0.007227250841310816,
+        1.6440614273759664,
+        2.1395376392858e-17,
+        2.3841857932386108e-08,
+        0.0
+      ],
+      &quot;p95&quot;: [
+        0.020702330778277492,
+        5.652342396347361,
+        2.220446049250313e-16,
+        2.3841858043383013e-08,
+        0.0
+      ],
+      &quot;maximum&quot;: [
+        0.40352330471315756,
+        70.35921358274119,
+        2.220446049250313e-16,
+        2.3841858154405315e-08,
+        0.0
+      ],
+      &quot;invalid&quot;: 0,
+      &quot;samples&quot;: 30600
+    },
+    {
+      &quot;mip&quot;: 2,
+      &quot;mean&quot;: [
+        0.014362919224158723,
+        3.7944896953067206,
+        2.1464311809419693e-17,
+        2.384185793186365e-08,
+        0.0
+      ],
+      &quot;p95&quot;: [
+        0.05018281931370667,
+        12.215253057093793,
+        2.220446049250313e-16,
+        2.3841858043383013e-08,
+        0.0
+      ],
+      &quot;maximum&quot;: [
+        0.5608646036526024,
+        69.64529197909117,
+        2.220446049250313e-16,
+        2.3841858154405315e-08,
+        0.0
+      ],
+      &quot;invalid&quot;: 0,
+      &quot;samples&quot;: 30600
+    }
+  ],
+  &quot;reimport_match&quot;: true,
+  &quot;checker&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_shared_2048\\uv_views\\front.png&quot;,
+  &quot;uv&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_shared_2048\\uv_views\\uv.png&quot;
+}</pre></details></section><section><h2>镜像塔 · 合岛后共享</h2><p>已烘焙／已导出 · <a href="../../../../artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_optimized_minimum_shared_2048/export/asset.glb">GLB 模型</a></p><img src="mirror_negative_optimized_minimum_shared_contact.png" loading="lazy"><details><summary>来源、指标、数值与状态</summary><pre>{
+  &quot;method&quot;: &quot;mirror_negative_optimized_minimum_shared&quot;,
+  &quot;title&quot;: &quot;镜像塔 · 合岛后共享&quot;,
+  &quot;snapshot&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_optimized_minimum_shared_2048\\pack17\\snapshot\\snapshot.json&quot;,
+  &quot;folder&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_optimized_minimum_shared_2048&quot;,
+  &quot;status&quot;: &quot;已烘焙／已导出&quot;,
+  &quot;human&quot;: &quot;未验收&quot;,
+  &quot;game&quot;: &quot;未验收&quot;,
+  &quot;faces&quot;: 7650,
+  &quot;charts&quot;: 102,
+  &quot;owners&quot;: 51,
+  &quot;groups&quot;: 51,
+  &quot;declared_shared_surface_fraction&quot;: 1.0,
+  &quot;anisotropy_p50&quot;: 1.112814503832581,
+  &quot;anisotropy_p95&quot;: 1.525981411353942,
+  &quot;state_hash&quot;: &quot;00ef5b900387d65eea985a00437123a88182cad26d8c8fc3afe538fc4652a575&quot;,
+  &quot;coverage&quot;: 0.564449453621069,
+  &quot;minimum_gap&quot;: 18.071677686550032,
+  &quot;minimum_border&quot;: 9.999999999999773,
+  &quot;hard_geometry&quot;: true,
+  &quot;measured_shared_surface_fraction&quot;: 1.0,
+  &quot;model&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_optimized_minimum_shared_2048\\export\\asset.glb&quot;,
+  &quot;texture_file_bytes&quot;: 13771591,
+  &quot;decoded_mip_bytes&quot;: 67108860,
+  &quot;mip_count&quot;: 12,
+  &quot;numerical_status&quot;: &quot;DIAGNOSTIC&quot;,
+  &quot;mips&quot;: [
+    {
+      &quot;mip&quot;: 0,
+      &quot;mean&quot;: [
+        0.003717360595825427,
+        0.6945201623121539,
+        2.1914206106980213e-17,
+        2.384185793196887e-08,
+        0.0
+      ],
+      &quot;p95&quot;: [
+        0.009883813859593393,
+        2.559972860084044,
+        2.220446049250313e-16,
+        2.3841858043383013e-08,
+        0.0
+      ],
+      &quot;maximum&quot;: [
+        0.2844579206958793,
+        109.75809663472305,
+        2.220446049250313e-16,
+        2.3841858154405315e-08,
+        0.0
+      ],
+      &quot;invalid&quot;: 0,
+      &quot;samples&quot;: 30600
+    },
+    {
+      &quot;mip&quot;: 1,
+      &quot;mean&quot;: [
+        0.0074356926793217775,
+        1.7053543999335103,
+        2.0898315757650005e-17,
+        2.384185793218293e-08,
+        0.0
+      ],
+      &quot;p95&quot;: [
+        0.022079485076377418,
+        5.819512159133806,
+        2.220446049250313e-16,
+        2.3841858043383013e-08,
+        0.0
+      ],
+      &quot;maximum&quot;: [
+        0.3669614645566366,
+        76.4643236561458,
+        2.220446049250313e-16,
+        2.3841858154405315e-08,
+        0.0
+      ],
+      &quot;invalid&quot;: 0,
+      &quot;samples&quot;: 30600
+    },
+    {
+      &quot;mip&quot;: 2,
+      &quot;mean&quot;: [
+        0.014864786533382551,
+        3.952832747044704,
+        2.2251626830150605e-17,
+        2.3841857932335313e-08,
+        0.0
+      ],
+      &quot;p95&quot;: [
+        0.05304810761409388,
+        12.702211629076533,
+        2.220446049250313e-16,
+        2.3841858043383013e-08,
+        0.0
+      ],
+      &quot;maximum&quot;: [
+        0.510971331113871,
+        69.88996380254966,
+        2.220446049250313e-16,
+        2.3841858154405315e-08,
+        0.0
+      ],
+      &quot;invalid&quot;: 0,
+      &quot;samples&quot;: 30600
+    }
+  ],
+  &quot;reimport_match&quot;: true,
+  &quot;checker&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_optimized_minimum_shared_2048\\uv_views\\front.png&quot;,
+  &quot;uv&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_optimized_minimum_shared_2048\\uv_views\\uv.png&quot;
+}</pre></details></section><section><h2>合岛后 · 无共享对照</h2><p>已烘焙／已导出 · <a href="../../../../artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_optimized_minimum_unshared_2048/export/asset.glb">GLB 模型</a></p><img src="mirror_negative_optimized_minimum_unshared_contact.png" loading="lazy"><details><summary>来源、指标、数值与状态</summary><pre>{
+  &quot;method&quot;: &quot;mirror_negative_optimized_minimum_unshared&quot;,
+  &quot;title&quot;: &quot;合岛后 · 无共享对照&quot;,
+  &quot;snapshot&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_optimized_minimum_unshared_2048\\pack43\\snapshot\\snapshot.json&quot;,
+  &quot;folder&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_optimized_minimum_unshared_2048&quot;,
+  &quot;status&quot;: &quot;已烘焙／已导出&quot;,
+  &quot;human&quot;: &quot;未验收&quot;,
+  &quot;game&quot;: &quot;未验收&quot;,
+  &quot;faces&quot;: 7650,
+  &quot;charts&quot;: 102,
+  &quot;owners&quot;: 102,
+  &quot;groups&quot;: 0,
+  &quot;declared_shared_surface_fraction&quot;: 0.0,
+  &quot;anisotropy_p50&quot;: 1.1128145038325654,
+  &quot;anisotropy_p95&quot;: 1.5259814113540138,
+  &quot;state_hash&quot;: &quot;8f65e1b696596c9b6b44841a30a7194c8924586e5610d2a8f6d29b34ca726904&quot;,
+  &quot;coverage&quot;: 0.506222504080125,
+  &quot;minimum_gap&quot;: 18.027838857970696,
+  &quot;minimum_border&quot;: 10.0,
+  &quot;hard_geometry&quot;: true,
+  &quot;measured_shared_surface_fraction&quot;: 0.0,
+  &quot;model&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_optimized_minimum_unshared_2048\\export\\asset.glb&quot;,
+  &quot;texture_file_bytes&quot;: 14683494,
+  &quot;decoded_mip_bytes&quot;: 67108860,
+  &quot;mip_count&quot;: 12,
+  &quot;numerical_status&quot;: &quot;DIAGNOSTIC&quot;,
+  &quot;mips&quot;: [
+    {
+      &quot;mip&quot;: 0,
+      &quot;mean&quot;: [
+        0.005405228835476716,
+        1.0882501415318464,
+        2.1279274638648835e-17,
+        2.3841857932164788e-08,
+        0.0
+      ],
+      &quot;p95&quot;: [
+        0.014593576601280384,
+        4.023550255488093,
+        2.220446049250313e-16,
+        2.3841858043383013e-08,
+        0.0
+      ],
+      &quot;maximum&quot;: [
+        0.28549510722845056,
+        60.835056101885684,
+        2.220446049250313e-16,
+        2.3841858154405315e-08,
+        0.0
+      ],
+      &quot;invalid&quot;: 0,
+      &quot;samples&quot;: 30600
+    },
+    {
+      &quot;mip&quot;: 1,
+      &quot;mean&quot;: [
+        0.01108463938593061,
+        2.780864340417233,
+        2.1431658191048366e-17,
+        2.3841857932625567e-08,
+        0.0
+      ],
+      &quot;p95&quot;: [
+        0.037200890494943,
+        9.206702687329106,
+        2.220446049250313e-16,
+        2.3841858043383013e-08,
+        0.0
+      ],
+      &quot;maximum&quot;: [
+        0.4838004498558526,
+        61.30358176529674,
+        2.220446049250313e-16,
+        2.3841858154405315e-08,
+        0.0
+      ],
+      &quot;invalid&quot;: 0,
+      &quot;samples&quot;: 30600
+    },
+    {
+      &quot;mip&quot;: 2,
+      &quot;mean&quot;: [
+        0.02125553972818872,
+        5.912773384961783,
+        2.158041356362886e-17,
+        2.3841857932150276e-08,
+        0.0
+      ],
+      &quot;p95&quot;: [
+        0.07933225301772563,
+        18.064694903853177,
+        2.220446049250313e-16,
+        2.3841858043383013e-08,
+        0.0
+      ],
+      &quot;maximum&quot;: [
+        0.5569820496592361,
+        73.443803039813,
+        2.220446049250313e-16,
+        2.3841858154405315e-08,
+        0.0
+      ],
+      &quot;invalid&quot;: 0,
+      &quot;samples&quot;: 30600
+    }
+  ],
+  &quot;reimport_match&quot;: true,
+  &quot;checker&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_optimized_minimum_unshared_2048\\uv_views\\front.png&quot;,
+  &quot;uv&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_optimized_minimum_unshared_2048\\uv_views\\uv.png&quot;
+}</pre></details></section><section><h2>镜像塔 · 大块合岛共享</h2><p>已烘焙／已导出 · <a href="../../../../artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_aggressive_minimum_shared_2048/export/asset.glb">GLB 模型</a></p><img src="mirror_negative_aggressive_minimum_shared_contact.png" loading="lazy"><details><summary>来源、指标、数值与状态</summary><pre>{
+  &quot;method&quot;: &quot;mirror_negative_aggressive_minimum_shared&quot;,
+  &quot;title&quot;: &quot;镜像塔 · 大块合岛共享&quot;,
+  &quot;snapshot&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_aggressive_minimum_shared_2048\\pack17\\snapshot\\snapshot.json&quot;,
+  &quot;folder&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_aggressive_minimum_shared_2048&quot;,
+  &quot;status&quot;: &quot;已烘焙／已导出&quot;,
+  &quot;human&quot;: &quot;未验收&quot;,
+  &quot;game&quot;: &quot;未验收&quot;,
+  &quot;faces&quot;: 7650,
+  &quot;charts&quot;: 50,
+  &quot;owners&quot;: 25,
+  &quot;groups&quot;: 25,
+  &quot;declared_shared_surface_fraction&quot;: 1.0,
+  &quot;anisotropy_p50&quot;: 1.278214928948059,
+  &quot;anisotropy_p95&quot;: 3.0038392130105755,
+  &quot;state_hash&quot;: &quot;c1634b6a29f7e303167c3925ac690bb76f8564201603273cb1ccb6c81a38dacf&quot;,
+  &quot;coverage&quot;: 0.5670781423588782,
+  &quot;minimum_gap&quot;: 18.04809900783784,
+  &quot;minimum_border&quot;: 9.999999999999886,
+  &quot;hard_geometry&quot;: true,
+  &quot;measured_shared_surface_fraction&quot;: 1.0,
+  &quot;model&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_aggressive_minimum_shared_2048\\export\\asset.glb&quot;,
+  &quot;texture_file_bytes&quot;: 13508234,
+  &quot;decoded_mip_bytes&quot;: 67108860,
+  &quot;mip_count&quot;: 12,
+  &quot;numerical_status&quot;: &quot;DIAGNOSTIC&quot;,
+  &quot;mips&quot;: [
+    {
+      &quot;mip&quot;: 0,
+      &quot;mean&quot;: [
+        0.004318331837637298,
+        0.8373858523097516,
+        2.082938034108831e-17,
+        2.3841857932128508e-08,
+        0.0
+      ],
+      &quot;p95&quot;: [
+        0.010227659822929403,
+        3.0277365993489767,
+        2.220446049250313e-16,
+        2.3841858043383013e-08,
+        0.0
+      ],
+      &quot;maximum&quot;: [
+        0.9173193359537017,
+        68.89563932119975,
+        2.220446049250313e-16,
+        2.3841858154405315e-08,
+        0.0
+      ],
+      &quot;invalid&quot;: 0,
+      &quot;samples&quot;: 30600
+    },
+    {
+      &quot;mip&quot;: 1,
+      &quot;mean&quot;: [
+        0.008122912777013635,
+        1.919164928035893,
+        2.1620323541638262e-17,
+        2.3841857932088598e-08,
+        0.0
+      ],
+      &quot;p95&quot;: [
+        0.022846509876434207,
+        6.698022165373489,
+        2.220446049250313e-16,
+        2.3841858043383013e-08,
+        0.0
+      ],
+      &quot;maximum&quot;: [
+        0.9108381946852364,
+        67.47132923354857,
+        2.220446049250313e-16,
+        2.3841858154405315e-08,
+        0.0
+      ],
+      &quot;invalid&quot;: 0,
+      &quot;samples&quot;: 30600
+    },
+    {
+      &quot;mip&quot;: 2,
+      &quot;mean&quot;: [
+        0.015740472026044675,
+        4.240447673751232,
+        2.1235736480820397e-17,
+        2.3841857932335313e-08,
+        0.0
+      ],
+      &quot;p95&quot;: [
+        0.05542264452886457,
+        13.98646733066572,
+        2.220446049250313e-16,
+        2.3841858043383013e-08,
+        0.0
+      ],
+      &quot;maximum&quot;: [
+        0.8833976346219539,
+        65.41233251477654,
+        2.220446049250313e-16,
+        2.3841858154405315e-08,
+        0.0
+      ],
+      &quot;invalid&quot;: 0,
+      &quot;samples&quot;: 30600
+    }
+  ],
+  &quot;reimport_match&quot;: true,
+  &quot;checker&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_aggressive_minimum_shared_2048\\uv_views\\front.png&quot;,
+  &quot;uv&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_aggressive_minimum_shared_2048\\uv_views\\uv.png&quot;
+}</pre></details></section><section><h2>大块合岛 · 无共享对照</h2><p>已烘焙／已导出 · <a href="../../../../artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_aggressive_minimum_unshared_2048/export/asset.glb">GLB 模型</a></p><img src="mirror_negative_aggressive_minimum_unshared_contact.png" loading="lazy"><details><summary>来源、指标、数值与状态</summary><pre>{
+  &quot;method&quot;: &quot;mirror_negative_aggressive_minimum_unshared&quot;,
+  &quot;title&quot;: &quot;大块合岛 · 无共享对照&quot;,
+  &quot;snapshot&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_aggressive_minimum_unshared_2048\\pack17\\snapshot\\snapshot.json&quot;,
+  &quot;folder&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_aggressive_minimum_unshared_2048&quot;,
+  &quot;status&quot;: &quot;已烘焙／已导出&quot;,
+  &quot;human&quot;: &quot;未验收&quot;,
+  &quot;game&quot;: &quot;未验收&quot;,
+  &quot;faces&quot;: 7650,
+  &quot;charts&quot;: 50,
+  &quot;owners&quot;: 50,
+  &quot;groups&quot;: 0,
+  &quot;declared_shared_surface_fraction&quot;: 0.0,
+  &quot;anisotropy_p50&quot;: 1.2782149289480353,
+  &quot;anisotropy_p95&quot;: 3.003839213010546,
+  &quot;state_hash&quot;: &quot;0b821f09116c38d9d89f3b941fa34d74387007e120f4d125d969ccedc8e051eb&quot;,
+  &quot;coverage&quot;: 0.569515224114661,
+  &quot;minimum_gap&quot;: 18.052118152203903,
+  &quot;minimum_border&quot;: 9.999999999999773,
+  &quot;hard_geometry&quot;: true,
+  &quot;measured_shared_surface_fraction&quot;: 0.0,
+  &quot;model&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_aggressive_minimum_unshared_2048\\export\\asset.glb&quot;,
+  &quot;texture_file_bytes&quot;: 15086904,
+  &quot;decoded_mip_bytes&quot;: 67108860,
+  &quot;mip_count&quot;: 12,
+  &quot;numerical_status&quot;: &quot;DIAGNOSTIC&quot;,
+  &quot;mips&quot;: [
+    {
+      &quot;mip&quot;: 0,
+      &quot;mean&quot;: [
+        0.006265966431784138,
+        1.2224041018891225,
+        2.099627661276399e-17,
+        2.384185793219744e-08,
+        0.0
+      ],
+      &quot;p95&quot;: [
+        0.014494832498597562,
+        4.407989735612062,
+        2.220446049250313e-16,
+        2.3841858043383013e-08,
+        0.0
+      ],
+      &quot;maximum&quot;: [
+        0.9588369933288448,
+        70.39953372632576,
+        2.220446049250313e-16,
+        2.3841858154405315e-08,
+        0.0
+      ],
+      &quot;invalid&quot;: 0,
+      &quot;samples&quot;: 30600
+    },
+    {
+      &quot;mip&quot;: 1,
+      &quot;mean&quot;: [
+        0.011637015618165705,
+        2.8797756895021087,
+        2.177633527385683e-17,
+        2.384185793196161e-08,
+        0.0
+      ],
+      &quot;p95&quot;: [
+        0.03612230464569619,
+        9.866986045364312,
+        2.220446049250313e-16,
+        2.3841858043383013e-08,
+        0.0
+      ],
+      &quot;maximum&quot;: [
+        0.9052254610623186,
+        70.2639724730287,
+        2.220446049250313e-16,
+        2.3841858154405315e-08,
+        0.0
+      ],
+      &quot;invalid&quot;: 0,
+      &quot;samples&quot;: 30600
+    },
+    {
+      &quot;mip&quot;: 2,
+      &quot;mean&quot;: [
+        0.021670041781576062,
+        5.9897036644003405,
+        2.141714547177222e-17,
+        2.384185793220107e-08,
+        0.0
+      ],
+      &quot;p95&quot;: [
+        0.07910831029115238,
+        18.620113392918327,
+        2.220446049250313e-16,
+        2.3841858043383013e-08,
+        0.0
+      ],
+      &quot;maximum&quot;: [
+        0.8495644690945546,
+        72.3423341468705,
+        2.220446049250313e-16,
+        2.3841858154405315e-08,
+        0.0
+      ],
+      &quot;invalid&quot;: 0,
+      &quot;samples&quot;: 30600
+    }
+  ],
+  &quot;reimport_match&quot;: true,
+  &quot;checker&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_aggressive_minimum_unshared_2048\\uv_views\\front.png&quot;,
+  &quot;uv&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_aggressive_minimum_unshared_2048\\uv_views\\uv.png&quot;
+}</pre></details></section><section><h2>镜像塔 · 最终合岛共享</h2><p>已烘焙／已导出 · <a href="../../../../artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_shared_2048/export/asset.glb">GLB 模型</a></p><img src="mirror_negative_exhaustive_minimum_shared_contact.png" loading="lazy"><details><summary>来源、指标、数值与状态</summary><pre>{
+  &quot;method&quot;: &quot;mirror_negative_exhaustive_minimum_shared&quot;,
+  &quot;title&quot;: &quot;镜像塔 · 最终合岛共享&quot;,
+  &quot;snapshot&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\pack29\\snapshot\\snapshot.json&quot;,
+  &quot;folder&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048&quot;,
+  &quot;status&quot;: &quot;已烘焙／已导出&quot;,
+  &quot;human&quot;: &quot;未验收&quot;,
+  &quot;game&quot;: &quot;未验收&quot;,
+  &quot;faces&quot;: 7650,
+  &quot;charts&quot;: 48,
+  &quot;owners&quot;: 24,
+  &quot;groups&quot;: 24,
+  &quot;declared_shared_surface_fraction&quot;: 1.0,
+  &quot;anisotropy_p50&quot;: 1.2809848856340706,
+  &quot;anisotropy_p95&quot;: 3.0142587666764076,
+  &quot;state_hash&quot;: &quot;b1f115814b9692547354633c3f6ea098408f588a0cf7c24fff5e7809f670e8d5&quot;,
+  &quot;coverage&quot;: 0.568180966181734,
+  &quot;minimum_gap&quot;: 18.347614789215434,
+  &quot;minimum_border&quot;: 9.999999999999886,
+  &quot;hard_geometry&quot;: true,
+  &quot;measured_shared_surface_fraction&quot;: 1.0,
+  &quot;model&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\export\\asset.glb&quot;,
+  &quot;texture_file_bytes&quot;: 13539277,
+  &quot;decoded_mip_bytes&quot;: 67108860,
+  &quot;mip_count&quot;: 12,
+  &quot;numerical_status&quot;: &quot;DIAGNOSTIC&quot;,
+  &quot;mips&quot;: [
+    {
+      &quot;mip&quot;: 0,
+      &quot;mean&quot;: [
+        0.003971275219956582,
+        0.8333925280810741,
+        2.1750938015123573e-17,
+        2.384185793235708e-08,
+        0.0
+      ],
+      &quot;p95&quot;: [
+        0.010065662770899915,
+        3.022532753365462,
+        2.220446049250313e-16,
+        2.3841858043383013e-08,
+        0.0
+      ],
+      &quot;maximum&quot;: [
+        0.573580856251792,
+        112.62166703341782,
+        2.220446049250313e-16,
+        2.3841858154405315e-08,
+        0.0
+      ],
+      &quot;invalid&quot;: 0,
+      &quot;samples&quot;: 30600
+    },
+    {
+      &quot;mip&quot;: 1,
+      &quot;mean&quot;: [
+        0.00778385028479435,
+        1.916549571611443,
+        2.200128242263709e-17,
+        2.38418579327199e-08,
+        0.0
+      ],
+      &quot;p95&quot;: [
+        0.022711176025041305,
+        6.658540471396379,
+        2.220446049250313e-16,
+        2.3841858043383013e-08,
+        0.0
+      ],
+      &quot;maximum&quot;: [
+        0.5738489981216095,
+        60.92257886778973,
+        2.220446049250313e-16,
+        2.3841858154405315e-08,
+        0.0
+      ],
+      &quot;invalid&quot;: 0,
+      &quot;samples&quot;: 30600
+    },
+    {
+      &quot;mip&quot;: 2,
+      &quot;mean&quot;: [
+        0.015323938576124928,
+        4.240312622773144,
+        2.2291536808160005e-17,
+        2.3841857932585657e-08,
+        0.0
+      ],
+      &quot;p95&quot;: [
+        0.05454833220696553,
+        13.909264398586046,
+        2.220446049250313e-16,
+        2.3841858043383013e-08,
+        0.0
+      ],
+      &quot;maximum&quot;: [
+        0.5577086752775939,
+        70.76716520574924,
+        2.220446049250313e-16,
+        2.3841858154405315e-08,
+        0.0
+      ],
+      &quot;invalid&quot;: 0,
+      &quot;samples&quot;: 30600
+    }
+  ],
+  &quot;reimport_match&quot;: true,
+  &quot;checker&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\uv_views\\front.png&quot;,
+  &quot;uv&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\uv_views\\uv.png&quot;
+}</pre></details></section><section><h2>最终合岛 · 无共享对照</h2><p>已烘焙／已导出 · <a href="../../../../artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_unshared_2048/export/asset.glb">GLB 模型</a></p><img src="mirror_negative_exhaustive_minimum_unshared_contact.png" loading="lazy"><details><summary>来源、指标、数值与状态</summary><pre>{
+  &quot;method&quot;: &quot;mirror_negative_exhaustive_minimum_unshared&quot;,
+  &quot;title&quot;: &quot;最终合岛 · 无共享对照&quot;,
+  &quot;snapshot&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\pack29\\snapshot\\snapshot.json&quot;,
+  &quot;folder&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048&quot;,
+  &quot;status&quot;: &quot;已烘焙／已导出&quot;,
+  &quot;human&quot;: &quot;未验收&quot;,
+  &quot;game&quot;: &quot;未验收&quot;,
+  &quot;faces&quot;: 7650,
+  &quot;charts&quot;: 48,
+  &quot;owners&quot;: 48,
+  &quot;groups&quot;: 0,
+  &quot;declared_shared_surface_fraction&quot;: 0.0,
+  &quot;anisotropy_p50&quot;: 1.280984885634079,
+  &quot;anisotropy_p95&quot;: 3.0142587666765652,
+  &quot;state_hash&quot;: &quot;1b3c55f322d625fc7eb8a1c95b75d53bac7048804a053095093922836d242455&quot;,
+  &quot;coverage&quot;: 0.5711328715922599,
+  &quot;minimum_gap&quot;: 18.11825074243668,
+  &quot;minimum_border&quot;: 10.0,
+  &quot;hard_geometry&quot;: true,
+  &quot;measured_shared_surface_fraction&quot;: 0.0,
+  &quot;model&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\export\\asset.glb&quot;,
+  &quot;texture_file_bytes&quot;: 15118724,
+  &quot;decoded_mip_bytes&quot;: 67108860,
+  &quot;mip_count&quot;: 12,
+  &quot;numerical_status&quot;: &quot;DIAGNOSTIC&quot;,
+  &quot;mips&quot;: [
+    {
+      &quot;mip&quot;: 0,
+      &quot;mean&quot;: [
+        0.005704002401665661,
+        1.2014171097902233,
+        2.1261133739553653e-17,
+        2.3841857932233725e-08,
+        0.0
+      ],
+      &quot;p95&quot;: [
+        0.014371709971701889,
+        4.311787071978057,
+        2.220446049250313e-16,
+        2.3841858043383013e-08,
+        0.0
+      ],
+      &quot;maximum&quot;: [
+        0.576685522968191,
+        99.70415174415209,
+        2.220446049250313e-16,
+        2.3841858154405315e-08,
+        0.0
+      ],
+      &quot;invalid&quot;: 0,
+      &quot;samples&quot;: 30600
+    },
+    {
+      &quot;mip&quot;: 1,
+      &quot;mean&quot;: [
+        0.011021934111965443,
+        2.8624295319695268,
+        2.1116006546792192e-17,
+        2.3841857932273635e-08,
+        0.0
+      ],
+      &quot;p95&quot;: [
+        0.03575092429340599,
+        9.830310240720925,
+        2.220446049250313e-16,
+        2.3841858043383013e-08,
+        0.0
+      ],
+      &quot;maximum&quot;: [
+        0.5738471299639487,
+        70.76727331811476,
+        2.220446049250313e-16,
+        2.3841858154405315e-08,
+        0.0
+      ],
+      &quot;invalid&quot;: 0,
+      &quot;samples&quot;: 30600
+    },
+    {
+      &quot;mip&quot;: 2,
+      &quot;mean&quot;: [
+        0.021018143524659177,
+        5.979498023291102,
+        2.1500593607610057e-17,
+        2.3841857932251863e-08,
+        0.0
+      ],
+      &quot;p95&quot;: [
+        0.07713898543571843,
+        18.653571034656892,
+        2.220446049250313e-16,
+        2.3841858043383013e-08,
+        0.0
+      ],
+      &quot;maximum&quot;: [
+        0.6320783878451793,
+        73.88324156847922,
+        2.220446049250313e-16,
+        2.3841858154405315e-08,
+        0.0
+      ],
+      &quot;invalid&quot;: 0,
+      &quot;samples&quot;: 30600
+    }
+  ],
+  &quot;reimport_match&quot;: true,
+  &quot;checker&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\uv_views\\front.png&quot;,
+  &quot;uv&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\uv_views\\uv.png&quot;
+}</pre></details></section><section><h2>原形共享同目标 · 无共享对照</h2><p>已烘焙／已导出 · <a href="../../../../artifacts/tower_uv_comparison/round02/evaluation/reseam_shared_boundary_control_2048/export/asset.glb">GLB 模型</a></p><img src="reseam_shared_boundary_control_contact.png" loading="lazy"><details><summary>来源、指标、数值与状态</summary><pre>{
+  &quot;method&quot;: &quot;reseam_shared_boundary_control&quot;,
+  &quot;title&quot;: &quot;原形共享同目标 · 无共享对照&quot;,
+  &quot;snapshot&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_shared_boundary_control_2048\\pack43\\snapshot\\snapshot.json&quot;,
+  &quot;folder&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_shared_boundary_control_2048&quot;,
+  &quot;status&quot;: &quot;已烘焙／已导出&quot;,
+  &quot;human&quot;: &quot;未验收&quot;,
+  &quot;game&quot;: &quot;未验收&quot;,
+  &quot;faces&quot;: 7278,
+  &quot;charts&quot;: 108,
+  &quot;owners&quot;: 108,
+  &quot;groups&quot;: 0,
+  &quot;declared_shared_surface_fraction&quot;: 0.0,
+  &quot;anisotropy_p50&quot;: 1.0998022798725349,
+  &quot;anisotropy_p95&quot;: 1.5166863277087819,
+  &quot;state_hash&quot;: &quot;e05f950de125a8e2bdd2a1fc5412e5f61ca532142c966d994a37d0d6984a41db&quot;,
+  &quot;coverage&quot;: 0.5054368182584756,
+  &quot;minimum_gap&quot;: 17.946996907733457,
+  &quot;minimum_border&quot;: 10.0,
+  &quot;hard_geometry&quot;: true,
+  &quot;measured_shared_surface_fraction&quot;: 0.0,
+  &quot;model&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_shared_boundary_control_2048\\export\\asset.glb&quot;,
+  &quot;texture_file_bytes&quot;: 14530057,
+  &quot;decoded_mip_bytes&quot;: 67108860,
+  &quot;mip_count&quot;: 12,
+  &quot;numerical_status&quot;: &quot;DIAGNOSTIC&quot;,
+  &quot;mips&quot;: [
+    {
+      &quot;mip&quot;: 0,
+      &quot;mean&quot;: [
+        0.005331167866445077,
+        1.0840119500571022,
+        2.097113359581525e-17,
+        2.3841857933081486e-08,
+        0.0
+      ],
+      &quot;p95&quot;: [
+        0.014397464581003858,
+        4.0113019238179,
+        2.220446049250313e-16,
+        2.3841858043383013e-08,
+        0.0
+      ],
+      &quot;maximum&quot;: [
+        0.5450947576412822,
+        52.429919560561714,
+        2.220446049250313e-16,
+        2.3841858154405315e-08,
+        0.0
+      ],
+      &quot;invalid&quot;: 0,
+      &quot;samples&quot;: 29112
+    },
+    {
+      &quot;mip&quot;: 1,
+      &quot;mean&quot;: [
+        0.010956905015057422,
+        2.7692180986792865,
+        2.0994015356421706e-17,
+        2.3841857933123437e-08,
+        0.0
+      ],
+      &quot;p95&quot;: [
+        0.037173237263722084,
+        9.184407186058069,
+        2.220446049250313e-16,
+        2.3841858043383013e-08,
+        0.0
+      ],
+      &quot;maximum&quot;: [
+        0.46169301194538165,
+        51.45527522073328,
+        2.220446049250313e-16,
+        2.3841858154405315e-08,
+        0.0
+      ],
+      &quot;invalid&quot;: 0,
+      &quot;samples&quot;: 29112
+    },
+    {
+      &quot;mip&quot;: 2,
+      &quot;mean&quot;: [
+        0.021120921739484474,
+        5.886037176912236,
+        2.2572856838267043e-17,
+        2.384185793297852e-08,
+        0.0
+      ],
+      &quot;p95&quot;: [
+        0.07990353119107542,
+        17.94119234958063,
+        2.220446049250313e-16,
+        2.3841858043383013e-08,
+        0.0
+      ],
+      &quot;maximum&quot;: [
+        0.6100010159774184,
+        67.19620642499314,
+        2.220446049250313e-16,
+        2.3841858154405315e-08,
+        0.0
+      ],
+      &quot;invalid&quot;: 0,
+      &quot;samples&quot;: 29112
+    }
+  ],
+  &quot;reimport_match&quot;: true,
+  &quot;checker&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_shared_boundary_control_2048\\uv_views\\front.png&quot;,
+  &quot;uv&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_shared_boundary_control_2048\\uv_views\\uv.png&quot;
+}</pre></details></section><section><h2>原形共享 · 整组退回候选</h2><p>已烘焙／已导出 · <a href="../../../../artifacts/tower_uv_comparison/round02/evaluation/reseam_shared_repaired_2048/export/asset.glb">GLB 模型</a></p><img src="reseam_shared_repaired_contact.png" loading="lazy"><details><summary>来源、指标、数值与状态</summary><pre>{
+  &quot;method&quot;: &quot;reseam_shared_repaired&quot;,
+  &quot;title&quot;: &quot;原形共享 · 整组退回候选&quot;,
+  &quot;snapshot&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_shared_repaired_2048\\pack17\\snapshot\\snapshot.json&quot;,
+  &quot;folder&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_shared_repaired_2048&quot;,
+  &quot;status&quot;: &quot;已烘焙／已导出&quot;,
+  &quot;human&quot;: &quot;未验收&quot;,
+  &quot;game&quot;: &quot;未验收&quot;,
+  &quot;faces&quot;: 7278,
+  &quot;charts&quot;: 108,
+  &quot;owners&quot;: 97,
+  &quot;groups&quot;: 11,
+  &quot;declared_shared_surface_fraction&quot;: 0.2640807848378864,
+  &quot;anisotropy_p50&quot;: 1.0998022798725358,
+  &quot;anisotropy_p95&quot;: 1.5166863277088036,
+  &quot;state_hash&quot;: &quot;a3aad5c54bce9fc253864f7b82f8de4492bf59698e957eeaf0ffe3d4779a2f18&quot;,
+  &quot;coverage&quot;: 0.5200284626587058,
+  &quot;minimum_gap&quot;: 18.264723326782367,
+  &quot;minimum_border&quot;: 9.999999999999886,
+  &quot;hard_geometry&quot;: true,
+  &quot;measured_shared_surface_fraction&quot;: 0.26297234368550887,
+  &quot;model&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_shared_repaired_2048\\export\\asset.glb&quot;,
+  &quot;texture_file_bytes&quot;: 14263046,
+  &quot;decoded_mip_bytes&quot;: 67108860,
+  &quot;mip_count&quot;: 12,
+  &quot;numerical_status&quot;: &quot;DIAGNOSTIC&quot;,
+  &quot;mips&quot;: [
+    {
+      &quot;mip&quot;: 0,
+      &quot;mean&quot;: [
+        0.004868780427871341,
+        0.9686359389336581,
+        2.1554618491279832e-17,
+        2.384185793250563e-08,
+        0.0
+      ],
+      &quot;p95&quot;: [
+        0.013164973838043907,
+        3.5947755513365656,
+        2.220446049250313e-16,
+        2.3841858043383013e-08,
+        0.0
+      ],
+      &quot;maximum&quot;: [
+        0.34338052237127126,
+        51.20342860068039,
+        2.220446049250313e-16,
+        2.3841858154405315e-08,
+        0.0
+      ],
+      &quot;invalid&quot;: 26,
+      &quot;samples&quot;: 29112
+    },
+    {
+      &quot;mip&quot;: 1,
+      &quot;mean&quot;: [
+        0.009993214524046511,
+        2.4930258885087553,
+        2.1916913034215356e-17,
+        2.3841857932620038e-08,
+        0.0
+      ],
+      &quot;p95&quot;: [
+        0.03240495137202506,
+        8.259286214522433,
+        2.220446049250313e-16,
+        2.3841858043383013e-08,
+        0.0
+      ],
+      &quot;maximum&quot;: [
+        0.417272208805858,
+        59.006665501969145,
+        2.220446049250313e-16,
+        2.3841858154405315e-08,
+        0.0
+      ],
+      &quot;invalid&quot;: 26,
+      &quot;samples&quot;: 29112
+    },
+    {
+      &quot;mip&quot;: 2,
+      &quot;mean&quot;: [
+        0.019648477814366707,
+        5.429423968716513,
+        2.127622373723464e-17,
+        2.384185793284504e-08,
+        0.0
+      ],
+      &quot;p95&quot;: [
+        0.07230873002411184,
+        16.784043825524744,
+        2.220446049250313e-16,
+        2.3841858043383013e-08,
+        0.0
+      ],
+      &quot;maximum&quot;: [
+        0.6667838810410857,
+        68.5783185695945,
+        2.220446049250313e-16,
+        2.3841858154405315e-08,
+        0.0
+      ],
+      &quot;invalid&quot;: 26,
+      &quot;samples&quot;: 29112
+    }
+  ],
+  &quot;reimport_match&quot;: true,
+  &quot;checker&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_shared_repaired_2048\\uv_views\\front.png&quot;,
+  &quot;uv&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_shared_repaired_2048\\uv_views\\uv.png&quot;
+}</pre></details></section><section><h2>Agent 实际看图记录</h2><pre>{
+  &quot;observer&quot;: &quot;Codex Agent&quot;,
+  &quot;reviewer&quot;: &quot;agent&quot;,
+  &quot;decision&quot;: &quot;VISUAL_KEEP&quot;,
+  &quot;selected_method&quot;: &quot;mirror_negative_exhaustive_minimum_shared&quot;,
+  &quot;scope&quot;: &quot;prepared whole-body contacts and explicit closeups, color and normal-lit only&quot;,
+  &quot;reviewed_whole_body_views&quot;: [
+    {
+      &quot;camera&quot;: &quot;front&quot;,
+      &quot;channel&quot;: &quot;material&quot;,
+      &quot;light&quot;: &quot;soft&quot;
+    },
+    {
+      &quot;camera&quot;: &quot;front&quot;,
+      &quot;channel&quot;: &quot;normal_lit&quot;,
+      &quot;light&quot;: &quot;side&quot;
+    },
+    {
+      &quot;camera&quot;: &quot;front_right&quot;,
+      &quot;channel&quot;: &quot;material&quot;,
+      &quot;light&quot;: &quot;soft&quot;
+    },
+    {
+      &quot;camera&quot;: &quot;front_right&quot;,
+      &quot;channel&quot;: &quot;normal_lit&quot;,
+      &quot;light&quot;: &quot;side&quot;
+    },
+    {
+      &quot;camera&quot;: &quot;right&quot;,
+      &quot;channel&quot;: &quot;material&quot;,
+      &quot;light&quot;: &quot;soft&quot;
+    },
+    {
+      &quot;camera&quot;: &quot;right&quot;,
+      &quot;channel&quot;: &quot;normal_lit&quot;,
+      &quot;light&quot;: &quot;side&quot;
+    },
+    {
+      &quot;camera&quot;: &quot;back_right&quot;,
+      &quot;channel&quot;: &quot;material&quot;,
+      &quot;light&quot;: &quot;soft&quot;
+    },
+    {
+      &quot;camera&quot;: &quot;back_right&quot;,
+      &quot;channel&quot;: &quot;normal_lit&quot;,
+      &quot;light&quot;: &quot;side&quot;
+    },
+    {
+      &quot;camera&quot;: &quot;back&quot;,
+      &quot;channel&quot;: &quot;material&quot;,
+      &quot;light&quot;: &quot;soft&quot;
+    },
+    {
+      &quot;camera&quot;: &quot;back&quot;,
+      &quot;channel&quot;: &quot;normal_lit&quot;,
+      &quot;light&quot;: &quot;side&quot;
+    },
+    {
+      &quot;camera&quot;: &quot;back_left&quot;,
+      &quot;channel&quot;: &quot;material&quot;,
+      &quot;light&quot;: &quot;soft&quot;
+    },
+    {
+      &quot;camera&quot;: &quot;back_left&quot;,
+      &quot;channel&quot;: &quot;normal_lit&quot;,
+      &quot;light&quot;: &quot;side&quot;
+    },
+    {
+      &quot;camera&quot;: &quot;left&quot;,
+      &quot;channel&quot;: &quot;material&quot;,
+      &quot;light&quot;: &quot;soft&quot;
+    },
+    {
+      &quot;camera&quot;: &quot;left&quot;,
+      &quot;channel&quot;: &quot;normal_lit&quot;,
+      &quot;light&quot;: &quot;side&quot;
+    },
+    {
+      &quot;camera&quot;: &quot;front_left&quot;,
+      &quot;channel&quot;: &quot;material&quot;,
+      &quot;light&quot;: &quot;soft&quot;
+    },
+    {
+      &quot;camera&quot;: &quot;front_left&quot;,
+      &quot;channel&quot;: &quot;normal_lit&quot;,
+      &quot;light&quot;: &quot;side&quot;
+    }
+  ],
+  &quot;models&quot;: [
+    {
+      &quot;method&quot;: &quot;source_uv&quot;,
+      &quot;model&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\source_uv_2048\\export\\asset.glb&quot;,
+      &quot;model_sha256&quot;: &quot;ca680a141ce3aeec50baa437e402733417083d00884bf0d9fb8f98de1846fec8&quot;,
+      &quot;contact&quot;: &quot;artifacts\\tower_uv_comparison\\round02\\report\\source_uv_contact.png&quot;,
+      &quot;contact_sha256&quot;: &quot;588abc247d9da1a0b4eae335f52307df5489b5783590cb0867073d58c5801ea8&quot;
+    },
+    {
+      &quot;method&quot;: &quot;xatlas&quot;,
+      &quot;model&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\xatlas_2048\\export\\asset.glb&quot;,
+      &quot;model_sha256&quot;: &quot;7714b242f5f90af75c928fb3983a7ec959fe3ca37968327c4b092666d957eb75&quot;,
+      &quot;contact&quot;: &quot;artifacts\\tower_uv_comparison\\round02\\report\\xatlas_contact.png&quot;,
+      &quot;contact_sha256&quot;: &quot;9150426aa4f8f0253b67bcf53365341f04acaf17992cd9837012bb5a733ae737&quot;
+    },
+    {
+      &quot;method&quot;: &quot;blender_smart&quot;,
+      &quot;model&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\blender_smart_2048\\export\\asset.glb&quot;,
+      &quot;model_sha256&quot;: &quot;ec4f9d3ddaad93b5b3524a260b4dcb08cf6886f6bf388805c0b59881c9dc51a1&quot;,
+      &quot;contact&quot;: &quot;artifacts\\tower_uv_comparison\\round02\\report\\blender_smart_contact.png&quot;,
+      &quot;contact_sha256&quot;: &quot;3c72474207859bbe7cd75e4b4b83ec52a99675d2b96a3ea0c1e36578ea811e0c&quot;
+    },
+    {
+      &quot;method&quot;: &quot;partuv&quot;,
+      &quot;model&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\partuv_2048\\export\\asset.glb&quot;,
+      &quot;model_sha256&quot;: &quot;b24360ef66c38d802ff0b896fab051d6042421f318a34d77200098173f5d7907&quot;,
+      &quot;contact&quot;: &quot;artifacts\\tower_uv_comparison\\round02\\report\\partuv_contact.png&quot;,
+      &quot;contact_sha256&quot;: &quot;8c26baf3b94b5a33bc6f2459369cc74a4320d7c57e5ec98fb1f3bd9dcea870d9&quot;
+    },
+    {
+      &quot;method&quot;: &quot;meshquery_project&quot;,
+      &quot;model&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\meshquery_repaired_2048\\export\\asset.glb&quot;,
+      &quot;model_sha256&quot;: &quot;5267d015b3da449b52d295068b6a76574eade3c627f3891711d57be07ca6a313&quot;,
+      &quot;contact&quot;: &quot;artifacts\\tower_uv_comparison\\round02\\report\\meshquery_project_contact.png&quot;,
+      &quot;contact_sha256&quot;: &quot;dbee99601fdfee86e349d9b884611d143976e47434f6036546ba564bd12fe331&quot;
+    },
+    {
+      &quot;method&quot;: &quot;reseam_unshared&quot;,
+      &quot;model&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_unshared_2048\\export\\asset.glb&quot;,
+      &quot;model_sha256&quot;: &quot;5267d015b3da449b52d295068b6a76574eade3c627f3891711d57be07ca6a313&quot;,
+      &quot;contact&quot;: &quot;artifacts\\tower_uv_comparison\\round02\\report\\reseam_unshared_contact.png&quot;,
+      &quot;contact_sha256&quot;: &quot;cde89a8e87a05f649d45d8af2250c54de0e88f2de38ea24e25e5adb95b34ab6c&quot;
+    },
+    {
+      &quot;method&quot;: &quot;reseam_shared&quot;,
+      &quot;model&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_shared_boundary_2048\\export\\asset.glb&quot;,
+      &quot;model_sha256&quot;: &quot;1e3753027d8ea1932ace680aa92bd251c1351f251bbac324b913d668c7e4b988&quot;,
+      &quot;contact&quot;: &quot;artifacts\\tower_uv_comparison\\round02\\report\\reseam_shared_contact.png&quot;,
+      &quot;contact_sha256&quot;: &quot;9825c18cbeae1f292c11f6e7ce332e949340a2f60d8770b98961d4835b83c8b3&quot;
+    },
+    {
+      &quot;method&quot;: &quot;reseam_optimized&quot;,
+      &quot;model&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_optimized_2048\\export\\asset.glb&quot;,
+      &quot;model_sha256&quot;: &quot;4f8deae61ea32a46351f8d0c2cc27612f412f280366a381602037554f4dc97e6&quot;,
+      &quot;contact&quot;: &quot;artifacts\\tower_uv_comparison\\round02\\report\\reseam_optimized_contact.png&quot;,
+      &quot;contact_sha256&quot;: &quot;47239c15f7db45f4ea832d2634f70e31dc98793dab7431f326a2a3f5097fc3bb&quot;
+    },
+    {
+      &quot;method&quot;: &quot;mirror_negative_unshared&quot;,
+      &quot;model&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_unshared_2048\\export\\asset.glb&quot;,
+      &quot;model_sha256&quot;: &quot;8d731b462a934b3d8c33012a4430313df525c642f350f71465d762e64b8a9c60&quot;,
+      &quot;contact&quot;: &quot;artifacts\\tower_uv_comparison\\round02\\report\\mirror_negative_unshared_contact.png&quot;,
+      &quot;contact_sha256&quot;: &quot;2ab33e328e9ad14766238d24d0c3104aec33745f2bd47bdde9409e693c8f8b87&quot;
+    },
+    {
+      &quot;method&quot;: &quot;mirror_negative_shared&quot;,
+      &quot;model&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_shared_2048\\export\\asset.glb&quot;,
+      &quot;model_sha256&quot;: &quot;f416273da15370c12d372cc5dfeb892c0a6821ef82839c7f2c11932e30aaf261&quot;,
+      &quot;contact&quot;: &quot;artifacts\\tower_uv_comparison\\round02\\report\\mirror_negative_shared_contact.png&quot;,
+      &quot;contact_sha256&quot;: &quot;4e133c2304de4c8d65010837568c52298fd3bced1e2f59bdb457f42501cad090&quot;
+    },
+    {
+      &quot;method&quot;: &quot;mirror_negative_optimized_minimum_shared&quot;,
+      &quot;model&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_optimized_minimum_shared_2048\\export\\asset.glb&quot;,
+      &quot;model_sha256&quot;: &quot;ca179e4d746ba8cf4638c6b1ee60f6612dccea8668fe6881db2dd9aba6b2bf5d&quot;,
+      &quot;contact&quot;: &quot;artifacts\\tower_uv_comparison\\round02\\report\\mirror_negative_optimized_minimum_shared_contact.png&quot;,
+      &quot;contact_sha256&quot;: &quot;948e9b80a7afd09bee0e3f0fc868ba9aeaafd5dc088332f013c17d01a90db1b1&quot;
+    },
+    {
+      &quot;method&quot;: &quot;mirror_negative_optimized_minimum_unshared&quot;,
+      &quot;model&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_optimized_minimum_unshared_2048\\export\\asset.glb&quot;,
+      &quot;model_sha256&quot;: &quot;e5adde9eb010badc83806db89de1636ef5a549a099987964ee7b72be030b8c03&quot;,
+      &quot;contact&quot;: &quot;artifacts\\tower_uv_comparison\\round02\\report\\mirror_negative_optimized_minimum_unshared_contact.png&quot;,
+      &quot;contact_sha256&quot;: &quot;677b946fd475d010a08fd73be0d00b2bd8fd923dbf007951cba2f26803029a00&quot;
+    },
+    {
+      &quot;method&quot;: &quot;mirror_negative_aggressive_minimum_shared&quot;,
+      &quot;model&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_aggressive_minimum_shared_2048\\export\\asset.glb&quot;,
+      &quot;model_sha256&quot;: &quot;ca250567087515fa8a7e93f23337b4244ad682da100bdf40d6716d55d47f665c&quot;,
+      &quot;contact&quot;: &quot;artifacts\\tower_uv_comparison\\round02\\report\\mirror_negative_aggressive_minimum_shared_contact.png&quot;,
+      &quot;contact_sha256&quot;: &quot;fcf83101b89a39bbc727c009e509713fa1c90d86396135f72243906f5d93cb7e&quot;
+    },
+    {
+      &quot;method&quot;: &quot;mirror_negative_aggressive_minimum_unshared&quot;,
+      &quot;model&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_aggressive_minimum_unshared_2048\\export\\asset.glb&quot;,
+      &quot;model_sha256&quot;: &quot;392f1415c6248ac27bb137d703c984fbb4e34e895689483e2680f5ecc859f5df&quot;,
+      &quot;contact&quot;: &quot;artifacts\\tower_uv_comparison\\round02\\report\\mirror_negative_aggressive_minimum_unshared_contact.png&quot;,
+      &quot;contact_sha256&quot;: &quot;46a1b5f5cbd51d6b6bfe6e7b8bd18d151b90aa609e18672748b4613de818657e&quot;
+    },
+    {
+      &quot;method&quot;: &quot;mirror_negative_exhaustive_minimum_shared&quot;,
+      &quot;model&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\export\\asset.glb&quot;,
+      &quot;model_sha256&quot;: &quot;fbd02a1c2bf4d2d51681bb083f62cb316c76653eff65e2b6fce2f5d4cc256ebd&quot;,
+      &quot;contact&quot;: &quot;artifacts\\tower_uv_comparison\\round02\\report\\mirror_negative_exhaustive_minimum_shared_contact.png&quot;,
+      &quot;contact_sha256&quot;: &quot;ce99d79b993669b3c24dbca5621226dd8335080221817b070faa0df2b5324340&quot;
+    },
+    {
+      &quot;method&quot;: &quot;mirror_negative_exhaustive_minimum_unshared&quot;,
+      &quot;model&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\export\\asset.glb&quot;,
+      &quot;model_sha256&quot;: &quot;945bf05318ab6a0e3e2dd57e654327a8270112fc287b457bd6b975b3fbbb4713&quot;,
+      &quot;contact&quot;: &quot;artifacts\\tower_uv_comparison\\round02\\report\\mirror_negative_exhaustive_minimum_unshared_contact.png&quot;,
+      &quot;contact_sha256&quot;: &quot;14c770eb995676e64d5764d6a481f9f0568af67b1458a02c19ec7354a6c977ce&quot;
+    },
+    {
+      &quot;method&quot;: &quot;reseam_shared_boundary_control&quot;,
+      &quot;model&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_shared_boundary_control_2048\\export\\asset.glb&quot;,
+      &quot;model_sha256&quot;: &quot;6bcfa7d89f89337fad1607ed96a81b93fcc9f99766f5cbe6377e54436384a9d3&quot;,
+      &quot;contact&quot;: &quot;artifacts\\tower_uv_comparison\\round02\\report\\reseam_shared_boundary_control_contact.png&quot;,
+      &quot;contact_sha256&quot;: &quot;997e46301d724697066bf974f85f8224d240485533d620ddc75157df7eb94194&quot;
+    },
+    {
+      &quot;method&quot;: &quot;reseam_shared_repaired&quot;,
+      &quot;model&quot;: &quot;E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_shared_repaired_2048\\export\\asset.glb&quot;,
+      &quot;model_sha256&quot;: &quot;eeee5e0bc50d9ff8e832043447fce558787e9b8d51bcb854bd5a5c4f64861b8c&quot;,
+      &quot;contact&quot;: &quot;artifacts\\tower_uv_comparison\\round02\\report\\reseam_shared_repaired_contact.png&quot;,
+      &quot;contact_sha256&quot;: &quot;fea9456f5492a8f8d15ca289a5faa11a2f1e2b2af4d3f2a04c386ada4e7457c5&quot;
+    }
+  ],
+  &quot;reviewed_closeup_views&quot;: [
+    {
+      &quot;region&quot;: &quot;bow&quot;,
+      &quot;camera&quot;: &quot;front_right&quot;,
+      &quot;channels&quot;: [
+        &quot;material/soft&quot;,
+        &quot;normal_lit/side&quot;
+      ]
+    },
+    {
+      &quot;region&quot;: &quot;ornament&quot;,
+      &quot;camera&quot;: &quot;front_right&quot;,
+      &quot;channels&quot;: [
+        &quot;material/soft&quot;,
+        &quot;normal_lit/side&quot;
+      ]
+    },
+    {
+      &quot;region&quot;: &quot;base&quot;,
+      &quot;camera&quot;: &quot;front_right&quot;,
+      &quot;channels&quot;: [
+        &quot;material/soft&quot;,
+        &quot;normal_lit/side&quot;
+      ]
+    }
+  ],
+  &quot;closeup_figure_sha256&quot;: &quot;6578612e868ae7e11bf9d38b9082018488368be1994934c71c5dfeb7ea56bccd&quot;,
+  &quot;observations&quot;: [
+    &quot;Whole-body views retain the jade body, gold bow and ornament, blue gemstones and base silhouette.&quot;,
+    &quot;Closeups retain groove and ring shading without broad wrong colors or reversed highlights in the observed images.&quot;,
+    &quot;Mirroring duplicates retained-side small rear ornament geometry and surface patterns onto the opposite side; visible in the ornament closeup.&quot;,
+    &quot;Some small texture and highlight differences remain at 2K and near chart boundaries.&quot;
+  ],
+  &quot;numeric_status&quot;: &quot;DIAGNOSTIC&quot;,
+  &quot;preflight_uv_sampling&quot;: &quot;fail, retained in final_preflight&quot;,
+  &quot;human_acceptance&quot;: &quot;NOT_RUN&quot;,
+  &quot;game_shader&quot;: &quot;NOT_RUN&quot;
+}</pre></section>

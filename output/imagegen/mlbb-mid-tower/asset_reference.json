@@ -1,0 +1,15 @@
+{
+  "selection": "Blue standard archer defense tower selected from project assets after user specified mid-lane",
+  "scene": "F:\\MLBB_Test\\haijiangli1_HAMSTERMLBB\\Assets\\Art\\Prefabs\\TempPrefabs\\Effect_Group\\FX_LZJ_Temp\\Junei.unity",
+  "scene_instance_verification": "Unity editor not connected; exact middle-lane instance was not verified in live scene",
+  "prefabs": {
+    "high": "F:\\MLBB_Test\\haijiangli1_HAMSTERMLBB\\Assets\\Art\\Prefabs\\Monster\\monster_pvp049_high\\tower_gongjian_049\\ML_049_bluetower_high_add.prefab",
+    "standard": "F:\\MLBB_Test\\haijiangli1_HAMSTERMLBB\\Assets\\Art\\Prefabs\\Monster\\monster_pvp049\\tower_gongjian_049\\ML_049_bluetower_add.prefab",
+    "low": "F:\\MLBB_Test\\haijiangli1_HAMSTERMLBB\\Assets\\Art\\Prefabs\\Monster\\monster_pvp049_low\\tower_gongjian_049\\ML_049_bluetower_low.prefab"
+  },
+  "prefab_source_mesh_guids_verified": true,
+  "count_report": "E:\\ReSem\\output\\imagegen\\mlbb-mid-tower\\mesh_counts.json",
+  "count_scope": "Source FBX imported in Blender 4.5.11. Report raw polygons and tessellated loop triangles separately. Tower scope excludes objects named effect_UV and effect_UV2, which contribute 16 triangles in each source.",
+  "generated_solid_design": "User requested fully assembled solid tower. Bow-to-column connection is intentionally joined in generated reference views. Source-file mesh counts describe the original FBX assets.",
+  "render_material_scope": "Diffuse textures resolved from prefab material _MainTex. Unity dynamic shader and lightmap behavior are not reproduced."
+}

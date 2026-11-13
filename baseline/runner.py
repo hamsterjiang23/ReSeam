@@ -117,6 +117,8 @@ def run_baseline(request: dict[str, object], output: Path, deadline: float) -> d
         settings.update(read_object(native / "backend.json"))
     check_deadline(deadline)
     # Geometry always comes from the fixed parent, after explicit identity checks.
+    if original.corner_normals is not None:
+        surface.corner_normals = original.corner_normals.copy()
     surface.version = original.version + 1
     state = BudgetState(surface, version=surface.version)
     metadata = {**parent.metadata, "last_operation": "uv.baseline", "requires_rebake": True,

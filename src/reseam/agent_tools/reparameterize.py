@@ -163,14 +163,18 @@ def _import_optcuts(local: MeshState, path: Path) -> MeshState:
     from scipy.spatial import KDTree
     tree = KDTree(local.mesh.vertices)
     domains = tree.query_ball_point(vertices, max(scale*1e-7,1e-12))
-    source_lookup = {frozenset(map(int, face)): i for i,face in enumerate(local.mesh.faces)}
+    source_lookup: dict[frozenset[int], list[int]] = {}
+    for index, triangle in enumerate(local.mesh.faces):
+        source_lookup.setdefault(frozenset(map(int, triangle)), []).append(index)
     corners = np.empty((len(faces),3,2))
     identities = np.empty((len(faces),3), dtype=np.int64)
     used: set[int] = set()
     for row, face in enumerate(faces):
         from itertools import product
-        choices = [(source_lookup[frozenset(combo)], combo) for combo in product(*(domains[int(v)] for v in face))
-                   if len(set(combo)) == 3 and frozenset(combo) in source_lookup]
+        choices = [(original, combo) for combo in product(*(domains[int(v)] for v in face))
+                   if len(set(combo)) == 3
+                   for original in source_lookup.get(frozenset(combo), [])
+                   if any(tuple(np.roll(local.mesh.faces[original], shift)) == combo for shift in range(3))]
         if len(choices) != 1 or choices[0][0] in used:
             raise ValueError("OPTCUTS_FACE_CORNER_IDENTITY_AMBIGUOUS")
         original, combo = choices[0]

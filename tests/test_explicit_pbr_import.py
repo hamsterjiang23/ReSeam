@@ -17,7 +17,8 @@ from reseam.bake_variant_bake import DEFAULT_BLENDER
 
 
 @pytest.mark.skipif(not DEFAULT_BLENDER.is_file(), reason="real Blender not available")
-def test_explicit_pbr_import_retains_normals_and_core_material(tmp_path: Path) -> None:
+@pytest.mark.parametrize("partial", [False, True])
+def test_explicit_pbr_import_retains_normals_and_core_material(tmp_path: Path, partial: bool) -> None:
     source = tmp_path / "input.fbx"
     script = tmp_path / "fixture.py"
     script.write_text(
@@ -36,11 +37,14 @@ def test_explicit_pbr_import_retains_normals_and_core_material(tmp_path: Path) -
         path = tmp_path / (channel + ".png")
         Image.new("RGB", (8, 8), color).save(path)
         textures[channel] = str(path)
+    if partial:
+        textures = {k: v for k, v in textures.items() if k in {"basecolor", "normal"}}
     output = tmp_path / "import"
     output.mkdir()
     result = import_asset({"path": str(source), "uv_channel": 0, "pbr_textures": textures,
         "normal_convention": "directx", "collect_normal_evidence": True,
-        "target_normal_policy": "imported", "repair_nonmanifold": "split_fans"},
+        "target_normal_policy": "imported", "repair_nonmanifold": "split_fans",
+        "pbr_factors": {"roughness": .6, "metallic": 0}},
         output, time.monotonic() + 30)
     snapshot = load_snapshot(Path(str(result["snapshot"])))
     assert snapshot.state.surface.corner_normals is not None
@@ -49,9 +53,14 @@ def test_explicit_pbr_import_retains_normals_and_core_material(tmp_path: Path) -
     document = json.loads(data[20:20 + struct.unpack_from("<I", data, 12)[0]])
     material = document["materials"][0]
     assert "normalTexture" in material
-    assert {"baseColorTexture", "metallicRoughnessTexture"} <= material["pbrMetallicRoughness"].keys()
+    assert "baseColorTexture" in material["pbrMetallicRoughness"]
+    if partial:
+        assert material["pbrMetallicRoughness"]["roughnessFactor"] == pytest.approx(.6)
+        assert material["pbrMetallicRoughness"]["metallicFactor"] == 0
+    else:
+        assert "metallicRoughnessTexture" in material["pbrMetallicRoughness"]
     assert not material.get("extensions")
     assert "TANGENT" in document["meshes"][0]["primitives"][0]["attributes"]
     with Image.open(output / "inputs/normal_opengl.png") as image:
-        assert abs(image.getpixel((0, 0))[1] - 63) <= 1
+        assert abs(int(np.asarray(image)[0, 0, 1]) - 63) <= 1
     assert Path(textures["normal"]).read_bytes() == (output / "inputs/pbr/normal/normal.png").read_bytes()

@@ -1,0 +1,2371 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-11-11T14:51:33.986375+08:00",
+  "purpose": "蓝龙高低模测试资产归档与结构检查",
+  "root": "E:\\ReSem\\model\\dragon\\pbr_bake_test",
+  "status": "organized_and_structurally_verified",
+  "assets": [
+    {
+      "id": "high/source_basecolor",
+      "title": "原始蓝龙 BaseColor 来源",
+      "source_path": "E:\\ReSem\\model\\dragon\\tripo_p2\\blue dragon 3d model.zip",
+      "source_sha256": "ed83011d1460eb2cebfe53c009218a6877aaf2d9bf242811ba94eca705b3d1ab",
+      "model_path": "high/source_basecolor/blue_dragon_3d_model.fbx",
+      "files": [
+        {
+          "path": "high/source_basecolor/blue_dragon_3d_model.fbx",
+          "source_entry": "blue_dragon_3d_model.fbx",
+          "bytes": 351888,
+          "sha256": "6e936f46e7d6c5193edecf68e2e9d704a0964aae6fa66fb52dbb01f2da309162",
+          "source_sha256": "6e936f46e7d6c5193edecf68e2e9d704a0964aae6fa66fb52dbb01f2da309162"
+        },
+        {
+          "path": "high/source_basecolor/blue_dragon_3d_model.fbm/blue_dragon_3d_model_basecolor.jpg",
+          "source_entry": "blue_dragon_3d_model.fbm/blue_dragon_3d_model_basecolor.jpg",
+          "bytes": 7197146,
+          "sha256": "f54bf1b717a7d73739d7ebe560c9c0425743a089cf264a6b2a6164e89f5fb317",
+          "source_sha256": "f54bf1b717a7d73739d7ebe560c9c0425743a089cf264a6b2a6164e89f5fb317",
+          "image": {
+            "width": 8192,
+            "height": 8192,
+            "mode": "RGB",
+            "format": "JPEG"
+          }
+        }
+      ],
+      "inspection": {
+        "format": "FBX",
+        "version": 7400,
+        "polygon_count": 6339,
+        "polygons_by_corner_count": {
+          "3": 1846,
+          "4": 4493
+        },
+        "triangulated_face_count": 10832,
+        "layers": [
+          {
+            "node": "Objects/Geometry/Vertices",
+            "scalar_count": 16149
+          },
+          {
+            "node": "Objects/Geometry/LayerElementNormal/Normals",
+            "scalar_count": 70530
+          },
+          {
+            "node": "Objects/Geometry/LayerElementUV/UV",
+            "scalar_count": 14006
+          },
+          {
+            "node": "Objects/Geometry/LayerElementUV/UVIndex",
+            "scalar_count": 23510
+          }
+        ],
+        "material_bindings": [
+          {
+            "node": "Objects/Material",
+            "properties": [
+              1000002,
+              "Material_tripo_7af71c81_2e9d_4918_9a2a_579f160ab21a\u0000\u0001Material",
+              ""
+            ]
+          },
+          {
+            "node": "Objects/Material/ShadingModel",
+            "properties": [
+              "phong"
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "AmbientColor",
+              "Color",
+              "",
+              "A",
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "DiffuseColor",
+              "Color",
+              "",
+              "A",
+              0.800000011920929,
+              0.800000011920929,
+              0.800000011920929
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "TransparentColor",
+              "Color",
+              "",
+              "A",
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "TransparencyFactor",
+              "Number",
+              "",
+              "A",
+              1.0
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "ReflectionColor",
+              "Color",
+              "",
+              "A",
+              0.800000011920929,
+              0.800000011920929,
+              0.800000011920929
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "ReflectionFactor",
+              "Number",
+              "",
+              "A",
+              0.0
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "SpecularColor",
+              "Color",
+              "",
+              "A",
+              0.800000011920929,
+              0.800000011920929,
+              0.800000011920929
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "ShininessFactor",
+              "Number",
+              "",
+              "A",
+              0.25
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "ShininessExponent",
+              "Number",
+              "",
+              "A",
+              1.0000004768371582
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "ReflectionFactor",
+              "Number",
+              "",
+              "A",
+              0.0
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "Emissive",
+              "Vector3D",
+              "Vector",
+              "",
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "Ambient",
+              "Vector3D",
+              "Vector",
+              "",
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "Diffuse",
+              "Vector3D",
+              "Vector",
+              "",
+              0.800000011920929,
+              0.800000011920929,
+              0.800000011920929
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "Opacity",
+              "double",
+              "Number",
+              "",
+              1.0
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "Specular",
+              "Vector3D",
+              "Vector",
+              "",
+              0.20000000298023224,
+              0.20000000298023224,
+              0.20000000298023224
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "Shininess",
+              "double",
+              "Number",
+              "",
+              1.0000004768371582
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "Reflectivity",
+              "double",
+              "Number",
+              "",
+              0.0
+            ]
+          },
+          {
+            "node": "Objects/Video/RelativeFilename",
+            "properties": [
+              "blue_dragon_3d_model.fbm/blue_dragon_3d_model_basecolor.jpg"
+            ]
+          },
+          {
+            "node": "Objects/Texture",
+            "properties": [
+              1000004,
+              "base_color_texture\u0000\u0001Texture",
+              ""
+            ]
+          },
+          {
+            "node": "Objects/Texture/RelativeFilename",
+            "properties": [
+              "blue_dragon_3d_model.fbm/blue_dragon_3d_model_basecolor.jpg"
+            ]
+          },
+          {
+            "node": "Connections/C",
+            "properties": [
+              "OP",
+              1000004,
+              1000002,
+              "DiffuseColor"
+            ]
+          },
+          {
+            "node": "Connections/C",
+            "properties": [
+              "OO",
+              1000003,
+              1000004
+            ]
+          },
+          {
+            "node": "Connections/C",
+            "properties": [
+              "OO",
+              1000005,
+              0
+            ]
+          },
+          {
+            "node": "Connections/C",
+            "properties": [
+              "OO",
+              1000001,
+              1000005
+            ]
+          },
+          {
+            "node": "Connections/C",
+            "properties": [
+              "OO",
+              1000002,
+              1000005
+            ]
+          }
+        ],
+        "relative_texture_references": [
+          "blue_dragon_3d_model.fbm/blue_dragon_3d_model_basecolor.jpg"
+        ],
+        "triangulation_method": "count_only_n_minus_2_no_mesh_modification"
+      },
+      "pairing_status": "pending_geometry_and_material_verification",
+      "render_validation": "not_run"
+    },
+    {
+      "id": "high/source_pbr",
+      "title": "蓝龙 PBR 来源",
+      "source_path": "E:\\Downloads\\tripo_convert_46c1f05d-c694-43a4-8bc3-48066bf4f53a.zip",
+      "source_sha256": "d89d75672a96c2e12dd7cc86405b9c45920a15ecf6a278456a447b5ef82435d2",
+      "model_path": "high/source_pbr/tripo_convert_46c1f05d-c694-43a4-8bc3-48066bf4f53a.fbx",
+      "files": [
+        {
+          "path": "high/source_pbr/tripo_convert_46c1f05d-c694-43a4-8bc3-48066bf4f53a.fbx",
+          "source_entry": "tripo_convert_46c1f05d-c694-43a4-8bc3-48066bf4f53a.fbx",
+          "bytes": 337276,
+          "sha256": "703c9bfd11275066e0cab2ccc04ac9d0e1f886ec5b837338dcc741780f8c5d8f",
+          "source_sha256": "703c9bfd11275066e0cab2ccc04ac9d0e1f886ec5b837338dcc741780f8c5d8f"
+        },
+        {
+          "path": "high/source_pbr/tripo_convert_46c1f05d-c694-43a4-8bc3-48066bf4f53a.fbm/tripo_rgb_4ce8d730-b2fd-4599-8da4-c053fdc779e8.jpg",
+          "source_entry": "tripo_convert_46c1f05d-c694-43a4-8bc3-48066bf4f53a.fbm/tripo_rgb_4ce8d730-b2fd-4599-8da4-c053fdc779e8.jpg",
+          "bytes": 5502101,
+          "sha256": "8bb5db7162bc401dbdfe6e7a9c8b6cdd862dd27d20a84e61efcecc3931455f34",
+          "source_sha256": "8bb5db7162bc401dbdfe6e7a9c8b6cdd862dd27d20a84e61efcecc3931455f34",
+          "image": {
+            "width": 8192,
+            "height": 8192,
+            "mode": "RGB",
+            "format": "JPEG"
+          }
+        },
+        {
+          "path": "high/source_pbr/tripo_convert_46c1f05d-c694-43a4-8bc3-48066bf4f53a.fbm/tripo_normal_54fa9484-514a-4648-9150-cced51267067.jpg",
+          "source_entry": "tripo_convert_46c1f05d-c694-43a4-8bc3-48066bf4f53a.fbm/tripo_normal_54fa9484-514a-4648-9150-cced51267067.jpg",
+          "bytes": 1023367,
+          "sha256": "73245506e3ec8935d7914c2b1a22e15717df8915ed89804465e4bdbcb52e6094",
+          "source_sha256": "73245506e3ec8935d7914c2b1a22e15717df8915ed89804465e4bdbcb52e6094",
+          "image": {
+            "width": 4096,
+            "height": 4096,
+            "mode": "RGB",
+            "format": "JPEG"
+          }
+        },
+        {
+          "path": "high/source_pbr/tripo_convert_46c1f05d-c694-43a4-8bc3-48066bf4f53a.fbm/blue_dragon_3d_model_fbx_roughness.JPEG",
+          "source_entry": "tripo_convert_46c1f05d-c694-43a4-8bc3-48066bf4f53a.fbm/blue_dragon_3d_model_fbx_roughness.JPEG",
+          "bytes": 1059502,
+          "sha256": "808b436e861dd9dab4099ef05e49229ce4c7fd54d34fdf53f88ddda70f1f5566",
+          "source_sha256": "808b436e861dd9dab4099ef05e49229ce4c7fd54d34fdf53f88ddda70f1f5566",
+          "image": {
+            "width": 4096,
+            "height": 4096,
+            "mode": "L",
+            "format": "JPEG"
+          }
+        },
+        {
+          "path": "high/source_pbr/tripo_convert_46c1f05d-c694-43a4-8bc3-48066bf4f53a.fbm/blue_dragon_3d_model_fbx_metallic.JPEG",
+          "source_entry": "tripo_convert_46c1f05d-c694-43a4-8bc3-48066bf4f53a.fbm/blue_dragon_3d_model_fbx_metallic.JPEG",
+          "bytes": 1174966,
+          "sha256": "992a24b0bf9067ba70c98231b380a3758ce82945789e453fa95e016da8b54407",
+          "source_sha256": "992a24b0bf9067ba70c98231b380a3758ce82945789e453fa95e016da8b54407",
+          "image": {
+            "width": 4096,
+            "height": 4096,
+            "mode": "L",
+            "format": "JPEG"
+          }
+        }
+      ],
+      "inspection": {
+        "format": "FBX",
+        "version": 7400,
+        "polygon_count": 6339,
+        "polygons_by_corner_count": {
+          "3": 1846,
+          "4": 4493
+        },
+        "triangulated_face_count": 10832,
+        "layers": [
+          {
+            "node": "Objects/Geometry/Vertices",
+            "scalar_count": 16149
+          },
+          {
+            "node": "Objects/Geometry/LayerElementNormal/Normals",
+            "scalar_count": 16923
+          },
+          {
+            "node": "Objects/Geometry/LayerElementUV/UV",
+            "scalar_count": 14006
+          },
+          {
+            "node": "Objects/Geometry/LayerElementUV/UVIndex",
+            "scalar_count": 23510
+          }
+        ],
+        "material_bindings": [
+          {
+            "node": "Objects/Material",
+            "properties": [
+              597702532,
+              "tripo_mat_46c1f05d\u0000\u0001Material",
+              ""
+            ]
+          },
+          {
+            "node": "Objects/Material/ShadingModel",
+            "properties": [
+              "Phong"
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "DiffuseColor",
+              "Color",
+              "",
+              "A",
+              0.800000011920929,
+              0.800000011920929,
+              0.800000011920929
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "AmbientColor",
+              "Color",
+              "",
+              "A",
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "AmbientFactor",
+              "Number",
+              "",
+              "A",
+              0.0
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "SpecularColor",
+              "Color",
+              "",
+              "A",
+              0.800000011920929,
+              0.800000011920929,
+              0.800000011920929
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "SpecularFactor",
+              "Number",
+              "",
+              "A",
+              0.25
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "Shininess",
+              "Number",
+              "",
+              "A",
+              0.0
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "ShininessExponent",
+              "Number",
+              "",
+              "A",
+              0.0
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "ReflectionColor",
+              "Color",
+              "",
+              "A",
+              0.800000011920929,
+              0.800000011920929,
+              0.800000011920929
+            ]
+          },
+          {
+            "node": "Objects/Texture",
+            "properties": [
+              895557527,
+              "base_color_texture\u0000\u0001Texture",
+              ""
+            ]
+          },
+          {
+            "node": "Objects/Texture/RelativeFilename",
+            "properties": [
+              "tripo_convert_46c1f05d-c694-43a4-8bc3-48066bf4f53a.fbm/tripo_rgb_4ce8d730-b2fd-4599-8da4-c053fdc779e8.jpg"
+            ]
+          },
+          {
+            "node": "Objects/Texture",
+            "properties": [
+              599964552,
+              "normalmap_texture\u0000\u0001Texture",
+              ""
+            ]
+          },
+          {
+            "node": "Objects/Texture/RelativeFilename",
+            "properties": [
+              "tripo_convert_46c1f05d-c694-43a4-8bc3-48066bf4f53a.fbm/tripo_normal_54fa9484-514a-4648-9150-cced51267067.jpg"
+            ]
+          },
+          {
+            "node": "Objects/Texture",
+            "properties": [
+              180517881,
+              "roughness_texture\u0000\u0001Texture",
+              ""
+            ]
+          },
+          {
+            "node": "Objects/Texture/RelativeFilename",
+            "properties": [
+              "tripo_convert_46c1f05d-c694-43a4-8bc3-48066bf4f53a.fbm/blue_dragon_3d_model_fbx_roughness.JPEG"
+            ]
+          },
+          {
+            "node": "Objects/Texture",
+            "properties": [
+              772379483,
+              "metallic_texture\u0000\u0001Texture",
+              ""
+            ]
+          },
+          {
+            "node": "Objects/Texture/RelativeFilename",
+            "properties": [
+              "tripo_convert_46c1f05d-c694-43a4-8bc3-48066bf4f53a.fbm/blue_dragon_3d_model_fbx_metallic.JPEG"
+            ]
+          },
+          {
+            "node": "Objects/Video/RelativeFilename",
+            "properties": [
+              "tripo_convert_46c1f05d-c694-43a4-8bc3-48066bf4f53a.fbm/tripo_rgb_4ce8d730-b2fd-4599-8da4-c053fdc779e8.jpg"
+            ]
+          },
+          {
+            "node": "Objects/Video/RelativeFilename",
+            "properties": [
+              "tripo_convert_46c1f05d-c694-43a4-8bc3-48066bf4f53a.fbm/tripo_normal_54fa9484-514a-4648-9150-cced51267067.jpg"
+            ]
+          },
+          {
+            "node": "Objects/Video/RelativeFilename",
+            "properties": [
+              "tripo_convert_46c1f05d-c694-43a4-8bc3-48066bf4f53a.fbm/blue_dragon_3d_model_fbx_roughness.JPEG"
+            ]
+          },
+          {
+            "node": "Objects/Video/RelativeFilename",
+            "properties": [
+              "tripo_convert_46c1f05d-c694-43a4-8bc3-48066bf4f53a.fbm/blue_dragon_3d_model_fbx_metallic.JPEG"
+            ]
+          },
+          {
+            "node": "Connections/C",
+            "properties": [
+              "OO",
+              960239108,
+              0
+            ]
+          },
+          {
+            "node": "Connections/C",
+            "properties": [
+              "OO",
+              446582958,
+              960239108
+            ]
+          },
+          {
+            "node": "Connections/C",
+            "properties": [
+              "OO",
+              597702532,
+              960239108
+            ]
+          },
+          {
+            "node": "Connections/C",
+            "properties": [
+              "OP",
+              895557527,
+              597702532,
+              "DiffuseColor"
+            ]
+          },
+          {
+            "node": "Connections/C",
+            "properties": [
+              "OP",
+              599964552,
+              597702532,
+              "NormalMap"
+            ]
+          },
+          {
+            "node": "Connections/C",
+            "properties": [
+              "OP",
+              180517881,
+              597702532,
+              "ShininessExponent"
+            ]
+          },
+          {
+            "node": "Connections/C",
+            "properties": [
+              "OP",
+              772379483,
+              597702532,
+              "ReflectionFactor"
+            ]
+          },
+          {
+            "node": "Connections/C",
+            "properties": [
+              "OO",
+              65022312,
+              895557527
+            ]
+          },
+          {
+            "node": "Connections/C",
+            "properties": [
+              "OO",
+              918056320,
+              599964552
+            ]
+          },
+          {
+            "node": "Connections/C",
+            "properties": [
+              "OO",
+              874725491,
+              180517881
+            ]
+          },
+          {
+            "node": "Connections/C",
+            "properties": [
+              "OO",
+              874725491,
+              180517881
+            ]
+          },
+          {
+            "node": "Connections/C",
+            "properties": [
+              "OO",
+              209167958,
+              772379483
+            ]
+          }
+        ],
+        "relative_texture_references": [
+          "tripo_convert_46c1f05d-c694-43a4-8bc3-48066bf4f53a.fbm/blue_dragon_3d_model_fbx_metallic.JPEG",
+          "tripo_convert_46c1f05d-c694-43a4-8bc3-48066bf4f53a.fbm/blue_dragon_3d_model_fbx_roughness.JPEG",
+          "tripo_convert_46c1f05d-c694-43a4-8bc3-48066bf4f53a.fbm/tripo_normal_54fa9484-514a-4648-9150-cced51267067.jpg",
+          "tripo_convert_46c1f05d-c694-43a4-8bc3-48066bf4f53a.fbm/tripo_rgb_4ce8d730-b2fd-4599-8da4-c053fdc779e8.jpg"
+        ],
+        "triangulation_method": "count_only_n_minus_2_no_mesh_modification"
+      },
+      "pairing_status": "pending_geometry_and_material_verification",
+      "render_validation": "not_run"
+    },
+    {
+      "id": "low/tri_2436",
+      "title": "早期三角版低模",
+      "source_path": "E:\\Downloads\\blue_dragon_3d_model_low_tri.fbx.zip",
+      "source_sha256": "684ba2f7882ca3b4ae36a82358ecd24cb762fdd310746ec2a2183548cb9b7e2d",
+      "model_path": "low/tri_2436/blue_dragon_3d_model_low.fbx.fbx",
+      "files": [
+        {
+          "path": "low/tri_2436/blue_dragon_3d_model_low.fbx.fbx",
+          "source_entry": "blue_dragon_3d_model_low.fbx.fbx",
+          "bytes": 111312,
+          "sha256": "78946e6afefcd3c4e31dd63797abe56ecc1434f5993083db3fa2dfdaa17906eb",
+          "source_sha256": "78946e6afefcd3c4e31dd63797abe56ecc1434f5993083db3fa2dfdaa17906eb"
+        },
+        {
+          "path": "low/tri_2436/blue_dragon_3d_model_low.fbx.fbm/blue_dragon_3d_model_low.fbx_normal.jpg",
+          "source_entry": "blue_dragon_3d_model_low.fbx.fbm/blue_dragon_3d_model_low.fbx_normal.jpg",
+          "bytes": 863465,
+          "sha256": "86284ee9feb419d0d7768bbe04f0883dd6d1f0f981da60456fe93c91761275e0",
+          "source_sha256": "86284ee9feb419d0d7768bbe04f0883dd6d1f0f981da60456fe93c91761275e0",
+          "image": {
+            "width": 2048,
+            "height": 2048,
+            "mode": "RGB",
+            "format": "JPEG"
+          }
+        }
+      ],
+      "inspection": {
+        "format": "FBX",
+        "version": 7400,
+        "polygon_count": 2436,
+        "polygons_by_corner_count": {
+          "3": 2436
+        },
+        "triangulated_face_count": 2436,
+        "layers": [
+          {
+            "node": "Objects/Geometry/Vertices",
+            "scalar_count": 3609
+          },
+          {
+            "node": "Objects/Geometry/LayerElementNormal/Normals",
+            "scalar_count": 21924
+          },
+          {
+            "node": "Objects/Geometry/LayerElementUV/UV",
+            "scalar_count": 7170
+          },
+          {
+            "node": "Objects/Geometry/LayerElementUV/UVIndex",
+            "scalar_count": 7308
+          }
+        ],
+        "material_bindings": [
+          {
+            "node": "Objects/Material",
+            "properties": [
+              1000002,
+              "tripo_7af71c81_2e9d_4918_9a2a_579f160ab2_material\u0000\u0001Material",
+              ""
+            ]
+          },
+          {
+            "node": "Objects/Material/ShadingModel",
+            "properties": [
+              "phong"
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "AmbientColor",
+              "Color",
+              "",
+              "A",
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "DiffuseColor",
+              "Color",
+              "",
+              "A",
+              0.800000011920929,
+              0.800000011920929,
+              0.800000011920929
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "TransparentColor",
+              "Color",
+              "",
+              "A",
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "TransparencyFactor",
+              "Number",
+              "",
+              "A",
+              1.0
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "ReflectionColor",
+              "Color",
+              "",
+              "A",
+              0.800000011920929,
+              0.800000011920929,
+              0.800000011920929
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "ReflectionFactor",
+              "Number",
+              "",
+              "A",
+              0.0
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "SpecularColor",
+              "Color",
+              "",
+              "A",
+              0.800000011920929,
+              0.800000011920929,
+              0.800000011920929
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "ShininessFactor",
+              "Number",
+              "",
+              "A",
+              0.25
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "ShininessExponent",
+              "Number",
+              "",
+              "A",
+              25.0
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "ReflectionFactor",
+              "Number",
+              "",
+              "A",
+              0.0
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "Emissive",
+              "Vector3D",
+              "Vector",
+              "",
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "Ambient",
+              "Vector3D",
+              "Vector",
+              "",
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "Diffuse",
+              "Vector3D",
+              "Vector",
+              "",
+              0.800000011920929,
+              0.800000011920929,
+              0.800000011920929
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "Opacity",
+              "double",
+              "Number",
+              "",
+              1.0
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "Specular",
+              "Vector3D",
+              "Vector",
+              "",
+              0.20000000298023224,
+              0.20000000298023224,
+              0.20000000298023224
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "Shininess",
+              "double",
+              "Number",
+              "",
+              25.0
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "Reflectivity",
+              "double",
+              "Number",
+              "",
+              0.0
+            ]
+          },
+          {
+            "node": "Objects/Video/RelativeFilename",
+            "properties": [
+              "blue_dragon_3d_model_low.fbx.fbm/blue_dragon_3d_model_low.fbx_normal.jpg"
+            ]
+          },
+          {
+            "node": "Objects/Texture",
+            "properties": [
+              1000004,
+              "normal_texture\u0000\u0001Texture",
+              ""
+            ]
+          },
+          {
+            "node": "Objects/Texture/RelativeFilename",
+            "properties": [
+              "blue_dragon_3d_model_low.fbx.fbm/blue_dragon_3d_model_low.fbx_normal.jpg"
+            ]
+          },
+          {
+            "node": "Connections/C",
+            "properties": [
+              "OP",
+              1000004,
+              1000002,
+              "NormalMap"
+            ]
+          },
+          {
+            "node": "Connections/C",
+            "properties": [
+              "OO",
+              1000003,
+              1000004
+            ]
+          },
+          {
+            "node": "Connections/C",
+            "properties": [
+              "OO",
+              1000005,
+              0
+            ]
+          },
+          {
+            "node": "Connections/C",
+            "properties": [
+              "OO",
+              1000001,
+              1000005
+            ]
+          },
+          {
+            "node": "Connections/C",
+            "properties": [
+              "OO",
+              1000002,
+              1000005
+            ]
+          }
+        ],
+        "relative_texture_references": [
+          "blue_dragon_3d_model_low.fbx.fbm/blue_dragon_3d_model_low.fbx_normal.jpg"
+        ],
+        "triangulation_method": "count_only_n_minus_2_no_mesh_modification"
+      },
+      "pairing_status": "pending_geometry_and_material_verification",
+      "render_validation": "not_run"
+    },
+    {
+      "id": "low/mixed_3214",
+      "title": "早期混合面低模",
+      "source_path": "E:\\Downloads\\blue_dragon_3d_model_low_quad.fbx.zip",
+      "source_sha256": "29381035bff1ea9d5ff1ee41abb6353b311e7b72d5910f6288d38b7d78c0c4e0",
+      "model_path": "low/mixed_3214/blue_dragon_3d_model.fbx.fbx",
+      "files": [
+        {
+          "path": "low/mixed_3214/blue_dragon_3d_model.fbx.fbx",
+          "source_entry": "blue_dragon_3d_model.fbx.fbx",
+          "bytes": 155840,
+          "sha256": "cc02e81f801495fa05e889f5406afd2b832ca3d1fa3ce685372e84339c34cb0d",
+          "source_sha256": "cc02e81f801495fa05e889f5406afd2b832ca3d1fa3ce685372e84339c34cb0d"
+        },
+        {
+          "path": "low/mixed_3214/blue_dragon_3d_model.fbx.fbm/blue_dragon_3d_model.fbx_normal.jpg",
+          "source_entry": "blue_dragon_3d_model.fbx.fbm/blue_dragon_3d_model.fbx_normal.jpg",
+          "bytes": 867220,
+          "sha256": "bb186a91ee153c6a08ea65c399faff2263aef46ff103e6582d7bc70e43bda88a",
+          "source_sha256": "bb186a91ee153c6a08ea65c399faff2263aef46ff103e6582d7bc70e43bda88a",
+          "image": {
+            "width": 2048,
+            "height": 2048,
+            "mode": "RGB",
+            "format": "JPEG"
+          }
+        }
+      ],
+      "inspection": {
+        "format": "FBX",
+        "version": 7400,
+        "polygon_count": 1835,
+        "polygons_by_corner_count": {
+          "3": 456,
+          "4": 1379
+        },
+        "triangulated_face_count": 3214,
+        "layers": [
+          {
+            "node": "Objects/Geometry/Vertices",
+            "scalar_count": 4827
+          },
+          {
+            "node": "Objects/Geometry/LayerElementNormal/Normals",
+            "scalar_count": 20652
+          },
+          {
+            "node": "Objects/Geometry/LayerElementUV/UV",
+            "scalar_count": 8134
+          },
+          {
+            "node": "Objects/Geometry/LayerElementUV/UVIndex",
+            "scalar_count": 6884
+          }
+        ],
+        "material_bindings": [
+          {
+            "node": "Objects/Material",
+            "properties": [
+              1000002,
+              "tripo_7af71c81_2e9d_4918_9a2a_579f160ab2_material.002\u0000\u0001Material",
+              ""
+            ]
+          },
+          {
+            "node": "Objects/Material/ShadingModel",
+            "properties": [
+              "phong"
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "AmbientColor",
+              "Color",
+              "",
+              "A",
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "DiffuseColor",
+              "Color",
+              "",
+              "A",
+              0.800000011920929,
+              0.800000011920929,
+              0.800000011920929
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "TransparentColor",
+              "Color",
+              "",
+              "A",
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "TransparencyFactor",
+              "Number",
+              "",
+              "A",
+              1.0
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "ReflectionColor",
+              "Color",
+              "",
+              "A",
+              0.800000011920929,
+              0.800000011920929,
+              0.800000011920929
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "ReflectionFactor",
+              "Number",
+              "",
+              "A",
+              0.0
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "SpecularColor",
+              "Color",
+              "",
+              "A",
+              0.800000011920929,
+              0.800000011920929,
+              0.800000011920929
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "ShininessFactor",
+              "Number",
+              "",
+              "A",
+              0.25
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "ShininessExponent",
+              "Number",
+              "",
+              "A",
+              25.0
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "ReflectionFactor",
+              "Number",
+              "",
+              "A",
+              0.0
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "Emissive",
+              "Vector3D",
+              "Vector",
+              "",
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "Ambient",
+              "Vector3D",
+              "Vector",
+              "",
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "Diffuse",
+              "Vector3D",
+              "Vector",
+              "",
+              0.800000011920929,
+              0.800000011920929,
+              0.800000011920929
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "Opacity",
+              "double",
+              "Number",
+              "",
+              1.0
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "Specular",
+              "Vector3D",
+              "Vector",
+              "",
+              0.20000000298023224,
+              0.20000000298023224,
+              0.20000000298023224
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "Shininess",
+              "double",
+              "Number",
+              "",
+              25.0
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "Reflectivity",
+              "double",
+              "Number",
+              "",
+              0.0
+            ]
+          },
+          {
+            "node": "Objects/Video/RelativeFilename",
+            "properties": [
+              "blue_dragon_3d_model.fbx.fbm/blue_dragon_3d_model.fbx_normal.jpg"
+            ]
+          },
+          {
+            "node": "Objects/Texture",
+            "properties": [
+              1000004,
+              "normal_texture\u0000\u0001Texture",
+              ""
+            ]
+          },
+          {
+            "node": "Objects/Texture/RelativeFilename",
+            "properties": [
+              "blue_dragon_3d_model.fbx.fbm/blue_dragon_3d_model.fbx_normal.jpg"
+            ]
+          },
+          {
+            "node": "Connections/C",
+            "properties": [
+              "OP",
+              1000004,
+              1000002,
+              "NormalMap"
+            ]
+          },
+          {
+            "node": "Connections/C",
+            "properties": [
+              "OO",
+              1000003,
+              1000004
+            ]
+          },
+          {
+            "node": "Connections/C",
+            "properties": [
+              "OO",
+              1000005,
+              0
+            ]
+          },
+          {
+            "node": "Connections/C",
+            "properties": [
+              "OO",
+              1000001,
+              1000005
+            ]
+          },
+          {
+            "node": "Connections/C",
+            "properties": [
+              "OO",
+              1000002,
+              1000005
+            ]
+          }
+        ],
+        "relative_texture_references": [
+          "blue_dragon_3d_model.fbx.fbm/blue_dragon_3d_model.fbx_normal.jpg"
+        ],
+        "triangulation_method": "count_only_n_minus_2_no_mesh_modification"
+      },
+      "pairing_status": "pending_geometry_and_material_verification",
+      "render_validation": "not_run"
+    },
+    {
+      "id": "low/pbr_tri_3113",
+      "title": "PBR 三角版低模",
+      "source_path": "E:\\Downloads\\tripo_convert_a1645f84-d4d2-4f8d-bb62-78111f52c3de.zip",
+      "source_sha256": "7bf138f0aaae6ce0aafe04ebad3b579ac0225f8758c93a7a56400935fd6676c5",
+      "model_path": "low/pbr_tri_3113/tripo_convert_a1645f84-d4d2-4f8d-bb62-78111f52c3de.fbx",
+      "files": [
+        {
+          "path": "low/pbr_tri_3113/tripo_convert_a1645f84-d4d2-4f8d-bb62-78111f52c3de.fbx",
+          "source_entry": "tripo_convert_a1645f84-d4d2-4f8d-bb62-78111f52c3de.fbx",
+          "bytes": 142844,
+          "sha256": "0c8599a8be046906d5007aaebf73382108360111b4004c7075f4c14468dea14e",
+          "source_sha256": "0c8599a8be046906d5007aaebf73382108360111b4004c7075f4c14468dea14e"
+        },
+        {
+          "path": "low/pbr_tri_3113/tripo_convert_a1645f84-d4d2-4f8d-bb62-78111f52c3de.fbm/tripo_7af71c81_2e9d_4918_9a2a_579f160ab2_BaseColor.jpg",
+          "source_entry": "tripo_convert_a1645f84-d4d2-4f8d-bb62-78111f52c3de.fbm/tripo_7af71c81_2e9d_4918_9a2a_579f160ab2_BaseColor.jpg",
+          "bytes": 4630680,
+          "sha256": "223a42ad81558a5b8e9744909cc142e35b7e9a3986068fb61afd2fe06a45a95f",
+          "source_sha256": "223a42ad81558a5b8e9744909cc142e35b7e9a3986068fb61afd2fe06a45a95f",
+          "image": {
+            "width": 8192,
+            "height": 8192,
+            "mode": "RGB",
+            "format": "JPEG"
+          }
+        },
+        {
+          "path": "low/pbr_tri_3113/tripo_convert_a1645f84-d4d2-4f8d-bb62-78111f52c3de.fbm/blue_dragon_3d_model_fbx_roughness.JPEG",
+          "source_entry": "tripo_convert_a1645f84-d4d2-4f8d-bb62-78111f52c3de.fbm/blue_dragon_3d_model_fbx_roughness.JPEG",
+          "bytes": 2369938,
+          "sha256": "535b2d90beb3aca4b4a74600274939c5ad78b18c2fdc97dfe8f770f9a2369b70",
+          "source_sha256": "535b2d90beb3aca4b4a74600274939c5ad78b18c2fdc97dfe8f770f9a2369b70",
+          "image": {
+            "width": 4096,
+            "height": 4096,
+            "mode": "L",
+            "format": "JPEG"
+          }
+        },
+        {
+          "path": "low/pbr_tri_3113/tripo_convert_a1645f84-d4d2-4f8d-bb62-78111f52c3de.fbm/tripo_normal_087a3eb2-36fb-4614-9736-b421c54494f8.jpg",
+          "source_entry": "tripo_convert_a1645f84-d4d2-4f8d-bb62-78111f52c3de.fbm/tripo_normal_087a3eb2-36fb-4614-9736-b421c54494f8.jpg",
+          "bytes": 825735,
+          "sha256": "b38f1011e0c59807c782f10e649e0427891244e6310d3e972c66aed0236cfd40",
+          "source_sha256": "b38f1011e0c59807c782f10e649e0427891244e6310d3e972c66aed0236cfd40",
+          "image": {
+            "width": 4096,
+            "height": 4096,
+            "mode": "RGB",
+            "format": "JPEG"
+          }
+        },
+        {
+          "path": "low/pbr_tri_3113/tripo_convert_a1645f84-d4d2-4f8d-bb62-78111f52c3de.fbm/blue_dragon_3d_model_fbx_metallic.JPEG",
+          "source_entry": "tripo_convert_a1645f84-d4d2-4f8d-bb62-78111f52c3de.fbm/blue_dragon_3d_model_fbx_metallic.JPEG",
+          "bytes": 2086287,
+          "sha256": "43f2571f5b2bec4605525f5bbee687d01921efd0fa01dee6dda1df49e3dcc2e7",
+          "source_sha256": "43f2571f5b2bec4605525f5bbee687d01921efd0fa01dee6dda1df49e3dcc2e7",
+          "image": {
+            "width": 4096,
+            "height": 4096,
+            "mode": "L",
+            "format": "JPEG"
+          }
+        }
+      ],
+      "inspection": {
+        "format": "FBX",
+        "version": 7400,
+        "polygon_count": 3113,
+        "polygons_by_corner_count": {
+          "3": 3113
+        },
+        "triangulated_face_count": 3113,
+        "layers": [
+          {
+            "node": "Objects/Geometry/Vertices",
+            "scalar_count": 4638
+          },
+          {
+            "node": "Objects/Geometry/LayerElementNormal/Normals",
+            "scalar_count": 4968
+          },
+          {
+            "node": "Objects/Geometry/LayerElementUV/UV",
+            "scalar_count": 9240
+          },
+          {
+            "node": "Objects/Geometry/LayerElementUV/UVIndex",
+            "scalar_count": 9339
+          }
+        ],
+        "material_bindings": [
+          {
+            "node": "Objects/Material",
+            "properties": [
+              458532791,
+              "tripo_mat_a1645f84\u0000\u0001Material",
+              ""
+            ]
+          },
+          {
+            "node": "Objects/Material/ShadingModel",
+            "properties": [
+              "Phong"
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "DiffuseColor",
+              "Color",
+              "",
+              "A",
+              0.800000011920929,
+              0.800000011920929,
+              0.800000011920929
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "EmissiveColor",
+              "Color",
+              "",
+              "A",
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "EmissiveFactor",
+              "Number",
+              "",
+              "A",
+              0.0
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "AmbientColor",
+              "Color",
+              "",
+              "A",
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "AmbientFactor",
+              "Number",
+              "",
+              "A",
+              0.0
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "SpecularColor",
+              "Color",
+              "",
+              "A",
+              0.800000011920929,
+              0.800000011920929,
+              0.800000011920929
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "SpecularFactor",
+              "Number",
+              "",
+              "A",
+              0.25
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "Shininess",
+              "Number",
+              "",
+              "A",
+              0.0
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "ShininessExponent",
+              "Number",
+              "",
+              "A",
+              0.0
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "ReflectionColor",
+              "Color",
+              "",
+              "A",
+              0.800000011920929,
+              0.800000011920929,
+              0.800000011920929
+            ]
+          },
+          {
+            "node": "Objects/Texture",
+            "properties": [
+              788951074,
+              "base_color_texture\u0000\u0001Texture",
+              ""
+            ]
+          },
+          {
+            "node": "Objects/Texture/RelativeFilename",
+            "properties": [
+              "tripo_convert_a1645f84-d4d2-4f8d-bb62-78111f52c3de.fbm/tripo_7af71c81_2e9d_4918_9a2a_579f160ab2_BaseColor.jpg"
+            ]
+          },
+          {
+            "node": "Objects/Texture",
+            "properties": [
+              819984402,
+              "normalmap_texture\u0000\u0001Texture",
+              ""
+            ]
+          },
+          {
+            "node": "Objects/Texture/RelativeFilename",
+            "properties": [
+              "tripo_convert_a1645f84-d4d2-4f8d-bb62-78111f52c3de.fbm/tripo_normal_087a3eb2-36fb-4614-9736-b421c54494f8.jpg"
+            ]
+          },
+          {
+            "node": "Objects/Texture",
+            "properties": [
+              801634884,
+              "roughness_texture\u0000\u0001Texture",
+              ""
+            ]
+          },
+          {
+            "node": "Objects/Texture/RelativeFilename",
+            "properties": [
+              "tripo_convert_a1645f84-d4d2-4f8d-bb62-78111f52c3de.fbm/blue_dragon_3d_model_fbx_roughness.JPEG"
+            ]
+          },
+          {
+            "node": "Objects/Texture",
+            "properties": [
+              209368142,
+              "metallic_texture\u0000\u0001Texture",
+              ""
+            ]
+          },
+          {
+            "node": "Objects/Texture/RelativeFilename",
+            "properties": [
+              "tripo_convert_a1645f84-d4d2-4f8d-bb62-78111f52c3de.fbm/blue_dragon_3d_model_fbx_metallic.JPEG"
+            ]
+          },
+          {
+            "node": "Objects/Video/RelativeFilename",
+            "properties": [
+              "tripo_convert_a1645f84-d4d2-4f8d-bb62-78111f52c3de.fbm/tripo_7af71c81_2e9d_4918_9a2a_579f160ab2_BaseColor.jpg"
+            ]
+          },
+          {
+            "node": "Objects/Video/RelativeFilename",
+            "properties": [
+              "tripo_convert_a1645f84-d4d2-4f8d-bb62-78111f52c3de.fbm/tripo_normal_087a3eb2-36fb-4614-9736-b421c54494f8.jpg"
+            ]
+          },
+          {
+            "node": "Objects/Video/RelativeFilename",
+            "properties": [
+              "tripo_convert_a1645f84-d4d2-4f8d-bb62-78111f52c3de.fbm/blue_dragon_3d_model_fbx_roughness.JPEG"
+            ]
+          },
+          {
+            "node": "Objects/Video/RelativeFilename",
+            "properties": [
+              "tripo_convert_a1645f84-d4d2-4f8d-bb62-78111f52c3de.fbm/blue_dragon_3d_model_fbx_metallic.JPEG"
+            ]
+          },
+          {
+            "node": "Connections/C",
+            "properties": [
+              "OO",
+              526407421,
+              0
+            ]
+          },
+          {
+            "node": "Connections/C",
+            "properties": [
+              "OO",
+              550399234,
+              526407421
+            ]
+          },
+          {
+            "node": "Connections/C",
+            "properties": [
+              "OO",
+              458532791,
+              526407421
+            ]
+          },
+          {
+            "node": "Connections/C",
+            "properties": [
+              "OP",
+              788951074,
+              458532791,
+              "DiffuseColor"
+            ]
+          },
+          {
+            "node": "Connections/C",
+            "properties": [
+              "OP",
+              819984402,
+              458532791,
+              "NormalMap"
+            ]
+          },
+          {
+            "node": "Connections/C",
+            "properties": [
+              "OP",
+              801634884,
+              458532791,
+              "ShininessExponent"
+            ]
+          },
+          {
+            "node": "Connections/C",
+            "properties": [
+              "OP",
+              209368142,
+              458532791,
+              "ReflectionFactor"
+            ]
+          },
+          {
+            "node": "Connections/C",
+            "properties": [
+              "OO",
+              599483444,
+              788951074
+            ]
+          },
+          {
+            "node": "Connections/C",
+            "properties": [
+              "OO",
+              346274960,
+              819984402
+            ]
+          },
+          {
+            "node": "Connections/C",
+            "properties": [
+              "OO",
+              724811096,
+              801634884
+            ]
+          },
+          {
+            "node": "Connections/C",
+            "properties": [
+              "OO",
+              724811096,
+              801634884
+            ]
+          },
+          {
+            "node": "Connections/C",
+            "properties": [
+              "OO",
+              604376211,
+              209368142
+            ]
+          }
+        ],
+        "relative_texture_references": [
+          "tripo_convert_a1645f84-d4d2-4f8d-bb62-78111f52c3de.fbm/blue_dragon_3d_model_fbx_metallic.JPEG",
+          "tripo_convert_a1645f84-d4d2-4f8d-bb62-78111f52c3de.fbm/blue_dragon_3d_model_fbx_roughness.JPEG",
+          "tripo_convert_a1645f84-d4d2-4f8d-bb62-78111f52c3de.fbm/tripo_7af71c81_2e9d_4918_9a2a_579f160ab2_BaseColor.jpg",
+          "tripo_convert_a1645f84-d4d2-4f8d-bb62-78111f52c3de.fbm/tripo_normal_087a3eb2-36fb-4614-9736-b421c54494f8.jpg"
+        ],
+        "triangulation_method": "count_only_n_minus_2_no_mesh_modification"
+      },
+      "pairing_status": "pending_geometry_and_material_verification",
+      "render_validation": "not_run"
+    },
+    {
+      "id": "low/pbr_mixed_4487",
+      "title": "PBR 混合面低模",
+      "source_path": "E:\\Downloads\\tripo_convert_87da5a29-7d30-4baa-9a21-cd0ad157f5bf.zip",
+      "source_sha256": "836e413487a3c18a8b5055a694429ff4363fad528f1df136aa58e3e7641d3c80",
+      "model_path": "low/pbr_mixed_4487/tripo_convert_87da5a29-7d30-4baa-9a21-cd0ad157f5bf.fbx",
+      "files": [
+        {
+          "path": "low/pbr_mixed_4487/tripo_convert_87da5a29-7d30-4baa-9a21-cd0ad157f5bf.fbx",
+          "source_entry": "tripo_convert_87da5a29-7d30-4baa-9a21-cd0ad157f5bf.fbx",
+          "bytes": 180588,
+          "sha256": "7d514ab5f4eb44accc426594fa5a75dd39cdc1ec3c440fe8b0c8a280d4d38b1c",
+          "source_sha256": "7d514ab5f4eb44accc426594fa5a75dd39cdc1ec3c440fe8b0c8a280d4d38b1c"
+        },
+        {
+          "path": "low/pbr_mixed_4487/tripo_convert_87da5a29-7d30-4baa-9a21-cd0ad157f5bf.fbm/tripo_normal_e426f2da-ed0f-41ad-8dc9-96e169303d74.jpg",
+          "source_entry": "tripo_convert_87da5a29-7d30-4baa-9a21-cd0ad157f5bf.fbm/tripo_normal_e426f2da-ed0f-41ad-8dc9-96e169303d74.jpg",
+          "bytes": 816477,
+          "sha256": "d60cf92a3bae176f780435f274b4e412c9b9dd9246e6902f7e3d9233fe8f810c",
+          "source_sha256": "d60cf92a3bae176f780435f274b4e412c9b9dd9246e6902f7e3d9233fe8f810c",
+          "image": {
+            "width": 4096,
+            "height": 4096,
+            "mode": "RGB",
+            "format": "JPEG"
+          }
+        },
+        {
+          "path": "low/pbr_mixed_4487/tripo_convert_87da5a29-7d30-4baa-9a21-cd0ad157f5bf.fbm/tripo_7af71c81_2e9d_4918_9a2a_579f160ab2_BaseColor.jpg",
+          "source_entry": "tripo_convert_87da5a29-7d30-4baa-9a21-cd0ad157f5bf.fbm/tripo_7af71c81_2e9d_4918_9a2a_579f160ab2_BaseColor.jpg",
+          "bytes": 4332681,
+          "sha256": "7c9fcc8df7e115eb029dcc5a7b3256a1e7d3f3f87af487e08f0e1dcf1f5a4dea",
+          "source_sha256": "7c9fcc8df7e115eb029dcc5a7b3256a1e7d3f3f87af487e08f0e1dcf1f5a4dea",
+          "image": {
+            "width": 8192,
+            "height": 8192,
+            "mode": "RGB",
+            "format": "JPEG"
+          }
+        },
+        {
+          "path": "low/pbr_mixed_4487/tripo_convert_87da5a29-7d30-4baa-9a21-cd0ad157f5bf.fbm/blue_dragon_3d_model_fbx_roughness.JPEG",
+          "source_entry": "tripo_convert_87da5a29-7d30-4baa-9a21-cd0ad157f5bf.fbm/blue_dragon_3d_model_fbx_roughness.JPEG",
+          "bytes": 1860421,
+          "sha256": "85271bea3f92aeaf2f66e8034ce7bc0ae56171f9cdfe5b38eddcc5dca4b452bb",
+          "source_sha256": "85271bea3f92aeaf2f66e8034ce7bc0ae56171f9cdfe5b38eddcc5dca4b452bb",
+          "image": {
+            "width": 4096,
+            "height": 4096,
+            "mode": "L",
+            "format": "JPEG"
+          }
+        },
+        {
+          "path": "low/pbr_mixed_4487/tripo_convert_87da5a29-7d30-4baa-9a21-cd0ad157f5bf.fbm/blue_dragon_3d_model_fbx_metallic.JPEG",
+          "source_entry": "tripo_convert_87da5a29-7d30-4baa-9a21-cd0ad157f5bf.fbm/blue_dragon_3d_model_fbx_metallic.JPEG",
+          "bytes": 1721501,
+          "sha256": "4f8047612bc881022c869f53aa35fab2d371f807c10b3f0285e788b71d0efbe1",
+          "source_sha256": "4f8047612bc881022c869f53aa35fab2d371f807c10b3f0285e788b71d0efbe1",
+          "image": {
+            "width": 4096,
+            "height": 4096,
+            "mode": "L",
+            "format": "JPEG"
+          }
+        }
+      ],
+      "inspection": {
+        "format": "FBX",
+        "version": 7400,
+        "polygon_count": 2466,
+        "polygons_by_corner_count": {
+          "3": 445,
+          "4": 2021
+        },
+        "triangulated_face_count": 4487,
+        "layers": [
+          {
+            "node": "Objects/Geometry/Vertices",
+            "scalar_count": 6696
+          },
+          {
+            "node": "Objects/Geometry/LayerElementNormal/Normals",
+            "scalar_count": 7122
+          },
+          {
+            "node": "Objects/Geometry/LayerElementUV/UV",
+            "scalar_count": 11078
+          },
+          {
+            "node": "Objects/Geometry/LayerElementUV/UVIndex",
+            "scalar_count": 9419
+          }
+        ],
+        "material_bindings": [
+          {
+            "node": "Objects/Material",
+            "properties": [
+              202328551,
+              "tripo_mat_87da5a29\u0000\u0001Material",
+              ""
+            ]
+          },
+          {
+            "node": "Objects/Material/ShadingModel",
+            "properties": [
+              "Phong"
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "DiffuseColor",
+              "Color",
+              "",
+              "A",
+              0.800000011920929,
+              0.800000011920929,
+              0.800000011920929
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "EmissiveColor",
+              "Color",
+              "",
+              "A",
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "EmissiveFactor",
+              "Number",
+              "",
+              "A",
+              0.0
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "AmbientColor",
+              "Color",
+              "",
+              "A",
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "AmbientFactor",
+              "Number",
+              "",
+              "A",
+              0.0
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "SpecularColor",
+              "Color",
+              "",
+              "A",
+              0.800000011920929,
+              0.800000011920929,
+              0.800000011920929
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "SpecularFactor",
+              "Number",
+              "",
+              "A",
+              0.25
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "Shininess",
+              "Number",
+              "",
+              "A",
+              0.0
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "ShininessExponent",
+              "Number",
+              "",
+              "A",
+              0.0
+            ]
+          },
+          {
+            "node": "Objects/Material/Properties70/P",
+            "properties": [
+              "ReflectionColor",
+              "Color",
+              "",
+              "A",
+              0.800000011920929,
+              0.800000011920929,
+              0.800000011920929
+            ]
+          },
+          {
+            "node": "Objects/Texture",
+            "properties": [
+              811611153,
+              "base_color_texture\u0000\u0001Texture",
+              ""
+            ]
+          },
+          {
+            "node": "Objects/Texture/RelativeFilename",
+            "properties": [
+              "tripo_convert_87da5a29-7d30-4baa-9a21-cd0ad157f5bf.fbm/tripo_7af71c81_2e9d_4918_9a2a_579f160ab2_BaseColor.jpg"
+            ]
+          },
+          {
+            "node": "Objects/Texture",
+            "properties": [
+              291280746,
+              "normalmap_texture\u0000\u0001Texture",
+              ""
+            ]
+          },
+          {
+            "node": "Objects/Texture/RelativeFilename",
+            "properties": [
+              "tripo_convert_87da5a29-7d30-4baa-9a21-cd0ad157f5bf.fbm/tripo_normal_e426f2da-ed0f-41ad-8dc9-96e169303d74.jpg"
+            ]
+          },
+          {
+            "node": "Objects/Texture",
+            "properties": [
+              985452863,
+              "roughness_texture\u0000\u0001Texture",
+              ""
+            ]
+          },
+          {
+            "node": "Objects/Texture/RelativeFilename",
+            "properties": [
+              "tripo_convert_87da5a29-7d30-4baa-9a21-cd0ad157f5bf.fbm/blue_dragon_3d_model_fbx_roughness.JPEG"
+            ]
+          },
+          {
+            "node": "Objects/Texture",
+            "properties": [
+              706352043,
+              "metallic_texture\u0000\u0001Texture",
+              ""
+            ]
+          },
+          {
+            "node": "Objects/Texture/RelativeFilename",
+            "properties": [
+              "tripo_convert_87da5a29-7d30-4baa-9a21-cd0ad157f5bf.fbm/blue_dragon_3d_model_fbx_metallic.JPEG"
+            ]
+          },
+          {
+            "node": "Objects/Video/RelativeFilename",
+            "properties": [
+              "tripo_convert_87da5a29-7d30-4baa-9a21-cd0ad157f5bf.fbm/tripo_7af71c81_2e9d_4918_9a2a_579f160ab2_BaseColor.jpg"
+            ]
+          },
+          {
+            "node": "Objects/Video/RelativeFilename",
+            "properties": [
+              "tripo_convert_87da5a29-7d30-4baa-9a21-cd0ad157f5bf.fbm/tripo_normal_e426f2da-ed0f-41ad-8dc9-96e169303d74.jpg"
+            ]
+          },
+          {
+            "node": "Objects/Video/RelativeFilename",
+            "properties": [
+              "tripo_convert_87da5a29-7d30-4baa-9a21-cd0ad157f5bf.fbm/blue_dragon_3d_model_fbx_roughness.JPEG"
+            ]
+          },
+          {
+            "node": "Objects/Video/RelativeFilename",
+            "properties": [
+              "tripo_convert_87da5a29-7d30-4baa-9a21-cd0ad157f5bf.fbm/blue_dragon_3d_model_fbx_metallic.JPEG"
+            ]
+          },
+          {
+            "node": "Connections/C",
+            "properties": [
+              "OO",
+              957783063,
+              0
+            ]
+          },
+          {
+            "node": "Connections/C",
+            "properties": [
+              "OO",
+              491807571,
+              957783063
+            ]
+          },
+          {
+            "node": "Connections/C",
+            "properties": [
+              "OO",
+              202328551,
+              957783063
+            ]
+          },
+          {
+            "node": "Connections/C",
+            "properties": [
+              "OP",
+              811611153,
+              202328551,
+              "DiffuseColor"
+            ]
+          },
+          {
+            "node": "Connections/C",
+            "properties": [
+              "OP",
+              291280746,
+              202328551,
+              "NormalMap"
+            ]
+          },
+          {
+            "node": "Connections/C",
+            "properties": [
+              "OP",
+              985452863,
+              202328551,
+              "ShininessExponent"
+            ]
+          },
+          {
+            "node": "Connections/C",
+            "properties": [
+              "OP",
+              706352043,
+              202328551,
+              "ReflectionFactor"
+            ]
+          },
+          {
+            "node": "Connections/C",
+            "properties": [
+              "OO",
+              789452698,
+              811611153
+            ]
+          },
+          {
+            "node": "Connections/C",
+            "properties": [
+              "OO",
+              578432530,
+              291280746
+            ]
+          },
+          {
+            "node": "Connections/C",
+            "properties": [
+              "OO",
+              740023855,
+              985452863
+            ]
+          },
+          {
+            "node": "Connections/C",
+            "properties": [
+              "OO",
+              740023855,
+              985452863
+            ]
+          },
+          {
+            "node": "Connections/C",
+            "properties": [
+              "OO",
+              315725372,
+              706352043
+            ]
+          }
+        ],
+        "relative_texture_references": [
+          "tripo_convert_87da5a29-7d30-4baa-9a21-cd0ad157f5bf.fbm/blue_dragon_3d_model_fbx_metallic.JPEG",
+          "tripo_convert_87da5a29-7d30-4baa-9a21-cd0ad157f5bf.fbm/blue_dragon_3d_model_fbx_roughness.JPEG",
+          "tripo_convert_87da5a29-7d30-4baa-9a21-cd0ad157f5bf.fbm/tripo_7af71c81_2e9d_4918_9a2a_579f160ab2_BaseColor.jpg",
+          "tripo_convert_87da5a29-7d30-4baa-9a21-cd0ad157f5bf.fbm/tripo_normal_e426f2da-ed0f-41ad-8dc9-96e169303d74.jpg"
+        ],
+        "triangulation_method": "count_only_n_minus_2_no_mesh_modification"
+      },
+      "pairing_status": "pending_geometry_and_material_verification",
+      "render_validation": "not_run"
+    },
+    {
+      "id": "independent_reference/tripo_v31",
+      "title": "独立高精度 PBR 龙参考",
+      "source_path": "E:\\ReSem\\model\\dragon\\tripo_v31_super_high\\tripo_pbr_model_7c54d8c5-4965-4c29-a6aa-40608a24f379.glb",
+      "source_sha256": "326158a78f4ed41f1c26f336a4567297d55c49517efa93f0bd2623a0c4d22971",
+      "model_path": "independent_reference/tripo_v31/tripo_pbr_model_7c54d8c5-4965-4c29-a6aa-40608a24f379.glb",
+      "files": [
+        {
+          "path": "independent_reference/tripo_v31/tripo_pbr_model_7c54d8c5-4965-4c29-a6aa-40608a24f379.glb",
+          "bytes": 55234600,
+          "sha256": "326158a78f4ed41f1c26f336a4567297d55c49517efa93f0bd2623a0c4d22971",
+          "source_sha256": "326158a78f4ed41f1c26f336a4567297d55c49517efa93f0bd2623a0c4d22971"
+        }
+      ],
+      "inspection": {
+        "format": "GLB",
+        "polygon_count": 1470916,
+        "polygons_by_corner_count": {
+          "3": 1470916
+        },
+        "triangulated_face_count": 1470916,
+        "materials": [
+          {
+            "name": "tripo_material_7c54d8c5-4965-4c29-a6aa-40608a24f379",
+            "pbrMetallicRoughness": {
+              "baseColorFactor": [
+                1,
+                1,
+                1,
+                1
+              ],
+              "baseColorTexture": {
+                "index": 0
+              },
+              "metallicFactor": 1.0,
+              "roughnessFactor": 1.0,
+              "metallicRoughnessTexture": {
+                "index": 1
+              }
+            },
+            "normalTexture": {
+              "index": 2,
+              "scale": 1.0
+            },
+            "doubleSided": false
+          }
+        ],
+        "textures": [
+          {
+            "source": 0
+          },
+          {
+            "source": 1
+          },
+          {
+            "source": 2
+          }
+        ],
+        "images": [
+          {
+            "index": 0,
+            "name": "Color_7c54d8c5-4965-4c29-a6aa-40608a24f379",
+            "sha256": "e6f0040e09ccf63c5671e8d155cf23938fd3114f0f84583e73d5f4d4a90ff958",
+            "bytes": 7556324,
+            "width": 8192,
+            "height": 8192,
+            "mode": "RGB",
+            "format": "JPEG"
+          },
+          {
+            "index": 1,
+            "name": "ORM_7c54d8c5-4965-4c29-a6aa-40608a24f379",
+            "sha256": "23c6d21f58f531dba3e391a80f83af80fb8bbb968783ab38473663c5b54631ae",
+            "bytes": 1331242,
+            "width": 4096,
+            "height": 4096,
+            "mode": "RGB",
+            "format": "JPEG"
+          },
+          {
+            "index": 2,
+            "name": "NormalGL_7c54d8c5-4965-4c29-a6aa-40608a24f379",
+            "sha256": "c2e6e27e3206085a8e3f0e42c3797b76343e348bbe2807dc87b18d05236b3a36",
+            "bytes": 4145499,
+            "width": 4096,
+            "height": 4096,
+            "mode": "RGB",
+            "format": "PNG"
+          }
+        ],
+        "attributes": [
+          [
+            "POSITION",
+            "NORMAL",
+            "TEXCOORD_0"
+          ]
+        ],
+        "extensions_used": []
+      },
+      "pairing_status": "pending_geometry_and_material_verification",
+      "render_validation": "not_run"
+    }
+  ],
+  "source_archives": [
+    {
+      "source_path": "E:\\ReSem\\model\\dragon\\tripo_p2\\blue dragon 3d model.zip",
+      "path": "source_archives/blue dragon 3d model.zip",
+      "bytes": 7517946,
+      "sha256": "ed83011d1460eb2cebfe53c009218a6877aaf2d9bf242811ba94eca705b3d1ab",
+      "crc_check": "passed"
+    },
+    {
+      "source_path": "E:\\Downloads\\tripo_convert_46c1f05d-c694-43a4-8bc3-48066bf4f53a.zip",
+      "path": "source_archives/tripo_convert_46c1f05d-c694-43a4-8bc3-48066bf4f53a.zip",
+      "bytes": 8922731,
+      "sha256": "d89d75672a96c2e12dd7cc86405b9c45920a15ecf6a278456a447b5ef82435d2",
+      "crc_check": "passed"
+    },
+    {
+      "source_path": "E:\\Downloads\\blue_dragon_3d_model_low_tri.fbx.zip",
+      "path": "source_archives/blue_dragon_3d_model_low_tri.fbx.zip",
+      "bytes": 959176,
+      "sha256": "684ba2f7882ca3b4ae36a82358ecd24cb762fdd310746ec2a2183548cb9b7e2d",
+      "crc_check": "passed"
+    },
+    {
+      "source_path": "E:\\Downloads\\blue_dragon_3d_model_low_quad.fbx.zip",
+      "path": "source_archives/blue_dragon_3d_model_low_quad.fbx.zip",
+      "bytes": 1007899,
+      "sha256": "29381035bff1ea9d5ff1ee41abb6353b311e7b72d5910f6288d38b7d78c0c4e0",
+      "crc_check": "passed"
+    },
+    {
+      "source_path": "E:\\Downloads\\tripo_convert_a1645f84-d4d2-4f8d-bb62-78111f52c3de.zip",
+      "path": "source_archives/tripo_convert_a1645f84-d4d2-4f8d-bb62-78111f52c3de.zip",
+      "bytes": 9555760,
+      "sha256": "7bf138f0aaae6ce0aafe04ebad3b579ac0225f8758c93a7a56400935fd6676c5",
+      "crc_check": "passed"
+    },
+    {
+      "source_path": "E:\\Downloads\\tripo_convert_87da5a29-7d30-4baa-9a21-cd0ad157f5bf.zip",
+      "path": "source_archives/tripo_convert_87da5a29-7d30-4baa-9a21-cd0ad157f5bf.zip",
+      "bytes": 8395055,
+      "sha256": "836e413487a3c18a8b5055a694429ff4363fad528f1df136aa58e3e7641d3c80",
+      "crc_check": "passed"
+    }
+  ],
+  "historical_uploads": [
+    {
+      "source_path": "E:\\Downloads\\blue_dragon_3d_model_low.fbx.zip",
+      "status": "missing_at_organization",
+      "equivalence_to_low_tri": "not_verified"
+    }
+  ],
+  "material_notes": {
+    "pbr_fbx": "FBX 使用 Phong 字段，roughness_texture 连接 ShininessExponent，metallic_texture 连接 ReflectionFactor；PBR 接线与渲染待核验。",
+    "early_low_images": "normal 文件名属于来源标签，实际用途以 material_bindings 与后续图像、渲染检查为准。",
+    "v31_ao": "GLB 绑定 metallicRoughnessTexture，未绑定 occlusionTexture；图像名 ORM 不能单独证明 AO 已启用。"
+  },
+  "validation": {
+    "zip_crc_passed": 6,
+    "zip_paths_checked": true,
+    "copied_files_hash_verified": 28,
+    "models_reparsed": 7,
+    "external_images_verified": 15,
+    "embedded_images_verified": 3,
+    "relative_texture_links_verified": 15,
+    "render_validation": "not_run",
+    "readme_links_verified": 14
+  }
+}

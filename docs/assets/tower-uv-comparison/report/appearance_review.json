@@ -1,0 +1,254 @@
+{
+  "observer": "Codex Agent",
+  "reviewer": "agent",
+  "decision": "VISUAL_KEEP",
+  "selected_method": "mirror_negative_exhaustive_minimum_shared",
+  "scope": "prepared whole-body contacts and explicit closeups, color and normal-lit only",
+  "reviewed_whole_body_views": [
+    {
+      "camera": "front",
+      "channel": "material",
+      "light": "soft"
+    },
+    {
+      "camera": "front",
+      "channel": "normal_lit",
+      "light": "side"
+    },
+    {
+      "camera": "front_right",
+      "channel": "material",
+      "light": "soft"
+    },
+    {
+      "camera": "front_right",
+      "channel": "normal_lit",
+      "light": "side"
+    },
+    {
+      "camera": "right",
+      "channel": "material",
+      "light": "soft"
+    },
+    {
+      "camera": "right",
+      "channel": "normal_lit",
+      "light": "side"
+    },
+    {
+      "camera": "back_right",
+      "channel": "material",
+      "light": "soft"
+    },
+    {
+      "camera": "back_right",
+      "channel": "normal_lit",
+      "light": "side"
+    },
+    {
+      "camera": "back",
+      "channel": "material",
+      "light": "soft"
+    },
+    {
+      "camera": "back",
+      "channel": "normal_lit",
+      "light": "side"
+    },
+    {
+      "camera": "back_left",
+      "channel": "material",
+      "light": "soft"
+    },
+    {
+      "camera": "back_left",
+      "channel": "normal_lit",
+      "light": "side"
+    },
+    {
+      "camera": "left",
+      "channel": "material",
+      "light": "soft"
+    },
+    {
+      "camera": "left",
+      "channel": "normal_lit",
+      "light": "side"
+    },
+    {
+      "camera": "front_left",
+      "channel": "material",
+      "light": "soft"
+    },
+    {
+      "camera": "front_left",
+      "channel": "normal_lit",
+      "light": "side"
+    }
+  ],
+  "models": [
+    {
+      "method": "source_uv",
+      "model": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\source_uv_2048\\export\\asset.glb",
+      "model_sha256": "ca680a141ce3aeec50baa437e402733417083d00884bf0d9fb8f98de1846fec8",
+      "contact": "artifacts\\tower_uv_comparison\\round02\\report\\source_uv_contact.png",
+      "contact_sha256": "588abc247d9da1a0b4eae335f52307df5489b5783590cb0867073d58c5801ea8"
+    },
+    {
+      "method": "xatlas",
+      "model": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\xatlas_2048\\export\\asset.glb",
+      "model_sha256": "7714b242f5f90af75c928fb3983a7ec959fe3ca37968327c4b092666d957eb75",
+      "contact": "artifacts\\tower_uv_comparison\\round02\\report\\xatlas_contact.png",
+      "contact_sha256": "9150426aa4f8f0253b67bcf53365341f04acaf17992cd9837012bb5a733ae737"
+    },
+    {
+      "method": "blender_smart",
+      "model": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\blender_smart_2048\\export\\asset.glb",
+      "model_sha256": "ec4f9d3ddaad93b5b3524a260b4dcb08cf6886f6bf388805c0b59881c9dc51a1",
+      "contact": "artifacts\\tower_uv_comparison\\round02\\report\\blender_smart_contact.png",
+      "contact_sha256": "3c72474207859bbe7cd75e4b4b83ec52a99675d2b96a3ea0c1e36578ea811e0c"
+    },
+    {
+      "method": "partuv",
+      "model": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\partuv_2048\\export\\asset.glb",
+      "model_sha256": "b24360ef66c38d802ff0b896fab051d6042421f318a34d77200098173f5d7907",
+      "contact": "artifacts\\tower_uv_comparison\\round02\\report\\partuv_contact.png",
+      "contact_sha256": "8c26baf3b94b5a33bc6f2459369cc74a4320d7c57e5ec98fb1f3bd9dcea870d9"
+    },
+    {
+      "method": "meshquery_project",
+      "model": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\meshquery_repaired_2048\\export\\asset.glb",
+      "model_sha256": "5267d015b3da449b52d295068b6a76574eade3c627f3891711d57be07ca6a313",
+      "contact": "artifacts\\tower_uv_comparison\\round02\\report\\meshquery_project_contact.png",
+      "contact_sha256": "dbee99601fdfee86e349d9b884611d143976e47434f6036546ba564bd12fe331"
+    },
+    {
+      "method": "reseam_unshared",
+      "model": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_unshared_2048\\export\\asset.glb",
+      "model_sha256": "5267d015b3da449b52d295068b6a76574eade3c627f3891711d57be07ca6a313",
+      "contact": "artifacts\\tower_uv_comparison\\round02\\report\\reseam_unshared_contact.png",
+      "contact_sha256": "cde89a8e87a05f649d45d8af2250c54de0e88f2de38ea24e25e5adb95b34ab6c"
+    },
+    {
+      "method": "reseam_shared",
+      "model": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_shared_boundary_2048\\export\\asset.glb",
+      "model_sha256": "1e3753027d8ea1932ace680aa92bd251c1351f251bbac324b913d668c7e4b988",
+      "contact": "artifacts\\tower_uv_comparison\\round02\\report\\reseam_shared_contact.png",
+      "contact_sha256": "9825c18cbeae1f292c11f6e7ce332e949340a2f60d8770b98961d4835b83c8b3"
+    },
+    {
+      "method": "reseam_optimized",
+      "model": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_optimized_2048\\export\\asset.glb",
+      "model_sha256": "4f8deae61ea32a46351f8d0c2cc27612f412f280366a381602037554f4dc97e6",
+      "contact": "artifacts\\tower_uv_comparison\\round02\\report\\reseam_optimized_contact.png",
+      "contact_sha256": "47239c15f7db45f4ea832d2634f70e31dc98793dab7431f326a2a3f5097fc3bb"
+    },
+    {
+      "method": "mirror_negative_unshared",
+      "model": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_unshared_2048\\export\\asset.glb",
+      "model_sha256": "8d731b462a934b3d8c33012a4430313df525c642f350f71465d762e64b8a9c60",
+      "contact": "artifacts\\tower_uv_comparison\\round02\\report\\mirror_negative_unshared_contact.png",
+      "contact_sha256": "2ab33e328e9ad14766238d24d0c3104aec33745f2bd47bdde9409e693c8f8b87"
+    },
+    {
+      "method": "mirror_negative_shared",
+      "model": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_shared_2048\\export\\asset.glb",
+      "model_sha256": "f416273da15370c12d372cc5dfeb892c0a6821ef82839c7f2c11932e30aaf261",
+      "contact": "artifacts\\tower_uv_comparison\\round02\\report\\mirror_negative_shared_contact.png",
+      "contact_sha256": "4e133c2304de4c8d65010837568c52298fd3bced1e2f59bdb457f42501cad090"
+    },
+    {
+      "method": "mirror_negative_optimized_minimum_shared",
+      "model": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_optimized_minimum_shared_2048\\export\\asset.glb",
+      "model_sha256": "ca179e4d746ba8cf4638c6b1ee60f6612dccea8668fe6881db2dd9aba6b2bf5d",
+      "contact": "artifacts\\tower_uv_comparison\\round02\\report\\mirror_negative_optimized_minimum_shared_contact.png",
+      "contact_sha256": "948e9b80a7afd09bee0e3f0fc868ba9aeaafd5dc088332f013c17d01a90db1b1"
+    },
+    {
+      "method": "mirror_negative_optimized_minimum_unshared",
+      "model": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_optimized_minimum_unshared_2048\\export\\asset.glb",
+      "model_sha256": "e5adde9eb010badc83806db89de1636ef5a549a099987964ee7b72be030b8c03",
+      "contact": "artifacts\\tower_uv_comparison\\round02\\report\\mirror_negative_optimized_minimum_unshared_contact.png",
+      "contact_sha256": "677b946fd475d010a08fd73be0d00b2bd8fd923dbf007951cba2f26803029a00"
+    },
+    {
+      "method": "mirror_negative_aggressive_minimum_shared",
+      "model": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_aggressive_minimum_shared_2048\\export\\asset.glb",
+      "model_sha256": "ca250567087515fa8a7e93f23337b4244ad682da100bdf40d6716d55d47f665c",
+      "contact": "artifacts\\tower_uv_comparison\\round02\\report\\mirror_negative_aggressive_minimum_shared_contact.png",
+      "contact_sha256": "fcf83101b89a39bbc727c009e509713fa1c90d86396135f72243906f5d93cb7e"
+    },
+    {
+      "method": "mirror_negative_aggressive_minimum_unshared",
+      "model": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_aggressive_minimum_unshared_2048\\export\\asset.glb",
+      "model_sha256": "392f1415c6248ac27bb137d703c984fbb4e34e895689483e2680f5ecc859f5df",
+      "contact": "artifacts\\tower_uv_comparison\\round02\\report\\mirror_negative_aggressive_minimum_unshared_contact.png",
+      "contact_sha256": "46a1b5f5cbd51d6b6bfe6e7b8bd18d151b90aa609e18672748b4613de818657e"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_shared",
+      "model": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\export\\asset.glb",
+      "model_sha256": "fbd02a1c2bf4d2d51681bb083f62cb316c76653eff65e2b6fce2f5d4cc256ebd",
+      "contact": "artifacts\\tower_uv_comparison\\round02\\report\\mirror_negative_exhaustive_minimum_shared_contact.png",
+      "contact_sha256": "ce99d79b993669b3c24dbca5621226dd8335080221817b070faa0df2b5324340"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_unshared",
+      "model": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\export\\asset.glb",
+      "model_sha256": "945bf05318ab6a0e3e2dd57e654327a8270112fc287b457bd6b975b3fbbb4713",
+      "contact": "artifacts\\tower_uv_comparison\\round02\\report\\mirror_negative_exhaustive_minimum_unshared_contact.png",
+      "contact_sha256": "14c770eb995676e64d5764d6a481f9f0568af67b1458a02c19ec7354a6c977ce"
+    },
+    {
+      "method": "reseam_shared_boundary_control",
+      "model": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_shared_boundary_control_2048\\export\\asset.glb",
+      "model_sha256": "6bcfa7d89f89337fad1607ed96a81b93fcc9f99766f5cbe6377e54436384a9d3",
+      "contact": "artifacts\\tower_uv_comparison\\round02\\report\\reseam_shared_boundary_control_contact.png",
+      "contact_sha256": "997e46301d724697066bf974f85f8224d240485533d620ddc75157df7eb94194"
+    },
+    {
+      "method": "reseam_shared_repaired",
+      "model": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_shared_repaired_2048\\export\\asset.glb",
+      "model_sha256": "eeee5e0bc50d9ff8e832043447fce558787e9b8d51bcb854bd5a5c4f64861b8c",
+      "contact": "artifacts\\tower_uv_comparison\\round02\\report\\reseam_shared_repaired_contact.png",
+      "contact_sha256": "fea9456f5492a8f8d15ca289a5faa11a2f1e2b2af4d3f2a04c386ada4e7457c5"
+    }
+  ],
+  "reviewed_closeup_views": [
+    {
+      "region": "bow",
+      "camera": "front_right",
+      "channels": [
+        "material/soft",
+        "normal_lit/side"
+      ]
+    },
+    {
+      "region": "ornament",
+      "camera": "front_right",
+      "channels": [
+        "material/soft",
+        "normal_lit/side"
+      ]
+    },
+    {
+      "region": "base",
+      "camera": "front_right",
+      "channels": [
+        "material/soft",
+        "normal_lit/side"
+      ]
+    }
+  ],
+  "closeup_figure_sha256": "6578612e868ae7e11bf9d38b9082018488368be1994934c71c5dfeb7ea56bccd",
+  "observations": [
+    "Whole-body views retain the jade body, gold bow and ornament, blue gemstones and base silhouette.",
+    "Closeups retain groove and ring shading without broad wrong colors or reversed highlights in the observed images.",
+    "Mirroring duplicates retained-side small rear ornament geometry and surface patterns onto the opposite side; visible in the ornament closeup.",
+    "Some small texture and highlight differences remain at 2K and near chart boundaries."
+  ],
+  "numeric_status": "DIAGNOSTIC",
+  "preflight_uv_sampling": "fail, retained in final_preflight",
+  "human_acceptance": "NOT_RUN",
+  "game_shader": "NOT_RUN"
+}

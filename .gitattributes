@@ -24,3 +24,9 @@ docs/assets/tripo-spike-hard-surface/** -text whitespace=cr-at-eol,-blank-at-eof
 output/artist-tools/** -text whitespace=cr-at-eol,-blank-at-eof
 output/dragon-wholebody-refine/** -text whitespace=cr-at-eol,-blank-at-eof
 output/skills/** -text whitespace=cr-at-eol,-blank-at-eof
+# Preserve the complete tower experiment archive and imported source bytes.
+docs/assets/tower-uv-comparison/** -text whitespace=cr-at-eol,-blank-at-eof
+output/imagegen/mlbb-mid-tower/** -text whitespace=cr-at-eol,-blank-at-eof
+model/dragon/pbr_bake_test/** -text whitespace=cr-at-eol,-blank-at-eof
+model/dragon/.pbr_bake_test_staging_re47y8_0/** -text whitespace=cr-at-eol,-blank-at-eof
+"角色模型UV测试资源/**" -text whitespace=cr-at-eol,-blank-at-eof

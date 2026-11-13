@@ -1,0 +1,234 @@
+{
+  "model_checks": [
+    {
+      "model": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\blender_smart_2048\\export\\asset.glb",
+      "triangles": 7278,
+      "sha256": "ec4f9d3ddaad93b5b3524a260b4dcb08cf6886f6bf388805c0b59881c9dc51a1",
+      "blender_geometry_uv_match": true,
+      "normal_texture_present": true,
+      "mip_file_hashes_and_dimensions_match": true,
+      "mip_count": 12,
+      "export_status": "OK"
+    },
+    {
+      "model": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\meshquery_repaired_2048\\export\\asset.glb",
+      "triangles": 7278,
+      "sha256": "5267d015b3da449b52d295068b6a76574eade3c627f3891711d57be07ca6a313",
+      "blender_geometry_uv_match": true,
+      "normal_texture_present": true,
+      "mip_file_hashes_and_dimensions_match": true,
+      "mip_count": 12,
+      "export_status": "OK"
+    },
+    {
+      "model": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_aggressive_minimum_shared_2048\\export\\asset.glb",
+      "triangles": 7650,
+      "sha256": "ca250567087515fa8a7e93f23337b4244ad682da100bdf40d6716d55d47f665c",
+      "blender_geometry_uv_match": true,
+      "normal_texture_present": true,
+      "mip_file_hashes_and_dimensions_match": true,
+      "mip_count": 12,
+      "export_status": "OK"
+    },
+    {
+      "model": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_aggressive_minimum_unshared_2048\\export\\asset.glb",
+      "triangles": 7650,
+      "sha256": "392f1415c6248ac27bb137d703c984fbb4e34e895689483e2680f5ecc859f5df",
+      "blender_geometry_uv_match": true,
+      "normal_texture_present": true,
+      "mip_file_hashes_and_dimensions_match": true,
+      "mip_count": 12,
+      "export_status": "OK"
+    },
+    {
+      "model": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\export\\asset.glb",
+      "triangles": 7650,
+      "sha256": "fbd02a1c2bf4d2d51681bb083f62cb316c76653eff65e2b6fce2f5d4cc256ebd",
+      "blender_geometry_uv_match": true,
+      "normal_texture_present": true,
+      "mip_file_hashes_and_dimensions_match": true,
+      "mip_count": 12,
+      "export_status": "OK"
+    },
+    {
+      "model": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\export\\asset.glb",
+      "triangles": 7650,
+      "sha256": "945bf05318ab6a0e3e2dd57e654327a8270112fc287b457bd6b975b3fbbb4713",
+      "blender_geometry_uv_match": true,
+      "normal_texture_present": true,
+      "mip_file_hashes_and_dimensions_match": true,
+      "mip_count": 12,
+      "export_status": "OK"
+    },
+    {
+      "model": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_optimized_minimum_shared_128\\export\\asset.glb",
+      "triangles": 7650,
+      "sha256": "3b6c2c52aca5a0fc35cf0a7563e01fa427faefbb256c49ca8ee0f01b60cc52f0",
+      "blender_geometry_uv_match": true,
+      "normal_texture_present": true,
+      "mip_file_hashes_and_dimensions_match": true,
+      "mip_count": 8,
+      "export_status": "OK"
+    },
+    {
+      "model": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_optimized_minimum_shared_2048\\export\\asset.glb",
+      "triangles": 7650,
+      "sha256": "ca179e4d746ba8cf4638c6b1ee60f6612dccea8668fe6881db2dd9aba6b2bf5d",
+      "blender_geometry_uv_match": true,
+      "normal_texture_present": true,
+      "mip_file_hashes_and_dimensions_match": true,
+      "mip_count": 12,
+      "export_status": "OK"
+    },
+    {
+      "model": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_optimized_minimum_unshared_2048\\export\\asset.glb",
+      "triangles": 7650,
+      "sha256": "e5adde9eb010badc83806db89de1636ef5a549a099987964ee7b72be030b8c03",
+      "blender_geometry_uv_match": true,
+      "normal_texture_present": true,
+      "mip_file_hashes_and_dimensions_match": true,
+      "mip_count": 12,
+      "export_status": "OK"
+    },
+    {
+      "model": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_shared_128\\export\\asset.glb",
+      "triangles": 7650,
+      "sha256": "c4c7e04d512c2838da2474822e853775b6df20d5cd8b708f77e9db4a5f09bb2b",
+      "blender_geometry_uv_match": true,
+      "normal_texture_present": true,
+      "mip_file_hashes_and_dimensions_match": true,
+      "mip_count": 8,
+      "export_status": "OK"
+    },
+    {
+      "model": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_shared_2048\\export\\asset.glb",
+      "triangles": 7650,
+      "sha256": "f416273da15370c12d372cc5dfeb892c0a6821ef82839c7f2c11932e30aaf261",
+      "blender_geometry_uv_match": true,
+      "normal_texture_present": true,
+      "mip_file_hashes_and_dimensions_match": true,
+      "mip_count": 12,
+      "export_status": "OK"
+    },
+    {
+      "model": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_unshared_2048\\export\\asset.glb",
+      "triangles": 7650,
+      "sha256": "8d731b462a934b3d8c33012a4430313df525c642f350f71465d762e64b8a9c60",
+      "blender_geometry_uv_match": true,
+      "normal_texture_present": true,
+      "mip_file_hashes_and_dimensions_match": true,
+      "mip_count": 12,
+      "export_status": "OK"
+    },
+    {
+      "model": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\partuv_2048\\export\\asset.glb",
+      "triangles": 7278,
+      "sha256": "b24360ef66c38d802ff0b896fab051d6042421f318a34d77200098173f5d7907",
+      "blender_geometry_uv_match": true,
+      "normal_texture_present": true,
+      "mip_file_hashes_and_dimensions_match": true,
+      "mip_count": 12,
+      "export_status": "OK"
+    },
+    {
+      "model": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_optimized_2048\\export\\asset.glb",
+      "triangles": 7278,
+      "sha256": "4f8deae61ea32a46351f8d0c2cc27612f412f280366a381602037554f4dc97e6",
+      "blender_geometry_uv_match": true,
+      "normal_texture_present": true,
+      "mip_file_hashes_and_dimensions_match": true,
+      "mip_count": 12,
+      "export_status": "OK"
+    },
+    {
+      "model": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_shared_boundary_2048\\export\\asset.glb",
+      "triangles": 7278,
+      "sha256": "1e3753027d8ea1932ace680aa92bd251c1351f251bbac324b913d668c7e4b988",
+      "blender_geometry_uv_match": true,
+      "normal_texture_present": true,
+      "mip_file_hashes_and_dimensions_match": true,
+      "mip_count": 12,
+      "export_status": "OK"
+    },
+    {
+      "model": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_shared_boundary_control_2048\\export\\asset.glb",
+      "triangles": 7278,
+      "sha256": "6bcfa7d89f89337fad1607ed96a81b93fcc9f99766f5cbe6377e54436384a9d3",
+      "blender_geometry_uv_match": true,
+      "normal_texture_present": true,
+      "mip_file_hashes_and_dimensions_match": true,
+      "mip_count": 12,
+      "export_status": "OK"
+    },
+    {
+      "model": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_shared_repaired_2048\\export\\asset.glb",
+      "triangles": 7278,
+      "sha256": "eeee5e0bc50d9ff8e832043447fce558787e9b8d51bcb854bd5a5c4f64861b8c",
+      "blender_geometry_uv_match": true,
+      "normal_texture_present": true,
+      "mip_file_hashes_and_dimensions_match": true,
+      "mip_count": 12,
+      "export_status": "OK"
+    },
+    {
+      "model": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_unshared_2048\\export\\asset.glb",
+      "triangles": 7278,
+      "sha256": "5267d015b3da449b52d295068b6a76574eade3c627f3891711d57be07ca6a313",
+      "blender_geometry_uv_match": true,
+      "normal_texture_present": true,
+      "mip_file_hashes_and_dimensions_match": true,
+      "mip_count": 12,
+      "export_status": "OK"
+    },
+    {
+      "model": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\source_uv_128\\export\\asset.glb",
+      "triangles": 7278,
+      "sha256": "411151f77aa75e8133d358916a0c42e7cfb995dec1055cc59b0ac18a5ec0ccbf",
+      "blender_geometry_uv_match": true,
+      "normal_texture_present": true,
+      "mip_file_hashes_and_dimensions_match": true,
+      "mip_count": 8,
+      "export_status": "OK"
+    },
+    {
+      "model": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\source_uv_2048\\export\\asset.glb",
+      "triangles": 7278,
+      "sha256": "ca680a141ce3aeec50baa437e402733417083d00884bf0d9fb8f98de1846fec8",
+      "blender_geometry_uv_match": true,
+      "normal_texture_present": true,
+      "mip_file_hashes_and_dimensions_match": true,
+      "mip_count": 12,
+      "export_status": "OK"
+    },
+    {
+      "model": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\xatlas_2048\\export\\asset.glb",
+      "triangles": 7278,
+      "sha256": "7714b242f5f90af75c928fb3983a7ec959fe3ca37968327c4b092666d957eb75",
+      "blender_geometry_uv_match": true,
+      "normal_texture_present": true,
+      "mip_file_hashes_and_dimensions_match": true,
+      "mip_count": 12,
+      "export_status": "OK"
+    }
+  ],
+  "all_exported_models_reimported": true,
+  "source_face_corner_identity": {
+    "contract": "ordered face-corner positions agree within one scale-relative float32 epsilon; no nearest lookup",
+    "faces": 7278,
+    "target_float32_sha256": "d39895f699b10530206aaadb1bda4f13071d9ab8203590b6625ae14c4b19d268",
+    "source_float32_sha256": "d39895f699b10530206aaadb1bda4f13071d9ab8203590b6625ae14c4b19d268",
+    "position_max_abs_difference": 0.0,
+    "position_absolute_tolerance": 1.1655104489374633e-07,
+    "uv_and_shading_normals_required_equal": false
+  },
+  "zero_area_repair": {
+    "removed_faces": [
+      4209,
+      5361,
+      6098
+    ],
+    "remaining_face_corner_positions_and_uv_exact": true
+  },
+  "all_preset_methods_have_retained_results": true,
+  "source_zip_matches_original": true
+}

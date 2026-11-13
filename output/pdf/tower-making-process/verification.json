@@ -1,0 +1,26 @@
+{
+  "pages": 6,
+  "page_size": [
+    1280,
+    720
+  ],
+  "all_pages_rendered": true,
+  "visual_review": "all6 initial pages and updated pages3,5,6 inspected; readable images and text; no clipping or overlap observed",
+  "source_hashes_match": 64,
+  "links_checked": [
+    "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\report\\index.html",
+    "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\comparison.blend",
+    "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\export\\asset.glb"
+  ],
+  "rendered_pages": [
+    "E:\\ReSem\\tmp\\pdfs\\tower-making\\page-1.png",
+    "E:\\ReSem\\tmp\\pdfs\\tower-making\\page-2.png",
+    "E:\\ReSem\\tmp\\pdfs\\tower-making\\page-3.png",
+    "E:\\ReSem\\tmp\\pdfs\\tower-making\\page-4.png",
+    "E:\\ReSem\\tmp\\pdfs\\tower-making\\page-5.png",
+    "E:\\ReSem\\tmp\\pdfs\\tower-making\\page-6.png"
+  ],
+  "pdf_bytes": 7484345,
+  "pdf_sha256": "f263ef37cae5d6ab7f36b9cd651a7a59cd0ea68b22eee7df2e2de66c6327dfa7",
+  "ruff": "passed"
+}

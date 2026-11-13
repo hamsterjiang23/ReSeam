@@ -131,6 +131,8 @@ class PBRTarget:
         elif self.projection_method != "nearest_surface":
             raise ValueError("UNKNOWN_PBR_PROJECTION_METHOD")
         self.slaves: dict[int, Domain] = {}
+        self.boundary_projection_count = 0
+        self.boundary_projection_max_uv = 0.
         self.face_groups: dict[int, str] = {}
         self.domains: dict[str, Domain] = {}
         protected = set(cast(list[int], record.get("protected_faces", [])))
@@ -198,7 +200,13 @@ class PBRTarget:
             ids[~inside] = np.asarray(domain.tree.nearest(shapely.points(uv[~inside])), dtype=np.int64)
         coordinates = _project_uv_barycentric(domain.uv[ids], uv)
         projected = np.einsum("ni,nij->nj", coordinates, domain.uv[ids])
-        inside |= np.linalg.norm(projected - uv, axis=1) <= 1e-12
+        distance_uv = np.linalg.norm(projected - uv, axis=1)
+        tolerance = float(cast(float, self.record.get("master_boundary_max_distance_uv", 0.)))
+        extended = (~inside) & (distance_uv > 1e-12) & (distance_uv <= tolerance)
+        self.boundary_projection_count += int(extended.sum())
+        self.boundary_projection_max_uv = max(self.boundary_projection_max_uv,
+                                              float(distance_uv[extended].max(initial=0)))
+        inside |= distance_uv <= max(1e-12, tolerance)
         samples = self.original(domain.faces[ids], coordinates)
         master, valid_master = interpolated_frames(*self.frames, domain.faces[ids], coordinates)
         member, valid_member = interpolated_frames(*self.frames, faces, bary)
@@ -254,6 +262,10 @@ def freeze_target(request: dict[str, object], output: Path, deadline: float) -> 
         groups.append({"id": group.group_id, "master_faces": list(master), "slave_faces": slave,
                        "all_faces": all_faces})
     profile = _geometry_profile(request)
+    boundary_pixels = _number(request, "master_boundary_tolerance_pixels", 0.)
+    if boundary_pixels > 8:
+        raise ValueError("PBR_MASTER_BOUNDARY_TOLERANCE_MAXIMUM_8_PIXELS")
+    boundary_resolution = _integer(profile, "resolution", 256, 8, 8192)
     visual = visual_policy(request, snapshot)
     safety = geometry_report(snapshot.state, _prerequisite_profile(profile, request))
     write_json(output / "geometry.json", safety)
@@ -283,6 +295,9 @@ def freeze_target(request: dict[str, object], output: Path, deadline: float) -> 
         "max_projection_fraction": fraction, "projection": "nearest_surface_low_bbox_diagonal",
         "projection_method": method, "front_fraction": front, "back_fraction": back,
         "geometry_profile": profile, "acceptance_policy": "visual" if visual else "numeric",
+        "master_boundary_max_distance_uv": boundary_pixels / boundary_resolution,
+        "master_boundary_projection": {"maximum_pixels": boundary_pixels,
+            "resolution": boundary_resolution, "method": "nearest master triangle with clamped barycentric coordinates; source-derived target modification"},
         "normal_transport": "source mapped normal world -> frozen master tangent -> frozen member world",
         "source_geometry_and_normal_map_included": True,
         "source_double_sided": reference.metadata.get("source_double_sided") is True,
@@ -530,6 +545,11 @@ def compose(snapshot: Snapshot, target: PBRTarget, resolution: int, padding: int
         "queried_samples": target.queried_samples, "flipped_samples": target.side_flips,
         "flipped_low_faces": target.flipped_faces, "single_sided_opposite_rejected": target.single_sided_opposite,
         "rule": "sign(dot(source geometric normal, low geometric normal)); never use bumped normal sign"}
+    audit["master_boundary_projection"] = {
+        "sample_count": target.boundary_projection_count,
+        "maximum_observed_uv_distance": target.boundary_projection_max_uv,
+        "maximum_observed_pixels": target.boundary_projection_max_uv * resolution,
+        "declared_target_modification": target.record.get("master_boundary_projection", {})}
     metadata = dict(audit)
     if isinstance(metadata.get("ray_projection"), dict):
         metadata["ray_projection"] = {key: value for key, value in cast(dict[str, object], metadata["ray_projection"]).items()

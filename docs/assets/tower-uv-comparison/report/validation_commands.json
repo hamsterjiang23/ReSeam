@@ -1,0 +1,8 @@
+{
+  "pytest": "35 passed",
+  "basedpyright": "0 errors, 0 warnings",
+  "ruff": "passed",
+  "git_diff_check": "passed",
+  "report_links_checked": 42,
+  "missing_report_links": []
+}

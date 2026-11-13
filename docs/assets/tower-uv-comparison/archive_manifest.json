@@ -1,0 +1,285 @@
+{
+  "schema": "reseam-full-experiment-archive-v1",
+  "archive_name": "tower-uv-comparison-round01-round02.zip",
+  "archive_bytes": 2233488092,
+  "archive_sha256": "57b4c60bea4db04a85f6fd7f30b0c8c4a69eab421d1498740d1416658ef0acbc",
+  "source_file_count": 6539,
+  "source_bytes": 4568858563,
+  "source_manifest": "source_files.json",
+  "parts": [
+    {
+      "path": "archive/tower-uv-comparison-round01-round02.zip.001",
+      "bytes": 41943040,
+      "sha256": "474e06b7f8ebd934e5e4d02c9110cd17590ef090e7d84e7fcebaa372daa09864"
+    },
+    {
+      "path": "archive/tower-uv-comparison-round01-round02.zip.002",
+      "bytes": 41943040,
+      "sha256": "e84f2bcd6714ff0cc7a9e1188511a9e514c0ce0b3c52bc402c24eed66f1ea58e"
+    },
+    {
+      "path": "archive/tower-uv-comparison-round01-round02.zip.003",
+      "bytes": 41943040,
+      "sha256": "efb1dd677432d9e9843f7cf2c97b807cc561a443b58e43facc7aecdbd1bdaeb8"
+    },
+    {
+      "path": "archive/tower-uv-comparison-round01-round02.zip.004",
+      "bytes": 41943040,
+      "sha256": "bd35683f763d539e2805ba1ee04fc923a5db71be35408bd5fd6f31406c162112"
+    },
+    {
+      "path": "archive/tower-uv-comparison-round01-round02.zip.005",
+      "bytes": 41943040,
+      "sha256": "e999b38b5b59fe64220ff652d4f48132d352a6167d9be723a3d08beea9712b74"
+    },
+    {
+      "path": "archive/tower-uv-comparison-round01-round02.zip.006",
+      "bytes": 41943040,
+      "sha256": "f5eac8e946c1e0533a46309873af42c2a709b4f2ae7b239c50f039d03080d6df"
+    },
+    {
+      "path": "archive/tower-uv-comparison-round01-round02.zip.007",
+      "bytes": 41943040,
+      "sha256": "8ab933d36f0c1dc9a0de25c62e6a12c4ef880f1043e226a2b59429c85133ea13"
+    },
+    {
+      "path": "archive/tower-uv-comparison-round01-round02.zip.008",
+      "bytes": 41943040,
+      "sha256": "9dcbc89477bd72c106dd0c2b4cdc8acd28543d16734dc4d989e4fdfa5d99da22"
+    },
+    {
+      "path": "archive/tower-uv-comparison-round01-round02.zip.009",
+      "bytes": 41943040,
+      "sha256": "aee21e4bc883c53ef2fe9cea02a0351cc737118793f72ab970de3582264743ff"
+    },
+    {
+      "path": "archive/tower-uv-comparison-round01-round02.zip.010",
+      "bytes": 41943040,
+      "sha256": "22fc1abc5c2410a504b7ee4812fc2705456c3854caa197f9147c20f3b697425e"
+    },
+    {
+      "path": "archive/tower-uv-comparison-round01-round02.zip.011",
+      "bytes": 41943040,
+      "sha256": "bcb2ecaed245485802c0bcd50f579a74e09fa48fceb93edbe05c2c6ae047ad25"
+    },
+    {
+      "path": "archive/tower-uv-comparison-round01-round02.zip.012",
+      "bytes": 41943040,
+      "sha256": "66edefe2844f77b9f11f9310461711acc817b165429f15f5fe7c7de8025ecc3f"
+    },
+    {
+      "path": "archive/tower-uv-comparison-round01-round02.zip.013",
+      "bytes": 41943040,
+      "sha256": "a8f17ea4fe0f08cc2248547d02c4cd08762c8c23b2da88b151c307c2c9ed78a9"
+    },
+    {
+      "path": "archive/tower-uv-comparison-round01-round02.zip.014",
+      "bytes": 41943040,
+      "sha256": "a0a43f09f59c7696dcfc954e64521f1ff7e751b3e5bd5f3d90107653d215ee37"
+    },
+    {
+      "path": "archive/tower-uv-comparison-round01-round02.zip.015",
+      "bytes": 41943040,
+      "sha256": "7ab6038715c54a29a6241c77ba94db8d4efe48b3dea393a63014fac05a7c9f1f"
+    },
+    {
+      "path": "archive/tower-uv-comparison-round01-round02.zip.016",
+      "bytes": 41943040,
+      "sha256": "8905b2a6a6901c9a863e0a81b988c14e9754f5f4cca856dfd8ffa840d2675f28"
+    },
+    {
+      "path": "archive/tower-uv-comparison-round01-round02.zip.017",
+      "bytes": 41943040,
+      "sha256": "03ef465804e11285e737d666c31d3bf1e0b2474069ffa25a72f4e98e7f6750a2"
+    },
+    {
+      "path": "archive/tower-uv-comparison-round01-round02.zip.018",
+      "bytes": 41943040,
+      "sha256": "b128033401cda7d7b10646acdcb8c803cb87e6a26e92591b359b24036ec52357"
+    },
+    {
+      "path": "archive/tower-uv-comparison-round01-round02.zip.019",
+      "bytes": 41943040,
+      "sha256": "a443d217fab63015e9f3fd8df2e253f3ad358d0737bd969b401bebe3585ceba5"
+    },
+    {
+      "path": "archive/tower-uv-comparison-round01-round02.zip.020",
+      "bytes": 41943040,
+      "sha256": "ea58adeed6d66417f75d54579f3acb2421d9b7beef3a6306c285bd9996bc93f7"
+    },
+    {
+      "path": "archive/tower-uv-comparison-round01-round02.zip.021",
+      "bytes": 41943040,
+      "sha256": "525c8262f84a7df892671c5c0957c00f44e93f446fd4d4b8365396d171e9642c"
+    },
+    {
+      "path": "archive/tower-uv-comparison-round01-round02.zip.022",
+      "bytes": 41943040,
+      "sha256": "7d3477e963e8524184538f7f1c37ab0b3184397b313fcdd30b11ee4d7ebfad8c"
+    },
+    {
+      "path": "archive/tower-uv-comparison-round01-round02.zip.023",
+      "bytes": 41943040,
+      "sha256": "8626899794d2b0bb294f9592d818d42684738939b92d124efb6eb93d88c6abf3"
+    },
+    {
+      "path": "archive/tower-uv-comparison-round01-round02.zip.024",
+      "bytes": 41943040,
+      "sha256": "c56e23c37e82596491b73ba14fe90331322610a810f029a1fb68e521c7148408"
+    },
+    {
+      "path": "archive/tower-uv-comparison-round01-round02.zip.025",
+      "bytes": 41943040,
+      "sha256": "c97085098bb03fafc65316b769aaa16cd8f407368dd0300c73205b25be5ef5e2"
+    },
+    {
+      "path": "archive/tower-uv-comparison-round01-round02.zip.026",
+      "bytes": 41943040,
+      "sha256": "fbfde4e5b85732a907e4ec8e72398db2f68467daec9b9d8d32811cc0e5afce64"
+    },
+    {
+      "path": "archive/tower-uv-comparison-round01-round02.zip.027",
+      "bytes": 41943040,
+      "sha256": "290eb313bc6895681561b9261dbd7a141a4a229bf071f30133e7b8022fd6f1d6"
+    },
+    {
+      "path": "archive/tower-uv-comparison-round01-round02.zip.028",
+      "bytes": 41943040,
+      "sha256": "1159da605cdcd1b0da04a6deed0a646dd84dce5868a897ebfb9eb5936441d987"
+    },
+    {
+      "path": "archive/tower-uv-comparison-round01-round02.zip.029",
+      "bytes": 41943040,
+      "sha256": "376aacf95ed7061ea45176695d7a7e4dfa81676f6cc33cf0619b66ddb051175b"
+    },
+    {
+      "path": "archive/tower-uv-comparison-round01-round02.zip.030",
+      "bytes": 41943040,
+      "sha256": "c4729dbd24bfb5dc55cfae1cfc6fd5d22c5d307d3381bd9e805a6c438694a184"
+    },
+    {
+      "path": "archive/tower-uv-comparison-round01-round02.zip.031",
+      "bytes": 41943040,
+      "sha256": "d4fb7545c2e8dc7630b5511f760d106f9e2bb8a6518940c6debcd0c53f4a1e45"
+    },
+    {
+      "path": "archive/tower-uv-comparison-round01-round02.zip.032",
+      "bytes": 41943040,
+      "sha256": "a1a66f31e34eaf0cf32903cdcbff80bbffbdf08f016c893b963089d3ef5acfeb"
+    },
+    {
+      "path": "archive/tower-uv-comparison-round01-round02.zip.033",
+      "bytes": 41943040,
+      "sha256": "4772a241aac6154b2ffc046e32555a28bd4a2a8e80cb96fda76b40b691884104"
+    },
+    {
+      "path": "archive/tower-uv-comparison-round01-round02.zip.034",
+      "bytes": 41943040,
+      "sha256": "634c9e46bcae4a7b02ab7a36d257e272e3ed33b6d60d3e866adc71743075ac16"
+    },
+    {
+      "path": "archive/tower-uv-comparison-round01-round02.zip.035",
+      "bytes": 41943040,
+      "sha256": "c5325577569b6417081d7022eabc21264a382dc95aa71dfa8166671368c335b1"
+    },
+    {
+      "path": "archive/tower-uv-comparison-round01-round02.zip.036",
+      "bytes": 41943040,
+      "sha256": "7f268d18f30472ab2ec94f53ea2120f577e4038a0b5182ff48b9a32ce692913f"
+    },
+    {
+      "path": "archive/tower-uv-comparison-round01-round02.zip.037",
+      "bytes": 41943040,
+      "sha256": "0c003a2adb47eef05ad665f05b97153eab42ca6bde0bc76f54dafcde1a3d8429"
+    },
+    {
+      "path": "archive/tower-uv-comparison-round01-round02.zip.038",
+      "bytes": 41943040,
+      "sha256": "b8b00457253625dc1c82574c5c1a89b7aad3f8986b80403a6ebed2c62a5da167"
+    },
+    {
+      "path": "archive/tower-uv-comparison-round01-round02.zip.039",
+      "bytes": 41943040,
+      "sha256": "718cb05fc95692fbd797b67b18917b24375258f217dc0138d5ce849b7cc586e0"
+    },
+    {
+      "path": "archive/tower-uv-comparison-round01-round02.zip.040",
+      "bytes": 41943040,
+      "sha256": "1a2c8b3349da4d84dc4b317f4bfb1223f76e123e1ab4b5d60e47080cd0ed0160"
+    },
+    {
+      "path": "archive/tower-uv-comparison-round01-round02.zip.041",
+      "bytes": 41943040,
+      "sha256": "51a6a864b50687b5289fb37e04f85a4a2037bedc670b330bfe1fda8fcf16bbec"
+    },
+    {
+      "path": "archive/tower-uv-comparison-round01-round02.zip.042",
+      "bytes": 41943040,
+      "sha256": "ebddbf3cf1d8637a6045c717241b1153090f6e8263e12f76d874ed669ba629a9"
+    },
+    {
+      "path": "archive/tower-uv-comparison-round01-round02.zip.043",
+      "bytes": 41943040,
+      "sha256": "d168ad77f98ea5de96257159d14a96fb1a963c3dbc70ea4df271fa64cbb8f7b1"
+    },
+    {
+      "path": "archive/tower-uv-comparison-round01-round02.zip.044",
+      "bytes": 41943040,
+      "sha256": "157655991905b787084a23985db54c9eaff6728ecd1e30f6639b97e05b2bee35"
+    },
+    {
+      "path": "archive/tower-uv-comparison-round01-round02.zip.045",
+      "bytes": 41943040,
+      "sha256": "f60fe5200e78ae6b1a2b041431196292ea1a2072a70e3d071f81500e027b0264"
+    },
+    {
+      "path": "archive/tower-uv-comparison-round01-round02.zip.046",
+      "bytes": 41943040,
+      "sha256": "3fd6aa44b0f33a55f954e507f9e4e22ebf76176c849a4d1284cb8fafb4d45569"
+    },
+    {
+      "path": "archive/tower-uv-comparison-round01-round02.zip.047",
+      "bytes": 41943040,
+      "sha256": "bf537a7222172e2b70df0420c316809ca980cd96ead6bbfb65b1d9adf1805ca5"
+    },
+    {
+      "path": "archive/tower-uv-comparison-round01-round02.zip.048",
+      "bytes": 41943040,
+      "sha256": "5e1169bed75c26be7b30bf38c06de74cc2a48ee38328b18fb03aeaeec7947fc6"
+    },
+    {
+      "path": "archive/tower-uv-comparison-round01-round02.zip.049",
+      "bytes": 41943040,
+      "sha256": "5df3073beb228545b8c3578078f6a54b023f68c5eaa20027f6e0351a08962753"
+    },
+    {
+      "path": "archive/tower-uv-comparison-round01-round02.zip.050",
+      "bytes": 41943040,
+      "sha256": "1b62c062a9328e0e0c6ceb526d6f7db86b974795bdfef1d54e12333f4b467e4c"
+    },
+    {
+      "path": "archive/tower-uv-comparison-round01-round02.zip.051",
+      "bytes": 41943040,
+      "sha256": "9dfe764050b7d98a8cdd3c623679e3a38cec1ada196b60bcc701215065fc4f9a"
+    },
+    {
+      "path": "archive/tower-uv-comparison-round01-round02.zip.052",
+      "bytes": 41943040,
+      "sha256": "f31338ce0622d81afedeb55c9e5eb309a20e77b47c82680844ceb519df10a935"
+    },
+    {
+      "path": "archive/tower-uv-comparison-round01-round02.zip.053",
+      "bytes": 41943040,
+      "sha256": "b8ff4ebce0fe670debd355f684b1bfdf3456b758d1c479e0837a74b98eaa2f06"
+    },
+    {
+      "path": "archive/tower-uv-comparison-round01-round02.zip.054",
+      "bytes": 10506972,
+      "sha256": "9b542995635502640723cfa24f08b921f3bf7f618fae95dcd8cf24c0a6e3e90e"
+    }
+  ],
+  "zip_crc_verified": true,
+  "elapsed_seconds": 155.06299999999464,
+  "restore_directory": "repository root",
+  "restore_prefix": "artifacts/tower_uv_comparison"
+}
