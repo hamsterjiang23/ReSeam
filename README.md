@@ -1,5 +1,7 @@
 # ReSeam
 
+最终镜像共享防御塔新增[1×8多视角线框图](docs/assets/tower-wireframe/round01/README.md)，包含正、背、左右及四个斜视角，附独立视图和来源状态记录。`[verified: tower-wireframe/round01/manifest.json views/state_hash；verification.json view_count/render_state_matches_final_export]`
+
 防御塔补充[PBR贴图处理与1×21横向对照图](docs/assets/tower-pbr-process/round01/README.md)，逐版本展示材质效果和BaseColor、Normal、Roughness、ORM四张图。配套目录共整理242张原图／烘焙图／拆分通道，附最终共享版模型与贴图包。固定材质参数、法线方向处理与原生失败状态均在图及说明中保留。`[verified: tower-pbr-process/round01/verification.json organized_maps/successful_versions/preserved_failure_columns；manifest.json display_channels/material_settings/normal_transport]`
 
 防御塔新增[制作过程与全方法对照交付包](docs/assets/tower-uv-comparison/README.md)，包含[6页制作过程 PDF](output/pdf/tower-making-process/防御塔制作过程图解.pdf)、UV／颜色／法线展示图，以及两个实验轮次的完整分卷归档。最终镜像候选为7,650个三角形、48个连通岛／24个独立图块，数值状态为DIAGNOSTIC，Agent观察结论为VISUAL_KEEP。`[verified: tower-uv-comparison/report/results.json method=mirror_negative_exhaustive_minimum_shared；report/appearance_review.json decision；tower-making-process/verification.json pages]`

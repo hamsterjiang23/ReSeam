@@ -1,0 +1,21 @@
+{
+  "layout": "1x8",
+  "view_count": 8,
+  "sheet_size": [
+    7232,
+    1120
+  ],
+  "individual_view_size": [
+    1024,
+    1024
+  ],
+  "unique_view_images": 8,
+  "source_hashes_verified": 7,
+  "all_view_hashes_verified": true,
+  "render_state_matches_final_export": true,
+  "all_foreground_bounds_inside_frames": true,
+  "visible_wire_pixels_in_all_views": true,
+  "visual_review": "all eight views inspected in two four-view crops; full silhouettes, labels and wireframe visible",
+  "ruff": "passed",
+  "basedpyright": "0 errors, 0 warnings"
+}

@@ -1,0 +1,216 @@
+{
+  "layout": "1x8",
+  "image": "镜像共享防御塔_多视角线框_1x8.png",
+  "image_size": [
+    7232,
+    1120
+  ],
+  "image_sha256": "b754d8355c009711329474bf48f2991670f113bdc0d9d8db91a7edbec7562ce3",
+  "model": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\export\\asset.glb",
+  "model_sha256": "fbd02a1c2bf4d2d51681bb083f62cb316c76653eff65e2b6fce2f5d4cc256ebd",
+  "source_export": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\export\\export.json",
+  "snapshot": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\pack29\\snapshot\\snapshot.json",
+  "state_hash": "b1f115814b9692547354633c3f6ea098408f588a0cf7c24fff5e7809f670e8d5",
+  "asset_id": "d2ac281744adbd144f1ae57c0a14255a96e1165e186e813412b3ed197f7d8517",
+  "triangles": 7650,
+  "uv_islands": 48,
+  "shared_tiles": 24,
+  "renderer": "ReSeam view.render; CPU orthographic depth-tested visible-edge wireframe",
+  "camera_contract": "explicit azimuth/elevation values in render-request.json; same eight named cameras as retained material preview",
+  "views": [
+    {
+      "name": "front",
+      "label": "正面",
+      "camera": {
+        "name": "front",
+        "azimuth": 0,
+        "elevation": 0
+      },
+      "path": "views/front.png",
+      "sha256": "ad0befec251eb9316fc83cf27651707c8532a71f32943dcd5bdcf01a9315a0af",
+      "source": "E:\\ReSem\\artifacts\\tower-wireframe-views\\round01\\render\\front.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "foreground_bounds": [
+        58,
+        2,
+        965,
+        1021
+      ],
+      "wire_pixels": 83230
+    },
+    {
+      "name": "back",
+      "label": "背面",
+      "camera": {
+        "name": "back",
+        "azimuth": 180,
+        "elevation": 0
+      },
+      "path": "views/back.png",
+      "sha256": "42b9e55db3b8c5ca27b37ca9d485ae0ac778e3c30fd71dbfc006facacf0360de",
+      "source": "E:\\ReSem\\artifacts\\tower-wireframe-views\\round01\\render\\back.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "foreground_bounds": [
+        58,
+        2,
+        965,
+        1021
+      ],
+      "wire_pixels": 79710
+    },
+    {
+      "name": "left",
+      "label": "左侧",
+      "camera": {
+        "name": "left",
+        "azimuth": -90,
+        "elevation": 0
+      },
+      "path": "views/left.png",
+      "sha256": "b477cbbb56e6c3e17f4140ba1134dda767196562c4250d7bf7f2e0e4b281785b",
+      "source": "E:\\ReSem\\artifacts\\tower-wireframe-views\\round01\\render\\left.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "foreground_bounds": [
+        246,
+        2,
+        777,
+        1021
+      ],
+      "wire_pixels": 73322
+    },
+    {
+      "name": "right",
+      "label": "右侧",
+      "camera": {
+        "name": "right",
+        "azimuth": 90,
+        "elevation": 0
+      },
+      "path": "views/right.png",
+      "sha256": "644e252c7a8d8ebacf15bac5c1edcb96efc8ca55bf2c864b0847d0cfc69e8cb4",
+      "source": "E:\\ReSem\\artifacts\\tower-wireframe-views\\round01\\render\\right.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "foreground_bounds": [
+        246,
+        2,
+        777,
+        1021
+      ],
+      "wire_pixels": 73322
+    },
+    {
+      "name": "front_right",
+      "label": "右前",
+      "camera": {
+        "name": "front_right",
+        "azimuth": 35,
+        "elevation": 15
+      },
+      "path": "views/front_right.png",
+      "sha256": "b11dc02665f03e921690399be85ccec1980bafcebf7a77a38d9d3102e7561b9c",
+      "source": "E:\\ReSem\\artifacts\\tower-wireframe-views\\round01\\render\\front_right.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "foreground_bounds": [
+        148,
+        2,
+        875,
+        1021
+      ],
+      "wire_pixels": 82623
+    },
+    {
+      "name": "front_left",
+      "label": "左前",
+      "camera": {
+        "name": "front_left",
+        "azimuth": -35,
+        "elevation": 15
+      },
+      "path": "views/front_left.png",
+      "sha256": "06482f5aa91e288f2dc6c7b915b2acf32fd306b0b8fbba83e4063c3f0492fac4",
+      "source": "E:\\ReSem\\artifacts\\tower-wireframe-views\\round01\\render\\front_left.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "foreground_bounds": [
+        148,
+        2,
+        875,
+        1021
+      ],
+      "wire_pixels": 82623
+    },
+    {
+      "name": "back_right",
+      "label": "右后",
+      "camera": {
+        "name": "back_right",
+        "azimuth": 145,
+        "elevation": 15
+      },
+      "path": "views/back_right.png",
+      "sha256": "4d99f52fbddac9e97475ffcf69aebd066532ff30438f2b43859c6cceffce3138",
+      "source": "E:\\ReSem\\artifacts\\tower-wireframe-views\\round01\\render\\back_right.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "foreground_bounds": [
+        151,
+        2,
+        872,
+        1021
+      ],
+      "wire_pixels": 82123
+    },
+    {
+      "name": "back_left",
+      "label": "左后",
+      "camera": {
+        "name": "back_left",
+        "azimuth": -145,
+        "elevation": 15
+      },
+      "path": "views/back_left.png",
+      "sha256": "ba8c5b13034e5ad47e6c6a3f32b785172b8576b06f25e2556798c1c86d5a3531",
+      "source": "E:\\ReSem\\artifacts\\tower-wireframe-views\\round01\\render\\back_left.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "foreground_bounds": [
+        151,
+        2,
+        872,
+        1021
+      ],
+      "wire_pixels": 82123
+    }
+  ],
+  "source_sha256": {
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_shared_2048/export/asset.glb": "fbd02a1c2bf4d2d51681bb083f62cb316c76653eff65e2b6fce2f5d4cc256ebd",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_shared_2048/pack29/snapshot/snapshot.json": "360e7405c0d2efd01b40fba42b883e989cbc64ad8742fc1f3c484a264f4de603",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_shared_2048/export/export.json": "1b0ae63c22493920987b1bd09fe5cb4ba8df67fc820f370e7bb8fd267bffbdca",
+    "artifacts/tower-wireframe-views/round01/request.json": "99c76e9089bc0e2e53dc4a025849740746bfd6108ef1f7c244552f8c5e7903d4",
+    "artifacts/tower-wireframe-views/round01/render/views.json": "c05516e29628840002c2613986fd1a6cd12212ccbb344dada7708a85e0175745",
+    "scripts/build_tower_wireframe_sheet.py": "47a414da55363d4f0f3d10b96c96ebbf2eba3fe5720122687b97fa185ea567ec",
+    "src/reseam/agent_tools/views.py": "d7b8dcbbeae3ef93307e886355d141dd4efd2c586c3a2e1606ed6e03bde7a800"
+  },
+  "quality_evidence": false
+}

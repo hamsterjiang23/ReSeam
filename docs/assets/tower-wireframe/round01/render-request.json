@@ -1,0 +1,49 @@
+{
+  "snapshot": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\pack29\\snapshot\\snapshot.json",
+  "cameras": [
+    {
+      "name": "front",
+      "azimuth": 0,
+      "elevation": 0
+    },
+    {
+      "name": "back",
+      "azimuth": 180,
+      "elevation": 0
+    },
+    {
+      "name": "left",
+      "azimuth": -90,
+      "elevation": 0
+    },
+    {
+      "name": "right",
+      "azimuth": 90,
+      "elevation": 0
+    },
+    {
+      "name": "front_right",
+      "azimuth": 35,
+      "elevation": 15
+    },
+    {
+      "name": "front_left",
+      "azimuth": -35,
+      "elevation": 15
+    },
+    {
+      "name": "back_right",
+      "azimuth": 145,
+      "elevation": 15
+    },
+    {
+      "name": "back_left",
+      "azimuth": -145,
+      "elevation": 15
+    }
+  ],
+  "size": 1024,
+  "mode": "wireframe",
+  "seam_edge_ids": [],
+  "timeout_seconds": 300
+}
