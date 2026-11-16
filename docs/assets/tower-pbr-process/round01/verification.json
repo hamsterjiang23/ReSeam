@@ -1,0 +1,21 @@
+{
+  "layout": "1x21",
+  "image_size": [
+    10480,
+    1960
+  ],
+  "organized_maps": 242,
+  "byte_identical_copies": 122,
+  "exact_pixel_channel_splits": 120,
+  "successful_versions": 18,
+  "preserved_failure_columns": 2,
+  "source_hashes_verified": 262,
+  "all_18_mip0_bake_export_channels_identical": true,
+  "bundle_members": 75,
+  "bundle_crc_passed": true,
+  "embedded_glb_images_match_separate_maps": 3,
+  "bundle_bytes": 16097646,
+  "visual_review": "all21 columns inspected in five overlapping crops; no text/image clipping observed",
+  "ruff": "passed",
+  "basedpyright": "0 errors, 0 warnings"
+}

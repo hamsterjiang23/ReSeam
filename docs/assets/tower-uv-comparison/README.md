@@ -1,5 +1,7 @@
 # 防御塔制作过程与全方法对照
 
+补充[PBR贴图处理与1×21单排对照](../tower-pbr-process/round01/README.md)，整理全部18个成功版本的六类通道，附最终共享版的模型／贴图包和同几何无共享对照的完整MIP。粗糙度、金属度和AO的固定值及拆分来源均已注明。`[verified: ../tower-pbr-process/round01/verification.json organized_maps/successful_versions；manifest.json mip_scope/material_settings/map_scope]`
+
 [制作过程 PDF](../../../output/pdf/tower-making-process/防御塔制作过程图解.pdf)共6页。页面依次展示输入、六种基线、原形接缝整理、半边镜像、共享后的继续合岛、颜色与法线近景。`[verified: ../../../output/pdf/tower-making-process/evidence.json pages；verification.json pages]`
 
 ## 直接查看

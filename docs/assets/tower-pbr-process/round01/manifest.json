@@ -1,0 +1,3471 @@
+{
+  "layout": "1x21",
+  "columns": [
+    "source",
+    "source_uv",
+    "flatten_anything",
+    "optcuts",
+    "xatlas",
+    "blender_smart",
+    "partuv",
+    "meshquery_project",
+    "reseam_unshared",
+    "reseam_shared",
+    "reseam_optimized",
+    "mirror_negative_unshared",
+    "mirror_negative_shared",
+    "mirror_negative_optimized_minimum_shared",
+    "mirror_negative_optimized_minimum_unshared",
+    "mirror_negative_aggressive_minimum_shared",
+    "mirror_negative_aggressive_minimum_unshared",
+    "mirror_negative_exhaustive_minimum_unshared",
+    "reseam_shared_boundary_control",
+    "reseam_shared_repaired",
+    "mirror_negative_exhaustive_minimum_shared"
+  ],
+  "image": {
+    "path": "防御塔PBR全方法对照_1x21.png",
+    "size": [
+      10480,
+      1960
+    ],
+    "sha256": "cff31af6d3aabe6c8dd6430894d47b52929d55e033f19574c3a8bbc4ce32b64c"
+  },
+  "bundle": {
+    "path": "最终共享版_PBR模型与贴图.zip",
+    "bytes": 16097646,
+    "sha256": "1bfe3bb65125dd22fd80bfb00ead43129a4763dbb8e3d43e5ca43e9093e0b714",
+    "model_source": "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_shared_2048/export/asset.glb",
+    "model_sha256": "fbd02a1c2bf4d2d51681bb083f62cb316c76653eff65e2b6fce2f5d4cc256ebd"
+  },
+  "source_ids": {
+    "S1": "artifacts/tower_uv_comparison/round02/clean_import/import_request.json",
+    "S2": "artifacts/tower_uv_comparison/round02/mirror/negative_exhaustive_minimum_clean/mirror_variant.json",
+    "S3": "artifacts/tower_uv_comparison/round02/report/results.json",
+    "S4": "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_shared_2048/bake/texture/material_metadata.json",
+    "S5": "src/reseam/agent_tools/pbr_reuse.py",
+    "S6": "artifacts/tower_uv_comparison/round02/report/appearance_review.json"
+  },
+  "source_sha256": {
+    "artifacts/tower_uv_comparison/round01/inputs/source/fantasy_cross_statue_3d_model.fbm/fantasy_cross_statue_3d_model_basecolor.jpg": "d4c34d9a80de631d72cb1e4f617396d697cf843cba84ac72d575aeb60cb6a48f",
+    "artifacts/tower_uv_comparison/round01/inputs/source/fantasy_cross_statue_3d_model.fbm/fantasy_cross_statue_3d_model_normal.png": "0f0d59db09e52cb96c4a43d14e7169fa42c294b86c64bc98ef913d970a36665e",
+    "artifacts/tower_uv_comparison/round02/evaluation/source_uv_2048/bake/texture/BaseColor_mip0.png": "451736b61241732ee80ac3e84fc94c9b3b848f99529f9aaf24d602d51104bf93",
+    "artifacts/tower_uv_comparison/round02/evaluation/source_uv_2048/bake/texture/Normal_mip0.png": "a54d6d3582746b4cc6317dfb455a05200da1325150c121629c019a0cda15aefb",
+    "artifacts/tower_uv_comparison/round02/evaluation/source_uv_2048/bake/texture/ORM_mip0.png": "a030670313f821aed6ea0445b7131eab36fd903569ce7b08553d0b7266fcdaad",
+    "artifacts/tower_uv_comparison/round02/evaluation/xatlas_2048/bake/texture/BaseColor_mip0.png": "89edb43d04f13257980880fb1cbb795f6f4654b5dcf708fd85316b7f014a51a9",
+    "artifacts/tower_uv_comparison/round02/evaluation/xatlas_2048/bake/texture/Normal_mip0.png": "95567321984386f4e822c096c0ed8e5a7d8d660ff7383b681f6b98474f72d287",
+    "artifacts/tower_uv_comparison/round02/evaluation/xatlas_2048/bake/texture/ORM_mip0.png": "5670eaf316f0ad11f56a9091e92c7859ddf3acb1f7dbd842661bea15ce073ae7",
+    "artifacts/tower_uv_comparison/round02/evaluation/blender_smart_2048/bake/texture/BaseColor_mip0.png": "f2883d16951a870b3b5bee74b3244e769844ca33962f54640925cda9eab8d008",
+    "artifacts/tower_uv_comparison/round02/evaluation/blender_smart_2048/bake/texture/Normal_mip0.png": "f273ae72bc7ae51ede58d29d4ee675403ae9f2e07ae99d53bf2d4db8dbacdd5e",
+    "artifacts/tower_uv_comparison/round02/evaluation/blender_smart_2048/bake/texture/ORM_mip0.png": "9db9362c094a0021a3dfb4144a13506199aef50c66660ad19df304e72b0cb050",
+    "artifacts/tower_uv_comparison/round02/evaluation/partuv_2048/bake/texture/BaseColor_mip0.png": "57154166c3d96bd755922b14879d70688e2be0e9b274329d0a3071b20390cc9b",
+    "artifacts/tower_uv_comparison/round02/evaluation/partuv_2048/bake/texture/Normal_mip0.png": "58698175c46736324c475d38e0151ee51f039cb9c5a773ff0d07b8642ea7d690",
+    "artifacts/tower_uv_comparison/round02/evaluation/partuv_2048/bake/texture/ORM_mip0.png": "0270648851312679288e274e98bb6c397ef685b0be068e63ef326b8cc3ed5262",
+    "artifacts/tower_uv_comparison/round02/evaluation/meshquery_repaired_2048/bake/texture/BaseColor_mip0.png": "c8721b9774a12a38588fd73ce51ef15fd453a5df95d4060be874ab35b714a67a",
+    "artifacts/tower_uv_comparison/round02/evaluation/meshquery_repaired_2048/bake/texture/Normal_mip0.png": "fe519482c8b750133278844c7744950dc8318d39b776c766da13361293eb1d63",
+    "artifacts/tower_uv_comparison/round02/evaluation/meshquery_repaired_2048/bake/texture/ORM_mip0.png": "1bd1c24b4e0b0ecdf0fce46884468208b6cd4606a4ffcc89b1d917e95ff13075",
+    "artifacts/tower_uv_comparison/round02/evaluation/reseam_unshared_2048/bake/texture/BaseColor_mip0.png": "c8721b9774a12a38588fd73ce51ef15fd453a5df95d4060be874ab35b714a67a",
+    "artifacts/tower_uv_comparison/round02/evaluation/reseam_unshared_2048/bake/texture/Normal_mip0.png": "fe519482c8b750133278844c7744950dc8318d39b776c766da13361293eb1d63",
+    "artifacts/tower_uv_comparison/round02/evaluation/reseam_unshared_2048/bake/texture/ORM_mip0.png": "1bd1c24b4e0b0ecdf0fce46884468208b6cd4606a4ffcc89b1d917e95ff13075",
+    "artifacts/tower_uv_comparison/round02/evaluation/reseam_shared_boundary_2048/bake/texture/BaseColor_mip0.png": "287c6cf117aeb29135afb8067feb6c32db628efc75d74891346581b7a1f63be1",
+    "artifacts/tower_uv_comparison/round02/evaluation/reseam_shared_boundary_2048/bake/texture/Normal_mip0.png": "f674b10541acd455ff1af5255781ff385603484459d332d999e70ff95729180f",
+    "artifacts/tower_uv_comparison/round02/evaluation/reseam_shared_boundary_2048/bake/texture/ORM_mip0.png": "d3d135fb2e60877d4fc6a2c60783a86de0515fcb8ed12605f70eabb53f18be6e",
+    "artifacts/tower_uv_comparison/round02/evaluation/reseam_optimized_2048/bake/texture/BaseColor_mip0.png": "0d0aa1c7b2e2abddc986c504c562c8979656e84fb38f9cf84c2cd1aa91bb6c90",
+    "artifacts/tower_uv_comparison/round02/evaluation/reseam_optimized_2048/bake/texture/Normal_mip0.png": "af2adda4b16b1a9e465440791ba21f008651fd34b9b7f2d48514cd415fef3ccc",
+    "artifacts/tower_uv_comparison/round02/evaluation/reseam_optimized_2048/bake/texture/ORM_mip0.png": "9b6020674325d0cfa4af8a4b029ecb2e85cc82663c5a5c7a4692e3c1621b3896",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_unshared_2048/bake/texture/BaseColor_mip0.png": "5e61d74275cf6986de87c38b78f891fbe7db905c7aae28cbcf6ee6ef437c2f2c",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_unshared_2048/bake/texture/Normal_mip0.png": "3b59c24dca02ff55790cb1d16b290e3efc99c8e2aada4b53d48b3b792c7b9ba2",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_unshared_2048/bake/texture/ORM_mip0.png": "877cf1bbb43b31f2c2ebe347ca3fcacc4cb9a4b9234740452a3ff6244eb42762",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_shared_2048/bake/texture/BaseColor_mip0.png": "8845655a2d1981384d10d9195580c3bca85cb5014b0e64f4f8a4f05cd0285e97",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_shared_2048/bake/texture/Normal_mip0.png": "b2eef846d2bbfb6532ee46b6f6b3fdf8afc40466407bf3ece63c2101c53143e2",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_shared_2048/bake/texture/ORM_mip0.png": "a2aa1276d9b3cbdf9eac536276ffc07f874fbc1080f16952562a7146f2c0fa5b",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_optimized_minimum_shared_2048/bake/texture/BaseColor_mip0.png": "1e4a6b5efac832b5450c74122507b7aac2caba02e9493dd4971439808661f74f",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_optimized_minimum_shared_2048/bake/texture/Normal_mip0.png": "bfc3469a3542c185e5c91a4d0cf35ac3860b5300a3a55dc52287d476128e9ca9",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_optimized_minimum_shared_2048/bake/texture/ORM_mip0.png": "c1e4c95da9ea6a63c0bff1a62a37f98300ce8a8aa34f5aeca9e176ad6e004d3b",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_optimized_minimum_unshared_2048/bake/texture/BaseColor_mip0.png": "f39104bb5b018176beafe59886cd4803987819735efdd93aceb915206588bc58",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_optimized_minimum_unshared_2048/bake/texture/Normal_mip0.png": "b65292e7243e00d0fb69b993d3c314fef33334bbf082813c046c0ce417a88d50",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_optimized_minimum_unshared_2048/bake/texture/ORM_mip0.png": "0f7abf6d31193bb2670559f48c6855ea14b88d12f4d3d848c30d7aceed5cb88b",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_aggressive_minimum_shared_2048/bake/texture/BaseColor_mip0.png": "cf0eebb6b690289f0d7b5b7d101c9eaf0f520f5233a63efd32037791400b0f45",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_aggressive_minimum_shared_2048/bake/texture/Normal_mip0.png": "5010f21ec8ba16c615b6c42284d15cb0b53703b83677bdeb3e038e1ab8d7d40c",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_aggressive_minimum_shared_2048/bake/texture/ORM_mip0.png": "2399ed3373b5d2a01353f5c51e8bd0d510edf611171b1ecc36fc1f74678160f5",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_aggressive_minimum_unshared_2048/bake/texture/BaseColor_mip0.png": "fd42c45ed38d9fef8ed004c25ff8768dda874e942e8a48ad54c325b4b09c50ac",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_aggressive_minimum_unshared_2048/bake/texture/Normal_mip0.png": "3dc5a9d3e1977d416fe869a6779a0d916e66e36d7a2f9ff5aae8dc6389acf010",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_aggressive_minimum_unshared_2048/bake/texture/ORM_mip0.png": "b1933927044a021c1e42bb1c63e076c737f347dbf41eb240b0824fa43317f033",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_unshared_2048/bake/texture/BaseColor_mip0.png": "4626414768af35b6aa3aee99580c1b6443e167626af03e74ed91da3894e5e1d5",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_unshared_2048/bake/texture/Normal_mip0.png": "85a0b83a9e27acf0aea8838ec88326458d918931edc30a54ac34554123183997",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_unshared_2048/bake/texture/ORM_mip0.png": "ed341dc7d54789e60cabbdb8423b73c20e52c7ef04746584de05103318800450",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_unshared_2048/bake/texture/BaseColor_mip1.png": "1bc880fa0f93453ce31c34364ab2a349f21c58c4163d6398d168a8afea91cfc1",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_unshared_2048/bake/texture/Normal_mip1.png": "b94ef7f3b39afad2c1d00ec3f52cb26a782d1d8fc741681ca69df7f103aba20a",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_unshared_2048/bake/texture/ORM_mip1.png": "5f66d3687320654f4a11f085653709adfc374f0095e7611877b09e7521b8e7c8",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_unshared_2048/bake/texture/BaseColor_mip2.png": "8300b67e2431e4dd6f6b18c56ca095951f539945cda1a48869c72d78df0ebbb1",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_unshared_2048/bake/texture/Normal_mip2.png": "a8c95261e3d302d6a10cb0b2de9de5eed92386cecec75ccb7280032e363d92ee",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_unshared_2048/bake/texture/ORM_mip2.png": "6b4e1fd0b1c1daa83a894d4d2dc394e957710adfc797721df2791d3eb8e931cf",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_unshared_2048/bake/texture/BaseColor_mip3.png": "01b4d229e56c03a17d999153c0186dc11b7d14ec58d880053031b665e0bc6174",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_unshared_2048/bake/texture/Normal_mip3.png": "91796df5dbce1d3038878e2c1d6dcbc99341fcd123cfee5debcac04139cbb31e",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_unshared_2048/bake/texture/ORM_mip3.png": "6d3592f9468ecc34f74446eaf285930bb17e1f67ac7e6c12d0c2333d3cacebef",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_unshared_2048/bake/texture/BaseColor_mip4.png": "e822dfb03350926fbdcb697c098d541b06adac7279ca7045f223c080f12cb0a6",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_unshared_2048/bake/texture/Normal_mip4.png": "54113af558a5161d86ba71b0ed04c4917223de0e0d0305345b12eee5fbbb4461",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_unshared_2048/bake/texture/ORM_mip4.png": "b0f75b7ddc3792c9cc523fd796e871a916c35f5cf72144e0936c874db08400f2",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_unshared_2048/bake/texture/BaseColor_mip5.png": "063fcf60521cd6911ca8b0f77f16ec08602cc15b24d86336b408490ad3366192",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_unshared_2048/bake/texture/Normal_mip5.png": "d600b8598a75d2cb6315fcf65bb98be40b1c8393090571c1e83011d64f2f412f",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_unshared_2048/bake/texture/ORM_mip5.png": "02651872ad51dca6e2d39c58cd38cef7d56aedebfa466f2a3e2a666d0ac9e06d",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_unshared_2048/bake/texture/BaseColor_mip6.png": "0276dacc0b2295a4c695a5e35473c0b0a65020c27a56f10a902b0bb311a0ea25",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_unshared_2048/bake/texture/Normal_mip6.png": "f8af7d62ad6076609c3c14e7de330dd81f9338a82d438599cdadb4387a05d372",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_unshared_2048/bake/texture/ORM_mip6.png": "044a7fc1ba3f44b77f6812ee1e87f7c5d21b0bc327140a537395520d6fe6f452",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_unshared_2048/bake/texture/BaseColor_mip7.png": "69f95a5a2a6be8f034de49891515fdf601c049f353766c2ad156656f228bca82",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_unshared_2048/bake/texture/Normal_mip7.png": "1de51efd3c130bf13a7e9c02812f61537cd740eb8b79ef9bf4efacf89a92cb7e",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_unshared_2048/bake/texture/ORM_mip7.png": "b87b03f8e4fde44d0c0c5874f07498711eac01b5ea2570307b57e3e8faa8e734",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_unshared_2048/bake/texture/BaseColor_mip8.png": "91c8686d3296b8f5f1017b56d55741306dd5f38eb764ffa318c4395b657da6bc",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_unshared_2048/bake/texture/Normal_mip8.png": "ca79fabce97759b074a87f6e31db34c8f3833af89f4c8fa33f262a706bfaa4c7",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_unshared_2048/bake/texture/ORM_mip8.png": "92983d8ab8d246dcccea1d726978ac8c06ef3caf9b25b043a33ef00f4af4473d",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_unshared_2048/bake/texture/BaseColor_mip9.png": "0c54bb214aa7c59ce616a3874d75cccffa9ad33eea618f64cd0c059e97162ca5",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_unshared_2048/bake/texture/Normal_mip9.png": "91b2b62fea2c46f7a7f85fd94a74ea8be032be73f32b3063af207317738b6e94",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_unshared_2048/bake/texture/ORM_mip9.png": "59e63f2d7853b7f41d5fc6a00e166f5d84f2bd8ed6c479e1c2e7f0970d473cea",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_unshared_2048/bake/texture/BaseColor_mip10.png": "a026c26d6949b6dec0941face204b4c32805b0e8953eefe9b9e792b130c1f860",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_unshared_2048/bake/texture/Normal_mip10.png": "a6b3f1fc37ca4255c4c4af55f00a6a1a81814be13bb6bdb5b76ca22a18392ad3",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_unshared_2048/bake/texture/ORM_mip10.png": "d8abb7e96d0c5a397a18ff9feb48d1a9251bfdb7a587b8e60cf29b63148fe961",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_unshared_2048/bake/texture/BaseColor_mip11.png": "c1ab86fc6d002cc6cd34303a9bb2614fd2b1c69bf56440ff873236460a94306d",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_unshared_2048/bake/texture/Normal_mip11.png": "b9f9363f6111ecdac77b2a9c180cb97ed5c6d698a70180cfbccc209015d13a2f",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_unshared_2048/bake/texture/ORM_mip11.png": "5099baff37e3b6c8fb58023ec7c22d211544a060e6dde4276e4e84b4beffdac8",
+    "artifacts/tower_uv_comparison/round02/evaluation/reseam_shared_boundary_control_2048/bake/texture/BaseColor_mip0.png": "96688e4696672318262639c52bfd933e7a5ceb648fddca46a59b5fc897eca7ee",
+    "artifacts/tower_uv_comparison/round02/evaluation/reseam_shared_boundary_control_2048/bake/texture/Normal_mip0.png": "0503bd38ffbb6b01faf641cd28925c029286fc023655d3c763764d244196db7a",
+    "artifacts/tower_uv_comparison/round02/evaluation/reseam_shared_boundary_control_2048/bake/texture/ORM_mip0.png": "f3710eecdb167c011aa409a9983ca5eec771c8053efdbb0eb9ed83d8483b884f",
+    "artifacts/tower_uv_comparison/round02/evaluation/reseam_shared_repaired_2048/bake/texture/BaseColor_mip0.png": "35de5de7cb0dc670636f626f9ccb2053a5aa28ca7930e45942fa16db8c686070",
+    "artifacts/tower_uv_comparison/round02/evaluation/reseam_shared_repaired_2048/bake/texture/Normal_mip0.png": "3ceb4ab1d326181f751b55769e5759ca6388a563fabe59ae99e1c95c0478d786",
+    "artifacts/tower_uv_comparison/round02/evaluation/reseam_shared_repaired_2048/bake/texture/ORM_mip0.png": "d5a8a46c1962bc9160632e1cd12bce7517f4de6476a1925cd3ab11bbd532800a",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_shared_2048/bake/texture/BaseColor_mip0.png": "1528871e12843cd0c00baf5af44860edcd6132c71ee90ac6f0cbe747a561e630",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_shared_2048/bake/texture/Normal_mip0.png": "535823131c06ddded93234eb35a14fe65f45470a47443fc10721426047c955a4",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_shared_2048/bake/texture/ORM_mip0.png": "fc8b103db1ad11d9389673d4e158c104cbbd2e793f15b31f898cd023aa4e1a9a",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_shared_2048/bake/texture/BaseColor_mip1.png": "4f784d1cfdfacb59e5859869ce57805136fe5fa52659d73f1ec691c309286c37",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_shared_2048/bake/texture/Normal_mip1.png": "f3e1e542f319912c562048b15e6c37b1856a71654d5e05516c3fbaf6707368fa",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_shared_2048/bake/texture/ORM_mip1.png": "804a60e6a03fed04cb25b2ab3b74e0a69b5b24ed03b9671cb1c5e5938719c95b",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_shared_2048/bake/texture/BaseColor_mip2.png": "ea9d53c57b13388e9125320f04cb63a09bf056ac7cea7c6103b50c430f556952",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_shared_2048/bake/texture/Normal_mip2.png": "e5a68bda5a40a7b814b97e14be2643f1e764eb7373eb64fc2f6b7d29315815b0",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_shared_2048/bake/texture/ORM_mip2.png": "23a1b73c668a0473152eaf11f00a8405d558b74ab2aad4523327b7239009efda",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_shared_2048/bake/texture/BaseColor_mip3.png": "071122e695ac441da999623c3f77a50915c888126a1940309b28013bbf13e810",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_shared_2048/bake/texture/Normal_mip3.png": "5bfc5c1aab08b73cb5e38c1a23fbf84d901390e8d6e12f6239a4b56e7ebf4327",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_shared_2048/bake/texture/ORM_mip3.png": "373041033697c0da885fbe2f501792587c473ebc5b4cc4d98f062444b1d742cc",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_shared_2048/bake/texture/BaseColor_mip4.png": "5a6129a4229695ecb74999e676db8709ac24c25339089b51f51b338ea1ddc8ac",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_shared_2048/bake/texture/Normal_mip4.png": "a67e29925a3a821f22f6332201eeee16241bed5fdd663fcec8e26da6b30bcd02",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_shared_2048/bake/texture/ORM_mip4.png": "8303d545d21d9790d0d4e44fb96fd6a985057537e6a705cc50b8d53c3a284249",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_shared_2048/bake/texture/BaseColor_mip5.png": "f3901d9e241e54be7a3943677048e870ac128e6f53b7a663fc65433dd4b67f1a",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_shared_2048/bake/texture/Normal_mip5.png": "5a7ae195c088898051a0ae5ca343b2d818199cc17cc623f7ccb190fd2eb3e201",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_shared_2048/bake/texture/ORM_mip5.png": "0b3fdafd2edf0826a8dcc81b08e99d3e37051d3637019815be12f861e708a4ab",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_shared_2048/bake/texture/BaseColor_mip6.png": "a795ab25a4ead60a389e028bf9559be882aab26c2c8902634a9760d25df36415",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_shared_2048/bake/texture/Normal_mip6.png": "a3a0e0eebe29df2295098cf4c9038e654dfc2b6b719c2be873d84473024f656b",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_shared_2048/bake/texture/ORM_mip6.png": "af76b3b8cb1436bb4e87c01d6f9a3c70d44982b9eabfc62da5c9b1d4ba863d01",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_shared_2048/bake/texture/BaseColor_mip7.png": "76c2db082c966f9c3cf8b1d093840371adbae29793921a5239bef8cd3286a693",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_shared_2048/bake/texture/Normal_mip7.png": "dd738e471f230f569c6b063d8d6ca3ea646218a8e709aeddbcf6d30c59514031",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_shared_2048/bake/texture/ORM_mip7.png": "ee5cdb617eb12c6b89070da5e56dfbc442e839cf6f6a239812eb2f33efa340e7",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_shared_2048/bake/texture/BaseColor_mip8.png": "4b957c7908b8a221d038a048e0d5510732f314f7e331885219c2fb425ef61601",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_shared_2048/bake/texture/Normal_mip8.png": "dfedd3950bbdf73015e9252f2394cc0272b8ac2636098733629b7ca269eeebe4",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_shared_2048/bake/texture/ORM_mip8.png": "a6e9199139d51d22a7caea68d6f67899d9c2437d057df9aed741fe330e5853ac",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_shared_2048/bake/texture/BaseColor_mip9.png": "de6e18955e36cf4f4d016ebb55437e7245dea8c79d54ba81667d93d09fa5ea50",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_shared_2048/bake/texture/Normal_mip9.png": "03833158c3cd9d8a2dff86cc3a8828a218f36682b135e076cc4c96293f4bf663",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_shared_2048/bake/texture/ORM_mip9.png": "5778a67d0493a19c46d487bfce7272b71a156cb654c3e7e5c1b10decd46b04b8",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_shared_2048/bake/texture/BaseColor_mip10.png": "833765c42e4631fd281135d9a067a7b2b0a86edd94073f5cee94c669de18ad3f",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_shared_2048/bake/texture/Normal_mip10.png": "1dd2fccd0b99e4367d77b23fb89f0dc8d6c1cefd878c6a82f1eced1dd0bef458",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_shared_2048/bake/texture/ORM_mip10.png": "ea0c7d69640b7547bd700a4ad441a047d8843124f39f5e2f66fb8920ce1eb1c4",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_shared_2048/bake/texture/BaseColor_mip11.png": "47cc792808a7ea3e4e6c593966090a04839833d0a976d1b4668881bd250e7205",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_shared_2048/bake/texture/Normal_mip11.png": "b32b4b3cbb4e976e4260fb45bfd8d3af3d77b63e1edda7392734879e19d1e939",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_shared_2048/bake/texture/ORM_mip11.png": "2ff46ee4b18d1082579736514da2b0a348627aed6dfe8d7f2c4d0eed18ac8dba",
+    "artifacts/tower_uv_comparison/round02/clean_import/import_request.json": "0fa0e55abba3903047082c08c30bafc94dbb8285d0b5ba048c7aca65f85b37f5",
+    "artifacts/tower_uv_comparison/round02/mirror/negative_exhaustive_minimum_clean/mirror_variant.json": "c2f48dcde7be8d780bc9b9b0e3fd913dea0afa0ce0631527ecabc71d716082b6",
+    "artifacts/tower_uv_comparison/round02/report/results.json": "6db780d3dfe3a189f511f84c630ba5140f526e7f1700672343e2f8a03109fefb",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_shared_2048/bake/texture/material_metadata.json": "3618fca6f4e272776f72dc97f6f99c653d9b0e1d8ccdbeaf24acd8b20ec1a305",
+    "src/reseam/agent_tools/pbr_reuse.py": "cc5583d82bcab1018d8a40ae135c829c6a8c4550c64810dd1c011d4760b64266",
+    "artifacts/tower_uv_comparison/round02/report/appearance_review.json": "253490f787587eb585efa067d285fa0d6f494c042f396b36fd6337371f1a1f7c",
+    "scripts/build_tower_pbr_process.py": "ea739e27c91f30686638c6ec873d932d2ba91dc1328f19a9eef2ba1762933acf",
+    "src/reseam/agent_tools/mirror_pbr_reference.py": "bdc3a0207a066279435683f5b504706da5d815b57b9a37d8661311e52565902f",
+    "scripts/agent_pbr_binding.py": "6427d65b484b160e56ecec8bc4f9525cbdd0fb5487916cccf22c351eafa162a6",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_shared_2048/export/asset.glb": "fbd02a1c2bf4d2d51681bb083f62cb316c76653eff65e2b6fce2f5d4cc256ebd",
+    "artifacts/tower_uv_comparison/round02/source_original_preview/material-front_right-soft-1.png": "2a529e10f108fbfa02b8079e6f8a9018827207fa7229a0bf036686942b0e2f0f",
+    "docs/assets/tower-pbr-process/round01/maps/source/BaseColor.jpg": "d4c34d9a80de631d72cb1e4f617396d697cf843cba84ac72d575aeb60cb6a48f",
+    "docs/assets/tower-pbr-process/round01/maps/source/Normal.png": "0f0d59db09e52cb96c4a43d14e7169fa42c294b86c64bc98ef913d970a36665e",
+    "artifacts/tower_uv_comparison/round02/evaluation/source_uv_2048/preview/material-front_right-soft-1.png": "3c413e3603e4caf4ef40554e1f6d0e8cbe1e5c8557b5f98c45fa71b30cd00f8c",
+    "docs/assets/tower-pbr-process/round01/maps/source_uv/BaseColor.png": "451736b61241732ee80ac3e84fc94c9b3b848f99529f9aaf24d602d51104bf93",
+    "docs/assets/tower-pbr-process/round01/maps/source_uv/Normal.png": "a54d6d3582746b4cc6317dfb455a05200da1325150c121629c019a0cda15aefb",
+    "docs/assets/tower-pbr-process/round01/maps/source_uv/Roughness.png": "55fe09a85d2ba2e18f21854776cadca7ccebbcdd4faf343be267e544635b03d4",
+    "docs/assets/tower-pbr-process/round01/maps/source_uv/Metallic.png": "47409785b30cc38f1ec62f219ce1c46f885427442416c0768dc470497ef784cb",
+    "docs/assets/tower-pbr-process/round01/maps/source_uv/AO.png": "7368a2762f0210ba889788e2c23314e77fc184beecf5c6b5ffbe8279ed4f308a",
+    "docs/assets/tower-pbr-process/round01/maps/source_uv/ORM.png": "a030670313f821aed6ea0445b7131eab36fd903569ce7b08553d0b7266fcdaad",
+    "artifacts/tower_uv_comparison/round02/evaluation/flatten_anything_2048/uv_views/uv.png": "bfa8cd56341807347b94266911c5f469d36fd5bf27e35c7367b53e5a5de74e05",
+    "artifacts/tower_uv_comparison/round02/evaluation/xatlas_2048/preview/material-front_right-soft-1.png": "8ae03792c0bac3a99210e4bf5de31909f00c56860c5ead713096a56fff0727c4",
+    "docs/assets/tower-pbr-process/round01/maps/xatlas/BaseColor.png": "89edb43d04f13257980880fb1cbb795f6f4654b5dcf708fd85316b7f014a51a9",
+    "docs/assets/tower-pbr-process/round01/maps/xatlas/Normal.png": "95567321984386f4e822c096c0ed8e5a7d8d660ff7383b681f6b98474f72d287",
+    "docs/assets/tower-pbr-process/round01/maps/xatlas/Roughness.png": "9814bc957a7b7999b389fdd5376c42501731c43bdcda52724e214b6749a5ac22",
+    "docs/assets/tower-pbr-process/round01/maps/xatlas/Metallic.png": "47409785b30cc38f1ec62f219ce1c46f885427442416c0768dc470497ef784cb",
+    "docs/assets/tower-pbr-process/round01/maps/xatlas/AO.png": "7368a2762f0210ba889788e2c23314e77fc184beecf5c6b5ffbe8279ed4f308a",
+    "docs/assets/tower-pbr-process/round01/maps/xatlas/ORM.png": "5670eaf316f0ad11f56a9091e92c7859ddf3acb1f7dbd842661bea15ce073ae7",
+    "artifacts/tower_uv_comparison/round02/evaluation/blender_smart_2048/preview/material-front_right-soft-1.png": "979af0c499d661ea51de380bcfa51bf651a95bcd592df50a1e39c7aaa833b3cd",
+    "docs/assets/tower-pbr-process/round01/maps/blender_smart/BaseColor.png": "f2883d16951a870b3b5bee74b3244e769844ca33962f54640925cda9eab8d008",
+    "docs/assets/tower-pbr-process/round01/maps/blender_smart/Normal.png": "f273ae72bc7ae51ede58d29d4ee675403ae9f2e07ae99d53bf2d4db8dbacdd5e",
+    "docs/assets/tower-pbr-process/round01/maps/blender_smart/Roughness.png": "10d387e20809bcaad5a5e14003dda45b0a0b7b47fc6b86c4c30d34570b7efd58",
+    "docs/assets/tower-pbr-process/round01/maps/blender_smart/Metallic.png": "47409785b30cc38f1ec62f219ce1c46f885427442416c0768dc470497ef784cb",
+    "docs/assets/tower-pbr-process/round01/maps/blender_smart/AO.png": "7368a2762f0210ba889788e2c23314e77fc184beecf5c6b5ffbe8279ed4f308a",
+    "docs/assets/tower-pbr-process/round01/maps/blender_smart/ORM.png": "9db9362c094a0021a3dfb4144a13506199aef50c66660ad19df304e72b0cb050",
+    "artifacts/tower_uv_comparison/round02/evaluation/partuv_2048/preview/material-front_right-soft-1.png": "2d390543ba2d21bdcf3ba25602018e7587f6378869f21d2ee62647f5b411a05d",
+    "docs/assets/tower-pbr-process/round01/maps/partuv/BaseColor.png": "57154166c3d96bd755922b14879d70688e2be0e9b274329d0a3071b20390cc9b",
+    "docs/assets/tower-pbr-process/round01/maps/partuv/Normal.png": "58698175c46736324c475d38e0151ee51f039cb9c5a773ff0d07b8642ea7d690",
+    "docs/assets/tower-pbr-process/round01/maps/partuv/Roughness.png": "2b41f502658fb95023913dbbd1d2187bc69dfa615b249836fa2f44471e511a14",
+    "docs/assets/tower-pbr-process/round01/maps/partuv/Metallic.png": "47409785b30cc38f1ec62f219ce1c46f885427442416c0768dc470497ef784cb",
+    "docs/assets/tower-pbr-process/round01/maps/partuv/AO.png": "7368a2762f0210ba889788e2c23314e77fc184beecf5c6b5ffbe8279ed4f308a",
+    "docs/assets/tower-pbr-process/round01/maps/partuv/ORM.png": "0270648851312679288e274e98bb6c397ef685b0be068e63ef326b8cc3ed5262",
+    "artifacts/tower_uv_comparison/round02/evaluation/meshquery_repaired_2048/preview/material-front_right-soft-1.png": "f8807f2a9998a8907000878b8b073f8c74a311b4cd2f9bb174f3425c74d92167",
+    "docs/assets/tower-pbr-process/round01/maps/meshquery_project/BaseColor.png": "c8721b9774a12a38588fd73ce51ef15fd453a5df95d4060be874ab35b714a67a",
+    "docs/assets/tower-pbr-process/round01/maps/meshquery_project/Normal.png": "fe519482c8b750133278844c7744950dc8318d39b776c766da13361293eb1d63",
+    "docs/assets/tower-pbr-process/round01/maps/meshquery_project/Roughness.png": "aebcf10692c72f94e176db789a54413899f7d80bdaf2ce1c8e8a3ee765db1adf",
+    "docs/assets/tower-pbr-process/round01/maps/meshquery_project/Metallic.png": "47409785b30cc38f1ec62f219ce1c46f885427442416c0768dc470497ef784cb",
+    "docs/assets/tower-pbr-process/round01/maps/meshquery_project/AO.png": "7368a2762f0210ba889788e2c23314e77fc184beecf5c6b5ffbe8279ed4f308a",
+    "docs/assets/tower-pbr-process/round01/maps/meshquery_project/ORM.png": "1bd1c24b4e0b0ecdf0fce46884468208b6cd4606a4ffcc89b1d917e95ff13075",
+    "artifacts/tower_uv_comparison/round02/evaluation/reseam_unshared_2048/preview/material-front_right-soft-1.png": "3d0d773fcbb032df0f2825e1144ffb9c258d6dde6bdf3ee4d10dffb4579f3dae",
+    "docs/assets/tower-pbr-process/round01/maps/reseam_unshared/BaseColor.png": "c8721b9774a12a38588fd73ce51ef15fd453a5df95d4060be874ab35b714a67a",
+    "docs/assets/tower-pbr-process/round01/maps/reseam_unshared/Normal.png": "fe519482c8b750133278844c7744950dc8318d39b776c766da13361293eb1d63",
+    "docs/assets/tower-pbr-process/round01/maps/reseam_unshared/Roughness.png": "aebcf10692c72f94e176db789a54413899f7d80bdaf2ce1c8e8a3ee765db1adf",
+    "docs/assets/tower-pbr-process/round01/maps/reseam_unshared/Metallic.png": "47409785b30cc38f1ec62f219ce1c46f885427442416c0768dc470497ef784cb",
+    "docs/assets/tower-pbr-process/round01/maps/reseam_unshared/AO.png": "7368a2762f0210ba889788e2c23314e77fc184beecf5c6b5ffbe8279ed4f308a",
+    "docs/assets/tower-pbr-process/round01/maps/reseam_unshared/ORM.png": "1bd1c24b4e0b0ecdf0fce46884468208b6cd4606a4ffcc89b1d917e95ff13075",
+    "artifacts/tower_uv_comparison/round02/evaluation/reseam_shared_boundary_2048/preview/material-front_right-soft-1.png": "03adae03bf313fdee52bf9794bfd50458ab023bc33b8a82e0396c206f3468c1e",
+    "docs/assets/tower-pbr-process/round01/maps/reseam_shared/BaseColor.png": "287c6cf117aeb29135afb8067feb6c32db628efc75d74891346581b7a1f63be1",
+    "docs/assets/tower-pbr-process/round01/maps/reseam_shared/Normal.png": "f674b10541acd455ff1af5255781ff385603484459d332d999e70ff95729180f",
+    "docs/assets/tower-pbr-process/round01/maps/reseam_shared/Roughness.png": "02a1ab98481331affeda01e56ebd1ea3c3cda43ce1f566a01591846e8d6d6277",
+    "docs/assets/tower-pbr-process/round01/maps/reseam_shared/Metallic.png": "47409785b30cc38f1ec62f219ce1c46f885427442416c0768dc470497ef784cb",
+    "docs/assets/tower-pbr-process/round01/maps/reseam_shared/AO.png": "7368a2762f0210ba889788e2c23314e77fc184beecf5c6b5ffbe8279ed4f308a",
+    "docs/assets/tower-pbr-process/round01/maps/reseam_shared/ORM.png": "d3d135fb2e60877d4fc6a2c60783a86de0515fcb8ed12605f70eabb53f18be6e",
+    "artifacts/tower_uv_comparison/round02/evaluation/reseam_optimized_2048/preview/material-front_right-soft-1.png": "9daa198c851b54883189d5287f3eb3baa43b07fd370b081767bea177b024802d",
+    "docs/assets/tower-pbr-process/round01/maps/reseam_optimized/BaseColor.png": "0d0aa1c7b2e2abddc986c504c562c8979656e84fb38f9cf84c2cd1aa91bb6c90",
+    "docs/assets/tower-pbr-process/round01/maps/reseam_optimized/Normal.png": "af2adda4b16b1a9e465440791ba21f008651fd34b9b7f2d48514cd415fef3ccc",
+    "docs/assets/tower-pbr-process/round01/maps/reseam_optimized/Roughness.png": "7349f2255e97b7ebed885ba7c6c4b77b096a75f915b34542000bd1f39b0c3ba4",
+    "docs/assets/tower-pbr-process/round01/maps/reseam_optimized/Metallic.png": "47409785b30cc38f1ec62f219ce1c46f885427442416c0768dc470497ef784cb",
+    "docs/assets/tower-pbr-process/round01/maps/reseam_optimized/AO.png": "7368a2762f0210ba889788e2c23314e77fc184beecf5c6b5ffbe8279ed4f308a",
+    "docs/assets/tower-pbr-process/round01/maps/reseam_optimized/ORM.png": "9b6020674325d0cfa4af8a4b029ecb2e85cc82663c5a5c7a4692e3c1621b3896",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_unshared_2048/preview/material-front_right-soft-1.png": "dfe5900576cdf24736289fa7f8f951f6c9673b54931962730d0ea1706bddffe5",
+    "docs/assets/tower-pbr-process/round01/maps/mirror_negative_unshared/BaseColor.png": "5e61d74275cf6986de87c38b78f891fbe7db905c7aae28cbcf6ee6ef437c2f2c",
+    "docs/assets/tower-pbr-process/round01/maps/mirror_negative_unshared/Normal.png": "3b59c24dca02ff55790cb1d16b290e3efc99c8e2aada4b53d48b3b792c7b9ba2",
+    "docs/assets/tower-pbr-process/round01/maps/mirror_negative_unshared/Roughness.png": "4fd7608b45a4b3c0780a0f532782ce8eeb23dcd67d3f91d7a1d8277f74553a11",
+    "docs/assets/tower-pbr-process/round01/maps/mirror_negative_unshared/Metallic.png": "47409785b30cc38f1ec62f219ce1c46f885427442416c0768dc470497ef784cb",
+    "docs/assets/tower-pbr-process/round01/maps/mirror_negative_unshared/AO.png": "7368a2762f0210ba889788e2c23314e77fc184beecf5c6b5ffbe8279ed4f308a",
+    "docs/assets/tower-pbr-process/round01/maps/mirror_negative_unshared/ORM.png": "877cf1bbb43b31f2c2ebe347ca3fcacc4cb9a4b9234740452a3ff6244eb42762",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_shared_2048/preview/material-front_right-soft-1.png": "2de2d2cb71970f86f7d49204699327b48693a3e5a4cc09655e0acbe0ebc91ffd",
+    "docs/assets/tower-pbr-process/round01/maps/mirror_negative_shared/BaseColor.png": "8845655a2d1981384d10d9195580c3bca85cb5014b0e64f4f8a4f05cd0285e97",
+    "docs/assets/tower-pbr-process/round01/maps/mirror_negative_shared/Normal.png": "b2eef846d2bbfb6532ee46b6f6b3fdf8afc40466407bf3ece63c2101c53143e2",
+    "docs/assets/tower-pbr-process/round01/maps/mirror_negative_shared/Roughness.png": "3d1e30edad8e785cc804cbe73e10eccdc3b94fb16c749ca34c26e9b7e5759b95",
+    "docs/assets/tower-pbr-process/round01/maps/mirror_negative_shared/Metallic.png": "47409785b30cc38f1ec62f219ce1c46f885427442416c0768dc470497ef784cb",
+    "docs/assets/tower-pbr-process/round01/maps/mirror_negative_shared/AO.png": "7368a2762f0210ba889788e2c23314e77fc184beecf5c6b5ffbe8279ed4f308a",
+    "docs/assets/tower-pbr-process/round01/maps/mirror_negative_shared/ORM.png": "a2aa1276d9b3cbdf9eac536276ffc07f874fbc1080f16952562a7146f2c0fa5b",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_optimized_minimum_shared_2048/preview/material-front_right-soft-1.png": "d5689af4a28d63d39c1f660691ad1f01d71ba131f7448e215ee44dd53d46f735",
+    "docs/assets/tower-pbr-process/round01/maps/mirror_negative_optimized_minimum_shared/BaseColor.png": "1e4a6b5efac832b5450c74122507b7aac2caba02e9493dd4971439808661f74f",
+    "docs/assets/tower-pbr-process/round01/maps/mirror_negative_optimized_minimum_shared/Normal.png": "bfc3469a3542c185e5c91a4d0cf35ac3860b5300a3a55dc52287d476128e9ca9",
+    "docs/assets/tower-pbr-process/round01/maps/mirror_negative_optimized_minimum_shared/Roughness.png": "669759c545e2be8f726da9110639353fc4f56412c64d8c4e7a4a91d6ce9167b1",
+    "docs/assets/tower-pbr-process/round01/maps/mirror_negative_optimized_minimum_shared/Metallic.png": "47409785b30cc38f1ec62f219ce1c46f885427442416c0768dc470497ef784cb",
+    "docs/assets/tower-pbr-process/round01/maps/mirror_negative_optimized_minimum_shared/AO.png": "7368a2762f0210ba889788e2c23314e77fc184beecf5c6b5ffbe8279ed4f308a",
+    "docs/assets/tower-pbr-process/round01/maps/mirror_negative_optimized_minimum_shared/ORM.png": "c1e4c95da9ea6a63c0bff1a62a37f98300ce8a8aa34f5aeca9e176ad6e004d3b",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_optimized_minimum_unshared_2048/preview/material-front_right-soft-1.png": "82ad15a2d217e429ef608e6283b469f368d9f1089d78f952045e79aac305fb59",
+    "docs/assets/tower-pbr-process/round01/maps/mirror_negative_optimized_minimum_unshared/BaseColor.png": "f39104bb5b018176beafe59886cd4803987819735efdd93aceb915206588bc58",
+    "docs/assets/tower-pbr-process/round01/maps/mirror_negative_optimized_minimum_unshared/Normal.png": "b65292e7243e00d0fb69b993d3c314fef33334bbf082813c046c0ce417a88d50",
+    "docs/assets/tower-pbr-process/round01/maps/mirror_negative_optimized_minimum_unshared/Roughness.png": "8fe9964617d8d6605017191724c99d3989f04303ba6930a2b041fa9ead1b11d6",
+    "docs/assets/tower-pbr-process/round01/maps/mirror_negative_optimized_minimum_unshared/Metallic.png": "47409785b30cc38f1ec62f219ce1c46f885427442416c0768dc470497ef784cb",
+    "docs/assets/tower-pbr-process/round01/maps/mirror_negative_optimized_minimum_unshared/AO.png": "7368a2762f0210ba889788e2c23314e77fc184beecf5c6b5ffbe8279ed4f308a",
+    "docs/assets/tower-pbr-process/round01/maps/mirror_negative_optimized_minimum_unshared/ORM.png": "0f7abf6d31193bb2670559f48c6855ea14b88d12f4d3d848c30d7aceed5cb88b",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_aggressive_minimum_shared_2048/preview/material-front_right-soft-1.png": "c4a7c09fa188e03d738a68efc85d1e8c38c169d2874415585e6c85345a628cb9",
+    "docs/assets/tower-pbr-process/round01/maps/mirror_negative_aggressive_minimum_shared/BaseColor.png": "cf0eebb6b690289f0d7b5b7d101c9eaf0f520f5233a63efd32037791400b0f45",
+    "docs/assets/tower-pbr-process/round01/maps/mirror_negative_aggressive_minimum_shared/Normal.png": "5010f21ec8ba16c615b6c42284d15cb0b53703b83677bdeb3e038e1ab8d7d40c",
+    "docs/assets/tower-pbr-process/round01/maps/mirror_negative_aggressive_minimum_shared/Roughness.png": "488411eaa7e6df39615115cd062e776df19b711d91505eef33c9b16a7d8d65a3",
+    "docs/assets/tower-pbr-process/round01/maps/mirror_negative_aggressive_minimum_shared/Metallic.png": "47409785b30cc38f1ec62f219ce1c46f885427442416c0768dc470497ef784cb",
+    "docs/assets/tower-pbr-process/round01/maps/mirror_negative_aggressive_minimum_shared/AO.png": "7368a2762f0210ba889788e2c23314e77fc184beecf5c6b5ffbe8279ed4f308a",
+    "docs/assets/tower-pbr-process/round01/maps/mirror_negative_aggressive_minimum_shared/ORM.png": "2399ed3373b5d2a01353f5c51e8bd0d510edf611171b1ecc36fc1f74678160f5",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_aggressive_minimum_unshared_2048/preview/material-front_right-soft-1.png": "1dbe1f905c0e09d8d8fcb2f804b257678c6444da2fe538f74aa058150808f60f",
+    "docs/assets/tower-pbr-process/round01/maps/mirror_negative_aggressive_minimum_unshared/BaseColor.png": "fd42c45ed38d9fef8ed004c25ff8768dda874e942e8a48ad54c325b4b09c50ac",
+    "docs/assets/tower-pbr-process/round01/maps/mirror_negative_aggressive_minimum_unshared/Normal.png": "3dc5a9d3e1977d416fe869a6779a0d916e66e36d7a2f9ff5aae8dc6389acf010",
+    "docs/assets/tower-pbr-process/round01/maps/mirror_negative_aggressive_minimum_unshared/Roughness.png": "2c6f58a15c9cebfb223be7f378f5e0b1d61d329651309bc6a270cc1e958a270c",
+    "docs/assets/tower-pbr-process/round01/maps/mirror_negative_aggressive_minimum_unshared/Metallic.png": "47409785b30cc38f1ec62f219ce1c46f885427442416c0768dc470497ef784cb",
+    "docs/assets/tower-pbr-process/round01/maps/mirror_negative_aggressive_minimum_unshared/AO.png": "7368a2762f0210ba889788e2c23314e77fc184beecf5c6b5ffbe8279ed4f308a",
+    "docs/assets/tower-pbr-process/round01/maps/mirror_negative_aggressive_minimum_unshared/ORM.png": "b1933927044a021c1e42bb1c63e076c737f347dbf41eb240b0824fa43317f033",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_unshared_2048/preview/material-front_right-soft-1.png": "da8761959ff8c5b2f31fd7b412a9c281acfc731c30af53fd635c3b7747882616",
+    "docs/assets/tower-pbr-process/round01/maps/mirror_negative_exhaustive_minimum_unshared/BaseColor.png": "4626414768af35b6aa3aee99580c1b6443e167626af03e74ed91da3894e5e1d5",
+    "docs/assets/tower-pbr-process/round01/maps/mirror_negative_exhaustive_minimum_unshared/Normal.png": "85a0b83a9e27acf0aea8838ec88326458d918931edc30a54ac34554123183997",
+    "docs/assets/tower-pbr-process/round01/maps/mirror_negative_exhaustive_minimum_unshared/Roughness.png": "34d8f2dfd412c239ddd4f0d7f88fbb01c8c4543951f427a0f21adb673d27f36d",
+    "docs/assets/tower-pbr-process/round01/maps/mirror_negative_exhaustive_minimum_unshared/Metallic.png": "47409785b30cc38f1ec62f219ce1c46f885427442416c0768dc470497ef784cb",
+    "docs/assets/tower-pbr-process/round01/maps/mirror_negative_exhaustive_minimum_unshared/AO.png": "7368a2762f0210ba889788e2c23314e77fc184beecf5c6b5ffbe8279ed4f308a",
+    "docs/assets/tower-pbr-process/round01/maps/mirror_negative_exhaustive_minimum_unshared/ORM.png": "ed341dc7d54789e60cabbdb8423b73c20e52c7ef04746584de05103318800450",
+    "artifacts/tower_uv_comparison/round02/evaluation/reseam_shared_boundary_control_2048/preview/material-front_right-soft-1.png": "49368248cc7f49ffde025aa5d42e1da57448c1f15b2c7b668616486398e96f54",
+    "docs/assets/tower-pbr-process/round01/maps/reseam_shared_boundary_control/BaseColor.png": "96688e4696672318262639c52bfd933e7a5ceb648fddca46a59b5fc897eca7ee",
+    "docs/assets/tower-pbr-process/round01/maps/reseam_shared_boundary_control/Normal.png": "0503bd38ffbb6b01faf641cd28925c029286fc023655d3c763764d244196db7a",
+    "docs/assets/tower-pbr-process/round01/maps/reseam_shared_boundary_control/Roughness.png": "8b5c2dbb86c3bd3cbe0b106b34c172f7116c6e862c742d02d652eee4f2ffb6ad",
+    "docs/assets/tower-pbr-process/round01/maps/reseam_shared_boundary_control/Metallic.png": "47409785b30cc38f1ec62f219ce1c46f885427442416c0768dc470497ef784cb",
+    "docs/assets/tower-pbr-process/round01/maps/reseam_shared_boundary_control/AO.png": "7368a2762f0210ba889788e2c23314e77fc184beecf5c6b5ffbe8279ed4f308a",
+    "docs/assets/tower-pbr-process/round01/maps/reseam_shared_boundary_control/ORM.png": "f3710eecdb167c011aa409a9983ca5eec771c8053efdbb0eb9ed83d8483b884f",
+    "artifacts/tower_uv_comparison/round02/evaluation/reseam_shared_repaired_2048/preview/material-front_right-soft-1.png": "63a6c80ab6387890c64a9b542dc8db6970fab2eaea63cb3ce77844d18ddebbc0",
+    "docs/assets/tower-pbr-process/round01/maps/reseam_shared_repaired/BaseColor.png": "35de5de7cb0dc670636f626f9ccb2053a5aa28ca7930e45942fa16db8c686070",
+    "docs/assets/tower-pbr-process/round01/maps/reseam_shared_repaired/Normal.png": "3ceb4ab1d326181f751b55769e5759ca6388a563fabe59ae99e1c95c0478d786",
+    "docs/assets/tower-pbr-process/round01/maps/reseam_shared_repaired/Roughness.png": "5ae80c70194c8081656a4f2c30d880b63adf77b79bbea62c80c242052a0d1316",
+    "docs/assets/tower-pbr-process/round01/maps/reseam_shared_repaired/Metallic.png": "47409785b30cc38f1ec62f219ce1c46f885427442416c0768dc470497ef784cb",
+    "docs/assets/tower-pbr-process/round01/maps/reseam_shared_repaired/AO.png": "7368a2762f0210ba889788e2c23314e77fc184beecf5c6b5ffbe8279ed4f308a",
+    "docs/assets/tower-pbr-process/round01/maps/reseam_shared_repaired/ORM.png": "d5a8a46c1962bc9160632e1cd12bce7517f4de6476a1925cd3ab11bbd532800a",
+    "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_shared_2048/preview/material-front_right-soft-1.png": "ee3309ec480a5f21f9572b48136508ec3f59d4c97ca13fb701f1c01ef9bf465e",
+    "docs/assets/tower-pbr-process/round01/maps/mirror_negative_exhaustive_minimum_shared/BaseColor.png": "1528871e12843cd0c00baf5af44860edcd6132c71ee90ac6f0cbe747a561e630",
+    "docs/assets/tower-pbr-process/round01/maps/mirror_negative_exhaustive_minimum_shared/Normal.png": "535823131c06ddded93234eb35a14fe65f45470a47443fc10721426047c955a4",
+    "docs/assets/tower-pbr-process/round01/maps/mirror_negative_exhaustive_minimum_shared/Roughness.png": "3d753dee221577f8619d41b51c38d2d27ae3fe03074adc5f9828344decf41d4d",
+    "docs/assets/tower-pbr-process/round01/maps/mirror_negative_exhaustive_minimum_shared/Metallic.png": "47409785b30cc38f1ec62f219ce1c46f885427442416c0768dc470497ef784cb",
+    "docs/assets/tower-pbr-process/round01/maps/mirror_negative_exhaustive_minimum_shared/AO.png": "7368a2762f0210ba889788e2c23314e77fc184beecf5c6b5ffbe8279ed4f308a",
+    "docs/assets/tower-pbr-process/round01/maps/mirror_negative_exhaustive_minimum_shared/ORM.png": "fc8b103db1ad11d9389673d4e158c104cbbd2e793f15b31f898cd023aa4e1a9a"
+  },
+  "maps": [
+    {
+      "method": "source",
+      "channel": "BaseColor",
+      "mip": 0,
+      "path": "maps/source/BaseColor.jpg",
+      "size": [
+        8192,
+        8192
+      ],
+      "sha256": "d4c34d9a80de631d72cb1e4f617396d697cf843cba84ac72d575aeb60cb6a48f",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round01\\inputs\\source\\fantasy_cross_statue_3d_model.fbm\\fantasy_cross_statue_3d_model_basecolor.jpg",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "source",
+      "channel": "Normal",
+      "mip": 0,
+      "path": "maps/source/Normal.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "0f0d59db09e52cb96c4a43d14e7169fa42c294b86c64bc98ef913d970a36665e",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round01\\inputs\\source\\fantasy_cross_statue_3d_model.fbm\\fantasy_cross_statue_3d_model_normal.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "source_uv",
+      "channel": "BaseColor",
+      "mip": 0,
+      "path": "maps/source_uv/BaseColor.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "451736b61241732ee80ac3e84fc94c9b3b848f99529f9aaf24d602d51104bf93",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\source_uv_2048\\bake\\texture\\BaseColor_mip0.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "source_uv",
+      "channel": "Normal",
+      "mip": 0,
+      "path": "maps/source_uv/Normal.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "a54d6d3582746b4cc6317dfb455a05200da1325150c121629c019a0cda15aefb",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\source_uv_2048\\bake\\texture\\Normal_mip0.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "source_uv",
+      "channel": "ORM",
+      "mip": 0,
+      "path": "maps/source_uv/ORM.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "a030670313f821aed6ea0445b7131eab36fd903569ce7b08553d0b7266fcdaad",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\source_uv_2048\\bake\\texture\\ORM_mip0.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "source_uv",
+      "channel": "AO",
+      "mip": 0,
+      "path": "maps/source_uv/AO.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "7368a2762f0210ba889788e2c23314e77fc184beecf5c6b5ffbe8279ed4f308a",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\source_uv_2048\\bake\\texture\\ORM_mip0.png",
+      "operation": "exact 8-bit channel 0 extraction from ORM"
+    },
+    {
+      "method": "source_uv",
+      "channel": "Roughness",
+      "mip": 0,
+      "path": "maps/source_uv/Roughness.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "55fe09a85d2ba2e18f21854776cadca7ccebbcdd4faf343be267e544635b03d4",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\source_uv_2048\\bake\\texture\\ORM_mip0.png",
+      "operation": "exact 8-bit channel 1 extraction from ORM"
+    },
+    {
+      "method": "source_uv",
+      "channel": "Metallic",
+      "mip": 0,
+      "path": "maps/source_uv/Metallic.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "47409785b30cc38f1ec62f219ce1c46f885427442416c0768dc470497ef784cb",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\source_uv_2048\\bake\\texture\\ORM_mip0.png",
+      "operation": "exact 8-bit channel 2 extraction from ORM"
+    },
+    {
+      "method": "xatlas",
+      "channel": "BaseColor",
+      "mip": 0,
+      "path": "maps/xatlas/BaseColor.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "89edb43d04f13257980880fb1cbb795f6f4654b5dcf708fd85316b7f014a51a9",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\xatlas_2048\\bake\\texture\\BaseColor_mip0.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "xatlas",
+      "channel": "Normal",
+      "mip": 0,
+      "path": "maps/xatlas/Normal.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "95567321984386f4e822c096c0ed8e5a7d8d660ff7383b681f6b98474f72d287",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\xatlas_2048\\bake\\texture\\Normal_mip0.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "xatlas",
+      "channel": "ORM",
+      "mip": 0,
+      "path": "maps/xatlas/ORM.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "5670eaf316f0ad11f56a9091e92c7859ddf3acb1f7dbd842661bea15ce073ae7",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\xatlas_2048\\bake\\texture\\ORM_mip0.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "xatlas",
+      "channel": "AO",
+      "mip": 0,
+      "path": "maps/xatlas/AO.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "7368a2762f0210ba889788e2c23314e77fc184beecf5c6b5ffbe8279ed4f308a",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\xatlas_2048\\bake\\texture\\ORM_mip0.png",
+      "operation": "exact 8-bit channel 0 extraction from ORM"
+    },
+    {
+      "method": "xatlas",
+      "channel": "Roughness",
+      "mip": 0,
+      "path": "maps/xatlas/Roughness.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "9814bc957a7b7999b389fdd5376c42501731c43bdcda52724e214b6749a5ac22",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\xatlas_2048\\bake\\texture\\ORM_mip0.png",
+      "operation": "exact 8-bit channel 1 extraction from ORM"
+    },
+    {
+      "method": "xatlas",
+      "channel": "Metallic",
+      "mip": 0,
+      "path": "maps/xatlas/Metallic.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "47409785b30cc38f1ec62f219ce1c46f885427442416c0768dc470497ef784cb",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\xatlas_2048\\bake\\texture\\ORM_mip0.png",
+      "operation": "exact 8-bit channel 2 extraction from ORM"
+    },
+    {
+      "method": "blender_smart",
+      "channel": "BaseColor",
+      "mip": 0,
+      "path": "maps/blender_smart/BaseColor.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "f2883d16951a870b3b5bee74b3244e769844ca33962f54640925cda9eab8d008",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\blender_smart_2048\\bake\\texture\\BaseColor_mip0.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "blender_smart",
+      "channel": "Normal",
+      "mip": 0,
+      "path": "maps/blender_smart/Normal.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "f273ae72bc7ae51ede58d29d4ee675403ae9f2e07ae99d53bf2d4db8dbacdd5e",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\blender_smart_2048\\bake\\texture\\Normal_mip0.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "blender_smart",
+      "channel": "ORM",
+      "mip": 0,
+      "path": "maps/blender_smart/ORM.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "9db9362c094a0021a3dfb4144a13506199aef50c66660ad19df304e72b0cb050",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\blender_smart_2048\\bake\\texture\\ORM_mip0.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "blender_smart",
+      "channel": "AO",
+      "mip": 0,
+      "path": "maps/blender_smart/AO.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "7368a2762f0210ba889788e2c23314e77fc184beecf5c6b5ffbe8279ed4f308a",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\blender_smart_2048\\bake\\texture\\ORM_mip0.png",
+      "operation": "exact 8-bit channel 0 extraction from ORM"
+    },
+    {
+      "method": "blender_smart",
+      "channel": "Roughness",
+      "mip": 0,
+      "path": "maps/blender_smart/Roughness.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "10d387e20809bcaad5a5e14003dda45b0a0b7b47fc6b86c4c30d34570b7efd58",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\blender_smart_2048\\bake\\texture\\ORM_mip0.png",
+      "operation": "exact 8-bit channel 1 extraction from ORM"
+    },
+    {
+      "method": "blender_smart",
+      "channel": "Metallic",
+      "mip": 0,
+      "path": "maps/blender_smart/Metallic.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "47409785b30cc38f1ec62f219ce1c46f885427442416c0768dc470497ef784cb",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\blender_smart_2048\\bake\\texture\\ORM_mip0.png",
+      "operation": "exact 8-bit channel 2 extraction from ORM"
+    },
+    {
+      "method": "partuv",
+      "channel": "BaseColor",
+      "mip": 0,
+      "path": "maps/partuv/BaseColor.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "57154166c3d96bd755922b14879d70688e2be0e9b274329d0a3071b20390cc9b",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\partuv_2048\\bake\\texture\\BaseColor_mip0.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "partuv",
+      "channel": "Normal",
+      "mip": 0,
+      "path": "maps/partuv/Normal.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "58698175c46736324c475d38e0151ee51f039cb9c5a773ff0d07b8642ea7d690",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\partuv_2048\\bake\\texture\\Normal_mip0.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "partuv",
+      "channel": "ORM",
+      "mip": 0,
+      "path": "maps/partuv/ORM.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "0270648851312679288e274e98bb6c397ef685b0be068e63ef326b8cc3ed5262",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\partuv_2048\\bake\\texture\\ORM_mip0.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "partuv",
+      "channel": "AO",
+      "mip": 0,
+      "path": "maps/partuv/AO.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "7368a2762f0210ba889788e2c23314e77fc184beecf5c6b5ffbe8279ed4f308a",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\partuv_2048\\bake\\texture\\ORM_mip0.png",
+      "operation": "exact 8-bit channel 0 extraction from ORM"
+    },
+    {
+      "method": "partuv",
+      "channel": "Roughness",
+      "mip": 0,
+      "path": "maps/partuv/Roughness.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "2b41f502658fb95023913dbbd1d2187bc69dfa615b249836fa2f44471e511a14",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\partuv_2048\\bake\\texture\\ORM_mip0.png",
+      "operation": "exact 8-bit channel 1 extraction from ORM"
+    },
+    {
+      "method": "partuv",
+      "channel": "Metallic",
+      "mip": 0,
+      "path": "maps/partuv/Metallic.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "47409785b30cc38f1ec62f219ce1c46f885427442416c0768dc470497ef784cb",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\partuv_2048\\bake\\texture\\ORM_mip0.png",
+      "operation": "exact 8-bit channel 2 extraction from ORM"
+    },
+    {
+      "method": "meshquery_project",
+      "channel": "BaseColor",
+      "mip": 0,
+      "path": "maps/meshquery_project/BaseColor.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "c8721b9774a12a38588fd73ce51ef15fd453a5df95d4060be874ab35b714a67a",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\meshquery_repaired_2048\\bake\\texture\\BaseColor_mip0.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "meshquery_project",
+      "channel": "Normal",
+      "mip": 0,
+      "path": "maps/meshquery_project/Normal.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "fe519482c8b750133278844c7744950dc8318d39b776c766da13361293eb1d63",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\meshquery_repaired_2048\\bake\\texture\\Normal_mip0.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "meshquery_project",
+      "channel": "ORM",
+      "mip": 0,
+      "path": "maps/meshquery_project/ORM.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "1bd1c24b4e0b0ecdf0fce46884468208b6cd4606a4ffcc89b1d917e95ff13075",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\meshquery_repaired_2048\\bake\\texture\\ORM_mip0.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "meshquery_project",
+      "channel": "AO",
+      "mip": 0,
+      "path": "maps/meshquery_project/AO.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "7368a2762f0210ba889788e2c23314e77fc184beecf5c6b5ffbe8279ed4f308a",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\meshquery_repaired_2048\\bake\\texture\\ORM_mip0.png",
+      "operation": "exact 8-bit channel 0 extraction from ORM"
+    },
+    {
+      "method": "meshquery_project",
+      "channel": "Roughness",
+      "mip": 0,
+      "path": "maps/meshquery_project/Roughness.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "aebcf10692c72f94e176db789a54413899f7d80bdaf2ce1c8e8a3ee765db1adf",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\meshquery_repaired_2048\\bake\\texture\\ORM_mip0.png",
+      "operation": "exact 8-bit channel 1 extraction from ORM"
+    },
+    {
+      "method": "meshquery_project",
+      "channel": "Metallic",
+      "mip": 0,
+      "path": "maps/meshquery_project/Metallic.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "47409785b30cc38f1ec62f219ce1c46f885427442416c0768dc470497ef784cb",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\meshquery_repaired_2048\\bake\\texture\\ORM_mip0.png",
+      "operation": "exact 8-bit channel 2 extraction from ORM"
+    },
+    {
+      "method": "reseam_unshared",
+      "channel": "BaseColor",
+      "mip": 0,
+      "path": "maps/reseam_unshared/BaseColor.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "c8721b9774a12a38588fd73ce51ef15fd453a5df95d4060be874ab35b714a67a",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_unshared_2048\\bake\\texture\\BaseColor_mip0.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "reseam_unshared",
+      "channel": "Normal",
+      "mip": 0,
+      "path": "maps/reseam_unshared/Normal.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "fe519482c8b750133278844c7744950dc8318d39b776c766da13361293eb1d63",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_unshared_2048\\bake\\texture\\Normal_mip0.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "reseam_unshared",
+      "channel": "ORM",
+      "mip": 0,
+      "path": "maps/reseam_unshared/ORM.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "1bd1c24b4e0b0ecdf0fce46884468208b6cd4606a4ffcc89b1d917e95ff13075",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_unshared_2048\\bake\\texture\\ORM_mip0.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "reseam_unshared",
+      "channel": "AO",
+      "mip": 0,
+      "path": "maps/reseam_unshared/AO.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "7368a2762f0210ba889788e2c23314e77fc184beecf5c6b5ffbe8279ed4f308a",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_unshared_2048\\bake\\texture\\ORM_mip0.png",
+      "operation": "exact 8-bit channel 0 extraction from ORM"
+    },
+    {
+      "method": "reseam_unshared",
+      "channel": "Roughness",
+      "mip": 0,
+      "path": "maps/reseam_unshared/Roughness.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "aebcf10692c72f94e176db789a54413899f7d80bdaf2ce1c8e8a3ee765db1adf",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_unshared_2048\\bake\\texture\\ORM_mip0.png",
+      "operation": "exact 8-bit channel 1 extraction from ORM"
+    },
+    {
+      "method": "reseam_unshared",
+      "channel": "Metallic",
+      "mip": 0,
+      "path": "maps/reseam_unshared/Metallic.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "47409785b30cc38f1ec62f219ce1c46f885427442416c0768dc470497ef784cb",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_unshared_2048\\bake\\texture\\ORM_mip0.png",
+      "operation": "exact 8-bit channel 2 extraction from ORM"
+    },
+    {
+      "method": "reseam_shared",
+      "channel": "BaseColor",
+      "mip": 0,
+      "path": "maps/reseam_shared/BaseColor.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "287c6cf117aeb29135afb8067feb6c32db628efc75d74891346581b7a1f63be1",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_shared_boundary_2048\\bake\\texture\\BaseColor_mip0.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "reseam_shared",
+      "channel": "Normal",
+      "mip": 0,
+      "path": "maps/reseam_shared/Normal.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "f674b10541acd455ff1af5255781ff385603484459d332d999e70ff95729180f",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_shared_boundary_2048\\bake\\texture\\Normal_mip0.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "reseam_shared",
+      "channel": "ORM",
+      "mip": 0,
+      "path": "maps/reseam_shared/ORM.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "d3d135fb2e60877d4fc6a2c60783a86de0515fcb8ed12605f70eabb53f18be6e",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_shared_boundary_2048\\bake\\texture\\ORM_mip0.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "reseam_shared",
+      "channel": "AO",
+      "mip": 0,
+      "path": "maps/reseam_shared/AO.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "7368a2762f0210ba889788e2c23314e77fc184beecf5c6b5ffbe8279ed4f308a",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_shared_boundary_2048\\bake\\texture\\ORM_mip0.png",
+      "operation": "exact 8-bit channel 0 extraction from ORM"
+    },
+    {
+      "method": "reseam_shared",
+      "channel": "Roughness",
+      "mip": 0,
+      "path": "maps/reseam_shared/Roughness.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "02a1ab98481331affeda01e56ebd1ea3c3cda43ce1f566a01591846e8d6d6277",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_shared_boundary_2048\\bake\\texture\\ORM_mip0.png",
+      "operation": "exact 8-bit channel 1 extraction from ORM"
+    },
+    {
+      "method": "reseam_shared",
+      "channel": "Metallic",
+      "mip": 0,
+      "path": "maps/reseam_shared/Metallic.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "47409785b30cc38f1ec62f219ce1c46f885427442416c0768dc470497ef784cb",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_shared_boundary_2048\\bake\\texture\\ORM_mip0.png",
+      "operation": "exact 8-bit channel 2 extraction from ORM"
+    },
+    {
+      "method": "reseam_optimized",
+      "channel": "BaseColor",
+      "mip": 0,
+      "path": "maps/reseam_optimized/BaseColor.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "0d0aa1c7b2e2abddc986c504c562c8979656e84fb38f9cf84c2cd1aa91bb6c90",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_optimized_2048\\bake\\texture\\BaseColor_mip0.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "reseam_optimized",
+      "channel": "Normal",
+      "mip": 0,
+      "path": "maps/reseam_optimized/Normal.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "af2adda4b16b1a9e465440791ba21f008651fd34b9b7f2d48514cd415fef3ccc",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_optimized_2048\\bake\\texture\\Normal_mip0.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "reseam_optimized",
+      "channel": "ORM",
+      "mip": 0,
+      "path": "maps/reseam_optimized/ORM.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "9b6020674325d0cfa4af8a4b029ecb2e85cc82663c5a5c7a4692e3c1621b3896",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_optimized_2048\\bake\\texture\\ORM_mip0.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "reseam_optimized",
+      "channel": "AO",
+      "mip": 0,
+      "path": "maps/reseam_optimized/AO.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "7368a2762f0210ba889788e2c23314e77fc184beecf5c6b5ffbe8279ed4f308a",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_optimized_2048\\bake\\texture\\ORM_mip0.png",
+      "operation": "exact 8-bit channel 0 extraction from ORM"
+    },
+    {
+      "method": "reseam_optimized",
+      "channel": "Roughness",
+      "mip": 0,
+      "path": "maps/reseam_optimized/Roughness.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "7349f2255e97b7ebed885ba7c6c4b77b096a75f915b34542000bd1f39b0c3ba4",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_optimized_2048\\bake\\texture\\ORM_mip0.png",
+      "operation": "exact 8-bit channel 1 extraction from ORM"
+    },
+    {
+      "method": "reseam_optimized",
+      "channel": "Metallic",
+      "mip": 0,
+      "path": "maps/reseam_optimized/Metallic.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "47409785b30cc38f1ec62f219ce1c46f885427442416c0768dc470497ef784cb",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_optimized_2048\\bake\\texture\\ORM_mip0.png",
+      "operation": "exact 8-bit channel 2 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_unshared",
+      "channel": "BaseColor",
+      "mip": 0,
+      "path": "maps/mirror_negative_unshared/BaseColor.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "5e61d74275cf6986de87c38b78f891fbe7db905c7aae28cbcf6ee6ef437c2f2c",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_unshared_2048\\bake\\texture\\BaseColor_mip0.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_unshared",
+      "channel": "Normal",
+      "mip": 0,
+      "path": "maps/mirror_negative_unshared/Normal.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "3b59c24dca02ff55790cb1d16b290e3efc99c8e2aada4b53d48b3b792c7b9ba2",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_unshared_2048\\bake\\texture\\Normal_mip0.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_unshared",
+      "channel": "ORM",
+      "mip": 0,
+      "path": "maps/mirror_negative_unshared/ORM.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "877cf1bbb43b31f2c2ebe347ca3fcacc4cb9a4b9234740452a3ff6244eb42762",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_unshared_2048\\bake\\texture\\ORM_mip0.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_unshared",
+      "channel": "AO",
+      "mip": 0,
+      "path": "maps/mirror_negative_unshared/AO.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "7368a2762f0210ba889788e2c23314e77fc184beecf5c6b5ffbe8279ed4f308a",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_unshared_2048\\bake\\texture\\ORM_mip0.png",
+      "operation": "exact 8-bit channel 0 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_unshared",
+      "channel": "Roughness",
+      "mip": 0,
+      "path": "maps/mirror_negative_unshared/Roughness.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "4fd7608b45a4b3c0780a0f532782ce8eeb23dcd67d3f91d7a1d8277f74553a11",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_unshared_2048\\bake\\texture\\ORM_mip0.png",
+      "operation": "exact 8-bit channel 1 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_unshared",
+      "channel": "Metallic",
+      "mip": 0,
+      "path": "maps/mirror_negative_unshared/Metallic.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "47409785b30cc38f1ec62f219ce1c46f885427442416c0768dc470497ef784cb",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_unshared_2048\\bake\\texture\\ORM_mip0.png",
+      "operation": "exact 8-bit channel 2 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_shared",
+      "channel": "BaseColor",
+      "mip": 0,
+      "path": "maps/mirror_negative_shared/BaseColor.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "8845655a2d1981384d10d9195580c3bca85cb5014b0e64f4f8a4f05cd0285e97",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_shared_2048\\bake\\texture\\BaseColor_mip0.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_shared",
+      "channel": "Normal",
+      "mip": 0,
+      "path": "maps/mirror_negative_shared/Normal.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "b2eef846d2bbfb6532ee46b6f6b3fdf8afc40466407bf3ece63c2101c53143e2",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_shared_2048\\bake\\texture\\Normal_mip0.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_shared",
+      "channel": "ORM",
+      "mip": 0,
+      "path": "maps/mirror_negative_shared/ORM.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "a2aa1276d9b3cbdf9eac536276ffc07f874fbc1080f16952562a7146f2c0fa5b",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_shared_2048\\bake\\texture\\ORM_mip0.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_shared",
+      "channel": "AO",
+      "mip": 0,
+      "path": "maps/mirror_negative_shared/AO.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "7368a2762f0210ba889788e2c23314e77fc184beecf5c6b5ffbe8279ed4f308a",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_shared_2048\\bake\\texture\\ORM_mip0.png",
+      "operation": "exact 8-bit channel 0 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_shared",
+      "channel": "Roughness",
+      "mip": 0,
+      "path": "maps/mirror_negative_shared/Roughness.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "3d1e30edad8e785cc804cbe73e10eccdc3b94fb16c749ca34c26e9b7e5759b95",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_shared_2048\\bake\\texture\\ORM_mip0.png",
+      "operation": "exact 8-bit channel 1 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_shared",
+      "channel": "Metallic",
+      "mip": 0,
+      "path": "maps/mirror_negative_shared/Metallic.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "47409785b30cc38f1ec62f219ce1c46f885427442416c0768dc470497ef784cb",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_shared_2048\\bake\\texture\\ORM_mip0.png",
+      "operation": "exact 8-bit channel 2 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_optimized_minimum_shared",
+      "channel": "BaseColor",
+      "mip": 0,
+      "path": "maps/mirror_negative_optimized_minimum_shared/BaseColor.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "1e4a6b5efac832b5450c74122507b7aac2caba02e9493dd4971439808661f74f",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_optimized_minimum_shared_2048\\bake\\texture\\BaseColor_mip0.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_optimized_minimum_shared",
+      "channel": "Normal",
+      "mip": 0,
+      "path": "maps/mirror_negative_optimized_minimum_shared/Normal.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "bfc3469a3542c185e5c91a4d0cf35ac3860b5300a3a55dc52287d476128e9ca9",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_optimized_minimum_shared_2048\\bake\\texture\\Normal_mip0.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_optimized_minimum_shared",
+      "channel": "ORM",
+      "mip": 0,
+      "path": "maps/mirror_negative_optimized_minimum_shared/ORM.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "c1e4c95da9ea6a63c0bff1a62a37f98300ce8a8aa34f5aeca9e176ad6e004d3b",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_optimized_minimum_shared_2048\\bake\\texture\\ORM_mip0.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_optimized_minimum_shared",
+      "channel": "AO",
+      "mip": 0,
+      "path": "maps/mirror_negative_optimized_minimum_shared/AO.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "7368a2762f0210ba889788e2c23314e77fc184beecf5c6b5ffbe8279ed4f308a",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_optimized_minimum_shared_2048\\bake\\texture\\ORM_mip0.png",
+      "operation": "exact 8-bit channel 0 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_optimized_minimum_shared",
+      "channel": "Roughness",
+      "mip": 0,
+      "path": "maps/mirror_negative_optimized_minimum_shared/Roughness.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "669759c545e2be8f726da9110639353fc4f56412c64d8c4e7a4a91d6ce9167b1",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_optimized_minimum_shared_2048\\bake\\texture\\ORM_mip0.png",
+      "operation": "exact 8-bit channel 1 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_optimized_minimum_shared",
+      "channel": "Metallic",
+      "mip": 0,
+      "path": "maps/mirror_negative_optimized_minimum_shared/Metallic.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "47409785b30cc38f1ec62f219ce1c46f885427442416c0768dc470497ef784cb",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_optimized_minimum_shared_2048\\bake\\texture\\ORM_mip0.png",
+      "operation": "exact 8-bit channel 2 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_optimized_minimum_unshared",
+      "channel": "BaseColor",
+      "mip": 0,
+      "path": "maps/mirror_negative_optimized_minimum_unshared/BaseColor.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "f39104bb5b018176beafe59886cd4803987819735efdd93aceb915206588bc58",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_optimized_minimum_unshared_2048\\bake\\texture\\BaseColor_mip0.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_optimized_minimum_unshared",
+      "channel": "Normal",
+      "mip": 0,
+      "path": "maps/mirror_negative_optimized_minimum_unshared/Normal.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "b65292e7243e00d0fb69b993d3c314fef33334bbf082813c046c0ce417a88d50",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_optimized_minimum_unshared_2048\\bake\\texture\\Normal_mip0.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_optimized_minimum_unshared",
+      "channel": "ORM",
+      "mip": 0,
+      "path": "maps/mirror_negative_optimized_minimum_unshared/ORM.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "0f7abf6d31193bb2670559f48c6855ea14b88d12f4d3d848c30d7aceed5cb88b",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_optimized_minimum_unshared_2048\\bake\\texture\\ORM_mip0.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_optimized_minimum_unshared",
+      "channel": "AO",
+      "mip": 0,
+      "path": "maps/mirror_negative_optimized_minimum_unshared/AO.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "7368a2762f0210ba889788e2c23314e77fc184beecf5c6b5ffbe8279ed4f308a",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_optimized_minimum_unshared_2048\\bake\\texture\\ORM_mip0.png",
+      "operation": "exact 8-bit channel 0 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_optimized_minimum_unshared",
+      "channel": "Roughness",
+      "mip": 0,
+      "path": "maps/mirror_negative_optimized_minimum_unshared/Roughness.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "8fe9964617d8d6605017191724c99d3989f04303ba6930a2b041fa9ead1b11d6",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_optimized_minimum_unshared_2048\\bake\\texture\\ORM_mip0.png",
+      "operation": "exact 8-bit channel 1 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_optimized_minimum_unshared",
+      "channel": "Metallic",
+      "mip": 0,
+      "path": "maps/mirror_negative_optimized_minimum_unshared/Metallic.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "47409785b30cc38f1ec62f219ce1c46f885427442416c0768dc470497ef784cb",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_optimized_minimum_unshared_2048\\bake\\texture\\ORM_mip0.png",
+      "operation": "exact 8-bit channel 2 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_aggressive_minimum_shared",
+      "channel": "BaseColor",
+      "mip": 0,
+      "path": "maps/mirror_negative_aggressive_minimum_shared/BaseColor.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "cf0eebb6b690289f0d7b5b7d101c9eaf0f520f5233a63efd32037791400b0f45",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_aggressive_minimum_shared_2048\\bake\\texture\\BaseColor_mip0.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_aggressive_minimum_shared",
+      "channel": "Normal",
+      "mip": 0,
+      "path": "maps/mirror_negative_aggressive_minimum_shared/Normal.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "5010f21ec8ba16c615b6c42284d15cb0b53703b83677bdeb3e038e1ab8d7d40c",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_aggressive_minimum_shared_2048\\bake\\texture\\Normal_mip0.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_aggressive_minimum_shared",
+      "channel": "ORM",
+      "mip": 0,
+      "path": "maps/mirror_negative_aggressive_minimum_shared/ORM.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "2399ed3373b5d2a01353f5c51e8bd0d510edf611171b1ecc36fc1f74678160f5",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_aggressive_minimum_shared_2048\\bake\\texture\\ORM_mip0.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_aggressive_minimum_shared",
+      "channel": "AO",
+      "mip": 0,
+      "path": "maps/mirror_negative_aggressive_minimum_shared/AO.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "7368a2762f0210ba889788e2c23314e77fc184beecf5c6b5ffbe8279ed4f308a",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_aggressive_minimum_shared_2048\\bake\\texture\\ORM_mip0.png",
+      "operation": "exact 8-bit channel 0 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_aggressive_minimum_shared",
+      "channel": "Roughness",
+      "mip": 0,
+      "path": "maps/mirror_negative_aggressive_minimum_shared/Roughness.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "488411eaa7e6df39615115cd062e776df19b711d91505eef33c9b16a7d8d65a3",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_aggressive_minimum_shared_2048\\bake\\texture\\ORM_mip0.png",
+      "operation": "exact 8-bit channel 1 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_aggressive_minimum_shared",
+      "channel": "Metallic",
+      "mip": 0,
+      "path": "maps/mirror_negative_aggressive_minimum_shared/Metallic.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "47409785b30cc38f1ec62f219ce1c46f885427442416c0768dc470497ef784cb",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_aggressive_minimum_shared_2048\\bake\\texture\\ORM_mip0.png",
+      "operation": "exact 8-bit channel 2 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_aggressive_minimum_unshared",
+      "channel": "BaseColor",
+      "mip": 0,
+      "path": "maps/mirror_negative_aggressive_minimum_unshared/BaseColor.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "fd42c45ed38d9fef8ed004c25ff8768dda874e942e8a48ad54c325b4b09c50ac",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_aggressive_minimum_unshared_2048\\bake\\texture\\BaseColor_mip0.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_aggressive_minimum_unshared",
+      "channel": "Normal",
+      "mip": 0,
+      "path": "maps/mirror_negative_aggressive_minimum_unshared/Normal.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "3dc5a9d3e1977d416fe869a6779a0d916e66e36d7a2f9ff5aae8dc6389acf010",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_aggressive_minimum_unshared_2048\\bake\\texture\\Normal_mip0.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_aggressive_minimum_unshared",
+      "channel": "ORM",
+      "mip": 0,
+      "path": "maps/mirror_negative_aggressive_minimum_unshared/ORM.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "b1933927044a021c1e42bb1c63e076c737f347dbf41eb240b0824fa43317f033",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_aggressive_minimum_unshared_2048\\bake\\texture\\ORM_mip0.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_aggressive_minimum_unshared",
+      "channel": "AO",
+      "mip": 0,
+      "path": "maps/mirror_negative_aggressive_minimum_unshared/AO.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "7368a2762f0210ba889788e2c23314e77fc184beecf5c6b5ffbe8279ed4f308a",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_aggressive_minimum_unshared_2048\\bake\\texture\\ORM_mip0.png",
+      "operation": "exact 8-bit channel 0 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_aggressive_minimum_unshared",
+      "channel": "Roughness",
+      "mip": 0,
+      "path": "maps/mirror_negative_aggressive_minimum_unshared/Roughness.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "2c6f58a15c9cebfb223be7f378f5e0b1d61d329651309bc6a270cc1e958a270c",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_aggressive_minimum_unshared_2048\\bake\\texture\\ORM_mip0.png",
+      "operation": "exact 8-bit channel 1 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_aggressive_minimum_unshared",
+      "channel": "Metallic",
+      "mip": 0,
+      "path": "maps/mirror_negative_aggressive_minimum_unshared/Metallic.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "47409785b30cc38f1ec62f219ce1c46f885427442416c0768dc470497ef784cb",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_aggressive_minimum_unshared_2048\\bake\\texture\\ORM_mip0.png",
+      "operation": "exact 8-bit channel 2 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_unshared",
+      "channel": "BaseColor",
+      "mip": 0,
+      "path": "maps/mirror_negative_exhaustive_minimum_unshared/BaseColor.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "4626414768af35b6aa3aee99580c1b6443e167626af03e74ed91da3894e5e1d5",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\bake\\texture\\BaseColor_mip0.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_unshared",
+      "channel": "Normal",
+      "mip": 0,
+      "path": "maps/mirror_negative_exhaustive_minimum_unshared/Normal.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "85a0b83a9e27acf0aea8838ec88326458d918931edc30a54ac34554123183997",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\bake\\texture\\Normal_mip0.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_unshared",
+      "channel": "ORM",
+      "mip": 0,
+      "path": "maps/mirror_negative_exhaustive_minimum_unshared/ORM.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "ed341dc7d54789e60cabbdb8423b73c20e52c7ef04746584de05103318800450",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\bake\\texture\\ORM_mip0.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_unshared",
+      "channel": "AO",
+      "mip": 0,
+      "path": "maps/mirror_negative_exhaustive_minimum_unshared/AO.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "7368a2762f0210ba889788e2c23314e77fc184beecf5c6b5ffbe8279ed4f308a",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\bake\\texture\\ORM_mip0.png",
+      "operation": "exact 8-bit channel 0 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_unshared",
+      "channel": "Roughness",
+      "mip": 0,
+      "path": "maps/mirror_negative_exhaustive_minimum_unshared/Roughness.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "34d8f2dfd412c239ddd4f0d7f88fbb01c8c4543951f427a0f21adb673d27f36d",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\bake\\texture\\ORM_mip0.png",
+      "operation": "exact 8-bit channel 1 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_unshared",
+      "channel": "Metallic",
+      "mip": 0,
+      "path": "maps/mirror_negative_exhaustive_minimum_unshared/Metallic.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "47409785b30cc38f1ec62f219ce1c46f885427442416c0768dc470497ef784cb",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\bake\\texture\\ORM_mip0.png",
+      "operation": "exact 8-bit channel 2 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_unshared",
+      "channel": "BaseColor",
+      "mip": 1,
+      "path": "maps/mirror_negative_exhaustive_minimum_unshared/mips/BaseColor_mip1.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "sha256": "1bc880fa0f93453ce31c34364ab2a349f21c58c4163d6398d168a8afea91cfc1",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\bake\\texture\\BaseColor_mip1.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_unshared",
+      "channel": "Normal",
+      "mip": 1,
+      "path": "maps/mirror_negative_exhaustive_minimum_unshared/mips/Normal_mip1.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "sha256": "b94ef7f3b39afad2c1d00ec3f52cb26a782d1d8fc741681ca69df7f103aba20a",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\bake\\texture\\Normal_mip1.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_unshared",
+      "channel": "ORM",
+      "mip": 1,
+      "path": "maps/mirror_negative_exhaustive_minimum_unshared/mips/ORM_mip1.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "sha256": "5f66d3687320654f4a11f085653709adfc374f0095e7611877b09e7521b8e7c8",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\bake\\texture\\ORM_mip1.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_unshared",
+      "channel": "AO",
+      "mip": 1,
+      "path": "maps/mirror_negative_exhaustive_minimum_unshared/mips/AO_mip1.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "sha256": "92d103ae3b35360d5c817ca0287ddaf222ce4889a230003c99128f0c56eef900",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\bake\\texture\\ORM_mip1.png",
+      "operation": "exact 8-bit channel 0 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_unshared",
+      "channel": "Roughness",
+      "mip": 1,
+      "path": "maps/mirror_negative_exhaustive_minimum_unshared/mips/Roughness_mip1.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "sha256": "7f573b010908830d3d918e8ca4fedaefa7ee12c997a579f9b59778744f46e503",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\bake\\texture\\ORM_mip1.png",
+      "operation": "exact 8-bit channel 1 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_unshared",
+      "channel": "Metallic",
+      "mip": 1,
+      "path": "maps/mirror_negative_exhaustive_minimum_unshared/mips/Metallic_mip1.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "sha256": "0f4b1668d119f77ceb6b86645573f088ab2341d7b284314d5df0be7226ea5d91",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\bake\\texture\\ORM_mip1.png",
+      "operation": "exact 8-bit channel 2 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_unshared",
+      "channel": "BaseColor",
+      "mip": 2,
+      "path": "maps/mirror_negative_exhaustive_minimum_unshared/mips/BaseColor_mip2.png",
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "8300b67e2431e4dd6f6b18c56ca095951f539945cda1a48869c72d78df0ebbb1",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\bake\\texture\\BaseColor_mip2.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_unshared",
+      "channel": "Normal",
+      "mip": 2,
+      "path": "maps/mirror_negative_exhaustive_minimum_unshared/mips/Normal_mip2.png",
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "a8c95261e3d302d6a10cb0b2de9de5eed92386cecec75ccb7280032e363d92ee",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\bake\\texture\\Normal_mip2.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_unshared",
+      "channel": "ORM",
+      "mip": 2,
+      "path": "maps/mirror_negative_exhaustive_minimum_unshared/mips/ORM_mip2.png",
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "6b4e1fd0b1c1daa83a894d4d2dc394e957710adfc797721df2791d3eb8e931cf",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\bake\\texture\\ORM_mip2.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_unshared",
+      "channel": "AO",
+      "mip": 2,
+      "path": "maps/mirror_negative_exhaustive_minimum_unshared/mips/AO_mip2.png",
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "d8acccafa1fdcf03f3bb9112f5f2f30ad1558e446d5c12ec5644fc0d53c1e58b",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\bake\\texture\\ORM_mip2.png",
+      "operation": "exact 8-bit channel 0 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_unshared",
+      "channel": "Roughness",
+      "mip": 2,
+      "path": "maps/mirror_negative_exhaustive_minimum_unshared/mips/Roughness_mip2.png",
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "ba51c4bc39cbb509a8fb50d9518823e3290a8916179c44197c243a6216ed78c9",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\bake\\texture\\ORM_mip2.png",
+      "operation": "exact 8-bit channel 1 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_unshared",
+      "channel": "Metallic",
+      "mip": 2,
+      "path": "maps/mirror_negative_exhaustive_minimum_unshared/mips/Metallic_mip2.png",
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "65795a5b91030a2a433dae510d1edf494082a9cfa1153cd94f3797759f68f257",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\bake\\texture\\ORM_mip2.png",
+      "operation": "exact 8-bit channel 2 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_unshared",
+      "channel": "BaseColor",
+      "mip": 3,
+      "path": "maps/mirror_negative_exhaustive_minimum_unshared/mips/BaseColor_mip3.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "01b4d229e56c03a17d999153c0186dc11b7d14ec58d880053031b665e0bc6174",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\bake\\texture\\BaseColor_mip3.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_unshared",
+      "channel": "Normal",
+      "mip": 3,
+      "path": "maps/mirror_negative_exhaustive_minimum_unshared/mips/Normal_mip3.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "91796df5dbce1d3038878e2c1d6dcbc99341fcd123cfee5debcac04139cbb31e",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\bake\\texture\\Normal_mip3.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_unshared",
+      "channel": "ORM",
+      "mip": 3,
+      "path": "maps/mirror_negative_exhaustive_minimum_unshared/mips/ORM_mip3.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "6d3592f9468ecc34f74446eaf285930bb17e1f67ac7e6c12d0c2333d3cacebef",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\bake\\texture\\ORM_mip3.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_unshared",
+      "channel": "AO",
+      "mip": 3,
+      "path": "maps/mirror_negative_exhaustive_minimum_unshared/mips/AO_mip3.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "f06e89dc7f39be266a34ab9d56c628694bcc6f491e27b9fad873cfa459731143",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\bake\\texture\\ORM_mip3.png",
+      "operation": "exact 8-bit channel 0 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_unshared",
+      "channel": "Roughness",
+      "mip": 3,
+      "path": "maps/mirror_negative_exhaustive_minimum_unshared/mips/Roughness_mip3.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "4f9272a78ce3659ab79dbd2af09b212d8df11658b0f2ffe269523b6f5d15d110",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\bake\\texture\\ORM_mip3.png",
+      "operation": "exact 8-bit channel 1 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_unshared",
+      "channel": "Metallic",
+      "mip": 3,
+      "path": "maps/mirror_negative_exhaustive_minimum_unshared/mips/Metallic_mip3.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "5933d4c44ed2bc2f431e2698b41923a18d056b24b450540bb109e7592a547060",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\bake\\texture\\ORM_mip3.png",
+      "operation": "exact 8-bit channel 2 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_unshared",
+      "channel": "BaseColor",
+      "mip": 4,
+      "path": "maps/mirror_negative_exhaustive_minimum_unshared/mips/BaseColor_mip4.png",
+      "size": [
+        128,
+        128
+      ],
+      "sha256": "e822dfb03350926fbdcb697c098d541b06adac7279ca7045f223c080f12cb0a6",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\bake\\texture\\BaseColor_mip4.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_unshared",
+      "channel": "Normal",
+      "mip": 4,
+      "path": "maps/mirror_negative_exhaustive_minimum_unshared/mips/Normal_mip4.png",
+      "size": [
+        128,
+        128
+      ],
+      "sha256": "54113af558a5161d86ba71b0ed04c4917223de0e0d0305345b12eee5fbbb4461",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\bake\\texture\\Normal_mip4.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_unshared",
+      "channel": "ORM",
+      "mip": 4,
+      "path": "maps/mirror_negative_exhaustive_minimum_unshared/mips/ORM_mip4.png",
+      "size": [
+        128,
+        128
+      ],
+      "sha256": "b0f75b7ddc3792c9cc523fd796e871a916c35f5cf72144e0936c874db08400f2",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\bake\\texture\\ORM_mip4.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_unshared",
+      "channel": "AO",
+      "mip": 4,
+      "path": "maps/mirror_negative_exhaustive_minimum_unshared/mips/AO_mip4.png",
+      "size": [
+        128,
+        128
+      ],
+      "sha256": "f0aa957523055fe28a67c6c4a3953fb8d9efb2fee7d215a9ffd569ad01aed808",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\bake\\texture\\ORM_mip4.png",
+      "operation": "exact 8-bit channel 0 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_unshared",
+      "channel": "Roughness",
+      "mip": 4,
+      "path": "maps/mirror_negative_exhaustive_minimum_unshared/mips/Roughness_mip4.png",
+      "size": [
+        128,
+        128
+      ],
+      "sha256": "8bca17b31ea382bbb1a06ba76a27e8e659063fdff15091d923fbcf55dacd973a",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\bake\\texture\\ORM_mip4.png",
+      "operation": "exact 8-bit channel 1 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_unshared",
+      "channel": "Metallic",
+      "mip": 4,
+      "path": "maps/mirror_negative_exhaustive_minimum_unshared/mips/Metallic_mip4.png",
+      "size": [
+        128,
+        128
+      ],
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\bake\\texture\\ORM_mip4.png",
+      "operation": "exact 8-bit channel 2 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_unshared",
+      "channel": "BaseColor",
+      "mip": 5,
+      "path": "maps/mirror_negative_exhaustive_minimum_unshared/mips/BaseColor_mip5.png",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "063fcf60521cd6911ca8b0f77f16ec08602cc15b24d86336b408490ad3366192",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\bake\\texture\\BaseColor_mip5.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_unshared",
+      "channel": "Normal",
+      "mip": 5,
+      "path": "maps/mirror_negative_exhaustive_minimum_unshared/mips/Normal_mip5.png",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "d600b8598a75d2cb6315fcf65bb98be40b1c8393090571c1e83011d64f2f412f",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\bake\\texture\\Normal_mip5.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_unshared",
+      "channel": "ORM",
+      "mip": 5,
+      "path": "maps/mirror_negative_exhaustive_minimum_unshared/mips/ORM_mip5.png",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "02651872ad51dca6e2d39c58cd38cef7d56aedebfa466f2a3e2a666d0ac9e06d",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\bake\\texture\\ORM_mip5.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_unshared",
+      "channel": "AO",
+      "mip": 5,
+      "path": "maps/mirror_negative_exhaustive_minimum_unshared/mips/AO_mip5.png",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "c83aefe17ef2cb1f712a277e359bbc6045728bca01db485e496261cdbf048673",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\bake\\texture\\ORM_mip5.png",
+      "operation": "exact 8-bit channel 0 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_unshared",
+      "channel": "Roughness",
+      "mip": 5,
+      "path": "maps/mirror_negative_exhaustive_minimum_unshared/mips/Roughness_mip5.png",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "275e951cd8571372509315180c505af300ce6e41330b695e246797fad0db7fc6",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\bake\\texture\\ORM_mip5.png",
+      "operation": "exact 8-bit channel 1 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_unshared",
+      "channel": "Metallic",
+      "mip": 5,
+      "path": "maps/mirror_negative_exhaustive_minimum_unshared/mips/Metallic_mip5.png",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "ad3d92a33d5e7480ffec17b96da3df67a2e986a4bd45e6f0cd77edf3c284cd79",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\bake\\texture\\ORM_mip5.png",
+      "operation": "exact 8-bit channel 2 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_unshared",
+      "channel": "BaseColor",
+      "mip": 6,
+      "path": "maps/mirror_negative_exhaustive_minimum_unshared/mips/BaseColor_mip6.png",
+      "size": [
+        32,
+        32
+      ],
+      "sha256": "0276dacc0b2295a4c695a5e35473c0b0a65020c27a56f10a902b0bb311a0ea25",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\bake\\texture\\BaseColor_mip6.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_unshared",
+      "channel": "Normal",
+      "mip": 6,
+      "path": "maps/mirror_negative_exhaustive_minimum_unshared/mips/Normal_mip6.png",
+      "size": [
+        32,
+        32
+      ],
+      "sha256": "f8af7d62ad6076609c3c14e7de330dd81f9338a82d438599cdadb4387a05d372",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\bake\\texture\\Normal_mip6.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_unshared",
+      "channel": "ORM",
+      "mip": 6,
+      "path": "maps/mirror_negative_exhaustive_minimum_unshared/mips/ORM_mip6.png",
+      "size": [
+        32,
+        32
+      ],
+      "sha256": "044a7fc1ba3f44b77f6812ee1e87f7c5d21b0bc327140a537395520d6fe6f452",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\bake\\texture\\ORM_mip6.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_unshared",
+      "channel": "AO",
+      "mip": 6,
+      "path": "maps/mirror_negative_exhaustive_minimum_unshared/mips/AO_mip6.png",
+      "size": [
+        32,
+        32
+      ],
+      "sha256": "810a7e611c7893c873fa6755c3a2ada29997e8f49aa61516848d75755cd2b197",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\bake\\texture\\ORM_mip6.png",
+      "operation": "exact 8-bit channel 0 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_unshared",
+      "channel": "Roughness",
+      "mip": 6,
+      "path": "maps/mirror_negative_exhaustive_minimum_unshared/mips/Roughness_mip6.png",
+      "size": [
+        32,
+        32
+      ],
+      "sha256": "ea814e8155b7489b419fc904273262c4c43223cdff54f44dbce23a172642da1c",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\bake\\texture\\ORM_mip6.png",
+      "operation": "exact 8-bit channel 1 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_unshared",
+      "channel": "Metallic",
+      "mip": 6,
+      "path": "maps/mirror_negative_exhaustive_minimum_unshared/mips/Metallic_mip6.png",
+      "size": [
+        32,
+        32
+      ],
+      "sha256": "fe70b66dc65eb30141c7932818e28b15e182016d6172e79338864d1a4731c128",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\bake\\texture\\ORM_mip6.png",
+      "operation": "exact 8-bit channel 2 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_unshared",
+      "channel": "BaseColor",
+      "mip": 7,
+      "path": "maps/mirror_negative_exhaustive_minimum_unshared/mips/BaseColor_mip7.png",
+      "size": [
+        16,
+        16
+      ],
+      "sha256": "69f95a5a2a6be8f034de49891515fdf601c049f353766c2ad156656f228bca82",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\bake\\texture\\BaseColor_mip7.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_unshared",
+      "channel": "Normal",
+      "mip": 7,
+      "path": "maps/mirror_negative_exhaustive_minimum_unshared/mips/Normal_mip7.png",
+      "size": [
+        16,
+        16
+      ],
+      "sha256": "1de51efd3c130bf13a7e9c02812f61537cd740eb8b79ef9bf4efacf89a92cb7e",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\bake\\texture\\Normal_mip7.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_unshared",
+      "channel": "ORM",
+      "mip": 7,
+      "path": "maps/mirror_negative_exhaustive_minimum_unshared/mips/ORM_mip7.png",
+      "size": [
+        16,
+        16
+      ],
+      "sha256": "b87b03f8e4fde44d0c0c5874f07498711eac01b5ea2570307b57e3e8faa8e734",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\bake\\texture\\ORM_mip7.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_unshared",
+      "channel": "AO",
+      "mip": 7,
+      "path": "maps/mirror_negative_exhaustive_minimum_unshared/mips/AO_mip7.png",
+      "size": [
+        16,
+        16
+      ],
+      "sha256": "17430a9c6a1ab82ec1b90b3a4e0d36d8e0dc50b7ab8c6d55fb2a664d68e3d9d5",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\bake\\texture\\ORM_mip7.png",
+      "operation": "exact 8-bit channel 0 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_unshared",
+      "channel": "Roughness",
+      "mip": 7,
+      "path": "maps/mirror_negative_exhaustive_minimum_unshared/mips/Roughness_mip7.png",
+      "size": [
+        16,
+        16
+      ],
+      "sha256": "0bef9a1a209f0b14c70d33871056d288f081f2621d56813f21cc626ed95372e1",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\bake\\texture\\ORM_mip7.png",
+      "operation": "exact 8-bit channel 1 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_unshared",
+      "channel": "Metallic",
+      "mip": 7,
+      "path": "maps/mirror_negative_exhaustive_minimum_unshared/mips/Metallic_mip7.png",
+      "size": [
+        16,
+        16
+      ],
+      "sha256": "565bb6ae9b189dc8d7f8bd6c85be23f65373594d8df0c495f45d1f6301867062",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\bake\\texture\\ORM_mip7.png",
+      "operation": "exact 8-bit channel 2 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_unshared",
+      "channel": "BaseColor",
+      "mip": 8,
+      "path": "maps/mirror_negative_exhaustive_minimum_unshared/mips/BaseColor_mip8.png",
+      "size": [
+        8,
+        8
+      ],
+      "sha256": "91c8686d3296b8f5f1017b56d55741306dd5f38eb764ffa318c4395b657da6bc",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\bake\\texture\\BaseColor_mip8.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_unshared",
+      "channel": "Normal",
+      "mip": 8,
+      "path": "maps/mirror_negative_exhaustive_minimum_unshared/mips/Normal_mip8.png",
+      "size": [
+        8,
+        8
+      ],
+      "sha256": "ca79fabce97759b074a87f6e31db34c8f3833af89f4c8fa33f262a706bfaa4c7",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\bake\\texture\\Normal_mip8.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_unshared",
+      "channel": "ORM",
+      "mip": 8,
+      "path": "maps/mirror_negative_exhaustive_minimum_unshared/mips/ORM_mip8.png",
+      "size": [
+        8,
+        8
+      ],
+      "sha256": "92983d8ab8d246dcccea1d726978ac8c06ef3caf9b25b043a33ef00f4af4473d",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\bake\\texture\\ORM_mip8.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_unshared",
+      "channel": "AO",
+      "mip": 8,
+      "path": "maps/mirror_negative_exhaustive_minimum_unshared/mips/AO_mip8.png",
+      "size": [
+        8,
+        8
+      ],
+      "sha256": "c4a4fb536c984474bb80498493e3e92d6daed91def83b577a00c07547e8a907e",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\bake\\texture\\ORM_mip8.png",
+      "operation": "exact 8-bit channel 0 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_unshared",
+      "channel": "Roughness",
+      "mip": 8,
+      "path": "maps/mirror_negative_exhaustive_minimum_unshared/mips/Roughness_mip8.png",
+      "size": [
+        8,
+        8
+      ],
+      "sha256": "764c07acd61ed9c89731e41305be9c4a70f7dff64536a882b9bef7d9998a9b3f",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\bake\\texture\\ORM_mip8.png",
+      "operation": "exact 8-bit channel 1 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_unshared",
+      "channel": "Metallic",
+      "mip": 8,
+      "path": "maps/mirror_negative_exhaustive_minimum_unshared/mips/Metallic_mip8.png",
+      "size": [
+        8,
+        8
+      ],
+      "sha256": "f701c76ac7fb684490c5c2fc887c4414ee56d4a071f9ab2418ab5b3fa7c4f3ef",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\bake\\texture\\ORM_mip8.png",
+      "operation": "exact 8-bit channel 2 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_unshared",
+      "channel": "BaseColor",
+      "mip": 9,
+      "path": "maps/mirror_negative_exhaustive_minimum_unshared/mips/BaseColor_mip9.png",
+      "size": [
+        4,
+        4
+      ],
+      "sha256": "0c54bb214aa7c59ce616a3874d75cccffa9ad33eea618f64cd0c059e97162ca5",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\bake\\texture\\BaseColor_mip9.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_unshared",
+      "channel": "Normal",
+      "mip": 9,
+      "path": "maps/mirror_negative_exhaustive_minimum_unshared/mips/Normal_mip9.png",
+      "size": [
+        4,
+        4
+      ],
+      "sha256": "91b2b62fea2c46f7a7f85fd94a74ea8be032be73f32b3063af207317738b6e94",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\bake\\texture\\Normal_mip9.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_unshared",
+      "channel": "ORM",
+      "mip": 9,
+      "path": "maps/mirror_negative_exhaustive_minimum_unshared/mips/ORM_mip9.png",
+      "size": [
+        4,
+        4
+      ],
+      "sha256": "59e63f2d7853b7f41d5fc6a00e166f5d84f2bd8ed6c479e1c2e7f0970d473cea",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\bake\\texture\\ORM_mip9.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_unshared",
+      "channel": "AO",
+      "mip": 9,
+      "path": "maps/mirror_negative_exhaustive_minimum_unshared/mips/AO_mip9.png",
+      "size": [
+        4,
+        4
+      ],
+      "sha256": "5d83d313422584700dab9a54b26d268a3422b08845bd27cb93287b09c7478495",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\bake\\texture\\ORM_mip9.png",
+      "operation": "exact 8-bit channel 0 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_unshared",
+      "channel": "Roughness",
+      "mip": 9,
+      "path": "maps/mirror_negative_exhaustive_minimum_unshared/mips/Roughness_mip9.png",
+      "size": [
+        4,
+        4
+      ],
+      "sha256": "d67130604af7a4d48b6a59f1d44633161e10d72781a2f371b8c8a639bfbc01ce",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\bake\\texture\\ORM_mip9.png",
+      "operation": "exact 8-bit channel 1 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_unshared",
+      "channel": "Metallic",
+      "mip": 9,
+      "path": "maps/mirror_negative_exhaustive_minimum_unshared/mips/Metallic_mip9.png",
+      "size": [
+        4,
+        4
+      ],
+      "sha256": "86686d9eb005257d237bb3b85b31348df465768c082b5d210d22bf99ab7e5bfb",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\bake\\texture\\ORM_mip9.png",
+      "operation": "exact 8-bit channel 2 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_unshared",
+      "channel": "BaseColor",
+      "mip": 10,
+      "path": "maps/mirror_negative_exhaustive_minimum_unshared/mips/BaseColor_mip10.png",
+      "size": [
+        2,
+        2
+      ],
+      "sha256": "a026c26d6949b6dec0941face204b4c32805b0e8953eefe9b9e792b130c1f860",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\bake\\texture\\BaseColor_mip10.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_unshared",
+      "channel": "Normal",
+      "mip": 10,
+      "path": "maps/mirror_negative_exhaustive_minimum_unshared/mips/Normal_mip10.png",
+      "size": [
+        2,
+        2
+      ],
+      "sha256": "a6b3f1fc37ca4255c4c4af55f00a6a1a81814be13bb6bdb5b76ca22a18392ad3",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\bake\\texture\\Normal_mip10.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_unshared",
+      "channel": "ORM",
+      "mip": 10,
+      "path": "maps/mirror_negative_exhaustive_minimum_unshared/mips/ORM_mip10.png",
+      "size": [
+        2,
+        2
+      ],
+      "sha256": "d8abb7e96d0c5a397a18ff9feb48d1a9251bfdb7a587b8e60cf29b63148fe961",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\bake\\texture\\ORM_mip10.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_unshared",
+      "channel": "AO",
+      "mip": 10,
+      "path": "maps/mirror_negative_exhaustive_minimum_unshared/mips/AO_mip10.png",
+      "size": [
+        2,
+        2
+      ],
+      "sha256": "87741817f1b15ffe2f0efeec74b5f50612f09298b50f27d6e853926466bd5855",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\bake\\texture\\ORM_mip10.png",
+      "operation": "exact 8-bit channel 0 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_unshared",
+      "channel": "Roughness",
+      "mip": 10,
+      "path": "maps/mirror_negative_exhaustive_minimum_unshared/mips/Roughness_mip10.png",
+      "size": [
+        2,
+        2
+      ],
+      "sha256": "71267913323d374a01dd8c8eaf72dc44381619ff0ce5f7d82833f3ebcf0355b9",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\bake\\texture\\ORM_mip10.png",
+      "operation": "exact 8-bit channel 1 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_unshared",
+      "channel": "Metallic",
+      "mip": 10,
+      "path": "maps/mirror_negative_exhaustive_minimum_unshared/mips/Metallic_mip10.png",
+      "size": [
+        2,
+        2
+      ],
+      "sha256": "dd7b89993bde2e6c52ea00d533d1f09ac602d218251b7405d291fddc0b60cddf",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\bake\\texture\\ORM_mip10.png",
+      "operation": "exact 8-bit channel 2 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_unshared",
+      "channel": "BaseColor",
+      "mip": 11,
+      "path": "maps/mirror_negative_exhaustive_minimum_unshared/mips/BaseColor_mip11.png",
+      "size": [
+        1,
+        1
+      ],
+      "sha256": "c1ab86fc6d002cc6cd34303a9bb2614fd2b1c69bf56440ff873236460a94306d",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\bake\\texture\\BaseColor_mip11.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_unshared",
+      "channel": "Normal",
+      "mip": 11,
+      "path": "maps/mirror_negative_exhaustive_minimum_unshared/mips/Normal_mip11.png",
+      "size": [
+        1,
+        1
+      ],
+      "sha256": "b9f9363f6111ecdac77b2a9c180cb97ed5c6d698a70180cfbccc209015d13a2f",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\bake\\texture\\Normal_mip11.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_unshared",
+      "channel": "ORM",
+      "mip": 11,
+      "path": "maps/mirror_negative_exhaustive_minimum_unshared/mips/ORM_mip11.png",
+      "size": [
+        1,
+        1
+      ],
+      "sha256": "5099baff37e3b6c8fb58023ec7c22d211544a060e6dde4276e4e84b4beffdac8",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\bake\\texture\\ORM_mip11.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_unshared",
+      "channel": "AO",
+      "mip": 11,
+      "path": "maps/mirror_negative_exhaustive_minimum_unshared/mips/AO_mip11.png",
+      "size": [
+        1,
+        1
+      ],
+      "sha256": "d44c0303173ecdb8ba72a7ab688f020583b31865537e2f9ab57e56aeec687807",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\bake\\texture\\ORM_mip11.png",
+      "operation": "exact 8-bit channel 0 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_unshared",
+      "channel": "Roughness",
+      "mip": 11,
+      "path": "maps/mirror_negative_exhaustive_minimum_unshared/mips/Roughness_mip11.png",
+      "size": [
+        1,
+        1
+      ],
+      "sha256": "757c1b7d517f32517c42f6b3f05397b1214c53bce49e1fd0ac800e393baaab65",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\bake\\texture\\ORM_mip11.png",
+      "operation": "exact 8-bit channel 1 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_unshared",
+      "channel": "Metallic",
+      "mip": 11,
+      "path": "maps/mirror_negative_exhaustive_minimum_unshared/mips/Metallic_mip11.png",
+      "size": [
+        1,
+        1
+      ],
+      "sha256": "eaa4a94ea300e0d2c775968cbe42f0b5b51ceafdeb73d64e9efddf6d4e880865",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_unshared_2048\\bake\\texture\\ORM_mip11.png",
+      "operation": "exact 8-bit channel 2 extraction from ORM"
+    },
+    {
+      "method": "reseam_shared_boundary_control",
+      "channel": "BaseColor",
+      "mip": 0,
+      "path": "maps/reseam_shared_boundary_control/BaseColor.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "96688e4696672318262639c52bfd933e7a5ceb648fddca46a59b5fc897eca7ee",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_shared_boundary_control_2048\\bake\\texture\\BaseColor_mip0.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "reseam_shared_boundary_control",
+      "channel": "Normal",
+      "mip": 0,
+      "path": "maps/reseam_shared_boundary_control/Normal.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "0503bd38ffbb6b01faf641cd28925c029286fc023655d3c763764d244196db7a",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_shared_boundary_control_2048\\bake\\texture\\Normal_mip0.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "reseam_shared_boundary_control",
+      "channel": "ORM",
+      "mip": 0,
+      "path": "maps/reseam_shared_boundary_control/ORM.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "f3710eecdb167c011aa409a9983ca5eec771c8053efdbb0eb9ed83d8483b884f",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_shared_boundary_control_2048\\bake\\texture\\ORM_mip0.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "reseam_shared_boundary_control",
+      "channel": "AO",
+      "mip": 0,
+      "path": "maps/reseam_shared_boundary_control/AO.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "7368a2762f0210ba889788e2c23314e77fc184beecf5c6b5ffbe8279ed4f308a",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_shared_boundary_control_2048\\bake\\texture\\ORM_mip0.png",
+      "operation": "exact 8-bit channel 0 extraction from ORM"
+    },
+    {
+      "method": "reseam_shared_boundary_control",
+      "channel": "Roughness",
+      "mip": 0,
+      "path": "maps/reseam_shared_boundary_control/Roughness.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "8b5c2dbb86c3bd3cbe0b106b34c172f7116c6e862c742d02d652eee4f2ffb6ad",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_shared_boundary_control_2048\\bake\\texture\\ORM_mip0.png",
+      "operation": "exact 8-bit channel 1 extraction from ORM"
+    },
+    {
+      "method": "reseam_shared_boundary_control",
+      "channel": "Metallic",
+      "mip": 0,
+      "path": "maps/reseam_shared_boundary_control/Metallic.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "47409785b30cc38f1ec62f219ce1c46f885427442416c0768dc470497ef784cb",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_shared_boundary_control_2048\\bake\\texture\\ORM_mip0.png",
+      "operation": "exact 8-bit channel 2 extraction from ORM"
+    },
+    {
+      "method": "reseam_shared_repaired",
+      "channel": "BaseColor",
+      "mip": 0,
+      "path": "maps/reseam_shared_repaired/BaseColor.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "35de5de7cb0dc670636f626f9ccb2053a5aa28ca7930e45942fa16db8c686070",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_shared_repaired_2048\\bake\\texture\\BaseColor_mip0.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "reseam_shared_repaired",
+      "channel": "Normal",
+      "mip": 0,
+      "path": "maps/reseam_shared_repaired/Normal.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "3ceb4ab1d326181f751b55769e5759ca6388a563fabe59ae99e1c95c0478d786",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_shared_repaired_2048\\bake\\texture\\Normal_mip0.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "reseam_shared_repaired",
+      "channel": "ORM",
+      "mip": 0,
+      "path": "maps/reseam_shared_repaired/ORM.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "d5a8a46c1962bc9160632e1cd12bce7517f4de6476a1925cd3ab11bbd532800a",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_shared_repaired_2048\\bake\\texture\\ORM_mip0.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "reseam_shared_repaired",
+      "channel": "AO",
+      "mip": 0,
+      "path": "maps/reseam_shared_repaired/AO.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "7368a2762f0210ba889788e2c23314e77fc184beecf5c6b5ffbe8279ed4f308a",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_shared_repaired_2048\\bake\\texture\\ORM_mip0.png",
+      "operation": "exact 8-bit channel 0 extraction from ORM"
+    },
+    {
+      "method": "reseam_shared_repaired",
+      "channel": "Roughness",
+      "mip": 0,
+      "path": "maps/reseam_shared_repaired/Roughness.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "5ae80c70194c8081656a4f2c30d880b63adf77b79bbea62c80c242052a0d1316",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_shared_repaired_2048\\bake\\texture\\ORM_mip0.png",
+      "operation": "exact 8-bit channel 1 extraction from ORM"
+    },
+    {
+      "method": "reseam_shared_repaired",
+      "channel": "Metallic",
+      "mip": 0,
+      "path": "maps/reseam_shared_repaired/Metallic.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "47409785b30cc38f1ec62f219ce1c46f885427442416c0768dc470497ef784cb",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\reseam_shared_repaired_2048\\bake\\texture\\ORM_mip0.png",
+      "operation": "exact 8-bit channel 2 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_shared",
+      "channel": "BaseColor",
+      "mip": 0,
+      "path": "maps/mirror_negative_exhaustive_minimum_shared/BaseColor.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "1528871e12843cd0c00baf5af44860edcd6132c71ee90ac6f0cbe747a561e630",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\bake\\texture\\BaseColor_mip0.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_shared",
+      "channel": "Normal",
+      "mip": 0,
+      "path": "maps/mirror_negative_exhaustive_minimum_shared/Normal.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "535823131c06ddded93234eb35a14fe65f45470a47443fc10721426047c955a4",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\bake\\texture\\Normal_mip0.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_shared",
+      "channel": "ORM",
+      "mip": 0,
+      "path": "maps/mirror_negative_exhaustive_minimum_shared/ORM.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "fc8b103db1ad11d9389673d4e158c104cbbd2e793f15b31f898cd023aa4e1a9a",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\bake\\texture\\ORM_mip0.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_shared",
+      "channel": "AO",
+      "mip": 0,
+      "path": "maps/mirror_negative_exhaustive_minimum_shared/AO.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "7368a2762f0210ba889788e2c23314e77fc184beecf5c6b5ffbe8279ed4f308a",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\bake\\texture\\ORM_mip0.png",
+      "operation": "exact 8-bit channel 0 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_shared",
+      "channel": "Roughness",
+      "mip": 0,
+      "path": "maps/mirror_negative_exhaustive_minimum_shared/Roughness.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "3d753dee221577f8619d41b51c38d2d27ae3fe03074adc5f9828344decf41d4d",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\bake\\texture\\ORM_mip0.png",
+      "operation": "exact 8-bit channel 1 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_shared",
+      "channel": "Metallic",
+      "mip": 0,
+      "path": "maps/mirror_negative_exhaustive_minimum_shared/Metallic.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "47409785b30cc38f1ec62f219ce1c46f885427442416c0768dc470497ef784cb",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\bake\\texture\\ORM_mip0.png",
+      "operation": "exact 8-bit channel 2 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_shared",
+      "channel": "BaseColor",
+      "mip": 1,
+      "path": "maps/mirror_negative_exhaustive_minimum_shared/mips/BaseColor_mip1.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "sha256": "4f784d1cfdfacb59e5859869ce57805136fe5fa52659d73f1ec691c309286c37",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\bake\\texture\\BaseColor_mip1.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_shared",
+      "channel": "Normal",
+      "mip": 1,
+      "path": "maps/mirror_negative_exhaustive_minimum_shared/mips/Normal_mip1.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "sha256": "f3e1e542f319912c562048b15e6c37b1856a71654d5e05516c3fbaf6707368fa",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\bake\\texture\\Normal_mip1.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_shared",
+      "channel": "ORM",
+      "mip": 1,
+      "path": "maps/mirror_negative_exhaustive_minimum_shared/mips/ORM_mip1.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "sha256": "804a60e6a03fed04cb25b2ab3b74e0a69b5b24ed03b9671cb1c5e5938719c95b",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\bake\\texture\\ORM_mip1.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_shared",
+      "channel": "AO",
+      "mip": 1,
+      "path": "maps/mirror_negative_exhaustive_minimum_shared/mips/AO_mip1.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "sha256": "92d103ae3b35360d5c817ca0287ddaf222ce4889a230003c99128f0c56eef900",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\bake\\texture\\ORM_mip1.png",
+      "operation": "exact 8-bit channel 0 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_shared",
+      "channel": "Roughness",
+      "mip": 1,
+      "path": "maps/mirror_negative_exhaustive_minimum_shared/mips/Roughness_mip1.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "sha256": "b78024e134798f383d0f106ade5580964f97644e9ba0741eb52383472e7e65fa",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\bake\\texture\\ORM_mip1.png",
+      "operation": "exact 8-bit channel 1 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_shared",
+      "channel": "Metallic",
+      "mip": 1,
+      "path": "maps/mirror_negative_exhaustive_minimum_shared/mips/Metallic_mip1.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "sha256": "0f4b1668d119f77ceb6b86645573f088ab2341d7b284314d5df0be7226ea5d91",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\bake\\texture\\ORM_mip1.png",
+      "operation": "exact 8-bit channel 2 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_shared",
+      "channel": "BaseColor",
+      "mip": 2,
+      "path": "maps/mirror_negative_exhaustive_minimum_shared/mips/BaseColor_mip2.png",
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "ea9d53c57b13388e9125320f04cb63a09bf056ac7cea7c6103b50c430f556952",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\bake\\texture\\BaseColor_mip2.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_shared",
+      "channel": "Normal",
+      "mip": 2,
+      "path": "maps/mirror_negative_exhaustive_minimum_shared/mips/Normal_mip2.png",
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "e5a68bda5a40a7b814b97e14be2643f1e764eb7373eb64fc2f6b7d29315815b0",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\bake\\texture\\Normal_mip2.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_shared",
+      "channel": "ORM",
+      "mip": 2,
+      "path": "maps/mirror_negative_exhaustive_minimum_shared/mips/ORM_mip2.png",
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "23a1b73c668a0473152eaf11f00a8405d558b74ab2aad4523327b7239009efda",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\bake\\texture\\ORM_mip2.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_shared",
+      "channel": "AO",
+      "mip": 2,
+      "path": "maps/mirror_negative_exhaustive_minimum_shared/mips/AO_mip2.png",
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "d8acccafa1fdcf03f3bb9112f5f2f30ad1558e446d5c12ec5644fc0d53c1e58b",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\bake\\texture\\ORM_mip2.png",
+      "operation": "exact 8-bit channel 0 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_shared",
+      "channel": "Roughness",
+      "mip": 2,
+      "path": "maps/mirror_negative_exhaustive_minimum_shared/mips/Roughness_mip2.png",
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "85004ad158e3bdbabb242b2450f04b82d8de2f57e0ccdf1af5655a342b07a1f9",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\bake\\texture\\ORM_mip2.png",
+      "operation": "exact 8-bit channel 1 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_shared",
+      "channel": "Metallic",
+      "mip": 2,
+      "path": "maps/mirror_negative_exhaustive_minimum_shared/mips/Metallic_mip2.png",
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "65795a5b91030a2a433dae510d1edf494082a9cfa1153cd94f3797759f68f257",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\bake\\texture\\ORM_mip2.png",
+      "operation": "exact 8-bit channel 2 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_shared",
+      "channel": "BaseColor",
+      "mip": 3,
+      "path": "maps/mirror_negative_exhaustive_minimum_shared/mips/BaseColor_mip3.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "071122e695ac441da999623c3f77a50915c888126a1940309b28013bbf13e810",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\bake\\texture\\BaseColor_mip3.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_shared",
+      "channel": "Normal",
+      "mip": 3,
+      "path": "maps/mirror_negative_exhaustive_minimum_shared/mips/Normal_mip3.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "5bfc5c1aab08b73cb5e38c1a23fbf84d901390e8d6e12f6239a4b56e7ebf4327",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\bake\\texture\\Normal_mip3.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_shared",
+      "channel": "ORM",
+      "mip": 3,
+      "path": "maps/mirror_negative_exhaustive_minimum_shared/mips/ORM_mip3.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "373041033697c0da885fbe2f501792587c473ebc5b4cc4d98f062444b1d742cc",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\bake\\texture\\ORM_mip3.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_shared",
+      "channel": "AO",
+      "mip": 3,
+      "path": "maps/mirror_negative_exhaustive_minimum_shared/mips/AO_mip3.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "f06e89dc7f39be266a34ab9d56c628694bcc6f491e27b9fad873cfa459731143",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\bake\\texture\\ORM_mip3.png",
+      "operation": "exact 8-bit channel 0 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_shared",
+      "channel": "Roughness",
+      "mip": 3,
+      "path": "maps/mirror_negative_exhaustive_minimum_shared/mips/Roughness_mip3.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "ca2fad533ce96e99df1743e7cf62b988503a632f111d4159b35b8b3e681b03dc",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\bake\\texture\\ORM_mip3.png",
+      "operation": "exact 8-bit channel 1 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_shared",
+      "channel": "Metallic",
+      "mip": 3,
+      "path": "maps/mirror_negative_exhaustive_minimum_shared/mips/Metallic_mip3.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "5933d4c44ed2bc2f431e2698b41923a18d056b24b450540bb109e7592a547060",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\bake\\texture\\ORM_mip3.png",
+      "operation": "exact 8-bit channel 2 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_shared",
+      "channel": "BaseColor",
+      "mip": 4,
+      "path": "maps/mirror_negative_exhaustive_minimum_shared/mips/BaseColor_mip4.png",
+      "size": [
+        128,
+        128
+      ],
+      "sha256": "5a6129a4229695ecb74999e676db8709ac24c25339089b51f51b338ea1ddc8ac",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\bake\\texture\\BaseColor_mip4.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_shared",
+      "channel": "Normal",
+      "mip": 4,
+      "path": "maps/mirror_negative_exhaustive_minimum_shared/mips/Normal_mip4.png",
+      "size": [
+        128,
+        128
+      ],
+      "sha256": "a67e29925a3a821f22f6332201eeee16241bed5fdd663fcec8e26da6b30bcd02",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\bake\\texture\\Normal_mip4.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_shared",
+      "channel": "ORM",
+      "mip": 4,
+      "path": "maps/mirror_negative_exhaustive_minimum_shared/mips/ORM_mip4.png",
+      "size": [
+        128,
+        128
+      ],
+      "sha256": "8303d545d21d9790d0d4e44fb96fd6a985057537e6a705cc50b8d53c3a284249",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\bake\\texture\\ORM_mip4.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_shared",
+      "channel": "AO",
+      "mip": 4,
+      "path": "maps/mirror_negative_exhaustive_minimum_shared/mips/AO_mip4.png",
+      "size": [
+        128,
+        128
+      ],
+      "sha256": "f0aa957523055fe28a67c6c4a3953fb8d9efb2fee7d215a9ffd569ad01aed808",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\bake\\texture\\ORM_mip4.png",
+      "operation": "exact 8-bit channel 0 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_shared",
+      "channel": "Roughness",
+      "mip": 4,
+      "path": "maps/mirror_negative_exhaustive_minimum_shared/mips/Roughness_mip4.png",
+      "size": [
+        128,
+        128
+      ],
+      "sha256": "0f0fefd110a719929e09c51070982a30577c2a4ca23d433128c9f739db7eba30",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\bake\\texture\\ORM_mip4.png",
+      "operation": "exact 8-bit channel 1 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_shared",
+      "channel": "Metallic",
+      "mip": 4,
+      "path": "maps/mirror_negative_exhaustive_minimum_shared/mips/Metallic_mip4.png",
+      "size": [
+        128,
+        128
+      ],
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\bake\\texture\\ORM_mip4.png",
+      "operation": "exact 8-bit channel 2 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_shared",
+      "channel": "BaseColor",
+      "mip": 5,
+      "path": "maps/mirror_negative_exhaustive_minimum_shared/mips/BaseColor_mip5.png",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "f3901d9e241e54be7a3943677048e870ac128e6f53b7a663fc65433dd4b67f1a",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\bake\\texture\\BaseColor_mip5.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_shared",
+      "channel": "Normal",
+      "mip": 5,
+      "path": "maps/mirror_negative_exhaustive_minimum_shared/mips/Normal_mip5.png",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "5a7ae195c088898051a0ae5ca343b2d818199cc17cc623f7ccb190fd2eb3e201",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\bake\\texture\\Normal_mip5.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_shared",
+      "channel": "ORM",
+      "mip": 5,
+      "path": "maps/mirror_negative_exhaustive_minimum_shared/mips/ORM_mip5.png",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "0b3fdafd2edf0826a8dcc81b08e99d3e37051d3637019815be12f861e708a4ab",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\bake\\texture\\ORM_mip5.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_shared",
+      "channel": "AO",
+      "mip": 5,
+      "path": "maps/mirror_negative_exhaustive_minimum_shared/mips/AO_mip5.png",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "c83aefe17ef2cb1f712a277e359bbc6045728bca01db485e496261cdbf048673",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\bake\\texture\\ORM_mip5.png",
+      "operation": "exact 8-bit channel 0 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_shared",
+      "channel": "Roughness",
+      "mip": 5,
+      "path": "maps/mirror_negative_exhaustive_minimum_shared/mips/Roughness_mip5.png",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "7fe8b6fc734c1015b03ba2bf8c97267bd99141f6f5f9fe438f874ca0d45bbbe7",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\bake\\texture\\ORM_mip5.png",
+      "operation": "exact 8-bit channel 1 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_shared",
+      "channel": "Metallic",
+      "mip": 5,
+      "path": "maps/mirror_negative_exhaustive_minimum_shared/mips/Metallic_mip5.png",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "ad3d92a33d5e7480ffec17b96da3df67a2e986a4bd45e6f0cd77edf3c284cd79",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\bake\\texture\\ORM_mip5.png",
+      "operation": "exact 8-bit channel 2 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_shared",
+      "channel": "BaseColor",
+      "mip": 6,
+      "path": "maps/mirror_negative_exhaustive_minimum_shared/mips/BaseColor_mip6.png",
+      "size": [
+        32,
+        32
+      ],
+      "sha256": "a795ab25a4ead60a389e028bf9559be882aab26c2c8902634a9760d25df36415",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\bake\\texture\\BaseColor_mip6.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_shared",
+      "channel": "Normal",
+      "mip": 6,
+      "path": "maps/mirror_negative_exhaustive_minimum_shared/mips/Normal_mip6.png",
+      "size": [
+        32,
+        32
+      ],
+      "sha256": "a3a0e0eebe29df2295098cf4c9038e654dfc2b6b719c2be873d84473024f656b",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\bake\\texture\\Normal_mip6.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_shared",
+      "channel": "ORM",
+      "mip": 6,
+      "path": "maps/mirror_negative_exhaustive_minimum_shared/mips/ORM_mip6.png",
+      "size": [
+        32,
+        32
+      ],
+      "sha256": "af76b3b8cb1436bb4e87c01d6f9a3c70d44982b9eabfc62da5c9b1d4ba863d01",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\bake\\texture\\ORM_mip6.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_shared",
+      "channel": "AO",
+      "mip": 6,
+      "path": "maps/mirror_negative_exhaustive_minimum_shared/mips/AO_mip6.png",
+      "size": [
+        32,
+        32
+      ],
+      "sha256": "810a7e611c7893c873fa6755c3a2ada29997e8f49aa61516848d75755cd2b197",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\bake\\texture\\ORM_mip6.png",
+      "operation": "exact 8-bit channel 0 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_shared",
+      "channel": "Roughness",
+      "mip": 6,
+      "path": "maps/mirror_negative_exhaustive_minimum_shared/mips/Roughness_mip6.png",
+      "size": [
+        32,
+        32
+      ],
+      "sha256": "3fa2e519e84f56dd41056c08db23972abb7688bdabe5979c550b6428a6faa0e0",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\bake\\texture\\ORM_mip6.png",
+      "operation": "exact 8-bit channel 1 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_shared",
+      "channel": "Metallic",
+      "mip": 6,
+      "path": "maps/mirror_negative_exhaustive_minimum_shared/mips/Metallic_mip6.png",
+      "size": [
+        32,
+        32
+      ],
+      "sha256": "fe70b66dc65eb30141c7932818e28b15e182016d6172e79338864d1a4731c128",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\bake\\texture\\ORM_mip6.png",
+      "operation": "exact 8-bit channel 2 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_shared",
+      "channel": "BaseColor",
+      "mip": 7,
+      "path": "maps/mirror_negative_exhaustive_minimum_shared/mips/BaseColor_mip7.png",
+      "size": [
+        16,
+        16
+      ],
+      "sha256": "76c2db082c966f9c3cf8b1d093840371adbae29793921a5239bef8cd3286a693",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\bake\\texture\\BaseColor_mip7.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_shared",
+      "channel": "Normal",
+      "mip": 7,
+      "path": "maps/mirror_negative_exhaustive_minimum_shared/mips/Normal_mip7.png",
+      "size": [
+        16,
+        16
+      ],
+      "sha256": "dd738e471f230f569c6b063d8d6ca3ea646218a8e709aeddbcf6d30c59514031",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\bake\\texture\\Normal_mip7.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_shared",
+      "channel": "ORM",
+      "mip": 7,
+      "path": "maps/mirror_negative_exhaustive_minimum_shared/mips/ORM_mip7.png",
+      "size": [
+        16,
+        16
+      ],
+      "sha256": "ee5cdb617eb12c6b89070da5e56dfbc442e839cf6f6a239812eb2f33efa340e7",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\bake\\texture\\ORM_mip7.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_shared",
+      "channel": "AO",
+      "mip": 7,
+      "path": "maps/mirror_negative_exhaustive_minimum_shared/mips/AO_mip7.png",
+      "size": [
+        16,
+        16
+      ],
+      "sha256": "17430a9c6a1ab82ec1b90b3a4e0d36d8e0dc50b7ab8c6d55fb2a664d68e3d9d5",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\bake\\texture\\ORM_mip7.png",
+      "operation": "exact 8-bit channel 0 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_shared",
+      "channel": "Roughness",
+      "mip": 7,
+      "path": "maps/mirror_negative_exhaustive_minimum_shared/mips/Roughness_mip7.png",
+      "size": [
+        16,
+        16
+      ],
+      "sha256": "568d4b32830f316ac2d040f2f678d4d4c52eff80cf6acef120228574fb3be9b9",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\bake\\texture\\ORM_mip7.png",
+      "operation": "exact 8-bit channel 1 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_shared",
+      "channel": "Metallic",
+      "mip": 7,
+      "path": "maps/mirror_negative_exhaustive_minimum_shared/mips/Metallic_mip7.png",
+      "size": [
+        16,
+        16
+      ],
+      "sha256": "565bb6ae9b189dc8d7f8bd6c85be23f65373594d8df0c495f45d1f6301867062",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\bake\\texture\\ORM_mip7.png",
+      "operation": "exact 8-bit channel 2 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_shared",
+      "channel": "BaseColor",
+      "mip": 8,
+      "path": "maps/mirror_negative_exhaustive_minimum_shared/mips/BaseColor_mip8.png",
+      "size": [
+        8,
+        8
+      ],
+      "sha256": "4b957c7908b8a221d038a048e0d5510732f314f7e331885219c2fb425ef61601",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\bake\\texture\\BaseColor_mip8.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_shared",
+      "channel": "Normal",
+      "mip": 8,
+      "path": "maps/mirror_negative_exhaustive_minimum_shared/mips/Normal_mip8.png",
+      "size": [
+        8,
+        8
+      ],
+      "sha256": "dfedd3950bbdf73015e9252f2394cc0272b8ac2636098733629b7ca269eeebe4",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\bake\\texture\\Normal_mip8.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_shared",
+      "channel": "ORM",
+      "mip": 8,
+      "path": "maps/mirror_negative_exhaustive_minimum_shared/mips/ORM_mip8.png",
+      "size": [
+        8,
+        8
+      ],
+      "sha256": "a6e9199139d51d22a7caea68d6f67899d9c2437d057df9aed741fe330e5853ac",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\bake\\texture\\ORM_mip8.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_shared",
+      "channel": "AO",
+      "mip": 8,
+      "path": "maps/mirror_negative_exhaustive_minimum_shared/mips/AO_mip8.png",
+      "size": [
+        8,
+        8
+      ],
+      "sha256": "c4a4fb536c984474bb80498493e3e92d6daed91def83b577a00c07547e8a907e",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\bake\\texture\\ORM_mip8.png",
+      "operation": "exact 8-bit channel 0 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_shared",
+      "channel": "Roughness",
+      "mip": 8,
+      "path": "maps/mirror_negative_exhaustive_minimum_shared/mips/Roughness_mip8.png",
+      "size": [
+        8,
+        8
+      ],
+      "sha256": "68780d9112f446a56cb32e5da437a628cf3a3550693646395fc8c3d61ec2ba09",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\bake\\texture\\ORM_mip8.png",
+      "operation": "exact 8-bit channel 1 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_shared",
+      "channel": "Metallic",
+      "mip": 8,
+      "path": "maps/mirror_negative_exhaustive_minimum_shared/mips/Metallic_mip8.png",
+      "size": [
+        8,
+        8
+      ],
+      "sha256": "f701c76ac7fb684490c5c2fc887c4414ee56d4a071f9ab2418ab5b3fa7c4f3ef",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\bake\\texture\\ORM_mip8.png",
+      "operation": "exact 8-bit channel 2 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_shared",
+      "channel": "BaseColor",
+      "mip": 9,
+      "path": "maps/mirror_negative_exhaustive_minimum_shared/mips/BaseColor_mip9.png",
+      "size": [
+        4,
+        4
+      ],
+      "sha256": "de6e18955e36cf4f4d016ebb55437e7245dea8c79d54ba81667d93d09fa5ea50",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\bake\\texture\\BaseColor_mip9.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_shared",
+      "channel": "Normal",
+      "mip": 9,
+      "path": "maps/mirror_negative_exhaustive_minimum_shared/mips/Normal_mip9.png",
+      "size": [
+        4,
+        4
+      ],
+      "sha256": "03833158c3cd9d8a2dff86cc3a8828a218f36682b135e076cc4c96293f4bf663",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\bake\\texture\\Normal_mip9.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_shared",
+      "channel": "ORM",
+      "mip": 9,
+      "path": "maps/mirror_negative_exhaustive_minimum_shared/mips/ORM_mip9.png",
+      "size": [
+        4,
+        4
+      ],
+      "sha256": "5778a67d0493a19c46d487bfce7272b71a156cb654c3e7e5c1b10decd46b04b8",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\bake\\texture\\ORM_mip9.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_shared",
+      "channel": "AO",
+      "mip": 9,
+      "path": "maps/mirror_negative_exhaustive_minimum_shared/mips/AO_mip9.png",
+      "size": [
+        4,
+        4
+      ],
+      "sha256": "5d83d313422584700dab9a54b26d268a3422b08845bd27cb93287b09c7478495",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\bake\\texture\\ORM_mip9.png",
+      "operation": "exact 8-bit channel 0 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_shared",
+      "channel": "Roughness",
+      "mip": 9,
+      "path": "maps/mirror_negative_exhaustive_minimum_shared/mips/Roughness_mip9.png",
+      "size": [
+        4,
+        4
+      ],
+      "sha256": "f50c088a5bb6244de98c78c01abf230bc3605b2fd7c3f7bdc22e2e14030ba223",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\bake\\texture\\ORM_mip9.png",
+      "operation": "exact 8-bit channel 1 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_shared",
+      "channel": "Metallic",
+      "mip": 9,
+      "path": "maps/mirror_negative_exhaustive_minimum_shared/mips/Metallic_mip9.png",
+      "size": [
+        4,
+        4
+      ],
+      "sha256": "86686d9eb005257d237bb3b85b31348df465768c082b5d210d22bf99ab7e5bfb",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\bake\\texture\\ORM_mip9.png",
+      "operation": "exact 8-bit channel 2 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_shared",
+      "channel": "BaseColor",
+      "mip": 10,
+      "path": "maps/mirror_negative_exhaustive_minimum_shared/mips/BaseColor_mip10.png",
+      "size": [
+        2,
+        2
+      ],
+      "sha256": "833765c42e4631fd281135d9a067a7b2b0a86edd94073f5cee94c669de18ad3f",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\bake\\texture\\BaseColor_mip10.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_shared",
+      "channel": "Normal",
+      "mip": 10,
+      "path": "maps/mirror_negative_exhaustive_minimum_shared/mips/Normal_mip10.png",
+      "size": [
+        2,
+        2
+      ],
+      "sha256": "1dd2fccd0b99e4367d77b23fb89f0dc8d6c1cefd878c6a82f1eced1dd0bef458",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\bake\\texture\\Normal_mip10.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_shared",
+      "channel": "ORM",
+      "mip": 10,
+      "path": "maps/mirror_negative_exhaustive_minimum_shared/mips/ORM_mip10.png",
+      "size": [
+        2,
+        2
+      ],
+      "sha256": "ea0c7d69640b7547bd700a4ad441a047d8843124f39f5e2f66fb8920ce1eb1c4",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\bake\\texture\\ORM_mip10.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_shared",
+      "channel": "AO",
+      "mip": 10,
+      "path": "maps/mirror_negative_exhaustive_minimum_shared/mips/AO_mip10.png",
+      "size": [
+        2,
+        2
+      ],
+      "sha256": "87741817f1b15ffe2f0efeec74b5f50612f09298b50f27d6e853926466bd5855",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\bake\\texture\\ORM_mip10.png",
+      "operation": "exact 8-bit channel 0 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_shared",
+      "channel": "Roughness",
+      "mip": 10,
+      "path": "maps/mirror_negative_exhaustive_minimum_shared/mips/Roughness_mip10.png",
+      "size": [
+        2,
+        2
+      ],
+      "sha256": "1f12818e5569fb400ac2212747c33cb76cdf8357da9b2b2bb10e75135d298654",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\bake\\texture\\ORM_mip10.png",
+      "operation": "exact 8-bit channel 1 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_shared",
+      "channel": "Metallic",
+      "mip": 10,
+      "path": "maps/mirror_negative_exhaustive_minimum_shared/mips/Metallic_mip10.png",
+      "size": [
+        2,
+        2
+      ],
+      "sha256": "dd7b89993bde2e6c52ea00d533d1f09ac602d218251b7405d291fddc0b60cddf",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\bake\\texture\\ORM_mip10.png",
+      "operation": "exact 8-bit channel 2 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_shared",
+      "channel": "BaseColor",
+      "mip": 11,
+      "path": "maps/mirror_negative_exhaustive_minimum_shared/mips/BaseColor_mip11.png",
+      "size": [
+        1,
+        1
+      ],
+      "sha256": "47cc792808a7ea3e4e6c593966090a04839833d0a976d1b4668881bd250e7205",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\bake\\texture\\BaseColor_mip11.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_shared",
+      "channel": "Normal",
+      "mip": 11,
+      "path": "maps/mirror_negative_exhaustive_minimum_shared/mips/Normal_mip11.png",
+      "size": [
+        1,
+        1
+      ],
+      "sha256": "b32b4b3cbb4e976e4260fb45bfd8d3af3d77b63e1edda7392734879e19d1e939",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\bake\\texture\\Normal_mip11.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_shared",
+      "channel": "ORM",
+      "mip": 11,
+      "path": "maps/mirror_negative_exhaustive_minimum_shared/mips/ORM_mip11.png",
+      "size": [
+        1,
+        1
+      ],
+      "sha256": "2ff46ee4b18d1082579736514da2b0a348627aed6dfe8d7f2c4d0eed18ac8dba",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\bake\\texture\\ORM_mip11.png",
+      "operation": "byte-identical copy"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_shared",
+      "channel": "AO",
+      "mip": 11,
+      "path": "maps/mirror_negative_exhaustive_minimum_shared/mips/AO_mip11.png",
+      "size": [
+        1,
+        1
+      ],
+      "sha256": "d44c0303173ecdb8ba72a7ab688f020583b31865537e2f9ab57e56aeec687807",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\bake\\texture\\ORM_mip11.png",
+      "operation": "exact 8-bit channel 0 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_shared",
+      "channel": "Roughness",
+      "mip": 11,
+      "path": "maps/mirror_negative_exhaustive_minimum_shared/mips/Roughness_mip11.png",
+      "size": [
+        1,
+        1
+      ],
+      "sha256": "bbcdf188358a942c3416cb96f973eca5c4e788a0db27fd3348687cd1a8c01d5f",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\bake\\texture\\ORM_mip11.png",
+      "operation": "exact 8-bit channel 1 extraction from ORM"
+    },
+    {
+      "method": "mirror_negative_exhaustive_minimum_shared",
+      "channel": "Metallic",
+      "mip": 11,
+      "path": "maps/mirror_negative_exhaustive_minimum_shared/mips/Metallic_mip11.png",
+      "size": [
+        1,
+        1
+      ],
+      "sha256": "eaa4a94ea300e0d2c775968cbe42f0b5b51ceafdeb73d64e9efddf6d4e880865",
+      "source": "E:\\ReSem\\artifacts\\tower_uv_comparison\\round02\\evaluation\\mirror_negative_exhaustive_minimum_shared_2048\\bake\\texture\\ORM_mip11.png",
+      "operation": "exact 8-bit channel 2 extraction from ORM"
+    }
+  ],
+  "material_settings": {
+    "roughness": 0.6,
+    "metallic": 0,
+    "AO_default": 1,
+    "normal_convention": "OpenGL, explicit experiment assumption"
+  },
+  "mip_scope": "all successful versions include mip0; final shared and same-geometry unshared also include mip1-11",
+  "constant_channel_check": "all 18 successful mip0 coverage masks have ORM RGB=[255,153,0]",
+  "map_scope": "roughness, metallic and AO extracted from baked ORM; values outside covered/padded UV retain atlas defaults",
+  "normal_transport": "source normal to world; source reflection with T/N/w; frozen member transport; new target tangent encoding; normal mip renormalization"
+}
