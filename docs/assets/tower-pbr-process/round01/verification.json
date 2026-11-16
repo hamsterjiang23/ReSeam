@@ -2,7 +2,13 @@
   "layout": "1x21",
   "image_size": [
     10480,
-    1960
+    1690
+  ],
+  "display_channels": [
+    "BaseColor",
+    "Normal",
+    "Roughness",
+    "ORM"
   ],
   "organized_maps": 242,
   "byte_identical_copies": 122,
@@ -15,7 +21,18 @@
   "bundle_crc_passed": true,
   "embedded_glb_images_match_separate_maps": 3,
   "bundle_bytes": 16097646,
-  "visual_review": "all21 columns inspected in five overlapping crops; no text/image clipping observed",
+  "visual_review": "source and final columns inspected in two crops; four-channel grid and shortened cards have no observed clipping",
+  "figure_pixel_regression": {
+    "model_header_regions_pixel_identical": 21,
+    "basecolor_normal_roughness_tiles_pixel_identical": 57,
+    "ORM_tiles_repositioned_pixel_identical": 19,
+    "display_channels": [
+      "BaseColor",
+      "Normal",
+      "Roughness",
+      "ORM"
+    ]
+  },
   "ruff": "passed",
   "basedpyright": "0 errors, 0 warnings"
 }

@@ -1,6 +1,6 @@
 # 防御塔 PBR 贴图处理与单排全方法对照
 
-[查看1×21高清对照图](防御塔PBR全方法对照_1x21.png)，共21列，包含原始材质输入和20个实验版本，其中18个版本完成贴图烘焙，2个版本保留实际失败阶段。每列展示材质渲染和六个通道，最终共享版位于最右侧。`[verified: manifest.json layout/columns；channels.csv；原实验report/results.json]`
+[查看1×21高清对照图](防御塔PBR全方法对照_1x21.png)，共21列，包含原始材质输入和20个实验版本，其中18个版本完成贴图烘焙，2个版本保留实际失败阶段。每列展示材质渲染及BaseColor、Normal、Roughness、ORM四张图，最终共享版位于最右侧。`[verified: manifest.json layout/columns/display_channels；channels.csv；原实验report/results.json]`
 
 [下载最终共享版模型与PBR贴图包](最终共享版_PBR模型与贴图.zip)，包含可直接打开的GLB、六类独立贴图、完整12级MIP和表面占用掩码，共75个归档条目。包内模型嵌入的三张图与外置BaseColor、Normal、ORM逐字节一致。`[verified: verification.json bundle_members/embedded_glb_images_match_separate_maps/bundle_crc_passed]`
 

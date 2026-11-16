@@ -18,11 +18,10 @@ BASE = ROOT / "artifacts/tower_uv_comparison/round02"
 OUT = ROOT / "docs/assets/tower-pbr-process/round01"
 FINAL = "mirror_negative_exhaustive_minimum_shared"
 CONTROL = "mirror_negative_exhaustive_minimum_unshared"
-CHANNELS = ("BaseColor", "Normal", "Roughness", "Metallic", "AO", "ORM")
-COLORS = {"BaseColor": "#148476", "Normal": "#7762C7", "Roughness": "#738596",
-          "Metallic": "#B28C41", "AO": "#7C8B88", "ORM": "#BD762D"}
+CHANNELS = ("BaseColor", "Normal", "Roughness", "ORM")
+COLORS = {"BaseColor": "#148476", "Normal": "#7762C7", "Roughness": "#738596", "ORM": "#BD762D"}
 BG, INK, MUTED, TEAL = "#EDF3F7", "#17344C", "#5B7185", "#087E85"
-COL, GAP, MARGIN, HEIGHT = 480, 16, 40, 1960
+COL, GAP, MARGIN, HEIGHT = 480, 16, 40, 1690
 
 
 def read(path: Path) -> Any:
@@ -159,7 +158,7 @@ class Overview:
 
     def card(self, index: int, title: str, second: str, selected: bool = False) -> int:
         x = MARGIN + index * (COL + GAP)
-        self.draw.rounded_rectangle((x, 215, x + COL, 1840), 14, fill="white",
+        self.draw.rounded_rectangle((x, 215, x + COL, 1570), 14, fill="white",
                                     outline=TEAL if selected else "#CAD7E2", width=4 if selected else 2)
         self.text((x + 20, 233), title, 29, TEAL if selected else INK, True, COL - 40)
         self.text((x + 20, 279), second, 23, MUTED, width=COL - 40)
@@ -190,10 +189,10 @@ class Overview:
                 extension = ".jpg" if channel == "BaseColor" else ".png"
                 self.tile(x, CHANNELS.index(channel) // 2, channel, OUT / f"maps/source/{channel}{extension}")
             else:
-                constants = {"Roughness": 153, "Metallic": 0, "AO": 255}
+                constants = {"Roughness": 153}
                 self.tile(x, CHANNELS.index(channel) // 2, channel, constant=constants.get(channel))
-        for offset, value in enumerate(["BaseColor 8192² / Normal 2048²", "Roughness 0.6 / Metallic 0", "AO 1（默认值）", "[verified: S1 / S2]"]):
-            self.text((x + 20, 1615 + offset * 46), value, 23, MUTED, width=COL - 40)
+        for offset, value in enumerate(["BaseColor 8192² / Normal 2048²", "Roughness 0.6（常量）", "ORM通道含义见图底", "[verified: S1 / S2]"]):
+            self.text((x + 20, 1345 + offset * 46), value, 23, MUTED, width=COL - 40)
 
     def method(self, index: int, row: dict[str, Any]) -> None:
         names = {
@@ -230,7 +229,7 @@ class Overview:
             for i, value in enumerate(messages):
                 self.text((x + 25, 900 + i * 66), value, 27, "#B85A4B", width=430)
             self.text((x + 25, 1180), "贴图产物状态见原始记录", 25, MUTED, width=430)
-            self.text((x + 20, 1760), "[verified: S3 / S6]", 23, MUTED, width=440)
+            self.text((x + 20, 1490), "[verified: S3 / S6]", 23, MUTED, width=440)
             return
         preview = Path(row["folder"]) / "preview/material-front_right-soft-1.png"
         self.picture(preview, (x + 20, 330, 440, 400))
@@ -240,17 +239,17 @@ class Overview:
                   f"有效UV覆盖 {100 * row['coverage']:.2f}%",
                   "2K / 12级MIP / DIAGNOSTIC", "[verified: S3 / S4]"]
         for i, value in enumerate(values):
-            self.text((x + 20, 1615 + i * 46), value, 23, MUTED, width=440)
+            self.text((x + 20, 1345 + i * 46), value, 23, MUTED, width=440)
 
     def build(self) -> Path:
         self.text((MARGIN, 24), "防御塔 PBR 贴图处理过程与全方法对照", 51, INK, True)
         self.text((MARGIN, 102), "原颜色 / 法线 → 镜像来源映射 → 新UV逐面采样与法线方向转换 → 2K图集 / MIP → 材质渲染检查   [verified: S1–S5]", 31, TEAL)
-        self.text((MARGIN, 157), "每列一个版本，依次查看真实材质、BaseColor、Normal、Roughness、Metallic、AO、ORM。原始输入的灰度块表示材质常量。", 27, MUTED)
+        self.text((MARGIN, 157), "每列一个版本，依次查看真实材质、BaseColor、Normal、Roughness、ORM。原始输入的灰度块表示材质常量。", 27, MUTED)
         self.source()
         for i, row in enumerate(self.rows, 1):
             self.method(i, row)
-        self.text((MARGIN, 1862), "法线处理  读取原凹凸方向 → 镜像时反射法线/切线并修正方向符号 → 按新UV切线方向重新编码 → 各级MIP重新归一化。  [verified: S2 / S4 / S5]", 29, TEAL)
-        self.text((MARGIN, 1905), "ORM有效UV内  R=AO 1 / G=Roughness 0.6 / B=Metallic 0。最终共享版已作Agent看图保留，人工与游戏Shader状态为待验收。来源S1–S6见README与manifest.json。  [verified: S1 / S3 / S4 / S6]", 26, MUTED)
+        self.text((MARGIN, 1592), "法线处理  读取原凹凸方向 → 镜像时反射法线/切线并修正方向符号 → 按新UV切线方向重新编码 → 各级MIP重新归一化。  [verified: S2 / S4 / S5]", 29, TEAL)
+        self.text((MARGIN, 1635), "ORM有效UV内  R=AO 1 / G=Roughness 0.6 / B=Metallic 0。最终共享版已作Agent看图保留，人工与游戏Shader状态为待验收。来源S1–S6见README与manifest.json。  [verified: S1 / S3 / S4 / S6]", 26, MUTED)
         path = OUT / "防御塔PBR全方法对照_1x21.png"
         self.image.save(path, optimize=True)
         return path
@@ -286,6 +285,7 @@ def main() -> None:
         writer.writerows(maps)
     write_json(OUT / "manifest.json", {
         "layout": "1x21", "columns": ["source"] + [row["method"] for row in rows],
+        "display_channels": list(CHANNELS),
         "image": {"path": image.name, "size": list(overview.image.size), "sha256": sha(image)},
         "bundle": bundle,
         "source_ids": {key: path.relative_to(ROOT).as_posix() for key, path in source_files.items()},

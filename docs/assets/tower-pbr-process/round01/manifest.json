@@ -27,9 +27,9 @@
     "path": "防御塔PBR全方法对照_1x21.png",
     "size": [
       10480,
-      1960
+      1690
     ],
-    "sha256": "cff31af6d3aabe6c8dd6430894d47b52929d55e033f19574c3a8bbc4ce32b64c"
+    "sha256": "dfa85b4b549fe090f857c66521b272749fdcb569a441f8b873203372f29b078e"
   },
   "bundle": {
     "path": "最终共享版_PBR模型与贴图.zip",
@@ -175,7 +175,7 @@
     "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_shared_2048/bake/texture/material_metadata.json": "3618fca6f4e272776f72dc97f6f99c653d9b0e1d8ccdbeaf24acd8b20ec1a305",
     "src/reseam/agent_tools/pbr_reuse.py": "cc5583d82bcab1018d8a40ae135c829c6a8c4550c64810dd1c011d4760b64266",
     "artifacts/tower_uv_comparison/round02/report/appearance_review.json": "253490f787587eb585efa067d285fa0d6f494c042f396b36fd6337371f1a1f7c",
-    "scripts/build_tower_pbr_process.py": "ea739e27c91f30686638c6ec873d932d2ba91dc1328f19a9eef2ba1762933acf",
+    "scripts/build_tower_pbr_process.py": "681731b29945c986a91e595ddfc1228f2bd65429669d89957e37132c33eef915",
     "src/reseam/agent_tools/mirror_pbr_reference.py": "bdc3a0207a066279435683f5b504706da5d815b57b9a37d8661311e52565902f",
     "scripts/agent_pbr_binding.py": "6427d65b484b160e56ecec8bc4f9525cbdd0fb5487916cccf22c351eafa162a6",
     "artifacts/tower_uv_comparison/round02/evaluation/mirror_negative_exhaustive_minimum_shared_2048/export/asset.glb": "fbd02a1c2bf4d2d51681bb083f62cb316c76653eff65e2b6fce2f5d4cc256ebd",
@@ -3467,5 +3467,11 @@
   "mip_scope": "all successful versions include mip0; final shared and same-geometry unshared also include mip1-11",
   "constant_channel_check": "all 18 successful mip0 coverage masks have ORM RGB=[255,153,0]",
   "map_scope": "roughness, metallic and AO extracted from baked ORM; values outside covered/padded UV retain atlas defaults",
-  "normal_transport": "source normal to world; source reflection with T/N/w; frozen member transport; new target tangent encoding; normal mip renormalization"
+  "normal_transport": "source normal to world; source reflection with T/N/w; frozen member transport; new target tangent encoding; normal mip renormalization",
+  "display_channels": [
+    "BaseColor",
+    "Normal",
+    "Roughness",
+    "ORM"
+  ]
 }
