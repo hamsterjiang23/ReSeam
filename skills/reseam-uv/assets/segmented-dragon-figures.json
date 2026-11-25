@@ -1,0 +1,50 @@
+{
+  "figures": [
+    {
+      "file": "segmented-dragon-layout.png",
+      "sha256": "ea4cd3e2fee4300f1746e8a0959429ca7672f5e39b0a1d268d7681356792089c",
+      "size": [
+        1200,
+        840
+      ],
+      "source": "output/zhihu-reseam-20261125/figures/05-per-part-layout.png",
+      "source_sha256": "1c5d8217a8c570f130785bb2c0b06feb24930d1f3d3f7dc6ea0416d7ec35a8c4",
+      "source_size": [
+        1500,
+        1050
+      ],
+      "operation": "proportional resize only; no content or result changes"
+    },
+    {
+      "file": "segmented-dragon-shared-control.png",
+      "sha256": "55e7f2d8450cfd2bd51f214f7d7750bbacf08b6198e1c9cabd79b9cd8bd40f1a",
+      "size": [
+        1135,
+        1400
+      ],
+      "source": "output/zhihu-reseam-20261125/figures/06-same-geometry-comparison.png",
+      "source_sha256": "0348a740f3aeff3e02ea9c8944bb7838a3ef6ef8b7096b25ba5d42a80756f978",
+      "source_size": [
+        1500,
+        1850
+      ],
+      "operation": "proportional resize only; no content or result changes"
+    },
+    {
+      "file": "segmented-dragon-fragment-rollback.png",
+      "sha256": "db321782281e0dd907f0dc0e6887bb5a0bae552664dd504ad82512a121d95e4c",
+      "size": [
+        1200,
+        839
+      ],
+      "source": "output/zhihu-reseam-20261125/figures/07-fragment-rollback.png",
+      "source_sha256": "2c41416ae1c0d5be038dd9b5549b4d539ac956613cf7facec0dccb7eb9e86f8f",
+      "source_size": [
+        1660,
+        1160
+      ],
+      "operation": "proportional resize only; no content or result changes"
+    }
+  ],
+  "scope": "actual production comparison figures; images do not confer acceptance on a new asset"
+}

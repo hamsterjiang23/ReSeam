@@ -1,9 +1,21 @@
 ---
 name: reseam-uv
-description: 在 ReSeam 仓库通过 JSON CLI 分析静态网格，完成同模型 UV 共享、真实合岛、紧凑排布、烘焙与对照导出；支持已授权的镜像变体，不负责生成模型或自动认可艺术质量。
+description: 在 ReSeam 仓库通过 JSON CLI 分析静态网格，完成同模型 UV 共享、真实合岛、紧凑排布、烘焙、具名交付与制作／baseline对比图；支持已授权的镜像变体，不负责生成模型或自动认可艺术质量。
 ---
 
 # ReSeam UV 复用
+
+## 按需借鉴制作案例
+
+需要选择制作路线、用户指定参考历史做法、遇到已有案例覆盖的症状，或对应/展开/合岛/烘焙反复失败时，先查 [制作案例索引](examples/index.md)，再读匹配的案例。索引覆盖原UV保留、选区外碎片、镜像细线岛、白爪错贴、PBR投射黑线及硬表面合岛等问题。直接查询参数时按当前 `tools describe` 操作。案例按问题加载。`[opinion]`
+
+借鉴后在当前任务记录中简要写明案例、匹配依据、采用的决策和资产差异。历史事实沿案例所列仓库根相对路径查证，源码仓库定位沿用 [环境预检](references/environment-setup.md)。重新取得当前面/边ID、状态哈希、对称平面、材质来源、参数和验收要求。镜像改模依据当前资产授权，历史质量结论按其原范围保留。`[opinion]`
+
+## 可复用制作工具
+
+逐部件重展开、小样制作、具名多对象交付或历史／baseline对比出图时，读取 [工作流工具](references/workflows.md)，通过 [统一入口](scripts/reseam_workflow.py) 调用 `rebuild`、`preview`、`collect`、`report`。最小请求见 [rebuild](requests/rebuild.json)、[preview准备](requests/preview-prepare.json)、[preview烘焙](requests/preview-bake.json)、[collect](requests/collect.json)、[report](requests/report.json)，辅助工具清单见 [tools.json](scripts/tools.json)。这些入口编排现有JSON工具；部件清理与镜像仍按当前资产授权，工具执行不自动认可外观。`[opinion]`
+
+`preview` 先准备冻结目标和差异图，由Agent实际看图记录后再烘焙；`report` 读取已有结果，只有显式请求才补渲染。安装包中的源码快照按内容哈希匹配，环境缺失按 [全量安装合同](references/full-installation.md) 处理。`[opinion]`
 
 ## 美术操作与目视保留
 
@@ -14,6 +26,8 @@ description: 在 ReSeam 仓库通过 JSON CLI 分析静态网格，完成同模�
 查看实际准备的前后角度再记录意见，`reviewer=agent` 不能写成 `human`。模型已经没有的法线等通道不补造。`artist.preview` 用 Blender 读入实际 GLB，不代表 Unity 或用户 GPU 验收。工作台按钮输出可复制的请求 JSON，由 CLI/Agent 执行。
 
 ## 首次使用与依赖缺失
+
+用户要求“一键安装”“全量安装”或安装全部依赖与工具时，读取 [全量安装合同](references/full-installation.md) 和 [依赖清单](references/install-manifest.json)，按清单逐项准备全部后端、合并本机配置并实际冒烟。该请求采用全量模式，Agent持续处理可完成的项目，并记录每项可用性及具体阻碍。`[opinion]`
 
 首次到一台机器、找不到 `reseam` 命令、运行时配置缺失或后端启动失败时，先读
 [环境预检与按需安装](references/environment-setup.md)，由当前Agent定位仓库、检查并安装
@@ -35,7 +49,9 @@ uv run reseam tools run <工具名> --request <request.json> --output <从未存
 
 ## 执行路线
 
-准备法线烘焙或解释硬边/UV问题时，先读 [UV 与法线烘焙流程](../../docs/uv-normal-baking-workflow.md)，调用 `material.preflight`。分别读取源法线与实际导出目标法线、UV采样和投射状态；`pass/warn/fail/not_checked` 不授权自动改模或验收。显式提供实际分辨率/留边/mip；缺高模不补造射线命中。当前平面目标法线可能与光滑源模型不同，先解释差异再决定现有工具的修正动作。`[verified: preflight.py preflight、normal_uv_audit；opinion: 调用顺序]`
+用户要求按part整理UV时，先读 [分割部件流程](references/segmented-parts.md)，用 `asset.prepare_parts` 保留身份与来源，逐部件重建必要切口、真实合岛并清理小片，再选择镜像／共享及统一图集。不能只识别部件、保留旧UV或做堆叠就宣称完成。小片优先按原边归位／合岛，删除须在新变体中看真实前后图；真实细节片不能因UV小而盲删。先512小样，再做同几何共享／无共享对照。`[opinion]`
+
+准备法线烘焙或解释硬边/UV问题时，先读仓库根相对路径 `docs/uv-normal-baking-workflow.md`，调用 `material.preflight`。分别读取源法线与实际导出目标法线、UV采样和投射状态；`pass/warn/fail/not_checked` 不授权自动改模或验收。显式提供实际分辨率/留边/mip；缺高模不补造射线命中。当前平面目标法线可能与光滑源模型不同，先解释差异再决定现有工具的修正动作。`[verified: preflight.py preflight、normal_uv_audit；opinion: 调用顺序]`
 
 用户只需给模型和外观/复用目标，由Agent选择已有工具，不要求用户逐个挑后端。
 需要重新规划切缝时，默认收敛为 **OptCuts 初始切缝 → Agent 局部合岛/兼容区域复用 → 排布与烘焙验收**；

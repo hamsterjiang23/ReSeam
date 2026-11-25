@@ -8,6 +8,20 @@ from typing import cast
 Handler = Callable[[dict[str, object], Path, float], dict[str, object]]
 
 TOOLS: dict[str, tuple[str, str, str, dict[str, object]]] = {
+    "asset.prepare_parts": ("parts", "prepare_parts", "Freeze part sources, optionally mirror selected parts, assemble with explicit source ancestry.",
+                            {"sources": "nonempty [{id,path,...asset.import options,transform?:affine4x4}] OR {id,snapshot,state_hash?,transform?}; GLB/FBX/OBJ or verified existing snapshot",
+                             "segmentation_reference": "optional part GLB already in assembly coordinates; one source only, no explicit parts; transfer nearest-surface centroid labels with three interior witnesses, maximum distance .02 source diagonal; disputed boundary faces reported; source geometry and UV preserved",
+                             "placement": "required source_world; transforms map imported world coordinates into assembly space; never infer placement",
+                             "parts": "optional [{id,source,objects:[node names] OR faces:[source face IDs],name?,geometry?,uv_policy?,protected_faces?,cap_faces?,rationale?}]; absent selects each imported object",
+                             "geometry": "per-part {mode:keep(default)} | {mode:mirror_half,axis:x|y|z,offset,keep_positive} | {mode:mirror_from,master_part,axis,offset}; assembly-space plane; master must keep",
+                             "uv_policy": "per-part exclusive(default)|candidate|shared; shared grants exact mirrored correspondence only; keep parts use reuse.check_pair/apply",
+                             "allow_geometry_change": "required true for any mirror operation; other parts retain geometry up to recorded float32 export precision",
+                             "allow_partial": "false; true explicitly permits omitted source faces, reported",
+                             "material_scope": "basecolor(default)|geometry; geometry explicitly permits missing textures and initializes missing UV with xatlas; no color quality claim",
+                             "projected_reference": "optional single textured GLB in assembly coordinates; geometry scope only; explicit nearest-surface BaseColor sampling with frozen original-part lineage; correspondence/appearance unverified",
+                             "projection_max_fraction": ".02; positive original assembly diagonal fraction for projected_reference",
+                             "blender": "optional executable for FBX/OBJ import",
+                             "note": "outputs parts.json, part_lineage.npz, grouped snapshot + same-geometry unshared snapshot; no automatic packing or appearance approval; BaseColor source normalization requires opaque 0-1 UV textures"}),
     "asset.repair_normals": ("normal_policy", "repair_normals", "Explicit local repair variant for native Mikk invalid corner frames, preserving geometry and UV.",
                              {"note": "imported corner normals required; affected equal-normal fans only, max three passes; per-corner angles and unchanged geometry recorded"}),
     "material.preflight": ("preflight", "preflight", "Read-only normal/UV, atlas and finite Blender ray diagnostics.",
@@ -133,7 +147,8 @@ TOOLS: dict[str, tuple[str, str, str, dict[str, object]]] = {
                        "protected_faces": "optional whole-face IDs", "role": "reuse_candidate",
                        "rationale": "Agent decision reason", "evidence": "string describing source views or inspection evidence"}),
     "uv.reparameterize": ("reparameterize", "reparameterize", "Rebuild regional UV with an explicit geometry backend.",
-                          {"faces": "required whole-face IDs", "backend": "harmonic|optcuts|blender_lscm|blender_abf|blender_minimum_stretch",
+                          {"pack_after": "true(default); false stages regional UV without global packing/overlap acceptance; requires explicit uv.pack and rebake after all parts",
+                           "faces": "required whole-face IDs", "backend": "harmonic|optcuts|blender_lscm|blender_abf|blender_minimum_stretch",
                            "initial_uv": "existing|geometry; geometry supplies only requested cut geometry to OptCuts, discarding old UV warm start; original asset triangles retained",
                            "seam_edges": "optional original vertex-ID pairs; explicit list rebuilds regional UV connectivity, [] removes old internal UV seams",
                            "note": "immutable child; original triangles and geometry retained; rebake required"}),
@@ -262,7 +277,7 @@ def describe(name: str) -> dict[str, object]:
         raise ValueError("UNKNOWN_TOOL:" + name)
     module, function, description, parameters = TOOLS[name]
     common: dict[str, object] = {"timeout_seconds": "300; positive wall-clock deadline"}
-    if name != "asset.import":
+    if name not in {"asset.import", "asset.prepare_parts"}:
         common.update({"snapshot": "required snapshot.json path or snapshot directory",
                        "state_hash": "optional expected immutable snapshot hash"})
     if module in {"geometry", "reparameterize", "seam_plans"}:

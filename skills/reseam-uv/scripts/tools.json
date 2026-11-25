@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "entrypoint": "reseam_workflow.py",
+  "execution": "python -X utf8 <installed-skill>/scripts/reseam_workflow.py <command> --request <absolute-json> --output <new-directory> [--repo <matching-checkout>]",
+  "dependency_check": "python -X utf8 <installed-skill>/scripts/reseam_workflow.py --check [--repo <matching-checkout>]",
+  "core_tool_catalog": "reseam tools list/describe supplies the actual core JSON CLI catalog; these four helpers are separate orchestration commands",
+  "commands": [
+    {
+      "name": "rebuild",
+      "purpose": "逐部件重展开、保留失败并回退父状态",
+      "request": "../requests/rebuild.json",
+      "dependencies": ["matching_reseam_source", "selected_unwrap_backend"],
+      "acceptance": "provisional UV only; requires global pack, rebake and actual appearance review"
+    },
+    {
+      "name": "preview",
+      "purpose": "先冻结目标和看图，再烘焙小样与独立回读",
+      "requests": ["../requests/preview-prepare.json", "../requests/preview-bake.json"],
+      "dependencies": ["matching_reseam_source", "configured_blender_for_concave_packing"],
+      "acceptance": "target_review required before bake; diagnostic GLB is not final visual or PBR acceptance"
+    },
+    {
+      "name": "collect",
+      "purpose": "具名多对象GLB、贴图和评审交付核验",
+      "request": "../requests/collect.json",
+      "dependencies": ["matching_reseam_source", "explicit_export_bake_review_bindings"],
+      "acceptance": "retain actual reviewer and numeric/material scope; verify geometry, UV, texture and complete part coverage"
+    },
+    {
+      "name": "report",
+      "purpose": "历史与baseline的实际颜色、贴图、棋盘格和UV对比",
+      "request": "../requests/report.json",
+      "dependencies": ["matching_reseam_source", "matplotlib", "available_evidence_and_font"],
+      "acceptance": "read-only evidence composition; render_missing is explicit; failures and different geometry/protocol groups remain visible"
+    }
+  ]
+}

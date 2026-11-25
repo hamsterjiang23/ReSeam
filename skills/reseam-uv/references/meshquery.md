@@ -51,6 +51,8 @@ SQL 表名为单数 `face`、`edge`；完整结构可查询 `SELECT name,sql FRO
 
 ## 从真实失败修订选区
 
+出现选区外碎片或共享目标特征错位时，按 [制作案例索引](../examples/index.md) 查阅 [能量刀旧岛闭包](../examples/energy-blade-reuse.md)、[历史龙翼选区](../examples/legacy-dragon-reuse.md) 或 [Tripo蓝龙部件共享](../examples/tripo-dragon-basecolor-reuse.md)。先比较失败与修正的输入范围，再选择当前资产的操作。`[opinion]`
+
 重展开前检查选区切穿了哪些旧岛。不能只看选区内部从多少块变成一块，还要比较全模型岛数：外部残片可能抵消收益。
 可用 `SELECT id AS face_id FROM face WHERE chart_id IN (SELECT DISTINCT chart_id FROM face WHERE id IN (<已观察选区的原面ID>))`
 获得完整旧岛闭包候选，再检查是否扩大到保护面或不应改动的部件。不得自动覆盖保护区；闭包不合适时保留原状态。

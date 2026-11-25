@@ -1,0 +1,12 @@
+{
+  "stage": "bake",
+  "preparation": "C:/ReSeam-task/prepare/preparation.json",
+  "target_review": {
+    "target_hash": "REPLACE_WITH_PREPARATION_TARGET_HASH",
+    "decision": "keep",
+    "reviewer": "agent",
+    "reviewed_cameras": [],
+    "notes": "REPLACE_WITH_ACTUAL_SOURCE_TARGET_DIFFERENCE_OBSERVATIONS"
+  },
+  "timeout_seconds": 300
+}

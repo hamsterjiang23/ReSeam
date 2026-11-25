@@ -149,6 +149,8 @@
 
 ## 案例与使用边界
 
+需要借鉴实际制作决策时，从 [制作案例索引](../examples/index.md) 选择案例。[Tripo蓝龙](../examples/tripo-dragon-basecolor-reuse.md) 收录原UV保留、合岛、中线薄条和跨部位共享；[防御塔](../examples/tower-pbr-reuse.md) 与 [蓝龙PBR](../examples/blue-dragon-pbr-reuse.md) 提供多通道处理及失败定位入口。按当前问题读取对应阶段，并核实当前资产的授权和来源身份。`[opinion]`
+
 仓库案例按机制定位：总过程在 `docs/results/dragon-final-workflow-retrospective.md`，固定形状排布在 `docs/results/dragon-packing-search.md`，中线薄条修复在 `docs/results/dragon-midplane-cleanup.md`。对应数据分别位于 `docs/assets/dragon-uv-final/`、`dragon-packing-search/`、`dragon-midplane-cleanup/`。这些是仓库根目录相对定位提示，不是相对本机安装目录的链接；缺少案例文件时本workflow仍应独立可用，不能依赖作者本机历史路径。`[opinion]`
 
 龙案例说明：精确镜像建立共享后，ABF++部件重展开与脚底切口改善了碎片和局部外观；不是所有资产都应优先ABF++，也不是固定岛数或固定切口可迁移。现有工具没有输出的分量统计、独立回读或图像比较不能凭空填充：先查询现有工具输出与项目核验入口，仍缺失则记录证据缺口，不声称已验证。`[opinion]`

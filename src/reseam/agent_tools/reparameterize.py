@@ -10,7 +10,7 @@ import numpy as np
 from scipy.sparse import csr_matrix
 from scipy.sparse.linalg import spsolve
 
-from ..budget_state import embed_region
+from ..budget_state import BudgetState, embed_region
 from ..mesh import chart_labels, make_mesh, read_obj, state_from_corner_uv, write_obj
 from ..runtime import linux_path, read_runtime, run_process, wsl_command
 from ..types import FloatArray, IntArray, MeshState
@@ -201,6 +201,9 @@ def reparameterize(request: dict[str, object], output: Path, deadline: float) ->
     initial_uv = request.get("initial_uv", "existing")
     if initial_uv not in ("existing", "geometry"):
         raise ValueError("UNKNOWN_REPARAMETERIZATION_INITIAL_UV")
+    pack_after = request.get("pack_after", True)
+    if type(pack_after) is not bool:
+        raise ValueError("PACK_AFTER_BOOLEAN_REQUIRED")
     cut = cut_region(base.surface, faces, request.get("seam_edges", []), deadline)
     local_mesh, local = cut.surface.mesh, cut.surface
     record: dict[str,object] = {
@@ -266,19 +269,33 @@ def reparameterize(request: dict[str, object], output: Path, deadline: float) ->
     record["result_chart_count"] = int(chart_labels(original_local).max()) + 1
     record["result_corner_uv_ids"] = original_local.uv_faces.tolist()
     profile = _profile(request)
-    proposed = _packed(embed_region(base,original_local,faces,None), profile,deadline=deadline)
-    report = geometry_report(proposed,profile)
-    record["geometry"] = report
-    write_json(output/"reparameterization.json",record)
     from .artist import basic_check
     from .state import Snapshot
+    if not np.isfinite(original_local.uv).all():
+        record["basic_check"] = {"finite_uv": False}
+        write_json(output/"reparameterization.json",record)
+        raise ValueError("UNRENDERABLE_UV_REPAIR_NONFINITE_OR_ZERO_AREA")
+    local_basic = basic_check(Snapshot(BudgetState(original_local), {}, output, "", snapshot.asset_id))
+    if not local_basic["finite_uv"] or local_basic["zero_area_faces"]:
+        record["basic_check"] = local_basic
+        write_json(output/"reparameterization.json",record)
+        raise ValueError("UNRENDERABLE_UV_REPAIR_NONFINITE_OR_ZERO_AREA")
+    embedded = embed_region(base,original_local,faces,None)
+    proposed = _packed(embedded, profile,deadline=deadline) if pack_after else embedded
+    report = geometry_report(proposed,profile) if pack_after else {
+        "valid": None, "hard_valid": None, "scope": "global_packing_and_overlap_deferred_not_checked"}
+    record["pack_after"] = pack_after
+    record["geometry"] = report
+    write_json(output/"reparameterization.json",record)
     visual = request.get("acceptance_policy", snapshot.metadata.get("artist_acceptance_policy")) == "visual"
     if visual and basic_check(Snapshot(proposed, {}, output, "", snapshot.asset_id))["zero_area_faces"]:
         raise ValueError("UNRENDERABLE_UV_REPAIR_ZERO_AREA")
-    if not report["hard_valid"] and not visual:
+    if pack_after and not report["hard_valid"] and not visual:
         return {"status":"REJECTED","execution_success":True,"reason":"REPARAMETERIZATION_GEOMETRY_REJECTED",
                 "report":str(output/"reparameterization.json")}
-    result = save_snapshot(proposed,output/"snapshot",_edited_metadata(snapshot,"uv.reparameterize",profile),snapshot)
+    metadata = _edited_metadata(snapshot,"uv.reparameterize",profile)
+    metadata["requires_pack"] = not pack_after
+    result = save_snapshot(proposed,output/"snapshot",metadata,snapshot)
     return {**snapshot_result(result),"status":"OK","execution_success":True,
             "geometry_passed":report["valid"],"hard_geometry_passed":report["hard_valid"],"requires_rebake":True,
-            "report":str(output/"reparameterization.json")}
+            "report":str(output/"reparameterization.json"), "requires_pack": not pack_after}

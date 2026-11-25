@@ -1,5 +1,7 @@
 # 环境预检与按需安装
 
+用户明确要求一键或全量安装时，转到 [全量安装合同](full-installation.md) 并处理 [完整依赖清单](install-manifest.json)。下文按需选择后端的默认值适用于普通制作任务。`[opinion]`
+
 当机器首次使用本Skill、`reseam`找不到、配置缺失或工具因依赖失败时，Agent执行本页，
 解决环境后继续原任务。Skill提供决策指引；执行器、适配器和锁定依赖来自ReSeam仓库。
 不假定其它机器有作者的盘符、模型目录、WSL发行版或Python环境。`[opinion]`

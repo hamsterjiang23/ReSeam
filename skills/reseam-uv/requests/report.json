@@ -1,0 +1,39 @@
+{
+  "cases": [
+    {
+      "id": "unshared",
+      "title": "相同几何，无共享",
+      "snapshot": "C:/ReSeam-task/unshared/pack/snapshot/snapshot.json",
+      "bake": "C:/ReSeam-task/unshared/bake/bake.json",
+      "validation": "C:/ReSeam-task/unshared/validate/validation.json",
+      "images": {
+        "basecolor": "C:/ReSeam-task/unshared/views/front.png",
+        "checker": "C:/ReSeam-task/unshared/checker/front.png",
+        "uv": "C:/ReSeam-task/unshared/inspect/uv.png",
+        "texture": "C:/ReSeam-task/unshared/bake/texture/BaseColor_mip0.png"
+      },
+      "evidence": "C:/ReSeam-task/summary.json",
+      "record_path": ["rows", 0],
+      "status": "REPLACE_WITH_ACTUAL_RECORDED_STATUS"
+    },
+    {
+      "id": "shared",
+      "title": "相同几何，共享",
+      "snapshot": "C:/ReSeam-task/shared/pack/snapshot/snapshot.json",
+      "bake": "C:/ReSeam-task/shared/bake/bake.json",
+      "validation": "C:/ReSeam-task/shared/validate/validation.json",
+      "images": {
+        "basecolor": "C:/ReSeam-task/shared/views/front.png",
+        "checker": "C:/ReSeam-task/shared/checker/front.png",
+        "uv": "C:/ReSeam-task/shared/inspect/uv.png",
+        "texture": "C:/ReSeam-task/shared/bake/texture/BaseColor_mip0.png"
+      },
+      "evidence": "C:/ReSeam-task/summary.json",
+      "record_path": ["rows", 1],
+      "status": "REPLACE_WITH_ACTUAL_RECORDED_STATUS"
+    }
+  ],
+  "overview": ["unshared", "shared"],
+  "history": ["unshared", "shared"],
+  "render_missing": false
+}

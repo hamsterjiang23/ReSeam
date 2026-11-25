@@ -18,7 +18,9 @@ uv run reseam tools run <工具名> --request <绝对路径.json> --output <新�
 
 ## 决策依据
 
-烘焙前用 `material.preflight` 交叉检查实际法线与 UV，并执行显式高模/Cage 投射诊断，详见 [UV 与法线烘焙流程](../../docs/uv-normal-baking-workflow.md)。`mesh.hard_edges` 的候选过滤与预检目的不同：原多边形内部对角线上的真实法线不连续仍须报告。不要把“硬边需 UV 接缝”倒推为所有 UV 接缝都设硬边，也不按固定 1 像素验收所有 mip。`[verified: preflight.py normal_uv_audit、uv_sampling_audit；opinion: 使用规则]`
+选择硬表面路线、局部合岛效果不佳或normal/AO线索与外观不一致时，先查主Skill的 [制作案例索引](../reseam-uv/examples/index.md)，按问题读取 [Chloe硬边与拉伸取舍](../reseam-uv/examples/chloe-hard-surface.md) 或 [Tripo匕首局部合岛](../reseam-uv/examples/tripo-spike-hard-surface.md)。记录借鉴的决策，重新确认当前原边、来源通道与质量要求。`[opinion]`
+
+烘焙前用 `material.preflight` 交叉检查实际法线与 UV，并执行显式高模/Cage 投射诊断，详见仓库根相对路径 `docs/uv-normal-baking-workflow.md`。`mesh.hard_edges` 的候选过滤与预检目的不同：原多边形内部对角线上的真实法线不连续仍须报告。不要把“硬边需 UV 接缝”倒推为所有 UV 接缝都设硬边，也不按固定 1 像素验收所有 mip。`[verified: preflight.py normal_uv_audit、uv_sampling_audit；opinion: 使用规则]`
 
 当前默认主线收敛为：**OptCuts 初始切缝 → Agent 审阅与局部改缝合岛 → 排布和烘焙验收**。
 使用现有工具，不再为每种策略增加入口。先 `uv.baseline method=optcuts`，读取实际UV与原边接缝；

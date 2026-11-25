@@ -1,0 +1,19 @@
+{
+  "snapshot": "C:/ReSeam-task/prepared/snapshot/snapshot.json",
+  "state_hash": "REPLACE_WITH_CURRENT_STATE_HASH",
+  "resolution": 512,
+  "parts": [
+    {
+      "id": "REPLACE_WITH_CURRENT_PART_ID",
+      "backend": "optcuts",
+      "seam_edges": []
+    }
+  ],
+  "profile": {
+    "resolution": 512,
+    "gap_pixels": 8,
+    "border_pixels": 8,
+    "quality_constraints": false
+  },
+  "timeout_seconds": 300
+}

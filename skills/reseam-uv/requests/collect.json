@@ -1,0 +1,9 @@
+{
+  "snapshot": "C:/ReSeam-task/prepare/pack/snapshot/snapshot.json",
+  "state_hash": "REPLACE_WITH_CURRENT_STATE_HASH",
+  "model": "C:/ReSeam-task/visual_export/asset.glb",
+  "export_manifest": "C:/ReSeam-task/visual_export/visual-export.json",
+  "parts": "C:/ReSeam-task/prepared/parts.json",
+  "bake": "C:/ReSeam-task/bake/bake/bake.json",
+  "review": "C:/ReSeam-task/visual_keep/review.json"
+}

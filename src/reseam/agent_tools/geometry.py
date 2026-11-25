@@ -449,6 +449,8 @@ def _edited_metadata(snapshot: Snapshot, operation: str, profile: dict[str, obje
     for key in ("bake", "bake_result", "quality", "quality_result", "validation", "diagnostic_candidate"):
         metadata.pop(key, None)
     metadata.update(last_operation=operation, geometry_profile=profile, requires_rebake=True)
+    if operation == "uv.pack":
+        metadata["requires_pack"] = False
     return metadata
 
 

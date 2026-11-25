@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "installation_executor": "agent",
+  "default_profile_for_explicit_full_install": "all",
+  "repository": "https://github.com/hamsterjiang23/ReSeam.git",
+  "source_revision": "bundle source_revision is historical context; runtime-manifest.json file hashes identify the actual executable source",
+  "primary_platform": "Windows with WSL for existing native and research adapters",
+  "components": [
+    {
+      "id": "core",
+      "install": "Git, uv, Python 3.11, uv sync --locked --all-extras",
+      "source": "pyproject.toml and uv.lock",
+      "smoke": "reseam tools list, each tools describe, a small CPU import/inspect/bake/export"
+    },
+    {
+      "id": "blender",
+      "install": "Reuse a tested Blender, otherwise official portable Blender 4.5.11",
+      "runtime_keys": [
+        "blender"
+      ],
+      "source": "baseline/README.md and official Blender release archive",
+      "smoke": "background startup, local unwrap, concave packing, actual GLB render"
+    },
+    {
+      "id": "optcuts",
+      "install": "Pinned baseline/OptCuts, WSL, compiler, CMake and actual build dependencies",
+      "runtime_keys": [
+        "wsl_distro",
+        "optcuts_binary"
+      ],
+      "source": ".gitmodules, baseline/sources.json, baseline/OptCuts/README.md",
+      "smoke": "uv.baseline method=optcuts on a small connected mesh"
+    },
+    {
+      "id": "mikktspace",
+      "install": "GNU-compatible host compiler and scripts/build_budget_mikktspace.py",
+      "source": "scripts/build_budget_mikktspace.py SOURCE_LOCKS",
+      "smoke": "locked native library symbol check and a small PBR bake/preflight"
+    },
+    {
+      "id": "compression",
+      "install": "compression extra from uv.lock",
+      "source": "pyproject.toml project.optional-dependencies.compression",
+      "smoke": "material.encode BC1 and BC7 with actual decode"
+    },
+    {
+      "id": "partuv_partfield",
+      "install": "Pinned PartUV, CUDA-capable PyTorch, torch-scatter, PartField and checkpoint",
+      "runtime_keys": [
+        "wsl_distro",
+        "partuv_python",
+        "partfield_checkpoint",
+        "partfield_sha256"
+      ],
+      "checkpoint_sha256": "463efc8a3afd3913142aa025e0125c00f16ef452b8de6a132ebe32bbe7877ee4",
+      "source": "baseline/PartUV/README.md, baseline/adapters/partuv_worker.py",
+      "smoke": "adapter's PartField inference and a small PartUV UV output"
+    },
+    {
+      "id": "flatten_anything",
+      "install": "Pinned FAM, GPU environment compatible with runtime.partuv_python, rebuilt kNN extension",
+      "runtime_keys": [
+        "partuv_python"
+      ],
+      "source": "baseline/FlattenAnything/README.md, baseline/adapters/flatten_anything.py",
+      "smoke": "adapter run with 64 points and 10 iterations on a small mesh"
+    },
+    {
+      "id": "continuous_solver",
+      "install": "Pinned references/OptCuts prepared build and scripts/build_native.py",
+      "runtime_keys": [
+        "wsl_distro",
+        "continuous_binary"
+      ],
+      "source": "scripts/build_native.py, docs/running-v1.md",
+      "smoke": "existing native adapter on a constructed small mesh"
+    },
+    {
+      "id": "differentiable_renderer",
+      "install": "Clone the pinned renderer source below, install PyTorch, PyTorch3D and nvdiffrast",
+      "runtime_keys": [
+        "differentiable_python",
+        "differentiable_renderer_root"
+      ],
+      "source": "docs/running-v1.md, scripts/differentiable_worker.py",
+      "renderer_source": {
+        "repository": "https://unitysrc.git.oa.mt/polarxiao/diffrender.git",
+        "commit": "a620ad647468b2b75b6be6184e7b40b9a68eb0c0",
+        "module": "diffRender2/unlit_mesh_render.py",
+        "module_sha256": "d57a97be000e6a8ed9f89cc3e7fc4e179f2d00d0d20eeab9fe8f0cb1c96e6f97",
+        "runtime_root": "diffRender2",
+        "required_callable": "render_unlit_mesh",
+        "observed_package_versions": {
+          "torch": "2.11.0+cu128",
+          "pytorch3d": "0.7.9",
+          "nvdiffrast": "0.4.0"
+        }
+      },
+      "smoke": "configured renderer worker on a tiny textured mesh"
+    },
+    {
+      "id": "reports",
+      "install": "uv sync --locked --extra reports for the current report workflow; legacy PDF scripts may additionally need reportlab",
+      "source": "reseam.workflows report; scripts/build_dragon_wholebody_pdf.py for legacy PDF reproduction",
+      "smoke": "report with success, rejected and missing-image cases; validate PNG/PDF/HTML/evidence and unchanged sources"
+    },
+    {
+      "id": "production_workflows",
+      "install": "Install bundled Skill scripts, request templates, example PNG assets and matching runtime source; uv sync --locked for that source",
+      "source": "skills/reseam-uv/scripts/tools.json and references/workflows.md",
+      "commands": [
+        "rebuild",
+        "preview",
+        "collect",
+        "report"
+      ],
+      "smoke": "non-dragon two-part 512 preview prepare, actual target review, bake, named-object collect/reimport and a small report; report each command separately"
+    }
+  ],
+  "statuses": [
+    "READY",
+    "BLOCKED_HARDWARE",
+    "BLOCKED_ACCESS",
+    "NEEDS_SYSTEM_ACTION",
+    "FAILED",
+    "NOT_RUN"
+  ],
+  "success_rule": "all components READY after execution smokes",
+  "partial_rule": "report every remaining component and continue independent installable work",
+  "runtime_source": {
+    "manifest": "assets/runtime-manifest.json",
+    "archive": "assets/runtime-source.zip",
+    "match": "exact executable-source file hashes",
+    "mismatch": "verified extraction into a separate user cache; never overwrite the candidate checkout"
+  }
+}

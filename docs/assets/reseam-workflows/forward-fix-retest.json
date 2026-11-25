@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "evaluation": "single_column_header_fix_retest",
+  "skill": "E:/ReSem/output/reseam-workflows-20261125/candidate2-install/installed/reseam-uv/SKILL.md",
+  "request": "E:/ReSem/output/reseam-workflows-20261125/small-report.request.json",
+  "request_sha256": "479ac1b8780662f44847676d764ecc7e0d54fc0849f44db7f4e886f0d5274495",
+  "command_powershell": "$env:UV_PYTHON = '3.11'",
+  "launcher_command": "uv run --no-project --python 3.11 python -X utf8 'E:/ReSem/output/reseam-workflows-20261125/candidate2-install/installed/reseam-uv/scripts/reseam_workflow.py' report --request 'E:/ReSem/output/reseam-workflows-20261125/small-report.request.json' --output 'C:/Users/admin/AppData/Local/Temp/reseam-fix-retest-59733dacc00240fe824a95e84e29b327/report' --repo 'E:/ReSem'",
+  "exit_code": 0,
+  "elapsed_seconds": 29.4713142,
+  "workflow_wall_seconds": 11.656000000002678,
+  "status": "OK",
+  "launcher": {
+    "source_sha256": "d920856c90529c317b5cad04e807b8c027c16e9872d1a5459bcfe6cab5d2a9c8",
+    "source_revision": "6466d612525e8f4d29cce18bfe103d1db58e7b9a",
+    "source_origin": "verified_cache",
+    "repo": "C:\\Users\\admin\\.cache\\reseam-workflows\\d920856c90529c31",
+    "source_hash_verified": true,
+    "runtime_config_present": false
+  },
+  "output_root": "C:/Users/admin/AppData/Local/Temp/reseam-fix-retest-59733dacc00240fe824a95e84e29b327",
+  "reviewed_by": "agent",
+  "human_reviewed": false,
+  "actual_images_reviewed": [
+    "report/all-methods-basecolor.png",
+    "report/all-methods-checker-uv.png"
+  ],
+  "header_review": {
+    "accepted": true,
+    "basecolor_title": "方法与输入对照：BaseColor / 贴图",
+    "basecolor_title_complete": true,
+    "basecolor_subtitle": "按实际几何与验收协议分组；历史记录与本轮结果分别保留，缺图不补造。",
+    "basecolor_subtitle_complete": true,
+    "basecolor_subtitle_line_count": 2,
+    "checker_title": "方法与输入对照：棋盘格 / UV",
+    "checker_title_complete": true,
+    "observed": "Two requested overview PNGs were opened with view_image. Main titles are fully inside the image width. The BaseColor subtitle wraps into two readable lines ending in 图不补造。; no clipping or collision with the case title was observed. [verified: actual view_image observations of all-methods-basecolor.png and all-methods-checker-uv.png]",
+    "scope": "Single-case report header visual check only; no asset appearance acceptance or human review."
+  },
+  "evidence_checks": {
+    "sources_unchanged": true,
+    "text_within_bounds": true
+  },
+  "independent_source_preservation": {
+    "before_after_files": 245,
+    "changed_files": [],
+    "executed_runtime_manifest_files": 167,
+    "runtime_manifest_mismatches": 0
+  },
+  "pngs": [
+    {
+      "height": 1180,
+      "width": 470,
+      "sha256": "630437af07fa2e3af37f5006f6450e5593486d011982c484c38211a982796d81",
+      "name": "all-methods-basecolor.png"
+    },
+    {
+      "height": 1180,
+      "width": 470,
+      "sha256": "de3fd186b1de4f2256a613af3f34514df595e9f9d21bdb4af37cdd5eeef9c51f",
+      "name": "all-methods-checker-uv.png"
+    },
+    {
+      "height": 1180,
+      "width": 470,
+      "sha256": "e4cca42833bb21dc7a453a131a3cc5acd50db0b126dd05d4cbb16c77418ecf11",
+      "name": "history-basecolor.png"
+    },
+    {
+      "height": 1180,
+      "width": 470,
+      "sha256": "416f09423ed401daef695c75a699ee1dec8d7ed0d7c1eefed8e89298679c0a20",
+      "name": "history-checker-uv.png"
+    }
+  ],
+  "quality_revalidated": false,
+  "workflow_visual_review": "pending",
+  "numeric_accepted": null,
+  "artifacts": [
+    "report/index.html",
+    "report/comparison-book.pdf",
+    "report/evidence.json",
+    "report/all-methods-basecolor.png",
+    "report/all-methods-checker-uv.png",
+    "report/history-basecolor.png",
+    "report/history-checker-uv.png"
+  ],
+  "raw_records": [
+    "report.stdout.json",
+    "report.stderr.log",
+    "command-result.json",
+    "sources.before.json",
+    "sources.after-check.json",
+    "runtime.manifest-check.json",
+    "verification-summary.json"
+  ],
+  "result": "PASS for installed launcher execution, source preservation and the requested two-image header retest. Original workflow quality and visual acceptance fields remain unchanged. [verified: report.stdout.json; sources.after-check.json; runtime.manifest-check.json; actual image observations]"
+}

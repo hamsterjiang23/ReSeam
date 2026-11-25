@@ -24,6 +24,10 @@ reseam = "reseam.cli:main"
 compression = [
     "ispc-texcomp==1.0.1",
 ]
+reports = [
+    "matplotlib==3.11.2",
+    "fonttools==4.68.0",
+]
 
 [dependency-groups]
 dev = ["pytest>=8,<10", "ruff>=0.12", "basedpyright>=1.30"]

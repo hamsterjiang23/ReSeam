@@ -1,0 +1,11 @@
+{
+  "stage": "prepare",
+  "snapshot": "C:/ReSeam-task/rebuild/snapshot/snapshot.json",
+  "state_hash": "REPLACE_WITH_CURRENT_STATE_HASH",
+  "resolution": 512,
+  "padding_pixels": 8,
+  "packing_backend": "blender_concave",
+  "packing_seed": 17,
+  "size": 512,
+  "timeout_seconds": 300
+}

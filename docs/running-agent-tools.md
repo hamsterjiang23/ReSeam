@@ -1,5 +1,31 @@
 # Agent UV 工具集 v1
 
+分割部件输入使用 `asset.prepare_parts`，先查 `tools describe`，流程见[分割部件参考与统一图集](segmented-parts-workflow.md)。支持原快照加分割位置标签、直接多对象／多文件组装、部件镜像与成对共享控制。`[verified: src/reseam/agent_tools/registry.py asset.prepare_parts]`
+
+## 可复用制作工作流
+
+逐部件重展开、小样制作、具名交付与历史／baseline对比使用 [reseam-uv工作流工具](../skills/reseam-uv/references/workflows.md) 的 `rebuild`、`preview`、`collect`、`report`。在仓库运行 `uv run python -m reseam.workflows <command> --request <绝对路径JSON> --output <新目录>`；安装版Skill通过 `scripts/reseam_workflow.py` 定位内容哈希匹配的执行源码。请求模板、辅助工具目录和案例小图随Skill分发。`[opinion]`
+
+`preview` 先准备目标与原始／目标／差异图，记录实际观察后再烘焙；`report` 只读已有证据，显式 `render_missing=true` 才补渲染，失败身份及跨几何／协议区别保留。工作流完成不自动获得质量、人工或PBR/GPU认可。`[opinion]`
+
+## 本机网页工作台
+
+在仓库根目录运行以下命令，然后打开 [ReSeam 工作台](http://127.0.0.1:8765/)。工作台使用本机已登录的 Codex CLI 和 `configs/runtime.local.json` 中配置的 ReSeam 后端。首次启动时安装 3D 预览组件。 `[verified: workbench.py serve、codex_executable；workbench_agent.py blender_path、execute_revision]`
+
+```powershell
+pnpm --dir src/reseam/workbench_ui install --frozen-lockfile
+uv run reseam workbench
+```
+
+1. 上传模型和配套文件后指定主模型。原生导入支持 GLB、OBJ、FBX，其他格式可由 Agent 调用本机 Blender 或 trimesh 转成独立 GLB。将 OBJ 的 MTL、glTF 的 BIN 和贴图与模型一起上传，并保留引用用的文件名。上传区将文件保存在同一目录，依赖子目录的外链素材可先打包为自包含 GLB。 `[verified: workbench.py Queue.create、Handler.upload；workbench_agent.py convert；scripts/workbench_convert.py main]`
+2. 写明要优先处理的部位、需保留的特征和交付范围。提交后，可关闭浏览器并稍后从任务列表打开，工作台服务在本机后台处理。服务重启时，正在处理的版本会标为中断，可从已有检查点续做。 `[verified: workbench.py Queue.work、Queue.extend；workbench_agent.py last_checkpoint]`
+3. 完成后可在「材质渲染」中同步旋转、平移和缩放原版与结果。模型分别使用各自的 UV 和绑定材质。「贴图对照」按通道显示这两份模型实际绑定的贴图及尺寸，包含 GLB 内嵌的 PNG、JPEG 和 WebP。「UV 布局」对比展开图，源模型无 UV 时以初始展开为起点。每个结果版本可单独下载 GLB、结果 ZIP 和简短制作整理报告。 `[verified: workbench_ui/app.js synchronize、renderPreviews、renderReport；workbench_materials.py material_maps；workbench_agent.py publish]`
+4. 从结果页选定版本后追加要求。后续版本绑定所选父快照，原版本仍可查看和下载。 `[verified: workbench.py Queue.extend；workbench_agent.py verify_parent]`
+
+任务数据默认写入 `artifacts/workbench/`。可通过 `--data`、`--port` 和 `--codex` 指定数据目录、端口和 Codex CLI 路径。 `[verified: cli.py main；workbench.py serve]`
+
+## JSON CLI
+
 完整 PBR 新路径使用 `material.target mode=pbr_reuse` 冻结来源和法线框架，再通过相同模式烘焙、`quality.validate` 取得诊断，`asset.export mode=diagnostic` 导出真实通道。FBX 可显式指定四张 `pbr_textures`；导入法线用 `target_normal_policy=imported`，异常切线可显式 `asset.repair_normals` 建局部修正副本。`artist.compare mode=pbr` 使用 `before.model` 与当前 `model` 的实际 GLB；不会生成 BaseColor 的目视通过收据。参数及现有限制以 `tools describe` 和[蓝龙结果](results/dragon-pbr-reuse.md)为准。`[opinion]`
 
 PBR 目视流程的前后两侧均需显式绑定 `snapshot`、`state_hash`、`model`、`bake`、`export_manifest`。`artist.compare mode=pbr` 生成逐图片哈希和配对视图 ID；也可用 `existing_comparison` 为历史实际预览创建新的证据冻结记录，原文件不改写。`artist.review mode=pbr` 记录实际观察者、`reviewed_views`、`keep/revert` 和理由，至少包含 `material` 与 `normal_lit`；`artist.export mode=pbr` 仅在全部准备好的整模型视图已观察并保留时复制原 GLB 和完整 mip，诊断数值身份不升级。`revert` 会拒绝该导出并记录父状态，不自动修改任何快照。`[verified: pbr_review.py _export_binding、_preview_evidence、review_pbr、export_pbr_visual]`

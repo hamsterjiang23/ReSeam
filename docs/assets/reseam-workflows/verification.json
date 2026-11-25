@@ -1,0 +1,73 @@
+{
+  "date": "2026-11-25",
+  "status": "PASS",
+  "workflow_commands": [
+    "rebuild",
+    "preview",
+    "collect",
+    "report"
+  ],
+  "related_pytest": {
+    "passed": 87,
+    "files": [
+      "test_reseam_workflow_parts.py",
+      "test_reseam_workflow_report.py",
+      "test_skill_bundle.py",
+      "test_skill_workflow_launcher.py",
+      "test_agent_tools_parts.py",
+      "test_agent_tools_regional_cut.py",
+      "test_agent_tools_parameterization.py",
+      "test_agent_tools_compact_packing.py"
+    ]
+  },
+  "ruff": "PASS: selected changed files and five retained production scripts",
+  "basedpyright": "PASS: full configured project; 0 errors/warnings/notes",
+  "skill_validation": "PASS",
+  "local_markdown_links": {
+    "checked": 89,
+    "missing": 0
+  },
+  "real_smoke": {
+    "parts": 2,
+    "faces": 4,
+    "resolution": 512,
+    "unwrap": "actual OptCuts",
+    "packing": "actual Blender concave",
+    "source_target_views_reviewed": [
+      "front",
+      "back",
+      "left",
+      "right",
+      "upper",
+      "lower"
+    ],
+    "target_keep": "agent",
+    "baked_views_reviewed": [
+      "front",
+      "back",
+      "left",
+      "right",
+      "upper",
+      "lower"
+    ],
+    "visual_keep": "actual artist.review",
+    "named_glb_positions_uv_and_texture_reimport": "PASS",
+    "numeric_quality": "not_validated",
+    "human_reviewed": false,
+    "full_pbr_passed": false
+  },
+  "historical_report": {
+    "cases": 21,
+    "figures": 4,
+    "sources_unchanged": true,
+    "quality_revalidated": false
+  },
+  "independent_agent": {
+    "installed_launcher_execution": "PASS",
+    "part_cleanup_and_texture_bytes_reasoning": "PASS",
+    "initial_header_layout": "FAILED",
+    "fixed_header_actual_images": "PASS"
+  },
+  "independently_executed_source_sha256": "d920856c90529c317b5cad04e807b8c027c16e9872d1a5459bcfe6cab5d2a9c8",
+  "external_backend_scope": "Existing local OptCuts/Blender used; GPU research backends and clean-machine all-components installation not retested"
+}

@@ -1,5 +1,9 @@
 # ReSeam
 
+制作经验与工具统一见 [reseam-uv工作流](skills/reseam-uv/references/workflows.md)：`rebuild` 逐部件重展、`preview` 两阶段目标检查与烘焙、`collect` 具名GLB交付回读、`report` 历史及baseline对比出图。Skill同时提供请求模板、案例小图和按内容哈希匹配的源码安装入口；实际可用状态以当前机器冒烟为准。`[opinion]`
+
+新增[分割部件参考与统一图集流程](docs/segmented-parts-workflow.md)：`asset.prepare_parts` 保留多对象／多文件身份，`uv.reparameterize pack_after=false` 逐部件真实合岛与重展，再统一排布与共享。[恐龙小片清理交付](docs/results/dragon-parts-clean-final.md)为8部件、18岛／11图块，2K UV＋BaseColor LOD0/1/2与Agent目视通过。`[verified: src/reseam/agent_tools/parts.py prepare_parts；artifacts/dragon_parts/final/summary.json]`
+
 最终镜像共享防御塔新增[1×8多视角线框图](docs/assets/tower-wireframe/round01/README.md)，包含正、背、左右及四个斜视角，附独立视图和来源状态记录。`[verified: tower-wireframe/round01/manifest.json views/state_hash；verification.json view_count/render_state_matches_final_export]`
 
 防御塔补充[PBR贴图处理与1×21横向对照图](docs/assets/tower-pbr-process/round01/README.md)，逐版本展示材质效果和BaseColor、Normal、Roughness、ORM四张图。配套目录共整理242张原图／烘焙图／拆分通道，附最终共享版模型与贴图包。固定材质参数、法线方向处理与原生失败状态均在图及说明中保留。`[verified: tower-pbr-process/round01/verification.json organized_maps/successful_versions/preserved_failure_columns；manifest.json display_channels/material_settings/normal_transport]`
@@ -165,6 +169,8 @@ git clone --recurse-submodules git@github.com:hamsterjiang23/ReSeam.git
 已有克隆可执行 `git submodule update --init --recursive` 补齐参考源码。模型资产直接随主仓库跟踪，实验输出放在已忽略的 `artifacts/` 中。
 
 ## 运行原型
+
+从浏览器上传模型、提交 UV 整理、查看进度和前后结果、下载制作报告或续做，见[本机网页工作台](docs/running-agent-tools.md#本机网页工作台)。 `[verified: cli.py workbench；workbench_ui/app.js renderDetail]`
 
 使用 Python 3.11 和 uv：执行 `uv sync`，按 [运行说明](docs/running-v1.md) 配置本地后端路径并构建固定拓扑适配器。
 

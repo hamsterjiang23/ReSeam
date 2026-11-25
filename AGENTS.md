@@ -146,3 +146,10 @@
 复用后继续检查同一原边连通表面内的多余接缝，允许整块重展开后再复制镜像UV；堆叠与真实合岛分别计数。必要的开口切缝不一定增加岛数：脚底分支切口改善白爪外观，单脚仍为1岛。不要为减少计数而焊接空间不相邻的部件；全局下限结论须限定原边身份和固定几何。历史134→92岛、67→46图块的实际对照及失败记录见[真实合岛报告](docs/results/dragon-uv-island-merge.md)，其严格渲染探针未全通过，不能升级为数值质量通过。`[verified: 用户真实合岛要求；island_merge01/sole_reparameterize/reparameterization.json、final_uv_audit.json、summary.json；opinion: 后续工作规则]`
 
 最新[中线薄条修复](docs/results/dragon-midplane-cleanup.md)在独立镜像变体中得到80岛／40图块、65.08%覆盖，已消除12个已定位细条岛；颜色/接缝通过、严格渲染拒绝。出现孤立细线时按Skill检查 `uv_label_mapping`、三维来源和 `midplane_strip_candidates`，区分UV压扁与裁切薄条。工具候选按几何尺度、案例像素厚度统计按分辨率，两者不能混用；只在已授权的新变体中调整平面，不继承旧模型偏移值或旧面ID。`[verified: dragon-midplane-cleanup/summary.json、independent_audit.json；opinion: 流程要求]`
+
+
+## 分part UV整理与小片清理
+
+用户要求按part整理时，先逐部件重建必要切口、真实合岛和小片归位，再做镜像/共享及统一排布；不能只完成编号、保留旧UV或堆叠就结束。小片优先沿权威原边归位/合岛，删除只在独立新变体中以真实前后图验证；可见翼骨、薄翼和爪尖不能因为UV小而盲删。调用与失败参考见[部件流程](skills/reseam-uv/references/segmented-parts.md)及[恐龙清理交付](docs/results/dragon-parts-clean-final.md)。暂存展开用 `uv.reparameterize pack_after=false`，它不代表全局排布/质量通过；统一排布、烘焙、目视和数值各自留证据。`[verified: 用户“我的意思就是分part整理UV”“很小的碎片呢”；opinion: 工作流程]`
+
+重复制作使用 [reseam-uv工作流工具](skills/reseam-uv/references/workflows.md) 的 `rebuild/preview/collect/report`，先查匹配案例和当前请求模板。`preview` 冻结目标与实际看图记录在烘焙前；`report` 保留历史失败、几何／协议分组和源哈希，不重写旧验收。安装版执行源码按内容哈希匹配，解包缓存不覆盖用户checkout。`[opinion]`

@@ -1,0 +1,124 @@
+{
+  "schema_version": 1,
+  "evaluation": "installed_skill_forward_test",
+  "skill": "E:/ReSem/output/reseam-workflows-20261125/candidate-install/installed/reseam-uv/SKILL.md",
+  "request": "E:/ReSem/output/reseam-workflows-20261125/small-report.request.json",
+  "output_root": "C:/Users/admin/AppData/Local/Temp/reseam-forwardtest-cd5a4fb8ab2c42a7a36ec55b33f6ecda",
+  "report": {
+    "command_powershell": "$env:UV_PYTHON = '3.11'\n& uv run --no-project --python 3.11 python -X utf8 'E:/ReSem/output/reseam-workflows-20261125/candidate-install/installed/reseam-uv/scripts/reseam_workflow.py' report --request 'E:/ReSem/output/reseam-workflows-20261125/small-report.request.json' --output 'C:/Users/admin/AppData/Local/Temp/reseam-forwardtest-cd5a4fb8ab2c42a7a36ec55b33f6ecda/report' --repo 'E:/ReSem'",
+    "exit_code": 0,
+    "status": "OK",
+    "launcher_source_origin": "verified_cache",
+    "launcher_source_sha256": "7e2f5a8898d67772087e05afee23e74c71920ab1e59eb777cb0bbd40cef77253",
+    "launcher_archive_sha256": "7d5b5263bacb99aa7a7ea997b8e88ba08da0861f6e543dae918194b3bfed019b",
+    "launcher_source_revision": "6466d612525e8f4d29cce18bfe103d1db58e7b9a",
+    "runtime_root": "C:/Users/admin/.cache/reseam-workflows/7e2f5a8898d67772",
+    "actual_report_python": "CPython 3.11.15",
+    "runtime_config_present": false,
+    "workflow_wall_seconds": 4.8439999999973224,
+    "launcher_elapsed_seconds": 7.3032959,
+    "case_count": 1,
+    "artifact_inventory": "artifacts.json",
+    "format_check": "artifact-format-check.json",
+    "principal_artifacts": ["report/all-methods-basecolor.png", "report/all-methods-checker-uv.png", "report/history-basecolor.png", "report/history-checker-uv.png", "report/comparison-book.pdf", "report/index.html", "report/evidence.json"],
+    "pdf_signature_checked": true,
+    "comparison_book_page_objects": 4,
+    "png_signatures_checked": true,
+    "png_dimensions": [470, 1180],
+    "quality_revalidated": false,
+    "workflow_visual_review": "pending",
+    "human_reviewed": false,
+    "visual_inspected": ["report/all-methods-basecolor.png", "report/all-methods-checker-uv.png"],
+    "visual_layout_accepted": false,
+    "layout_finding": "Single-column overview images visibly cut off the explanatory subtitle at the right edge. The source workflow nevertheless reports checks.text_within_bounds=true. [verified: view_image observations of all-methods-basecolor.png and all-methods-checker-uv.png; report/evidence.json L64-L68]",
+    "scope": "Only retained-evidence report generation and requested missing view rendering were executed. No UV rebuild, decimation, baking, quality revalidation or external publishing was invoked. [verified: report/evidence.json L2; report/result.json L14]"
+  },
+  "environment": {
+    "initial_check_exit_code": 0,
+    "initial_check_default_python": "CPython 3.14.3",
+    "correction": "Forced UV_PYTHON=3.11, reran launcher --check successfully, then ran report with CPython 3.11.15. [verified: check.stderr.log and check.stdout.json]",
+    "check_exit_code": 0,
+    "check_status": "READY",
+    "backend_execution_tested_by_check": false,
+    "ordinary_dependency_preparation": "uv installed core dependencies into the hash-verified source cache, then installed the reports extra. [verified: check.stderr.log and report.stderr.log]"
+  },
+  "source_preservation": {
+    "request_sha256_before": "479ac1b8780662f44847676d764ecc7e0d54fc0849f44db7f4e886f0d5274495",
+    "request_copy_same_hash": true,
+    "workflow_sources_unchanged": true,
+    "independent_total_files_checked": 413,
+    "input_and_installed_skill_files_checked": 79,
+    "input_and_installed_skill_files_changed": 0,
+    "executed_runtime_files_checked": 167,
+    "executed_runtime_files_changed": 0,
+    "workspace_checkout_files_changed": [
+      {
+        "path": "E:/ReSem/src/reseam/workflows/report.py",
+        "before_sha256": "bac759c750112ab54c6684bccde7362acfe57c9beedea407e9023975755de3e6",
+        "after_sha256": "02a77381b683e1944d190f2c72301e1a84e5711a1b70689b4b5461a3b47822ba",
+        "edited_by_this_agent": false,
+        "note": "Concurrent workspace change observed; the actual report used the unchanged verified cache. [verified: sources.after-check.json; report.stdout.json launcher]"
+      }
+    ],
+    "hash_records": ["sources.before.json", "runtime.before.json", "sources.after-check.json"]
+  },
+  "actual_read_cases": [
+    {
+      "path": "E:/ReSem/output/reseam-workflows-20261125/candidate-install/installed/reseam-uv/examples/segmented-dragon-parts.md",
+      "regions": "L7-L9, L15-L28, L34-L47",
+      "why_matched": "Exact symptoms: existing part labels with 199 UV islands, small-fragment deletion failures, and 18-to-11 tile sharing. [verified: examples/segmented-dragon-parts.md L9, L26-L28, L36]"
+    },
+    {
+      "path": "E:/ReSem/docs/results/dragon-parts-clean-final.md",
+      "regions": "L9-L23, L27-L44",
+      "why_read": "Read the repository-relative original report to verify the installed case summary and retain its historical quality scope. [verified: docs/results/dragon-parts-clean-final.md L9-L44]"
+    },
+    {
+      "path": "E:/ReSem/artifacts/dragon_parts/final/summary.json",
+      "regions": "rows mirror_unshared2048/mirror_shared2048; cleanup; natural_shared_attempt; shrunk1024; final status fields",
+      "extracted_record": "historical-case-extract.json"
+    },
+    {
+      "path": "E:/ReSem/output/reseam-workflows-20261125/candidate-install/installed/reseam-uv/assets/segmented-dragon-fragment-rollback.png",
+      "regions": "whole installed case figure, including enlarged preserved/deleted wing-root comparison",
+      "observation": "Viewed actual installed case figure; the deleted candidate shows a local opening in the magnified wing/root region. This is historical figure inspection, not acceptance of a current asset. [verified: view_image of segmented-dragon-fragment-rollback.png]"
+    }
+  ],
+  "followup_part_cleanup": {
+    "verdict": "不能把所有小UV片直接删掉；先逐part重建必要切口、真实合岛和小片归位，再做共享与统一图集。[opinion]",
+    "ordered_actions": [
+      "冻结当前snapshot/state_hash，检查原边身份、来源UV/贴图、part面集合、保护特征与全模型/各部件岛数。part编号仅提供范围，199岛不能代表整理完成。[opinion]",
+      "按原边检查小片三维贡献、分区错归属与真实断开面；优先归位或并入完整自然区域，不按空间接近焊接，不逐面隔离原有问题来换门禁通过。[opinion]",
+      "先做512小样。用rebuild或uv.reparameterize pack_after=false逐部件移除多余旧缝并规划真实开口，记录全模型/局部前后岛数、外侧碎片、切口、拉伸和失败。OptCuts为部件流程默认；后端选择依据当前错误，不能照搬龙的固定面ID。[opinion]",
+      "小UV对应真实薄翼/翼骨/爪尖时保留。仅对确认冗余的几何片在已授权独立新变体中尝试删除，保存同镜头前后、近景与来源对应；没有改模授权时保持几何。[opinion]",
+      "统一uv.pack后，用preview stage=prepare冻结目标并实际看原始/目标/差异，记录实际Agent镜头与判断；特征改变则回父状态修订，保留后才stage=bake。[opinion]",
+      "在相同几何、同一冻结目标与协议上比较共享/无共享；检查实际颜色、棋盘格、眼嘴爪子、薄翼正反和接合处、声明LOD，再collect独立回读导出，report保留全部失败。[opinion]"
+    ],
+    "keep_or_rollback": "删片露洞、轮廓破坏、白爪/眼嘴损坏或明显错贴则回父快照，整块修订切口/锚点或恢复独占。小幅颜色差异可按当前外观授权记录；保持最好已验收状态。局部失败不强迫每个part共享，同一假设最多三次修订。[opinion]",
+    "historical_basis": "案例将小part_8归腿；仅在新变体删5张孤立面、约0.0222246%表面积；额外68面和15面删片露洞回退；ABF腿一岛使白爪丢失，最终保留OptCuts整腿；原几何共享失败回独占19岛/19图块。[verified: examples/segmented-dragon-parts.md L15-L28; docs/results/dragon-parts-clean-final.md L20-L23, L32]",
+    "references": ["references/segmented-parts.md L19-L29", "references/workflows.md L27-L47", "references/symmetry-reuse-and-merge.md L18, L30, L65-L72"]
+  },
+  "followup_memory_saving": {
+    "verdict": "不是。18→11只证明该对照独立图块少7个；当前2K RGBA8完整mip的声明纹理负载节省为0%，没有实测GPU显存节省结论。[verified: artifacts/dragon_parts/final/summary.json rows mirror_unshared2048/mirror_shared2048 and gpu_verified=false]",
+    "same_geometry": true,
+    "before_uv_islands": 18,
+    "after_uv_islands": 18,
+    "before_tiles": 18,
+    "after_tiles": 11,
+    "shared_groups": 7,
+    "before_coverage": 0.5241779817778056,
+    "after_coverage": 0.4897720031458953,
+    "before_rgba8_full_mip_bytes": 22369620,
+    "after_rgba8_full_mip_bytes": 22369620,
+    "payload_saving_fraction": 0,
+    "actual_gpu_verified": false,
+    "next_actions": [
+      "保留同几何共享/无共享对照，分开报告连通岛、图块、实际共享面积、覆盖率、完整mip运行时负载、PNG/交付包字节和网格副本成本。[opinion]",
+      "若目标转为省纹理内存，固定同一目标和质量协议，测试紧凑排布及逐尺寸二次幂缩图，明确各尺寸gap/border/padding，重新烘焙并检查LOD与同镜头外观；同质量最小字节只取已验收候选。[opinion]",
+      "真实编码需求另做BC1/BC7编码和解码验收，收益按编码单列；要声称真实GPU显存变化还需目标引擎/设备测量。[opinion]"
+    ],
+    "historical_1k_boundary": "同UV 1K附件为5,592,404字节、padding4px，仅front preview诊断，numeric_accepted=null，不能写同质量节省75%。[verified: artifacts/dragon_parts/final/summary.json shrunk1024; docs/results/dragon-parts-clean-final.md L38]",
+    "references": ["examples/segmented-dragon-parts.md L34-L40", "references/symmetry-reuse-and-merge.md L80-L89, L137-L148"]
+  },
+  "final_assessment": "安装版launcher真实执行和源保持通过；一列报告的副标题存在目视裁切，版式未通过。没有伪造人工、完整PBR、GPU或新的质量验收。[verified: report/result.json L2-L18; source preservation records; actual image observations]"
+}
