@@ -1,0 +1,116 @@
+{
+  "status": "PASS",
+  "archive": "E:\\ReSem\\output\\skill-packages\\reseam-workflows-20261125.zip",
+  "archive_sha256": "b3171137c5e4575f3a8b1fb2c30bf24ecc7c898c7cb8d59fff8212abc55ca561",
+  "archive_bytes": 2940262,
+  "source_revision": "8cee89b12cb2965d3dfa05fd4ad5f5e55106326f",
+  "runtime_source_sha256": "43a8878e00bdcd8d00c715c1788bb62f1bc00a377bff34c69c33476eaa62beaa",
+  "tool_count": 40,
+  "workflow_count": 4,
+  "bundle_files": 35,
+  "runtime_source_files": 167,
+  "zip_crc": "PASS",
+  "fresh_install": {
+    "status": "SKILLS_INSTALLED",
+    "destination": "E:\\ReSem\\output\\reseam-workflows-20261125\\release-install\\installed",
+    "skills": [
+      "reseam-uv",
+      "reseam-hard-surface"
+    ],
+    "previous_skills": null,
+    "next_step": "E:\\ReSem\\output\\reseam-workflows-20261125\\release-install\\installed\\reseam-uv\\references\\full-installation.md",
+    "environment_installation": "Continue with the agent-managed all-components installation contract"
+  },
+  "local_sync": [
+    {
+      "target": "C:\\Users\\admin\\.config\\magpie\\library\\skills\\reseam-uv",
+      "changed": [
+        "SKILL.md",
+        "assets/runtime-manifest.json",
+        "assets/runtime-source.zip",
+        "assets/segmented-dragon-figures.json",
+        "assets/segmented-dragon-fragment-rollback.png",
+        "assets/segmented-dragon-layout.png",
+        "assets/segmented-dragon-shared-control.png",
+        "examples/index.md",
+        "examples/segmented-dragon-parts.md",
+        "references/full-installation.md",
+        "references/install-manifest.json",
+        "references/segmented-parts.md",
+        "references/workflows.md",
+        "requests/collect.json",
+        "requests/preview-bake.json",
+        "requests/preview-prepare.json",
+        "requests/rebuild.json",
+        "requests/report.json",
+        "scripts/reseam_workflow.py",
+        "scripts/tools.json"
+      ],
+      "unchanged": 11,
+      "hashes_match": true
+    },
+    {
+      "target": "C:\\Users\\admin\\.config\\magpie\\skill-router\\118be126f36c-slash\\reseam-uv",
+      "changed": [
+        "SKILL.md",
+        "assets/runtime-manifest.json",
+        "assets/runtime-source.zip",
+        "assets/segmented-dragon-figures.json",
+        "assets/segmented-dragon-fragment-rollback.png",
+        "assets/segmented-dragon-layout.png",
+        "assets/segmented-dragon-shared-control.png",
+        "examples/blue-dragon-pbr-reuse.md",
+        "examples/chloe-hard-surface.md",
+        "examples/energy-blade-reuse.md",
+        "examples/index.md",
+        "examples/legacy-dragon-reuse.md",
+        "examples/segmented-dragon-parts.md",
+        "examples/tower-pbr-reuse.md",
+        "examples/tripo-dragon-basecolor-reuse.md",
+        "examples/tripo-spike-hard-surface.md",
+        "references/environment-setup.md",
+        "references/full-installation.md",
+        "references/install-manifest.json",
+        "references/meshquery.md",
+        "references/projected-source-and-extra-uv.md",
+        "references/segmented-parts.md",
+        "references/symmetry-reuse-and-merge.md",
+        "references/workflows.md",
+        "requests/collect.json",
+        "requests/preview-bake.json",
+        "requests/preview-prepare.json",
+        "requests/rebuild.json",
+        "requests/report.json",
+        "scripts/reseam_workflow.py",
+        "scripts/tools.json"
+      ],
+      "unchanged": 0,
+      "hashes_match": true
+    }
+  ],
+  "backup": "E:\\ReSem\\output\\reseam-workflows-20261125\\local-skill-backup-20261125T133108Z",
+  "verification_scope": "Skill/source installation and hashes; backend execution tested separately on local dual-part fixture",
+  "installed_entry_execution": {
+    "rebuild": {
+      "execution_success": true,
+      "result": "E:\\ReSem\\output\\reseam-workflows-20261125\\release-rebuild\\result.json"
+    },
+    "preview_prepare": {
+      "execution_success": true,
+      "result": "E:\\ReSem\\output\\reseam-workflows-20261125\\release-preview\\result.json"
+    },
+    "collect": {
+      "execution_success": true,
+      "result": "E:\\ReSem\\output\\reseam-workflows-20261125\\release-collect\\result.json"
+    },
+    "report": {
+      "execution_success": true,
+      "result": "E:\\ReSem\\output\\reseam-workflows-20261125\\release-report\\result.json"
+    }
+  },
+  "local_runtime_configuration": "Existing tested machine paths merged into verified cache; no local configuration shipped in ZIP",
+  "external_backends_not_retested": [
+    "GPU research backends",
+    "full clean-machine all-components installation"
+  ]
+}
