@@ -7,7 +7,9 @@
 |当前问题或目标|优先案例与阅读阶段|
 |---|---|
 |Tripo分割结果、按Part合岛、逐部件镜像与统一图集|[恐龙分割部件](segmented-dragon-parts.md) 的来源选择、逐部件重建与同几何对照。`[opinion]`|
+|分割参考没有UV或贴图，需要迁回有材质原模型|[防御塔](tower-pbr-reuse.md) 的分Part标签迁移与来源核验。`[opinion]`|
 |小碎片归位、删翼片露洞、腿一岛后白爪丢失|[恐龙分割部件](segmented-dragon-parts.md) 的小片分类和失败回退；先看实际前后图。`[opinion]`|
+|Part边界上的微片归位、UV无翻面却仍有自交|[防御塔](tower-pbr-reuse.md) 的微片重组与主体展开失败。`[opinion]`|
 |图块减少但覆盖率或纹理字节未改善|[恐龙分割部件](segmented-dragon-parts.md) 的18→11图块对照与验收范围。`[opinion]`|
 |保留可用原UV，尝试翅膀、四肢、角刺共享|[Tripo蓝龙](tripo-dragon-basecolor-reuse.md) 的固定几何阶段。`[opinion]`|
 |自然选区重展开后，全模型碎片反而增加|[能量刀](energy-blade-reuse.md) 的完整旧岛闭包与开口修正，另看 [历史龙](legacy-dragon-reuse.md)。`[opinion]`|
@@ -27,7 +29,7 @@
 |案例|历史结果与状态|
 |---|---|
 |[恐龙分割部件](segmented-dragon-parts.md)|真实合岛与小片清理后18岛／11图块，7共享组，2K UV＋BaseColor验收与Agent目视通过。`[verified: docs/results/dragon-parts-clean-final.md “逐部件结果”“验收、交付与继续处理”]`|
-|[防御塔](tower-pbr-reuse.md)|最终镜像版48岛／24图块，Agent VISUAL_KEEP，数值DIAGNOSTIC。`[verified: docs/assets/tower-uv-comparison/README.md L15–L17]`|
+|[防御塔](tower-pbr-reuse.md)|历史PBR镜像版48岛／24图块；本轮分Part为21岛／18图块、3共享组，本轮Agent保留、数值拒绝且有高拉伸。`[verified: docs/assets/tower-uv-comparison/README.md L15–L17；docs/assets/tower-parts/round01/evidence.json final_summary.rows]`|
 |[Tripo蓝龙与镜像BaseColor分支](tripo-dragon-basecolor-reuse.md)|保留原UV路线117岛／98图块，镜像继续整理80岛／38图块。两条路线保留各自诊断状态。`[verified: docs/results/dragon-raw-uv-reuse.md L14–L34；docs/results/dragon-wholebody-refine.md L3–L30]`|
 |[蓝龙完整PBR与镜像复刻](blue-dragon-pbr-reuse.md)|高低模投射外观未接受，自身材质镜像2K版60岛／30图块，Agent保留、数值诊断。`[verified: docs/results/dragon-pbr-reuse.md L3–L5；docs/results/dragon-legacy-method-replay.md L3–L21]`|
 |[历史2,000面龙](legacy-dragon-reuse.md)|固定几何龙翼路线173岛／171图块，独立镜像展示版6岛／3图块，综合数值拒绝。`[verified: docs/results/meshquery-uv-reconstruction.md L14；README.md L23]`|

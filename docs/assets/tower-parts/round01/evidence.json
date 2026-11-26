@@ -1,0 +1,2206 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-11-26T04:26:50.828297+00:00",
+  "status": "COMPLETED: four logical configurations, three unique bakes; AGENT_VISUAL_KEEP / NUMERIC_REJECTED",
+  "sources": [
+    {
+      "path": "artifacts/tower_parts/round01/preparation/registration.json",
+      "sha256": "f4b16758389d73177d5f9051906ccbda4eb05a236eed10c0cd517ae456800137"
+    },
+    {
+      "path": "artifacts/tower_parts/round01/preparation/preparation-audit.json",
+      "sha256": "1a84779581f70328b5230edc69e11966c20f3ddd5487e8c91895817cf638d087"
+    },
+    {
+      "path": "artifacts/tower_parts/round01/preparation/preparation-review.json",
+      "sha256": "40e0874a190102b93d33c8972c251eb712f4ed4ff3e4e91d84afb411fcd9a87e"
+    },
+    {
+      "path": "artifacts/tower_parts/round01/preparation/regrouping-audit.json",
+      "sha256": "f2c5a1e4d92cfad1ca08b9e9212981416b73a44cebbf5e7208b41b2a7aa6d108"
+    },
+    {
+      "path": "artifacts/tower_parts/round01/preparation/regrouping.json",
+      "sha256": "274daaa0d63e2f68309e5cab0cd329f26a4d1e771715c7f9f40ba02d691355a9"
+    },
+    {
+      "path": "artifacts/tower_parts/round01/analysis/whole-reuse-summary.json",
+      "sha256": "9938c05c93231fd2b85a6f6c0f0150ce260bb944529a4777ce68209825e370d3"
+    },
+    {
+      "path": "artifacts/tower_parts/round01/analysis/body-repair/summary.json",
+      "sha256": "4bf23dae978fea577af5053869a1e82aee383cbf82b2f07088d999c78d55ebe2"
+    },
+    {
+      "path": "artifacts/tower_parts/round01/cases/original_clean/pack/snapshot/snapshot.json",
+      "sha256": "e5852214a91ec600eb4754bd69ec8d56db38a6f32adf544a98bedd9373661f8c"
+    },
+    {
+      "path": "artifacts/tower_parts/round01/cases/original_clean/pack/snapshot/arrays.npz",
+      "sha256": "9c8da3f821f63d68e89c544513edb2b113d126613fe909dd342e5fb14520bd2a"
+    },
+    {
+      "path": "artifacts/tower_parts/round01/cases/mirror_shared_clean/pack/snapshot/snapshot.json",
+      "sha256": "ee473ef56afbe90cc587420e16c9480a84212543d8d0a696bd43e14f4b72a6cb"
+    },
+    {
+      "path": "artifacts/tower_parts/round01/cases/mirror_shared_clean/pack/snapshot/arrays.npz",
+      "sha256": "3b9847e846cc6b286ef6dccff799c7c7f416007990c30662724e140fdaa617f1"
+    },
+    {
+      "path": "artifacts/tower_parts/round01/cases/original_clean/validate/validation.json",
+      "sha256": "afb72d2ac080eea5f3dd215228ca5486bd195aa98fa53104a8de47209300f85e"
+    },
+    {
+      "path": "artifacts/tower_parts/round01/cases/mirror_shared_clean/validate/validation.json",
+      "sha256": "9696bd2df74cc95b74c161ff1b40361b36ec4413fa3d06080ff9a4819f7e99d6"
+    },
+    {
+      "path": "artifacts/tower_parts/round01/cases/mirror_unshared_clean/validate/validation.json",
+      "sha256": "ab60a9b51354160289c912eb04268745a5f77ab1ac9a9027b8ac7f6395ff8aca"
+    },
+    {
+      "path": "artifacts/tower_parts/round01/summary.json",
+      "sha256": "dca9db62ace40d82e9339b81060c1e8f38d7916a979c02703b99ab95af2d65d3"
+    },
+    {
+      "path": "artifacts/tower_parts/round01/delivery/original_clean/verification.json",
+      "sha256": "f4e63b485310359b419cf907ae339398f94d437a8b42eedcb4078ac2a326d328"
+    },
+    {
+      "path": "artifacts/tower_parts/round01/cases/original_clean/visual_keep/review.json",
+      "sha256": "0cf070dbb8849821a8dc4b288fb1e588fa8c390d1f57958b8f9eb6604e77025b"
+    },
+    {
+      "path": "artifacts/tower_parts/round01/cases/original_clean/additional-inspection.json",
+      "sha256": "a4c3747552e15a4c63d9bd7aad2c6a4d9c8a75680e11261df4ae7da1cc747717"
+    },
+    {
+      "path": "artifacts/tower_parts/round01/cases/original_clean/stretch_diagnostic/inspection.json",
+      "sha256": "1f99a0fa9eeeab73b8fc186ad025f094f3127a089df22a555c0ef20fa0182595"
+    },
+    {
+      "path": "artifacts/tower_parts/round01/delivery/mirror_unshared_clean/verification.json",
+      "sha256": "edfa36039bd8aa6439c7957d060ffc673d8ffce9b3c69bd73344134447bf3f83"
+    },
+    {
+      "path": "artifacts/tower_parts/round01/cases/mirror_unshared_clean/visual_keep/review.json",
+      "sha256": "a7e8cc709e07fdecdd860ac31496ffd291f01e6ba00bde93249ddd3b46d16679"
+    },
+    {
+      "path": "artifacts/tower_parts/round01/cases/mirror_unshared_clean/additional-inspection.json",
+      "sha256": "8a9e503d92838cabf68df11f6e0b4e65f47566e7d1b0fef9d6f45191f7862bed"
+    },
+    {
+      "path": "artifacts/tower_parts/round01/cases/mirror_unshared_clean/stretch_diagnostic/inspection.json",
+      "sha256": "1c8f8f19cd35c50ae75b0558e5ce681b806aae7350f8f76914a4fa2cf40aadd8"
+    },
+    {
+      "path": "artifacts/tower_parts/round01/delivery/mirror_shared_clean/verification.json",
+      "sha256": "cdbc4eea3c21446c75df5582f4c17229c31bdfdff10a522e2b7126367f4dd943"
+    },
+    {
+      "path": "artifacts/tower_parts/round01/cases/mirror_shared_clean/visual_keep/review.json",
+      "sha256": "3b02f75722f28370b762f71c3c02e7fe56ca9779f47621e2718249ca0e8dce79"
+    },
+    {
+      "path": "artifacts/tower_parts/round01/cases/mirror_shared_clean/additional-inspection.json",
+      "sha256": "fd97e667928e4d74211ad217b23cc2550e2e14b2d89b46071f909eca3ea9752e"
+    },
+    {
+      "path": "artifacts/tower_parts/round01/cases/mirror_shared_clean/stretch_diagnostic/inspection.json",
+      "sha256": "018e8dc5c4fe4ed3b9e59c36bc4b94aaed31985521732a1480ffe8b8cbeec1d0"
+    }
+  ],
+  "segmented_input": {
+    "path": "E:\\Downloads\\fantasy_cross_statue_3d_model.fbx.glb",
+    "sha256": "1b8bdabe07bfbc867ede16e1a49a042b6e61a59cbd985ad735061dd3b4989aca",
+    "part_count": 14,
+    "triangles": 7281,
+    "primitive_attributes": [
+      "NORMAL",
+      "POSITION"
+    ],
+    "images": 0,
+    "textures": 0,
+    "purpose": "segmentation labels only"
+  },
+  "label_transfer": {
+    "recorded_at": "2026-11-26T03:56:56.578783+00:00",
+    "source_state_hash": "c03d415cbed12589846e12a8945252f5800e7f3e3e8e20e431dee915a5f7d686",
+    "prepared_state_hash": "0a852558d19015a956cd7feafa4d5b09c2c0c2a62223c8309a9c9c5e69ebfd07",
+    "geometry_policy": "keep all source faces; part-local index namespaces; float32 serialization",
+    "source_faces": 7278,
+    "prepared_faces": 7278,
+    "unique_source_faces": 7278,
+    "complete_unique_source_face_coverage": true,
+    "reflected_faces": 0,
+    "source_corner_barycentric_is_identity": true,
+    "position_max_l2_error": 0.0,
+    "maximum_witness_distance_fraction": 0.005213346533530328,
+    "mean_witness_distance_fraction": 1.6300141102527013e-06,
+    "boundary_disputed_faces": [],
+    "too_far_faces": [],
+    "empty_labels": [],
+    "source_snapshot_hash_unchanged": true,
+    "source_arrays_hash_unchanged": true,
+    "visual_review": "pending numbered six views",
+    "final_quality_passed": null
+  },
+  "uv_preparation_counts": {
+    "source": 3998,
+    "after_14_labels": 4069,
+    "after_regrouping": 4062,
+    "source_identity": "Conservative imported polygon-loop UV identity; counts are not a claim of authored original islands"
+  },
+  "regrouping": {
+    "recorded_at": "2026-11-26T04:01:49.285379+00:00",
+    "source_state_hash": "c03d415cbed12589846e12a8945252f5800e7f3e3e8e20e431dee915a5f7d686",
+    "regrouped_state_hash": "17eb4e795eb1a22da9007d5081ba9e4b8166848fe756cf637fcad2d9b42cbaf0",
+    "source_face_count": 7278,
+    "regrouped_face_count": 7278,
+    "complete_unique_source_face_coverage": true,
+    "source_corner_barycentric_identity": true,
+    "position_max_l2_error": 0.0,
+    "reflected_faces": 0,
+    "deleted_faces": [],
+    "inherited_original_interface_edges_now_internal": {
+      "tripo_part_10_plus_12": 9,
+      "tripo_part_6_plus_13": 7
+    },
+    "regrouped_uv_chart_count": 4062,
+    "source_snapshot_hash_unchanged": true,
+    "source_arrays_hash_unchanged": true,
+    "numbered_visual_reference": "E:\\ReSem\\artifacts\\tower_parts\\round01\\preparation\\input-contact-sheet.png",
+    "visual_policy": "Original 14-label views retained. Labels3+5 form part10_plus12; labels11+6 form part6_plus13; geometry unchanged.",
+    "final_uv_basecolor_acceptance": "NOT_RUN"
+  },
+  "reuse_attempts": {
+    "successful_shared_groups": 0,
+    "applied_proposals": [],
+    "decision": "Both pairs retain complete exclusive UV after three distinct hypotheses each. No per-triangle isolation. Strict failures are retained independently of wider exploration.",
+    "threshold_semantics": "correspondence_fraction .05 is a search/error distance normalized by this whole model AABB diagonal, not a similarity percentage or final appearance score. normal_angle_degrees=120 is an exploratory correspondence gate, not normal-map acceptance.",
+    "attempts": [
+      {
+        "name": "whole-5-2-strict",
+        "pair": "5-2",
+        "mode": "chart_aware",
+        "profile": {
+          "resolution": 2048,
+          "gap_pixels": 8,
+          "border_pixels": 8,
+          "quality_constraints": false,
+          "correspondence_fraction": 0.005,
+          "normal_angle_degrees": 45
+        },
+        "failure_reason": "SURFACE_CORRESPONDENCE_REJECTED",
+        "query_count": 9814,
+        "failed_sample_count": 51,
+        "mapping_attempts": []
+      },
+      {
+        "name": "whole-5-2-wide",
+        "pair": "5-2",
+        "mode": "chart_aware",
+        "profile": {
+          "resolution": 2048,
+          "gap_pixels": 8,
+          "border_pixels": 8,
+          "quality_constraints": false,
+          "correspondence_fraction": 0.05,
+          "normal_angle_degrees": 120
+        },
+        "failure_reason": "AFFINE_UV_OR_PACKING_REJECTED",
+        "query_count": 9814,
+        "failed_sample_count": 0,
+        "mapping_attempts": [
+          {
+            "method": "chart_aware_transfer",
+            "reason": "INCONSISTENT_MEMBER_ORIENTATION"
+          }
+        ]
+      },
+      {
+        "name": "whole-5-2-wide-similarity",
+        "pair": "5-2",
+        "mode": "similarity",
+        "profile": {
+          "resolution": 2048,
+          "gap_pixels": 8,
+          "border_pixels": 8,
+          "quality_constraints": false,
+          "correspondence_fraction": 0.05,
+          "normal_angle_degrees": 120
+        },
+        "failure_reason": "AFFINE_UV_OR_PACKING_REJECTED",
+        "query_count": 9814,
+        "failed_sample_count": 0,
+        "mapping_attempts": [
+          {
+            "method": "surface_barycentric_transfer",
+            "reason": "INCONSISTENT_MEMBER_ORIENTATION"
+          },
+          {
+            "method": "topology_copy",
+            "reason": "NO_BIJECTIVE_ASSIGNMENT"
+          },
+          {
+            "method": "normal_corner_transfer",
+            "reason": "INCONSISTENT_MEMBER_ORIENTATION"
+          },
+          {
+            "method": "face_corner_assignment",
+            "reason": "NO_BIJECTIVE_ASSIGNMENT"
+          },
+          {
+            "method": "common_harmonic_domain",
+            "reason": "HARMONIC_MULTIPLE_BOUNDARIES_OR_COMPONENTS"
+          }
+        ]
+      },
+      {
+        "name": "whole-11-8-strict",
+        "pair": "11-8",
+        "mode": "chart_aware",
+        "profile": {
+          "resolution": 2048,
+          "gap_pixels": 8,
+          "border_pixels": 8,
+          "quality_constraints": false,
+          "correspondence_fraction": 0.005,
+          "normal_angle_degrees": 45
+        },
+        "failure_reason": "SURFACE_CORRESPONDENCE_REJECTED",
+        "query_count": 2464,
+        "failed_sample_count": 79,
+        "mapping_attempts": []
+      },
+      {
+        "name": "whole-11-8-wide",
+        "pair": "11-8",
+        "mode": "chart_aware",
+        "profile": {
+          "resolution": 2048,
+          "gap_pixels": 8,
+          "border_pixels": 8,
+          "quality_constraints": false,
+          "correspondence_fraction": 0.05,
+          "normal_angle_degrees": 120
+        },
+        "failure_reason": "AFFINE_UV_OR_PACKING_REJECTED",
+        "query_count": 2464,
+        "failed_sample_count": 0,
+        "mapping_attempts": [
+          {
+            "method": "chart_aware_transfer",
+            "reason": "INCONSISTENT_MEMBER_ORIENTATION"
+          }
+        ]
+      },
+      {
+        "name": "whole-11-8-wide-similarity",
+        "pair": "11-8",
+        "mode": "similarity",
+        "profile": {
+          "resolution": 2048,
+          "gap_pixels": 8,
+          "border_pixels": 8,
+          "quality_constraints": false,
+          "correspondence_fraction": 0.05,
+          "normal_angle_degrees": 120
+        },
+        "failure_reason": "AFFINE_UV_OR_PACKING_REJECTED",
+        "query_count": 2464,
+        "failed_sample_count": 0,
+        "mapping_attempts": [
+          {
+            "method": "surface_barycentric_transfer",
+            "reason": "INCONSISTENT_MEMBER_ORIENTATION"
+          },
+          {
+            "method": "topology_copy",
+            "reason": "NO_BIJECTIVE_ASSIGNMENT"
+          },
+          {
+            "method": "normal_corner_transfer",
+            "reason": "INCONSISTENT_MEMBER_ORIENTATION"
+          },
+          {
+            "method": "face_corner_assignment",
+            "reason": "NO_BIJECTIVE_ASSIGNMENT"
+          },
+          {
+            "method": "common_harmonic_domain",
+            "reason": "COMMON_BOUNDARY_NOT_MONOTONE"
+          }
+        ]
+      }
+    ]
+  },
+  "rejected_20_chart_candidate": {
+    "path": "artifacts/tower_parts/round01/cases/original_unshared/inspect/inspection.json",
+    "sha256": "74a5150be9adf424183b37d446439cf096208fd8c112320e7d8d47a77bbef56e",
+    "geometry_valid": false,
+    "error_counts": {
+      "UNAUTHORIZED_OVERLAP": 586,
+      "UNAUTHORIZED_CONTACT": 1
+    },
+    "total_errors": 587,
+    "identity": "Rejected intermediate, not final delivery"
+  },
+  "figures": [
+    {
+      "path": "docs/assets/tower-parts/round01/input-parts.png",
+      "sha256": "365c8fae5b972953c08ede01de85cda890b1df9d4469f1ed5e64a4e6f67e8cc1",
+      "size": [
+        1920,
+        715
+      ],
+      "source_path": "artifacts/tower_parts/round01/preparation/input-contact-sheet.png",
+      "source_sha256": "365c8fae5b972953c08ede01de85cda890b1df9d4469f1ed5e64a4e6f67e8cc1",
+      "operation": "contact-sheet source preserved; RGB conversion and fit-inside downscale only"
+    },
+    {
+      "path": "skills/reseam-uv/assets/tower-parts-input.png",
+      "sha256": "0e931c316825da37467dd059a58a25663b83ad88d66f69e31bc08303751a073e",
+      "size": [
+        1440,
+        536
+      ],
+      "source_path": "artifacts/tower_parts/round01/preparation/input-contact-sheet.png",
+      "source_sha256": "365c8fae5b972953c08ede01de85cda890b1df9d4469f1ed5e64a4e6f67e8cc1",
+      "operation": "contact-sheet source preserved; RGB conversion and fit-inside downscale only"
+    },
+    {
+      "path": "docs/assets/tower-parts/round01/comparison-basecolor.png",
+      "sha256": "f1c5825a4dd373557005b7aa4b8f9c5a09c902457f0c4915eb668c330e9092ca",
+      "size": [
+        1760,
+        1180
+      ],
+      "source_path": "artifacts/tower_parts/round01/report/all-methods-basecolor.png",
+      "source_sha256": "aa78bdcb757ae996f951da4e455dbf0ca42bc6220cc024f70071b43caa93313a",
+      "operation": "RGB conversion and fit-inside downscale only; original report preserved"
+    },
+    {
+      "path": "skills/reseam-uv/assets/tower-parts-basecolor.png",
+      "sha256": "f210cfc022081c9f83653350b6f2b2388cf25db72ba0c804d404f8a2772affd4",
+      "size": [
+        1440,
+        965
+      ],
+      "source_path": "artifacts/tower_parts/round01/report/all-methods-basecolor.png",
+      "source_sha256": "aa78bdcb757ae996f951da4e455dbf0ca42bc6220cc024f70071b43caa93313a",
+      "operation": "RGB conversion and fit-inside downscale only; original report preserved"
+    },
+    {
+      "path": "docs/assets/tower-parts/round01/comparison-uv.png",
+      "sha256": "e952bcd4a7d38af7be3abf50119eb4b15e902fe7b4cd042dbcfa137822fb5e80",
+      "size": [
+        1760,
+        1180
+      ],
+      "source_path": "artifacts/tower_parts/round01/report/all-methods-checker-uv.png",
+      "source_sha256": "3b8954f3bc548b8b930778173adef0a1ec74f5b146fd05b942a4e40b19a4c3e9",
+      "operation": "RGB conversion and fit-inside downscale only; original report preserved"
+    },
+    {
+      "path": "skills/reseam-uv/assets/tower-parts-uv.png",
+      "sha256": "f5923c9b293f76072549052a669f820bdabde32fce18bf57ba272244607e0de9",
+      "size": [
+        1440,
+        965
+      ],
+      "source_path": "artifacts/tower_parts/round01/report/all-methods-checker-uv.png",
+      "source_sha256": "3b8954f3bc548b8b930778173adef0a1ec74f5b146fd05b942a4e40b19a4c3e9",
+      "operation": "RGB conversion and fit-inside downscale only; original report preserved"
+    },
+    {
+      "path": "docs/assets/tower-parts/round01/history-basecolor.png",
+      "sha256": "6da296e15293add8b25ade6face93db763ca385f7f7ad0427955cc2e3e6dc1ea",
+      "size": [
+        1920,
+        1035
+      ],
+      "source_path": "artifacts/tower_parts/round01/report/history-basecolor.png",
+      "source_sha256": "b5922b49d70fa0a1e72def098409e401905a229a21c7999037208b6691152a9c",
+      "operation": "RGB conversion and fit-inside downscale only; original report preserved"
+    },
+    {
+      "path": "docs/assets/tower-parts/round01/history-uv.png",
+      "sha256": "26a27064be78f62f8b3191722c627fdb469e8e0d37851c970e913715b135c98f",
+      "size": [
+        1920,
+        1035
+      ],
+      "source_path": "artifacts/tower_parts/round01/report/history-checker-uv.png",
+      "source_sha256": "d1e80d72885ab771528c5b6500c0aab811f497dc5126fcf09b92bb18cd7b1374",
+      "operation": "RGB conversion and fit-inside downscale only; original report preserved"
+    },
+    {
+      "path": "docs/assets/tower-parts/round01/body-repair.png",
+      "sha256": "0296d30a50e20583965112b8b0ce3227f6d8c50e2ec83a9236ffe2d64b838dee",
+      "size": [
+        1000,
+        620
+      ],
+      "source_paths": [
+        "artifacts/tower_parts/round01/cases/mirror_shared_final/actual_views/front.png",
+        "artifacts/tower_parts/round01/cases/mirror_shared_clean/actual_views/front.png"
+      ],
+      "source_sha256": [
+        "a2d4643f699a0cd809a17512559d8b1734d7eae84abd29abfd2f497dd831ea1f",
+        "68c527168336e6bb9d4515a235e2ba7eb28b242969f19cb22882f3bbed4c1d44"
+      ],
+      "operation": "Full-model front views only, scaled and annotated; no pixels repaired; historical targets differ and this is not a controlled error ablation"
+    },
+    {
+      "path": "skills/reseam-uv/assets/tower-parts-body-repair.png",
+      "sha256": "0296d30a50e20583965112b8b0ce3227f6d8c50e2ec83a9236ffe2d64b838dee",
+      "size": [
+        1000,
+        620
+      ],
+      "source_paths": [
+        "artifacts/tower_parts/round01/cases/mirror_shared_final/actual_views/front.png",
+        "artifacts/tower_parts/round01/cases/mirror_shared_clean/actual_views/front.png"
+      ],
+      "source_sha256": [
+        "a2d4643f699a0cd809a17512559d8b1734d7eae84abd29abfd2f497dd831ea1f",
+        "68c527168336e6bb9d4515a235e2ba7eb28b242969f19cb22882f3bbed4c1d44"
+      ],
+      "operation": "Full-model front views only, scaled and annotated; no pixels repaired; historical targets differ and this is not a controlled error ablation"
+    }
+  ],
+  "final_summary": {
+    "schema_version": 1,
+    "created_at": "2026-11-26T12:48:52.684294+08:00",
+    "input": {
+      "segmentation": "E:/Downloads/fantasy_cross_statue_3d_model.fbx.glb",
+      "segmentation_sha256": "1b8bdabe07bfbc867ede16e1a49a042b6e61a59cbd985ad735061dd3b4989aca",
+      "reference_labels": 14,
+      "reference_triangles": 7281,
+      "original_triangles": 7278,
+      "original_uv_charts_conservative_import_identity": 3998,
+      "initial_prepared_charts": 4069,
+      "regrouped_charts": 4062,
+      "processing_regions": 12
+    },
+    "logical_configurations": 4,
+    "unique_bakes": 3,
+    "protocol": {
+      "resolution": 2048,
+      "seed": 17,
+      "gap_pixels": 8,
+      "border_pixels": 8,
+      "padding_pixels": 8,
+      "density_normalize": true,
+      "acceptance_policy": "visual",
+      "mip_levels_numeric": [
+        0,
+        1,
+        2
+      ],
+      "samples_per_face": 16,
+      "render_size": 48,
+      "seams_scope": "canonical_input_edges_only; original cross-part authoritative topology witness not supplied",
+      "normal": "original source file retained; not baked or accepted"
+    },
+    "rows": [
+      {
+        "id": "original_clean",
+        "title": "原形：分Part整理、不共享",
+        "snapshot": "E:\\ReSem\\artifacts\\tower_parts\\round01\\cases\\original_clean\\pack\\snapshot\\snapshot.json",
+        "state_hash": "9cd4e4d35c471fa79b419fd31b1dd84aa9231d05592e0b0cd56456629be5bdd3",
+        "geometry_hash": "db76acd266297fdb32f6d054e3ba3a2a4ed0bed35c79b1370f9f844b0b295120",
+        "target": "E:\\ReSem\\artifacts\\tower_parts\\round01\\cases\\original_clean\\target\\target.json",
+        "target_hash": "13674b9a08687dcd61bd8117998fca3ee99ce72c78ef3a3fdc1d6634dbe4d921",
+        "bake": "E:\\ReSem\\artifacts\\tower_parts\\round01\\cases\\original_clean\\bake\\bake.json",
+        "validation": "E:\\ReSem\\artifacts\\tower_parts\\round01\\cases\\original_clean\\validate\\validation.json",
+        "model": "E:\\ReSem\\artifacts\\tower_parts\\round01\\delivery\\original_clean\\model-parts.glb",
+        "delivery": "E:\\ReSem\\artifacts\\tower_parts\\round01\\delivery\\original_clean",
+        "verification": "E:\\ReSem\\artifacts\\tower_parts\\round01\\delivery\\original_clean\\verification.json",
+        "metrics": {
+          "faces": 7278,
+          "islands": 21,
+          "tiles": 21,
+          "shared_groups": 0,
+          "shared_surface_area": 0.0,
+          "shared_surface_fraction": 0.0,
+          "coverage": 0.5473171433353932,
+          "gap_pixels": 9.650750118272985,
+          "border_pixels": 10.0,
+          "resolution": 2048,
+          "payload_bytes": 22369620,
+          "texture_png_bytes": 3001104,
+          "named_glb_file_bytes": 3535328,
+          "mean_shape_distortion": 1.3938650886243535,
+          "shape_p95": 3.1268190986948463,
+          "shape_cvar95": 25.129490614130606,
+          "maximum_anisotropy": 1794.9966933045332,
+          "maximum_neighbor_density_ratio": 53.953431578834824
+        },
+        "geometry_hard_passed": true,
+        "geometry_quality_constraints_checked_in_main_protocol": false,
+        "stretch_diagnostic_profile_quality_constraints": true,
+        "stretch_diagnostic_passed": false,
+        "numeric_quality_accepted": false,
+        "material_valid": true,
+        "seams_valid": true,
+        "seams_scope": "canonical_input_edges_only",
+        "authoritative_original_topology_supplied": false,
+        "render_valid": false,
+        "render_probe_pass_count": 5,
+        "render_probe_count": 12,
+        "render_max": 0.3255081331391013,
+        "agent_visual": "KEEP",
+        "reviewer": "agent",
+        "human_status": "NOT_RUN",
+        "pbr_status": "NOT_RUN",
+        "gpu_status": "NOT_RUN",
+        "viewed_lods": [
+          0,
+          1,
+          2
+        ],
+        "viewed_lod0_cameras": [
+          "front",
+          "back",
+          "left",
+          "right",
+          "upper",
+          "lower"
+        ],
+        "viewed_lod1_2_cameras": [
+          "front",
+          "back",
+          "upper"
+        ],
+        "closeup_regions": [
+          "top",
+          "center",
+          "body",
+          "base"
+        ],
+        "closeup_cameras": [
+          "front",
+          "back",
+          "oblique"
+        ],
+        "images": {
+          "basecolor": "E:\\ReSem\\artifacts\\tower_parts\\round01\\cases\\original_clean\\actual_views\\front.png",
+          "checker": "E:\\ReSem\\artifacts\\tower_parts\\round01\\cases\\original_clean\\checker_views\\front.png",
+          "uv": "E:\\ReSem\\artifacts\\tower_parts\\round01\\cases\\original_clean\\checker_views\\uv.png",
+          "texture": "E:\\ReSem\\artifacts\\tower_parts\\round01\\cases\\original_clean\\bake\\texture\\BaseColor_mip0.png"
+        },
+        "numeric_profile": {
+          "thresholds": {
+            "color_mean": 0.025,
+            "color_p95": 0.08,
+            "color_max": 0.2,
+            "render_mean": 0.025,
+            "render_p95": 0.08,
+            "render_max": 0.2,
+            "seam_mean": 0.025,
+            "seam_max": 0.2
+          },
+          "geometry": {
+            "gap_pixels": 8.0,
+            "border_pixels": 8.0,
+            "correspondence_fraction": 0.005,
+            "normal_angle_degrees": 45.0,
+            "maximum_anisotropy": 2.0,
+            "mean_shape_limit": 0.025,
+            "tail_shape_limit": 0.1,
+            "maximum_density_ratio": 2.0,
+            "quality_constraints": false
+          },
+          "mip_levels": [
+            0,
+            1,
+            2
+          ],
+          "samples_per_face": 16,
+          "render_size": 48,
+          "reference_filter": "source-only chart-aware piecewise-affine footprint: (2*2^LOD)^2 BOX quadrature then bilinear",
+          "reference_boundary": "traverse current chart faces; nearest same-chart boundary extension",
+          "render_reference": "fixed screen 2x2 source-signal supersampling, independent of atlas resolution and LOD",
+          "scope": "finite surface/color/seam/unlit-CPU probes; not full PBR, GPU, or continuous bounds"
+        },
+        "status": "AGENT_VISUAL_KEEP / NUMERIC_REJECTED"
+      },
+      {
+        "id": "original_shared_fallback",
+        "title": "原形：共享失败后整块独占",
+        "snapshot": "E:\\ReSem\\artifacts\\tower_parts\\round01\\cases\\original_clean\\pack\\snapshot\\snapshot.json",
+        "state_hash": "9cd4e4d35c471fa79b419fd31b1dd84aa9231d05592e0b0cd56456629be5bdd3",
+        "geometry_hash": "db76acd266297fdb32f6d054e3ba3a2a4ed0bed35c79b1370f9f844b0b295120",
+        "target": "E:\\ReSem\\artifacts\\tower_parts\\round01\\cases\\original_clean\\target\\target.json",
+        "target_hash": "13674b9a08687dcd61bd8117998fca3ee99ce72c78ef3a3fdc1d6634dbe4d921",
+        "bake": "E:\\ReSem\\artifacts\\tower_parts\\round01\\cases\\original_clean\\bake\\bake.json",
+        "validation": "E:\\ReSem\\artifacts\\tower_parts\\round01\\cases\\original_clean\\validate\\validation.json",
+        "model": "E:\\ReSem\\artifacts\\tower_parts\\round01\\delivery\\original_shared_fallback\\model-parts.glb",
+        "delivery": "E:\\ReSem\\artifacts\\tower_parts\\round01\\delivery\\original_shared_fallback",
+        "verification": "E:\\ReSem\\artifacts\\tower_parts\\round01\\delivery\\original_clean\\verification.json",
+        "metrics": {
+          "faces": 7278,
+          "islands": 21,
+          "tiles": 21,
+          "shared_groups": 0,
+          "shared_surface_area": 0.0,
+          "shared_surface_fraction": 0.0,
+          "coverage": 0.5473171433353932,
+          "gap_pixels": 9.650750118272985,
+          "border_pixels": 10.0,
+          "resolution": 2048,
+          "payload_bytes": 22369620,
+          "texture_png_bytes": 3001104,
+          "named_glb_file_bytes": 3535328,
+          "mean_shape_distortion": 1.3938650886243535,
+          "shape_p95": 3.1268190986948463,
+          "shape_cvar95": 25.129490614130606,
+          "maximum_anisotropy": 1794.9966933045332,
+          "maximum_neighbor_density_ratio": 53.953431578834824
+        },
+        "geometry_hard_passed": true,
+        "geometry_quality_constraints_checked_in_main_protocol": false,
+        "stretch_diagnostic_profile_quality_constraints": true,
+        "stretch_diagnostic_passed": false,
+        "numeric_quality_accepted": false,
+        "material_valid": true,
+        "seams_valid": true,
+        "seams_scope": "canonical_input_edges_only",
+        "authoritative_original_topology_supplied": false,
+        "render_valid": false,
+        "render_probe_pass_count": 5,
+        "render_probe_count": 12,
+        "render_max": 0.3255081331391013,
+        "agent_visual": "KEEP",
+        "reviewer": "agent",
+        "human_status": "NOT_RUN",
+        "pbr_status": "NOT_RUN",
+        "gpu_status": "NOT_RUN",
+        "viewed_lods": [
+          0,
+          1,
+          2
+        ],
+        "viewed_lod0_cameras": [
+          "front",
+          "back",
+          "left",
+          "right",
+          "upper",
+          "lower"
+        ],
+        "viewed_lod1_2_cameras": [
+          "front",
+          "back",
+          "upper"
+        ],
+        "closeup_regions": [
+          "top",
+          "center",
+          "body",
+          "base"
+        ],
+        "closeup_cameras": [
+          "front",
+          "back",
+          "oblique"
+        ],
+        "images": {
+          "basecolor": "E:\\ReSem\\artifacts\\tower_parts\\round01\\cases\\original_clean\\actual_views\\front.png",
+          "checker": "E:\\ReSem\\artifacts\\tower_parts\\round01\\cases\\original_clean\\checker_views\\front.png",
+          "uv": "E:\\ReSem\\artifacts\\tower_parts\\round01\\cases\\original_clean\\checker_views\\uv.png",
+          "texture": "E:\\ReSem\\artifacts\\tower_parts\\round01\\cases\\original_clean\\bake\\texture\\BaseColor_mip0.png"
+        },
+        "numeric_profile": {
+          "thresholds": {
+            "color_mean": 0.025,
+            "color_p95": 0.08,
+            "color_max": 0.2,
+            "render_mean": 0.025,
+            "render_p95": 0.08,
+            "render_max": 0.2,
+            "seam_mean": 0.025,
+            "seam_max": 0.2
+          },
+          "geometry": {
+            "gap_pixels": 8.0,
+            "border_pixels": 8.0,
+            "correspondence_fraction": 0.005,
+            "normal_angle_degrees": 45.0,
+            "maximum_anisotropy": 2.0,
+            "mean_shape_limit": 0.025,
+            "tail_shape_limit": 0.1,
+            "maximum_density_ratio": 2.0,
+            "quality_constraints": false
+          },
+          "mip_levels": [
+            0,
+            1,
+            2
+          ],
+          "samples_per_face": 16,
+          "render_size": 48,
+          "reference_filter": "source-only chart-aware piecewise-affine footprint: (2*2^LOD)^2 BOX quadrature then bilinear",
+          "reference_boundary": "traverse current chart faces; nearest same-chart boundary extension",
+          "render_reference": "fixed screen 2x2 source-signal supersampling, independent of atlas resolution and LOD",
+          "scope": "finite surface/color/seam/unlit-CPU probes; not full PBR, GPU, or continuous bounds"
+        },
+        "status": "SHARE_FAILED_FALLBACK_EXCLUSIVE / AGENT_VISUAL_KEEP / NUMERIC_REJECTED",
+        "source_case": "original_clean",
+        "reuses_existing_bake": true
+      },
+      {
+        "id": "mirror_unshared_clean",
+        "title": "局部镜像：不共享",
+        "snapshot": "E:\\ReSem\\artifacts\\tower_parts\\round01\\cases\\mirror_unshared_clean\\pack\\snapshot\\snapshot.json",
+        "state_hash": "399ddc1713cb2b5507b5a9388f890d67ec89ec643eb1cab9023c58af78634c5b",
+        "geometry_hash": "299550333bee7bb213dc760b2bc30e376bf2f06a0fde3607f1b545cb09bbb8d5",
+        "target": "E:\\ReSem\\artifacts\\tower_parts\\round01\\cases\\mirror_shared_clean\\target\\target.json",
+        "target_hash": "93ec9bcdea5516f946682de434f3a9611ae37c2e72803a1aa6279b6db4417e3e",
+        "bake": "E:\\ReSem\\artifacts\\tower_parts\\round01\\cases\\mirror_unshared_clean\\bake\\bake.json",
+        "validation": "E:\\ReSem\\artifacts\\tower_parts\\round01\\cases\\mirror_unshared_clean\\validate\\validation.json",
+        "model": "E:\\ReSem\\artifacts\\tower_parts\\round01\\delivery\\mirror_unshared_clean\\model-parts.glb",
+        "delivery": "E:\\ReSem\\artifacts\\tower_parts\\round01\\delivery\\mirror_unshared_clean",
+        "verification": "E:\\ReSem\\artifacts\\tower_parts\\round01\\delivery\\mirror_unshared_clean\\verification.json",
+        "metrics": {
+          "faces": 7252,
+          "islands": 21,
+          "tiles": 21,
+          "shared_groups": 0,
+          "shared_surface_area": 0.0,
+          "shared_surface_fraction": 0.0,
+          "coverage": 0.5485264214964255,
+          "gap_pixels": 10.620684670990464,
+          "border_pixels": 10.0,
+          "resolution": 2048,
+          "payload_bytes": 22369620,
+          "texture_png_bytes": 2990192,
+          "named_glb_file_bytes": 3511888,
+          "mean_shape_distortion": 1.3972805179715706,
+          "shape_p95": 3.1318402225426363,
+          "shape_cvar95": 25.184841654685577,
+          "maximum_anisotropy": 1794.9966933061048,
+          "maximum_neighbor_density_ratio": 53.95343157896396
+        },
+        "geometry_hard_passed": true,
+        "geometry_quality_constraints_checked_in_main_protocol": false,
+        "stretch_diagnostic_profile_quality_constraints": true,
+        "stretch_diagnostic_passed": false,
+        "numeric_quality_accepted": false,
+        "material_valid": true,
+        "seams_valid": true,
+        "seams_scope": "canonical_input_edges_only",
+        "authoritative_original_topology_supplied": false,
+        "render_valid": false,
+        "render_probe_pass_count": 6,
+        "render_probe_count": 12,
+        "render_max": 0.33789006343431277,
+        "agent_visual": "KEEP",
+        "reviewer": "agent",
+        "human_status": "NOT_RUN",
+        "pbr_status": "NOT_RUN",
+        "gpu_status": "NOT_RUN",
+        "viewed_lods": [
+          0,
+          1,
+          2
+        ],
+        "viewed_lod0_cameras": [
+          "front",
+          "back",
+          "left",
+          "right",
+          "upper",
+          "lower"
+        ],
+        "viewed_lod1_2_cameras": [
+          "front",
+          "back",
+          "upper"
+        ],
+        "closeup_regions": [
+          "top",
+          "center",
+          "body",
+          "base"
+        ],
+        "closeup_cameras": [
+          "front",
+          "back",
+          "oblique"
+        ],
+        "images": {
+          "basecolor": "E:\\ReSem\\artifacts\\tower_parts\\round01\\cases\\mirror_unshared_clean\\actual_views\\front.png",
+          "checker": "E:\\ReSem\\artifacts\\tower_parts\\round01\\cases\\mirror_unshared_clean\\checker_views\\front.png",
+          "uv": "E:\\ReSem\\artifacts\\tower_parts\\round01\\cases\\mirror_unshared_clean\\checker_views\\uv.png",
+          "texture": "E:\\ReSem\\artifacts\\tower_parts\\round01\\cases\\mirror_unshared_clean\\bake\\texture\\BaseColor_mip0.png"
+        },
+        "numeric_profile": {
+          "thresholds": {
+            "color_mean": 0.025,
+            "color_p95": 0.08,
+            "color_max": 0.2,
+            "render_mean": 0.025,
+            "render_p95": 0.08,
+            "render_max": 0.2,
+            "seam_mean": 0.025,
+            "seam_max": 0.2
+          },
+          "geometry": {
+            "gap_pixels": 8.0,
+            "border_pixels": 8.0,
+            "correspondence_fraction": 0.005,
+            "normal_angle_degrees": 45.0,
+            "maximum_anisotropy": 2.0,
+            "mean_shape_limit": 0.025,
+            "tail_shape_limit": 0.1,
+            "maximum_density_ratio": 2.0,
+            "quality_constraints": false
+          },
+          "mip_levels": [
+            0,
+            1,
+            2
+          ],
+          "samples_per_face": 16,
+          "render_size": 48,
+          "reference_filter": "source-only chart-aware piecewise-affine footprint: (2*2^LOD)^2 BOX quadrature then bilinear",
+          "reference_boundary": "traverse current chart faces; nearest same-chart boundary extension",
+          "render_reference": "fixed screen 2x2 source-signal supersampling, independent of atlas resolution and LOD",
+          "scope": "finite surface/color/seam/unlit-CPU probes; not full PBR, GPU, or continuous bounds"
+        },
+        "status": "AGENT_VISUAL_KEEP / NUMERIC_REJECTED"
+      },
+      {
+        "id": "mirror_shared_clean",
+        "title": "局部镜像：共享",
+        "snapshot": "E:\\ReSem\\artifacts\\tower_parts\\round01\\cases\\mirror_shared_clean\\pack\\snapshot\\snapshot.json",
+        "state_hash": "13d32e51defc9beaed9f4cefc8b540ae83fcb36dc3c8414d193e7684ab08d67a",
+        "geometry_hash": "299550333bee7bb213dc760b2bc30e376bf2f06a0fde3607f1b545cb09bbb8d5",
+        "target": "E:\\ReSem\\artifacts\\tower_parts\\round01\\cases\\mirror_shared_clean\\target\\target.json",
+        "target_hash": "93ec9bcdea5516f946682de434f3a9611ae37c2e72803a1aa6279b6db4417e3e",
+        "bake": "E:\\ReSem\\artifacts\\tower_parts\\round01\\cases\\mirror_shared_clean\\bake\\bake.json",
+        "validation": "E:\\ReSem\\artifacts\\tower_parts\\round01\\cases\\mirror_shared_clean\\validate\\validation.json",
+        "model": "E:\\ReSem\\artifacts\\tower_parts\\round01\\delivery\\mirror_shared_clean\\model-parts.glb",
+        "delivery": "E:\\ReSem\\artifacts\\tower_parts\\round01\\delivery\\mirror_shared_clean",
+        "verification": "E:\\ReSem\\artifacts\\tower_parts\\round01\\delivery\\mirror_shared_clean\\verification.json",
+        "metrics": {
+          "faces": 7252,
+          "islands": 21,
+          "tiles": 18,
+          "shared_groups": 3,
+          "shared_surface_area": 0.2898737049708806,
+          "shared_surface_fraction": 0.16091041364613098,
+          "coverage": 0.5554214698480499,
+          "gap_pixels": 10.599006322293764,
+          "border_pixels": 9.999999999999886,
+          "resolution": 2048,
+          "payload_bytes": 22369620,
+          "texture_png_bytes": 2974119,
+          "named_glb_file_bytes": 3495820,
+          "mean_shape_distortion": 1.3972805179714858,
+          "shape_p95": 3.1318402225427375,
+          "shape_cvar95": 25.184841654683886,
+          "maximum_anisotropy": 1794.9966933051205,
+          "maximum_neighbor_density_ratio": 53.95343157895718
+        },
+        "geometry_hard_passed": true,
+        "geometry_quality_constraints_checked_in_main_protocol": false,
+        "stretch_diagnostic_profile_quality_constraints": true,
+        "stretch_diagnostic_passed": false,
+        "numeric_quality_accepted": false,
+        "material_valid": true,
+        "seams_valid": true,
+        "seams_scope": "canonical_input_edges_only",
+        "authoritative_original_topology_supplied": false,
+        "render_valid": false,
+        "render_probe_pass_count": 5,
+        "render_probe_count": 12,
+        "render_max": 0.3376833490537389,
+        "agent_visual": "KEEP",
+        "reviewer": "agent",
+        "human_status": "NOT_RUN",
+        "pbr_status": "NOT_RUN",
+        "gpu_status": "NOT_RUN",
+        "viewed_lods": [
+          0,
+          1,
+          2
+        ],
+        "viewed_lod0_cameras": [
+          "front",
+          "back",
+          "left",
+          "right",
+          "upper",
+          "lower"
+        ],
+        "viewed_lod1_2_cameras": [
+          "front",
+          "back",
+          "upper"
+        ],
+        "closeup_regions": [
+          "top",
+          "center",
+          "body",
+          "base"
+        ],
+        "closeup_cameras": [
+          "front",
+          "back",
+          "oblique"
+        ],
+        "images": {
+          "basecolor": "E:\\ReSem\\artifacts\\tower_parts\\round01\\cases\\mirror_shared_clean\\actual_views\\front.png",
+          "checker": "E:\\ReSem\\artifacts\\tower_parts\\round01\\cases\\mirror_shared_clean\\checker_views\\front.png",
+          "uv": "E:\\ReSem\\artifacts\\tower_parts\\round01\\cases\\mirror_shared_clean\\checker_views\\uv.png",
+          "texture": "E:\\ReSem\\artifacts\\tower_parts\\round01\\cases\\mirror_shared_clean\\bake\\texture\\BaseColor_mip0.png"
+        },
+        "numeric_profile": {
+          "thresholds": {
+            "color_mean": 0.025,
+            "color_p95": 0.08,
+            "color_max": 0.2,
+            "render_mean": 0.025,
+            "render_p95": 0.08,
+            "render_max": 0.2,
+            "seam_mean": 0.025,
+            "seam_max": 0.2
+          },
+          "geometry": {
+            "gap_pixels": 8.0,
+            "border_pixels": 8.0,
+            "correspondence_fraction": 0.005,
+            "normal_angle_degrees": 45.0,
+            "maximum_anisotropy": 2.0,
+            "mean_shape_limit": 0.025,
+            "tail_shape_limit": 0.1,
+            "maximum_density_ratio": 2.0,
+            "quality_constraints": false
+          },
+          "mip_levels": [
+            0,
+            1,
+            2
+          ],
+          "samples_per_face": 16,
+          "render_size": 48,
+          "reference_filter": "source-only chart-aware piecewise-affine footprint: (2*2^LOD)^2 BOX quadrature then bilinear",
+          "reference_boundary": "traverse current chart faces; nearest same-chart boundary extension",
+          "render_reference": "fixed screen 2x2 source-signal supersampling, independent of atlas resolution and LOD",
+          "scope": "finite surface/color/seam/unlit-CPU probes; not full PBR, GPU, or continuous bounds"
+        },
+        "status": "AGENT_VISUAL_KEEP / NUMERIC_REJECTED"
+      }
+    ],
+    "budget_as_of_summary": {
+      "original": 893.3759999999747,
+      "mirror": 838.0599999999104,
+      "setup": 27.23499999998603
+    },
+    "budget_limit_per_geometry_seconds": 2400,
+    "timing_scope": "Recorded automatic execution cost including failed attempts; some delegated calls use tool wall from result, others include CLI overhead. Agent coding, viewing and docs time excluded. Final reporting cost recorded separately.",
+    "development_candidates_excluded": [
+      {
+        "id": "mirror_shared_final",
+        "reason": "body ABF mixed orientation, visually wrong body patches; superseded and excluded"
+      },
+      {
+        "id": "original_unshared",
+        "reason": "merged body ABF still self-overlaps; superseded and excluded"
+      },
+      {
+        "id": "smoke/prepare",
+        "reason": "wrong full-model smoke scope; packing timeout retained"
+      }
+    ],
+    "original_share_attempts": "E:\\ReSem\\artifacts\\tower_parts\\round01\\analysis\\whole-reuse-summary.json",
+    "body_repair": "E:\\ReSem\\artifacts\\tower_parts\\round01\\analysis\\body-repair\\summary.json",
+    "code_manifest": "E:\\ReSem\\artifacts\\tower_parts\\round01\\code-manifest.json",
+    "warnings": [
+      "Static BaseColor only; all three numerical render validations rejected.",
+      "Strong local stretch remains; island-average density normalization does not certify per-face distortion.",
+      "The original shared-fallback configuration reuses the original-unshared bake; there are three unique bakes, not four.",
+      "Original and mirrored geometry benefits remain separate; same 2K decoded texture byte count is unchanged."
+    ]
+  },
+  "body_repair": {
+    "schema_version": 1,
+    "created_at": "2026-11-26T12:25:16.955456+08:00",
+    "unpacked_snapshot": "E:\\ReSem\\artifacts\\tower_parts\\round01\\analysis\\body-repair\\closed-two-open\\snapshot\\snapshot.json",
+    "unpacked_hash": "bde35fb08b67d38c3c37e8a4b6ff889ca4a89352a360b5b80e1f923d6ba84ad7",
+    "packed_snapshot": "E:\\ReSem\\artifacts\\tower_parts\\round01\\analysis\\body-repair\\pack-final\\snapshot\\snapshot.json",
+    "packed_hash": "8eab1134a9cdf530565d8e33aef02b1f8bc3ccfd80133c6a1315ec9e30b7d70e",
+    "steps": [
+      {
+        "step": "harmonic-main",
+        "result": "E:\\ReSem\\artifacts\\tower_parts\\round01\\analysis\\body-repair\\harmonic-main\\result.json",
+        "tool": "uv.reparameterize",
+        "wall_seconds": 1.25,
+        "geometry_passed": null,
+        "state_hash": "5150e7d6b5fdf25561f0979417f8e77497752f200e371a4b7b7e2bd86772fde5"
+      },
+      {
+        "step": "pack",
+        "result": "E:\\ReSem\\artifacts\\tower_parts\\round01\\analysis\\body-repair\\pack\\result.json",
+        "tool": "uv.pack",
+        "wall_seconds": 24.90700000000652,
+        "geometry_passed": false,
+        "state_hash": "d332b17b936f537f34066590510f4bc6a61a2ad0d501efb5c2f3633c2edaa9cc"
+      },
+      {
+        "step": "inspect",
+        "result": "E:\\ReSem\\artifacts\\tower_parts\\round01\\analysis\\body-repair\\inspect\\result.json",
+        "tool": "uv.inspect",
+        "wall_seconds": 4.0,
+        "geometry_passed": false,
+        "state_hash": "d332b17b936f537f34066590510f4bc6a61a2ad0d501efb5c2f3633c2edaa9cc"
+      },
+      {
+        "step": "closed-two-open",
+        "result": "E:\\ReSem\\artifacts\\tower_parts\\round01\\analysis\\body-repair\\closed-two-open\\result.json",
+        "tool": "uv.reparameterize",
+        "wall_seconds": 1.7189999999973224,
+        "geometry_passed": null,
+        "state_hash": "bde35fb08b67d38c3c37e8a4b6ff889ca4a89352a360b5b80e1f923d6ba84ad7"
+      },
+      {
+        "step": "pack-final",
+        "result": "E:\\ReSem\\artifacts\\tower_parts\\round01\\analysis\\body-repair\\pack-final\\result.json",
+        "tool": "uv.pack",
+        "wall_seconds": 21.531000000002678,
+        "geometry_passed": true,
+        "state_hash": "8eab1134a9cdf530565d8e33aef02b1f8bc3ccfd80133c6a1315ec9e30b7d70e"
+      },
+      {
+        "step": "inspect-final",
+        "result": "E:\\ReSem\\artifacts\\tower_parts\\round01\\analysis\\body-repair\\inspect-final\\result.json",
+        "tool": "uv.inspect",
+        "wall_seconds": 3.577999999994063,
+        "geometry_passed": true,
+        "state_hash": "8eab1134a9cdf530565d8e33aef02b1f8bc3ccfd80133c6a1315ec9e30b7d70e"
+      }
+    ],
+    "tool_wall_seconds_sum": 56.98500000000058,
+    "geometry": {
+      "hard_valid": true,
+      "hard_errors": [],
+      "positive_overlap_cells": 0,
+      "unique_coverage": 0.5473171433353932,
+      "chart_count": 21,
+      "packing_groups": 21,
+      "shared_group_count": 0,
+      "minimum_gap_pixels": 9.650750118272985,
+      "minimum_border_pixels": 10.0,
+      "minimum_oriented_determinant": 0.0008252002218530667,
+      "quality_constraints_checked": false,
+      "quality_valid": null
+    },
+    "local_parity": "E:\\ReSem\\artifacts\\tower_parts\\round01\\analysis\\body-repair\\local-parity.json",
+    "strategy": "1264-face original-edge component harmonic with filtered 40 actual parent seams; isolated closed two-face component cut along its three original edges and rebuilt with Blender LSCM; no deletion.",
+    "packing": {
+      "resolution": 2048,
+      "seed": 17,
+      "gap_pixels": 8,
+      "border_pixels": 8,
+      "backend": "blender_concave",
+      "density_normalize_requested": true,
+      "worker_density_normalize_recorded": false,
+      "density_normalize_note": "Explicit true request enters geometry.pack_uv _packed before compact_pack (geometry.py L864,L889-L894). packing.json false records compact worker stage only; chart-average area density equality independently measured.",
+      "density_audit": {
+        "definition": "Per edge-connected UV chart, sum UV triangle area / sum 3D triangle area. This checks equal chart-average texel density only, not per-face stretch.",
+        "charts": 21,
+        "min_uv_area_per_surface_area": 0.3030561480700008,
+        "max_uv_area_per_surface_area": 0.3030561480700033,
+        "max_over_min": 1.0000000000000082,
+        "relative_std": 1.545496707489756e-15
+      }
+    },
+    "acceptance_boundary": "Hard geometry and metrics verified only. Visual BaseColor, material reconstruction and LOD checks remain pending.",
+    "history": "First packed harmonic candidate had 0 positive overlaps but one exact-contact rejection on closed two-face component. It remains preserved."
+  },
+  "processing_regions": [
+    {
+      "id": "tripo_part_0",
+      "original_labels": [
+        "tripo_part_0"
+      ],
+      "source_faces": 1230,
+      "prepared_uv_charts": 682,
+      "original_final_uv_charts": 3,
+      "mirror_faces": 1230,
+      "mirror_final_uv_charts": 3,
+      "mirror_geometry": {
+        "mode": "keep"
+      },
+      "mirror_shared_group_ids": [],
+      "original_reuse_policy": "exclusive; tested pairs reverted as complete parts",
+      "visual_scope": "Geometry/UV table with inherited whole-model Agent KEEP; no separate per-part human acceptance"
+    },
+    {
+      "id": "tripo_part_1",
+      "original_labels": [
+        "tripo_part_1"
+      ],
+      "source_faces": 1073,
+      "prepared_uv_charts": 598,
+      "original_final_uv_charts": 3,
+      "mirror_faces": 1073,
+      "mirror_final_uv_charts": 3,
+      "mirror_geometry": {
+        "mode": "keep"
+      },
+      "mirror_shared_group_ids": [],
+      "original_reuse_policy": "exclusive; tested pairs reverted as complete parts",
+      "visual_scope": "Geometry/UV table with inherited whole-model Agent KEEP; no separate per-part human acceptance"
+    },
+    {
+      "id": "tripo_part_10_plus_12",
+      "original_labels": [
+        "tripo_part_10",
+        "tripo_part_12"
+      ],
+      "source_faces": 281,
+      "prepared_uv_charts": 156,
+      "original_final_uv_charts": 1,
+      "mirror_faces": 281,
+      "mirror_final_uv_charts": 1,
+      "mirror_geometry": {
+        "mode": "keep"
+      },
+      "mirror_shared_group_ids": [],
+      "original_reuse_policy": "exclusive; tested pairs reverted as complete parts",
+      "visual_scope": "Geometry/UV table with inherited whole-model Agent KEEP; no separate per-part human acceptance"
+    },
+    {
+      "id": "tripo_part_11",
+      "original_labels": [
+        "tripo_part_11"
+      ],
+      "source_faces": 166,
+      "prepared_uv_charts": 93,
+      "original_final_uv_charts": 1,
+      "mirror_faces": 166,
+      "mirror_final_uv_charts": 1,
+      "mirror_geometry": {
+        "mode": "keep"
+      },
+      "mirror_shared_group_ids": [
+        "part:tripo_part_8:7"
+      ],
+      "original_reuse_policy": "exclusive; tested pairs reverted as complete parts",
+      "visual_scope": "Geometry/UV table with inherited whole-model Agent KEEP; no separate per-part human acceptance"
+    },
+    {
+      "id": "tripo_part_2",
+      "original_labels": [
+        "tripo_part_2"
+      ],
+      "source_faces": 704,
+      "prepared_uv_charts": 382,
+      "original_final_uv_charts": 2,
+      "mirror_faces": 698,
+      "mirror_final_uv_charts": 2,
+      "mirror_geometry": {
+        "mode": "mirror_from",
+        "master_part": "tripo_part_5",
+        "axis": "x",
+        "offset": 0
+      },
+      "mirror_shared_group_ids": [
+        "part:tripo_part_2:14",
+        "part:tripo_part_2:15"
+      ],
+      "original_reuse_policy": "exclusive; tested pairs reverted as complete parts",
+      "visual_scope": "Geometry/UV table with inherited whole-model Agent KEEP; no separate per-part human acceptance"
+    },
+    {
+      "id": "tripo_part_3",
+      "original_labels": [
+        "tripo_part_3"
+      ],
+      "source_faces": 764,
+      "prepared_uv_charts": 461,
+      "original_final_uv_charts": 1,
+      "mirror_faces": 764,
+      "mirror_final_uv_charts": 1,
+      "mirror_geometry": {
+        "mode": "keep"
+      },
+      "mirror_shared_group_ids": [],
+      "original_reuse_policy": "exclusive; tested pairs reverted as complete parts",
+      "visual_scope": "Geometry/UV table with inherited whole-model Agent KEEP; no separate per-part human acceptance"
+    },
+    {
+      "id": "tripo_part_4",
+      "original_labels": [
+        "tripo_part_4"
+      ],
+      "source_faces": 1266,
+      "prepared_uv_charts": 712,
+      "original_final_uv_charts": 3,
+      "mirror_faces": 1266,
+      "mirror_final_uv_charts": 3,
+      "mirror_geometry": {
+        "mode": "keep"
+      },
+      "mirror_shared_group_ids": [],
+      "original_reuse_policy": "exclusive; tested pairs reverted as complete parts",
+      "visual_scope": "Geometry/UV table with inherited whole-model Agent KEEP; no separate per-part human acceptance"
+    },
+    {
+      "id": "tripo_part_5",
+      "original_labels": [
+        "tripo_part_5"
+      ],
+      "source_faces": 698,
+      "prepared_uv_charts": 379,
+      "original_final_uv_charts": 2,
+      "mirror_faces": 698,
+      "mirror_final_uv_charts": 2,
+      "mirror_geometry": {
+        "mode": "keep"
+      },
+      "mirror_shared_group_ids": [
+        "part:tripo_part_2:14",
+        "part:tripo_part_2:15"
+      ],
+      "original_reuse_policy": "exclusive; tested pairs reverted as complete parts",
+      "visual_scope": "Geometry/UV table with inherited whole-model Agent KEEP; no separate per-part human acceptance"
+    },
+    {
+      "id": "tripo_part_6_plus_13",
+      "original_labels": [
+        "tripo_part_13",
+        "tripo_part_6"
+      ],
+      "source_faces": 450,
+      "prepared_uv_charts": 249,
+      "original_final_uv_charts": 2,
+      "mirror_faces": 450,
+      "mirror_final_uv_charts": 2,
+      "mirror_geometry": {
+        "mode": "keep"
+      },
+      "mirror_shared_group_ids": [],
+      "original_reuse_policy": "exclusive; tested pairs reverted as complete parts",
+      "visual_scope": "Geometry/UV table with inherited whole-model Agent KEEP; no separate per-part human acceptance"
+    },
+    {
+      "id": "tripo_part_7",
+      "original_labels": [
+        "tripo_part_7"
+      ],
+      "source_faces": 287,
+      "prepared_uv_charts": 158,
+      "original_final_uv_charts": 1,
+      "mirror_faces": 287,
+      "mirror_final_uv_charts": 1,
+      "mirror_geometry": {
+        "mode": "keep"
+      },
+      "mirror_shared_group_ids": [],
+      "original_reuse_policy": "exclusive; tested pairs reverted as complete parts",
+      "visual_scope": "Geometry/UV table with inherited whole-model Agent KEEP; no separate per-part human acceptance"
+    },
+    {
+      "id": "tripo_part_8",
+      "original_labels": [
+        "tripo_part_8"
+      ],
+      "source_faces": 186,
+      "prepared_uv_charts": 101,
+      "original_final_uv_charts": 1,
+      "mirror_faces": 166,
+      "mirror_final_uv_charts": 1,
+      "mirror_geometry": {
+        "mode": "mirror_from",
+        "master_part": "tripo_part_11",
+        "axis": "x",
+        "offset": 0
+      },
+      "mirror_shared_group_ids": [
+        "part:tripo_part_8:7"
+      ],
+      "original_reuse_policy": "exclusive; tested pairs reverted as complete parts",
+      "visual_scope": "Geometry/UV table with inherited whole-model Agent KEEP; no separate per-part human acceptance"
+    },
+    {
+      "id": "tripo_part_9",
+      "original_labels": [
+        "tripo_part_9"
+      ],
+      "source_faces": 173,
+      "prepared_uv_charts": 91,
+      "original_final_uv_charts": 1,
+      "mirror_faces": 173,
+      "mirror_final_uv_charts": 1,
+      "mirror_geometry": {
+        "mode": "keep"
+      },
+      "mirror_shared_group_ids": [],
+      "original_reuse_policy": "exclusive; tested pairs reverted as complete parts",
+      "visual_scope": "Geometry/UV table with inherited whole-model Agent KEEP; no separate per-part human acceptance"
+    }
+  ],
+  "numeric_validation": {
+    "original_clean": {
+      "scope": "basecolor_reuse",
+      "valid": false,
+      "quality_accepted": false,
+      "state_hash": "9cd4e4d35c471fa79b419fd31b1dd84aa9231d05592e0b0cd56456629be5bdd3",
+      "asset_id": "db76acd266297fdb32f6d054e3ba3a2a4ed0bed35c79b1370f9f844b0b295120",
+      "bake_sha256": "bc486e083897c334d5066ce6c956ac134e2ec69ecd477dcbcd95299ed1f77c08",
+      "target_hash": "13674b9a08687dcd61bd8117998fca3ee99ce72c78ef3a3fdc1d6634dbe4d921",
+      "source_mode": "original_face_corner",
+      "profile": {
+        "thresholds": {
+          "color_mean": 0.025,
+          "color_p95": 0.08,
+          "color_max": 0.2,
+          "render_mean": 0.025,
+          "render_p95": 0.08,
+          "render_max": 0.2,
+          "seam_mean": 0.025,
+          "seam_max": 0.2
+        },
+        "geometry": {
+          "gap_pixels": 8.0,
+          "border_pixels": 8.0,
+          "correspondence_fraction": 0.005,
+          "normal_angle_degrees": 45.0,
+          "maximum_anisotropy": 2.0,
+          "mean_shape_limit": 0.025,
+          "tail_shape_limit": 0.1,
+          "maximum_density_ratio": 2.0,
+          "quality_constraints": false
+        },
+        "mip_levels": [
+          0,
+          1,
+          2
+        ],
+        "samples_per_face": 16,
+        "render_size": 48,
+        "reference_filter": "source-only chart-aware piecewise-affine footprint: (2*2^LOD)^2 BOX quadrature then bilinear",
+        "reference_boundary": "traverse current chart faces; nearest same-chart boundary extension",
+        "render_reference": "fixed screen 2x2 source-signal supersampling, independent of atlas resolution and LOD",
+        "scope": "finite surface/color/seam/unlit-CPU probes; not full PBR, GPU, or continuous bounds"
+      },
+      "profile_hash": "0323e03e4a82dbfb77bf28b351d04ea56d72155c7f0f0edb5cceac5b3deb59db",
+      "payload_bytes": 22369620,
+      "full_pbr_passed": false,
+      "gpu_verified": false,
+      "geometry_profile": {
+        "resolution": 2048,
+        "gap_pixels": 8.0,
+        "border_pixels": 8.0,
+        "correspondence_fraction": 0.005,
+        "normal_angle_degrees": 45.0,
+        "maximum_anisotropy": 2.0,
+        "mean_shape_limit": 0.025,
+        "tail_shape_limit": 0.1,
+        "maximum_density_ratio": 2.0,
+        "quality_constraints": false
+      },
+      "geometry_profile_hash": "96c4321bf114777eb0eeecf7403156064e8bdbd24047b53dc64bfb6cf7147b14",
+      "geometry_policy": "explicit_custom",
+      "strict_geometry_profile_applied": false,
+      "acceptance_policy": "numeric",
+      "geometry": {
+        "valid": true,
+        "errors": [],
+        "geometry_protocol": {
+          "contract": "budget_geometry_exact_positive_area_cvar95_v1",
+          "determinant_floor": 1e-12,
+          "determinant_units": "UV squared per original area normalized by mesh.scale squared",
+          "positive_overlap_area_floor": 0.0,
+          "overlap_area_units": "normalized atlas UV squared",
+          "contact_coordinate_tolerance": 0.0,
+          "contact_coordinate_units": "normalized atlas UV; exact original identity required",
+          "group_normal_length_tolerance": 1e-08,
+          "correspondence_additive_tolerance": 1e-10,
+          "correspondence_normalization": "original all-vertex bounding-box diagonal",
+          "normal_angle_additive_tolerance_degrees": 1e-08,
+          "packing_additive_tolerance_pixels": 1e-05,
+          "quality_additive_tolerance": 1e-09,
+          "quality_units": "dimensionless",
+          "shape_definition": "0.5 * (kappa + 1 / kappa) - 1",
+          "shape_weights": "original 3D face area / total original 3D face area",
+          "shape_p95_definition": "left weighted quantile at cumulative original area 0.95",
+          "shape_tail_definition": "area-weighted worst 0.05 mass; fractional boundary face",
+          "shape_tail_mass": 0.05,
+          "density_scope": "all_original_adjacency",
+          "density_definition": "sqrt(abs(det J)); pairwise larger / smaller",
+          "intersection_arithmetic": "GEOS floating precision; no snapping or area cutoff",
+          "guarantee_scope": "checked finite-precision state; no exact-arithmetic or global bijection proof",
+          "resolution": 2048,
+          "required_gap_pixels": 8.0,
+          "required_border_pixels": 8.0,
+          "correspondence_fraction_limit": 0.005,
+          "normal_angle_limit_degrees": 45.0
+        },
+        "quality_constraints_checked": false,
+        "geometric_scope": "all_original_faces",
+        "unique_coverage": 0.5473171433353932,
+        "summed_uv_area": 0.5473171433353932,
+        "reuse_factor": 1.0,
+        "authorized_overlap_area": 0.0,
+        "overlap_cells": 0,
+        "positive_overlap_cells": 0,
+        "has_authorized_shared_overlap": false,
+        "nominal_reuse_groups": 0,
+        "active_reuse_groups": 0,
+        "active_reuse_group_ids": [],
+        "group_authorized_overlap_area": {},
+        "max_overlap_geometry_error": 0.0,
+        "maximum_overlap_normal_angle_degrees": 0.0,
+        "maximum_forward_overlap_error_fraction": 0.0,
+        "maximum_inverse_overlap_error_fraction": 0.0,
+        "minimum_oriented_determinant": 0.0008252002218530667,
+        "minimum_gap_pixels": 9.650750118272985,
+        "minimum_border_pixels": 10.0,
+        "packing_groups": 21,
+        "hard_valid": true,
+        "hard_errors": [],
+        "quality_valid": null,
+        "quality_errors": [],
+        "chart_count": 21,
+        "shared_group_count": 0,
+        "independent_orientation_policy": "constant signed chart; declared group orientation enforced",
+        "mirrored_chart_ids": [],
+        "material_validated": false,
+        "density_balance": null
+      },
+      "material": {
+        "valid": true,
+        "mean": 0.0016475091027686396,
+        "p95": 0.003650507221165162,
+        "max": 0.020333713120671486,
+        "samples": 349344,
+        "failed_faces": [],
+        "color_failed_faces": [],
+        "coverage_failed_faces": [],
+        "area_weighted_mean": 0.001552107593847234
+      },
+      "render": {
+        "valid": false,
+        "views": [
+          {
+            "view": "azimuth17_mip0",
+            "valid": false,
+            "mean": 0.0032829873337354726,
+            "p95": 0.008033339179431432,
+            "max": 0.3164649696797546,
+            "samples": 727
+          },
+          {
+            "view": "azimuth17_mip1",
+            "valid": false,
+            "mean": 0.0054341427843377765,
+            "p95": 0.015938951568099942,
+            "max": 0.3255081331391013,
+            "samples": 727
+          },
+          {
+            "view": "azimuth17_mip2",
+            "valid": false,
+            "mean": 0.00887589288923435,
+            "p95": 0.029015711492446604,
+            "max": 0.3109948649307117,
+            "samples": 727
+          },
+          {
+            "view": "azimuth107_mip0",
+            "valid": true,
+            "mean": 0.003422620831412687,
+            "p95": 0.008239095930545145,
+            "max": 0.18311635794012882,
+            "samples": 712
+          },
+          {
+            "view": "azimuth107_mip1",
+            "valid": false,
+            "mean": 0.006076918964520922,
+            "p95": 0.02048409512437721,
+            "max": 0.21274084828264853,
+            "samples": 712
+          },
+          {
+            "view": "azimuth107_mip2",
+            "valid": false,
+            "mean": 0.010584111255541656,
+            "p95": 0.03641513144580158,
+            "max": 0.22057414727887423,
+            "samples": 712
+          },
+          {
+            "view": "azimuth197_mip0",
+            "valid": true,
+            "mean": 0.003623501167276989,
+            "p95": 0.01192265596215022,
+            "max": 0.13278496142809956,
+            "samples": 707
+          },
+          {
+            "view": "azimuth197_mip1",
+            "valid": true,
+            "mean": 0.006176881728737536,
+            "p95": 0.024598598000521464,
+            "max": 0.15341162030228783,
+            "samples": 707
+          },
+          {
+            "view": "azimuth197_mip2",
+            "valid": true,
+            "mean": 0.010066501923256125,
+            "p95": 0.04016854951867758,
+            "max": 0.17486938831784996,
+            "samples": 707
+          },
+          {
+            "view": "azimuth287_mip0",
+            "valid": false,
+            "mean": 0.003590614002949427,
+            "p95": 0.008809387969036447,
+            "max": 0.20003605377677416,
+            "samples": 695
+          },
+          {
+            "view": "azimuth287_mip1",
+            "valid": true,
+            "mean": 0.0059095962734475455,
+            "p95": 0.019099147950434492,
+            "max": 0.1955961463393788,
+            "samples": 695
+          },
+          {
+            "view": "azimuth287_mip2",
+            "valid": false,
+            "mean": 0.010195124764982386,
+            "p95": 0.03461454705973409,
+            "max": 0.2274984248920586,
+            "samples": 695
+          }
+        ],
+        "contract": "fixed original-mesh z-buffer; 2x2 screen supersampling; unlit BaseColor only",
+        "reference_independent_of_atlas_resolution_and_mip": true
+      },
+      "seams": {
+        "valid": true,
+        "jump_valid": true,
+        "authoritative_original_topology_supplied": false,
+        "scope": "canonical_input_edges_only",
+        "original_topology_sha256": null,
+        "original_corner_ids_sha256": null,
+        "mean": 0.002025637038511415,
+        "max": 0.017531320602997422,
+        "absolute_side_mean": 0.0017520309044537993,
+        "absolute_side_max": 0.01772404464379661,
+        "samples": 5409,
+        "original_incidence_pairs": 0,
+        "evaluated_seam_pairs": 601,
+        "continuous_identical_uv_pairs": 0,
+        "contract": "authoritative original-edge plus current-seam residual jump and each-side absolute reconstruction gates; exact UV/source-continuous unmodified edges use shared-sample identity"
+      }
+    },
+    "mirror_shared_clean": {
+      "scope": "basecolor_reuse",
+      "valid": false,
+      "quality_accepted": false,
+      "state_hash": "13d32e51defc9beaed9f4cefc8b540ae83fcb36dc3c8414d193e7684ab08d67a",
+      "asset_id": "299550333bee7bb213dc760b2bc30e376bf2f06a0fde3607f1b545cb09bbb8d5",
+      "bake_sha256": "42a9ab9821af680c246a87c251b516151797c750e3e5b7eace806dafbf960d91",
+      "target_hash": "93ec9bcdea5516f946682de434f3a9611ae37c2e72803a1aa6279b6db4417e3e",
+      "source_mode": "original_face_corner",
+      "profile": {
+        "thresholds": {
+          "color_mean": 0.025,
+          "color_p95": 0.08,
+          "color_max": 0.2,
+          "render_mean": 0.025,
+          "render_p95": 0.08,
+          "render_max": 0.2,
+          "seam_mean": 0.025,
+          "seam_max": 0.2
+        },
+        "geometry": {
+          "gap_pixels": 8.0,
+          "border_pixels": 8.0,
+          "correspondence_fraction": 0.005,
+          "normal_angle_degrees": 45.0,
+          "maximum_anisotropy": 2.0,
+          "mean_shape_limit": 0.025,
+          "tail_shape_limit": 0.1,
+          "maximum_density_ratio": 2.0,
+          "quality_constraints": false
+        },
+        "mip_levels": [
+          0,
+          1,
+          2
+        ],
+        "samples_per_face": 16,
+        "render_size": 48,
+        "reference_filter": "source-only chart-aware piecewise-affine footprint: (2*2^LOD)^2 BOX quadrature then bilinear",
+        "reference_boundary": "traverse current chart faces; nearest same-chart boundary extension",
+        "render_reference": "fixed screen 2x2 source-signal supersampling, independent of atlas resolution and LOD",
+        "scope": "finite surface/color/seam/unlit-CPU probes; not full PBR, GPU, or continuous bounds"
+      },
+      "profile_hash": "0323e03e4a82dbfb77bf28b351d04ea56d72155c7f0f0edb5cceac5b3deb59db",
+      "payload_bytes": 22369620,
+      "full_pbr_passed": false,
+      "gpu_verified": false,
+      "geometry_profile": {
+        "resolution": 2048,
+        "gap_pixels": 8.0,
+        "border_pixels": 8.0,
+        "correspondence_fraction": 0.005,
+        "normal_angle_degrees": 45.0,
+        "maximum_anisotropy": 2.0,
+        "mean_shape_limit": 0.025,
+        "tail_shape_limit": 0.1,
+        "maximum_density_ratio": 2.0,
+        "quality_constraints": false
+      },
+      "geometry_profile_hash": "96c4321bf114777eb0eeecf7403156064e8bdbd24047b53dc64bfb6cf7147b14",
+      "geometry_policy": "explicit_custom",
+      "strict_geometry_profile_applied": false,
+      "acceptance_policy": "numeric",
+      "geometry": {
+        "valid": true,
+        "errors": [],
+        "geometry_protocol": {
+          "contract": "budget_geometry_exact_positive_area_cvar95_v1",
+          "determinant_floor": 1e-12,
+          "determinant_units": "UV squared per original area normalized by mesh.scale squared",
+          "positive_overlap_area_floor": 0.0,
+          "overlap_area_units": "normalized atlas UV squared",
+          "contact_coordinate_tolerance": 0.0,
+          "contact_coordinate_units": "normalized atlas UV; exact original identity required",
+          "group_normal_length_tolerance": 1e-08,
+          "correspondence_additive_tolerance": 1e-10,
+          "correspondence_normalization": "original all-vertex bounding-box diagonal",
+          "normal_angle_additive_tolerance_degrees": 1e-08,
+          "packing_additive_tolerance_pixels": 1e-05,
+          "quality_additive_tolerance": 1e-09,
+          "quality_units": "dimensionless",
+          "shape_definition": "0.5 * (kappa + 1 / kappa) - 1",
+          "shape_weights": "original 3D face area / total original 3D face area",
+          "shape_p95_definition": "left weighted quantile at cumulative original area 0.95",
+          "shape_tail_definition": "area-weighted worst 0.05 mass; fractional boundary face",
+          "shape_tail_mass": 0.05,
+          "density_scope": "all_original_adjacency",
+          "density_definition": "sqrt(abs(det J)); pairwise larger / smaller",
+          "intersection_arithmetic": "GEOS floating precision; no snapping or area cutoff",
+          "guarantee_scope": "checked finite-precision state; no exact-arithmetic or global bijection proof",
+          "resolution": 2048,
+          "required_gap_pixels": 8.0,
+          "required_border_pixels": 8.0,
+          "correspondence_fraction_limit": 0.005,
+          "normal_angle_limit_degrees": 45.0
+        },
+        "quality_constraints_checked": false,
+        "geometric_scope": "all_original_faces",
+        "unique_coverage": 0.5554214698480499,
+        "summed_uv_area": 0.6040178509728976,
+        "reuse_factor": 1.0874946032211226,
+        "authorized_overlap_area": 0.048596381124848056,
+        "overlap_cells": 864,
+        "positive_overlap_cells": 864,
+        "has_authorized_shared_overlap": true,
+        "nominal_reuse_groups": 3,
+        "active_reuse_groups": 3,
+        "active_reuse_group_ids": [
+          "part:tripo_part_2:14",
+          "part:tripo_part_2:15",
+          "part:tripo_part_8:7"
+        ],
+        "group_authorized_overlap_area": {
+          "part:tripo_part_2:14": 0.0327819145609815,
+          "part:tripo_part_2:15": 0.0005301134451092288,
+          "part:tripo_part_8:7": 0.015284353118757253
+        },
+        "max_overlap_geometry_error": 8.20332795294069e-17,
+        "maximum_overlap_normal_angle_degrees": 1.7075472925031877e-06,
+        "maximum_forward_overlap_error_fraction": 8.20332795294069e-17,
+        "maximum_inverse_overlap_error_fraction": 8.20332795294069e-17,
+        "minimum_oriented_determinant": 0.0009106889318182483,
+        "minimum_gap_pixels": 10.599006322293764,
+        "minimum_border_pixels": 9.999999999999886,
+        "packing_groups": 18,
+        "hard_valid": true,
+        "hard_errors": [],
+        "quality_valid": null,
+        "quality_errors": [],
+        "chart_count": 21,
+        "shared_group_count": 3,
+        "independent_orientation_policy": "constant signed chart; declared group orientation enforced",
+        "mirrored_chart_ids": [
+          8,
+          9,
+          19
+        ],
+        "material_validated": false,
+        "density_balance": null
+      },
+      "material": {
+        "valid": true,
+        "mean": 0.0016462780628026122,
+        "p95": 0.0036625612275022574,
+        "max": 0.06306127839732442,
+        "samples": 348096,
+        "failed_faces": [],
+        "color_failed_faces": [],
+        "coverage_failed_faces": [],
+        "area_weighted_mean": 0.0015466760688610764
+      },
+      "render": {
+        "valid": false,
+        "views": [
+          {
+            "view": "azimuth17_mip0",
+            "valid": false,
+            "mean": 0.0031610656433963625,
+            "p95": 0.007113998877205562,
+            "max": 0.3251037091735078,
+            "samples": 727
+          },
+          {
+            "view": "azimuth17_mip1",
+            "valid": false,
+            "mean": 0.005241443546627341,
+            "p95": 0.01512446564500804,
+            "max": 0.32356015208960176,
+            "samples": 727
+          },
+          {
+            "view": "azimuth17_mip2",
+            "valid": false,
+            "mean": 0.008656209377124751,
+            "p95": 0.02607019848697868,
+            "max": 0.3376833490537389,
+            "samples": 727
+          },
+          {
+            "view": "azimuth107_mip0",
+            "valid": true,
+            "mean": 0.0033008927175210466,
+            "p95": 0.008272911197293986,
+            "max": 0.14249757019584464,
+            "samples": 712
+          },
+          {
+            "view": "azimuth107_mip1",
+            "valid": true,
+            "mean": 0.005756318117043813,
+            "p95": 0.017206197446890975,
+            "max": 0.19692716169600555,
+            "samples": 712
+          },
+          {
+            "view": "azimuth107_mip2",
+            "valid": false,
+            "mean": 0.010319641854541,
+            "p95": 0.03461886415402153,
+            "max": 0.22143923170407093,
+            "samples": 712
+          },
+          {
+            "view": "azimuth197_mip0",
+            "valid": true,
+            "mean": 0.0034456112428096135,
+            "p95": 0.011266068424577377,
+            "max": 0.14802752409644115,
+            "samples": 707
+          },
+          {
+            "view": "azimuth197_mip1",
+            "valid": true,
+            "mean": 0.005769318820032012,
+            "p95": 0.022938440567126822,
+            "max": 0.14418780721550886,
+            "samples": 707
+          },
+          {
+            "view": "azimuth197_mip2",
+            "valid": true,
+            "mean": 0.009455123904245863,
+            "p95": 0.03622507515843816,
+            "max": 0.16444718036148354,
+            "samples": 707
+          },
+          {
+            "view": "azimuth287_mip0",
+            "valid": false,
+            "mean": 0.0034838931795570303,
+            "p95": 0.007076542132914775,
+            "max": 0.22832895663671493,
+            "samples": 695
+          },
+          {
+            "view": "azimuth287_mip1",
+            "valid": false,
+            "mean": 0.005763974300322987,
+            "p95": 0.01822337353366293,
+            "max": 0.20625006321440265,
+            "samples": 695
+          },
+          {
+            "view": "azimuth287_mip2",
+            "valid": false,
+            "mean": 0.009887143189327121,
+            "p95": 0.03363255874747074,
+            "max": 0.23817676341664062,
+            "samples": 695
+          }
+        ],
+        "contract": "fixed original-mesh z-buffer; 2x2 screen supersampling; unlit BaseColor only",
+        "reference_independent_of_atlas_resolution_and_mip": true
+      },
+      "seams": {
+        "valid": true,
+        "jump_valid": true,
+        "authoritative_original_topology_supplied": false,
+        "scope": "canonical_input_edges_only",
+        "original_topology_sha256": null,
+        "original_corner_ids_sha256": null,
+        "mean": 0.001977161489847565,
+        "max": 0.008144127180882756,
+        "absolute_side_mean": 0.0017377657505425223,
+        "absolute_side_max": 0.008511795695853015,
+        "samples": 5400,
+        "original_incidence_pairs": 0,
+        "evaluated_seam_pairs": 600,
+        "continuous_identical_uv_pairs": 0,
+        "contract": "authoritative original-edge plus current-seam residual jump and each-side absolute reconstruction gates; exact UV/source-continuous unmodified edges use shared-sample identity"
+      }
+    },
+    "mirror_unshared_clean": {
+      "scope": "basecolor_reuse",
+      "valid": false,
+      "quality_accepted": false,
+      "state_hash": "399ddc1713cb2b5507b5a9388f890d67ec89ec643eb1cab9023c58af78634c5b",
+      "asset_id": "299550333bee7bb213dc760b2bc30e376bf2f06a0fde3607f1b545cb09bbb8d5",
+      "bake_sha256": "822097b7dc8d07cea610f6189935af730a60615b98d653a2d554604d6078ce73",
+      "target_hash": "93ec9bcdea5516f946682de434f3a9611ae37c2e72803a1aa6279b6db4417e3e",
+      "source_mode": "original_face_corner",
+      "profile": {
+        "thresholds": {
+          "color_mean": 0.025,
+          "color_p95": 0.08,
+          "color_max": 0.2,
+          "render_mean": 0.025,
+          "render_p95": 0.08,
+          "render_max": 0.2,
+          "seam_mean": 0.025,
+          "seam_max": 0.2
+        },
+        "geometry": {
+          "gap_pixels": 8.0,
+          "border_pixels": 8.0,
+          "correspondence_fraction": 0.005,
+          "normal_angle_degrees": 45.0,
+          "maximum_anisotropy": 2.0,
+          "mean_shape_limit": 0.025,
+          "tail_shape_limit": 0.1,
+          "maximum_density_ratio": 2.0,
+          "quality_constraints": false
+        },
+        "mip_levels": [
+          0,
+          1,
+          2
+        ],
+        "samples_per_face": 16,
+        "render_size": 48,
+        "reference_filter": "source-only chart-aware piecewise-affine footprint: (2*2^LOD)^2 BOX quadrature then bilinear",
+        "reference_boundary": "traverse current chart faces; nearest same-chart boundary extension",
+        "render_reference": "fixed screen 2x2 source-signal supersampling, independent of atlas resolution and LOD",
+        "scope": "finite surface/color/seam/unlit-CPU probes; not full PBR, GPU, or continuous bounds"
+      },
+      "profile_hash": "0323e03e4a82dbfb77bf28b351d04ea56d72155c7f0f0edb5cceac5b3deb59db",
+      "payload_bytes": 22369620,
+      "full_pbr_passed": false,
+      "gpu_verified": false,
+      "geometry_profile": {
+        "resolution": 2048,
+        "gap_pixels": 8.0,
+        "border_pixels": 8.0,
+        "correspondence_fraction": 0.005,
+        "normal_angle_degrees": 45.0,
+        "maximum_anisotropy": 2.0,
+        "mean_shape_limit": 0.025,
+        "tail_shape_limit": 0.1,
+        "maximum_density_ratio": 2.0,
+        "quality_constraints": false
+      },
+      "geometry_profile_hash": "96c4321bf114777eb0eeecf7403156064e8bdbd24047b53dc64bfb6cf7147b14",
+      "geometry_policy": "explicit_custom",
+      "strict_geometry_profile_applied": false,
+      "acceptance_policy": "numeric",
+      "geometry": {
+        "valid": true,
+        "errors": [],
+        "geometry_protocol": {
+          "contract": "budget_geometry_exact_positive_area_cvar95_v1",
+          "determinant_floor": 1e-12,
+          "determinant_units": "UV squared per original area normalized by mesh.scale squared",
+          "positive_overlap_area_floor": 0.0,
+          "overlap_area_units": "normalized atlas UV squared",
+          "contact_coordinate_tolerance": 0.0,
+          "contact_coordinate_units": "normalized atlas UV; exact original identity required",
+          "group_normal_length_tolerance": 1e-08,
+          "correspondence_additive_tolerance": 1e-10,
+          "correspondence_normalization": "original all-vertex bounding-box diagonal",
+          "normal_angle_additive_tolerance_degrees": 1e-08,
+          "packing_additive_tolerance_pixels": 1e-05,
+          "quality_additive_tolerance": 1e-09,
+          "quality_units": "dimensionless",
+          "shape_definition": "0.5 * (kappa + 1 / kappa) - 1",
+          "shape_weights": "original 3D face area / total original 3D face area",
+          "shape_p95_definition": "left weighted quantile at cumulative original area 0.95",
+          "shape_tail_definition": "area-weighted worst 0.05 mass; fractional boundary face",
+          "shape_tail_mass": 0.05,
+          "density_scope": "all_original_adjacency",
+          "density_definition": "sqrt(abs(det J)); pairwise larger / smaller",
+          "intersection_arithmetic": "GEOS floating precision; no snapping or area cutoff",
+          "guarantee_scope": "checked finite-precision state; no exact-arithmetic or global bijection proof",
+          "resolution": 2048,
+          "required_gap_pixels": 8.0,
+          "required_border_pixels": 8.0,
+          "correspondence_fraction_limit": 0.005,
+          "normal_angle_limit_degrees": 45.0
+        },
+        "quality_constraints_checked": false,
+        "geometric_scope": "all_original_faces",
+        "unique_coverage": 0.5485264214964255,
+        "summed_uv_area": 0.5485264214964256,
+        "reuse_factor": 1.0000000000000002,
+        "authorized_overlap_area": 0.0,
+        "overlap_cells": 0,
+        "positive_overlap_cells": 0,
+        "has_authorized_shared_overlap": false,
+        "nominal_reuse_groups": 0,
+        "active_reuse_groups": 0,
+        "active_reuse_group_ids": [],
+        "group_authorized_overlap_area": {},
+        "max_overlap_geometry_error": 0.0,
+        "maximum_overlap_normal_angle_degrees": 0.0,
+        "maximum_forward_overlap_error_fraction": 0.0,
+        "maximum_inverse_overlap_error_fraction": 0.0,
+        "minimum_oriented_determinant": 0.000827023472999842,
+        "minimum_gap_pixels": 10.620684670990464,
+        "minimum_border_pixels": 10.0,
+        "packing_groups": 21,
+        "hard_valid": true,
+        "hard_errors": [],
+        "quality_valid": null,
+        "quality_errors": [],
+        "chart_count": 21,
+        "shared_group_count": 0,
+        "independent_orientation_policy": "constant signed chart; declared group orientation enforced",
+        "mirrored_chart_ids": [
+          8,
+          9,
+          19
+        ],
+        "material_validated": false,
+        "density_balance": null
+      },
+      "material": {
+        "valid": true,
+        "mean": 0.0016459730482519602,
+        "p95": 0.003636392568970554,
+        "max": 0.029061688513667135,
+        "samples": 348096,
+        "failed_faces": [],
+        "color_failed_faces": [],
+        "coverage_failed_faces": [],
+        "area_weighted_mean": 0.0015552959565554418
+      },
+      "render": {
+        "valid": false,
+        "views": [
+          {
+            "view": "azimuth17_mip0",
+            "valid": false,
+            "mean": 0.0033096081040866095,
+            "p95": 0.0076592105125031715,
+            "max": 0.3244463860105607,
+            "samples": 727
+          },
+          {
+            "view": "azimuth17_mip1",
+            "valid": false,
+            "mean": 0.005294140712727027,
+            "p95": 0.01435218379988911,
+            "max": 0.33789006343431277,
+            "samples": 727
+          },
+          {
+            "view": "azimuth17_mip2",
+            "valid": false,
+            "mean": 0.008721435377043573,
+            "p95": 0.027014000683172876,
+            "max": 0.32685888581104017,
+            "samples": 727
+          },
+          {
+            "view": "azimuth107_mip0",
+            "valid": true,
+            "mean": 0.0035020291211170125,
+            "p95": 0.008118613411670451,
+            "max": 0.18348067842140783,
+            "samples": 712
+          },
+          {
+            "view": "azimuth107_mip1",
+            "valid": true,
+            "mean": 0.005965542965950444,
+            "p95": 0.01813395484475943,
+            "max": 0.18111941027786116,
+            "samples": 712
+          },
+          {
+            "view": "azimuth107_mip2",
+            "valid": false,
+            "mean": 0.010383527545940999,
+            "p95": 0.035237528300365036,
+            "max": 0.21869038230541368,
+            "samples": 712
+          },
+          {
+            "view": "azimuth197_mip0",
+            "valid": true,
+            "mean": 0.0036950962783346528,
+            "p95": 0.012507864138930368,
+            "max": 0.13034502418995933,
+            "samples": 707
+          },
+          {
+            "view": "azimuth197_mip1",
+            "valid": true,
+            "mean": 0.006189872483797641,
+            "p95": 0.024340596708312505,
+            "max": 0.17616732022102505,
+            "samples": 707
+          },
+          {
+            "view": "azimuth197_mip2",
+            "valid": true,
+            "mean": 0.009779389627851846,
+            "p95": 0.035538912345534336,
+            "max": 0.1927672809919517,
+            "samples": 707
+          },
+          {
+            "view": "azimuth287_mip0",
+            "valid": true,
+            "mean": 0.003471222478315665,
+            "p95": 0.008339677981571399,
+            "max": 0.1981480801490393,
+            "samples": 695
+          },
+          {
+            "view": "azimuth287_mip1",
+            "valid": false,
+            "mean": 0.005980559118396409,
+            "p95": 0.02032839345550066,
+            "max": 0.24351289310236107,
+            "samples": 695
+          },
+          {
+            "view": "azimuth287_mip2",
+            "valid": false,
+            "mean": 0.010170148438754393,
+            "p95": 0.03392085443937285,
+            "max": 0.21693380803311949,
+            "samples": 695
+          }
+        ],
+        "contract": "fixed original-mesh z-buffer; 2x2 screen supersampling; unlit BaseColor only",
+        "reference_independent_of_atlas_resolution_and_mip": true
+      },
+      "seams": {
+        "valid": true,
+        "jump_valid": true,
+        "authoritative_original_topology_supplied": false,
+        "scope": "canonical_input_edges_only",
+        "original_topology_sha256": null,
+        "original_corner_ids_sha256": null,
+        "mean": 0.001979106672541165,
+        "max": 0.015007015994000202,
+        "absolute_side_mean": 0.001731394964704973,
+        "absolute_side_max": 0.013017907221379944,
+        "samples": 5400,
+        "original_incidence_pairs": 0,
+        "evaluated_seam_pairs": 600,
+        "continuous_identical_uv_pairs": 0,
+        "contract": "authoritative original-edge plus current-seam residual jump and each-side absolute reconstruction gates; exact UV/source-continuous unmodified edges use shared-sample identity"
+      }
+    }
+  },
+  "completed_at": "2026-11-26T04:56:38.833031+00:00",
+  "delivery_verification": {
+    "original_clean": {
+      "status": "OK",
+      "named_objects": 12,
+      "faces": 7278,
+      "face_coverage_exact": true,
+      "part_positions_uv_and_textures_reimported_exact": true,
+      "corner_uv_gltf_roundtrip_exact": true,
+      "visual_accepted": true,
+      "reviewer": "agent",
+      "scope": "basecolor_reuse",
+      "numeric_accepted": false,
+      "human_reviewed": false,
+      "full_pbr_passed": false,
+      "gpu_verified": false
+    },
+    "mirror_unshared_clean": {
+      "status": "OK",
+      "named_objects": 12,
+      "faces": 7252,
+      "face_coverage_exact": true,
+      "part_positions_uv_and_textures_reimported_exact": true,
+      "corner_uv_gltf_roundtrip_exact": true,
+      "visual_accepted": true,
+      "reviewer": "agent",
+      "scope": "basecolor_reuse",
+      "numeric_accepted": false,
+      "human_reviewed": false,
+      "full_pbr_passed": false,
+      "gpu_verified": false
+    },
+    "mirror_shared_clean": {
+      "status": "OK",
+      "named_objects": 12,
+      "faces": 7252,
+      "face_coverage_exact": true,
+      "part_positions_uv_and_textures_reimported_exact": true,
+      "corner_uv_gltf_roundtrip_exact": true,
+      "visual_accepted": true,
+      "reviewer": "agent",
+      "scope": "basecolor_reuse",
+      "numeric_accepted": false,
+      "human_reviewed": false,
+      "full_pbr_passed": false,
+      "gpu_verified": false
+    }
+  },
+  "comparison": {
+    "same_mirror_geometry_hash": true,
+    "same_mirror_target_hash": true,
+    "tile_reduction": 3,
+    "tile_reduction_fraction": 0.1428571428571429,
+    "coverage_gain_percentage_points": 0.6895048351624355,
+    "decoded_bytes_equal": true,
+    "shared_surface_definition": "Both members shared 3D surface area / total current model 3D surface area; not a byte-saving percentage"
+  }
+}
